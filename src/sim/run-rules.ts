@@ -1,3 +1,4 @@
+import {repairClearedWave} from './q3-wave-repair.ts';
 import {stepBoss} from './boss-rules.ts';
 import {runSchema,spawnEnemy,initialBoss,type RunState,type Enemy} from './run-schema.ts';
 import type {Command} from './schema.ts';
@@ -124,7 +125,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   s.phase.nextSpawnIn=t.spawnMinTicks+(i*17+s.phase.wave*11)%Math.max(1,spawnMax-t.spawnMinTicks+1);
  }
  if(s.enemies.every(e=>e.hp<=0)&&s.phase.nextSpawn===formation.length){
-  s.projectiles=[];h.vx=0;h.vz=0;h.dash={kind:'idle'};
+  s.projectiles=[];h.vx=0;h.vz=0;h.dash={kind:'idle'};const healed=repairClearedWave(h,t.heroHP,t.waveRepairFraction);if(healed>0)event('repair',h.x,h.z,healed,2.5);
   s.phase=s.phase.wave===waves.length-1?{kind:'boss',boss:initialBoss(t)}:{kind:'upgrade',wave:s.phase.wave,choices:upgradeChoices(s.phase.wave,s.upgrades)};
  }
  return s;

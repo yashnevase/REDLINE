@@ -1,0 +1,3 @@
+import {Q3_ENABLED} from '../content/items/switches.ts';
+import type {FightEvent} from '../sim/schema.ts';
+export function makeRepairPop(parent:HTMLElement){const root=document.createElement('div');root.className='repair-pop';root.setAttribute('role','status');root.hidden=true;parent.append(root);let seen='',until=-1;return{reset:()=>{seen='';until=-1;root.hidden=true;},update:(tick:number,events:readonly FightEvent[])=>{if(!Q3_ENABLED)return;const event=events.find(e=>e.kind==='repair'&&e.id!==seen);if(event){seen=event.id;until=tick+100;root.textContent=`✦ REPAIR +${Number(event.amount.toFixed(1))}`;root.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:160,fill:'both'});}root.hidden=tick>until;}};}

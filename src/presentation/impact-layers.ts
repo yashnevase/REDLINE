@@ -7,7 +7,7 @@ export function makeImpactLayers(root:T.Group,tuning:Partial<Record<keyof typeof
  for(let i=0;i<p.count;i++){const brightness=Math.hypot(p.getX(i),p.getY(i))**2;colours.push(brightness,brightness,brightness);}discGeometry.setAttribute('color',new T.Float32BufferAttribute(colours,3));
  const parts=Array.from({length:6},(_,i)=>new T.RingGeometry(.94,1,12,1,i*Math.PI/3,.52));const arcsGeometry=mergeGeometries(parts);parts.forEach(p=>p.dispose());
  const innerGeometry=new T.RingGeometry(.82,1,48),crackParts:T.BufferGeometry[]=[];for(let i=0;i<9;i++){const a=i*Math.PI*2/9;for(let j=0;j<3;j++){const g=new T.PlaneGeometry(.018,.2);g.rotateZ(-a+(j%2?.24:-.24));g.translate(Math.sin(a)*(.22+j*.2),Math.cos(a)*(.22+j*.2),0);crackParts.push(g);}}const scorchGeometry=mergeGeometries(crackParts);crackParts.forEach(g=>g.dispose());
- const material=(color:string,additive=false)=>new T.MeshBasicMaterial({color,transparent:true,opacity:0,depthWrite:false,side:T.DoubleSide,toneMapped:false,blending:additive?T.AdditiveBlending:T.NormalBlending});
+ const material=(color:string,additive=false)=>new T.MeshBasicMaterial({color,transparent:true,opacity:0,depthWrite:false,side:T.DoubleSide,forceSinglePass:true,toneMapped:false,blending:additive?T.AdditiveBlending:T.NormalBlending});
  const slots=Array.from({length:8},()=>{
   const disc=new T.Mesh(discGeometry,material('#bba2ff',true));disc.material.vertexColors=true;
   const inner=new T.Mesh(innerGeometry,material('#efe6ff',true)),arcs=new T.Mesh(arcsGeometry,material('#c4a9ff',true)),scorch=new T.Mesh(scorchGeometry,material('#9b5cff',true));

@@ -38,7 +38,7 @@ test('all-clear gates upgrades, rejects forged choices, freezes combat and advan
  let s=initialRun(t);for(const e of s.enemies.slice(0,-1)){e.hp=0;e.behavior={kind:'defeated'};}s=stepRun(s,idleCommand,t);assert.equal(s.phase.kind,'fight');
  for(const e of s.enemies){e.hp=0;e.behavior={kind:'defeated'};}s.phase.nextSpawn=waves[0].length;s.projectiles=[];s=stepRun(s,idleCommand,t);assert.equal(s.phase.kind,'upgrade');
  const before=s.hero.x,cd=s.hero.pulseCooldown,choice=s.phase.choices[0];s=stepRun(s,{x:1,z:0,dash:true,upgrade:'forged'},t);assert.equal(s.phase.kind,'upgrade');assert.equal(s.hero.x,before);assert.equal(s.hero.pulseCooldown,cd);
- s=stepRun(s,{...idleCommand,upgrade:choice},t);assert.equal(s.phase.kind,'fight');assert.equal(s.phase.wave,1);assert.deepEqual(s.upgrades,[choice]);assert.equal(s.enemies.length,5);
+ s=stepRun(s,{...idleCommand,upgrade:choice},t);assert.equal(s.phase.kind,'fight');assert.equal(s.phase.wave,1);assert.deepEqual(s.upgrades,[choice]);assert.equal(s.enemies.length,t.openingThreats);
  s=stepRun(s,{...idleCommand,upgrade:choice},t);assert.equal(s.upgrades.length,1);
 });
 test('all twelve upgrades affect their stated stat and offers contain three unique unpicked choices',()=>{
@@ -46,8 +46,8 @@ test('all twelve upgrades affect their stated stat and offers contain three uniq
  const picked=[];for(let wave=0;wave<3;wave++){const choices=upgradeChoices(wave,picked);assert.equal(new Set(choices).size,3);assert.ok(choices.every(id=>!picked.includes(id)));picked.push(choices[0]);}
 });
 test('Heat persists across upgrades and three score-complete levels enter Rex',async()=>{
- const {levelGoals,objectiveFormation}=await import('../src/content/items/f1-objectives.ts');let s=initialRun(t);s.hero.heat=90;
- for(let level=0;level<3;level++){s.score.points=s.objective.levelStartScore+levelGoals[level];for(const e of s.enemies){e.hp=0;e.behavior={kind:'defeated'};}s.phase.nextSpawn=objectiveFormation(level,0).length;s=stepRun(s,idleCommand,t);assert.equal(s.phase.kind,'upgrade');s=stepRun(s,{...idleCommand,upgrade:s.phase.choices[0]},t);assert.equal(s.phase.kind,'level-complete');assert.equal(s.hero.heat,90);s=stepRun(s,{...idleCommand,continue:true},t);}
+ const {levelGoals,objectiveFormation,minimumLevelWaves}=await import('../src/content/items/f1-objectives.ts');let s=initialRun(t);s.hero.heat=90;
+ for(let level=0;level<3;level++){s.objective.levelWave=minimumLevelWaves(level)-1;s.score.points=s.objective.levelStartScore+levelGoals[level];for(const e of s.enemies){e.hp=0;e.behavior={kind:'defeated'};}s.phase.nextSpawn=objectiveFormation(level,s.objective.levelWave).length;s=stepRun(s,idleCommand,t);assert.equal(s.phase.kind,'upgrade');s=stepRun(s,{...idleCommand,upgrade:s.phase.choices[0]},t);assert.equal(s.phase.kind,'level-complete');assert.equal(s.hero.heat,90);s=stepRun(s,{...idleCommand,continue:true},t);}
  assert.equal(s.phase.kind,'boss');assert.equal(s.phase.boss.hp,t.bossHP);
 });
 test('run replay, JSON snapshots and detached projections agree through wave transitions',()=>{

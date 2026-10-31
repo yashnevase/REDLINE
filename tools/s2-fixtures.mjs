@@ -1,6 +1,6 @@
 import {combatDefaults as t} from '../src/content/combat.ts';
 import {initialRun,initialBoss,spawnEnemy} from '../src/sim/run-schema.ts';
-import {objectiveFormation} from '../src/content/items/f1-objectives.ts';
+import {objectiveFormation,minimumLevelWaves,levelGoals} from '../src/content/items/f1-objectives.ts';
 import {idleCommand as idle} from '../src/sim/schema.ts';
 import {stepRun} from '../src/sim/run-rules.ts';
 export {t,idle};
@@ -10,7 +10,7 @@ export function stress(kind='crowd'){const s=arena();s.hero.hp=10000;s.hero.bonk
 export function scenarios(){let s=arena(),out={};out.roster=s;out.eyes={...arena(),hero:{...s.hero,heat:90}};out.eyeAction=arena();out.eyeAction.hero.vx=3;out.hurtEyes=arena();out.hurtEyes.hero.hp=20;
  out.spin=stepRun(arena(),{...idle,ability:'pulse'},t);out.stomp=stepRun(arena(),{...idle,ability:'stomp'},t);for(let i=0;i<21;i++)out.stomp=stepRun(out.stomp,idle,t);
  out.boost=stepRun(arena(),{...idle,x:0,z:-1,ability:'boost'},t);let blade=arena();blade.loadout='blade';out.blade=stepRun(blade,{...idle,ability:'pulse'},t);out.bladeFan=stepRun(blade,{...idle,ability:'boost'},t);out.bladeRing=arena();out.bladeRing.loadout='blade';out.bladeRing=stepRun(out.bladeRing,{...idle,ability:'stomp'},t);for(let i=0;i<21;i++)out.bladeRing=stepRun(out.bladeRing,idle,t);
- let clear=arena(0);clear.hero.hp=40;clear.enemies.forEach(e=>{e.hp=0;e.behavior={kind:'defeated'};});clear.score.points=3500;out.repair=stepRun(clear,idle,t);out.upgrade=out.repair;out.level=stepRun(out.repair,{...idle,upgrade:out.repair.phase.choices[0]},t);
+ let clear=arena(0);clear.hero.hp=40;clear.enemies.forEach(e=>{e.hp=0;e.behavior={kind:'defeated'};});clear.objective.levelWave=minimumLevelWaves(0)-1;clear.phase.nextSpawn=objectiveFormation(0,clear.objective.levelWave).length;clear.score.points=levelGoals[0]+500;out.repair=stepRun(clear,idle,t);out.upgrade=out.repair;out.level=stepRun(out.repair,{...idle,upgrade:out.repair.phase.choices[0]},t);
  out.boss=rex();out.bossGuide=rex();out.quality=arena();out.quality.hero.bonkCooldown=0;out.quality.enemies=out.quality.enemies.filter(e=>e.kind==='grinder');Object.assign(out.quality.enemies[0],{x:1,z:0,faceX:1,faceZ:0,behavior:{kind:'recover',remaining:100,punish:36}});out.quality.score={...out.quality.score,points:7200,chain:5,multiplier:5,bestCombo:5,kills:9,lastHit:239};out.quality=stepRun(out.quality,idle,t);
  out.perfect=arena();out.perfect.enemies=out.perfect.enemies.slice(0,1);Object.assign(out.perfect.enemies[0],{x:0,z:.3,faceX:0,faceZ:-1,behavior:{kind:'windup',remaining:20,dx:0,dz:0}});out.perfect=stepRun(out.perfect,{x:0,z:1,dash:true},t);out.perfect.enemies[0].behavior={kind:'lunge',remaining:20,dx:0,dz:0,hasHit:false};out.perfect.enemies[0].z=out.perfect.hero.z;out.perfect=stepRun(out.perfect,idle,t);
  out.whirler=arena();out.whirler.enemies=out.whirler.enemies.filter(e=>e.kind==='whirler');Object.assign(out.whirler.enemies[0],{x:2,z:0,behavior:{kind:'windup',remaining:42,dx:-1,dz:0}});

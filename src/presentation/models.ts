@@ -1,5 +1,5 @@
 import * as T from 'three';
-import {makeTwinBlades,BL1_ENABLED} from './bl-crescent.ts';
+import {BL1_ENABLED,steelBladeShape,steelShotGeometry} from './bl-steel.ts';
 import type {Materials,BladeMaterials} from './materials.ts';
 
 function part(parent: T.Object3D, g: T.BufferGeometry, material: T.Material, x = 0, y = 0, z = 0) {
@@ -70,8 +70,7 @@ export function makeCore(materials: Materials, matched=false, bladeMaterials?:Bl
   const attachment=new T.Group();root.add(attachment);attachment.position.set(matched?-1.18:-1.03,.65,.05);attachment.visible=false;
   const rotor=new T.Group();attachment.add(rotor);
   if(matched){
-    const blade=bladeMaterials??{metal:materials.steel,edge:materials.lightSteel,dark:materials.dark,link:materials.glow.clone(),face:materials.lightSteel},shape=new T.Shape();
-    for(let i=0;i<16;i++)for(const [radius,offset] of [[.245,-.16],[.292,.03],[.285,.10],[.257,.085],[.245,.18]]){const a=i*Math.PI/8+offset,x=Math.cos(a)*radius,y=Math.sin(a)*radius;if(i===0&&offset===-.16)shape.moveTo(x,y);else shape.lineTo(x,y);}shape.closePath();
+    const blade=bladeMaterials??{metal:materials.steel,edge:materials.lightSteel,dark:materials.dark,link:materials.glow.clone(),face:materials.lightSteel},shape=steelBladeShape();
     const geometry=new T.ExtrudeGeometry(shape,{depth:.025,steps:1,bevelEnabled:true,bevelSegments:1,bevelSize:.005,bevelThickness:.005});geometry.translate(0,0,-.0125);
     rotor.add(new T.Mesh(geometry,[blade.metal,blade.edge]));part(rotor,new T.CircleGeometry(.238,64),blade.face,0,0,.019);
     const hub=part(rotor,new T.CylinderGeometry(.115,.125,.035,32),blade.edge,0,0,.022);hub.rotation.x=Math.PI/2;
@@ -84,8 +83,8 @@ export function makeCore(materials: Materials, matched=false, bladeMaterials?:Bl
     for(let i=0;i<12;i++){const a=i*Math.PI/6;const tooth=part(rotor,new T.ConeGeometry(.07,.17,3),materials.lightSteel,Math.sin(a)*.48,Math.cos(a)*.48,0);tooth.rotation.z=-a;}
     part(attachment,new T.SphereGeometry(.12,8,6),materials.red,0,0,.09);const link=part(attachment,new T.CylinderGeometry(.025,.025,.5,6),materials.glow,.36,0,0);link.rotation.z=Math.PI/2;
   }
-  if(BL1_ENABLED){attachment.clear();const pair=makeTwinBlades(attachment);pair.visible=true;pair.position.set(1.18,-.65,-.05);}
-  return {root,body,shell,marks,eyes,crownMaterial,crownGlowMaterial,attachment,rotor,expressions};
+  if(BL1_ENABLED&&!highDetail){rotor.clear();rotor.add(new T.Mesh(steelShotGeometry(),new T.MeshLambertMaterial({vertexColors:true,side:T.DoubleSide})));}const secondaryRotor=rotor.clone(true);secondaryRotor.name='blade-right-rotor';secondaryRotor.position.x=2.36;secondaryRotor.scale.x=-1;secondaryRotor.visible=BL1_ENABLED;attachment.add(secondaryRotor);if(BL1_ENABLED){const link=new T.Mesh(new T.PlaneGeometry(.48,.10),bladeMaterials?.link??materials.glow);link.position.set(1.9,0,.05);attachment.add(link);}
+  return {root,body,shell,marks,eyes,crownMaterial,crownGlowMaterial,attachment,rotor,secondaryRotor,expressions};
 }
 export function makeSawlet(m: Materials) {
   const root=new T.Group(),body=new T.Group(),blade=new T.Group();root.add(body);body.position.y=.67;body.add(blade);

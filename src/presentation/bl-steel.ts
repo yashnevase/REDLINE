@@ -1,0 +1,6 @@
+import * as T from 'three';
+import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+export const BL1_ENABLED=true,BL2_ENABLED=true;
+// Exact sixteen-tooth outline from next-work-s2, shared by equipment and shots.
+export function steelBladeShape(){const shape=new T.Shape();for(let i=0;i<16;i++)for(const [radius,offset] of [[.245,-.16],[.292,.03],[.285,.10],[.257,.085],[.245,.18]]){const a=i*Math.PI/8+offset,x=Math.cos(a)*radius,y=Math.sin(a)*radius;if(i===0&&offset===-.16)shape.moveTo(x,y);else shape.lineTo(x,y);}shape.closePath();return shape;}
+export function steelShotGeometry(){const pieces:T.BufferGeometry[]=[];for(const [source,tint,z]of [[new T.ShapeGeometry(steelBladeShape()),'#b9bfc5',0],[new T.CircleGeometry(.235,24),'#64717c',.003],[new T.CircleGeometry(.10,12),'#c1c6c8',.006],[new T.CircleGeometry(.065,12),'#393c43',.009]] as const){const g=source.index?source.toNonIndexed():source;g.translate(0,0,z);g.deleteAttribute('uv');const p=g.attributes.position,colors:number[]=[],c=new T.Color(tint);for(let i=0;i<p.count;i++){const shade=.88+Math.sin(p.getX(i)*97+p.getY(i)*71)*.08;colors.push(c.r*shade,c.g*shade,c.b*shade);}g.setAttribute('color',new T.Float32BufferAttribute(colors,3));pieces.push(g);}const geometry=mergeGeometries(pieces);if(!geometry)throw Error('Steel Blade geometry incompatible');return geometry;}

@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {makeTwinBlades,BL1_ENABLED} from './bl-crescent.ts';
 import type {Materials,BladeMaterials} from './materials.ts';
 
 function part(parent: T.Object3D, g: T.BufferGeometry, material: T.Material, x = 0, y = 0, z = 0) {
@@ -83,6 +84,7 @@ export function makeCore(materials: Materials, matched=false, bladeMaterials?:Bl
     for(let i=0;i<12;i++){const a=i*Math.PI/6;const tooth=part(rotor,new T.ConeGeometry(.07,.17,3),materials.lightSteel,Math.sin(a)*.48,Math.cos(a)*.48,0);tooth.rotation.z=-a;}
     part(attachment,new T.SphereGeometry(.12,8,6),materials.red,0,0,.09);const link=part(attachment,new T.CylinderGeometry(.025,.025,.5,6),materials.glow,.36,0,0);link.rotation.z=Math.PI/2;
   }
+  if(BL1_ENABLED){attachment.clear();const pair=makeTwinBlades(attachment);pair.visible=true;pair.position.set(1.18,-.65,-.05);}
   return {root,body,shell,marks,eyes,crownMaterial,crownGlowMaterial,attachment,rotor,expressions};
 }
 export function makeSawlet(m: Materials) {

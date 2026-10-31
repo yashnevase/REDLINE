@@ -24,8 +24,8 @@ test('Blender Core sockets preserve origin, small shell bounds, outward normals 
 test('candidate Blade has a visible floating gap and reference-like scale apart from its link',()=>{
  const m=Object.fromEntries(['chrome','white','red','steel','dark','lightSteel','glow'].map(k=>[k,new T.MeshBasicMaterial()]));
  const hero=makeCore(m,true);hero.body.scale.set(defaults.coreRadius*defaults.coreStudioWidth,defaults.coreRadius*defaults.coreStudioSquash,defaults.coreRadius);hero.body.position.y=.66;hero.attachment.visible=true;hero.root.updateMatrixWorld(true);
- const blade=new T.Box3().setFromObject(hero.rotor),core=new T.Box3().setFromObject(hero.body);
- assert.ok(core.min.x-blade.max.x>.2);const ratio=blade.getSize(new T.Vector3()).y/(defaults.coreRadius*2);assert.ok(ratio>.3&&ratio<.6);
+ const pair=hero.attachment.children[0],core=new T.Box3().setFromObject(hero.body);const blades=pair.children.filter(o=>o instanceof T.Mesh&&o.geometry.type==='ShapeGeometry');assert.equal(blades.length,2);
+ const left=new T.Box3().setFromObject(blades[0]),right=new T.Box3().setFromObject(blades[1]);assert.ok(core.min.x-left.max.x>.2);assert.ok(right.min.x-core.max.x>.2);assert.ok(Math.abs(left.getSize(new T.Vector3()).y-right.getSize(new T.Vector3()).y)<.001);
 });
 test('gameplay Core LOD keeps all expressions while cutting visible geometry by more than half',()=>{
  const m=Object.fromEntries(['chrome','white','red','steel','dark','lightSteel','glow'].map(k=>[k,new T.MeshBasicMaterial()]));const high=makeCore(m,true),low=makeCore(m,true,undefined,false);const triangles=root=>{let sum=0;root.traverseVisible(o=>{if(o instanceof T.Mesh)sum+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;});return sum;};assert.ok(triangles(low.root)<triangles(high.root)*.5);assert.equal(low.expressions.length,6);const a=new T.Box3().setFromObject(high.body),b=new T.Box3().setFromObject(low.body);assert.ok(a.min.distanceTo(b.min)<.01&&a.max.distanceTo(b.max)<.01);

@@ -1,0 +1,1 @@
+export const bladeFormDefaults={bladeShotTicks:45,bladeShotDamage:6,bladeShotSpeed:14,bladeShotLifeTicks:72,bladeOrbitTicks:180,bladeOrbitDamage:4,bladeOrbitRadius:1.9,bladeOrbitSpin:.07,bladeFanCount:5,bladeRingCount:8};

@@ -1,3 +1,4 @@
+import {stepBladeProjectiles} from './b5-blade-projectiles.ts';
 import {applyAbilities} from './b4-abilities.ts';
 import {B3_ENABLED} from '../content/items/switches.ts';
 import {whirlerArmTouches} from './b2-whirler.ts';
@@ -44,7 +45,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   if(e.hp===0){s.hitstop=Math.max(s.hitstop,t.killHitstopTicks);e.behavior={kind:'defeated'};h.heat=Math.min(t.heatThreshold,h.heat+stats.heat);event('defeat',e.x,e.z);}
   else if(stun||quality.counter)e.behavior={kind:'recover',remaining:stun?t.stompStunTicks+1:t.counterStaggerTicks};
  };
- applyAbilities(s,t,ability,damageMultiplier,damage,bossDamage,event);
+ applyAbilities(s,t,ability,damageMultiplier,damage,bossDamage,event);stepBladeProjectiles(s,t,ability,event,damage,bossDamage);
  // Swept path damage for Rush/Charge: one hit per target for this dash, including the boss.
  if(h.dash.kind==='active'&&h.dash.variant!=='tap'){
   const dash=h.dash,near=(x:number,z:number,r:number)=>{const vx=h.x-h.prevX,vz=h.z-h.prevZ,den=vx*vx+vz*vz,u=den?Math.max(0,Math.min(1,((x-h.prevX)*vx+(z-h.prevZ)*vz)/den)):0;return Math.sqrt((x-h.prevX-u*vx)**2+(z-h.prevZ-u*vz)**2)<=r+t.heroRadius;};
@@ -108,7 +109,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  }
  endDash(h);
  if(h.hp<=0){h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;s.phase={kind:'lost'};return s;}
- if(boss&&boss.hp===0){h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;event('defeat',boss.x,boss.z);s.phase={kind:'complete',reward:'blade'};s.enemies=[];s.projectiles=[];return s;}
+ if(boss&&boss.hp===0){h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;event('defeat',boss.x,boss.z);s.phase={kind:'complete',reward:'blade'};s.enemies=[];s.projectiles=[];s.bladeProjectiles=[];return s;}
  if(s.phase.kind!=='fight')return s;
  // Spawn queue never exceeds the approved live cap. Dead entries are retired when replenishing.
  const alive=s.enemies.filter(e=>e.hp>0);const formation=waves[s.phase.wave];
@@ -120,7 +121,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   s.phase.nextSpawnIn=t.spawnMinTicks+(i*17+s.phase.wave*11)%Math.max(1,spawnMax-t.spawnMinTicks+1);
  }
  if(s.enemies.every(e=>e.hp<=0)&&s.phase.nextSpawn===formation.length){
-  s.projectiles=[];h.vx=0;h.vz=0;h.dash={kind:'idle'};const healed=repairClearedWave(h,t.heroHP,t.waveRepairFraction);if(healed>0)event('repair',h.x,h.z,healed,2.5);
+  s.projectiles=[];s.bladeProjectiles=[];h.vx=0;h.vz=0;h.dash={kind:'idle'};const healed=repairClearedWave(h,t.heroHP,t.waveRepairFraction);if(healed>0)event('repair',h.x,h.z,healed,2.5);
   s.phase=s.phase.wave===waves.length-1?{kind:'boss',boss:initialBoss(t)}:{kind:'upgrade',wave:s.phase.wave,choices:upgradeChoices(s.phase.wave,s.upgrades)};
  }
  return s;

@@ -1,3 +1,4 @@
+import {whirlerArmTouches} from './b2-whirler.ts';
 import {classifyHit,grantPerfect,tickQuality,qualityEvent} from './b1-hit-quality.ts';
 import {repairClearedWave} from './q3-wave-repair.ts';
 import {stepBoss} from './boss-rules.ts';
@@ -80,11 +81,11 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
      s.projectiles.push({id:s.nextProjectile++,owner:e.id,x:e.x,z:e.z,prevX:e.x,prevZ:e.z,dx:b.dx,dz:b.dz,remaining:t.rivetLifeTicks});e.behavior={kind:'recover',remaining:stats.recovery,rallyEligible:true};
     }else if(e.kind==='grinder'){
      if(distance(h,e)<=t.grinderSweepRadius+t.heroRadius)hurt(t.grinderDamage,`enemy:${e.id}:${e.attackSerial}`);event('stomp',e.x,e.z,0,t.grinderSweepRadius);e.behavior={kind:'recover',remaining:stats.recovery,rallyEligible:true,punish:t.punishTicks};attackers--;
-    }else e.behavior={kind:'lunge',remaining:e.kind==='shieldsaw'?t.shieldChargeTicks:t.lungeTicks,dx:b.dx,dz:b.dz,hasHit:false};
+    }else e.behavior={kind:'lunge',remaining:e.kind==='shieldsaw'?t.shieldChargeTicks:e.kind==='whirler'?t.whirlerSweepTicks:t.lungeTicks,dx:b.dx,dz:b.dz,hasHit:false};
     break;
    }
    case'lunge':{
-    const b=e.behavior,speed=e.kind==='shieldsaw'?t.shieldChargeSpeed:t.lungeSpeed,p=collide(e.x+b.dx*speed/60,e.z+b.dz*speed/60,stats.radius,t);e.x=p.x;e.z=p.z;
+    const b=e.behavior;if(e.kind==='whirler'){if(!b.hasHit&&whirlerArmTouches(e,h,s.tick,t)){const hp=h.hp;hurt(t.whirlerDamage,`enemy:${e.id}:${e.attackSerial}`);if(h.hp<hp)b.hasHit=true;}if(--b.remaining<=0){e.behavior={kind:'recover',remaining:t.whirlerRecoveryTicks,rallyEligible:true,punish:t.punishTicks};attackers--;}break;}const speed=e.kind==='shieldsaw'?t.shieldChargeSpeed:t.lungeSpeed,p=collide(e.x+b.dx*speed/60,e.z+b.dz*speed/60,stats.radius,t);e.x=p.x;e.z=p.z;
     if(!b.hasHit&&distance(h,e)<t.heroRadius+stats.radius){const hp=h.hp;hurt(e.kind==='shieldsaw'?t.rivetDamage:t.contactDamage,`enemy:${e.id}:${e.attackSerial}`);if(h.hp<hp)b.hasHit=true;}
     if(--b.remaining<=0){e.behavior={kind:'recover',remaining:stats.recovery,rallyEligible:true,punish:e.kind==='shieldsaw'?t.punishTicks:0};attackers--;}break;
    }

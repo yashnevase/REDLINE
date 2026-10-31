@@ -1,0 +1,2 @@
+import {B2_ENABLED} from '../content/items/switches.ts';import {enemyAnswers} from '../content/items/b2-roster.ts';import {enemyNames} from '../content/encounter.ts';
+export function makeRosterHints(parent:HTMLElement){if(!B2_ENABLED)return;const panel=document.createElement('details');panel.className='roster-hints';panel.innerHTML='<summary>Enemy tools</summary>'+Object.entries(enemyAnswers).map(([id,value])=>`<article><b>${enemyNames[id as keyof typeof enemyNames]} · ${value.role}</b><p>${value.answer}</p></article>`).join('');parent.append(panel);}

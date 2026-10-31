@@ -21,7 +21,7 @@ export const tuningSchema=z.object({
  whirlerSpeed:z.number().finite().positive().default(combatDefaults.whirlerSpeed),
  whirlerRadius:z.number().finite().positive().default(combatDefaults.whirlerRadius),
  whirlerRange:z.number().finite().positive().default(combatDefaults.whirlerRange),
- whirlerWindupTicks:z.number().finite().positive().int().default(combatDefaults.whirlerWindupTicks),
+ whirlerWindupTicks:z.number().finite().min(36).int().default(combatDefaults.whirlerWindupTicks),
  whirlerSweepTicks:z.number().finite().positive().int().default(combatDefaults.whirlerSweepTicks),
  whirlerRecoveryTicks:z.number().finite().positive().int().default(combatDefaults.whirlerRecoveryTicks),
  whirlerDamage:z.number().finite().positive().default(combatDefaults.whirlerDamage),

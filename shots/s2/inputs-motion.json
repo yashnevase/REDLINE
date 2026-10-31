@@ -1,0 +1,22 @@
+[
+  {
+    "name": "desktop",
+    "bossTipsFirstTwo": true,
+    "keyConflictRejected": true,
+    "rebindSavedReload": true,
+    "reboundActionWorks": true,
+    "actualDeathFrame": true,
+    "retryMs": 33,
+    "errors": []
+  },
+  {
+    "name": "compact",
+    "bossTipsFirstTwo": true,
+    "keyConflictRejected": true,
+    "rebindSavedReload": true,
+    "reboundActionWorks": true,
+    "actualDeathFrame": true,
+    "retryMs": 26,
+    "errors": []
+  }
+]

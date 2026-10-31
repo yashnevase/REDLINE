@@ -1,0 +1,12 @@
+{
+  "threeLevels": true,
+  "enterChoice": true,
+  "touchChoice": false,
+  "continueCard": true,
+  "overdrive": true,
+  "complete": true,
+  "recordedReplay": true,
+  "acceleratedDebugSetup": true,
+  "physicalPhone": false,
+  "errors": []
+}

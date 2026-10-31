@@ -1,0 +1,13 @@
+{
+  "pauseWhileOpen": true,
+  "dialogKeyboardIsolation": true,
+  "focusReturned": true,
+  "persistReload": true,
+  "lowCanvas": {
+    "width": 844,
+    "height": 390,
+    "cssWidth": 844
+  },
+  "errors": [],
+  "physicalPhone": false
+}

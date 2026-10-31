@@ -1,0 +1,12 @@
+{
+  "optionsProduction": true,
+  "noDebugAPI": true,
+  "noSettings": true,
+  "firstWave": true,
+  "touchAbility": true,
+  "lossRetry": true,
+  "seededProfileBladeReload": true,
+  "bladeAbility": true,
+  "physicalPhone": false,
+  "errors": []
+}

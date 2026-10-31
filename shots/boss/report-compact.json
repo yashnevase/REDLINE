@@ -1,0 +1,9 @@
+{
+  "controlledNormalStatSnapshots": true,
+  "phases": 4,
+  "warningsResolve": true,
+  "segmentedBar": true,
+  "actualKillUnlock": true,
+  "autoEquip": true,
+  "errors": []
+}

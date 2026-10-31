@@ -1,0 +1,853 @@
+{
+  "reports": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "zoom": "default",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.700000000000045,
+      "calls": 88,
+      "triangles": 36936,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 27,
+        "quality": 5,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "launch": 2
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "zoom": "default",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.700000000000045,
+      "calls": 58,
+      "triangles": 30357,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 18,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "quality": 1,
+        "defeat": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "zoom": "default",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 67,
+      "triangles": 47592,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "blade": 1,
+        "floor-scar": 14,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "bonk": 5,
+        "stomp": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "zoom": "far",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.700000000000045,
+      "calls": 88,
+      "triangles": 38136,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 27,
+        "quality": 5,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "launch": 2
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "zoom": "far",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.700000000000045,
+      "calls": 62,
+      "triangles": 32483,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 18,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "quality": 1,
+        "defeat": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "zoom": "far",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 79,
+      "triangles": 51780,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "blade": 1,
+        "floor-scar": 14,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "bonk": 5,
+        "stomp": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "zoom": "default",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 70,
+      "triangles": 23269,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 27,
+        "quality": 5,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "launch": 2
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "zoom": "default",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 51,
+      "triangles": 19131,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 18,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "quality": 1,
+        "defeat": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "zoom": "default",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 54,
+      "triangles": 20582,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "blade": 1,
+        "floor-scar": 14,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "bonk": 5,
+        "stomp": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "zoom": "far",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 70,
+      "triangles": 23869,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 27,
+        "quality": 5,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "launch": 2
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "zoom": "far",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.600000000000364,
+      "calls": 56,
+      "triangles": 20889,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 18,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "quality": 1,
+        "defeat": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "zoom": "far",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 58,
+      "triangles": 22637,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "blade": 1,
+        "floor-scar": 14,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "bonk": 5,
+        "stomp": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "zoom": "default",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 88,
+      "triangles": 36960,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 27,
+        "quality": 5,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "launch": 2
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "zoom": "default",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 60,
+      "triangles": 30453,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 18,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "quality": 1,
+        "defeat": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "zoom": "default",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.600000000000136,
+      "calls": 65,
+      "triangles": 47720,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "blade": 1,
+        "floor-scar": 14,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "bonk": 5,
+        "stomp": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "zoom": "far",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 88,
+      "triangles": 38520,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 27,
+        "quality": 5,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "launch": 2
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "zoom": "far",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.600000000000136,
+      "calls": 62,
+      "triangles": 32867,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 18,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "quality": 1,
+        "defeat": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "zoom": "far",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.699999999999818,
+      "calls": 79,
+      "triangles": 52016,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "blade": 1,
+        "floor-scar": 14,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "bonk": 5,
+        "stomp": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "zoom": "default",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.600000000000364,
+      "calls": 70,
+      "triangles": 23281,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 27,
+        "quality": 5,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "launch": 2
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "zoom": "default",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.700000000000045,
+      "calls": 51,
+      "triangles": 19171,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 18,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "quality": 1,
+        "defeat": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "zoom": "default",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.600000000000136,
+      "calls": 52,
+      "triangles": 20630,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "blade": 1,
+        "floor-scar": 14,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "bonk": 5,
+        "stomp": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "zoom": "far",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.59999999999991,
+      "calls": 70,
+      "triangles": 24061,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 27,
+        "quality": 5,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "launch": 2
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "zoom": "far",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.600000000000364,
+      "calls": 56,
+      "triangles": 21081,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "bonk": 18,
+        "floor-scar": 13,
+        "blade": 1,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "stomp": 1,
+        "quality": 1,
+        "defeat": 1
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "zoom": "far",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "p50": 16.699999999999818,
+      "p95": 17.600000000000136,
+      "calls": 58,
+      "triangles": 22753,
+      "actors": {
+        "core": 3010,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "events": {
+        "dash": 3,
+        "blade": 1,
+        "floor-scar": 14,
+        "spin-tick": 3,
+        "stomp-charge": 1,
+        "bonk": 5,
+        "stomp": 1
+      },
+      "errors": []
+    }
+  ],
+  "physicalPhone": false
+}

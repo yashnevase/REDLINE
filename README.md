@@ -1,6 +1,6 @@
 # REDLINE · Chapter 1
 
-Original Three.js arena action prototype. Four waves, twelve run upgrades, Scrap-Rex, and a locally saved Blade loadout. Keyboard, touch and gamepad controls; no audio or online services.
+Original Three.js arena action prototype. Three score-gated levels, twelve run upgrades, Scrap-Rex, and a locally saved Blade loadout. Keyboard, touch and gamepad controls; no audio or online services.
 
 ## Run locally
 
@@ -13,7 +13,7 @@ pnpm dev --host
 
 Open the Vite address. For a phone on the same Wi-Fi, use the Mac's LAN address printed by Vite. Progress lives in that browser's local storage; different origins have separate saves.
 
-Move with WASD/arrows (8.5 u/s, rising to10.5 after straight rolling), tap Space to dash, double-tap for Rush, hold/release for Charge. Q/E/X use abilities; R activates ready Overdrive; P pauses. C/V, mouse wheel, pinch or the +/− camera buttons select saved Close/Default/Wide views. Options offers Low/Standard/High and reduced motion/flashes. The development settings button exposes tuning. Production omits the workbench and replay API.
+Move with WASD/arrows (8.5 u/s, rising to10.5 after straight rolling), tap Space to dash, double-tap for Rush, hold/release for Charge. Q Spin / E Boost / X Stomp use abilities; R activates ready Overdrive; P pauses. C/V, mouse wheel, pinch or the +/− camera buttons select saved Close/Default/Wide/Far views. Keyboard bindings are saved in Options. Options offers Low/Standard/High and reduced motion/flashes. The development settings button exposes tuning. Production omits the workbench and replay API.
 
 ```sh
 pnpm check
@@ -24,9 +24,12 @@ pnpm perf
 
 For browser evidence tools, install the browser once with `PLAYWRIGHT_BROWSERS_PATH=.cache/ms-playwright pnpm exec playwright install chromium`.
 
-`pnpm perf` opens headed Chromium and checks the actual GPU renderer; it records desktop and phone-sized Mac measurements. This does **not** replace a real-phone test. Browser tools use the project Playwright cache, port 5201, and write evidence under `shots/`.
+`pnpm perf` opens headed Chromium and checks the actual GPU renderer; it records desktop and phone-sized Mac measurements. The owner waived the physical-phone gate; these browser measurements do not certify every physical device. Browser tools use the project Playwright cache, port 5201, and write evidence under `shots/`.
 
 ## History and review
+
+- `next-work-s2` preserves all sixteen Session 2 items; `docs/S2_REPORT.md` has the item ledger, clips, budgets and owner-note audit.
+- `docs/NEXT_WORK.md` is the active work list. Sessions 3 (Scrapyard world/config) and 4 (desktop tiers/effects/additions) follow this checkpoint.
 
 - `chapter1-before-feel` preserves the complete pre-sprint source and original authored Blender assets.
 - `feel-sprint` preserves the FEEL_SPRINT implementation checkpoint.

@@ -1,7 +1,20 @@
 # STATE.md — resume here
 
-Session date: 2026-10-31 (Asia/Kolkata).
-Phase: **DEPTH_SPRINT session1 / Part A implemented; final evidence and checkpoint recorded below. Next approved session: Part B.**
+Phase: **NEXT_WORK Session 2 implemented and verified for owner review. Next implementation session: Session 3 (C0–C6, D, E).**
+
+## Current checkpoint — 2026-10-31
+
+- All sixteen Q1–Q5, B1–B6, F1–F5 items are implemented in ID-prefixed commits with modules and switches in `src/content/items/switches.ts`. Full ledger, captures, tuning, limitations and raw owner-note audit: `docs/S2_REPORT.md`. No orphan owner request; Session 3/4 requests remain mapped to their existing IDs.
+- Session 2 includes worn steel blades, intensity eyes, wave repair, four camera distances, lobby orbit, angle/punish/counter/perfect combat, Whirler, saw shots/scars, timed Q/E/X, Blade auto-fire/orbiters/spike fan/ring, scoring, objectives, input glyphs/rebinding, Rex tips/exposed plates, understandable upgrades/build strip and killer/results cards.
+- F1 necessarily includes the functional score-gated three-level foundation and cards now. Session 3 D/E still owns distinct world/layout/vent seeds/mechanics and chapter configuration. Do not mark those world items done because the score loop exists.
+- Verified: `pnpm check` (101 tests, both Ritmo audits, TypeScript/source validation), build/debug-reference exclusion, production startup/touch/loss-retry/saved Blade, real saved/conflict-checked rebinding, keyboard/touch/emulated Xbox/PlayStation hints, lobby mouse/touch/right-stick/reset, all four Rex warnings and actual-kill auto-equip/reload. Complete accelerated browser/headless replay agrees. Human balance/comprehension is separate.
+- Headed M4, 24 cases at desktop/compact × Standard/Low × Default/Far × mixed twelve enemies/Rex+six adds/corner, with Blade/Spin/Stomp/scars: Standard **88 calls /52,016 triangles**, Low **70 /24,061**, measured p95 ≤17.7 ms. Low is at its call ceiling; preserve budgets as Session 3 expands the world. Roster batching and Low LOD retain features; tilted blade faces survive batching/fading.
+- Normal-stat bot reaches Rex through Levels 1–3 in 33.3 simulated seconds, 120/120 HP after legitimate Reinforced Shell; max bonk gaps 1.08/1.65/1.45 s. `shots/s2/normal-play-32s.webm` has ≥30 s live normal-stat input. Short ability/input and Whirler/reward clips plus viewed desktop/compact images and metadata are in `shots/s2/`.
+- Human first-time one-minute comprehension gate and final visual/feel acceptance remain **unverified**, never self-passed. Owner waived physical-phone/deploy gates; browser input/size tests do not certify every physical device. No audio/deploy, copied reference assets, downloaded assets or package install.
+- Checkpoint name: `next-work-s2`; local source packet `review/next-work-s2-source.zip`. Repository main retains all earlier sprint/accepted Part A history. Preview `http://localhost:5199/` serves rebuilt production dist.
+- Continue next from `docs/NEXT_WORK.md` **SESSION 3**: blocking vents, irregular damaged tiles, living outer scrapyard, lighting/shadows, barricades/density, C0 palette/chapter config and level world differences. Session 4 desktop tiers/smoothness/effects/additions follows. No new owner permission is needed for the already approved scope; do not silently merge future items into “done”.
+
+## Historical accepted Part A below
 
 ## DEPTH_SPRINT Part A — current continuation point
 

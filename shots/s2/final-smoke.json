@@ -1,0 +1,12 @@
+[
+  {
+    "name": "desktop",
+    "bossUnlockAutoEquipSavedReload": true,
+    "errors": []
+  },
+  {
+    "name": "compact",
+    "bossUnlockAutoEquipSavedReload": true,
+    "errors": []
+  }
+]

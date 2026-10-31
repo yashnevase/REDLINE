@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-31",
+  "check": "PASS",
+  "tests": 101,
+  "build": "PASS",
+  "ritmoAudits": "PASS",
+  "production": "PASS",
+  "inputs": "PASS",
+  "options": "PASS",
+  "completeBrowserHeadlessReplay": "PASS",
+  "fourBossPhases": "PASS",
+  "actualHeavyExposureAndDoubleDamage": "PASS",
+  "physicalPhone": "owner waived",
+  "humanComprehension": "UNVERIFIED",
+  "clips": {
+    "shots/s2/normal-play-32s.webm": {
+      "duration": 34.0,
+      "bytes": 10753208
+    },
+    "shots/s2/abilities-inputs-desktop.webm": {
+      "duration": 15.64,
+      "bytes": 4884777
+    },
+    "shots/s2/abilities-inputs-compact.webm": {
+      "duration": 14.76,
+      "bytes": 1924870
+    },
+    "shots/s2/whirler-reward-desktop.webm": {
+      "duration": 9.72,
+      "bytes": 2595835
+    },
+    "shots/s2/whirler-reward-compact.webm": {
+      "duration": 9.48,
+      "bytes": 1165337
+    }
+  },
+  "defaultPerfCommand": "pnpm perf",
+  "sourceCommitBeforeReport": "ca274d3a153eb32b85acd7013aa0add4f3355307",
+  "browserReplay": "shots/run/report-desktop.json + report-compact.json",
+  "bossPhases": "shots/boss/report-desktop.json + report-compact.json"
+}

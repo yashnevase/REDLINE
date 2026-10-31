@@ -1,3 +1,4 @@
+import {prepareEnemyBlades,animateEnemyBlades} from './q1-enemy-blades.ts';
 import {makeCoreSurface,makeRigidPose,wearTier} from './core-surface.ts';
 import {makeSpeedLines} from './speed-lines.ts';
 import {makeCameraFollow} from './camera-follow.ts';
@@ -92,7 +93,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
   async function warmUp(){
     await combat.ready();
     if(!socketsLoaded){
-      socketPromise??=(async()=>{const {loadCoreSockets}=await import('./core-sockets.ts');const hardware=await loadCoreSockets(m,matching);industrialParts=await installIndustrialKit(world,matching||enemyStudio);hero.body.add(hardware);if(!studio){const transparent:T.Object3D[]=[];hero.body.traverse(o=>{if(o instanceof T.Mesh&&!Array.isArray(o.material)&&o.material.transparent)transparent.push(o);});batchParts(hero.body,[hero.shell,hero.marks,hero.eyes,heroFlash,...transparent]);batchParts(hero.marks);for(const expression of hero.expressions)batchParts(expression);}stage.finalize();encounter.finalize();bossPresentation.finalize();socketsLoaded=true;})();
+      socketPromise??=(async()=>{const {loadCoreSockets}=await import('./core-sockets.ts');const hardware=await loadCoreSockets(m,matching);industrialParts=await installIndustrialKit(world,matching||enemyStudio);prepareEnemyBlades(world);hero.body.add(hardware);if(!studio){const transparent:T.Object3D[]=[];hero.body.traverse(o=>{if(o instanceof T.Mesh&&!Array.isArray(o.material)&&o.material.transparent)transparent.push(o);});batchParts(hero.body,[hero.shell,hero.marks,hero.eyes,heroFlash,...transparent]);batchParts(hero.marks);for(const expression of hero.expressions)batchParts(expression);}stage.finalize();encounter.finalize();bossPresentation.finalize();socketsLoaded=true;})();
       try{await socketPromise;}catch(error){socketPromise=undefined;throw error;}
     }
     return renderer.compileAsync(scene,camera);
@@ -106,7 +107,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
     hero.eyes.visible=hero.marks.visible=true;heroStretch.rotation.set(0,0,0);heroStretch.scale.setScalar(1);speedLines.reset();
     chargeParticles.count=0;if(fight?.hero.dash.kind==='charging'&&!preferences.reducedFlashes&&!preferences.reducedMotion){chargeParticles.count=preferences.quality==='low'?8:24;for(let i=0;i<chargeParticles.count;i++){const p=(tick/36+i/24)%1,a=i*2.4+tick*.05;chargeDummy.position.set(Math.cos(a)*(1.5-p),.25+p*.7,Math.sin(a)*(1.5-p));chargeDummy.scale.setScalar(Math.sin(p*Math.PI));chargeDummy.updateMatrix();chargeParticles.setMatrixAt(i,chargeDummy.matrix);}chargeParticles.instanceMatrix.needsUpdate=true;if(chargeParticles.count)chargeParticles.computeBoundingSphere();}
     hero.rotor.rotation.z=preferences.reducedMotion?0:tick*.12;
-    currentTick=tick;const t=tick/60;if(run)for(const event of run.events)if(event.kind==='defeat'&&!killEvents.has(event.id)){killEvents.add(event.id);killCount++;if(killCount%4===0)edgePulseAt=t;}
+    currentTick=tick;const t=tick/60;animateEnemyBlades(world,t,preferences.reducedMotion||preferences.reducedFlashes);if(run)for(const event of run.events)if(event.kind==='defeat'&&!killEvents.has(event.id)){killEvents.add(event.id);killCount++;if(killCount%4===0)edgePulseAt=t;}
     if(killEvents.size>512){killEvents.clear();for(const event of run?.events??[])if(event.kind==='defeat')killEvents.add(event.id);}
     stage.update(t,preferences.reducedMotion,fight?.hero.overdrive?1:(fight?.hero.heat??0)/90,Math.max(0,1-(t-edgePulseAt)/.5),tuning.atmosphereStrength,preferences.reducedFlashes,hero.root.position.x,hero.root.position.z,tuning.edgeChaseSpeed);
     if(scene.background instanceof T.Texture){scene.backgroundIntensity=1+(fight?.hero.overdrive?1:(fight?.hero.heat??0)/90)*tuning.nebulaHeatBoost*(preferences.reducedFlashes?.2:1);scene.background.offset.set(preferences.reducedMotion?0:Math.sin(t*.015)*.005,preferences.reducedMotion?0:Math.cos(t*.012)*.005);scene.background.updateMatrix();}const h=matching?(tuning.coreBlade>=1?Math.max(2.85,tuning.coreStudioHeight):tuning.coreStudioHeight):enemyStudio?name==='boss-studio'?7:3.1:showcase?Math.max(43,76/(size.width/size.height)):studio?tuning.stageHeight:name==='enemy-lineup'?7:size.width<size.height?Math.max(tuning.viewHeight,tuning.portraitViewWidth/(size.width/size.height)):size.height<=500?tuning.phoneViewHeight:tuning.viewHeight;const aspect=size.width/size.height;

@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {makeScrapGround,GROUND_ENABLED} from './ground.ts';
 import {Q1_ENABLED} from '../content/items/switches.ts';
 import {floorLayout,foundry,random,seed} from '../content/scene.mjs';
 import {obstacles} from '../content/combat.ts';
@@ -11,7 +12,7 @@ export function makeSpaceStage(world:T.Group,m:Materials,tuning:Tuning,slab:T.Bu
  const root=new T.Group();root.name='foundry-slab';world.add(root);const dummy=new T.Object3D(),rng=random(seed);
  const add=(g:T.BufferGeometry,mat:T.Material,x:number,y:number,z:number)=>part(root,g,mat,x,y,z);
  const box=(w:number,h:number,d:number,x:number,y:number,z:number,mat:T.Material)=>add(new T.BoxGeometry(w,h,d),mat,x,y,z);
- const layout=floorLayout(seed),tiles=new T.InstancedMesh(slab,m.floor,layout.length);root.add(tiles);
+ const layout=floorLayout(seed),tiles=new T.InstancedMesh(slab,m.floor,layout.length);root.add(tiles);const scrapGround=GROUND_ENABLED?makeScrapGround(world):null;tiles.visible=!scrapGround;
  const lowSlab=new T.PlaneGeometry(1.42,1.42);lowSlab.rotateX(-Math.PI/2);lowSlab.translate(0,.09,0);let low=false;const underHull=new T.Group();root.add(underHull);
  const lowHull=new T.Mesh(new T.BoxGeometry(48,6,48),m.steel);lowHull.position.y=-3.15;root.add(lowHull);lowHull.visible=false;
  const tones=['#4a3a34','#6b4a3a','#8a5a40','#5a5560','#7a2f2a'];
@@ -28,7 +29,7 @@ export function makeSpaceStage(world:T.Group,m:Materials,tuning:Tuning,slab:T.Bu
  const path=new T.Shape();const r=1.1,a=12.8;path.moveTo(-a+r,-a);path.lineTo(a-r,-a);path.quadraticCurveTo(a,-a,a,-a+r);path.lineTo(a,a-r);path.quadraticCurveTo(a,a,a-r,a);path.lineTo(-a+r,a);path.quadraticCurveTo(-a,a,-a,a-r);path.lineTo(-a,-a+r);path.quadraticCurveTo(-a,-a,-a+r,-a);
  const groove=new T.CatmullRomCurve3(path.getPoints(96).map(p=>new T.Vector3(p.x,.027,p.y)),true);add(new T.TubeGeometry(groove,128,.06,4,true),trim,0,0,0);
  const panel=add(new T.ShapeGeometry(path,8),trim,0,.009,0);panel.rotation.x=-Math.PI/2;panel.material=trim.clone();(panel.material as T.MeshLambertMaterial).transparent=true;(panel.material as T.MeshLambertMaterial).opacity=.15;(panel.material as T.MeshLambertMaterial).depthWrite=false;
- const inset=panel.clone();const insetMaterial=hull.clone();insetMaterial.transparent=true;insetMaterial.opacity=.5;insetMaterial.depthWrite=false;inset.material=insetMaterial;inset.scale.setScalar(.992);inset.position.y=.014;root.add(inset);
+ const inset=panel.clone();const insetMaterial=hull.clone();insetMaterial.transparent=true;insetMaterial.opacity=.5;insetMaterial.depthWrite=false;inset.material=insetMaterial;inset.scale.setScalar(.992);inset.position.y=.014;root.add(inset);if(GROUND_ENABLED){panel.removeFromParent();inset.removeFromParent();}
  for(const o of obstacles){box(o.hx*2,.65,o.hz*2,o.x,.325,o.z,m.steel);box(o.hx*2+.05,.08,o.hz*2+.05,o.x,.69,o.z,m.rustLight);for(const side of [-1,1])box(.16,.12,.2,o.x+side*.7,.75,o.z,m.glow);}
  function pipe(x:number,y:number,z:number,length:number,radius=.22){const o=add(new T.CylinderGeometry(radius,radius,length,12),m.steel,x,y,z);o.rotation.z=Math.PI/2;for(const side of [-1,1]){const joint=add(new T.TorusGeometry(radius*1.05,.055,5,16),m.rustLight,x+side*length*.35,y,z);joint.rotation.y=Math.PI/2;}return o;}
  function crate(x:number,y:number,z:number,size:number){box(size,size,size,x,y+size/2,z,pink);for(const s of [-1,1])for(const axis of [0,1])box(axis===0?size*.06:size*1.02,size*1.02,axis===0?size*1.02:size*.06,x+(axis===0?s*size*.42:0),y+size/2,z+(axis===1?s*size*.42:0),m.steel);const diagonal=box(size*.08,size*1.15,.04,x,y+size/2,z+size*.51,m.rustLight);diagonal.rotation.z=-.65;}

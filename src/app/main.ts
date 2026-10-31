@@ -9,6 +9,7 @@ import {integrityReadout,upgradeCard,upgradeRarity,makeBuildStrip} from '../ui/f
 import {makeBossGuide,phaseBarMarkup} from '../ui/f3-boss-guide.ts';
 import {makeScoreDisplay} from '../ui/b6-score.ts';
 import {makeAbilityNames} from '../ui/b4-ability-names.ts';
+import {updateClarityHUD} from '../ui/cl-clarity.ts';
 import {makeRosterHints} from '../ui/b2-roster-hints.ts';
 import {makeQualityCallouts} from '../ui/b1-quality-callouts.ts';
 import {makeRepairPop} from '../ui/q3-repair-pop.ts';
@@ -106,7 +107,7 @@ const options=makePreferences(app,preferences,()=>{if(playing){paused=true;clear
 const deviceHints=makeDeviceHints(app,()=>preferences.bindings??defaultBindings);
 if(playing)makeZoomControls(app,app.querySelector('canvas')!,()=>preferences.zoom,zoom=>{preferences={...preferences,zoom};options.setZoom(zoom);view.setPreferences(preferences);savePreferences(preferences);},()=>!options.isOpen(),()=>preferences.bindings??defaultBindings);
 if(playing){
- makeRosterHints(app);const banner=makeEncounterBanner(app);
+ const rosterHints=makeRosterHints(app);const banner=makeEncounterBanner(app);
  app.classList.add('live');app.querySelector('.health-label span')!.textContent='INTEGRITY';
  app.querySelector('.combat-label small')!.textContent='MOVE CLOSE TO AUTO-BONK';
  app.querySelector('.combat-label span')!.textContent='FIRST CONTACT';
@@ -128,7 +129,7 @@ if(playing){
  const runResults=makeRunResults(overlay,app.querySelector('canvas')!),buildStrip=makeBuildStrip(app.querySelector('.health')!,overlay),scoreDisplay=makeScoreDisplay(app),abilityNames=makeAbilityNames(app),qualityCallouts=makeQualityCallouts(app),repairPop=makeRepairPop(app),feelHUD=makeFeelHUD(app);const objectiveHUD=makeObjectiveHUD(app,overlay,()=>{step({x:0,z:0,dash:false,continue:true});clearInput();drawHUD();});let lastResult='';
  resetHUD=()=>{feelHUD.reset();bossGuide.reset();repairPop.reset();qualityCallouts.reset();abilityNames.reset();scoreDisplay.reset();buildStrip.reset();runResults.reset();objectiveHUD.reset();cooldownPeek.pulse=cooldownPeek.boost=cooldownPeek.stomp=-1;slowUntil=0;slowScale=1;banner.reset();lastResult='';lastAnnouncement='';};
  drawHUD=()=>{if(!snapshot)return;const h=snapshot.hero,config=effectiveTuning(),run='enemies' in snapshot?snapshot:null,e='enemy' in snapshot?snapshot.enemy:null;
-  const isBoss=run?.phase.kind==='boss';bossGuide.update(isBoss);bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=`SCRAP-REX · PHASE ${bossStage(hp,config)}${run.phase.boss.exposed>0?' · EXPOSED':''}`;bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
+  updateClarityHUD(app,snapshot);rosterHints?.setPaused(paused);const isBoss=run?.phase.kind==='boss';bossGuide.update(isBoss);bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=`SCRAP-REX · PHASE ${bossStage(hp,config)}${run.phase.boss.exposed>0?' · EXPOSED':''}`;bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
   app.querySelector('.roster span')!.textContent=run?.loadout==='blade'?'BLADE EQUIPPED':'BASE FORM';
   const qButton=abilities.querySelector<HTMLElement>('[data-ability=pulse]')!;const form=run?.loadout??'core';if(qButton.dataset.form!==form){qButton.querySelector('svg')!.outerHTML=icon(form==='blade'?'blade':'pulse');qButton.dataset.form=form;}
   abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label','Blade Spin');

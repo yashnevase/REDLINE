@@ -4,7 +4,7 @@ import {levelGoals} from '../content/items/f1-objectives.ts';
 import {makeRunResults} from '../ui/f5-results.ts';
 import {makeDeviceHints} from '../ui/f2-device-hints.ts';
 import {defaultBindings,matchesBinding} from '../content/items/f2-bindings.ts';
-import {upgradeCard,upgradeRarity,makeBuildStrip} from '../ui/f4-upgrades.ts';
+import {integrityReadout,upgradeCard,upgradeRarity,makeBuildStrip} from '../ui/f4-upgrades.ts';
 import {makeBossGuide,phaseBarMarkup} from '../ui/f3-boss-guide.ts';
 import {makeScoreDisplay} from '../ui/b6-score.ts';
 import {makeAbilityNames} from '../ui/b4-ability-names.ts';
@@ -132,7 +132,7 @@ if(playing){
   const qButton=abilities.querySelector<HTMLElement>('[data-ability=pulse]')!;const form=run?.loadout??'core';if(qButton.dataset.form!==form){qButton.querySelector('svg')!.outerHTML=icon(form==='blade'?'blade':'pulse');qButton.dataset.form=form;}
   abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label','Blade Spin');
   const result=h.hp<=0?'lost':run?(run.phase.kind==='complete'?'won':run.phase.kind==='upgrade'?'upgrade':run.phase.kind==='level-complete'?'level-complete':'fighting'):e?.behavior.kind==='defeated'?'won':'fighting';app.dataset.result=result;
-  const label=app.querySelector<HTMLElement>('.health-label b')!;label.textContent=`${Math.round(h.hp/config.heroHP*100)} / 100`;label.setAttribute('aria-label',`${Math.round(h.hp/config.heroHP*100)} percent integrity`);
+  const label=app.querySelector<HTMLElement>('.health-label b')!;label.textContent=integrityReadout(h.hp,config.heroHP);label.setAttribute('aria-label',`${Math.round(h.hp/config.heroHP*100)} percent integrity`);
   app.querySelector<HTMLElement>('.health-track i')!.style.width=`${h.hp/config.heroHP*100}%`;
   abilities.querySelector('.charge-label')!.textContent=`${h.charges} / ${config.dashCharges}`;
   const chargeRoot=abilities.querySelector('.dash-charges')!;if(chargeRoot.children.length!==config.dashCharges)chargeRoot.innerHTML='<i></i>'.repeat(config.dashCharges);

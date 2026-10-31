@@ -15,7 +15,10 @@ import {makeBossPresentation} from './boss.ts';
 import {makeEncounterPresentation} from './encounter.ts';
 import type {RunState} from '../sim/run-schema.ts';
 import * as T from 'three';
-import {makeArmouredArena,AM1_ENABLED} from './am1-armoured-arena.ts';
+import {makeArenaSurface} from './am3-surface.ts';
+import {makeImpactLight} from './am-impact-light.ts';
+import {makeWorldDepth} from './am-world-depth.ts';
+import {makeArmouredArena,animateArmouredArena,AM1_ENABLED} from './am1-armoured-arena.ts';
 import {updateWorldLighting} from './h3-reactive-light.ts';
 import {BL1_ENABLED} from './bl-steel.ts';
 import {makeScrapyardWorld} from './scrapyard-world.ts';
@@ -50,7 +53,7 @@ function backdrop() {
 }
 export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning) {
   const studio=name==='lobby'||name==='core-studio'||name==='workshop',matching=name==='core-studio',enemyStudio=name.endsWith('-studio')&&!matching,showcase=name==='arena-showcase';
-  const lobbyOrbit=studio&&!matching?makeLobbyOrbit(canvas):null;
+  const lobbyOrbit=studio&&!matching?makeLobbyOrbit(canvas):null;const previewParams=new URLSearchParams(location.search),previewLevel=Math.min(2,Math.max(0,Number(previewParams.get('level')??0))),previewChaos=previewParams.get('chaos')==='1';
   const renderer=new T.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});
   renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=tuning.exposure;
   renderer.shadowMap.enabled=false;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
@@ -63,6 +66,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
   sun.shadow.mapSize.set(1024,1024);Object.assign(sun.shadow.camera,{left:-18,right:18,top:18,bottom:-18,far:50});sun.shadow.bias=-.0005;sun.shadow.normalBias=.03;scene.add(sun);
   const fill=new T.DirectionalLight('#a9b7ff',tuning.fillLight);fill.position.set(6,5,-7);scene.add(fill);
   function mesh(g:T.BufferGeometry,mat:T.Material,x=0,y=0,z=0,parent:T.Object3D=world){const o=new T.Mesh(g,mat);o.position.set(x,y,z);parent.add(o);return o;}
+  const impactLight=makeImpactLight(world);let arenaVariants:T.Group[]=[];let depthWorld:ReturnType<typeof makeWorldDepth>|null=null;
   const stage=makeSpaceStage(world,m,tuning,floorSlab());const {lavaBits,updateFloor}=stage;const scrapyardWorld=makeScrapyardWorld(world);scrapyardWorld.root.visible=!studio||showcase;
   // Actors use soft independent contact shadows; the static environment shadow map is cached.
   const contacts:T.MeshBasicMaterial[]=[];
@@ -85,7 +89,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
   const heroFlash=new T.Mesh(new T.SphereGeometry(1.012,16,12),new T.MeshBasicMaterial({color:'#ffffff',transparent:true,opacity:0,depthWrite:false}));hero.body.add(heroFlash);heroFlash.visible=false;
   const enemyFlash=new T.Mesh(new T.SphereGeometry(.69,12,8),new T.MeshBasicMaterial({color:'#ffffff',transparent:true,opacity:0,depthWrite:false}));enemy.body.add(enemyFlash);
   if(enemyStudio){world.children.forEach(o=>o.visible=o===enemy.root);enemy.root.position.set(0,0,0);hero.root.visible=false;stage.space.visible=false;}
-  if(showcase){hero.root.visible=false;enemy.root.visible=false;if(AM1_ENABLED){stage.root.visible=false;stage.space.visible=false;if(stage.scrapGround)stage.scrapGround.visible=false;scrapyardWorld.root.visible=false;makeArmouredArena(world);}}
+  if(showcase){hero.root.visible=false;enemy.root.visible=false;}if(AM1_ENABLED&&(showcase||name==='arena'||name==='perf-worst')){stage.root.visible=false;stage.space.visible=false;if(stage.scrapGround)stage.scrapGround.visible=false;scrapyardWorld.root.visible=false;const surface=makeArenaSurface(),fractureSurface=makeArenaSurface(true);arenaVariants=[0,1,2,3,4,5].map(i=>makeArmouredArena(world,i%3,i>=3,i%3===2?fractureSurface:surface));depthWorld=makeWorldDepth(world);}
   if(studio) {
     world.children.forEach(o=>{o.visible=o===hero.root||o===sparks;});hero.root.position.set(0,0,0);
     heroShadow.scale.setScalar(matching?.5:1.4);if(matching)heroShadow.material.opacity=.65;if(!matching){stage.root.visible=true;stage.root.scale.setScalar(.065);stage.root.position.set(-1.8,-1.1,-1.8);stage.space.visible=true;}else stage.space.visible=false;const pedestal=mesh(new T.CylinderGeometry(1.2,1.35,.18,48),m.steel,0,-.13,0);pedestal.visible=!matching;const rim=mesh(new T.TorusGeometry(1.22,.025,6,64),m.glow,0,-.025,0);rim.rotation.x=-Math.PI/2;rim.visible=!matching;
@@ -108,7 +112,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
     return renderer.compileAsync(scene,camera);
   }
   let coreMask=false;const maskScene=new T.Scene();maskScene.background=new T.Color('#000');let maskCore:T.Group|undefined;const maskMaterial=new T.MeshBasicMaterial({color:'#fff',toneMapped:false});
-  function rebuildMask(){if(maskCore)maskScene.remove(maskCore);maskCore=(enemyStudio?(name==='boss-studio'?bossPresentation.root:enemy.root):showcase?stage.root:hero.body).clone(true);maskCore.traverse(o=>{if(o.name==='core-eyes')o.visible=false;if(o instanceof T.Mesh){if(!Array.isArray(o.material)&&o.material.transparent)o.visible=false;if(o instanceof T.InstancedMesh)o.instanceColor=null;o.material=maskMaterial;}});maskScene.add(maskCore);}
+  function rebuildMask(){if(maskCore)maskScene.remove(maskCore);maskCore=(enemyStudio?(name==='boss-studio'?bossPresentation.root:enemy.root):showcase?(arenaVariants.find(v=>v.visible)??stage.root):hero.body).clone(true);maskCore.traverse(o=>{if(o.name==='core-eyes')o.visible=false;if(o instanceof T.Mesh){if(!Array.isArray(o.material)&&o.material.transparent)o.visible=false;if(o instanceof T.InstancedMesh)o.instanceColor=null;o.material=maskMaterial;}});maskScene.add(maskCore);}
 
   function renderAt(tick:number){
     const renderDt=lastRenderTick<0||tick<lastRenderTick?0:Math.min(.05,(tick-lastRenderTick)/60);if(tick<lastRenderTick){follow.reset();surface.reset();rigidPose.reset();intensityEyes.reset();lastCorePoint=null;}lastRenderTick=tick;
@@ -167,12 +171,12 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
     sparks.count=matching?0:Math.floor(Math.min(defaults.particles,preferences.quality==='low'?Math.min(6,tuning.particles):tuning.particles));
     sparks.visible=preferences.quality!=='low'&&name!=='enemy-lineup'&&!enemyStudio&&!showcase;sparkData.forEach((s,i)=>{sparkDummy.position.set(studio?s.x*.28:s.x+(fight?hero.root.position.x:0),studio?((s.phase+(preferences.reducedMotion?0:t)*.025)%1)*4:((s.phase+(preferences.reducedMotion?0:t)*.12)%1)*.9,studio?-2:s.z*.55+(fight?hero.root.position.z:0));sparkDummy.scale.setScalar(i<(preferences.quality==='low'?Math.min(6,tuning.particles):tuning.particles)?(studio?.55:1):0);sparkDummy.updateMatrix();sparks.setMatrixAt(i,sparkDummy.matrix);});sparks.instanceMatrix.needsUpdate=true;if(sparks.count)sparks.computeBoundingSphere();
     const sweepPhase=(t%Math.max(1,tuning.sweepPeriod))/Math.max(.1,tuning.sweepDuration);floorSweep.visible=sweepPhase<1&&preferences.quality!=='low'&&!!fight&&!preferences.reducedMotion&&!preferences.reducedFlashes;floorSweep.material.uniforms.uOpacity.value=tuning.ambientSweep*Math.max(0,Math.sin(Math.min(1,sweepPhase)*Math.PI));floorSweep.position.set(hero.root.position.x,.032,hero.root.position.z+(sweepPhase-.5)*20);
-    camera.updateMatrixWorld();scrapyardWorld.setLow(preferences.quality==='low');scrapyardWorld.update(t,preferences.reducedMotion,camera);const heroBounds={x:hero.root.position.x,y:tuning.coreRadius+.04,z:hero.root.position.z,radius:tuning.coreRadius};
-    if(fight)stage.fade(camera,heroBounds,size.width>=size.height);
+    camera.updateMatrixWorld();impactLight.draw(run,preferences.reducedFlashes,preferences.quality==='low');const shownLevel=run?.objective.level??previewLevel;arenaVariants.forEach((v,i)=>{v.visible=i===shownLevel+(preferences.quality==='low'?3:0);if(v.visible)animateArmouredArena(v,t,preferences.reducedFlashes||preferences.reducedMotion);});depthWorld?.draw(t,camera,preferences.quality==='low',preferences.reducedMotion,preferences.reducedFlashes,run?(run.hero.overdrive>0?1:run.hero.heat/(runTuning?.heatThreshold??90)):previewChaos?1:.25);scrapyardWorld.setLow(preferences.quality==='low');scrapyardWorld.update(t,preferences.reducedMotion,camera);const heroBounds={x:hero.root.position.x,y:tuning.coreRadius+.04,z:hero.root.position.z,radius:tuning.coreRadius};
+    if(fight&&!arenaVariants.length)stage.fade(camera,heroBounds,size.width>=size.height);
     if(run&&runTuning){abilityEffects.draw(run,runTuning,camera,preferences.reducedMotion,preferences.reducedFlashes,preferences.quality==='low');enemy.root.visible=false;warning.visible=false;encounter.root.visible=true;encounter.draw(run,fightAlpha,runTuning,preferences.reducedMotion,preferences.reducedFlashes,camera,heroBounds,preferences.quality==='low');}
     bossPresentation.root.visible=false;bossPresentation.warnings.visible=false;if(run?.phase.kind==='boss'&&runTuning)bossPresentation.draw(run.phase.boss,tick,fightAlpha,runTuning,preferences.reducedMotion,camera,heroBounds,preferences.reducedFlashes);else if(name==='boss'||name==='boss-studio'){bossPresentation.preview(tick);if(name==='boss-studio'){enemy.root.visible=false;bossPresentation.root.position.set(0,0,0);}}else if(name==='enemy-lineup'){encounter.root.visible=true;encounter.lineup(tick);enemy.root.visible=false;}
     npcShadows.count=0;if(run){const units=run.enemies.filter(e=>e.hp>0).map(e=>({x:mix(e.prevX,e.x),z:mix(e.prevZ,e.z),radius:(e.kind==='grinder'?1:.7)*(e.behavior.kind==='spawn'?1-.5*e.behavior.remaining/(runTuning?.spawnDropTicks??30):1)}));if(run.phase.kind==='boss')units.push({x:mix(run.phase.boss.prevX,run.phase.boss.x),z:mix(run.phase.boss.prevZ,run.phase.boss.z),radius:1.6});for(const unit of units){shadowDummy.position.set(unit.x,.012,unit.z);shadowDummy.scale.set(unit.radius*3.5,unit.radius*3.5,1);shadowDummy.updateMatrix();npcShadows.setMatrixAt(npcShadows.count++,shadowDummy.matrix);}npcShadows.instanceMatrix.needsUpdate=true;if(npcShadows.count)npcShadows.computeBoundingSphere();npcShadows.material.uniforms.uOpacity.value=tuning.enemyGlowOpacity*(preferences.reducedFlashes?.3:1);}
-    if(coreMask&&(matching||enemyStudio||showcase)&&maskCore){const source=matching?hero.body:showcase?stage.root:name==='boss-studio'?bossPresentation.root:enemy.root;maskCore.position.copy(source.position);maskCore.scale.copy(source.scale);maskCore.rotation.copy(source.rotation);renderer.render(maskScene,camera);}else if(preferences.quality==='high'&&!preferences.reducedFlashes&&!matching&&!enemyStudio){glow??=makeSelectiveGlow(renderer,scene,camera);glow.draw();}else renderer.render(scene,camera);
+    if(coreMask&&(matching||enemyStudio||showcase)&&maskCore){const source=matching?hero.body:showcase?(arenaVariants.find(v=>v.visible)??stage.root):name==='boss-studio'?bossPresentation.root:enemy.root;maskCore.position.copy(source.position);maskCore.scale.copy(source.scale);maskCore.rotation.copy(source.rotation);renderer.render(maskScene,camera);}else if(preferences.quality==='high'&&!preferences.reducedFlashes&&!matching&&!enemyStudio){glow??=makeSelectiveGlow(renderer,scene,camera);glow.draw();}else renderer.render(scene,camera);
   }
   function applyTuning(){if(lastSheen!==tuning.coreSheen){lastSheen=tuning.coreSheen;}renderer.toneMappingExposure=tuning.exposure;sky.intensity=tuning.ambientLight;sun.intensity=tuning.keyLight;fill.intensity=tuning.fillLight;m.glow.color.set('#b49bff').multiplyScalar(tuning.violetStrength/2.5);m.orange.color.set('#f95116').multiplyScalar(tuning.orangeStrength/2.8);contacts.forEach(c=>c.opacity=Math.min(1,tuning.shadowOpacity*(matching&&c===heroShadow.material?3.25:2)));updateFloor();resize(size.width,size.height);renderer.shadowMap.needsUpdate=true;renderAt(currentTick);}
   renderer.shadowMap.needsUpdate=true;

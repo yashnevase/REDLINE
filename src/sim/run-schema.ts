@@ -1,3 +1,4 @@
+import {qualitySchema} from './b1-hit-quality.ts';
 import {z} from 'zod';
 import {Descriptor,Schema,Ops} from '@typeonce/ritmo';
 import {heroSchema,behavior,eventSchema,initialState,Input,Tuning} from './schema.ts';
@@ -5,7 +6,7 @@ import {enemyKinds,waves,enemyStats} from '../content/encounter.ts';
 import type {CombatTuning} from '../content/combat.ts';
 import {collide} from './geometry.ts';
 const n=z.number().finite(),ticks=z.number().int().nonnegative();
-export const enemySchema=z.object({id:ticks,kind:z.enum(enemyKinds),x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),faceX:n,faceZ:n,behavior});
+export const enemySchema=z.object({id:ticks,attackSerial:ticks.default(0),kind:z.enum(enemyKinds),x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),faceX:n,faceZ:n,behavior});
 const target=z.object({x:n,z:n});
 export const bossSchema=z.object({x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),sequence:ticks,faceX:n,faceZ:n,behavior:z.discriminatedUnion('kind',[
  z.object({kind:z.literal('recover'),remaining:ticks}),
@@ -23,7 +24,7 @@ const phase=z.discriminatedUnion('kind',[
  z.object({kind:z.literal('boss'),boss:bossSchema}),
  z.object({kind:z.literal('complete'),reward:z.literal('blade').optional()}),z.object({kind:z.literal('lost')})
 ]);
-export const runSchema=z.object({tick:ticks,hitstop:ticks,loadout:z.enum(['core','blade']).default('core'),hero:heroSchema,enemies:z.array(enemySchema).max(12),projectiles:z.array(z.object({id:ticks,owner:ticks,x:n,z:n,prevX:n,prevZ:n,dx:n,dz:n,remaining:ticks})).max(24),nextProjectile:ticks,phase,upgrades:z.array(z.string()),events:z.array(eventSchema)});
+export const runSchema=z.object({quality:qualitySchema,tick:ticks,hitstop:ticks,loadout:z.enum(['core','blade']).default('core'),hero:heroSchema,enemies:z.array(enemySchema).max(12),projectiles:z.array(z.object({id:ticks,owner:ticks,x:n,z:n,prevX:n,prevZ:n,dx:n,dz:n,remaining:ticks})).max(24),nextProjectile:ticks,phase,upgrades:z.array(z.string()),events:z.array(eventSchema)});
 export type RunState=z.infer<typeof runSchema>;
 export type Enemy=z.infer<typeof enemySchema>;
 export const Run=Descriptor.ConstructedResource(runSchema)('Redline/Run');
@@ -34,8 +35,8 @@ export function spawnEnemy(kind:Enemy['kind'],index:number,wave:number,t:CombatT
  const angle=index*2.399963229728653+wave*.7,radius=t.spawnRadius+(index%3)*t.spawnSeparation*.5;
  const x=Ops.cos(angle)*radius,z=Ops.sin(angle)*radius,side=x>=0?1:-1;
  const stats=enemyStats(kind,t),p=collide(x,z,stats.radius,t);
- return{id:wave*100+index,kind,x:p.x,z:p.z,prevX:p.x,prevZ:p.z,hp:stats.hp,faceX:-side,faceZ:0,behavior:{kind:'spawn',remaining:t.spawnDropTicks}};
+ return{id:wave*100+index,attackSerial:0,kind,x:p.x,z:p.z,prevX:p.x,prevZ:p.z,hp:stats.hp,faceX:-side,faceZ:0,behavior:{kind:'spawn',remaining:t.spawnDropTicks}};
 }
 export function initialRun(t:CombatTuning,loadout:RunState['loadout']='core'):RunState {
- return{tick:0,hitstop:0,loadout,hero:initialState(t).hero,enemies:waves[0].slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,0,t)),projectiles:[],nextProjectile:0,phase:{kind:'fight',wave:0,nextSpawn:Math.min(t.enemyCap,t.openingThreats,waves[0].length),nextSpawnIn:t.spawnMinTicks},upgrades:[],events:[]};
+ return{quality:qualitySchema.parse({}),tick:0,hitstop:0,loadout,hero:initialState(t).hero,enemies:waves[0].slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,0,t)),projectiles:[],nextProjectile:0,phase:{kind:'fight',wave:0,nextSpawn:Math.min(t.enemyCap,t.openingThreats,waves[0].length),nextSpawnIn:t.spawnMinTicks},upgrades:[],events:[]};
 }

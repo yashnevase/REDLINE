@@ -1,0 +1,1 @@
+export const hitQualityDefaults={rearDamageFactor:1.5,armourFrontFactor:.3,rearDot:-.5,punishDamageFactor:2,punishTicks:36,counterWindowTicks:9,counterStaggerTicks:18,counterHeat:8,perfectHeat:12,perfectDamageFactor:1.5,perfectBuffTicks:90};

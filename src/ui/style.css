@@ -84,3 +84,5 @@
 .repair-pop{position:fixed;left:28px;top:200px;z-index:9;padding:8px 14px;background:#183932eb;border:1px solid #9effd455;color:#b4ffe0;font-family:'Redline Display',sans-serif;font-size:24px;border-radius:10px;pointer-events:none}.repair-pop[hidden]{display:none}
 
 .lobby-orbit-hint{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.3px;color:#d4c8df;text-align:center;pointer-events:none;max-width:60%}.lobby-orbit-hint[hidden]{display:none}
+
+.quality-callouts{position:fixed;left:26px;top:255px;z-index:5;display:grid;gap:5px;pointer-events:none}.quality-callouts b{font:italic 700 28px 'Redline Display',sans-serif;color:#ffce9a;text-shadow:0 2px 8px #2d1026;border-left:3px solid #bb8aff;padding-left:9px}.quality-callouts[data-quiet=false] b{animation:ready-pop .15s ease-out}

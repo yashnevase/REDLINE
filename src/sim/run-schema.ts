@@ -1,3 +1,4 @@
+import {deathCauses} from '../content/items/f5-results.ts';
 import {scoreSchema} from './b6-score.ts';
 import {bladeProjectileSchema} from './b5-blade-projectiles.ts';
 import {qualitySchema} from './b1-hit-quality.ts';
@@ -24,7 +25,7 @@ const phase=z.discriminatedUnion('kind',[
  z.object({kind:z.literal('fight'),wave:ticks,nextSpawn:ticks,nextSpawnIn:ticks.default(0)}),
  z.object({kind:z.literal('upgrade'),wave:ticks,choices:z.array(z.string()).length(3)}),
  z.object({kind:z.literal('boss'),boss:bossSchema}),
- z.object({kind:z.literal('complete'),reward:z.literal('blade').optional()}),z.object({kind:z.literal('lost')})
+ z.object({kind:z.literal('complete'),reward:z.literal('blade').optional()}),z.object({kind:z.literal('lost'),cause:z.enum(deathCauses).default('unknown')})
 ]);
 export const runSchema=z.object({score:scoreSchema,bladeProjectiles:z.array(bladeProjectileSchema).max(32).default([]),nextBladeProjectile:ticks.default(0),bladeFireIn:ticks.default(0),quality:qualitySchema,tick:ticks,hitstop:ticks,loadout:z.enum(['core','blade']).default('core'),hero:heroSchema,enemies:z.array(enemySchema).max(12),projectiles:z.array(z.object({id:ticks,owner:ticks,x:n,z:n,prevX:n,prevZ:n,dx:n,dz:n,remaining:ticks})).max(24),nextProjectile:ticks,phase,upgrades:z.array(z.string()),events:z.array(eventSchema)});
 export type RunState=z.infer<typeof runSchema>;

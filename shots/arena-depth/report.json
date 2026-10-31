@@ -1,0 +1,3634 @@
+{
+  "bot": {
+    "seconds": 130.73333333333332,
+    "hp": 120,
+    "phase": "boss",
+    "kills": 124,
+    "gaps": [
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 37
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 11
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 47
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 50
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 36
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 11
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 5
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 12
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 30
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 61
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 14
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 33
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 26
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 29
+      },
+      {
+        "level": 1,
+        "wave": 1,
+        "ticks": 29
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 28
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 11
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 38
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 83
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 16
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 5
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 11
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 13
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 15
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 19
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 62
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 17
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 93
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 32
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 20
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 33
+      },
+      {
+        "level": 1,
+        "wave": 2,
+        "ticks": 9
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 37
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 59
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 7
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 30
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 19
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 34
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 29
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 22
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 12
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 11
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 6
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 61
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 32
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 30
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 19
+      },
+      {
+        "level": 1,
+        "wave": 3,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 44
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 27
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 25
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 15
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 30
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 8
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 72
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 14
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 35
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 34
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 60
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 9
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 14
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 13
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 36
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 29
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 30
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 6
+      },
+      {
+        "level": 2,
+        "wave": 1,
+        "ticks": 29
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 41
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 80
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 15
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 8
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 24
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 15
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 33
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 23
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 23
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 12
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 12
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 74
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 26
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 44
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 9
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 11
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 54
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 25
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 12
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 7
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 2,
+        "ticks": 89
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 45
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 30
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 47
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 11
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 13
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 29
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 47
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 7
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 33
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 54
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 33
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 29
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 22
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 16
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 8
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 6
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 37
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 29
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 28
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 33
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 74
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 7
+      },
+      {
+        "level": 2,
+        "wave": 3,
+        "ticks": 14
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 36
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 36
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 53
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 14
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 24
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 13
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 39
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 34
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 6
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 101
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 11
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 11
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 10
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 29
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 40
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 35
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 10
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 19
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 10
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 88
+      },
+      {
+        "level": 2,
+        "wave": 4,
+        "ticks": 9
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 45
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 24
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 15
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 29
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 6
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 18
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 39
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 85
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 25
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 11
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 32
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 32
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 9
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 60
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 26
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 8
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 16
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 48
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 41
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 6
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 14
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 3
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 9
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 27
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 29
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 22
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 37
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 29
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 24
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 43
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 10
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 28
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 9
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 50
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 25
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 35
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 46
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 111
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 13
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 9
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 50
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 26
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 8
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 9
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 42
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 26
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 8
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 21
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 13
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 8
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 64
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 6
+      },
+      {
+        "level": 3,
+        "wave": 2,
+        "ticks": 18
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 64
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 17
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 34
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 54
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 27
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 30
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 7
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 16
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 6
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 35
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 24
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 6
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 37
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 52
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 28
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 30
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 15
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 18
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 4
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 54
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 20
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 7
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 8
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 13
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 17
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 4
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 26
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 25
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 18
+      },
+      {
+        "level": 3,
+        "wave": 3,
+        "ticks": 14
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 45
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 32
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 28
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 21
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 26
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 7
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 28
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 18
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 16
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 34
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 10
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 11
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 100
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 11
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 17
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 8
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 48
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 28
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 6
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 77
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 13
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 17
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 4
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 15
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 9
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 25
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 25
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 18
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 4,
+        "ticks": 10
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 101
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 13
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 10
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 14
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 28
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 23
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 18
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 3
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 16
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 109
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 15
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 9
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 15
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 25
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 30
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 11
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 28
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 26
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 20
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 17
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 4
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 19
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 12
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 48
+      },
+      {
+        "level": 3,
+        "wave": 1,
+        "ticks": 11
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "name": "desktop",
+      "level": 0,
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.1076388888888889,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 495.0689036765194,
+          "y": 264.9953149495549,
+          "radius": 10.309302325581395
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "idle",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 0,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "default",
+          "viewScale": 1.1460842366389878
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 0,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 0,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 20940,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 60,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena-showcase",
+        "seed": 4107,
+        "tick": 120,
+        "camera": {
+          "width": 76.97902097902097,
+          "height": 43,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.02883720930232558
+        },
+        "viewport": {
+          "width": 1024,
+          "height": 572
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 11,
+        "triangles": 25022,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        }
+      }
+    },
+    {
+      "name": "desktop",
+      "level": 1,
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.1076388888888889,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 495.0689036765194,
+          "y": 264.9953149495549,
+          "radius": 10.309302325581395
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "idle",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 0,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "default",
+          "viewScale": 1.1460621484051556
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 0,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 0,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 21042,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 60,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena-showcase",
+        "seed": 4107,
+        "tick": 120,
+        "camera": {
+          "width": 76.97902097902097,
+          "height": 43,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.02883720930232558
+        },
+        "viewport": {
+          "width": 1024,
+          "height": 572
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 11,
+        "triangles": 25124,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        }
+      }
+    },
+    {
+      "name": "desktop",
+      "level": 2,
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.1076388888888889,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 495.0689036765194,
+          "y": 264.9953149495549,
+          "radius": 10.309302325581395
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "idle",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 0,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "default",
+          "viewScale": 1.1464590845546565
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 0,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 0,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 20444,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 60,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena-showcase",
+        "seed": 4107,
+        "tick": 120,
+        "camera": {
+          "width": 76.97902097902097,
+          "height": 43,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.02883720930232558
+        },
+        "viewport": {
+          "width": 1024,
+          "height": 572
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 12,
+        "triangles": 24528,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        }
+      }
+    },
+    {
+      "name": "desktop",
+      "level": 3,
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.1076388888888889,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 495.0689036765194,
+          "y": 264.9953149495549,
+          "radius": 10.309302325581395
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "idle",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 0,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "default",
+          "viewScale": 1.1456561532906724
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 0,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 0,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 20940,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena-showcase",
+        "seed": 4107,
+        "tick": 120,
+        "camera": {
+          "width": 76.97902097902097,
+          "height": 43,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.02883720930232558
+        },
+        "viewport": {
+          "width": 1024,
+          "height": 572
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 11,
+        "triangles": 25058,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        }
+      }
+    },
+    {
+      "name": "desktop",
+      "kind": "normal",
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 527.0457284183065,
+          "y": 268.2385206815441,
+          "radius": 25.895926702887227
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "extreme",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 466.3619923443311,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "wide",
+          "viewScale": 1.4999999999999993
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 11,
+          "dustInstances": 3,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 1524,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "Mesh",
+            "triangles": 180000,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 180000,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 21042,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 720,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 480,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 384,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 176,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 144,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 144,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 3
+          },
+          {
+            "name": "Mesh",
+            "triangles": 60,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 54,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 54,
+            "calls": 1
+          },
+          {
+            "name": "core-eyes",
+            "triangles": 48,
+            "calls": 1
+          },
+          {
+            "name": "core-marks",
+            "triangles": 48,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 44,
+            "calls": 1
+          },
+          {
+            "name": "core-marks",
+            "triangles": 16,
+            "calls": 1
+          },
+          {
+            "name": "core-marks",
+            "triangles": 16,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 10,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 6,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 4,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena",
+        "seed": 4107,
+        "tick": 1845.5984000000224,
+        "simTick": 1846,
+        "camera": {
+          "width": 20.05034965034965,
+          "height": 11.2,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.11071428571428572
+        },
+        "viewport": {
+          "width": 1024,
+          "height": 572
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 48,
+        "triangles": 31756,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        },
+        "fight": {
+          "hp": 108,
+          "phase": {
+            "kind": "fight",
+            "wave": 0,
+            "nextSpawn": 10,
+            "nextSpawnIn": 0
+          },
+          "enemies": 5,
+          "alive": 2,
+          "projectiles": 1,
+          "charges": 2,
+          "heat": 12,
+          "overdrive": 271
+        }
+      }
+    },
+    {
+      "name": "compact",
+      "level": 0,
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.09375,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 410.45607068853593,
+          "y": 180.67862382924199,
+          "radius": 7.029069767441861
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "idle",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 0,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "default",
+          "viewScale": 1.1456561532907232
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 0,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 0,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 20940,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 60,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena-showcase",
+        "seed": 4107,
+        "tick": 120,
+        "camera": {
+          "width": 93.05641025641025,
+          "height": 43,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.02883720930232558
+        },
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 11,
+        "triangles": 25022,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        }
+      }
+    },
+    {
+      "name": "compact",
+      "level": 1,
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.09375,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 410.45607068853593,
+          "y": 180.67862382924199,
+          "radius": 7.029069767441861
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "idle",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 0,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "default",
+          "viewScale": 1.1456561532906728
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 0,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 0,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 21042,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 60,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena-showcase",
+        "seed": 4107,
+        "tick": 120,
+        "camera": {
+          "width": 93.05641025641025,
+          "height": 43,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.02883720930232558
+        },
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 11,
+        "triangles": 25124,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        }
+      }
+    },
+    {
+      "name": "compact",
+      "level": 2,
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.09375,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 410.45607068853593,
+          "y": 180.67862382924199,
+          "radius": 7.029069767441861
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "idle",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 0,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "default",
+          "viewScale": 1.1456480009376806
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 0,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 0,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 20444,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 60,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena-showcase",
+        "seed": 4107,
+        "tick": 120,
+        "camera": {
+          "width": 93.05641025641025,
+          "height": 43,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.02883720930232558
+        },
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 12,
+        "triangles": 24528,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        }
+      }
+    },
+    {
+      "name": "compact",
+      "level": 3,
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.09375,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 410.45607068853593,
+          "y": 180.67862382924199,
+          "radius": 7.029069767441861
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "idle",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 0,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "default",
+          "viewScale": 1.1456561532906726
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 0,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 0,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 20940,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          }
+        ],
+        "scene": "arena-showcase",
+        "seed": 4107,
+        "tick": 120,
+        "camera": {
+          "width": 93.05641025641025,
+          "height": 43,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.02883720930232558
+        },
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 11,
+        "triangles": 25058,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        }
+      }
+    },
+    {
+      "name": "compact",
+      "kind": "normal",
+      "errors": [],
+      "metadata": {
+        "hullCoverage": {
+          "fraction": 0.07465277777777778,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "coreScreen": {
+          "x": 429.55483660766123,
+          "y": 187.22783122294177,
+          "radius": 17.95466881998198
+        },
+        "heroAppearance": {
+          "eyes": {
+            "shape": "extreme",
+            "morphSeconds": 0.08
+          },
+          "rollRadians": 206.64634518517482,
+          "wear": 0,
+          "bodyScale": [
+            1,
+            1,
+            1
+          ],
+          "faceVisible": true,
+          "crownVisible": true,
+          "zoom": "wide",
+          "viewScale": 1.4999999999999991
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "motion": {
+          "ghosts": 0,
+          "ribbonInstances": 11,
+          "dustInstances": 0,
+          "scarSmoke": 0
+        },
+        "actorTriangles": {
+          "core": 1524,
+          "enemies": {
+            "sawlet": 1042,
+            "thrower": 1356,
+            "shieldsaw": 1546,
+            "grinder": 1460,
+            "whirler": 768
+          }
+        },
+        "meshCounts": [
+          {
+            "name": "Mesh",
+            "triangles": 180000,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 180000,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 20940,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1620,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1356,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 1128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 720,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 640,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 624,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 384,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 176,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 128,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 96,
+            "calls": 1
+          },
+          {
+            "name": "core-eyes",
+            "triangles": 48,
+            "calls": 1
+          },
+          {
+            "name": "core-marks",
+            "triangles": 48,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 44,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 32,
+            "calls": 1
+          },
+          {
+            "name": "core-marks",
+            "triangles": 16,
+            "calls": 1
+          },
+          {
+            "name": "core-marks",
+            "triangles": 16,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 10,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 4,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "AM1-armoured-arena",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 2,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 0,
+            "calls": 3
+          }
+        ],
+        "scene": "arena",
+        "seed": 4107,
+        "tick": 812.5333999999553,
+        "simTick": 813,
+        "camera": {
+          "width": 23.805128205128202,
+          "height": 11,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "playHalfWidth": 17,
+          "cameraClamp": 13,
+          "openCentre": 22.4
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.11272727272727273
+        },
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 34,
+        "triangles": 29782,
+        "benchmarkPeak": {
+          "calls": 0,
+          "triangles": 0
+        },
+        "benchmarkEvents": {},
+        "benchmarkWork": {
+          "step": [],
+          "render": [],
+          "hud": []
+        },
+        "fight": {
+          "hp": 100,
+          "phase": {
+            "kind": "fight",
+            "wave": 1,
+            "nextSpawn": 9,
+            "nextSpawnIn": 0
+          },
+          "enemies": 5,
+          "alive": 2,
+          "projectiles": 0,
+          "charges": 2,
+          "heat": 41,
+          "overdrive": 156
+        }
+      }
+    }
+  ]
+}

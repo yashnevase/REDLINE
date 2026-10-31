@@ -1,5 +1,7 @@
 # Asset provenance — Phase 0
 
+2026-11-01 arena-depth pass: original Three.js armoured deck, inset machinery pit/bridge/stairs, half-plane-clipped fractured plate geometry and lower emissive layer; original runtime world-space canvas wear/grate/bolt atlas; original shaded scrap-mech silhouettes, wreck/crane/scaffold geometry, drift shader, smoke/ember pools, bounded impact point lights. No external model, texture or generated target image is shipped. `art/arena-ref/` remains study-only. Spirit Call's local scenery/combat-light source and combat/lobby screenshots were studied for layering, contact/readability and bounded pooling principles; no source code or assets were copied.
+
 | Shipped item | Source | Licence / status | Notes |
 |---|---|---|---|
 | Core, Sawlet, floor, walls, crates, pipes, gears, vents | Original procedural geometry in src/presentation/scene.ts and models.ts | Original REDLINE implementation | No reference meshes or code copied |

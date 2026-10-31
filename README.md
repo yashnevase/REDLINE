@@ -2,6 +2,8 @@
 
 Original Three.js arena action prototype. Three score-gated levels, twelve run upgrades, Scrap-Rex, and a locally saved Blade loadout. Keyboard, touch and gamepad controls; no audio or online services.
 
+Current arena-depth review: playable armoured scrapyard, recessed machinery room and physically fractured glowing plates, with animated wrecks/smoke and impact lighting. Goals are 10,000 / 24,000 / 40,000 with minimum 3 / 4 / 5 waves and six opening enemies. Implementation/evidence and remaining art work: [ARENA_DEPTH_REPORT](docs/ARENA_DEPTH_REPORT.md). Exact reference fidelity and full Session 3 acceptance remain open.
+
 ## Run locally
 
 Use Node 24+ and pnpm 11.25.0, then:

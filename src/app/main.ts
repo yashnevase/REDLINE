@@ -1,3 +1,4 @@
+import {makePadActivity} from '../input/f2-pad-activity.ts';
 import {makeObjectiveHUD} from '../ui/f1-objectives.ts';
 import {levelGoals} from '../content/items/f1-objectives.ts';
 import {makeRunResults} from '../ui/f5-results.ts';
@@ -157,8 +158,9 @@ if(playing){
  };
  applySnapshot(1);
 }
+const lobbyPadActivity=makePadActivity();
 function animate(time:number){
- if(!playing){const pad=Array.from(navigator.getGamepads?.()??[]).find(p=>p?.connected);if(pad&&(pad.axes.some(v=>Math.abs(v)>.2)||pad.buttons.some(b=>b.pressed)))deviceHints.use(/dualsense|dualshock|playstation|054c/i.test(pad.id)?'playstation':'xbox');deviceHints.update(false);}
+ if(!playing){const pad=Array.from(navigator.getGamepads?.()??[]).find(p=>p?.connected);if(lobbyPadActivity(pad??undefined)&&pad)deviceHints.use(/dualsense|dualshock|playstation|054c/i.test(pad.id)?'playstation':'xbox');deviceHints.update(false);}
  if(time>=slowUntil)slowScale=1;
  const delta=Math.min((time-lastTime)/1000,.1);lastTime=time;
  if(!measuring&&ready){

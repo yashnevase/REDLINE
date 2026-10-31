@@ -1,0 +1,218 @@
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "standard",
+    "kind": "crowd",
+    "calls": 90,
+    "triangles": 46988,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "standard",
+    "kind": "rex",
+    "calls": 60,
+    "triangles": 40917,
+    "p95": 17.600000000000136,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "standard",
+    "kind": "corner",
+    "calls": 59,
+    "triangles": 42914,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "low",
+    "kind": "crowd",
+    "calls": 70,
+    "triangles": 23719,
+    "p95": 17.600000000000364,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "low",
+    "kind": "rex",
+    "calls": 50,
+    "triangles": 20175,
+    "p95": 17.600000000000364,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "low",
+    "kind": "corner",
+    "calls": 55,
+    "triangles": 21015,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "quality": "standard",
+    "kind": "crowd",
+    "calls": 90,
+    "triangles": 46988,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "quality": "standard",
+    "kind": "rex",
+    "calls": 60,
+    "triangles": 40917,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "quality": "standard",
+    "kind": "corner",
+    "calls": 59,
+    "triangles": 42914,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "quality": "low",
+    "kind": "crowd",
+    "calls": 70,
+    "triangles": 23719,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "quality": "low",
+    "kind": "rex",
+    "calls": 50,
+    "triangles": 20175,
+    "p95": 17.5,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "quality": "low",
+    "kind": "corner",
+    "calls": 55,
+    "triangles": 21015,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "standard",
+    "kind": "crowd",
+    "calls": 90,
+    "triangles": 46988,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "standard",
+    "kind": "rex",
+    "calls": 60,
+    "triangles": 40915,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "standard",
+    "kind": "corner",
+    "calls": 60,
+    "triangles": 42914,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "low",
+    "kind": "crowd",
+    "calls": 70,
+    "triangles": 23719,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "low",
+    "kind": "rex",
+    "calls": 50,
+    "triangles": 20175,
+    "p95": 17.59999999999991,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "low",
+    "kind": "corner",
+    "calls": 56,
+    "triangles": 21015,
+    "p95": 17.59999999999991,
+    "errors": []
+  }
+]

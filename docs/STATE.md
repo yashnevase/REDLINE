@@ -1,6 +1,16 @@
 # STATE.md — resume here
 
-Phase: **Revised NEXT_WORK Session 3 in progress, NOT complete.**
+Phase: **CLOSE_CHAPTER_1 Step 1 implemented; owner clarity gate open. Chapter 1 NOT closed.**
+
+## CLOSE Step 1 and larger fighting deck — 2026-11-01
+
+Active ordered plan: `docs/CLOSE_CHAPTER_1.md`, copied unchanged from `close1/docs/CLOSE_CHAPTER_1.md`. Study first: `docs/SPIRIT_CALL_NOTES_CH1.md`; implementation/evidence and next-step ledger: `docs/CLOSE_STEP_1_REPORT.md`. CL1–CL5 improve floor values, combat smoke, Core/enemy contrast and HUD/help. Independent judge initially failed crowded combat, then passed the same 12-enemy frame after labels cleared the Core, overlapping enemies faded further, and compact objective duplication was removed. Owner acceptance is still open; no `chapter1-complete` tag.
+
+Direct owner requests implemented: hazard frame at ±17 is now an interior marking; actual play bounds ±21 with protected machinery corners, camera clamp ±17. Initial wave pressure is eight enemies (formerly six); live/attacker caps remain 12/3. Existing goals 10k/24k/40k and minimum waves 3/4/5 remain. Browser movement reaches x20.255 beyond frame; new deterministic collision/pressure regression passes. Normal-stat bot reaches Rex alive at 115.28 simulated seconds; denser opening accelerates this skilled bot, so do not claim increased duration or human difficulty acceptance.
+
+106 tests/check and production build pass. Eighteen Standard/Low viewport×crowd/Rex/corner measurements stay within budgets (Standard90 calls/46,988tri; Low70/23,719tri). Local captures, normal-play clip and JSON: `shots/close-step1/`; reference comparisons remain ignored/local. Production touch/options/loss/retry/Blade-save smoke passes. Physical phone gate remains waived; emulation is not universal device certification.
+
+Next: owner Step 1 clarity review, then Steps 2–6 in the mandated order. All Session 3 leftovers and Session 4 remain in scope; consult the report, not older "next session" claims. No audio system has been implemented yet. Owner music remains in ignored `close1/public/audio/`; do not stage or publish it. Private audio permission in CLOSE supersedes historical no-audio only within its ignored/excluded/synth-fallback policy.
 
 ## Arena-depth owner-review pass — 2026-11-01
 

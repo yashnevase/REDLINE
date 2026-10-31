@@ -2,7 +2,9 @@
 
 Original Three.js arena action prototype. Three score-gated levels, twelve run upgrades, Scrap-Rex, and a locally saved Blade loadout. Keyboard, touch and gamepad controls; no audio or online services.
 
-Current arena-depth review: playable armoured scrapyard, recessed machinery room and physically fractured glowing plates, with animated wrecks/smoke and impact lighting. Goals are 10,000 / 24,000 / 40,000 with minimum 3 / 4 / 5 waves and six opening enemies. Implementation/evidence and remaining art work: [ARENA_DEPTH_REPORT](docs/ARENA_DEPTH_REPORT.md). Exact reference fidelity and full Session 3 acceptance remain open.
+Current close-out review: the hazard frame is an interior marking, with a wider ±21u fighting deck and eight opening enemies (12 live, three attacking). Cleaner floor values, stronger character separation and compact HUD/help improve fight clarity. Goals remain 10,000 / 24,000 / 40,000 with minimum 3 / 4 / 5 waves. Evidence and remaining work: [CLOSE_STEP_1_REPORT](docs/CLOSE_STEP_1_REPORT.md). Chapter 1 is not yet closed; owner clarity review and Steps 2–6 remain.
+
+Owner-supplied music under `close1/public/audio/` stays private and git-ignored. No audio is loaded in the current build. The approved future audio system must provide synth fallback and exclude all private `public/audio/` files from public deployments; git-ignore alone does not exclude Vite public assets. Do not publish private audio folders.
 
 ## Run locally
 
@@ -31,7 +33,7 @@ For browser evidence tools, install the browser once with `PLAYWRIGHT_BROWSERS_P
 ## History and review
 
 - `next-work-s2` preserves all sixteen Session 2 items; `docs/S2_REPORT.md` has the item ledger, clips, budgets and owner-note audit.
-- `docs/NEXT_WORK.md` is the active work list. Sessions 3 (Scrapyard world/config) and 4 (desktop tiers/effects/additions) follow this checkpoint.
+- `docs/CLOSE_CHAPTER_1.md` is the active ordered closure plan. It retains unfinished Sessions 3/4 from `docs/NEXT_WORK.md`; Step 1 clarity is ready for owner review.
 
 - `chapter1-before-feel` preserves the complete pre-sprint source and original authored Blender assets.
 - `feel-sprint` preserves the FEEL_SPRINT implementation checkpoint.

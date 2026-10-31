@@ -1,3 +1,5 @@
+import {activeFormation,levelCompletion,beginObjectiveWave} from './f1-objectives.ts';
+import {F1_ENABLED} from '../content/items/switches.ts';
 import {recordDeath} from './f5-results.ts';
 import type {DeathCause} from '../content/items/f5-results.ts';
 import {weakSpotFactor} from './f3-weak-spot.ts';
@@ -23,10 +25,12 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  const event=(kind:RunState['events'][number]['kind'],x:number,z:number,amount=0,radius=0)=>s.events.push({id:`${s.tick}:${s.events.length}`,tick:s.tick,kind,x,z,amount,radius});
  h.prevX=h.x;h.prevZ=h.z;if(s.phase.kind==='boss'){s.phase.boss.prevX=s.phase.boss.x;s.phase.boss.prevZ=s.phase.boss.z;}for(const e of s.enemies){e.prevX=e.x;e.prevZ=e.z;}for(const p of s.projectiles){p.prevX=p.x;p.prevZ=p.z;}
  if(s.phase.kind==='lost'||s.phase.kind==='complete')return s;
+ if(s.phase.kind==='level-complete'){if(command.continue||command.choice===0){beginObjectiveWave(s,t,true);h.dashReleaseSuppressed=command.choice===0;h.dashReleaseBuffer=false;}return s;}
  if(s.phase.kind==='upgrade'){
   if(command.upgrade&&s.phase.choices.includes(command.upgrade)){
    const pick=upgrades.find(u=>u.id===command.upgrade);if(!pick)return s;
    s.upgrades.push(pick.id);if(pick.stat==='heroHP')h.hp+=t.upgradeHP;if(pick.stat==='dashCharges')h.charges+=t.upgradeCharges;
+   const completion=s.phase.completion;if(F1_ENABLED){if(completion)s.phase={kind:'level-complete',...completion};else beginObjectiveWave(s,t);h.tapWindow=0;h.dashReleaseBuffer=false;h.dashReleaseSuppressed=command.choice===0;h.abilityBuffer=null;h.abilityBufferTicks=0;return s;}
    const wave=s.phase.wave+1,next=waves[wave];s.enemies=next.slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,wave,t));s.phase={kind:'fight',wave,nextSpawn:Math.min(t.enemyCap,t.openingThreats,next.length),nextSpawnIn:t.spawnMinTicks};
    h.vx=0;h.vz=0;h.dash={kind:'idle'};h.special={kind:'idle'};h.tapWindow=0;h.dashReleaseBuffer=false;h.dashReleaseSuppressed=command.choice===0;h.buffer=0;h.abilityBuffer=null;h.abilityBufferTicks=0;
   }
@@ -116,17 +120,17 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  if(boss&&boss.hp===0){h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;event('defeat',boss.x,boss.z);s.events[s.events.length-1].scoreValue=t.scoreBoss;const before=s.events;s.events=[s.events[s.events.length-1]];scoreEvents(s,t);s.events=before;s.phase={kind:'complete',reward:'blade'};s.enemies=[];s.projectiles=[];s.bladeProjectiles=[];return s;}
  if(s.phase.kind!=='fight')return s;
  // Spawn queue never exceeds the approved live cap. Dead entries are retired when replenishing.
- const alive=s.enemies.filter(e=>e.hp>0);const formation=waves[s.phase.wave];
+ const alive=s.enemies.filter(e=>e.hp>0);const formation=activeFormation(s);s.phase.nextSpawn=Math.min(s.phase.nextSpawn,formation.length);
  const spawnMax=alive.length<5?Math.min(t.spawnMaxTicks,t.sparseSpawnMaxTicks):t.spawnMaxTicks;s.phase.nextSpawnIn=Math.min(s.phase.nextSpawnIn,spawnMax);
  if(s.phase.nextSpawnIn>0)s.phase.nextSpawnIn--;
  if(s.phase.nextSpawn<formation.length&&alive.length<t.enemyCap&&s.phase.nextSpawnIn===0){
-  const i=s.phase.nextSpawn++;s.enemies=alive;s.enemies.push(spawnEnemy(formation[i],i,s.phase.wave,t));
+  const i=s.phase.nextSpawn++;s.enemies=alive;s.enemies.push(spawnEnemy(formation[i],i,F1_ENABLED?s.objective.waveSerial:s.phase.wave,t));
   // Stable cadence, saved in snapshots. No host clock or unseeded RNG in the simulation.
   s.phase.nextSpawnIn=t.spawnMinTicks+(i*17+s.phase.wave*11)%Math.max(1,spawnMax-t.spawnMinTicks+1);
  }
  if(s.enemies.every(e=>e.hp<=0)&&s.phase.nextSpawn===formation.length){
-  s.projectiles=[];s.bladeProjectiles=[];h.vx=0;h.vz=0;h.dash={kind:'idle'};const healed=repairClearedWave(h,t.heroHP,t.waveRepairFraction);if(healed>0)event('repair',h.x,h.z,healed,2.5);
-  s.phase=s.phase.wave===waves.length-1?{kind:'boss',boss:initialBoss(t)}:{kind:'upgrade',wave:s.phase.wave,choices:upgradeChoices(s.phase.wave,s.upgrades)};
+  s.projectiles=[];s.bladeProjectiles=[];h.vx=0;h.vz=0;h.dash={kind:'idle'};const completion=levelCompletion(s,t,h.hp),healed=repairClearedWave(h,t.heroHP,t.waveRepairFraction);if(healed>0)event('repair',h.x,h.z,healed,2.5);
+  s.phase=F1_ENABLED?{kind:'upgrade',wave:s.phase.wave,choices:upgradeChoices(s.objective.waveSerial,s.upgrades),completion}:s.phase.wave===waves.length-1?{kind:'boss',boss:initialBoss(t)}:{kind:'upgrade',wave:s.phase.wave,choices:upgradeChoices(s.phase.wave,s.upgrades)};
  }
  return s;
 }

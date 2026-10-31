@@ -40,6 +40,6 @@ export function stepBoss(b:Boss,s:RunState,t:CombatTuning,hurt:(amount:number)=>
   for(const point of state.targets){if(Math.sqrt((h.x-point.x)**2+(h.z-point.z)**2)<t.bossVolleyRadius+t.heroRadius)hurt(t.bossVolleyDamage*mult);event('stomp',point.x,point.z,0,t.bossVolleyRadius);}recover();
  }
  if(state.kind==='summon-warning'){
-  s.enemies=s.enemies.filter(e=>e.hp>0);for(const point of state.targets){if(s.enemies.length>=Math.min(6,t.enemyCap-1))break;const e=spawnEnemy('sawlet',b.sequence*10+s.enemies.length,4,t);Object.assign(e,{x:point.x,z:point.z,prevX:point.x,prevZ:point.z});s.enemies.push(e);}recover(false);
+  s.enemies=s.enemies.filter(e=>e.hp>0);for(const point of state.targets){if(s.enemies.length>=Math.min(6,t.enemyCap-1))break;const e=spawnEnemy('sawlet',b.sequence*10+s.enemies.length,1000,t);Object.assign(e,{x:point.x,z:point.z,prevX:point.x,prevZ:point.z});s.enemies.push(e);}recover(false);
  }
 }

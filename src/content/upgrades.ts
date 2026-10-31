@@ -17,7 +17,7 @@ export function upgradedTuning(base:CombatTuning,picks:readonly string[]):Combat
  const t={...base};for(const id of picks){const u=upgrades.find(u=>u.id===id);if(!u)continue;const v=t[u.stat];t[u.stat]='factor' in u?v*base[u.factor]:v+base[u.add];const pair=u.stat==='pulseDamage'?'bladeDamage':u.stat==='pulseRadius'?'bladeSpinRadius':u.stat==='pulseCooldownTicks'?'bladeCooldownTicks':null;if(pair&&'factor' in u){t[pair]*=base[u.factor];if(pair.endsWith('Ticks'))t[pair]=Math.max(1,Math.round(t[pair]));}if(u.stat.endsWith('Ticks')||u.stat==='dashCharges')t[u.stat]=Math.max(1,Math.round(t[u.stat]));}return t;
 }
 export function upgradeChoices(wave:number,picked:readonly string[]){
- const available=upgrades.filter(u=>!picked.includes(u.id));const history=picked.reduce((sum,id)=>sum+upgrades.findIndex(u=>u.id===id)+1,0);const start=(wave*4+history)%available.length;
+ const unpicked=upgrades.filter(u=>!picked.includes(u.id)),available=unpicked.length>=3?unpicked:[...unpicked,...upgrades.filter(u=>picked.includes(u.id))];const history=picked.reduce((sum,id)=>sum+upgrades.findIndex(u=>u.id===id)+1,0);const start=(wave*4+history)%available.length;
  return [0,1,2].map(i=>available[(start+i*3)%available.length].id);
 }
 

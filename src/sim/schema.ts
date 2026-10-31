@@ -21,7 +21,7 @@ export const stateSchema=z.object({
 });
 export type FightState=z.infer<typeof stateSchema>;
 export type FightEvent=z.infer<typeof eventSchema>;
-export type Command={x:number;z:number;dash:boolean;dashInput?:'press'|'release'|'cancel';overdrive?:boolean;ability?:'pulse'|'boost'|'stomp';tuning?:CombatTuning;upgrade?:string;choice?:number};
+export type Command={x:number;z:number;dash:boolean;dashInput?:'press'|'release'|'cancel';overdrive?:boolean;ability?:'pulse'|'boost'|'stomp';tuning?:CombatTuning;upgrade?:string;choice?:number;continue?:boolean};
 export const idleCommand:Command={x:0,z:0,dash:false};
 export const State=Descriptor.ConstructedResource(stateSchema)('Redline/Fight');
 export const Input=Descriptor.Service<{read():Command}>()('Redline/Input');

@@ -17,6 +17,6 @@ test('Rally closes at +40%, skips natural idle, preserves Stomp stun and never s
  s.enemies[0].behavior={kind:'recover',remaining:50,rallyEligible:true};assert.equal(stepRun(s,idleCommand,t).enemies[0].behavior.kind,'chase');s.enemies[0].behavior={kind:'recover',remaining:36};assert.deepEqual(stepRun(s,idleCommand,t).enemies[0].behavior,{kind:'recover',remaining:35});s.enemies[0].behavior={kind:'windup',remaining:24,dx:-1,dz:0};assert.equal(stepRun(s,idleCommand,t).enemies[0].behavior.remaining,23);
  s=initialRun(t);s.enemies=s.enemies.slice(0,4);s.phase.nextSpawnIn=90;assert.ok(stepRun(s,idleCommand,t).phase.nextSpawnIn<=72);
 });
-test('normal-HP moving bot clears waves 1–3 with no bonk gap above two seconds',async()=>{
- const {botRun}=await import('../tools/focus-bot.mjs');const run=botRun();assert.equal(run.state.phase.kind,'boss');assert.ok(run.state.hero.hp>0&&run.state.hero.hp<=100);for(const wave of [1,2,3]){const gaps=run.gaps.filter(g=>g.wave===wave);assert.ok(gaps.length>0);assert.ok(Math.max(...gaps.map(g=>g.ticks))<=120,`wave ${wave}`);}
+test('normal-stat moving bot clears levels 1–3 with no bonk gap above two seconds',async()=>{
+ const {botRun}=await import('../tools/focus-bot.mjs');const run=botRun();assert.equal(run.state.phase.kind,'boss');assert.ok(run.state.hero.hp>0&&run.state.hero.hp<=t.heroHP+t.upgradeHP*run.state.upgrades.filter(id=>id==='max-hp').length);for(const level of [1,2,3]){const gaps=run.gaps.filter(g=>g.level===level);assert.ok(gaps.length>0);assert.ok(Math.max(...gaps.map(g=>g.ticks))<=120,`level ${level}`);}
 });

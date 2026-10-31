@@ -11,7 +11,8 @@ for (const axis of ['x','z']) {
  assert.ok(span >= 47 && span <= 49, 'Foundry footprint must stay near 48 world units');
 }
 for (const folder of ['src/app', 'src/content', 'src/presentation', 'src/ui']) {
-  for (const file of await readdir(folder)) {
+  for (const file of await readdir(folder,{recursive:true})) {
+    if(!/\.(?:ts|mjs|css)$/.test(file))continue;
     const source = await readFile(`${folder}/${file}`, 'utf8');
     assert.ok(!/from\s+['"][^'"]*(?:ref\/|art\/)/.test(source), `Forbidden reference import: ${folder}/${file}`);
     assert.ok(!/https?:\/\//.test(source), `Unexpected network asset: ${folder}/${file}`);

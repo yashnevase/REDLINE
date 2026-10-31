@@ -1,0 +1,5 @@
+import {spawn} from 'node:child_process';
+import {open,mkdir} from 'node:fs/promises';
+await mkdir('shots/completion',{recursive:true});
+const stages=[['controls','completion-controls.mjs'],['startup','startup-playtest.mjs'],['core-loading','core-loading-playtest.mjs'],['industrial-loading','industrial-loading-playtest.mjs'],['run','run-playtest.mjs'],['combat','completion-combat.mjs'],['options','options-playtest.mjs'],['production','production-playtest.mjs'],['perf','completion-perf.mjs'],['shots','shots.mjs']];
+let enabled=!process.argv[2];for(const [name,script] of stages){if(name===process.argv[2])enabled=true;if(!enabled)continue;console.log(`START ${name}`);const log=await open(`shots/completion/${name}.log`,'w'),child=spawn(process.execPath,[`tools/${script}`],{stdio:['ignore',log.fd,log.fd]});const code=await new Promise(resolve=>child.on('exit',resolve));await log.close();if(code!==0)throw Error(`${name} failed (${code}); see shots/completion/${name}.log`);console.log(`PASS ${name}`);}

@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {session,load} from './browser.mjs';
+import {createSimulation} from '../src/sim/runtime.ts';
+const run=await session();await mkdir('shots/playtest',{recursive:true});
+try{
+ const context=await run.browser.newContext({viewport:{width:1280,height:720},recordVideo:{dir:'shots/playtest',size:{width:1280,height:720}}});
+ const page=await context.newPage();const errors=await load(page,run.url,'arena',true);
+ await page.evaluate(()=>{window.__REDLINE__.setTick(0);window.__REDLINE__.play();});
+ const first=await page.evaluate(()=>window.__REDLINE__.state());await page.keyboard.down('ArrowDown');await page.waitForTimeout(180);await page.keyboard.press('Space');await page.waitForTimeout(70);await page.keyboard.up('ArrowDown');
+ const moved=await page.evaluate(()=>window.__REDLINE__.state());assert.ok(moved.hero.x!==first.hero.x||moved.hero.z!==first.hero.z);assert.equal(moved.hero.charges,1);
+ await page.screenshot({path:'shots/playtest/keyboard-dash.png'});
+ await page.keyboard.press('KeyP');const paused=await page.evaluate(()=>window.__REDLINE__.state().tick);await page.waitForTimeout(180);assert.equal(await page.evaluate(()=>window.__REDLINE__.state().tick),paused);await page.getByRole('button',{name:'Resume',exact:true}).click();
+ await page.evaluate(()=>window.__REDLINE__.setTick(0));await page.evaluate(()=>window.__REDLINE__.play());
+ await page.waitForFunction(()=>document.querySelector('#app').dataset.result==='won',{},{timeout:10000});
+ await page.screenshot({path:'shots/playtest/victory.png'});
+ const replay=await page.evaluate(()=>window.__REDLINE__.replay());const again=createSimulation(replay.tuning);for(const command of replay.commands)again.step(command);assert.deepEqual(again.view(),replay.final);await writeFile('shots/playtest/replay.json',JSON.stringify(replay,null,2));
+ await page.getByRole('button',{name:'Fight again'}).click();assert.equal(await page.locator('#app').getAttribute('data-result'),'fighting');
+ await page.evaluate(()=>window.dispatchEvent(new Event('blur')));const afterBlur=await page.evaluate(()=>window.__REDLINE__.state().tick);await page.waitForTimeout(100);assert.equal(await page.evaluate(()=>window.__REDLINE__.state().tick),afterBlur);
+ await page.evaluate(()=>{window.__REDLINE__.setTick(0);window.__REDLINE__.advance(Array.from({length:300},(_,i)=>({x:0,z:0,dash:false,...(i===0?{tuning:{...window.__REDLINE__.replay().tuning,contactDamage:100,bonkDamage:.01}}:{})})));});
+ assert.equal(await page.locator('#app').getAttribute('data-result'),'lost');await page.screenshot({path:'shots/playtest/defeat.png'});
+ await page.getByRole('button',{name:'Fight again'}).click();assert.equal(await page.locator('#app').getAttribute('data-result'),'fighting');
+ assert.deepEqual(errors,[]);const video=page.video();await context.close();await video.saveAs('shots/playtest/keyboard-fight.webm');
+ const phone=await run.browser.newContext({viewport:{width:844,height:390},hasTouch:true,isMobile:true});const p=await phone.newPage();const touchErrors=await load(p,run.url,'arena',true);await p.evaluate(()=>{window.__REDLINE__.setTick(0);window.__REDLINE__.play();});
+ const stick=await p.locator('.study-stick').boundingBox(),dash=await p.locator('.live-dash').boundingBox();assert.ok(stick&&dash);
+ const cdp=await phone.newCDPSession(p);const stickPoint={x:stick.x+stick.width*.75,y:stick.y+stick.height*.5,id:1};const dashPoint={x:dash.x+dash.width*.5,y:dash.y+dash.height*.5,id:2};
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[stickPoint]});await p.waitForTimeout(70);await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[stickPoint,dashPoint]});await p.waitForTimeout(100);
+ const touch=await p.evaluate(()=>window.__REDLINE__.state());assert.equal(touch.hero.charges,1);assert.ok(touch.hero.x>-1.1);
+ await p.screenshot({path:'shots/playtest/two-touch-dash.png'});await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+ await p.evaluate(()=>{window.__REDLINE__.setTick(0);Object.defineProperty(navigator,'getGamepads',{configurable:true,value:()=>[{connected:true,axes:[.8,0],buttons:Array.from({length:10},(_,i)=>({pressed:i===0}))}]});window.__REDLINE__.play();});await p.waitForTimeout(100);const pad=await p.evaluate(()=>window.__REDLINE__.state());assert.equal(pad.hero.charges,1);assert.ok(pad.hero.x>-1.1);
+ const report={gamepadMappingEmulated:true,loseRetry:true,keyboardMove:true,dash:true,pause:true,retry:true,blurPause:true,recordedReplay:true,twoSimultaneousTouches:true,touchState:touch,errors:[...errors,...touchErrors],realPhoneHardware:false};assert.deepEqual(report.errors,[]);await writeFile('shots/playtest/report.json',JSON.stringify(report,null,2));await phone.close();
+ console.log('Playable fight verified: keyboard, dash, pause/retry/focus, recorded replay, simultaneous touch. Real phone still required.');
+}finally{await run.close();}

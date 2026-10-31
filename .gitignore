@@ -1,0 +1,17 @@
+node_modules/
+dist/
+ref/
+.DS_Store
+.cache/
+shots/motion/
+# Generated local evidence / unlicensed study material
+art/
+shots/
+review/
+*.log
+*.blend1
+.env
+.env.*
+!.env.example
+# Private/cache tooling stays local
+.codex/

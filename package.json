@@ -1,0 +1,35 @@
+{
+  "name": "redline",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && node tools/validate-build.mjs",
+    "check": "tsc --noEmit && oxlint src tools test && ritmo-devtools lint tools/lint.ts && ritmo-devtools lint tools/lint-run.ts && node --test test/*.test.mjs && node tools/validate.mjs",
+    "shots": "node tools/shots.mjs",
+    "perf": "node tools/perf.mjs",
+    "playtest": "node tools/playtest.mjs",
+    "playtest:readability": "node tools/readability-playtest.mjs",
+    "playtest:options": "node tools/options-playtest.mjs",
+    "perf:boss": "node tools/boss-perf.mjs",
+    "playtest:boss": "node tools/boss-playtest.mjs",
+    "playtest:run": "node tools/run-playtest.mjs",
+    "playtest:abilities": "node tools/ability-playtest.mjs"
+  },
+  "dependencies": {
+    "@typeonce/ritmo": "0.19.1",
+    "three": "0.187.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@typeonce/oxlint-plugin-ritmo": "0.19.1",
+    "@typeonce/ritmo-devtools": "0.19.1",
+    "@types/three": "0.186.0",
+    "oxlint": "1.90.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

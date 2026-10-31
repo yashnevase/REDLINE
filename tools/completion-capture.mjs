@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {session,load} from './browser.mjs';
+const iteration=Number(process.argv[2]??1);const host=await session();const report=[];
+try{
+ for(const [asset,scene] of [['sawlet','sawlet-studio'],['arena','arena-showcase'],['thrower','thrower-studio'],['shieldsaw','shieldsaw-studio'],['grinder','grinder-studio'],['boss','boss-studio']]){
+  await mkdir(`art/match/${asset}`,{recursive:true});const p=await host.browser.newPage({viewport:asset==='arena'?{width:1024,height:576}:{width:512,height:512}});const errors=await load(p,host.url,scene);await p.addStyleTag({content:'#app>:not(canvas){display:none!important}'});await p.screenshot({path:`art/match/${asset}/raw-${iteration}.png`});await p.evaluate(()=>window.__REDLINE__.coreMask(true));await p.screenshot({path:`art/match/${asset}/mask-${iteration}.png`});await p.evaluate(()=>window.__REDLINE__.coreMask(false));report.push({asset,metadata:await p.evaluate(()=>window.__REDLINE__.metadata()),errors});await p.close();
+ }
+ for(const viewport of (process.argv[3]==='assets'?[]:[{width:1280,height:720,name:'desktop'},{width:844,height:390,name:'phone'}])){
+  const c=await host.browser.newContext({viewport,hasTouch:viewport.name==='phone',recordVideo:{dir:'shots/completion/motion',size:{width:viewport.width,height:viewport.height}}});const p=await c.newPage();for(const scene of ['lobby','workshop','arena-showcase','enemy-lineup','boss','combat-readability','arena']){const errors=await load(p,host.url,scene);if(scene==='arena')await p.evaluate(()=>window.__REDLINE__.setTick(250));await p.screenshot({path:`shots/completion/${scene}-${viewport.name}.png`});const metadata=await p.evaluate(()=>window.__REDLINE__.metadata());if(scene==='arena'){assert.ok(metadata.core.screenHeightRatio>=.08&&metadata.core.screenHeightRatio<=.1);assert.equal(metadata.core.socketsLoaded,true);}report.push({scene,viewport,metadata,errors});}await p.evaluate(()=>window.__REDLINE__.play());await p.waitForTimeout(3200);const video=p.video();await c.close();await video.saveAs(`shots/completion/motion/arena-${viewport.name}.webm`);
+ }
+ const c=await host.browser.newContext({viewport:{width:844,height:390}});await c.addInitScript(()=>localStorage.setItem('redline.preferences.v1',JSON.stringify({version:1,reducedMotion:false,reducedFlashes:false,quality:'high'})));const p=await c.newPage();const errors=await load(p,host.url,'arena-showcase');await p.screenshot({path:'shots/completion/high-glow-phone.png'});report.push({scene:'arena-showcase',quality:'high',errors,metadata:await p.evaluate(()=>window.__REDLINE__.metadata())});await c.close();
+ await writeFile('shots/completion/capture.json',JSON.stringify({physicalPhone:false,report},null,2));console.log('Asset object masks; desktop/phone gameplay, lobby/workshop, arena, enemies, boss, FX; high glow; motion captured.');
+}finally{await host.close();}

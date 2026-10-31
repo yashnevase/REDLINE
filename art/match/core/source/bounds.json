@@ -1,0 +1,16 @@
+{
+  "source": "tools/build-core-sockets.py",
+  "asset": "public/models/core-sockets.glb",
+  "pivot": [
+    0,
+    0,
+    0
+  ],
+  "nominalBodyRadius": 1,
+  "maxRadius": 1.0313200908741245,
+  "objects": 5,
+  "vertices": 6296,
+  "quadFaces": 5648,
+  "axes": "Authored Three Y-up, converted to Blender Z-up, GLB Y-up",
+  "noExternalTextures": true
+}

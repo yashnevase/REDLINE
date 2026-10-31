@@ -1,0 +1,58 @@
+import * as T from 'three';
+import {floorLayout,foundry,random,seed} from '../content/scene.mjs';
+import {obstacles} from '../content/combat.ts';
+import type {Materials} from './materials.ts';
+import type {Tuning} from './scene.ts';
+import {part,saw,gear} from './industrial.ts';
+import {coversHero,makeOcclusionFade} from './occlusion.ts';
+import {batchParts} from './batch-parts.ts';
+export function makeSpaceStage(world:T.Group,m:Materials,tuning:Tuning,slab:T.BufferGeometry){
+ const root=new T.Group();root.name='foundry-slab';world.add(root);const dummy=new T.Object3D(),rng=random(seed);
+ const add=(g:T.BufferGeometry,mat:T.Material,x:number,y:number,z:number)=>part(root,g,mat,x,y,z);
+ const box=(w:number,h:number,d:number,x:number,y:number,z:number,mat:T.Material)=>add(new T.BoxGeometry(w,h,d),mat,x,y,z);
+ const layout=floorLayout(seed),tiles=new T.InstancedMesh(slab,m.floor,layout.length);root.add(tiles);
+ const tones=['#6b5a82','#66587e','#5d5076','#75648b','#594c70'];
+ const updateFloor=()=>{layout.forEach((tile,i)=>{dummy.position.set(tile.x*foundry.tileSpacing,-.09,tile.z*foundry.tileSpacing);dummy.rotation.y=tile.rotation*Math.PI/2;dummy.scale.setScalar(1);dummy.updateMatrix();tiles.setMatrixAt(i,dummy.matrix);tiles.setColorAt(i,new T.Color('#6b5a82').lerp(new T.Color(tones[Math.floor(tile.tone*5)]),.28).multiplyScalar(1+(tile.tone-.5)*tuning.floorVariance));});tiles.instanceMatrix.needsUpdate=true;if(tiles.instanceColor)tiles.instanceColor.needsUpdate=true;};updateFloor();
+ const hull=m.steel.clone();hull.color.set('#51425f');hull.map=m.rustPaint;const trim=m.dark.clone();trim.color.set('#30273f');const pink=m.rustLight.clone();pink.color.set('#a25492');
+ box(48,6,48,0,-3.15,0,hull);box(48.25,.22,48.25,0,-.18,0,trim);
+ const edge=new T.InstancedMesh(new T.BoxGeometry(.88,.85,.19),m.glow,176);root.add(edge);const frames=new T.InstancedMesh(new T.BoxGeometry(1.12,1.03,.24),trim,176);root.add(frames);
+ for(let i=0;i<176;i++){const side=Math.floor(i/44),k=(i%44-21.5)*1.08;dummy.position.set(side<2?k:side===2?-24.01:24.01,-.62,side<2?(side===0?-24.01:24.01):k);dummy.rotation.set(0,side<2?0:Math.PI/2,0);dummy.updateMatrix();edge.setMatrixAt(i,dummy.matrix);dummy.position.x+=side===2?.12:side===3?-.12:0;dummy.position.z+=side===0?.12:side===1?-.12:0;dummy.updateMatrix();frames.setMatrixAt(i,dummy.matrix);}edge.instanceMatrix.needsUpdate=true;frames.instanceMatrix.needsUpdate=true;
+ const glowMat=new T.MeshBasicMaterial({color:'#b36bff',transparent:true,opacity:.24,depthWrite:false,blending:T.AdditiveBlending,side:T.DoubleSide,toneMapped:false});
+ const glowTexture=document.createElement('canvas');glowTexture.width=16;glowTexture.height=128;const gc=glowTexture.getContext('2d')!,grad=gc.createLinearGradient(0,0,0,128);grad.addColorStop(0,'#ffffff00');grad.addColorStop(.5,'#ffffff');grad.addColorStop(1,'#ffffff00');gc.fillStyle=grad;gc.fillRect(0,0,16,128);glowMat.map=new T.CanvasTexture(glowTexture);
+ for(const side of [-1,1]){const gx=add(new T.PlaneGeometry(48,3),glowMat,0,.016,side*23.5);gx.rotation.x=-Math.PI/2;const gz=add(new T.PlaneGeometry(48,3),glowMat,side*23.5,.016,0);gz.rotation.set(-Math.PI/2,0,Math.PI/2);}
+ // Rounded inset panel/groove: open middle with no physical collision.
+ const path=new T.Shape();const r=1.1,a=12.8;path.moveTo(-a+r,-a);path.lineTo(a-r,-a);path.quadraticCurveTo(a,-a,a,-a+r);path.lineTo(a,a-r);path.quadraticCurveTo(a,a,a-r,a);path.lineTo(-a+r,a);path.quadraticCurveTo(-a,a,-a,a-r);path.lineTo(-a,-a+r);path.quadraticCurveTo(-a,-a,-a+r,-a);
+ const groove=new T.CatmullRomCurve3(path.getPoints(96).map(p=>new T.Vector3(p.x,.027,p.y)),true);add(new T.TubeGeometry(groove,128,.06,4,true),trim,0,0,0);
+ const panel=add(new T.ShapeGeometry(path,8),trim,0,.009,0);panel.rotation.x=-Math.PI/2;panel.material=trim.clone();(panel.material as T.MeshLambertMaterial).transparent=true;(panel.material as T.MeshLambertMaterial).opacity=.15;(panel.material as T.MeshLambertMaterial).depthWrite=false;
+ const inset=panel.clone();const insetMaterial=hull.clone();insetMaterial.transparent=true;insetMaterial.opacity=.5;insetMaterial.depthWrite=false;inset.material=insetMaterial;inset.scale.setScalar(.992);inset.position.y=.014;root.add(inset);
+ for(const o of obstacles){box(o.hx*2,.65,o.hz*2,o.x,.325,o.z,m.steel);box(o.hx*2+.05,.08,o.hz*2+.05,o.x,.69,o.z,m.rustLight);for(const side of [-1,1])box(.16,.12,.2,o.x+side*.7,.75,o.z,m.glow);}
+ function pipe(x:number,y:number,z:number,length:number,radius=.22){const o=add(new T.CylinderGeometry(radius,radius,length,12),m.steel,x,y,z);o.rotation.z=Math.PI/2;for(const side of [-1,1]){const joint=add(new T.TorusGeometry(radius*1.05,.055,5,16),m.rustLight,x+side*length*.35,y,z);joint.rotation.y=Math.PI/2;}return o;}
+ function crate(x:number,y:number,z:number,size:number){box(size,size,size,x,y+size/2,z,pink);for(const s of [-1,1])for(const axis of [0,1])box(axis===0?size*.06:size*1.02,size*1.02,axis===0?size*1.02:size*.06,x+(axis===0?s*size*.42:0),y+size/2,z+(axis===1?s*size*.42:0),m.steel);const diagonal=box(size*.08,size*1.15,.04,x,y+size/2,z+size*.51,m.rustLight);diagonal.rotation.z=-.65;}
+ const clusters:T.Group[]=[];let fades:ReturnType<typeof makeOcclusionFade>[]=[];
+ for(const sx of [-1,1])for(const sz of [-1,1]){const start=root.children.length;
+  const upright=saw(root,m,1.65,sx*17.8,1.65,sz*21.5);upright.rotation.y=sx*.2;const tower=add(new T.CylinderGeometry(.42,.5,3.8,12),m.steel,sx*21.6,1.9,sz*21.2);for(const y of [1,2,3])add(new T.TorusGeometry(.45,.09,6,16),m.rustLight,tower.position.x,y,tower.position.z).rotation.x=Math.PI/2;
+  crate(sx*20,0,sz*20,1.8);crate(sx*22,0,sz*18.2,1.4);crate(sx*20,1.8,sz*20,1.1);
+  for(let i=0;i<3;i++){gear(root,m,.7+i*.2,sx*(17.8+i*.8),.2,sz*(20+i*.6));pipe(sx*(18+i*.6),.45+i*.15,sz*(17.2+i*.55),3.2,.25);}
+  const barrel=add(new T.CylinderGeometry(.55,.55,1.5,12),m.rustLight,sx*21,.75,sz*16.6);for(const y of [.25,1.15])add(new T.TorusGeometry(.56,.055,4,16),m.steel,barrel.position.x,y,barrel.position.z).rotation.x=Math.PI/2;
+  pipe(sx*20,-3,sz*20,5,.3);
+  const group=new T.Group();group.position.set(sx*19,0,sz*19);const children=root.children.slice(start);for(const child of children){child.position.sub(group.position);group.add(child);}group.scale.setScalar(1.35);root.add(group);clusters.push(group);
+ }
+ // Riveted under-hull panels and cable loops on all four faces.
+ for(let side=0;side<4;side++)for(let i=0;i<8;i++){const k=(i-3.5)*5.8,x=side<2?k:side===2?-24.03:24.03,z=side<2?(side===0?-24.03:24.03):k,group=new T.Group();root.add(group);group.position.set(x,0,z);group.rotation.y=side<2?(side===0?Math.PI:0):side===2?-Math.PI/2:Math.PI/2;
+  part(group,new T.BoxGeometry(5.55,4.7,.08),i%3===0?m.rust:hull,0,-3.3,0);
+  for(const y of [-1.4,-3.5,-5.2])for(const d of [-2.4,2.4])part(group,new T.SphereGeometry(.08,6,4),m.lightSteel,d,y,.09);
+  for(const y of [-1.1,-3.3,-5.7])part(group,new T.BoxGeometry(5.65,.12,.15),trim,0,y,.1);
+  const brace=part(group,new T.BoxGeometry(.13,4.2,.1),m.steel,-1.7,-3.3,.12);brace.rotation.z=.22;
+  if(i%2===0){part(group,new T.BoxGeometry(1.7,.7,.1),trim,.9,-3.9,.14);for(let j=0;j<6;j++)part(group,new T.BoxGeometry(.08,.53,.08),m.steel,.25+j*.25,-3.9,.21);}
+ }
+ for(let i=0;i<8;i++){const cable=add(new T.TorusGeometry(1.2,.075,6,32,Math.PI),trim,(i-3.5)*5,-5.9,24);cable.rotation.z=Math.PI;}
+ for(const x of [-9,9]){box(2.2,.03,8,x,.025,7,m.dark);for(let i=0;i<13;i++)box(2,.05,.17,x,.06,3.4+i*.6,m.steel);}
+ for(let i=0;i<55;i++){const x=(rng()-.5)*44,z=(rng()-.5)*44;if(Math.abs(x)<13&&Math.abs(z)<13)continue;const scuff=box(.15+rng()*.7,.006,.025,x,.022,z,i%4===0?m.rust:trim);scuff.rotation.y=rng()*Math.PI;}
+ const stain=m.rust.clone();stain.transparent=true;stain.opacity=.19;stain.depthWrite=false;for(const sx of [-1,1])for(const sz of [-1,1])for(let i=0;i<3;i++){const shape=new T.Shape();for(let j=0;j<10;j++){const a=j*Math.PI/5,r=.5+rng();if(j===0)shape.moveTo(Math.cos(a)*r,Math.sin(a)*r*.5);else shape.lineTo(Math.cos(a)*r,Math.sin(a)*r*.5);}shape.closePath();const mark=add(new T.ShapeGeometry(shape),stain,sx*(15+rng()*7),.025,sz*(14+rng()*7));mark.rotation.x=-Math.PI/2;}
+ // Textless neon saw emblem, with a framed industrial sign and floating blade.
+ box(5.8,3.2,.3,-13,3,-22,trim);box(5.45,2.85,.12,-13,3,-21.81,m.violetRim);const sign=saw(root,m,1.1,-13,3,-21.62);sign.rotation.z=.15;box(.17,3,.2,-15,1,-22,m.steel);box(.17,3,.2,-11,1,-22,m.steel);
+ const space=new T.Group();world.add(space);const starPositions=[];for(let i=0;i<650;i++)starPositions.push((rng()-.5)*180,-7-rng()*30,(rng()-.5)*180);const starGeo=new T.BufferGeometry();starGeo.setAttribute('position',new T.Float32BufferAttribute(starPositions,3));const stars=new T.Points(starGeo,new T.PointsMaterial({color:'#e6d8ff',size:.10,transparent:true,opacity:.8,depthWrite:false}));space.add(stars);
+ const satellites=new T.Group();space.add(satellites);for(let i=0;i<6;i++){const g=new T.Group();satellites.add(g);const a=i*Math.PI/3;g.position.set(Math.cos(a)*39,-5-i*.5,Math.sin(a)*39);const tile=new T.Mesh(new T.BoxGeometry(6,1.4,5),hull);g.add(tile);const pylon=new T.Mesh(new T.CylinderGeometry(.3,.4,2,8),m.rust);pylon.position.set(1,1.5,1);g.add(pylon);const rotor=saw(g,m,.75,-1,.9,-.8);rotor.rotation.x=-Math.PI/2;for(let j=0;j<2;j++){const pipe=new T.Mesh(new T.CylinderGeometry(.20,.20,3,10),m.steel);pipe.rotation.z=Math.PI/2;pipe.position.set(-.4,.9,1+j*.6);g.add(pipe);for(const x of [-1.4,.6]){const flange=new T.Mesh(new T.TorusGeometry(.23,.06,5,12),m.rustLight);flange.rotation.y=Math.PI/2;flange.position.set(x,.9,1+j*.6);g.add(flange);}}const elbow=new T.Mesh(new T.TorusGeometry(.65,.18,6,14,Math.PI/2),m.steel);elbow.position.set(1.2,1.1,-.5);g.add(elbow);
+ const light=new T.Mesh(new T.BoxGeometry(6,.12,.12),m.glow);light.position.set(0,.71,2.5);g.add(light);const conduit=new T.Mesh(new T.CylinderGeometry(.065,.065,14,6),glowMat);conduit.position.copy(g.position).multiplyScalar(.78);conduit.rotation.z=Math.PI/2;conduit.rotation.y=-a;conduit.material=new T.MeshBasicMaterial({color:'#a35bff',transparent:true,opacity:.42,depthWrite:false,blending:T.AdditiveBlending,toneMapped:false});space.add(conduit);const second=conduit.clone();second.position.y+=.24;space.add(second);}
+ return{root,tiles,space,updateFloor,lavaBits:new T.Group(),finalize:()=>{for(const c of clusters)batchParts(c);for(const c of satellites.children)batchParts(c as T.Group);fades=clusters.map(makeOcclusionFade);batchParts(root,[tiles,edge,frames,...clusters]);},fade:(camera:T.Camera,hero:{x:number;y:number;z:number;radius:number})=>{clusters.forEach((c,i)=>{const p=c.getWorldPosition(new T.Vector3()),s=c.getWorldScale(new T.Vector3());fades[i]?.(coversHero(camera,hero,{x:p.x,y:p.y+1.8*s.y,z:p.z,radius:4.5*s.x}));});},update:(time:number,quiet:boolean)=>{stars.rotation.y=quiet?0:time*.001;satellites.children.forEach((o,i)=>o.position.y=-5-i*.5+(quiet?0:Math.sin(time*.3+i)*.3));}};
+}

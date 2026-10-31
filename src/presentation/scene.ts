@@ -1,0 +1,142 @@
+import {makeSelectiveGlow} from './selective-glow.ts';
+import {makeSpaceStage} from './space-stage.ts';
+import {defaultPreferences,type Preferences} from '../content/preferences.ts';
+import {makeBossPresentation} from './boss.ts';
+import {makeEncounterPresentation} from './encounter.ts';
+import type {RunState} from '../sim/run-schema.ts';
+import * as T from 'three';
+import { defaults, random, seed } from '../content/scene.mjs';
+import { makeMaterials, makeMatchedMatcap, makeBladeMaterials } from './materials.ts';
+import {makeEnemy} from './enemies.ts';
+import {installIndustrialKit} from './industrial.ts';
+import { makeCore } from './models.ts';
+import {makeCombatFX} from './combat-fx.ts';
+import type {CombatTuning} from '../content/combat.ts';
+import type {FightView} from '../sim/runtime.ts';
+import { makeEffects } from './effects.ts';
+
+export type Tuning = Record<keyof typeof defaults, number>;
+export type SceneName = 'lobby' | 'arena' | 'core-studio' | 'enemy-lineup' | 'combat-readability' | 'perf-worst' | 'boss' | 'arena-showcase' | 'sawlet-studio' | 'thrower-studio' | 'shieldsaw-studio' | 'grinder-studio' | 'boss-studio' | 'workshop';
+
+// Floor slabs need only a top, four bevels and four sides; no hidden underside.
+function floorSlab() {
+  const half=.71, inset=.012, height=.09; const positions:number[]=[];
+  const corners=[[-1,-1],[-1,1],[1,1],[1,-1]];
+  const top=corners.map(([x,z])=>[x*(half-inset),height,z*(half-inset)]);
+  const rim=corners.map(([x,z])=>[x*half,height-inset,z*half]);
+  const bottom=corners.map(([x,z])=>[x*half,0,z*half]);
+  const quad=(a:number[],b:number[],c:number[],d:number[])=>positions.push(...a,...b,...c,...a,...c,...d);
+  quad(top[0],top[1],top[2],top[3]);
+  for(let i=0;i<4;i++){const n=(i+1)%4;quad(top[i],rim[i],rim[n],top[n]);quad(rim[i],bottom[i],bottom[n],rim[n]);}
+  const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(positions,3));geometry.computeVertexNormals();return geometry;
+}
+function backdrop() {
+  const c=document.createElement('canvas');c.width=1024;c.height=768;const ctx=c.getContext('2d')!;
+  const gradient=ctx.createRadialGradient(550,360,30,500,360,700);gradient.addColorStop(0,'#392765');gradient.addColorStop(.5,'#17132e');gradient.addColorStop(1,'#080c20');ctx.fillStyle=gradient;ctx.fillRect(0,0,1024,768);const rng=random(seed+41);ctx.save();ctx.translate(260,100);ctx.rotate(-.45);ctx.scale(1,.5);for(let i=0;i<18;i++){const x=(rng()-.5)*600,y=(rng()-.5)*110,r=90+rng()*150,g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,i%3===0?'#eeb2ff24':'#9b35e218');g.addColorStop(1,'#5d219900');ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2);}ctx.restore();for(let i=0;i<350;i++){ctx.globalAlpha=.15+rng()*.5;ctx.fillStyle='#e7d6ff';ctx.fillRect(rng()*1024,rng()*768,i%17===0?2:1,i%17===0?2:1);}ctx.globalAlpha=1;const map=new T.CanvasTexture(c);map.colorSpace=T.SRGBColorSpace;return map;
+}
+export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning) {
+  const studio=name==='lobby'||name==='core-studio'||name==='workshop',matching=name==='core-studio',enemyStudio=name.endsWith('-studio')&&!matching,showcase=name==='arena-showcase';
+  const renderer=new T.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});
+  renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=tuning.exposure;
+  renderer.shadowMap.enabled=false;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
+  const scene=new T.Scene();scene.background=matching||enemyStudio||name==='enemy-lineup'?new T.Color('#cbd0d1'):backdrop();
+  const camera=new T.OrthographicCamera(-10,10,7,-7,.1,100);
+  let lastSheen=tuning.coreSheen;
+  const m=makeMaterials(lastSheen);m.floor.color.set('#e3d8eb');{m.chrome.matcap?.dispose();m.chrome.matcap=makeMatchedMatcap();m.chrome.toneMapped=false;m.white.color.set('#f9fbff');m.white.toneMapped=false;}const heatMatcaps=[m.chrome.matcap!,makeMatchedMatcap(1),makeMatchedMatcap(2)];const world=new T.Group();scene.add(world);
+  const sky=new T.HemisphereLight('#ccd8f3','#635042',tuning.ambientLight);scene.add(sky);
+  const sun=new T.DirectionalLight('#fff5df',tuning.keyLight);sun.position.set(-7,13,8);sun.castShadow=true;
+  sun.shadow.mapSize.set(1024,1024);Object.assign(sun.shadow.camera,{left:-18,right:18,top:18,bottom:-18,far:50});sun.shadow.bias=-.0005;sun.shadow.normalBias=.03;scene.add(sun);
+  const fill=new T.DirectionalLight('#a9b7ff',tuning.fillLight);fill.position.set(6,5,-7);scene.add(fill);
+  function mesh(g:T.BufferGeometry,mat:T.Material,x=0,y=0,z=0,parent:T.Object3D=world){const o=new T.Mesh(g,mat);o.position.set(x,y,z);parent.add(o);return o;}
+  const stage=makeSpaceStage(world,m,tuning,floorSlab());const {lavaBits,updateFloor}=stage;
+  // Actors use soft independent contact shadows; the static environment shadow map is cached.
+  const contacts:T.MeshBasicMaterial[]=[];
+  function contact(parent:T.Object3D,radius:number) {
+    const c=document.createElement('canvas');c.width=c.height=128;const ctx=c.getContext('2d')!;const gradient=ctx.createRadialGradient(64,64,6,64,64,64);gradient.addColorStop(0,'rgba(15,10,16,.8)');gradient.addColorStop(.4,'rgba(15,10,16,.4)');gradient.addColorStop(1,'rgba(15,10,16,0)');ctx.fillStyle=gradient;ctx.fillRect(0,0,128,128);
+    const mat=new T.MeshBasicMaterial({map:new T.CanvasTexture(c),transparent:true,depthWrite:false,opacity:tuning.shadowOpacity*2});contacts.push(mat);const o=mesh(new T.PlaneGeometry(radius*4,radius*4),mat,0,.015,0,parent);o.rotation.x=-Math.PI/2;o.castShadow=false;return o;
+  }
+  const hero=makeCore(m,true,makeBladeMaterials(),studio);hero.root.position.set(-1.1,0,.7);world.add(hero.root);const heroShadow=contact(hero.root,.55);const halo=new T.Mesh(new T.PlaneGeometry(2.6,2.6),new T.ShaderMaterial({transparent:true,depthWrite:false,blending:T.AdditiveBlending,vertexShader:`varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,fragmentShader:`varying vec2 vUv;void main(){float a=pow(max(0.,1.-length(vUv-.5)*2.),2.)*.2;gl_FragColor=vec4(.48,.15,1.,a);}`}));halo.rotation.x=-Math.PI/2;halo.position.y=.022;hero.root.add(halo);
+  const chargeParticles=new T.InstancedMesh(new T.OctahedronGeometry(.024),m.glow,24);chargeParticles.count=0;hero.root.add(chargeParticles);const chargeDummy=new T.Object3D();
+  const enemy=makeEnemy(name==='thrower-studio'?'thrower':name==='shieldsaw-studio'?'shieldsaw':name==='grinder-studio'?'grinder':'sawlet',m);enemy.root.position.set(1.5,0,-.8);world.add(enemy.root);contact(enemy.root,.62);
+  const dustMaterial=studio?m.white.clone():m.hot;
+  if(studio){dustMaterial.transparent=true;dustMaterial.opacity=.3;dustMaterial.depthWrite=false;}
+  const sparks=new T.InstancedMesh(new T.OctahedronGeometry(.022),dustMaterial,defaults.particles);sparks.castShadow=false;world.add(sparks);
+  const effect=makeEffects(world,m,tuning);effect.root.visible=name==='combat-readability';
+  const combat=makeCombatFX(world,m,tuning);combat.root.visible=false;
+  const warning=new T.Group();world.add(warning);warning.visible=false;
+  const warningFill=new T.Mesh(new T.PlaneGeometry(1.34,4.5),new T.MeshBasicMaterial({color:'#ff4359',transparent:true,opacity:.18,depthWrite:false,side:T.DoubleSide,toneMapped:false}));warningFill.rotation.x=-Math.PI/2;warningFill.position.set(0,.03,2.25);warning.add(warningFill);
+  const warningEdge=new T.LineLoop(new T.BufferGeometry().setFromPoints([new T.Vector3(-.67,.04,0),new T.Vector3(.67,.04,0),new T.Vector3(.67,.04,4.5),new T.Vector3(-.67,.04,4.5)]),new T.LineBasicMaterial({color:'#ff7780',transparent:true,opacity:.8}));warning.add(warningEdge);
+  let fight:FightView|null=null,fightAlpha=1,warningTicks=24,enemyRadius=.67;
+  const heroFlash=new T.Mesh(new T.SphereGeometry(1.012,24,16),new T.MeshBasicMaterial({color:'#ffffff',transparent:true,opacity:0,depthWrite:false}));hero.body.add(heroFlash);heroFlash.visible=false;
+  const enemyFlash=new T.Mesh(new T.SphereGeometry(.69,12,8),new T.MeshBasicMaterial({color:'#ffffff',transparent:true,opacity:0,depthWrite:false}));enemy.body.add(enemyFlash);
+  if(enemyStudio){world.children.forEach(o=>o.visible=o===enemy.root);enemy.root.position.set(0,0,0);hero.root.visible=false;stage.space.visible=false;}
+  if(showcase){hero.root.visible=false;enemy.root.visible=false;}
+  if(studio) {
+    world.children.forEach(o=>{o.visible=o===hero.root||o===sparks;});hero.root.position.set(0,0,0);
+    heroShadow.scale.setScalar(matching?.5:1.4);if(matching)heroShadow.material.opacity=.65;if(!matching){stage.root.visible=true;stage.root.scale.setScalar(.065);stage.root.position.set(-1.8,-1.1,-1.8);stage.space.visible=true;}else stage.space.visible=false;const pedestal=mesh(new T.CylinderGeometry(1.2,1.35,.18,48),m.steel,0,-.13,0);pedestal.visible=!matching;const rim=mesh(new T.TorusGeometry(1.22,.025,6,64),m.glow,0,-.025,0);rim.rotation.x=-Math.PI/2;rim.visible=!matching;
+  }
+  if(name==='boss')enemy.root.visible=false;
+  if(name==='enemy-lineup'){stage.root.visible=false;stage.space.visible=false;sparks.visible=false;hero.root.visible=false;enemy.root.position.set(0,0,0);}
+  let size={width:1280,height:720},currentTick=0;
+  const sparkDummy=new T.Object3D();const sparkSeed=random(seed+1);const sparkData=Array.from({length:defaults.particles},()=>({x:(sparkSeed()-.5)*25,z:(sparkSeed()>.5?1:-1)*(8.3+sparkSeed()*2.2),phase:sparkSeed()}));
+  let preferences=defaultPreferences();let glow:ReturnType<typeof makeSelectiveGlow>|undefined;
+  function resize(width:number,height:number){size={width,height};renderer.setPixelRatio(Math.min(devicePixelRatio,preferences.quality==='low'?Math.min(1,tuning.renderScale):tuning.renderScale));renderer.setSize(width,height,false);}
+  const encounter=makeEncounterPresentation(world,m,tuning);const bossPresentation=makeBossPresentation(world,m);let run:RunState|null=null,runTuning:CombatTuning|undefined;
+  const npcShadows=new T.InstancedMesh(new T.PlaneGeometry(1,1),heroShadow.material.clone(),13);npcShadows.material.opacity=.5;npcShadows.count=0;world.add(npcShadows);const shadowDummy=new T.Object3D();shadowDummy.rotation.x=-Math.PI/2;
+  let socketPromise:Promise<void>|undefined,socketsLoaded=false,industrialParts=0;
+  async function warmUp(){
+    if(!socketsLoaded){
+      socketPromise??=(async()=>{const {loadCoreSockets}=await import('./core-sockets.ts');const hardware=await loadCoreSockets(m);industrialParts=await installIndustrialKit(world);hero.body.add(hardware);stage.finalize();encounter.finalize();bossPresentation.finalize();socketsLoaded=true;})();
+      try{await socketPromise;}catch(error){socketPromise=undefined;throw error;}
+    }
+    return renderer.compileAsync(scene,camera);
+  }
+  let coreMask=false;const maskScene=new T.Scene();maskScene.background=new T.Color('#000');let maskCore:T.Group|undefined;const maskMaterial=new T.MeshBasicMaterial({color:'#fff',toneMapped:false});
+  function rebuildMask(){if(maskCore)maskScene.remove(maskCore);maskCore=(enemyStudio?(name==='boss-studio'?bossPresentation.root:enemy.root):showcase?stage.root:hero.body).clone(true);maskCore.traverse(o=>{if(o.name==='core-eyes')o.visible=false;if(o instanceof T.Mesh){if(!Array.isArray(o.material)&&o.material.transparent)o.visible=false;if(o instanceof T.InstancedMesh)o.instanceColor=null;o.material=maskMaterial;}});maskScene.add(maskCore);}
+
+  function renderAt(tick:number){
+    chargeParticles.count=0;if(fight?.hero.dash.kind==='charging'&&!preferences.reducedFlashes&&!preferences.reducedMotion){chargeParticles.count=preferences.quality==='low'?8:24;for(let i=0;i<chargeParticles.count;i++){const p=(tick/36+i/24)%1,a=i*2.4+tick*.05;chargeDummy.position.set(Math.cos(a)*(1.5-p),.25+p*.7,Math.sin(a)*(1.5-p));chargeDummy.scale.setScalar(Math.sin(p*Math.PI));chargeDummy.updateMatrix();chargeParticles.setMatrixAt(i,chargeDummy.matrix);}chargeParticles.instanceMatrix.needsUpdate=true;}
+    hero.rotor.rotation.z=preferences.reducedMotion?0:tick*.12;
+    currentTick=tick;const t=tick/60;stage.update(t,preferences.reducedMotion);const h=matching?(tuning.coreBlade>=1?Math.max(2.85,tuning.coreStudioHeight):tuning.coreStudioHeight):enemyStudio?name==='boss-studio'?7:3.1:showcase?Math.max(43,76/(size.width/size.height)):studio?tuning.stageHeight:name==='enemy-lineup'?7:tuning.viewHeight;const aspect=size.width/size.height;
+    camera.left=-h*aspect/2;camera.right=h*aspect/2;camera.top=h/2;camera.bottom=-h/2;
+    const a=(matching?tuning.coreStudioAzimuth:enemyStudio?30:tuning.azimuth)*Math.PI/180,e=(matching?tuning.coreStudioElevation:enemyStudio?12:showcase?30:studio?tuning.stageElevation:tuning.elevation)*Math.PI/180;
+    const mix=(a:number,b:number)=>a+(b-a)*fightAlpha;
+    if(fight){hero.root.position.set(mix(fight.hero.prevX,fight.hero.x),0,mix(fight.hero.prevZ,fight.hero.z));enemy.root.position.set(mix(fight.enemy.prevX,fight.enemy.x),0,mix(fight.enemy.prevZ,fight.enemy.z));}
+    const center=new T.Vector3(fight?hero.root.position.x:matching&&tuning.coreBlade>=1?-.45:name==='boss-studio'?-.25:0,matching?tuning.coreRadius*tuning.coreStudioSquash+.04:enemyStudio?name==='boss-studio'?1.7:.85:showcase?-1:studio?.76:0,fight?hero.root.position.z:0);camera.position.set(Math.sin(a)*Math.cos(e)*32,Math.sin(e)*32,Math.cos(a)*Math.cos(e)*32).add(center);camera.lookAt(center);camera.updateProjectionMatrix();
+    hero.body.scale.setScalar(tuning.coreRadius);hero.body.position.y=tuning.coreRadius+.04+(preferences.reducedMotion?0:Math.sin(t*tuning.bobSpeed)*tuning.coreBob);
+    hero.body.rotation.set(Math.sin(t*1.1)*.025,Math.PI/4-.22+(studio?Math.sin(t*tuning.turnSpeed)*.3:Math.sin(t*.6)*.025),Math.sin(t*.8)*.02);
+    if(preferences.reducedMotion)hero.body.rotation.set(0,Math.PI/4-.22,0);
+    if(matching){hero.body.position.y=tuning.coreRadius*tuning.coreStudioSquash+.04;hero.body.scale.set(tuning.coreRadius*tuning.coreStudioWidth,tuning.coreRadius*tuning.coreStudioSquash,tuning.coreRadius);hero.body.rotation.set(0,0,0);hero.expressions.forEach((e,i)=>e.visible=i===Math.max(0,Math.min(5,Math.round(tuning.coreExpression))));hero.attachment.visible=tuning.coreBlade>=1;const tier=Math.max(0,Math.min(2,Math.round(tuning.coreHeat)));m.chrome.matcap=heatMatcaps[tier];hero.body.traverse(o=>{if(o instanceof T.Mesh&&o.material instanceof T.MeshMatcapMaterial)o.material.matcap=heatMatcaps[tier];});hero.crownMaterial.color.set(tier===0?'#a64159':tier===1?'#e96349':'#c15d70');if(hero.crownGlowMaterial){hero.crownGlowMaterial.color.set(tier===1?'#ffad60':'#ffffff');hero.crownGlowMaterial.opacity=tier===0?0:tier===1?.2:.42;}halo.visible=false;}
+    if(!matching){const tier=fight?(fight.hero.overdrive>0?2:fight.hero.heat>=60?1:0):0;hero.body.traverse(o=>{if(o instanceof T.Mesh&&o.material instanceof T.MeshMatcapMaterial)o.material.matcap=heatMatcaps[tier];});hero.expressions.forEach((e,i)=>e.visible=i===(fight?(fight.hero.hp<=25?2:fight.hero.dash.kind==='active'?1:tier>0?1:0):0));}
+    const blink=matching?0:t%5.8;hero.eyes.scale.y=blink>5.55?Math.max(.1,Math.abs(blink-5.675)/.125):1;
+    enemy.body.rotation.y=Math.PI/4-.2+Math.sin(t*.6)*.05;enemy.body.rotation.z=preferences.reducedMotion?0:Math.sin(t*2)*.025;for(const disc of enemy.blade.children)disc.rotation.z=preferences.reducedMotion?0:t*.4;if(enemyStudio)enemy.body.rotation.set(0,0,0);
+    lavaBits.position.x=Math.sin(t*.16)*.35;
+    if(fight){
+      combat.root.visible=true;const h=fight.hero,e=fight.enemy;
+      const dashing=h.dash.kind==='active';hero.crownMaterial.color.set(h.overdrive>0?'#ffb49a':'#fa5366');
+      warning.visible=e.behavior.kind==='windup';
+      if(e.behavior.kind==='windup'){warning.position.set(enemy.root.position.x,0,enemy.root.position.z);warning.rotation.y=Math.atan2(e.behavior.dx,e.behavior.dz);warningFill.material.opacity=.12+(1-e.behavior.remaining/warningTicks)*.13;}const feedback=combat.draw(t,{x:hero.root.position.x,z:hero.root.position.z,dashing},preferences);
+      hero.body.scale.set(tuning.coreRadius*(dashing?.88:1),tuning.coreRadius*(dashing?.86:1),tuning.coreRadius*(dashing?1.25:1));
+      if(!preferences.reducedMotion&&!dashing){const stretch=Math.min(.1,Math.hypot(h.vx,h.vz)*.015);hero.body.scale.set(tuning.coreRadius*(1-stretch*.5),tuning.coreRadius*(1-stretch*.5),tuning.coreRadius*(1+stretch));}
+      hero.body.rotation.y=dashing?Math.atan2(h.faceX,h.faceZ):Math.PI/4-.22;if(h.dash.kind==='charging'){const charge=Math.min(1,h.dash.ticks/(runTuning?.dashChargeTicks??36));hero.body.scale.set(tuning.coreRadius*(1+charge*.12),tuning.coreRadius*(1-charge*.15),tuning.coreRadius*(1+charge*.12));halo.visible=true;halo.scale.setScalar(1+charge*.8);}else{halo.scale.setScalar(1);halo.visible=true;}if(h.special.kind==='spin'&&!preferences.reducedMotion){hero.attachment.position.set(Math.cos(t*16)*1.15,.7,Math.sin(t*16)*1.15);}else hero.attachment.position.set(-1.18,.65,.05);const hop=h.special.kind==='hop'?h.special.remaining:h.special.kind==='spin'?h.special.hopRemaining:0;if(hop>0&&!preferences.reducedMotion)hero.body.position.y+=Math.sin((1-hop/(runTuning?.boostHopTicks??24))*Math.PI)*.8;
+      const speed=Math.sqrt(h.vx*h.vx+h.vz*h.vz);hero.body.rotation.x=(preferences.reducedMotion?0:Math.sin(t*speed*2)*.045);
+      if(e.behavior.kind==='windup'||e.behavior.kind==='lunge')enemy.body.rotation.y=Math.atan2(e.behavior.dx,e.behavior.dz);
+      const death=e.behavior.kind==='defeated'?feedback.death:0;enemy.root.visible=death<1;enemy.body.scale.setScalar((1-death*.85)*enemyRadius/.67);enemy.body.position.y=.67-death*.3;
+      heroFlash.material.opacity=(preferences.reducedFlashes?0:feedback.heroFlash*.6);heroFlash.visible=heroFlash.material.opacity>0;enemyFlash.material.opacity=(preferences.reducedFlashes?0:feedback.enemyFlash*.65);
+      const cameraKick=preferences.reducedMotion?0:feedback.kick*(preferences.reducedFlashes?.25:1);camera.zoom=1+cameraKick*tuning.impactZoom;camera.position.x+=Math.sin(t*150)*cameraKick*tuning.impactShake;camera.position.z+=Math.cos(t*130)*cameraKick*tuning.impactShake;camera.updateProjectionMatrix();
+    }else{warning.visible=false;combat.root.visible=false;heroFlash.material.opacity=0;heroFlash.visible=false;enemyFlash.material.opacity=0;}
+    if(name==='combat-readability')effect.update(t*tuning.effectSpeed,hero.root.position,enemy.root.position);
+    else effect.root.visible=false;
+    sparks.count=matching?0:Math.floor(Math.min(defaults.particles,preferences.quality==='low'?Math.min(6,tuning.particles):tuning.particles));
+    sparkData.forEach((s,i)=>{sparkDummy.position.set(studio?s.x*.28:s.x,studio?((s.phase+t*.025)%1)*4:((s.phase+t*.12)%1)*.9,studio?-2:s.z);sparkDummy.scale.setScalar(i<(preferences.quality==='low'?Math.min(6,tuning.particles):tuning.particles)?(studio?.55:1):0);sparkDummy.updateMatrix();sparks.setMatrixAt(i,sparkDummy.matrix);});sparks.instanceMatrix.needsUpdate=true;
+    camera.updateMatrixWorld();const heroBounds={x:hero.root.position.x,y:tuning.coreRadius+.04,z:hero.root.position.z,radius:tuning.coreRadius};
+    if(fight)stage.fade(camera,heroBounds);
+    if(run&&runTuning){enemy.root.visible=false;warning.visible=false;encounter.root.visible=true;encounter.draw(run,fightAlpha,runTuning,preferences.reducedMotion,preferences.reducedFlashes,camera,heroBounds);}
+    bossPresentation.root.visible=false;bossPresentation.warnings.visible=false;if(run?.phase.kind==='boss'&&runTuning)bossPresentation.draw(run.phase.boss,tick,fightAlpha,runTuning,preferences.reducedMotion,camera,heroBounds);else if(name==='boss'||name==='boss-studio'){bossPresentation.preview(tick);if(name==='boss-studio'){enemy.root.visible=false;bossPresentation.root.position.set(0,0,0);}}else if(name==='enemy-lineup'){encounter.root.visible=true;encounter.lineup(tick);enemy.root.visible=false;}
+    npcShadows.count=0;if(run){const units=run.enemies.filter(e=>e.hp>0).map(e=>({x:mix(e.prevX,e.x),z:mix(e.prevZ,e.z),radius:(e.kind==='grinder'?1:.7)*(e.behavior.kind==='spawn'?1-.5*e.behavior.remaining/(runTuning?.spawnDropTicks??30):1)}));if(run.phase.kind==='boss')units.push({x:mix(run.phase.boss.prevX,run.phase.boss.x),z:mix(run.phase.boss.prevZ,run.phase.boss.z),radius:1.6});for(const unit of units){shadowDummy.position.set(unit.x,.012,unit.z);shadowDummy.scale.set(unit.radius*3.5,unit.radius*3.5,1);shadowDummy.updateMatrix();npcShadows.setMatrixAt(npcShadows.count++,shadowDummy.matrix);}npcShadows.instanceMatrix.needsUpdate=true;}
+    if(coreMask&&(matching||enemyStudio||showcase)&&maskCore){const source=matching?hero.body:showcase?stage.root:name==='boss-studio'?bossPresentation.root:enemy.root;maskCore.position.copy(source.position);maskCore.scale.copy(source.scale);maskCore.rotation.copy(source.rotation);renderer.render(maskScene,camera);}else if(preferences.quality==='high'&&!preferences.reducedFlashes&&!matching&&!enemyStudio){glow??=makeSelectiveGlow(renderer,scene,camera);glow.draw();}else renderer.render(scene,camera);
+  }
+  function applyTuning(){if(lastSheen!==tuning.coreSheen){lastSheen=tuning.coreSheen;}renderer.toneMappingExposure=tuning.exposure;sky.intensity=tuning.ambientLight;sun.intensity=tuning.keyLight;fill.intensity=tuning.fillLight;m.glow.color.set('#b49bff').multiplyScalar(tuning.violetStrength/2.5);m.orange.color.set('#f95116').multiplyScalar(tuning.orangeStrength/2.8);contacts.forEach(c=>c.opacity=Math.min(1,tuning.shadowOpacity*(matching&&c===heroShadow.material?3.25:2)));updateFloor();resize(size.width,size.height);renderer.shadowMap.needsUpdate=true;renderAt(currentTick);}
+  renderer.shadowMap.needsUpdate=true;
+  return{renderer,camera,renderAt,resize,setCoreMask:(value:boolean)=>{if(value&&(matching||enemyStudio||showcase))rebuildMask();coreMask=value;renderAt(currentTick);},reset:()=>{combat.reset();encounter.reset();},setPreferences:(next:Preferences)=>{preferences=next;resize(size.width,size.height);},setLoadout:(form:'core'|'blade')=>{hero.attachment.visible=form==='blade';},applyTuning,warmUp:()=>warmUp(),applyRun:(state:RunState,alpha:number,config:CombatTuning)=>{hero.attachment.visible=state.loadout==='blade';run=state;runTuning=config;fightAlpha=alpha;const e=state.enemies[0];fight={tick:state.tick,hitstop:state.hitstop,hero:state.hero,enemy:e??{x:0,z:0,prevX:0,prevZ:0,hp:0,behavior:{kind:'defeated'}},events:state.events};combat.ingest(state.events,state.tick);},runScreens:()=>run?encounter.screen(run,camera,size.width,size.height):[],applyFight:(state:FightView,alpha=1,config?:CombatTuning)=>{run=null;encounter.root.visible=false;if(config){const length=config.lungeSpeed*config.lungeTicks/60,width=config.sawletRadius*2;warningFill.scale.set(width/1.34,length/4.5,1);warningFill.position.z=length/2;warningEdge.scale.set(width/1.34,1,length/4.5);warningTicks=config.windupTicks;enemyRadius=config.sawletRadius;}fight=state;fightAlpha=alpha;combat.ingest(state.events,state.tick);},enemyScreen:()=>{const point=enemy.root.position.clone();point.y=1.7;point.project(camera);return{x:(point.x+1)*size.width/2,y:(1-point.y)*size.height/2};},metadata:()=>({scene:name,seed,tick:currentTick,simTick:fight?.tick,camera:{width:camera.right-camera.left,height:camera.top-camera.bottom,elevation:matching?tuning.coreStudioElevation:enemyStudio?12:showcase?30:studio?tuning.stageElevation:tuning.elevation,azimuth:matching?tuning.coreStudioAzimuth:enemyStudio?30:tuning.azimuth,squash:Math.sin((matching?tuning.coreStudioElevation:enemyStudio?12:showcase?30:studio?tuning.stageElevation:tuning.elevation)*Math.PI/180)},arena:{width:48,depth:48,openCentre:26},core:{assetVersion:'reference-10',studioCandidate:matching,socketsLoaded,industrialParts,finish:"blue-violet painted chrome",sheen:tuning.coreSheen,screenHeightRatio:2*tuning.coreRadius*(matching?tuning.coreStudioSquash:1)/(camera.top-camera.bottom)},viewport:size,renderer:renderer.getContext().getParameter(renderer.getContext().RENDERER),calls:renderer.info.render.calls,triangles:renderer.info.render.triangles})};
+}

@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {session,load} from './browser.mjs';
+import {createRunSimulation} from '../src/sim/run-runtime.ts';
+const host=await session();await mkdir('shots/boss',{recursive:true});
+try{for(const v of [{width:1280,height:720,name:'desktop'},{width:844,height:390,name:'phone'}]){
+ const context=await host.browser.newContext({viewport:v,hasTouch:v.name==='phone',recordVideo:{dir:'shots/boss',size:{width:v.width,height:v.height}}});const p=await context.newPage();const errors=await load(p,host.url,'arena');
+ await p.evaluate(()=>{const api=window.__REDLINE__;api.setTick(0);const t={...api.replay().tuning,heroHP:10000,bonkDamage:.001,pulseRadius:60,pulseDamage:1000,pulseCooldownTicks:1};api.advance([{x:0,z:0,dash:false,tuning:t}]);api.setTick(0);for(let i=0;i<80;i++){const s=api.state();if(s.phase.kind==='boss')break;api.advance([s.phase.kind==='upgrade'?{x:0,z:0,dash:false,upgrade:s.phase.choices[0]}:{x:0,z:0,dash:false,ability:'pulse'}]);}api.advance([{x:0,z:0,dash:false,tuning:{...api.replay().tuning,heroHP:10000,bonkDamage:.001,pulseRadius:60,pulseCooldownTicks:1}}]);});
+ assert.equal(await p.evaluate(()=>window.__REDLINE__.state().phase.kind),'boss');
+ for(const [stage,damage,kind] of [[1,0,'chomp-warning'],[2,210,'sweep-warning'],[3,210,'volley-warning'],[4,90,'sweep-warning']]){
+  await p.evaluate(({damage,kind})=>{const api=window.__REDLINE__;if(damage){api.advance([{x:0,z:0,dash:false,tuning:{...api.replay().tuning,heroHP:10000,bonkDamage:.001,pulseRadius:60,pulseCooldownTicks:1,pulseDamage:damage}}]);for(let i=0;i<10;i++){const before=api.state().phase.boss.hp;api.advance([{x:0,z:0,dash:false,ability:'pulse'}]);if(api.state().phase.boss.hp<before)break;}}
+   for(let i=0;i<1000;i++){const s=api.state();if(s.phase.boss.behavior.kind===kind&&s.phase.boss.behavior.remaining<30)break;api.advance([{x:0,z:0,dash:false}]);}}, {damage,kind});
+  assert.equal(await p.evaluate(()=>window.__REDLINE__.state().phase.boss.behavior.kind),kind);await p.screenshot({path:`shots/boss/phase${stage}-${v.name}.png`});
+ }
+ await p.evaluate(()=>{const api=window.__REDLINE__;api.advance([{x:0,z:0,dash:false,tuning:{...api.replay().tuning,heroHP:10000,bonkDamage:.001,pulseRadius:60,pulseDamage:1000,pulseCooldownTicks:1}},...Array.from({length:10},()=>({x:0,z:0,dash:false,ability:'pulse'}))]);});
+ assert.equal(await p.locator('#app').getAttribute('data-result'),'won');const saved=await p.evaluate(()=>JSON.parse(localStorage.getItem('redline.profile.v1')));assert.equal(saved.bladeUnlocked,true);assert.equal(saved.clears,1);await p.screenshot({path:`shots/boss/reward-${v.name}.png`});
+ const replay=await p.evaluate(()=>window.__REDLINE__.replay());const sim=createRunSimulation(replay.tuning,false,replay.loadout);for(const c of replay.commands)sim.step(c);assert.deepEqual(sim.view(),replay.final);
+ await p.getByRole('link',{name:'Equip Blade',exact:true}).click();await p.waitForFunction(()=>window.__REDLINE__?.ready);const blade=p.locator('[data-equip=blade]');assert.equal(await blade.isEnabled(),true);await blade.click();await p.reload();await p.waitForFunction(()=>window.__REDLINE__?.ready);assert.equal(await p.locator('[data-equip=blade]').getAttribute('aria-pressed'),'true');await p.screenshot({path:`shots/boss/blade-lobby-${v.name}.png`});
+ await p.getByRole('link',{name:'Enter Foundry',exact:true}).click();await p.waitForFunction(()=>window.__REDLINE__?.ready);assert.equal(await p.evaluate(()=>window.__REDLINE__.state().loadout),'blade');await p.getByRole('button',{name:'Blade Cleave',exact:true}).click();await p.waitForTimeout(80);await p.screenshot({path:`shots/boss/blade-fight-${v.name}.png`});assert.deepEqual(errors,[]);
+ await writeFile(`shots/boss/report-${v.name}.json`,JSON.stringify({phases:4,savedUnlock:true,clears:saved.clears,equipReload:true,bladeQ:true,recordedReplay:true,acceleratedDebugSetup:true,physicalPhone:false,errors},null,2));const video=p.video();await context.close();await video.saveAs(`shots/boss/loop-${v.name}.webm`);
+}console.log('Boss phases, victory unlock, saved lobby equip, Blade run and recorded replay passed at desktop/phone sizes.');}finally{await host.close();}

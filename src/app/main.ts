@@ -19,7 +19,7 @@ import {makePreferences} from '../ui/preferences.ts';
 import {loadProfile,saveProfile} from '../save/profile.ts';
 import {awardBlade,equipProfile} from '../content/profile.ts';
 import {createRunSimulation} from '../sim/run-runtime.ts';
-import {upgrades,upgradedTuning} from '../content/upgrades.ts';
+import {upgradedTuning} from '../content/upgrades.ts';
 import { makeScene, type SceneName, type Tuning } from '../presentation/scene.ts';
 import { defaults, scenes } from '../content/scene.mjs';
 import {createSimulation} from '../sim/runtime.ts';

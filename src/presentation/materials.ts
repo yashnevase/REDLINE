@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {CL4_ENABLED} from '../content/items/cl-clarity.ts';
 import { palettes, random } from '../content/scene.mjs';
 
 // Original painted blue-violet chrome matcap, approved in Sprint 2.
@@ -28,9 +29,9 @@ export function makeMaterials(sheen = .18) {
   const variant = <M extends T.Material & { color: T.Color }>(preset: M, color: string) => { const m = preset.clone(); m.color.set(color); return m; };
   return { chrome, rust, rustPaint, rustActor:new T.MeshMatcapMaterial({matcap:makeRustMatcap(),map:rustPaint,flatShading:false,toneMapped:false}), steel, stone, glow,
     orange: variant(glow, '#f95116'), hot: variant(glow, '#ffb342'),
-    red: variant(glow, '#ff3c53'), white: variant(glow, '#fff9f1'),
+    red: variant(glow, CL4_ENABLED?'#ff6859':'#ff3c53'), white: variant(glow, '#fff9f1'),
     dark: variant(steel, '#32343c'), lightSteel: variant(steel, '#a2a8aa'),
-    violetRim: variant(glow, '#8664a8'), rustLight: variant(rust, '#aa8064'), floor: variant(stone, '#ffffff')
+    violetRim: variant(glow, CL4_ENABLED?'#b1a1cf':'#8664a8'), rustLight: variant(rust, '#aa8064'), floor: variant(stone, '#ffffff')
   };
 }
 export type Materials = ReturnType<typeof makeMaterials>;

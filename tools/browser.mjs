@@ -17,6 +17,7 @@ export async function session(options={}) {
   } catch (error) { server.kill(); throw error; }
 }
 export async function load(page, url, scene, trial=false) {
+  await page.route('**/favicon.ico',route=>route.fulfill({status:204}));
   const errors = []; page.on('pageerror', e => errors.push(e.message));
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   await page.goto(`${url}/?scene=${scene}&capture=1${trial?'&trial=1':''}`, { waitUntil: 'networkidle' });

@@ -4,8 +4,9 @@ The owner supplied a revised NEXT_WORK and accepted the generated distant arena 
 
 ## Implemented changes awaiting full session review
 
-- BL1: mirrored curved blades and faint links; symmetric floating-gap regression replaces the old single-disc assertion.
-- BL2: all projectile variants share a violet crescent silhouette and short instanced trails.
+- BL1 (owner correction, 2026-11-01): original `next-work-s2` toothed steel model restored and mirrored, with faint links, independent axis spin and gentle bob; Spin/Overdrive speeds up rotation. Same top silhouette/hub layers used for gameplay LOD. Symmetric floating-gap regression asserts the detailed extruded model and shared source geometry.
+- BL2 (owner correction): all projectile variants now use the original toothed steel silhouette/hubs. Purple flight glow, edge sparkle and temporary floor-stick polish remain; the prior purple crescent is superseded.
+- AM1/AM2: showcase-only candidate adds chamfered slab body, segmented riveted sides, amber slits, beacons and point lights, thin purple rim, corner/under-hull gears/cables and a widened hazard frame at ±17u. Eight showcase calls / 15,638 triangles. Fresh judge feedback drove a second viewed iteration. Local comparison and checklist: `art/match/arena-level1/`. The candidate is not an approved reference match and is not promoted to gameplay.
 - UI1: shared combat announcement queue; two hit labels maximum and separate ability lane. Full banner/streak collision review still required.
 - UI2: red/orange/white slash-tick Heat arc, shorter Integrity label, instructions removed from main HUD. Final small-screen layout review pending.
 - GROUND/C0/C2: quiet oxidised plates, 2/4-unit mixed sizes, thin seams, bolts, sparse tread/grates, welded patches and oil wear; removed the purple central overlay. Reactive depression, missing plates and more convincing large-scale wear remain.
@@ -27,13 +28,16 @@ The owner supplied a revised NEXT_WORK and accepted the generated distant arena 
 - D/E: distinct seeded level worlds/mechanics and full chapter config consumption; rerun per-level fairness and full browser progression after those changes.
 - BL1/BL2/UI1/UI2/H3: full final motion/layout/accessibility review.
 - Full S3 report, owner-note audit, top-down/squint evidence and completion gate. Session 4 remains future work.
+- AM1–AM8: reference-match completion, matched-aspect silhouette mask/IoU, richer armoured/worn kit, Level 2 pit, humanoid giants, varied wrecks, large smoke/fire and ambient motion. No reference-match approval or IoU claim yet.
 
 ## Verification at checkpoint
 
 `pnpm check`: 101 tests pass, TypeScript and Ritmo/source audits pass. `pnpm build`: pass; production excludes debug/reference assets. Existing Vite bundle-size advisory remains.
 
-`tools/s3-perf.mjs`: 24 real headed Apple M4 Metal cases at desktop and compact dimensions, Standard/Low, Default/Far, crowd/Rex/corner. Standard peak 88 calls / 43,620 triangles; Low 70 / 23,463; measured p95 at most 17.6 ms. See `shots/s3/perf.json`. Initial box plate geometry exceeded Low triangle budget; revised single-face plates bring the full matrix within limits. Existing S2 evidence remains historical.
+`tools/s3-perf.mjs`: updated 24 real headed Apple M4 Metal cases after the corrected steel Blade, at desktop and compact dimensions, Standard/Low, Default/Far, crowd/Rex/corner. Standard peak 90 calls / 44,018 triangles; Low 70 / 23,601; measured p95 at most 17.6 ms. See `shots/s3/perf.json`. Initial box plate geometry exceeded Low triangle budget; revised single-face plates bring the full matrix within limits. Full-detail twin steel attachments subsequently exceeded Low, resolved with matching top-painted LOD and fewer Low ambient particle passes. Existing S2 evidence remains historical.
 
 Viewed actual desktop Blade and compact quality/Heat/HUD captures revealed excessive grate repetition and compact call-outs near camera controls. Corrected atlas default quadrant and separated compact call-outs. Fresh full-world overviews are under `shots/s3/overview-*.png`; desktop/compact fixture captures and a desktop recording including 32 seconds of normal-stat bot commands are under `shots/s3/`. These are checkpoint evidence, not a claim that the S3 gate passed.
 
 No new simulation state or gameplay rules were changed at this checkpoint. No physical-device or human acceptance claim. No audio, external assets or dependencies added. The owner's untracked `docs/NEXT_WORK (1).md` is preserved.
+
+Corrected Blade evidence: `shots/s3/steel/{roster,bladeFan,bladeRing}-{desktop,compact}.png` and `motion-{desktop,compact}.webm`, recorded from actual fixture playback. Viewed hands on desktop and fan/ability state on compact. The compact frame revealed the ability name overlapping Integrity; moved its fixed slot below the objective strip and above the Core, away from HP/right-hand hit labels. Rerendered both layouts after the fix. Generated art is only a target; these captures are the implementation evidence.

@@ -1,3 +1,4 @@
+import {cameraDistance} from '../content/items/q4-camera.ts';
 import {makeIntensityEyes} from './q2-intensity-eyes.ts';
 import {prepareEnemyBlades,animateEnemyBlades} from './q1-enemy-blades.ts';
 import {makeCoreSurface,makeRigidPose,wearTier} from './core-surface.ts';
@@ -7,7 +8,7 @@ import {makeCoreMotion} from './core-motion.ts';
 import {batchParts} from './batch-parts.ts';
 import {makeSelectiveGlow} from './selective-glow.ts';
 import {makeSpaceStage} from './space-stage.ts';
-import {defaultPreferences,zoomPresets,type Preferences} from '../content/preferences.ts';
+import {defaultPreferences,type Preferences} from '../content/preferences.ts';
 import {makeBossPresentation} from './boss.ts';
 import {makeEncounterPresentation} from './encounter.ts';
 import type {RunState} from '../sim/run-schema.ts';
@@ -104,7 +105,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
 
   function renderAt(tick:number){
     const renderDt=lastRenderTick<0||tick<lastRenderTick?0:Math.min(.05,(tick-lastRenderTick)/60);if(tick<lastRenderTick){follow.reset();surface.reset();rigidPose.reset();intensityEyes.reset();lastCorePoint=null;}lastRenderTick=tick;
-    const zoomNow=performance.now(),zoomDt=Math.min(.05,(zoomNow-zoomFrameAt)/1000);zoomFrameAt=zoomNow;const zoomTarget=zoomPresets[preferences.zoom];userViewScale=preferences.reducedMotion?zoomTarget:userViewScale+(zoomTarget-userViewScale)*(1-Math.exp(-zoomDt/Math.max(.01,tuning.zoomPreferenceSeconds)));
+    const zoomNow=performance.now(),zoomDt=Math.min(.05,(zoomNow-zoomFrameAt)/1000);zoomFrameAt=zoomNow;const zoomTarget=cameraDistance(preferences.zoom,size.width<600||matchMedia('(pointer:coarse)').matches);userViewScale=preferences.reducedMotion?zoomTarget:userViewScale+(zoomTarget-userViewScale)*(1-Math.exp(-zoomDt/Math.max(.01,tuning.zoomPreferenceSeconds)));
     hero.eyes.visible=hero.marks.visible=true;heroStretch.rotation.set(0,0,0);heroStretch.scale.setScalar(1);speedLines.reset();
     chargeParticles.count=0;if(fight?.hero.dash.kind==='charging'&&!preferences.reducedFlashes&&!preferences.reducedMotion){chargeParticles.count=preferences.quality==='low'?8:24;for(let i=0;i<chargeParticles.count;i++){const p=(tick/36+i/24)%1,a=i*2.4+tick*.05;chargeDummy.position.set(Math.cos(a)*(1.5-p),.25+p*.7,Math.sin(a)*(1.5-p));chargeDummy.scale.setScalar(Math.sin(p*Math.PI));chargeDummy.updateMatrix();chargeParticles.setMatrixAt(i,chargeDummy.matrix);}chargeParticles.instanceMatrix.needsUpdate=true;if(chargeParticles.count)chargeParticles.computeBoundingSphere();}
     hero.rotor.rotation.z=preferences.reducedMotion?0:tick*.12;

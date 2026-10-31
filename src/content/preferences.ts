@@ -1,8 +1,7 @@
 import {z} from 'zod';
-export const preferencesSchema=z.object({version:z.literal(1),reducedMotion:z.boolean(),reducedFlashes:z.boolean(),quality:z.enum(['standard','low','high']),zoom:z.enum(['close','default','wide']).default('default')});
+export const preferencesSchema=z.object({version:z.literal(1),reducedMotion:z.boolean(),reducedFlashes:z.boolean(),quality:z.enum(['standard','low','high']),zoom:z.enum(['close','default','wide','far']).default('default')});
 export type Preferences=z.infer<typeof preferencesSchema>;
 export function defaultPreferences(reducedMotion=false):Preferences{return{version:1,reducedMotion,reducedFlashes:false,quality:'standard',zoom:'default'};}
 export function decodePreferences(raw:string|null,reducedMotion=false):Preferences {try{const result=preferencesSchema.safeParse(raw?JSON.parse(raw):null);return result.success?result.data:defaultPreferences(reducedMotion);}catch{return defaultPreferences(reducedMotion);}}
 
-export const zoomPresets={close:.85,default:1,wide:1.3} as const;
-export const zoomOrder=['close','default','wide'] as const;
+export {cameraPresets as zoomPresets,cameraOrder as zoomOrder} from './items/q4-camera.ts';

@@ -206,9 +206,9 @@ if (import.meta.env.DEV) {
     queueCommands:(commands:Command[])=>{queuedCommands?.splice(0,queuedCommands.length,...commands);frozen=false;paused=false;},state:()=>sim?.view(), advance:(commands:Command[])=>{frozen=true;for(const command of commands)step(command);view.renderAt(tick);drawHUD();return sim?.view();},
     restart:()=>{restart();frozen=false;}, replay:()=>({version:3,mode:trial?'trial':'run',tuning:recordingTuning,loadout:snapshot&&'loadout' in snapshot?snapshot.loadout:'core',commands:recording,final:sim?.view()}),
     play: () => { frozen = false; }, metadata: ()=>({...view.metadata(),benchmarkPeak,benchmarkEvents,benchmarkWork,fight:snapshot?{hp:snapshot.hero.hp,...('enemy' in snapshot?{enemyHP:snapshot.enemy.hp,enemyPhase:snapshot.enemy.behavior.kind}:{phase:snapshot.phase,enemies:snapshot.enemies.length,alive:snapshot.enemies.filter(e=>e.hp>0).length,projectiles:snapshot.projectiles.length}),charges:snapshot.hero.charges,heat:snapshot.hero.heat,overdrive:snapshot.hero.overdrive}:undefined}),
-    measure: async (count: number, fixture?:Command[]) => {
+    measure: async (count: number, fixture?:Command[], preserve=false) => {
       measuring = true; frozen = true; if(playing&&fixture){const parsed=tuningSchema.safeParse(fixture[0]?.tuning);if(parsed.success)gameTuning=parsed.data;restart();for(const command of fixture)step(command);}
-      else if(playing){const base={...gameTuning};restart();if(!trial){
+      else if(playing&&!preserve){const base={...gameTuning};restart();if(!trial){
        step({x:0,z:0,dash:false,tuning:{...base,heroHP:10000,pulseDamage:1000,pulseRadius:60,pulseCooldownTicks:1}});
        for(let i=0;i<40;i++){if(snapshot&&'phase' in snapshot&&snapshot.phase.kind==='fight'&&snapshot.phase.wave===3)break;step(snapshot&&'phase' in snapshot&&snapshot.phase.kind==='upgrade'?{...idleCommand,upgrade:snapshot.phase.choices[0]}:{...idleCommand,ability:'pulse'});}
        step({...idleCommand,tuning:{...base,heroHP:10000}});

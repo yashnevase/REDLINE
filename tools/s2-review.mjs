@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {session,load} from './browser.mjs';
+import {scenarios,t,idle,stress} from './s2-fixtures.mjs';
+import {botRun} from './focus-bot.mjs';
+const host=await session({headless:false,gpu:true}),report=[];await mkdir('shots/s2',{recursive:true});
+try{for(const [name,viewport]of [['desktop',{width:1280,height:720}],['compact',{width:844,height:390}]]){
+ const c=await host.browser.newContext({viewport,hasTouch:name==='compact',deviceScaleFactor:1,recordVideo:{dir:'shots/s2/raw',size:viewport}});await c.addInitScript(()=>localStorage.setItem('redline.boss-guide.v1','2'));const p=await c.newPage();await p.route('**/favicon.ico',r=>r.fulfill({status:204}));const errors=await load(p,host.url,'arena');
+ for(const [label,state]of Object.entries(scenarios())){await p.evaluate(({state,t})=>window.__REDLINE__.restoreFixture(state,t),{state,t});await p.waitForTimeout(550);await p.screenshot({path:`shots/s2/${label}-${name}.png`});report.push({label,name,phase:await p.evaluate(()=>window.__REDLINE__.state().phase.kind),metadata:await p.evaluate(()=>window.__REDLINE__.metadata())});}
+ // Real keyboard zoom, saved preferences and Far readability.
+ await p.evaluate(({state,t})=>window.__REDLINE__.restoreFixture(state,t),{state:scenarios().roster,t});await p.keyboard.press('KeyV');await p.keyboard.press('KeyV');await p.waitForTimeout(800);assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem('redline.preferences.v1')).zoom),'far');await p.screenshot({path:`shots/s2/far-${name}.png`});
+ await p.keyboard.press('KeyC');await p.keyboard.press('KeyC');await p.getByRole('button',{name:'Options',exact:true}).click();await p.screenshot({path:`shots/s2/options-${name}.png`});await p.getByRole('button',{name:'Done',exact:true}).click();
+ // Touch and emulated controller device labels exercise actual input host.
+ if(name==='compact'){await p.touchscreen.tap(400,200);await p.waitForTimeout(100);assert.equal(await p.locator('#app').getAttribute('data-input'),'touch');await p.screenshot({path:`shots/s2/touch-${name}.png`});}
+ await p.evaluate(()=>{const buttons=Array.from({length:17},()=>({pressed:false,value:0,touched:false}));buttons[3].pressed=true;Object.defineProperty(navigator,'getGamepads',{configurable:true,value:()=>[{id:'Sony DualSense 054c',connected:true,axes:[0,0,0,0],buttons}]});window.__REDLINE__.play();});await p.waitForTimeout(550);await p.screenshot({path:`shots/s2/controller-${name}.png`});await p.evaluate(()=>Object.defineProperty(navigator,'getGamepads',{configurable:true,value:()=>[]}));
+ await p.goto(`${host.url}/?scene=lobby&capture=1`,{waitUntil:'networkidle'});await p.waitForFunction(()=>window.__REDLINE__?.ready);await p.mouse.move(viewport.width*.5,viewport.height*.5);await p.mouse.down();await p.mouse.move(viewport.width*.5+100,viewport.height*.5-30,{steps:15});await p.mouse.up();await p.waitForTimeout(100);assert.ok(Math.abs((await p.evaluate(()=>window.__REDLINE__.metadata())).lobbyOrbit.yaw)>.4);await p.screenshot({path:`shots/s2/lobby-rotate-${name}.png`});assert.deepEqual(errors,[]);await c.close();
+ }
+ // Separate normal-stat run; recorded in real time, with no stress-fixture HP/damage tuning.
+ const normal=botRun(12000);const c=await host.browser.newContext({viewport:{width:1280,height:720},recordVideo:{dir:'shots/s2/normal-raw',size:{width:1280,height:720}}});await c.addInitScript(()=>localStorage.setItem('redline.boss-guide.v1','2'));const p=await c.newPage();await p.route('**/favicon.ico',r=>r.fulfill({status:204}));await load(p,host.url,'arena');await p.evaluate(commands=>{window.__REDLINE__.setTick(0);window.__REDLINE__.queueCommands(commands);},normal.commands);await p.waitForTimeout(32000);const video=p.video();await c.close();await video.saveAs('shots/s2/normal-play-32s.webm');await writeFile('shots/s2/normal-bot.json',JSON.stringify({normalStats:true,final:normal.state,commands:normal.commands,gaps:normal.gaps},null,2));
+ await writeFile('shots/s2/review.json',JSON.stringify(report,null,2));console.log('S2 desktop/compact feature captures, active input labels, lobby drag and normal play recorded.');
+}finally{await host.close();}

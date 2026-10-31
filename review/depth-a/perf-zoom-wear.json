@@ -1,0 +1,114 @@
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "standard",
+    "zoom": "close",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "calls": 111,
+    "triangles": 46822,
+    "p50": 16.699999999999818,
+    "p95": 17.59999999999991,
+    "wear": 3
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "standard",
+    "zoom": "wide",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "calls": 118,
+    "triangles": 50134,
+    "p50": 16.699999999999818,
+    "p95": 17.59999999999991,
+    "wear": 3
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "low",
+    "zoom": "close",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "calls": 68,
+    "triangles": 21174,
+    "p50": 16.699999999999818,
+    "p95": 17.59999999999991,
+    "wear": 3
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "quality": "low",
+    "zoom": "wide",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "calls": 70,
+    "triangles": 22744,
+    "p50": 16.699999999999818,
+    "p95": 17.5,
+    "wear": 3
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "standard",
+    "zoom": "close",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "calls": 111,
+    "triangles": 46918,
+    "p50": 16.699999999999818,
+    "p95": 17.5,
+    "wear": 3
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "standard",
+    "zoom": "wide",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "calls": 117,
+    "triangles": 50254,
+    "p50": 16.699999999999818,
+    "p95": 17.5,
+    "wear": 3
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "low",
+    "zoom": "close",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "calls": 68,
+    "triangles": 21232,
+    "p50": 16.699999999999818,
+    "p95": 17.59999999999991,
+    "wear": 3
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "quality": "low",
+    "zoom": "wide",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "calls": 70,
+    "triangles": 22804,
+    "p50": 16.699999999999818,
+    "p95": 17.59999999999991,
+    "wear": 3
+  }
+]

@@ -74,3 +74,9 @@
 @media(max-width:600px) and (min-height:501px){.live .health-label,.live .health-label b{font-size:14px}}
 @media(max-width:700px) and (max-height:500px){.live .health{left:128px;bottom:8px;width:180px;padding:7px 10px}.live .health-label,.live .health-label b{font-size:14px}.live .heat{font-size:11px}.live .heat>div{width:20px;height:20px}.live .abilities{right:12px}}
 @media(max-width:700px) and (max-height:500px){.live .overdrive-button{width:135px}}
+/* Camera controls stay outside movement and ability thumb zones. */
+.zoom-controls{position:absolute;right:28px;top:112px;display:flex;align-items:center;gap:5px;z-index:6;padding:3px;border-radius:18px;background:#211c35c9;color:#d8cbec;font-size:9px;letter-spacing:1px}.zoom-controls button{border:0;background:#64527e70;color:#fff;width:30px;height:30px;border-radius:50%;font-size:21px;touch-action:manipulation;cursor:pointer}.zoom-controls button:focus-visible{outline:2px solid #e9b9ff}.zoom-controls span{padding:0 2px}@media(max-height:500px){.zoom-controls{top:88px;right:18px}.zoom-controls button{width:30px;height:30px}}@media(max-width:600px) and (min-height:501px){.zoom-controls{top:126px;right:16px}}
+
+@media(max-width:600px) and (min-height:501px){.live .health{width:176px}.live .pause{left:201px;top:78px;width:27px;height:27px}.live .game-options{top:145px;right:16px}.zoom-controls{top:181px;right:16px}.live .boss-health{top:145px;left:20px;transform:none;width:190px;font-size:12px;padding:7px}.live .boss-health b{font-size:11px}.live:has(.boss-health:not([hidden])) .encounter-banner{top:220px}}
+
+@media(max-width:700px) and (max-height:500px){.live .overdrive-button{width:115px;font-size:14px}}

@@ -1,0 +1,10 @@
+import {session,load} from './browser.mjs';
+import {feelFixture} from './feel-fixture.mjs';
+import {writeFile,mkdir} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+// Extra coverage for camera preference and the expensive quarter-HP scar/dust state.
+const host=await session({headless:false,gpu:true}),reports=[];
+try{for(const viewport of [{width:1280,height:720},{width:844,height:390}])for(const quality of ['standard','low'])for(const zoom of ['close','wide']){
+ const c=await host.browser.newContext({viewport,deviceScaleFactor:2});await c.addInitScript(p=>localStorage.setItem('redline.preferences.v1',JSON.stringify({version:1,reducedMotion:false,reducedFlashes:false,...p})),{quality,zoom});const p=await c.newPage();await p.route('**/favicon.ico',r=>r.fulfill({status:204}));await load(p,host.url,'perf-worst');const commands=feelFixture(3,{retained:true,all:true}).commands;const tuning={...commands[0].tuning,...commands.at(-2).tuning};commands.push(...Array.from({length:260},()=>({x:1,z:1,dash:false})));commands.push({x:0,z:0,dash:false,tuning:{...tuning,heroHP:40000}});await p.evaluate(commands=>window.__REDLINE__.measure(30,commands),commands);const frames=await p.evaluate(commands=>window.__REDLINE__.measure(180,commands),commands);frames.sort((a,b)=>a-b);const metadata=await p.evaluate(()=>window.__REDLINE__.metadata()),gl=await p.locator('canvas').evaluate(c=>{const g=c.getContext('webgl2'),e=g.getExtension('WEBGL_debug_renderer_info');return e?g.getParameter(e.UNMASKED_RENDERER_WEBGL):'';});assert.ok(/Apple M4/.test(gl));const report={viewport,quality,zoom,gpu:gl,calls:metadata.benchmarkPeak.calls,triangles:metadata.benchmarkPeak.triangles,p50:frames[Math.floor(frames.length*.5)],p95:frames[Math.floor(frames.length*.95)],wear:metadata.heroAppearance.wear};reports.push(report);console.log(report);assert.equal(report.wear,3);assert.ok(report.calls<=(quality==='low'?70:120));assert.ok(report.triangles<=(quality==='low'?25000:60000));await c.close();}
+ await mkdir('shots/depth-a',{recursive:true});await writeFile('shots/depth-a/perf-zoom-wear.json',JSON.stringify(reports,null,2));
+}finally{await host.close();}

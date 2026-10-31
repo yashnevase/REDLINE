@@ -1,5 +1,5 @@
 import type {Hero,Command,FightEvent} from './schema.ts';
-import type {CombatTuning} from '../content/combat.ts';
+import {combatDefaults,type CombatTuning} from '../content/combat.ts';
 import {collide,direction} from './geometry.ts';
 export type Emit=(kind:FightEvent['kind'],x:number,z:number,amount?:number,radius?:number)=>void;
 // Shared movement/cooldown owner for both the regression trial and the encounter.
@@ -33,8 +33,21 @@ export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit){
  }
  if(h.buffer>0)h.buffer--;
  if(h.dash.kind==='active'){h.vx=h.dash.dx*h.dash.distance*60/h.dash.duration;h.vz=h.dash.dz*h.dash.distance*60/h.dash.duration;}
- else{const boost=h.overdrive>0?1+t.overdriveMoveBonus:1,targetX=dir.x*t.moveSpeed*strength*boost,targetZ=dir.z*t.moveSpeed*strength*boost,amount=(length>.05?t.acceleration:t.braking)/60;h.vx+=Math.max(-amount,Math.min(amount,targetX-h.vx));h.vz+=Math.max(-amount,Math.min(amount,targetZ-h.vz));}
- const steps=Math.max(1,Math.ceil(Math.sqrt(h.vx*h.vx+h.vz*h.vz)/60/(t.heroRadius*.5)));for(let i=0;i<steps;i++){const p=collide(h.x+h.vx/60/steps,h.z+h.vz/60/steps,t.heroRadius,t);h.x=p.x;h.z=p.z;}
+ else if(length<=.05){h.vx=h.vz=0;h.momentum={kind:'idle'};}
+ else{
+  const previous=h.momentum,straight=previous.kind==='rolling'&&previous.dx*dir.x+previous.dz*dir.z>=t.straightDot;
+  const rollingTicks=straight?Math.min(t.momentumTicks,previous.ticks+1):0;h.momentum={kind:'rolling',ticks:rollingTicks,dx:dir.x,dz:dir.z};
+  const cruise=t.moveSpeed+(Math.max(t.moveSpeed,t.momentumSpeed*t.moveSpeed/combatDefaults.moveSpeed)-t.moveSpeed)*rollingTicks/t.momentumTicks;
+  const boost=h.overdrive>0?1+t.overdriveMoveBonus:1,targetX=dir.x*cruise*strength*boost,targetZ=dir.z*cruise*strength*boost;
+  const dx=targetX-h.vx,dz=targetZ-h.vz,delta=Math.sqrt(dx*dx+dz*dz),grip=previous.kind==='rolling'&&!straight?t.turnGrip:1,amount=t.acceleration/60*grip;
+  if(delta<=amount){h.vx=targetX;h.vz=targetZ;}else{h.vx+=dx/delta*amount;h.vz+=dz/delta*amount;}
+ }
+ if(h.dash.kind==='active')h.momentum={kind:'idle'};
+ const steps=Math.max(1,Math.ceil(Math.sqrt(h.vx*h.vx+h.vz*h.vz)/60/(t.heroRadius*.5)));
+ for(let i=0;i<steps;i++){
+  const x=h.x+h.vx/60/steps,z=h.z+h.vz/60/steps,p=collide(x,z,t.heroRadius,t),nx=p.x-x,nz=p.z-z;h.x=p.x;h.z=p.z;
+  if(nx*nx+nz*nz>1e-10&&h.dash.kind==='active'&&h.dash.variant!=='tap'){bounceDash(h,nx,nz);h.vx=h.dash.dx*h.dash.distance*60/h.dash.duration;h.vz=h.dash.dz*h.dash.distance*60/h.dash.duration;}
+ }
  // Ease the hero inward in the outer band, with collision retaining the absolute play-zone bound.
  for(const axis of ['x','z'] as const){const limit=(axis==='x'?t.arenaHalfWidth:t.laneHalfWidth)-t.heroRadius-t.leashBand,excess=Math.max(0,Math.abs(h[axis])-limit);h[axis]-=(h[axis]<0?-1:1)*excess*Math.min(1,t.leashStrength/60);}
  let ability:Command['ability'];
@@ -56,3 +69,6 @@ export function endDash(h:Hero){if(h.dash.kind==='active'){h.dash.remaining--;h.
 
 export function bufferDash(h:Hero,command:Command,t:CombatTuning){if(command.dash)h.buffer=t.inputBufferTicks;if(command.dashInput==='press')h.dashReleaseSuppressed=false;
  if(command.dashInput==='press'&&h.dash.kind==='idle')h.dash={kind:'charging',ticks:0};if(command.dashInput==='release')h.dashReleaseBuffer=true;if(command.dashInput==='cancel'&&h.dash.kind==='charging')h.dash={kind:'idle'};}
+
+// Reflect only incoming motion; the saved dash retains its duration/protection/hit set.
+export function bounceDash(h:Hero,nx:number,nz:number){if(h.dash.kind!=='active'||h.dash.variant==='tap')return;const n=direction(nx,nz),dot=h.dash.dx*n.x+h.dash.dz*n.z;if(dot<0){h.dash.dx-=2*dot*n.x;h.dash.dz-=2*dot*n.z;}}

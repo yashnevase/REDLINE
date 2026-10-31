@@ -11,6 +11,7 @@ import {upgrades,upgradedTuning,upgradeDescription} from '../content/upgrades.ts
 import { makeScene, type SceneName, type Tuning } from '../presentation/scene.ts';
 import { defaults, scenes } from '../content/scene.mjs';
 import {createSimulation} from '../sim/runtime.ts';
+import {makeZoomControls} from '../ui/zoom-controls.ts';
 import {makeInput} from '../input/devices.ts';
 import {combatDefaults,tuningSchema,type CombatTuning} from '../content/combat.ts';
 import {idleCommand,type Command} from '../sim/schema.ts';
@@ -87,6 +88,7 @@ function restart(){if(!playing)return;sim=makeGame();snapshot=sim.view();cancelC
 function togglePause(){if(!playing||options.isOpen())return;paused=!paused;clearInput();accumulator=0;drawHUD();}
 function step(command:Command){if(!sim)return;if(cancelChargeOnResume){command={...command,dashInput:'cancel'};cancelChargeOnResume=false;}const wasBoss=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss',oldBossStage=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss'?bossStage(snapshot.phase.boss.hp,gameTuning):0;const intent=pendingTuning?{...command,tuning:pendingTuning}:command;pendingTuning=undefined;if(intent.tuning){const parsed=tuningSchema.safeParse(intent.tuning);if(parsed.success)gameTuning=parsed.data;}snapshot=sim.step(intent);if(command.ability)cooldownPeek[command.ability]=snapshot.tick+30;if(oldBossStage&&'phase' in snapshot&&snapshot.phase.kind==='boss'&&bossStage(snapshot.phase.boss.hp,gameTuning)>oldBossStage&&!preferences.reducedMotion)requestSlow(tuning.bossSlowSeconds,tuning.bossSlowScale);if(snapshot.events.some(e=>e.kind==='overdrive'))requestSlow(tuning.overdriveEntrySeconds,tuning.overdriveEntryScale);if(snapshot.events.some(e=>e.kind==='defeat')&&snapshot.events.some(e=>e.kind==='bonk'&&e.amount>=14||['pulse','blade','stomp'].includes(e.kind)))requestSlow(tuning.killSlowSeconds,tuning.killSlowScale);if(wasBoss&&'phase' in snapshot&&snapshot.phase.kind==='complete'&&snapshot.phase.reward==='blade'){profile=awardBlade(profile);saveAvailable=saveProfile(profile);}recording?.push(intent);if(recording&&recording.length>36000)recording.shift();applySnapshot(1);tick=snapshot.tick;}
 const options=makePreferences(app,preferences,()=>{if(playing){paused=true;clearInput();accumulator=0;drawHUD();}},next=>{preferences=next;app.dataset.reducedMotion=String(next.reducedMotion);app.dataset.reducedFlashes=String(next.reducedFlashes);if(!playing&&!params.has('capture'))frozen=next.reducedMotion;view.setPreferences(next);return savePreferences(next);});
+if(playing)makeZoomControls(app,app.querySelector('canvas')!,()=>preferences.zoom,zoom=>{preferences={...preferences,zoom};options.setZoom(zoom);view.setPreferences(preferences);savePreferences(preferences);},()=>!options.isOpen());
 if(playing){
  const banner=makeEncounterBanner(app);
  app.classList.add('live');app.querySelector('.health-label span')!.textContent='INTEGRITY';

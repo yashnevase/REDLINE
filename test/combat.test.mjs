@@ -18,7 +18,7 @@ test('movement is normalized and collisions stop both dash and walk at walls and
  assert.ok(s.hero.x<=tuning.arenaHalfWidth-tuning.heroRadius);
  for(const o of obstacles){const inside=collide(o.x,o.z,tuning.heroRadius,tuning);assert.ok(Math.abs(inside.x-o.x)>=o.hx+tuning.heroRadius-1e-9||Math.abs(inside.z-o.z)>=o.hz+tuning.heroRadius-1e-9);}
  let diagonal=quiet(),straight=quiet();for(let i=0;i<60;i++){diagonal=stepFight(diagonal,{x:1,z:1,dash:false},tuning);straight=stepFight(straight,{x:1,z:0,dash:false},tuning);}
- assert.ok(Math.sqrt(diagonal.hero.vx**2+diagonal.hero.vz**2)<=tuning.moveSpeed+1e-9);assert.ok(straight.hero.vx<=tuning.moveSpeed);
+ assert.ok(Math.sqrt(diagonal.hero.vx**2+diagonal.hero.vz**2)<=tuning.momentumSpeed+1e-9);assert.ok(straight.hero.vx<=tuning.momentumSpeed);
 });
 test('i-frames protect the complete dash, and one enemy attack can damage only once',()=>{
  let s=quiet();s.enemy.x=s.hero.x;s.enemy.z=s.hero.z;s.enemy.behavior={kind:'lunge',remaining:30,dx:0,dz:0,hasHit:false};s.hero.bonkCooldown=100;

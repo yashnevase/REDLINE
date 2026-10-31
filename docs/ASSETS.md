@@ -57,3 +57,6 @@ Bundled unmodified **Barlow Condensed Bold Italic**, Copyright 2017 The Barlow P
 
 ## 2026-10-31 FEEL_SPRINT_2
 Original instanced radial speed lines, six-sample motion ribbon, velocity-stretched gradient spark quads, impact stars, team floor pools, palette batching and floor scuffs/sweep authored in the existing Three.js code. Existing original meshes, textures and bundled OFL Barlow font are reused. No reference images/code are embedded; no new download, package, account or paid service. Study-only reference comparisons remain ignored/local. Review clips and screenshots are captures of our game.
+
+## 2026-10-31 DEPTH_SPRINT Part A
+Original rigid Core matcap shader extension: rotating panel seams/flush bolt paint, scratch/dent/crack masks and heat-lit damage; original bounded anticipation/impact response. Dash scrape particles and scar smoke share our existing instanced motion pool with an original radial canvas mask. Cosmetic randomness uses a separate seeded presentation stream, reset on restart/rewind; simulation RNG is untouched. Spirit Call player/animation/config/character/actor sources were read only for movement principles, recorded in SPIRIT_CALL_MOVEMENT_NOTES.md. No reference code, shaders, textures, characters or names copied. No external download, install, dependency or service added.

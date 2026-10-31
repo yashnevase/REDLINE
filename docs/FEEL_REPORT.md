@@ -1,3 +1,71 @@
+# DEPTH_SPRINT · Part A report · 2026-10-31
+
+Session1 implements A1–A6. The sprint explicitly requests three sessions: A, then B, then C/D with E. **Parts B–E remain approved work for those subsequent sessions**, tracked in DEPTH_PROGRESS.md. This checkpoint does not claim the new combat roster, perfect dodge, score progression or living world are implemented. The existing four-wave→Rex loop remains playable. The brief records the owner-directed scope amendments.
+
+## Result
+
+The Core stays a rigid ball in ordinary movement and Overdrive. Painted panel seams/flush bolt detail rotate with travelled distance/radius while face/crown stay readable; matcap lighting remains fixed. Only dash anticipation and a brief impact change shape. Every active dash hides eyes/crown; Rush/Charge are slightly larger spherical cannonballs, scrape sparks/dust and ricochet off obstacles/enemies. Ricochet retains the original dash duration, protection window and per-target hit set.
+
+Movement now reaches base8.5u/s in~80ms, builds to10.5u/s after1s of straight input, drifts briefly through sharp turns and stops immediately on release with a skid. Analog strength remains normalized. Hero momentum is saved deterministic state; legacy snapshots decode to idle. Render-only rolling, spring/impact timers and cosmetic seeded particles reset on restart/rewind and never write sim/RNG state.
+
+75/50/25% integrity drives scratches, dented LOD-shell vertices/dark patches, sparks, cracked/Heat-lit plate, smoke and hurt eyes. Wounds follow HP thresholds; a new run/full repair removes them. Existing Reinforced Shell continues its stated20-HP restoration, clearing only thresholds that are healed. Damage captures use actual incoming attacks with controlled25-damage tuning; attackers are then made harmless to show settled wear after the white flash fades. This is visual evidence, not balance evidence.
+
+Saved Close/Default/Wide camera distance works through C/V, mouse wheel, two-finger canvas pinch, +/− buttons and Options. User zoom eases independently of simulation pacing and preserves pixel-sized damage numbers. Attack-range radii remain world-space honest; line strokes remain pixel-sized. Close follows nearer; portrait gets another1u of follow margin so fast movement plus impact zoom cannot clip the Core. Portrait control/HP/wave plates are separated; the640×360 Overdrive pill is narrower after a caught overlap.
+
+## Tunables
+
+All new primary defaults are exposed in the existing development workbench; production omits it. No new dependency/download or reference code/asset copying. The movement study and source paths are in SPIRIT_CALL_MOVEMENT_NOTES.md; original asset/shader provenance in ASSETS.md.
+
+| Item | Current value |
+|---|---|
+| Base / straight rolling speed | 8.5 /10.5 u/s (move upgrades scale both) |
+| Acceleration | vector-limited106.25u/s²; base ramp~80ms /5ticks |
+| Momentum / straight direction dot / sharp-turn grip | 60ticks /.985 /.65 |
+| Release stop | immediate zero velocity; presentation skid |
+| Normal locomotion stretch | none; round body, eyes/marks lean |
+| Anticipation | critical damping response.035s; max±6%, no overshoot |
+| Impact exception | 0.92Y /1.08XZ,80ms; reduced-motion bypass |
+| Dash display size tap /Rush /Charge | 1 /1.04 /1.06, uniform spherical scale |
+| Roll rotation | travelled distance/radius; dash spin×1.25 |
+| Rush/Charge ricochet | reflection from contact normal; .7u enemy knockback; hit/protection timers retained |
+| HP wear thresholds / dent displacement | 75/50/25%; max.045 sphere-local units |
+| Motion particles | shared32-instance dust/scrape/smoke pass, Low20; presentation-only seeded RNG |
+| Camera distance presets / response | .85 /1 /1.3; .16s smooth preference easing |
+| Follow clamp | ±13u landscapeDefault/Wide, ±14.2Close; portrait±14Default/Wide, ±15.2Close |
+| Existing caps/warnings | ≤12live /≤3attacking; ordinary24/30/36/48ticks, boss≥48 unchanged |
+| Low budget tradeoff | omits ambient sparkle pass and outer edge-cell trim frames; neon cells, scar smoke and gameplay retained |
+
+## Evidence and checks
+
+- `pnpm check`:76tests, both Ritmo audits and content/source/TypeScript/lint validation pass. New tests cover acceleration/momentum/analog/drift/instant stop, ricochet plus invariant hit/protection state, legacy/round-trip snapshots, rigid response/wear and preference migration.
+- `pnpm build`: passes, production reference/debug exclusion passes. Existing~1MB entry chunk warning remains.
+- `pnpm shots`:14scenes×desktop/compact, comparison frames and motion captures. Screenshots and sampled motion were viewed, including a local Spirit Call comparison; no reference media shipped. Human feel/reference parity is not self-approved.
+- `review/depth-a/movement-{desktop,compact,portrait}.mp4`:18s real keyboard movement with tap/Rush/Charge and C/V zoom, normal HP/stats. Replay verification is exact for each. Independent camera fixtures then check12corners (4×3presets), wheel/pinch/buttons and preference reload per layout. Portrait additionally samples every movement frame, including transient impact zoom:975frames, conservative Core bounds remain inside390×844. HUD fixes and final portrait motion were recaptured/viewed.
+- `review/depth-a/inputs-four-sizes.json`: browser keyboard, simultaneous joystick+touch, emulated controller, replay, Core/HUD corner bounds pass at1280×720,844×390,640×360,390×844. Saved options/accessibility/pause/focus, full completion-control and production startup/no-debug/touch/loss-retry harnesses pass. Physical-device claims remain separate; no phone/deploy gate was reintroduced.
+- Faster movement exposed nearest-target switching jitter in the old bot. Two-unit target hysteresis now holds a chosen target until another is clearly closer; no HP/damage cheats. Default bot reaches Rex at58HP with wave1–3 active-clock bonk gaps1.17/1.70/1.13s (wave4:1.67s). PartB/C/D fairness will be rerun as those mechanics land.
+- Current source packet `review/feel-source.zip` contains exactly34 files from presentation/content/ui, extracted bytes checked. Full deterministic movement code is in the repository's sim folder, outside that intentionally three-folder packet. Prior checkpoints remain in Git tags.
+
+## Hardware budget
+
+Headed Chromium with verified ANGLE Metal Apple M4, requestedDPR2; actual Standard1.5 /Low1. Warm30frames, sample180rAF intervals per case. Default fixtures: Rex+six adds, twelve mixed wave4 enemies and a corner. Default peaks: **Standard114calls /47,224tri; Low69 /21,994**. Added Close/Wide corner fixtures at25%HP exercise scars/smoke plus wider scenery: **Standard118 /50,254; Low70 /22,804**, within120/60k and70/25k. Highest measured p95~17.6ms, p50~16.7ms (about60Hz, not a guarantee on every device). Low remains at its call cap. High/detailed diagnostic Core studio are outside gameplay budgets.
+
+| Viewport | Tier | Camera | Peak calls | Peak triangles | p95 ms |
+|---|---|---|---:|---:|---:|
+| 1280×720 | standard | close | 111 | 46,822 | 17.6 |
+| 1280×720 | standard | wide | 118 | 50,134 | 17.6 |
+| 1280×720 | low | close | 68 | 21,174 | 17.6 |
+| 1280×720 | low | wide | 70 | 22,744 | 17.5 |
+| 844×390 | standard | close | 111 | 46,918 | 17.5 |
+| 844×390 | standard | wide | 117 | 50,254 | 17.5 |
+| 844×390 | low | close | 68 | 21,232 | 17.6 |
+| 844×390 | low | wide | 70 | 22,804 | 17.6 |
+
+Stress fixtures retain enemy/hero HP to keep the named load alive; they are budget evidence, not human balance. The added portrait safety offset only changes portrait framing; landscape budgets exercise the same final rendering path. No deployment was performed. Final owner rolling/visual/fun acceptance stays with the owner.
+
+---
+
+# Historical FEEL_SPRINT_2 report below
+
 # FEEL_SPRINT_2 report · 2026-10-31
 
 Sections 1–6 are implemented and verified for owner review. Owner explicitly replaced section 7: ignore the physical-phone gate, support responsive keyboard/touch/controller input and do not deploy. That gate is out of this sprint's scope. Measurements below are from the Mac; they do not certify every physical device. Final art, punch and fun acceptance remain with the owner.

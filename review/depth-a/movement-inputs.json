@@ -1,0 +1,618 @@
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "name": "desktop"
+    },
+    "zooms": [
+      {
+        "rollRadians": 42.24034859171,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "default",
+        "viewScale": 1
+      },
+      {
+        "rollRadians": 114.94327493566945,
+        "wear": 1,
+        "bodyScale": [
+          1.0688000000022324,
+          0.9311999999977677,
+          1.0688000000022324
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "wide",
+        "viewScale": 1.299999999999998
+      },
+      {
+        "rollRadians": 169.4348144710414,
+        "wear": 1,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "close",
+        "viewScale": 0.8500322862676398
+      }
+    ],
+    "dashes": [
+      {
+        "variant": "rush",
+        "rollRadians": 18.20861447123463,
+        "wear": 0,
+        "bodyScale": [
+          1.04,
+          1.04,
+          1.04
+        ],
+        "faceVisible": false,
+        "crownVisible": false,
+        "zoom": "default",
+        "viewScale": 1
+      },
+      {
+        "variant": "charge",
+        "rollRadians": 69.22573069452571,
+        "wear": 1,
+        "bodyScale": [
+          1.06,
+          1.06,
+          1.06
+        ],
+        "faceVisible": false,
+        "crownVisible": false,
+        "zoom": "wide",
+        "viewScale": 1.2999999454745248
+      }
+    ],
+    "corners": [
+      {
+        "preset": "close",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 638.6993297540807,
+          "y": 492.1622488507039,
+          "radius": 59.29726890756299
+        }
+      },
+      {
+        "preset": "close",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 990.7078212667559,
+          "y": 316.8268256354602,
+          "radius": 59.622899159663824
+        }
+      },
+      {
+        "preset": "close",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 639.9999946528445,
+          "y": 143.43750362984343,
+          "radius": 58.61344537815123
+        }
+      },
+      {
+        "preset": "close",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 289.26224655122166,
+          "y": 316.7966758049735,
+          "radius": 59.13445378151257
+        }
+      },
+      {
+        "preset": "default",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 638.8943932233722,
+          "y": 472.34167008658085,
+          "radius": 50.40436495792458
+        }
+      },
+      {
+        "preset": "default",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 938.1018045211353,
+          "y": 323.3027825313718,
+          "radius": 50.67949088240724
+        }
+      },
+      {
+        "preset": "default",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 639.9999953711374,
+          "y": 175.9218766055164,
+          "radius": 49.821428992200545
+        }
+      },
+      {
+        "preset": "default",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 344.355009063883,
+          "y": 322.9922242294652,
+          "radius": 50.12589286380411
+        }
+      },
+      {
+        "preset": "wide",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 639.1495177100653,
+          "y": 446.4182428739272,
+          "radius": 38.77329446694699
+        }
+      },
+      {
+        "preset": "wide",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 871.4515958452009,
+          "y": 331.2554126133766,
+          "radius": 38.87777963858947
+        }
+      },
+      {
+        "preset": "wide",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 639.9999965127338,
+          "y": 218.4014428412683,
+          "radius": 38.324176319957026
+        }
+      },
+      {
+        "preset": "wide",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 410.671468851578,
+          "y": 331.75167263588736,
+          "radius": 38.66483517280954
+        }
+      }
+    ],
+    "errors": [],
+    "replay": true,
+    "preferenceReload": true
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390,
+      "name": "compact"
+    },
+    "zooms": [
+      {
+        "rollRadians": 42.07225200613157,
+        "wear": 0,
+        "bodyScale": [
+          1.0414333333348234,
+          0.9585666666651768,
+          1.0414333333348234
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "default",
+        "viewScale": 1
+      },
+      {
+        "rollRadians": 114.24703492678542,
+        "wear": 1,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "wide",
+        "viewScale": 1.2999999999999863
+      },
+      {
+        "rollRadians": 166.828513356446,
+        "wear": 1,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "close",
+        "viewScale": 0.8500322862673833
+      }
+    ],
+    "dashes": [
+      {
+        "variant": "rush",
+        "rollRadians": 17.61157370065584,
+        "wear": 0,
+        "bodyScale": [
+          1.04,
+          1.04,
+          1.04
+        ],
+        "faceVisible": false,
+        "crownVisible": false,
+        "zoom": "default",
+        "viewScale": 1
+      },
+      {
+        "variant": "charge",
+        "rollRadians": 68.99756022496261,
+        "wear": 1,
+        "bodyScale": [
+          1.06,
+          1.06,
+          1.06
+        ],
+        "faceVisible": false,
+        "crownVisible": false,
+        "zoom": "wide",
+        "viewScale": 1.2999999394758153
+      }
+    ],
+    "corners": [
+      {
+        "preset": "close",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 422.7793901637623,
+          "y": 267.3560647705108,
+          "radius": 32.613547237076624
+        }
+      },
+      {
+        "preset": "close",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 617.2278144733356,
+          "y": 170.7541400700407,
+          "radius": 32.793137254901936
+        }
+      },
+      {
+        "preset": "close",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 421.9999968399739,
+          "y": 75.5625021902872,
+          "radius": 32.32620320855613
+        }
+      },
+      {
+        "preset": "close",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 228.5628149167755,
+          "y": 171.17271210001542,
+          "radius": 32.613547237076624
+        }
+      },
+      {
+        "preset": "default",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 421.39024117886,
+          "y": 256.9581241306659,
+          "radius": 27.798766916501364
+        }
+      },
+      {
+        "preset": "default",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 586.4076633009422,
+          "y": 174.76092837359556,
+          "radius": 27.950507333031698
+        }
+      },
+      {
+        "preset": "default",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 421.99999747663276,
+          "y": 93.47812584995162,
+          "radius": 27.477272961813647
+        }
+      },
+      {
+        "preset": "default",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 257.5783927290885,
+          "y": 174.74680527718067,
+          "radius": 27.72151515532553
+        }
+      },
+      {
+        "preset": "wide",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 421.53094642462645,
+          "y": 242.6609427836618,
+          "radius": 21.384047012395595
+        }
+      },
+      {
+        "preset": "wide",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 548.4674698915892,
+          "y": 179.43147886080712,
+          "radius": 21.50039647558554
+        }
+      },
+      {
+        "preset": "wide",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 421.9999980253797,
+          "y": 116.90625030934542,
+          "radius": 21.13636391812169
+        }
+      },
+      {
+        "preset": "wide",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 295.5218404951527,
+          "y": 179.4206194466406,
+          "radius": 21.32424242885436
+        }
+      }
+    ],
+    "errors": [],
+    "replay": true,
+    "preferenceReload": true
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "name": "portrait"
+    },
+    "zooms": [
+      {
+        "rollRadians": 42.06952472615274,
+        "wear": 0,
+        "bodyScale": [
+          1.0587333333355686,
+          0.9412666666644315,
+          1.0587333333355686
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "default",
+        "viewScale": 1
+      },
+      {
+        "rollRadians": 114.70465130297042,
+        "wear": 1,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "wide",
+        "viewScale": 1.299999999999988
+      },
+      {
+        "rollRadians": 167.4943603200342,
+        "wear": 1,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "close",
+        "viewScale": 0.8500295628046586
+      }
+    ],
+    "dashes": [
+      {
+        "variant": "rush",
+        "rollRadians": 17.591375447937168,
+        "wear": 0,
+        "bodyScale": [
+          1.04,
+          1.04,
+          1.04
+        ],
+        "faceVisible": false,
+        "crownVisible": false,
+        "zoom": "default",
+        "viewScale": 1
+      },
+      {
+        "variant": "charge",
+        "rollRadians": 69.1690693316041,
+        "wear": 1,
+        "bodyScale": [
+          1.06,
+          1.06,
+          1.06
+        ],
+        "faceVisible": false,
+        "crownVisible": false,
+        "zoom": "wide",
+        "viewScale": 1.299999945542639
+      }
+    ],
+    "corners": [
+      {
+        "preset": "close",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 195.77939012658555,
+          "y": 428.8918416383074,
+          "radius": 32.61354723707662
+        }
+      },
+      {
+        "preset": "close",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 258.57839665524756,
+          "y": 397.75414007004076,
+          "radius": 32.79313725490193
+        }
+      },
+      {
+        "preset": "close",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 194.99999687456685,
+          "y": 367.44994796240286,
+          "radius": 32.32620320855613
+        }
+      },
+      {
+        "preset": "close",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 132.49126119699795,
+          "y": 398.17271209428816,
+          "radius": 32.61354723707662
+        }
+      },
+      {
+        "preset": "default",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 194.3902411403226,
+          "y": 458.58786132370926,
+          "radius": 27.79877097679476
+        }
+      },
+      {
+        "preset": "default",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 308.4035935166948,
+          "y": 401.7609284743306,
+          "radius": 27.950507193914856
+        }
+      },
+      {
+        "preset": "default",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 194.99999745096258,
+          "y": 345.54827730045366,
+          "radius": 27.47727295890013
+        }
+      },
+      {
+        "preset": "default",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 82.39402012823963,
+          "y": 401.58965093375195,
+          "radius": 27.645189397583444
+        }
+      },
+      {
+        "preset": "wide",
+        "x": 1,
+        "z": 1,
+        "core": {
+          "x": 194.53094715101673,
+          "y": 450.1501926047924,
+          "radius": 21.38402070412081
+        }
+      },
+      {
+        "preset": "wide",
+        "x": 1,
+        "z": -1,
+        "core": {
+          "x": 282.2337206083494,
+          "y": 406.4314796443068,
+          "radius": 21.500395393558932
+        }
+      },
+      {
+        "preset": "wide",
+        "x": -1,
+        "z": -1,
+        "core": {
+          "x": 194.99999796183292,
+          "y": 363.19098107488855,
+          "radius": 21.136363898089787
+        }
+      },
+      {
+        "preset": "wide",
+        "x": -1,
+        "z": 1,
+        "core": {
+          "x": 107.4341409231092,
+          "y": 406.4206194487871,
+          "radius": 21.32424242838429
+        }
+      }
+    ],
+    "errors": [],
+    "movingBounds": {
+      "frames": 975,
+      "minLeft": 103.44580718450548,
+      "maxRight": 340.0672381073547,
+      "minTop": 343.55223409170225,
+      "maxBottom": 448.50188051722705
+    },
+    "replay": true,
+    "preferenceReload": true
+  }
+]

@@ -1,7 +1,20 @@
 # STATE.md — resume here
 
 Session date: 2026-10-31 (Asia/Kolkata).
-Phase: **FEEL_SPRINT_2 sections1–6 implemented and verified; ready for owner review. Physical-phone/deploy gate removed by latest owner instruction. No deployment or approval question pending.**
+Phase: **DEPTH_SPRINT session1 / Part A implemented; final evidence and checkpoint recorded below. Next approved session: Part B.**
+
+## DEPTH_SPRINT Part A — current continuation point
+
+- Owner requested following the new docs/DEPTH_SPRINT.md. Its sequence is explicitly three Codex sessions: A, then B, then C/D with E. All specified new scope is approved (Whirler, perfect dodge/counter, boost vents and score-level progression); REDLINE_BRIEF records this amendment. No design approval question is pending. Do not treat B–E as implemented or resume from an old blocked/phone gate.
+- A1–A6: rigid sphere during ordinary locomotion/Overdrive; critically damped ≤6% anticipation and the explicit80ms0.92/1.08 impact exception. Surface panel/seam/flush bolt paint rotates by distance/radius while face/crown remain readable; no physical belt. Rush/Charge uniform sizes1.04/1.06; all active dashes hide face/crown, use tight spinning metal plus scrape/dust/trails. Rush/Charge reflect from obstacles/enemies, knock enemies.7u, retain protection duration/hit set. Tap distance/protection unchanged.
+- Movement8.5u/s, vector acceleration106.25u/s² (~80ms base ramp), straight momentum10.5u/s over60ticks, reduced grip on sharp turns, immediate release-stop/skid. New discriminated hero.momentum state schema defaults legacy snapshots to idle, round-trip/replay tested. Bot now retains its chosen target within2u hysteresis rather than oscillating with the faster movement; no stat cheats. Bot reaches Rex58HP, gaps waves1–3:1.17/1.70/1.13s.
+- HP thresholds75/50/25%: original scratches, LOD shell shader dents/dark patches, sparks, cracks/Heat glow, smoke and hurt eyes. Shared motion particle pool32 (Low20), separate seeded presentation RNG reset on restart/rewind; no sim RNG/render writes. New run/full HP repair removes all wear. Existing Reinforced Shell retains stated+20 HP heal; wear clears according to resulting thresholds.
+- Saved Close.85 /Default1 /Wide1.3 camera distance. C/V, wheel, canvas pinch, +/− and Options; smooth host-only easing, no input/sim mutation. Legacy preferences default camera. Numbers remain pixel-sized; telegraph radii remain honest world ranges, line strokes pixel-sized. Close camera follows nearer; portrait has an extra follow margin to keep impact zoom/dashes inside frame. Portrait HP/pause/wave/options/zoom separation and640×360 R pill corrected from viewed captures.
+- Checkpoint evidence: docs/SPIRIT_CALL_MOVEMENT_NOTES.md (read reference control, animation, actor/config/characters; no copied code), docs/FEEL_REPORT.md, docs/DEPTH_PROGRESS.md; review/depth-a/18s desktop/compact/portrait clips, viewed boards, damage details, movement/input/performance JSON. New original shader/particle provenance in ASSETS. No downloads/dependencies/deployment.
+- Verification:76tests and both Ritmo audits, build/debug-reference exclusion;14scenes×desktop/compact screenshots. Keyboard/simultaneous touch/emulated controller/HUD/corner/replay at1280×720,844×390,640×360,390×844; Close/Default/Wide corners, C/V/wheel/pinch/buttons/local preference reload; options/accessibility and completion-controls regressions. Production startup/no-debug/touch/loss-retry also pass. Headed M4 peaks including Wide/critical wear: Standard118calls/50,254tri, Low70/22,804; p95≤17.6ms. Final review metrics in FEEL_REPORT. Human rolling/feel/art acceptance remains with owner; browser inputs do not certify all physical hardware.
+- Git checkpoint: depth-sprint-a on main in owner's REDLINE repo, prior feel-sprint-2 retained. Production preview http://localhost:5199/ serves rebuilt dist. Next session starts Part B with deterministic angle/timing/perfect dodge/Whirler/ability/Blade/score work, then fairness bots. Part C/D/E approved for session3. Current four-wave→Rex loop remains until D replaces it.
+
+## Historical checkpoints below
 
 ## FEEL_SPRINT_2 — current continuation point
 

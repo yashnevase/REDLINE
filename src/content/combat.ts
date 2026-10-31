@@ -6,7 +6,7 @@ export const combatDefaults = Object.freeze({
  enemyCap:12, attackerCap:3, openingThreats:5, rallyRemaining:2, rallySpeedBonus:.4, sparseSpawnMaxTicks:72, spawnMinTicks:48, spawnMaxTicks:90, mediumHitstopTicks:3, heavyHitstopTicks:5, killHitstopTicks:4, throwerHP:24, throwerSpeed:4.6, throwerRadius:0.62, throwerNear:6, throwerFar:8, throwerWindupTicks:30, rivetSpeed:8, rivetDamage:12, rivetRadius:0.18, rivetLifeTicks:150, throwerRecoveryTicks:96, shieldsawHP:40, shieldsawSpeed:5.5, shieldsawRadius:0.85, shieldFrontDot:0.5, shieldDamageFactor:0.1, shieldWindupTicks:36, shieldChargeSpeed:10, shieldChargeTicks:60, shieldRecoveryTicks:42, grinderHP:80, grinderSpeed:3.2, grinderRadius:1, grinderWindupTicks:48, grinderSweepRadius:3, grinderDamage:20, grinderRecoveryTicks:48, heatPerThrower:9, heatPerShieldsaw:12, heatPerGrinder:18, spawnDropTicks:18, spawnRadius:14, spawnSeparation:2.2, leashBand:1.5, leashStrength:5,
  heatPerSawlet:8, heatThreshold:90, overdriveTicks:300, overdriveMoveBonus:.3, overdriveDamageBonus:.25, overdriveIframeIntervalTicks:30,
  pulseDamage:12, pulseRadius:2.5, pulseCooldownTicks:120, boostDistance:3, boostCooldownTicks:180, stompDamage:14, stompRadius:2, stompCooldownTicks:240, stompStunTicks:36,
- moveSpeed:6, acceleration:60, braking:70, heroRadius:.62, heroHP:100,
+ moveSpeed:8.5, acceleration:106.25, braking:1000, momentumSpeed:10.5, momentumTicks:60, straightDot:.985, turnGrip:.65, dashBounceKnockback:.7, heroRadius:.62, heroHP:100,
  dashSharedCooldownTicks:30, dashDoubleTapTicks:18, dashHoldTicks:15, dashChargeTicks:36, rushDistance:6.5, rushTicks:18, rushDamageFactor:1.5, chargeMaxDistance:9, chargeDashTicks:18, chargeCooldownTicks:60, bladeSpinTicks:42, bladeSpinRadius:2.5, bladePull:.35, boostDamage:14, boostConeDot:.35, boostRadius:3, boostHopTicks:24,
  dashDistance:4, dashTicks:12, dashCharges:2, rechargeTicks:72, inputBufferTicks:5,
  bonkDamage:8, bonkSpeedBonus:.5, bonkRange:1.65, bonkCooldownTicks:27,
@@ -15,6 +15,11 @@ export const combatDefaults = Object.freeze({
  knockback:.5, hitstopTicks:2, arenaHalfWidth:17, laneHalfWidth:17
 });
 export const tuningSchema=z.object({
+ momentumSpeed:z.number().finite().positive().default(combatDefaults.momentumSpeed),
+ momentumTicks:z.number().int().positive().default(combatDefaults.momentumTicks),
+ straightDot:z.number().finite().min(0).max(1).default(combatDefaults.straightDot),
+ turnGrip:z.number().finite().min(.1).max(1).default(combatDefaults.turnGrip),
+ dashBounceKnockback:z.number().finite().nonnegative().default(combatDefaults.dashBounceKnockback),
  rallyRemaining:z.number().finite().int().min(1).max(2).default(combatDefaults.rallyRemaining),
  rallySpeedBonus:z.number().finite().nonnegative().max(1).default(combatDefaults.rallySpeedBonus),
  sparseSpawnMaxTicks:z.number().finite().positive().int().default(combatDefaults.sparseSpawnMaxTicks),

@@ -19,8 +19,8 @@ export function shellPatch(parent: T.Object3D, points: number[][], material: T.M
 }
 export function makeCore(materials: Materials, matched=false, bladeMaterials?:BladeMaterials, highDetail=true) {
   const patch=(parent:T.Object3D,points:number[][],material:T.Material,lift=.008)=>shellPatch(parent,points,material,matched?Math.max(.02,lift):lift,matched?(highDetail?4:1):3);
-  const root = new T.Group(), body = new T.Group(), eyes = new T.Group(); root.add(body); body.add(eyes);eyes.name='core-eyes';
-  part(body, new T.SphereGeometry(1,highDetail?64:24,highDetail?40:16), materials.chrome);
+  const root = new T.Group(), body = new T.Group(), eyes = new T.Group(); root.add(body); body.add(eyes);const marks=new T.Group();body.add(marks);marks.name='core-marks';eyes.name='core-eyes';
+  const shell=part(body, new T.SphereGeometry(1,highDetail?64:24,highDetail?40:16), materials.chrome);
   const expressions:T.Group[]=[];
   if(!matched){
   patch(eyes,[[-.61,.27],[-.17,.16],[-.18,-.15],[-.42,-.17],[-.55,-.04]],materials.white);
@@ -42,14 +42,14 @@ export function makeCore(materials: Materials, matched=false, bladeMaterials?:Bl
   if(matched){
     crownMaterial.color.set('#a64159');crownMaterial.toneMapped=false;crownGlowMaterial=materials.white.clone();crownGlowMaterial.transparent=true;crownGlowMaterial.opacity=0;crownGlowMaterial.depthWrite=false;
     const glint=crownMaterial.clone();glint.color.set('#dc8b9a');glint.transparent=true;glint.opacity=.36;glint.depthWrite=false;
-    const paint=(points:number[][],material:T.Material,lift:number)=>shellPatch(body,points,material,lift,highDetail?5:1,true);
+    const paint=(points:number[][],material:T.Material,lift:number)=>shellPatch(marks,points,material,lift,highDetail?5:1,true);
     for(const x of [-.35,.25]){
       paint([[x-.008,.67],[x+.019,.936],[x+.086,.936],[x+.064,.67]],crownGlowMaterial,.003);
       paint([[x,.70],[x+.02,.915],[x+.045,.938],[x+.066,.932],[x+.08,.918],[x+.058,.702],[x+.04,.682],[x+.018,.683]],crownMaterial,.006);
       paint([[x+.018,.715],[x+.034,.912],[x+.047,.927],[x+.046,.714]],glint,.009);
     }
   }
-  else for (const x of [-.28,.12]) patch(body,[[x,.66],[x+.08,.91],[x+.18,.91],[x+.1,.65]],crownMaterial);
+  else for (const x of [-.28,.12]) patch(marks,[[x,.66],[x+.08,.91],[x+.18,.91],[x+.1,.65]],crownMaterial);
   if(matched){
     // A soft lower hull reflection, without an opaque face insert or dark drawn contour.
     const edge=materials.chrome.clone();edge.color.setRGB(1.20,1.13,1.40);edge.vertexColors=true;edge.transparent=true;edge.opacity=.75;edge.depthWrite=false;
@@ -83,7 +83,7 @@ export function makeCore(materials: Materials, matched=false, bladeMaterials?:Bl
     for(let i=0;i<12;i++){const a=i*Math.PI/6;const tooth=part(rotor,new T.ConeGeometry(.07,.17,3),materials.lightSteel,Math.sin(a)*.48,Math.cos(a)*.48,0);tooth.rotation.z=-a;}
     part(attachment,new T.SphereGeometry(.12,8,6),materials.red,0,0,.09);const link=part(attachment,new T.CylinderGeometry(.025,.025,.5,6),materials.glow,.36,0,0);link.rotation.z=Math.PI/2;
   }
-  return {root,body,eyes,crownMaterial,crownGlowMaterial,attachment,rotor,expressions};
+  return {root,body,shell,marks,eyes,crownMaterial,crownGlowMaterial,attachment,rotor,expressions};
 }
 export function makeSawlet(m: Materials) {
   const root=new T.Group(),body=new T.Group(),blade=new T.Group();root.add(body);body.position.y=.67;body.add(blade);

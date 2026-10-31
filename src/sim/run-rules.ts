@@ -4,7 +4,7 @@ import type {Command} from './schema.ts';
 import type {CombatTuning} from '../content/combat.ts';
 import {waves,enemyStats} from '../content/encounter.ts';
 import {upgradedTuning,upgradeChoices,upgrades} from '../content/upgrades.ts';
-import {advanceHero,endDash,bufferDash} from './hero.ts';
+import {advanceHero,endDash,bufferDash,bounceDash} from './hero.ts';
 import {collide,direction} from './geometry.ts';
 const distance=(a:{x:number;z:number},b:{x:number;z:number})=>Math.sqrt((a.x-b.x)**2+(a.z-b.z)**2);
 export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunState {
@@ -53,8 +53,8 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  if(h.dash.kind==='active'&&h.dash.variant!=='tap'){
   const dash=h.dash,near=(x:number,z:number,r:number)=>{const vx=h.x-h.prevX,vz=h.z-h.prevZ,den=vx*vx+vz*vz,u=den?Math.max(0,Math.min(1,((x-h.prevX)*vx+(z-h.prevZ)*vz)/den)):0;return Math.sqrt((x-h.prevX-u*vx)**2+(z-h.prevZ-u*vz)**2)<=r+t.heroRadius;};
   const amount=t.bonkDamage*(1+t.bonkSpeedBonus)*(dash.variant==='rush'?t.rushDamageFactor:1)*damageMultiplier;
-  for(const e of s.enemies)if(e.hp>0&&!dash.hits.includes(e.id)&&near(e.x,e.z,enemyStats(e.kind,t).radius)){damage(e,amount);dash.hits.push(e.id);}
-  if(boss&&boss.hp>0&&!dash.hits.includes(-1)&&near(boss.x,boss.z,t.bossRadius)){bossDamage(amount);dash.hits.push(-1);}
+  for(const e of s.enemies)if(e.hp>0&&!dash.hits.includes(e.id)&&near(e.x,e.z,enemyStats(e.kind,t).radius)){damage(e,amount);dash.hits.push(e.id);const away=direction(e.x-h.x,e.z-h.z),p=collide(e.x+away.x*t.dashBounceKnockback,e.z+away.z*t.dashBounceKnockback,enemyStats(e.kind,t).radius,t);bounceDash(h,-away.x,-away.z);e.x=p.x;e.z=p.z;}
+  if(boss&&boss.hp>0&&!dash.hits.includes(-1)&&near(boss.x,boss.z,t.bossRadius)){bossDamage(amount);dash.hits.push(-1);bounceDash(h,h.x-boss.x,h.z-boss.z);}
  }
  if(boss&&boss.hp>0)stepBoss(boss,s,t,hurt,event);
 

@@ -1,3 +1,4 @@
+import {enemyLaunchHeight} from './b4-ability-effects.ts';
 import {makeSawProjectiles,makeFloorScars} from './b3-saw-projectiles.ts';
 import {B3_ENABLED} from '../content/items/switches.ts';
 import {makeWhirlerWarning} from './b2-whirler.ts';
@@ -22,7 +23,7 @@ export function makeEncounterPresentation(world:T.Group,m:Materials,tuning:{spaw
   const ring=new T.Mesh<T.BufferGeometry,T.MeshBasicMaterial>(circleWarning,mat.clone());ring.rotation.x=-Math.PI/2;warning.add(ring);
   const sweep=new T.Mesh(new T.RingGeometry(.9,1,64),new T.MeshBasicMaterial({color:'#ffb16c',transparent:true,opacity:.8,depthWrite:false,side:T.DoubleSide,toneMapped:false}));sweep.rotation.x=-Math.PI/2;root.add(sweep);
   const fades={sawlet:makeOcclusionFade(actors.sawlet),thrower:makeOcclusionFade(actors.thrower),shieldsaw:makeOcclusionFade(actors.shieldsaw),grinder:makeOcclusionFade(actors.grinder),whirler:makeOcclusionFade(actors.whirler)};
-  return{actors,fades,warning,lane,ring,sweep,id:-1,headY:1.7,sweepAt:-100,hitAt:-100,deathAt:-100,shotAt:-100};
+  return{actors,fades,warning,lane,ring,sweep,id:-1,headY:1.7,launchAt:-100,sweepAt:-100,hitAt:-100,deathAt:-100,shotAt:-100};
  });
  const sawShots=makeSawProjectiles(root),floorScars=makeFloorScars(root);
  const rivets=new T.InstancedMesh(new T.OctahedronGeometry(.18),m.hot,24);root.add(rivets);rivets.count=0;const dummy=new T.Object3D();
@@ -30,8 +31,8 @@ export function makeEncounterPresentation(world:T.Group,m:Materials,tuning:{spaw
   const mix=(a:number,b:number)=>a+(b-a)*alpha;
   slots.forEach((slot,i)=>{
    const e=s.enemies[i];for(const actor of Object.values(slot.actors))actor.visible=false;slot.warning.visible=false;slot.sweep.visible=false;if(!e)return;
-   if(slot.id!==e.id){slot.id=e.id;slot.sweepAt=-100;slot.hitAt=-100;slot.deathAt=-100;}
-   const stats=enemyStats(e.kind,t),x=mix(e.prevX,e.x),z=mix(e.prevZ,e.z),actor=slot.actors[e.kind];if(s.events.some(event=>event.kind==='defeat'&&Math.hypot(event.x-e.x,event.z-e.z)<.65))slot.deathAt=s.tick;const deathAge=s.tick-slot.deathAt;actor.visible=e.hp>0||deathAge>=0&&deathAge<16;actor.position.set(x,e.behavior.kind==='spawn'?Math.pow(e.behavior.remaining/t.spawnDropTicks,2)*tuning.spawnDropHeight:0,z);actor.rotation.y=Math.atan2(e.faceX,e.faceZ);actor.scale.setScalar(stats.radius/(e.kind==='sawlet'?.67:e.kind==='grinder'?1:e.kind==='whirler'?.8:.75));
+   if(slot.id!==e.id){slot.id=e.id;slot.launchAt=-100;slot.sweepAt=-100;slot.hitAt=-100;slot.deathAt=-100;}
+   const stats=enemyStats(e.kind,t),x=mix(e.prevX,e.x),z=mix(e.prevZ,e.z),actor=slot.actors[e.kind];if(s.events.some(event=>event.kind==='defeat'&&Math.hypot(event.x-e.x,event.z-e.z)<.65))slot.deathAt=s.tick;if(s.events.some(event=>event.kind==='launch'&&event.targetId===e.id))slot.launchAt=s.tick;const deathAge=s.tick-slot.deathAt;actor.visible=e.hp>0||deathAge>=0&&deathAge<16;actor.position.set(x,e.behavior.kind==='spawn'?Math.pow(e.behavior.remaining/t.spawnDropTicks,2)*tuning.spawnDropHeight:0,z);actor.position.y+=enemyLaunchHeight(s.tick,slot.launchAt,reducedMotion);actor.rotation.y=Math.atan2(e.faceX,e.faceZ);actor.scale.setScalar(stats.radius/(e.kind==='sawlet'?.67:e.kind==='grinder'?1:e.kind==='whirler'?.8:.75));
    if(e.hp<=0&&deathAge>=0){const pop=deathAge<4?1:Math.max(0,1-(deathAge-4)/12);actor.scale.multiplyScalar(pop);if(!reducedMotion)actor.rotation.y+=deathAge*.22;}
    slot.headY=actor.position.y+(e.kind==='shieldsaw'?2.22:e.kind==='grinder'?2.35:e.kind==='thrower'?1.85:1.65)*actor.scale.y;
    if(e.kind==='whirler'){const rotor=actor.getObjectByName('rotor');if(rotor)rotor.rotation.y=-((s.tick+alpha)*t.whirlerSpin+e.id*.27)-actor.rotation.y;}slot.fades[e.kind](!!camera&&!!hero&&coversHero(camera,hero,{x,y:stats.radius,z,radius:stats.radius*(e.kind==='sawlet'?1.52:e.kind==='grinder'?1.25:e.kind==='shieldsaw'?1.3:1.15)}));
@@ -41,7 +42,7 @@ export function makeEncounterPresentation(world:T.Group,m:Materials,tuning:{spaw
    const recoil=Math.max(0,1-(s.tick-slot.shotAt)/10);
    body.scale.set(reducedMotion?1:(1+anticipation*.13)*(1+flinch*.25),reducedMotion?1:(1-anticipation*.16)*(1-flinch*.25),reducedMotion?1:1+anticipation*.08);
    body.position.y=(e.kind==='grinder'||e.kind==='shieldsaw'?1:.7)+(reducedMotion?0:Math.sin(s.tick/18+e.id*2.4)*.025);
-   body.rotation.x=reducedMotion?0:-flinch*.16+recoil*.22;body.rotation.z=reducedMotion?0:e.kind==='shieldsaw'?Math.sin((s.tick-slot.hitAt)*1.3)*flinch*.12:0;
+   body.rotation.y=!reducedMotion&&s.hero.special.kind==='spin'&&Math.hypot(e.x-s.hero.x,e.z-s.hero.z)<=t.bladeSpinRadius+stats.radius?s.tick*.35:0;body.rotation.x=reducedMotion?0:-flinch*.16+recoil*.22;body.rotation.z=reducedMotion?0:e.kind==='shieldsaw'?Math.sin((s.tick-slot.hitAt)*1.3)*flinch*.12:0;
    if(flash instanceof T.Mesh&&flash.material instanceof T.MeshBasicMaterial&&!reducedFlashes&&anticipation>0){flash.visible=true;flash.material.color.set('#ff946e');flash.material.opacity=anticipation*.2;}else if(flash instanceof T.Mesh&&flash.material instanceof T.MeshBasicMaterial)flash.material.color.set('#fff');
    const rotor=actor.getObjectByName('rotor');if(rotor&&e.kind!=='whirler')for(const disc of rotor.children)disc.rotation.z=reducedMotion?0:s.tick*(b.kind==='lunge'?.3:b.kind==='windup'?.12+anticipation*.2:.08);actor.rotation.z=!reducedMotion&&b.kind==='windup'?Math.sin(s.tick*.8)*.025:0;
    if(b.kind==='spawn'){slot.sweepAt=s.tick+(b.remaining-1);}

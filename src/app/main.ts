@@ -1,3 +1,4 @@
+import {makeAbilityNames} from '../ui/b4-ability-names.ts';
 import {makeRosterHints} from '../ui/b2-roster-hints.ts';
 import {makeQualityCallouts} from '../ui/b1-quality-callouts.ts';
 import {makeRepairPop} from '../ui/q3-repair-pop.ts';
@@ -111,13 +112,13 @@ if(playing){
  addEventListener('keydown',event=>{if(event.target instanceof HTMLElement&&event.target.closest('input,textarea,select,[contenteditable=true]'))return;if(!paused&&snapshot&&'phase' in snapshot&&snapshot.phase.kind==='upgrade'&&['Digit1','Digit2','Digit3'].includes(event.code)){event.preventDefault();const id=snapshot.phase.choices[Number(event.code.slice(-1))-1];step({x:0,z:0,dash:false,upgrade:id});clearInput();drawHUD();}});
  const dash=abilities.querySelector<HTMLElement>('.dash')!;input=makeInput(app.querySelector<HTMLElement>('.study-stick')!,dash,togglePause,restart);
  addEventListener('blur',()=>{clearInput();paused=true;accumulator=0;drawHUD();});document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInput();paused=true;accumulator=0;drawHUD();}});
- const qualityCallouts=makeQualityCallouts(app),repairPop=makeRepairPop(app),feelHUD=makeFeelHUD(app);let lastResult='';
- resetHUD=()=>{feelHUD.reset();repairPop.reset();qualityCallouts.reset();cooldownPeek.pulse=cooldownPeek.boost=cooldownPeek.stomp=-1;slowUntil=0;slowScale=1;banner.reset();lastResult='';lastAnnouncement='';};
+ const abilityNames=makeAbilityNames(app),qualityCallouts=makeQualityCallouts(app),repairPop=makeRepairPop(app),feelHUD=makeFeelHUD(app);let lastResult='';
+ resetHUD=()=>{feelHUD.reset();repairPop.reset();qualityCallouts.reset();abilityNames.reset();cooldownPeek.pulse=cooldownPeek.boost=cooldownPeek.stomp=-1;slowUntil=0;slowScale=1;banner.reset();lastResult='';lastAnnouncement='';};
  drawHUD=()=>{if(!snapshot)return;const h=snapshot.hero,config=effectiveTuning(),run='enemies' in snapshot?snapshot:null,e='enemy' in snapshot?snapshot.enemy:null;
   const isBoss=run?.phase.kind==='boss';bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=hp<=config.bossHP*.2?'SCRAP-REX · ENRAGED':'SCRAP-REX';bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
   app.querySelector('.roster span')!.textContent=run?.loadout==='blade'?'BLADE EQUIPPED':'BASE FORM';
   const qButton=abilities.querySelector<HTMLElement>('[data-ability=pulse]')!;const form=run?.loadout??'core';if(qButton.dataset.form!==form){qButton.querySelector('svg')!.outerHTML=icon(form==='blade'?'blade':'pulse');qButton.dataset.form=form;}
-  abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label',run?.loadout==='blade'?'Blade Spin':'Pulse Bash');
+  abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label','Blade Spin');
   const result=h.hp<=0?'lost':run?(run.phase.kind==='complete'?'won':run.phase.kind==='upgrade'?'upgrade':'fighting'):e?.behavior.kind==='defeated'?'won':'fighting';app.dataset.result=result;
   const label=app.querySelector<HTMLElement>('.health-label b')!;label.textContent=`${Math.round(h.hp/config.heroHP*100)} / 100`;label.setAttribute('aria-label',`${Math.round(h.hp/config.heroHP*100)} percent integrity`);
   app.querySelector<HTMLElement>('.health-track i')!.style.width=`${h.hp/config.heroHP*100}%`;
@@ -137,7 +138,7 @@ if(playing){
   const signature=choices.join(',');if(choiceRoot.dataset.choices!==signature){choiceRoot.dataset.choices=signature;choiceRoot.replaceChildren();choices.forEach((id,i)=>{const data=upgrades.find(u=>u.id===id)!;const button=document.createElement('button');button.className='upgrade-card';button.innerHTML=`<small>0${i+1} · RUN UPGRADE</small><b>${data.name}</b><span>${upgradeDescription(id,config,run?.loadout==='blade')}</span>`;button.addEventListener('click',()=>{step({x:0,z:0,dash:false,upgrade:id});clearInput();drawHUD();});choiceRoot.append(button);});}
   overlay.querySelector<HTMLElement>('.equip-reward')!.hidden=paused||result!=='won'||!run||!saveAvailable;
   pause.setAttribute('aria-label',paused?'Resume fight':'Pause fight');pause.textContent=paused?'▶':'Ⅱ';
-  qualityCallouts.update(snapshot.tick,snapshot.events,preferences.reducedMotion);repairPop.update(snapshot.tick,snapshot.events);feelHUD.update(snapshot,preferences,config,paused||result!=='fighting');
+  abilityNames.update(snapshot.tick,snapshot.events);qualityCallouts.update(snapshot.tick,snapshot.events,preferences.reducedMotion);repairPop.update(snapshot.tick,snapshot.events);feelHUD.update(snapshot,preferences,config,paused||result!=='fighting');
   const phaseKey=run?.phase.kind==='fight'?`wave-${run.phase.wave}`:run?.phase.kind==='boss'?`boss-${bossStage(run.phase.boss.hp,config)}`:run?.phase.kind??'trial';banner.update({slideSeconds:tuning.bannerSeconds,tick:snapshot.tick,phase:phaseKey,title:run?.phase.kind==='fight'?`WAVE ${run.phase.wave+1} · SAWLETS!`:run?.phase.kind==='boss'?`SCRAP-REX · ${bossStage(run.phase.boss.hp,config)===4?'ENRAGED':`PHASE ${bossStage(run.phase.boss.hp,config)}`}`:'First contact',subtitle:run?.phase.kind==='boss'?'Watch the charge lane and sweep gap':run?.phase.kind==='fight'?`${run.enemies.filter(e=>e.hp>0).length} enemies · The Foundry`:'Move close to auto-bonk',overdrive:h.overdrive>0,hidden:paused||result!=='fighting',reducedMotion:preferences.reducedMotion});
   if(!app.querySelector<HTMLElement>('.encounter-banner')!.hidden)app.querySelector<HTMLElement>('.streak')!.hidden=true;
   const notice=paused?'Paused':result==='won'?(run?'Foundry cleared. Blade unlocked.':'Sawlet defeated.'):result==='lost'?'Core offline. Retry available.':result==='upgrade'?'Wave cleared. Choose one of three upgrades.':run?.phase.kind==='boss'?'Scrap-Rex. Boss encounter.':run?.phase.kind==='fight'?`Wave ${run.phase.wave+1} of 4.`:'First contact.';if(notice!==lastAnnouncement){announcement.textContent=notice;lastAnnouncement=notice;}

@@ -1,3 +1,4 @@
+import {applyAbilities} from './b4-abilities.ts';
 import {B3_ENABLED} from '../content/items/switches.ts';
 import {whirlerArmTouches} from './b2-whirler.ts';
 import {classifyHit,grantPerfect,tickQuality,qualityEvent} from './b1-hit-quality.ts';
@@ -43,16 +44,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   if(e.hp===0){s.hitstop=Math.max(s.hitstop,t.killHitstopTicks);e.behavior={kind:'defeated'};h.heat=Math.min(t.heatThreshold,h.heat+stats.heat);event('defeat',e.x,e.z);}
   else if(stun||quality.counter)e.behavior={kind:'recover',remaining:stun?t.stompStunTicks+1:t.counterStaggerTicks};
  };
- if(ability==='pulse'&&s.loadout==='blade'){h.special={kind:'spin',remaining:t.bladeSpinTicks,hits:[],hopRemaining:h.special.kind==='hop'?h.special.remaining:0};const fx=s.events.find(e=>e.kind==='pulse');if(fx){fx.kind='blade';fx.radius=t.bladeSpinRadius;}}
- if(ability==='boost'&&s.loadout==='blade'){if(h.special.kind==='spin')h.special.hopRemaining=t.boostHopTicks;else h.special={kind:'hop',remaining:t.boostHopTicks};const fx=s.events.find(e=>e.kind==='boost');if(fx){fx.radius=t.boostRadius;fx.dx=h.faceX;fx.dz=h.faceZ;}}
- const spin=h.special.kind==='spin'?h.special:null;
- const hits=(x:number,z:number,radius:number)=>distance(h,{x,z})<=radius;
- const inCone=(x:number,z:number,r:number)=>{const d=direction(x-h.x,z-h.z);return hits(x,z,t.boostRadius+r)&&(d.x*h.faceX+d.z*h.faceZ>=t.boostConeDot||distance(h,{x,z})<.01);};
- if(spin||ability==='pulse'||ability==='stomp'||ability==='boost'&&s.loadout==='blade'){
-  const radius=spin?t.bladeSpinRadius:ability==='pulse'?t.pulseRadius:t.stompRadius,amount=(spin?t.bladeDamage:ability==='boost'?t.boostDamage:ability==='pulse'?t.pulseDamage:t.stompDamage)*damageMultiplier;
-  for(const e of s.enemies){const r=enemyStats(e.kind,t).radius;if(e.hp>0&&(ability==='boost'?inCone(e.x,e.z,r):hits(e.x,e.z,radius+r))&&(!spin||!spin.hits.includes(e.id))){damage(e,amount,ability==='stomp',true,'ability');if(spin){spin.hits.push(e.id);const d=direction(h.x-e.x,h.z-e.z),p=collide(e.x+d.x*t.bladePull,e.z+d.z*t.bladePull,r,t);e.x=p.x;e.z=p.z;}}}
-  if(boss&&(ability==='boost'?inCone(boss.x,boss.z,t.bossRadius):hits(boss.x,boss.z,radius+t.bossRadius))&&(!spin||!spin.hits.includes(-1))){bossDamage(amount,true,'ability');spin?.hits.push(-1);}
- }
+ applyAbilities(s,t,ability,damageMultiplier,damage,bossDamage,event);
  // Swept path damage for Rush/Charge: one hit per target for this dash, including the boss.
  if(h.dash.kind==='active'&&h.dash.variant!=='tap'){
   const dash=h.dash,near=(x:number,z:number,r:number)=>{const vx=h.x-h.prevX,vz=h.z-h.prevZ,den=vx*vx+vz*vz,u=den?Math.max(0,Math.min(1,((x-h.prevX)*vx+(z-h.prevZ)*vz)/den)):0;return Math.sqrt((x-h.prevX-u*vx)**2+(z-h.prevZ-u*vz)**2)<=r+t.heroRadius;};
@@ -115,8 +107,8 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   else if(target){const factor=Math.min(1,actualSpeed/(t.dashDistance*60/t.dashTicks));damage(target,t.bonkDamage*(1+t.bonkSpeedBonus*factor)*damageMultiplier);h.bonkCooldown=t.bonkCooldownTicks;const away=direction(target.x-h.x,target.z-h.z),p=collide(target.x+away.x*t.knockback,target.z+away.z*t.knockback,enemyStats(target.kind,t).radius,t);target.x=p.x;target.z=p.z;}
  }
  endDash(h);
- if(h.hp<=0){h.dash={kind:'idle'};h.special={kind:'idle'};h.vx=h.vz=0;s.phase={kind:'lost'};return s;}
- if(boss&&boss.hp===0){h.dash={kind:'idle'};h.special={kind:'idle'};h.vx=h.vz=0;event('defeat',boss.x,boss.z);s.phase={kind:'complete',reward:'blade'};s.enemies=[];s.projectiles=[];return s;}
+ if(h.hp<=0){h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;s.phase={kind:'lost'};return s;}
+ if(boss&&boss.hp===0){h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;event('defeat',boss.x,boss.z);s.phase={kind:'complete',reward:'blade'};s.enemies=[];s.projectiles=[];return s;}
  if(s.phase.kind!=='fight')return s;
  // Spawn queue never exceeds the approved live cap. Dead entries are retired when replenishing.
  const alive=s.enemies.filter(e=>e.hp>0);const formation=waves[s.phase.wave];

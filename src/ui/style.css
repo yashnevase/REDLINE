@@ -88,3 +88,5 @@
 .quality-callouts{position:fixed;left:26px;top:255px;z-index:5;display:grid;gap:5px;pointer-events:none}.quality-callouts b{font:italic 700 28px 'Redline Display',sans-serif;color:#ffce9a;text-shadow:0 2px 8px #2d1026;border-left:3px solid #bb8aff;padding-left:9px}.quality-callouts[data-quiet=false] b{animation:ready-pop .15s ease-out}
 
 .roster-hints{position:fixed;left:26px;top:174px;z-index:11;max-width:310px;background:#241d30ed;color:#ecd9c7;border-radius:10px;padding:7px 12px;font-size:12px}.roster-hints summary{cursor:pointer}.roster-hints article{padding:7px 0;border-top:1px solid #f9d0aa22}.roster-hints p{margin:3px 0;color:#bdb2bd}@media(max-height:500px){.roster-hints{top:121px;max-height:210px;overflow:auto}.roster-hints[open]{max-width:280px}}
+
+.ability-name{position:fixed;left:26px;top:310px;pointer-events:none;z-index:6;font:italic 700 24px 'Redline Display',sans-serif;letter-spacing:1px;color:#e6caff;text-shadow:0 2px 9px #1a0c26}.ability-name[hidden]{display:none}@media(max-height:500px){.ability-name{top:160px;left:30px}.quality-callouts{top:198px}}

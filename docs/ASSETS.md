@@ -1,5 +1,7 @@
 # Asset provenance — Phase 0
 
+2026-11-01 CLOSE Step 1: original Core Fresnel shader addition, label clearance, floor paint/value changes, smoke dimming and HUD/help code authored locally. Spirit Call sources/captures studied only; no code, image or audio copied. Owner-supplied `close1/public/audio/music/theme.mp3`, `battle-01.mp3`, `battle-02.mp3`: **private use, not redistributable**; source: owner's close1 folder, underlying rights not asserted. Files remain ignored in that folder and outside the shipped public directory. Step 4 audio integration and public-build exclusion remain future work; do not copy these into deployable assets before exclusion is implemented.
+
 2026-11-01 arena-depth pass: original Three.js armoured deck, inset machinery pit/bridge/stairs, half-plane-clipped fractured plate geometry and lower emissive layer; original runtime world-space canvas wear/grate/bolt atlas; original shaded scrap-mech silhouettes, wreck/crane/scaffold geometry, drift shader, smoke/ember pools, bounded impact point lights. No external model, texture or generated target image is shipped. `art/arena-ref/` remains study-only. Spirit Call's local scenery/combat-light source and combat/lobby screenshots were studied for layering, contact/readability and bounded pooling principles; no source code or assets were copied.
 
 | Shipped item | Source | Licence / status | Notes |

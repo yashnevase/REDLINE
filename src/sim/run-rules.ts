@@ -1,3 +1,4 @@
+import {B3_ENABLED} from '../content/items/switches.ts';
 import {whirlerArmTouches} from './b2-whirler.ts';
 import {classifyHit,grantPerfect,tickQuality,qualityEvent} from './b1-hit-quality.ts';
 import {repairClearedWave} from './q3-wave-repair.ts';
@@ -105,8 +106,8 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   // Swept circle test against the hero, avoiding fast projectile tunnelling.
   const vx=p.x-p.prevX,vz=p.z-p.prevZ,den=vx*vx+vz*vz,u=den>0?Math.max(0,Math.min(1,((h.x-p.prevX)*vx+(h.z-p.prevZ)*vz)/den)):0;
   const near={x:p.prevX+u*vx,z:p.prevZ+u*vz};
-  if(distance(h,near)<t.heroRadius+t.rivetRadius){hurt(t.rivetDamage,`projectile:${p.id}`);continue;}
-  if(p.remaining>0&&Math.abs(pos.x-x)<.001&&Math.abs(pos.z-z)<.001)projectiles.push(p);
+  if(distance(h,near)<t.heroRadius+t.rivetRadius){if(B3_ENABLED)event('floor-scar',near.x,near.z,0,.4);hurt(t.rivetDamage,`projectile:${p.id}`);continue;}
+  if(p.remaining>0&&Math.abs(pos.x-x)<.001&&Math.abs(pos.z-z)<.001)projectiles.push(p);else if(B3_ENABLED)event('floor-scar',pos.x,pos.z,0,.4);
  }s.projectiles=projectiles;
  if(h.hp>0&&h.bonkCooldown===0&&!(h.dash.kind==='active'&&h.dash.variant!=='tap')){
   const target=s.enemies.filter(e=>e.hp>0&&distance(h,e)<t.bonkRange).sort((a,b)=>distance(h,a)-distance(h,b)||a.id-b.id)[0];

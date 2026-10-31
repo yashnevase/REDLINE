@@ -15,8 +15,9 @@ import {makeBossPresentation} from './boss.ts';
 import {makeEncounterPresentation} from './encounter.ts';
 import type {RunState} from '../sim/run-schema.ts';
 import * as T from 'three';
+import {makeArmouredArena,AM1_ENABLED} from './am1-armoured-arena.ts';
 import {updateWorldLighting} from './h3-reactive-light.ts';
-import {BL1_ENABLED} from './bl-crescent.ts';
+import {BL1_ENABLED} from './bl-steel.ts';
 import {makeScrapyardWorld} from './scrapyard-world.ts';
 import { defaults, random, seed } from '../content/scene.mjs';
 import { makeMaterials, makeMatchedMatcap, makeBladeMaterials } from './materials.ts';
@@ -84,7 +85,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
   const heroFlash=new T.Mesh(new T.SphereGeometry(1.012,16,12),new T.MeshBasicMaterial({color:'#ffffff',transparent:true,opacity:0,depthWrite:false}));hero.body.add(heroFlash);heroFlash.visible=false;
   const enemyFlash=new T.Mesh(new T.SphereGeometry(.69,12,8),new T.MeshBasicMaterial({color:'#ffffff',transparent:true,opacity:0,depthWrite:false}));enemy.body.add(enemyFlash);
   if(enemyStudio){world.children.forEach(o=>o.visible=o===enemy.root);enemy.root.position.set(0,0,0);hero.root.visible=false;stage.space.visible=false;}
-  if(showcase){hero.root.visible=false;enemy.root.visible=false;}
+  if(showcase){hero.root.visible=false;enemy.root.visible=false;if(AM1_ENABLED){stage.root.visible=false;stage.space.visible=false;if(stage.scrapGround)stage.scrapGround.visible=false;scrapyardWorld.root.visible=false;makeArmouredArena(world);}}
   if(studio) {
     world.children.forEach(o=>{o.visible=o===hero.root||o===sparks;});hero.root.position.set(0,0,0);
     heroShadow.scale.setScalar(matching?.5:1.4);if(matching)heroShadow.material.opacity=.65;if(!matching){stage.root.visible=true;stage.root.scale.setScalar(.065);stage.root.position.set(-1.8,-1.1,-1.8);stage.space.visible=true;}else stage.space.visible=false;const pedestal=mesh(new T.CylinderGeometry(1.2,1.35,.18,48),m.steel,0,-.13,0);pedestal.visible=!matching;const rim=mesh(new T.TorusGeometry(1.22,.025,6,64),m.glow,0,-.025,0);rim.rotation.x=-Math.PI/2;rim.visible=!matching;
@@ -101,7 +102,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
   async function warmUp(){
     await combat.ready();
     if(!socketsLoaded){
-      socketPromise??=(async()=>{const {loadCoreSockets}=await import('./core-sockets.ts');const hardware=await loadCoreSockets(m,matching);industrialParts=await installIndustrialKit(world,matching||enemyStudio);prepareEnemyBlades(world);hero.body.add(hardware);if(!studio){const transparent:T.Object3D[]=[];hero.body.traverse(o=>{if(o instanceof T.Mesh&&!Array.isArray(o.material)&&o.material.transparent)transparent.push(o);});batchParts(hero.body,[hero.shell,hero.marks,hero.eyes,heroFlash,...transparent]);batchParts(hero.marks);batchActor(hero.rotor,m.rustPaint);batchActor(hero.attachment,m.rustPaint,[hero.rotor]);for(const expression of hero.expressions)batchParts(expression);}stage.finalize();await encounter.finalize();bossPresentation.finalize();socketsLoaded=true;})();
+      socketPromise??=(async()=>{const {loadCoreSockets}=await import('./core-sockets.ts');const hardware=await loadCoreSockets(m,matching);industrialParts=await installIndustrialKit(world,matching||enemyStudio);prepareEnemyBlades(world);hero.body.add(hardware);if(!studio){const transparent:T.Object3D[]=[];hero.body.traverse(o=>{if(o instanceof T.Mesh&&!Array.isArray(o.material)&&o.material.transparent)transparent.push(o);});batchParts(hero.body,[hero.shell,hero.marks,hero.eyes,heroFlash,...transparent]);batchParts(hero.marks);batchActor(hero.rotor,m.rustPaint);batchActor(hero.secondaryRotor,m.rustPaint);batchActor(hero.attachment,m.rustPaint,[hero.rotor,hero.secondaryRotor]);for(const expression of hero.expressions)batchParts(expression);}stage.finalize();await encounter.finalize();bossPresentation.finalize();socketsLoaded=true;})();
       try{await socketPromise;}catch(error){socketPromise=undefined;throw error;}
     }
     return renderer.compileAsync(scene,camera);
@@ -114,11 +115,11 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
     const zoomNow=performance.now(),zoomDt=Math.min(.05,(zoomNow-zoomFrameAt)/1000);zoomFrameAt=zoomNow;const zoomTarget=cameraDistance(preferences.zoom,size.width<600||matchMedia('(pointer:coarse)').matches);userViewScale=preferences.reducedMotion?zoomTarget:userViewScale+(zoomTarget-userViewScale)*(1-Math.exp(-zoomDt/Math.max(.01,tuning.zoomPreferenceSeconds)));
     hero.eyes.visible=hero.marks.visible=true;heroStretch.rotation.set(0,0,0);heroStretch.scale.setScalar(1);speedLines.reset();
     chargeParticles.count=0;if(fight?.hero.dash.kind==='charging'&&!preferences.reducedFlashes&&!preferences.reducedMotion){chargeParticles.count=preferences.quality==='low'?8:24;for(let i=0;i<chargeParticles.count;i++){const p=(tick/36+i/24)%1,a=i*2.4+tick*.05;chargeDummy.position.set(Math.cos(a)*(1.5-p),.25+p*.7,Math.sin(a)*(1.5-p));chargeDummy.scale.setScalar(Math.sin(p*Math.PI));chargeDummy.updateMatrix();chargeParticles.setMatrixAt(i,chargeDummy.matrix);}chargeParticles.instanceMatrix.needsUpdate=true;if(chargeParticles.count)chargeParticles.computeBoundingSphere();}
-    hero.rotor.rotation.z=preferences.reducedMotion?0:tick*.12;
+    const bladeSpeed=fight?.hero.special.kind==='spin'||fight?.hero.overdrive? .28:.12;hero.rotor.rotation.z=preferences.reducedMotion?0:tick*bladeSpeed;hero.secondaryRotor.rotation.z=-hero.rotor.rotation.z;hero.rotor.position.y=hero.secondaryRotor.position.y=preferences.reducedMotion?0:Math.sin(tick*.04)*.035;
     currentTick=tick;const t=tick/60;updateWorldLighting(sun,fill,t,!!fight?.hero.overdrive,run?.phase.kind==='boss'&&run.phase.boss.hp<(runTuning?.bossHP??600)*.2,preferences.reducedFlashes);animateEnemyBlades(world,t,preferences.reducedMotion||preferences.reducedFlashes);if(run)for(const event of run.events)if(event.kind==='defeat'&&!killEvents.has(event.id)){killEvents.add(event.id);killCount++;if(killCount%4===0)edgePulseAt=t;}
     if(killEvents.size>512){killEvents.clear();for(const event of run?.events??[])if(event.kind==='defeat')killEvents.add(event.id);}
     stage.update(t,preferences.reducedMotion,fight?.hero.overdrive?1:(fight?.hero.heat??0)/90,Math.max(0,1-(t-edgePulseAt)/.5),tuning.atmosphereStrength,preferences.reducedFlashes,hero.root.position.x,hero.root.position.z,tuning.edgeChaseSpeed);
-    if(scene.background instanceof T.Texture){scene.backgroundIntensity=1+(fight?.hero.overdrive?1:(fight?.hero.heat??0)/90)*tuning.nebulaHeatBoost*(preferences.reducedFlashes?.2:1);scene.background.offset.set(preferences.reducedMotion?0:Math.sin(t*.015)*.005,preferences.reducedMotion?0:Math.cos(t*.012)*.005);scene.background.updateMatrix();}const h=matching?(tuning.coreBlade>=1?Math.max(2.85,tuning.coreStudioHeight):tuning.coreStudioHeight):enemyStudio?name==='boss-studio'?7:3.1:showcase?Math.max(75,130/(size.width/size.height)):studio?tuning.stageHeight:name==='enemy-lineup'?9:size.width<size.height?Math.max(tuning.viewHeight,tuning.portraitViewWidth/(size.width/size.height)):size.height<=500?tuning.phoneViewHeight:tuning.viewHeight;const aspect=size.width/size.height;
+    if(scene.background instanceof T.Texture){scene.backgroundIntensity=1+(fight?.hero.overdrive?1:(fight?.hero.heat??0)/90)*tuning.nebulaHeatBoost*(preferences.reducedFlashes?.2:1);scene.background.offset.set(preferences.reducedMotion?0:Math.sin(t*.015)*.005,preferences.reducedMotion?0:Math.cos(t*.012)*.005);scene.background.updateMatrix();}const h=matching?(tuning.coreBlade>=1?Math.max(2.85,tuning.coreStudioHeight):tuning.coreStudioHeight):enemyStudio?name==='boss-studio'?7:3.1:showcase?Math.max(43,76/(size.width/size.height)):studio?tuning.stageHeight:name==='enemy-lineup'?9:size.width<size.height?Math.max(tuning.viewHeight,tuning.portraitViewWidth/(size.width/size.height)):size.height<=500?tuning.phoneViewHeight:tuning.viewHeight;const aspect=size.width/size.height;
     camera.zoom=cameraZoom/(fight?userViewScale:1);camera.left=-h*aspect/2;camera.right=h*aspect/2;camera.top=h/2;camera.bottom=-h/2;
     const a=(matching?tuning.coreStudioAzimuth:enemyStudio?30:tuning.azimuth)*Math.PI/180,e=(matching?tuning.coreStudioElevation:enemyStudio?12:showcase?30:studio?tuning.stageElevation:tuning.elevation)*Math.PI/180;
     const mix=(a:number,b:number)=>a+(b-a)*fightAlpha;

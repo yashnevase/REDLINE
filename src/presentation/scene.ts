@@ -7,7 +7,7 @@ import {makeCoreSurface,makeRigidPose,wearTier} from './core-surface.ts';
 import {makeSpeedLines} from './speed-lines.ts';
 import {makeCameraFollow} from './camera-follow.ts';
 import {makeCoreMotion} from './core-motion.ts';
-import {batchParts} from './batch-parts.ts';
+import {batchActor,batchParts} from './batch-parts.ts';
 import {makeSelectiveGlow} from './selective-glow.ts';
 import {makeSpaceStage} from './space-stage.ts';
 import {defaultPreferences,type Preferences} from '../content/preferences.ts';
@@ -98,7 +98,7 @@ export function makeScene(canvas:HTMLCanvasElement,name:SceneName,tuning:Tuning)
   async function warmUp(){
     await combat.ready();
     if(!socketsLoaded){
-      socketPromise??=(async()=>{const {loadCoreSockets}=await import('./core-sockets.ts');const hardware=await loadCoreSockets(m,matching);industrialParts=await installIndustrialKit(world,matching||enemyStudio);prepareEnemyBlades(world);hero.body.add(hardware);if(!studio){const transparent:T.Object3D[]=[];hero.body.traverse(o=>{if(o instanceof T.Mesh&&!Array.isArray(o.material)&&o.material.transparent)transparent.push(o);});batchParts(hero.body,[hero.shell,hero.marks,hero.eyes,heroFlash,...transparent]);batchParts(hero.marks);for(const expression of hero.expressions)batchParts(expression);}stage.finalize();encounter.finalize();bossPresentation.finalize();socketsLoaded=true;})();
+      socketPromise??=(async()=>{const {loadCoreSockets}=await import('./core-sockets.ts');const hardware=await loadCoreSockets(m,matching);industrialParts=await installIndustrialKit(world,matching||enemyStudio);prepareEnemyBlades(world);hero.body.add(hardware);if(!studio){const transparent:T.Object3D[]=[];hero.body.traverse(o=>{if(o instanceof T.Mesh&&!Array.isArray(o.material)&&o.material.transparent)transparent.push(o);});batchParts(hero.body,[hero.shell,hero.marks,hero.eyes,heroFlash,...transparent]);batchParts(hero.marks);batchActor(hero.rotor,m.rustPaint);batchActor(hero.attachment,m.rustPaint,[hero.rotor]);for(const expression of hero.expressions)batchParts(expression);}stage.finalize();encounter.finalize();bossPresentation.finalize();socketsLoaded=true;})();
       try{await socketPromise;}catch(error){socketPromise=undefined;throw error;}
     }
     return renderer.compileAsync(scene,camera);

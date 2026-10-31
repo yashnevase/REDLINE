@@ -45,6 +45,7 @@ export function makeEncounterPresentation(world:T.Group,m:Materials,tuning:{spaw
    body.position.y=(e.kind==='grinder'||e.kind==='shieldsaw'?1:.7)+(reducedMotion?0:Math.sin(s.tick/18+e.id*2.4)*.025);
    body.rotation.y=!reducedMotion&&s.hero.special.kind==='spin'&&Math.hypot(e.x-s.hero.x,e.z-s.hero.z)<=t.bladeSpinRadius+stats.radius?s.tick*.35:0;body.rotation.x=reducedMotion?0:-flinch*.16+recoil*.22;body.rotation.z=reducedMotion?0:e.kind==='shieldsaw'?Math.sin((s.tick-slot.hitAt)*1.3)*flinch*.12:0;
    if(flash instanceof T.Mesh&&flash.material instanceof T.MeshBasicMaterial&&!reducedFlashes&&anticipation>0){flash.visible=true;flash.material.color.set('#ff946e');flash.material.opacity=anticipation*.2;}else if(flash instanceof T.Mesh&&flash.material instanceof T.MeshBasicMaterial)flash.material.color.set('#fff');
+   const hit=flash instanceof T.Mesh&&flash.visible&&flash.material instanceof T.MeshBasicMaterial?flash.material.opacity:0;body.traverse(o=>{if(o instanceof T.Mesh&&!Array.isArray(o.material)&&o.material.userData.actorHit)o.material.userData.actorHit.value=hit;});flash.visible=false;
    const rotor=actor.getObjectByName('rotor');if(rotor&&e.kind!=='whirler')for(const disc of rotor.children)disc.rotation.z=reducedMotion?0:s.tick*(b.kind==='lunge'?.3:b.kind==='windup'?.12+anticipation*.2:.08);actor.rotation.z=!reducedMotion&&b.kind==='windup'?Math.sin(s.tick*.8)*.025:0;
    if(b.kind==='spawn'){slot.sweepAt=s.tick+(b.remaining-1);}
    if(b.kind==='windup'){

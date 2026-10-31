@@ -25,8 +25,8 @@ export function batchParts(root:T.Group,excluded:readonly T.Object3D[]=[]){
 
 // Palette bake for small gameplay actors: two surfaces instead of one call per bolt/paint colour.
 export function batchActor(root:T.Group,paint:T.Texture,excluded:readonly T.Object3D[]=[],emission=true){
- const lit=new T.MeshLambertMaterial({map:paint,vertexColors:true});
- lit.onBeforeCompile=shader=>{shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nattribute float actorGlow; varying float vActorGlow;').replace('#include <begin_vertex>','#include <begin_vertex>\nvActorGlow=actorGlow;');shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying float vActorGlow;').replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\ntotalEmissiveRadiance += vColor.rgb * vActorGlow; diffuseColor.rgb *= 1. - vActorGlow;');};lit.customProgramCacheKey=()=> 'redline-actor-palette-v1';
+ const lit=new T.MeshLambertMaterial({map:paint,vertexColors:true});const hit={value:0};lit.userData.actorHit=hit;
+ lit.onBeforeCompile=shader=>{shader.uniforms.uActorHit=hit;shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nuniform float uActorHit;').replace('#include <opaque_fragment>','outgoingLight=mix(outgoingLight,vec3(1.,.78,.6),uActorHit);\n#include <opaque_fragment>');shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nattribute float actorGlow; varying float vActorGlow;').replace('#include <begin_vertex>','#include <begin_vertex>\nvActorGlow=actorGlow;');shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying float vActorGlow;').replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\ntotalEmissiveRadiance += vColor.rgb * vActorGlow; diffuseColor.rgb *= 1. - vActorGlow;');};lit.customProgramCacheKey=()=> 'redline-actor-palette-v1';
  if(root.userData.enemyBlade)wornBladeShader(lit);
  function visit(object:T.Object3D){
   if(excluded.includes(object))return;

@@ -2,7 +2,7 @@ import {makePadActivity} from '../input/f2-pad-activity.ts';
 import {makeObjectiveHUD} from '../ui/f1-objectives.ts';
 import {levelGoals} from '../content/items/f1-objectives.ts';
 import {makeRunResults} from '../ui/f5-results.ts';
-import {makeDeviceHints} from '../ui/f2-device-hints.ts';
+import {gamepadFamily,makeDeviceHints} from '../ui/f2-device-hints.ts';
 import {defaultBindings,matchesBinding} from '../content/items/f2-bindings.ts';
 import {integrityReadout,upgradeCard,upgradeRarity,makeBuildStrip} from '../ui/f4-upgrades.ts';
 import {makeBossGuide,phaseBarMarkup} from '../ui/f3-boss-guide.ts';
@@ -160,7 +160,7 @@ if(playing){
 }
 const lobbyPadActivity=makePadActivity();
 function animate(time:number){
- if(!playing){const pad=Array.from(navigator.getGamepads?.()??[]).find(p=>p?.connected);if(lobbyPadActivity(pad??undefined)&&pad)deviceHints.use(/dualsense|dualshock|playstation|054c/i.test(pad.id)?'playstation':'xbox');deviceHints.update(false);}
+ if(!playing){const pad=Array.from(navigator.getGamepads?.()??[]).find(p=>p?.connected);if(lobbyPadActivity(pad??undefined)&&pad)deviceHints.use(gamepadFamily(pad.id));deviceHints.update(false);}
  if(time>=slowUntil)slowScale=1;
  const delta=Math.min((time-lastTime)/1000,.1);lastTime=time;
  if(!measuring&&ready){

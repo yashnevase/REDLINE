@@ -111,3 +111,7 @@
 /* F5: the detailed result card replaces the older kill-count footer. */
 .live:has(.run-results:not([hidden])) .result-count{display:none}
 .live:has(.fight-overlay:not([hidden])) .zoom-controls{visibility:hidden}
+/* F3: phase/exposed text and numeric boss HP keep separate tracks on compact screens. */
+.objective-boss .boss-health:not([hidden]){display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 8px;align-items:center}.objective-boss .boss-health>span{min-width:0;line-height:1.2}.objective-boss .boss-health>b{float:none;white-space:nowrap}.objective-boss .boss-health>div{grid-column:1 / -1;margin-top:0}
+@media(max-height:500px){.objective-boss .boss-health>span,.objective-boss .boss-health>b{font-size:12px;letter-spacing:.2px}}
+.objective-active:has(.quality-callouts b) .encounter-banner,.objective-active:has(.ability-name:not([hidden])) .encounter-banner{visibility:hidden}

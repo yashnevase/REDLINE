@@ -1,37 +1,4 @@
-import assert from 'node:assert/strict';
-import {mkdir,writeFile,readFile} from 'node:fs/promises';
-import {session,load} from './browser.mjs';
-import {createRunSimulation} from '../src/sim/run-runtime.ts';
-const run=await session();await mkdir('shots/run',{recursive:true});
-try{
- for(const viewport of [{width:1280,height:720,name:'desktop'},{width:844,height:390,name:'phone'}]){
-  const context=await run.browser.newContext({viewport,hasTouch:viewport.name==='phone',recordVideo:{dir:'shots/run',size:{width:viewport.width,height:viewport.height}}});const page=await context.newPage();const errors=await load(page,run.url,'arena');
-  await page.evaluate(()=>window.__REDLINE__.setTick(0));assert.equal(await page.evaluate(()=>window.__REDLINE__.state().enemies.length),5);
-  await page.screenshot({path:`shots/run/wave1-${viewport.name}.png`});
-  // Accelerated deterministic clear is explicit debug tuning, not a normal-balance completion claim.
-  await page.evaluate(()=>{window.__REDLINE__.setTick(0);const t={...window.__REDLINE__.replay().tuning,heroHP:10000,openingThreats:12,pulseRadius:60,pulseDamage:1000,pulseCooldownTicks:1};window.__REDLINE__.advance([{x:0,z:0,dash:false,tuning:t}]);window.__REDLINE__.setTick(0);window.__REDLINE__.advance([{x:0,z:0,dash:false,ability:'pulse'}]);});
-  assert.equal(await page.locator('#app').getAttribute('data-result'),'upgrade');assert.equal(await page.locator('.upgrade-card').count(),3);
-  await page.screenshot({path:`shots/run/upgrade-${viewport.name}.png`});
-  // Verify focus/Enter activates a card without restarting the run.
-  await page.locator('.upgrade-card').nth(1).focus();await page.keyboard.press('Enter');assert.equal(await page.evaluate(()=>window.__REDLINE__.state().phase.wave),1);
-  for(let wave=1;wave<3;wave++){
-   await page.evaluate(()=>window.__REDLINE__.advance(Array.from({length:7},()=>({x:0,z:0,dash:false,ability:'pulse'}))));assert.equal(await page.locator('#app').getAttribute('data-result'),'upgrade');
-   if(viewport.name==='phone')await page.locator('.upgrade-card').first().tap();else await page.keyboard.press('Digit1');
-  }
-  assert.equal(await page.evaluate(()=>window.__REDLINE__.state().phase.wave),3);
-  // Reset only the presentation-facing trial tuning through a recorded validated intent.
-  await page.evaluate(()=>{const t={...window.__REDLINE__.replay().tuning,heroHP:10000,pulseRadius:2.5,pulseDamage:12,pulseCooldownTicks:120};window.__REDLINE__.advance([{x:0,z:0,dash:false,tuning:t},...Array.from({length:100},()=>({x:0,z:0,dash:false}))]);});
-  await page.screenshot({path:`shots/run/wave4-${viewport.name}.png`});
-  await page.keyboard.press('KeyR');await page.evaluate(()=>window.__REDLINE__.play());await page.waitForFunction(()=>window.__REDLINE__.state().hero.overdrive>0);
-  await page.screenshot({path:`shots/run/overdrive-${viewport.name}.png`});await page.waitForTimeout(1000);
-  await page.evaluate(()=>{const t={...window.__REDLINE__.replay().tuning,openingThreats:12,pulseRadius:60,pulseDamage:1000,pulseCooldownTicks:1};window.__REDLINE__.advance([{x:0,z:0,dash:false,tuning:t},...Array.from({length:160},()=>({x:0,z:0,dash:false,ability:'pulse'}))]);});
-  assert.equal(await page.locator('#app').getAttribute('data-result'),'won');await page.screenshot({path:`shots/run/clear-${viewport.name}.png`});
-  const replay=await page.evaluate(()=>window.__REDLINE__.replay());const sim=createRunSimulation(replay.tuning);for(const command of replay.commands)sim.step(command);assert.deepEqual(sim.view(),replay.final);
-  await writeFile(`shots/run/replay-${viewport.name}.json`,JSON.stringify(replay,null,2));assert.deepEqual(errors,[]);
-  await writeFile(`shots/run/report-${viewport.name}.json`,JSON.stringify({keyboardChoice:true,enterChoice:true,touchChoice:viewport.name==='phone',fourWaves:true,overdrive:true,recordedReplay:true,acceleratedDebugBalance:true,physicalPhone:false,errors},null,2));
-  const video=page.video();await context.close();await video.saveAs(`shots/run/encounter-${viewport.name}.webm`);
- }
- const page=await run.browser.newPage({viewport:{width:2560,height:760}});const target=(await readFile('art/targets/spirit-call/combat-lava-swarm.png')).toString('base64'),actual=(await readFile('shots/run/wave4-desktop.png')).toString('base64');
- await page.setContent(`<body style="margin:0;background:#17202a;color:#eee;font:16px Arial"><div style="display:flex"><section>Spirit Call study target<img width="1280" height="720" src="data:image/png;base64,${target}"></section><section>REDLINE actual Wave 4<img width="1280" height="720" src="data:image/png;base64,${actual}"></section></div></body>`);await page.screenshot({path:'shots/run/comparison.png'});
- console.log('Four-wave UI, keyboard/touch upgrade selection, Overdrive and browser-recorded replay passed; accelerated debug balance used.');
-}finally{await run.close();}
+import assert from 'node:assert/strict';import {mkdir,writeFile} from 'node:fs/promises';import {session,load} from './browser.mjs';import {createRunSimulation} from '../src/sim/run-runtime.ts';import {bossFixture} from './boss-fixture.mjs';import {scenarios,t,idle} from './s2-fixtures.mjs';
+const host=await session();await mkdir('shots/run',{recursive:true});try{for(const [name,viewport]of [['desktop',{width:1280,height:720}],['compact',{width:844,height:390}]]){const c=await host.browser.newContext({viewport,hasTouch:name==='compact'});await c.addInitScript(()=>localStorage.setItem('redline.boss-guide.v1','2'));const p=await c.newPage();await p.route('**/favicon.ico',r=>r.fulfill({status:204}));const errors=await load(p,host.url,'arena');await p.evaluate(({s,t})=>window.__REDLINE__.restoreFixture(s,t),{s:scenarios().upgrade,t});assert.equal(await p.locator('.upgrade-card').count(),3);if(name==='compact')await p.locator('.upgrade-card').first().tap();else{await p.locator('.upgrade-card').nth(1).focus();await p.keyboard.press('Enter');}assert.equal(await p.evaluate(()=>window.__REDLINE__.state().phase.kind),'level-complete');await p.locator('.continue-level').click();assert.equal(await p.evaluate(()=>window.__REDLINE__.state().objective.level),1);
+ const charge=scenarios().roster;charge.hero.heat=t.heatThreshold;await p.evaluate(({s,t})=>{window.__REDLINE__.restoreFixture(s,t);window.__REDLINE__.play();},{s:charge,t});await p.keyboard.press('KeyR');await p.waitForFunction(()=>window.__REDLINE__.state().hero.overdrive>0);await p.screenshot({path:`shots/run/overdrive-${name}.png`});
+ const fixture=bossFixture();await p.evaluate(({commands,idle})=>{const a=window.__REDLINE__;a.advance([{...idle,tuning:commands[0].tuning}]);a.setTick(0);a.advance(commands);const config={...a.replay().tuning,pulseDamage:1000,pulseRadius:60,bladeSpinRadius:60,pulseCooldownTicks:1};a.advance([{...idle,tuning:config}]);for(let i=0;i<360&&a.state().phase.kind==='boss';i++)a.advance([{...idle,ability:'pulse'}]);},{commands:fixture.commands,idle});assert.equal(await p.evaluate(()=>window.__REDLINE__.state().phase.kind),'complete');const replay=await p.evaluate(()=>window.__REDLINE__.replay()),sim=createRunSimulation(replay.tuning,false,replay.loadout);for(const command of replay.commands)sim.step(command);assert.deepEqual(sim.view(),replay.final);await p.waitForTimeout(550);await p.screenshot({path:`shots/run/clear-${name}.png`});await writeFile(`shots/run/replay-${name}.json`,JSON.stringify(replay,null,2));assert.deepEqual(errors,[]);await writeFile(`shots/run/report-${name}.json`,JSON.stringify({threeLevels:true,enterChoice:name==='desktop',touchChoice:name==='compact',continueCard:true,overdrive:true,complete:true,recordedReplay:true,acceleratedDebugSetup:true,physicalPhone:false,errors},null,2));await c.close();}console.log('Three-level cards, real upgrade inputs, Overdrive and complete browser/headless replay passed.');}finally{await host.close();}

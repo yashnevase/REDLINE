@@ -1,6 +1,8 @@
 # STATE.md — resume here
 
-Phase: **NEXT_WORK Session 2 implemented and verified for owner review. Next implementation session: Session 3 (C0–C6, D, E).**
+Phase: **Revised NEXT_WORK Session 3 in progress, NOT complete.**
+
+Current continuation: read `docs/S3_PROGRESS.md` and the revised `docs/NEXT_WORK.md`. Initial Blade fixes, announcement queue, Heat ticks, quiet mixed plates, world dressing, reactive light colours and a true distant showcase are implemented. Session 3's full seeded vent gameplay/world kit/reactive props/level layouts and final gates remain; do not mark the session done or start Session 4 yet. Local ID-prefixed commits preserve this work. Checkpoint tests: 101 passing and production build passing; current 24-case performance evidence is `shots/s3/perf.json`. New captures are under `shots/s3/`; the generated wide image is a target, not proof.
 
 ## Current checkpoint — 2026-10-31
 

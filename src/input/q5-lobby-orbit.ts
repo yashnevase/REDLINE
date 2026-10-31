@@ -1,0 +1,10 @@
+import {Q5_ENABLED} from '../content/items/switches.ts';
+// Host-only model inspection. It never supplies movement/combat commands.
+export function makeLobbyOrbit(canvas:HTMLCanvasElement){let yaw=0,pitch=0,vx=0,vy=0,lastAction=performance.now(),lastTap=-1000,pointer:number|null=null,oldX=0,oldY=0,oldAt=0,travel=0;
+ const hint=document.createElement('div');hint.className='lobby-orbit-hint';hint.textContent='Drag to rotate · double-tap to reset · controller right stick';canvas.parentElement!.append(hint);hint.hidden=!Q5_ENABLED;
+ const reset=()=>{yaw=pitch=vx=vy=0;lastAction=performance.now();};
+ canvas.addEventListener('pointerdown',e=>{if(!Q5_ENABLED||pointer!==null)return;pointer=e.pointerId;oldX=e.clientX;oldY=e.clientY;oldAt=performance.now();travel=0;vx=vy=0;canvas.setPointerCapture(pointer);});
+ canvas.addEventListener('pointermove',e=>{if(e.pointerId!==pointer)return;const dx=e.clientX-oldX,dy=e.clientY-oldY,now=performance.now(),dt=Math.max(.008,(now-oldAt)/1000);yaw+=dx*.009;pitch=Math.max(-.45,Math.min(.45,pitch+dy*.006));vx=Math.max(-5,Math.min(5,dx*.009/dt));vy=Math.max(-2,Math.min(2,dy*.006/dt));oldX=e.clientX;oldY=e.clientY;oldAt=lastAction=now;travel+=Math.abs(dx)+Math.abs(dy);});
+ const release=(e:PointerEvent)=>{if(e.pointerId!==pointer)return;pointer=null;const now=performance.now();if(travel<6){if(now-lastTap<320)reset();lastTap=now;}lastAction=now;};for(const name of ['pointerup','pointercancel','lostpointercapture'] as const)canvas.addEventListener(name,release);
+ addEventListener('blur',()=>{pointer=null;vx=vy=0;});return{reset,draw:(dt:number,quiet:boolean)=>{if(!Q5_ENABLED)return{yaw:0,pitch:0};const now=performance.now(),pad=Array.from(navigator.getGamepads?.()??[]).find(p=>p?.connected),x=pad?.axes[2]??0,y=pad?.axes[3]??0;if(Math.abs(x)+Math.abs(y)>.2){yaw+=x*dt*2;pitch=Math.max(-.45,Math.min(.45,pitch+y*dt));lastAction=now;vx=vy=0;}else if(pointer===null&&!quiet){yaw+=vx*dt;pitch=Math.max(-.45,Math.min(.45,pitch+vy*dt));vx*=Math.exp(-dt*4);vy*=Math.exp(-dt*6);if(now-lastAction>2500)yaw+=dt*.18;}if(quiet)vx=vy=0;return{yaw,pitch};},metadata:()=>({enabled:Q5_ENABLED,yaw,pitch})};
+}

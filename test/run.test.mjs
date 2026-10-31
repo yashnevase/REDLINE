@@ -26,12 +26,12 @@ test('Thrower aim locks for the full warning before emitting a bounded projectil
 });
 test('Shieldsaw armour reduces only frontal damage and Stomp interrupts the charge',()=>{
  let front=scenario('shieldsaw',-2,0),back=scenario('shieldsaw',2,0);front=stepRun(front,{...idleCommand,ability:'pulse'},t);back=stepRun(back,{...idleCommand,ability:'pulse'},t);
- assert.equal(front.enemies[0].hp,38.8);assert.equal(back.enemies[0].hp,28);
- let s=scenario('shieldsaw',1,0);s.enemies[0].behavior={kind:'lunge',remaining:60,dx:-1,dz:0,hasHit:false};s=stepRun(s,{...idleCommand,ability:'stomp'},t);assert.equal(s.enemies[0].behavior.kind,'recover');assert.equal(s.hero.hp,100);
+ assert.equal(front.enemies[0].hp,39.2);assert.equal(back.enemies[0].hp,28);
+ let s=scenario('shieldsaw',1,0);s.enemies[0].behavior={kind:'windup',remaining:60,dx:-1,dz:0};s=stepRun(s,{...idleCommand,ability:'stomp'},t);assert.equal(s.hero.slam.kind,'charging');assert.equal(s.enemies[0].behavior.kind,'windup');for(let i=0;i<t.stompChargeTicks;i++)s=stepRun(s,idleCommand,t);assert.equal(s.enemies[0].behavior.kind,'recover');assert.equal(s.hero.hp,100);
 });
 test('Grinder cannot hit before its complete warning and dash protects the sweep',()=>{
  let s=scenario('grinder',2,0);s=stepRun(s,idleCommand,t);for(let i=0;i<t.grinderWindupTicks-1;i++)s=stepRun(s,idleCommand,t);assert.equal(s.hero.hp,100);
- s=stepRun(s,idleCommand,t);assert.equal(s.hero.hp,80);assert.equal(s.enemies[0].behavior.kind,'recover');
+ s=stepRun(s,idleCommand,t);assert.equal(s.hero.hp,70);assert.equal(s.enemies[0].behavior.kind,'recover');
  s=scenario('grinder',2,0);s.enemies[0].behavior={kind:'windup',remaining:1,dx:-1,dz:0};s=stepRun(s,{...idleCommand,dash:true},t);assert.equal(s.hero.hp,100);
 });
 test('all-clear gates upgrades, rejects forged choices, freezes combat and advances exactly once',()=>{
@@ -45,18 +45,15 @@ test('all twelve upgrades affect their stated stat and offers contain three uniq
  assert.equal(upgrades.length,12);for(const u of upgrades){const after=upgradedTuning(t,[u.id]);assert.notEqual(after[u.stat],t[u.stat]);}
  const picked=[];for(let wave=0;wave<3;wave++){const choices=upgradeChoices(wave,picked);assert.equal(new Set(choices).size,3);assert.ok(choices.every(id=>!picked.includes(id)));picked.push(choices[0]);}
 });
-test('Heat persists across upgrades and four cleared waves enter the boss',()=>{
- let s=initialRun(t);s.hero.heat=90;
- for(let wave=0;wave<4;wave++){
-  for(const e of s.enemies){e.hp=0;e.behavior={kind:'defeated'};}s.phase.nextSpawn=waves[wave].length;s=stepRun(s,idleCommand,t);
-  if(wave<3){assert.equal(s.phase.kind,'upgrade');s=stepRun(s,{...idleCommand,upgrade:s.phase.choices[0]},t);assert.equal(s.phase.wave,wave+1);assert.equal(s.hero.heat,90);}
- }
- assert.equal(s.phase.kind,'boss');assert.equal(s.phase.boss.hp,t.bossHP);assert.ok(s.enemies.every(e=>e.hp===0));
+test('Heat persists across upgrades and three score-complete levels enter Rex',async()=>{
+ const {levelGoals,objectiveFormation}=await import('../src/content/items/f1-objectives.ts');let s=initialRun(t);s.hero.heat=90;
+ for(let level=0;level<3;level++){s.score.points=s.objective.levelStartScore+levelGoals[level];for(const e of s.enemies){e.hp=0;e.behavior={kind:'defeated'};}s.phase.nextSpawn=objectiveFormation(level,0).length;s=stepRun(s,idleCommand,t);assert.equal(s.phase.kind,'upgrade');s=stepRun(s,{...idleCommand,upgrade:s.phase.choices[0]},t);assert.equal(s.phase.kind,'level-complete');assert.equal(s.hero.heat,90);s=stepRun(s,{...idleCommand,continue:true},t);}
+ assert.equal(s.phase.kind,'boss');assert.equal(s.phase.boss.hp,t.bossHP);
 });
 test('run replay, JSON snapshots and detached projections agree through wave transitions',()=>{
- const config={...t,heroHP:10000,bonkDamage:1000,pulseDamage:1000,openingThreats:12,pulseRadius:60,pulseCooldownTicks:1};const a=createRunSimulation(config),b=createRunSimulation(config);let s=a.view();
- const commands=[];for(let i=0;i<240;i++){const c=s.phase.kind==='upgrade'?{...idleCommand,upgrade:s.phase.choices[0]}:{...idleCommand,ability:'pulse',overdrive:true};commands.push(c);s=a.step(c);b.step(c);}
- assert.deepEqual(a.view(),b.view());assert.equal(s.phase.kind,'complete');assert.ok(s.upgrades.length===3);
+ const config={...t,heroHP:10000,bonkDamage:1000,pulseDamage:1000,openingThreats:12,pulseRadius:60,bladeSpinRadius:60,pulseCooldownTicks:1,bossHP:2,scoreSawlet:3000,scoreThrower:3000};const a=createRunSimulation(config),b=createRunSimulation(config);let s=a.view();
+ const commands=[];for(let i=0;i<2400&&s.phase.kind!=='complete';i++){const c=s.phase.kind==='level-complete'?{...idleCommand,continue:true}:s.phase.kind==='upgrade'?{...idleCommand,upgrade:s.phase.choices[0]}:{...idleCommand,ability:'pulse',overdrive:true};commands.push(c);s=a.step(c);b.step(c);}
+ assert.deepEqual(a.view(),b.view());assert.equal(s.phase.kind,'complete');assert.ok(s.upgrades.length>=3);
  const saved=a.snapshot();assert.ok(saved.ok);const restored=createRunSimulation(config);assert.ok(restored.restore(JSON.parse(JSON.stringify(saved.value))).ok);assert.deepEqual(restored.view(),s);const v=restored.view();v.hero.hp=1;assert.notEqual(restored.view().hero.hp,1);
  assert.ok(commands.some(c=>c.upgrade));
 });

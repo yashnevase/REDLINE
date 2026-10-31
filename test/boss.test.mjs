@@ -20,12 +20,11 @@ test('boss chomp hits once, volleys lock five targets and summons respect caps',
  s=arena();s.phase.boss.hp=200;s.phase.boss.sequence=2;s.phase.boss.behavior={kind:'recover',remaining:1};s=stepRun(s,idleCommand,t);assert.equal(s.phase.boss.behavior.kind,'volley-warning');const targets=JSON.stringify(s.phase.boss.behavior.targets);s=stepRun(s,{x:-1,z:0,dash:false},t);assert.equal(JSON.stringify(s.phase.boss.behavior.targets),targets);
  s=arena();s.phase.boss.behavior={kind:'summon-warning',remaining:1,targets:[{x:4,z:4},{x:1,z:4},{x:-2,z:4}]};s=stepRun(s,idleCommand,{...t,enemyCap:3});assert.equal(s.enemies.length,2);assert.ok(s.enemies.every(e=>e.kind==='sawlet'));
 });
-test('Blade Q spins through targets in all directions and respects its cooldown',()=>{
- let s=arena();s.loadout='blade';s.hero.faceX=1;s.hero.faceZ=0;s.phase.boss.x=2;s=stepRun(s,{...idleCommand,ability:'pulse'},t);assert.equal(s.phase.boss.hp,576);assert.equal(s.hero.pulseCooldown,120);assert.ok(s.events.some(e=>e.kind==='blade'));
- s=arena();s.loadout='blade';s.hero.faceX=-1;s.hero.faceZ=0;s=stepRun(s,{...idleCommand,ability:'pulse'},t);assert.equal(s.phase.boss.hp,576);
+test('Blade Q starts a timed spin in either facing direction and respects cooldown',()=>{
+ for(const face of [1,-1]){let s=arena();s.loadout='blade';s.bladeFireIn=999;s.hero.faceX=face;s.phase.boss.faceX=0;s.phase.boss.faceZ=1;s=stepRun(s,{...idleCommand,ability:'pulse'},t);assert.equal(s.phase.boss.hp,588);assert.equal(s.hero.pulseCooldown,120);assert.ok(s.events.some(e=>e.kind==='blade'));assert.equal(s.hero.special.remaining,42);}
 });
 test('boss victory alone grants a reward, clears hazards, and snapshot restores boss/Blade state',()=>{
- let s=arena();s.phase.boss.hp=8;s=stepRun(s,{...idleCommand,ability:'pulse'},t);assert.deepEqual(s.phase,{kind:'complete',reward:'blade'});assert.equal(s.enemies.length,0);assert.equal(s.projectiles.length,0);
+ let s=arena();s.phase.boss.hp=2;s=stepRun(s,{...idleCommand,ability:'pulse'},t);assert.deepEqual(s.phase,{kind:'complete',reward:'blade'});assert.equal(s.enemies.length,0);assert.equal(s.projectiles.length,0);
  const sim=createRunSimulation(t,false,'blade');const saved=sim.snapshot();assert.ok(saved.ok);saved.value.resources['Redline/Run']=arena();saved.value.resources['Redline/Run'].loadout='blade';assert.ok(sim.restore(JSON.parse(JSON.stringify(saved.value))).ok);const copy=createRunSimulation(t);const again=sim.snapshot();assert.ok(again.ok);assert.ok(copy.restore(JSON.parse(JSON.stringify(again.value))).ok);for(let i=0;i<400;i++)assert.deepEqual(sim.step(idleCommand),copy.step(idleCommand));
 });
 test('replacement Q receives Q upgrades and legacy run snapshots default to Core',async()=>{

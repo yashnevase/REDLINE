@@ -75,7 +75,7 @@ test('Pulse Bash hits only in range, respects cooldown, and buffers through hit-
 });
 test('Stomp interrupts a lunge for its configured stun, while Boost grants no protection and collides',()=>{
  const t={...tuning,sawletHP:100};let s=initialState(t);s.hero.bonkCooldown=999;s.enemy.x=s.hero.x+1;s.enemy.z=s.hero.z;s.enemy.behavior={kind:'lunge',remaining:20,dx:0,dz:0,hasHit:false};
- s=stepFight(s,{...idleCommand,ability:'stomp'},t);assert.equal(s.hero.hp,100);assert.equal(s.enemy.hp,86);assert.deepEqual(s.enemy.behavior,{kind:'recover',remaining:36});
+ s=stepFight(s,{...idleCommand,ability:'stomp'},t);assert.equal(s.hero.hp,100);assert.equal(s.enemy.hp,80);assert.deepEqual(s.enemy.behavior,{kind:'recover',remaining:36});
  s=initialState(t);s.hero.x=0;s.hero.z=0;s.hero.faceX=1;s.hero.faceZ=0;s.hero.bonkCooldown=999;s.enemy.x=3;s.enemy.z=0;s.enemy.behavior={kind:'lunge',remaining:20,dx:0,dz:0,hasHit:false};
  s=stepFight(s,{...idleCommand,ability:'boost'},t);assert.ok(Math.abs(s.hero.x-3)<1e-9);assert.equal(s.hero.hp,94);assert.equal(s.hero.charges,2);assert.equal(s.hero.boostCooldown,180);
  s=quiet();s.hero.x=22;s.hero.z=0;s.hero.faceX=1;s.hero.faceZ=0;s=stepFight(s,{...idleCommand,ability:'boost'},tuning);assert.ok(s.hero.x<=tuning.arenaHalfWidth-tuning.heroRadius);

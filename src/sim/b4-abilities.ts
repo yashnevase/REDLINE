@@ -21,7 +21,7 @@ export function applyAbilities(s:RunState,t:CombatTuning,ability:Command['abilit
  if(spin)for(const e of s.enemies){const r=enemyStats(e.kind,t).radius;if(e.hp>0&&distance(h,e)<=t.bladeSpinRadius+r){const d=direction(h.x-e.x,h.z-e.z),p=collide(e.x+d.x*t.bladePull/14,e.z+d.z*t.bladePull/14,r,t);e.x=p.x;e.z=p.z;}}
 
 }
-function legacyAbilities(s:RunState,t:CombatTuning,ability:Command['ability'],damageMultiplier:number,damage:Hit,bossDamage:BossHit,event:Emit){const h=s.hero,boss=s.phase.kind==='boss'?s.phase.boss:null;
+function legacyAbilities(s:RunState,t:CombatTuning,ability:Command['ability'],damageMultiplier:number,damage:Hit,bossDamage:BossHit,_event:Emit){const h=s.hero,boss=s.phase.kind==='boss'?s.phase.boss:null;
  if(ability==='pulse'&&s.loadout==='blade'){h.special={kind:'spin',remaining:t.bladeSpinTicks,hits:[],hopRemaining:h.special.kind==='hop'?h.special.remaining:0};const fx=s.events.find(e=>e.kind==='pulse');if(fx){fx.kind='blade';fx.radius=t.bladeSpinRadius;}}
  if(ability==='boost'&&s.loadout==='blade'){if(h.special.kind==='spin')h.special.hopRemaining=t.boostHopTicks;else h.special={kind:'hop',remaining:t.boostHopTicks};const fx=s.events.find(e=>e.kind==='boost');if(fx){fx.radius=t.boostRadius;fx.dx=h.faceX;fx.dz=h.faceZ;}}
  const spin=h.special.kind==='spin'?h.special:null;

@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as T from 'three';
+import {makeAbilityEffects} from '../src/presentation/b4-ability-effects.ts';
+import {combatDefaults as tuning} from '../src/content/combat.ts';
+import {initialRun} from '../src/sim/run-schema.ts';
 import {makeCombatFX} from '../src/presentation/combat-fx.ts';
 const preferences={quality:'standard',reducedMotion:false,reducedFlashes:false};
 test('damage textures switch without shader invalidation; explicit restart clears same-tick effects and trails',()=>{
@@ -21,8 +24,8 @@ test('damage textures switch without shader invalidation; explicit restart clear
   assert.equal(fx.root.children.find(o=>o instanceof T.InstancedMesh).count,0);
   fx.ingest([{...event,id:'pulse',kind:'pulse',radius:2.5,amount:2}],0);fx.draw(.2,{...hero,dashing:false},preferences);
   const pulseRing=fx.root.children.find(o=>o instanceof T.Mesh&&o.geometry.parameters?.innerRadius===.68&&o.visible);
-  assert.equal(pulseRing.scale.x,2.5);
-  fx.draw(.9,{...hero,dashing:false},preferences);assert.equal(pulseRing.visible,false);
+  assert.equal(pulseRing,undefined); // Dedicated instanced ability pass owns Spin now.
+  fx.draw(.9,{...hero,dashing:false},preferences);assert.equal(fx.root.children.some(o=>o instanceof T.Mesh&&o.geometry.parameters?.innerRadius===.68&&o.visible),false);
   fx.reset();
   // Reusing an event ID in a fresh run must still produce its new effect.
   fx.ingest([event],0);fx.draw(.05,{...hero,dashing:false},preferences);
@@ -31,7 +34,7 @@ test('damage textures switch without shader invalidation; explicit restart clear
 });
 test('a crowded Spin retains its ability layers while hit-number slots stay bounded',()=>{
  const previous=globalThis.document;globalThis.document={createElement:()=>({getContext:()=>({strokeText(){},fillText(){}})})};
- try{const world=new T.Group(),fx=makeCombatFX(world,{hot:new T.MeshBasicMaterial(),chrome:new T.MeshBasicMaterial()});fx.ingest([{id:'spin',tick:0,kind:'blade',amount:0,x:0,z:0,radius:2.5},...Array.from({length:12},(_,i)=>({id:`hit-${i}`,tick:0,kind:'bonk',amount:24,x:3+i,z:2}))],0);fx.draw(.1,{x:0,z:0,dashing:false},preferences);const rings=fx.root.children.filter(o=>o instanceof T.Mesh&&!(o instanceof T.InstancedMesh)&&o.visible&&o.position.x===0&&o.position.z===0);assert.ok(rings.length>=4);assert.ok(fx.root.children.filter(o=>o instanceof T.Sprite&&o.visible).length<=8);
+ try{const world=new T.Group(),fx=makeCombatFX(world,{hot:new T.MeshBasicMaterial(),chrome:new T.MeshBasicMaterial()});fx.ingest([{id:'spin',tick:0,kind:'blade',amount:0,x:0,z:0,radius:2.5},...Array.from({length:12},(_,i)=>({id:`hit-${i}`,tick:0,kind:'bonk',amount:24,x:3+i,z:2}))],0);fx.draw(.1,{x:0,z:0,dashing:false},preferences);const rings=fx.root.children.filter(o=>o instanceof T.Mesh&&!(o instanceof T.InstancedMesh)&&o.visible&&o.position.x===0&&o.position.z===0);assert.equal(rings.length,0);const ability=makeAbilityEffects(world),run=initialRun(tuning);run.hero.special={kind:'spin',remaining:36,hopRemaining:0};ability.draw(run,tuning,new T.PerspectiveCamera(),false,false,false);assert.ok(ability.metadata().instances>=4);assert.ok(fx.root.children.filter(o=>o instanceof T.Sprite&&o.visible).length<=8);
  }finally{if(previous===undefined)delete globalThis.document;else globalThis.document=previous;}
 });
 test('crowded killing blows retain readable damage and death debris; Low reserves a number beside ability FX',()=>{

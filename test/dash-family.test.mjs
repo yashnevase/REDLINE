@@ -17,9 +17,9 @@ test('hold threshold, maximum Charge, protection expiry and Q cancellation are d
  let h=hero();tick(h,intent('press'));for(let i=0;i<35;i++)tick(h);tick(h,intent('release'));assert.equal(h.dash.variant,'charge');assert.equal(h.dash.distance,9);assert.equal(h.dashCooldown,78);for(let i=0;i<11;i++)tick(h);assert.equal(h.dash.protected,false);assert.equal(h.dash.kind,'active');
  h=hero();tick(h,intent('press'));for(let i=0;i<15;i++)tick(h);h.abilityBuffer='pulse';h.abilityBufferTicks=5;tick(h,{...idleCommand,ability:'pulse'});assert.equal(h.dash.kind,'idle');assert.equal(h.charges,2);assert.equal(h.pulseCooldown,120);tick(h,intent('release'));assert.equal(h.dash.kind,'idle');assert.equal(h.charges,2);
 });
-test('Rush swept hits each target once; Blade Spin hits behind and cannot repeat damage',()=>{
+test('Rush swept hits each target once; Blade Spin hits behind on its timed ticks',()=>{
  let s=initialRun({...t,sawletHP:100});s.enemies=s.enemies.slice(0,2);s.enemies.forEach((e,i)=>{e.x=i?1.1:-1.1;e.z=0;e.hp=100;e.behavior={kind:'recover',remaining:999};});s.hero.x=s.hero.z=0;s.hero.bonkCooldown=999;
- s.loadout='blade';s=stepRun(s,{...idleCommand,ability:'pulse'},{...t,sawletHP:100});assert.deepEqual(s.enemies.map(e=>e.hp),[76,76]);for(let i=0;i<30;i++)s=stepRun(s,idleCommand,{...t,sawletHP:100});assert.deepEqual(s.enemies.map(e=>e.hp),[76,76]);
+ s.bladeFireIn=999;s.enemies.forEach(e=>{e.faceX=0;e.faceZ=1;});s.loadout='blade';s=stepRun(s,{...idleCommand,ability:'pulse'},{...t,sawletHP:100});assert.deepEqual(s.enemies.map(e=>e.hp),[92,92]);for(let i=0;i<30;i++){s.hitstop=0;s=stepRun(s,idleCommand,{...t,sawletHP:100});}assert.deepEqual(s.enemies.map(e=>e.hp),[76,76]);
  s=initialRun({...t,sawletHP:100});s.enemies=s.enemies.slice(0,1);const e=s.enemies[0];e.x=1;e.z=0;e.hp=100;e.behavior={kind:'recover',remaining:999};s.hero.x=s.hero.z=0;s.hero.bonkCooldown=999;s.hero.dash={kind:'active',remaining:18,dx:1,dz:0,protected:true,protectionTicks:12,variant:'rush',distance:6.5,duration:18,hits:[]};for(let i=0;i<15;i++){s.hitstop=0;s=stepRun(s,idleCommand,{...t,sawletHP:100});}assert.equal(s.enemies[0].hp,82);
 });
 test('Charge + spin/hop saved state round-trips; legacy hero defaults; replay matches',()=>{

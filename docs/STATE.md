@@ -1,9 +1,24 @@
 # STATE.md — resume here
 
 Session date: 2026-10-31 (Asia/Kolkata).
-Phase: **Approved Chapter 1 implementation delivered for final review. No intermediate owner-approval question is pending. Art/human/device gates are not self-passed.**
+Phase: **FEEL_SPRINT implementation complete for owner review; Mac gameplay budgets pass. Physical-phone and owner feel/density acceptance remain open. No approval question is pending.**
 
-## Completion pass — current
+## FEEL_SPRINT — current continuation point
+
+Owner requested following FEEL_SPRINT and pushing the complete project to https://github.com/yashnevase/REDLINE. The supplied attachment matches docs/FEEL_SPRINT.md. Owner explicitly said no phone is available and requested recording that gate as unverified. Do not ask again during this pass.
+
+- Git lives in redline-pack/. Remote origin is the owner's REDLINE repository. Baseline a42b01e was pushed/tagged chapter1-before-feel before implementation. The sprint checkpoint is tagged feel-sprint on main. README explains retrieval/worktree setup. Reference images, caches, raw generated media and dependencies are ignored; original Blender sources and runtime assets are retained.
+- Measured first in headed Chromium with verified ANGLE Metal Apple M4, 1280×720 and 844×390 at requested DPR2. Baseline 183/161 calls and 133.8k/131.4k triangles Standard/Low. Final moving Rex/six-add, twelve-unit wave-4 and corner fixtures: Standard peak106 calls/50,570 triangles; Low66/23,764, below120/60k and70/25k. p50~16.7 ms, p95~17.6–17.7 ms. These are Mac results at phone dimensions, not physical-phone FPS.
+- Gameplay LOD ports/kit, simpler patches, actor palette batching, real Low floor/hull/decoration/effect LOD. Lobby/workshop also use compact Core/kit (Standard65calls/51,426tri; Low28/9,508). Dedicated Core studio retains high detail for reference work. Quality switching preserves neutral studio isolation.
+- Content: five opening threats, deterministic saved 48–90-active-tick spawn queue, waves8/9/11/12; faster approach/recovery and Heat8/9/12/18. Live/attack caps, full-clear upgrades and all approved mechanics stay. Hit-stop2/3/5 ticks, kill minimum4; abilities retain heavy stop through armor; ordinary bonk knockback0.3u.
+- Completed readable font-ready pixel-sized merging damage/kill numbers, tiered pooled sparks/cracks/shards/gear/smoke, presentation streaks, critically damped look-ahead/clamp/zoom/shake, ghosts/charge/turn/landing/Overdrive motion, enemy anticipation/recoil/flinch/idle offsets, reactive sky/edge/conduits/floor/vignette/grade, edge-positioned dismissible announcements, boss phase ring/slow motion, upgrade springs, results count-up and HUD feedback. Barlow Condensed Bold Italic is bundled under OFL; see ASSETS.md.
+- Validation: pnpm check67 tests green including cadence/legacy queue/first-contact/camera/warning minima/armored hit-stop/crowded kill-number regressions; both Ritmo audits, build/debug-reference exclusion, headed budget assertions, per-scene counts and replay hashes. Browser controls/touch/gamepad, options/save, four-wave upgrades/replay, boss/Blade, warnings, asset retries and production startup/touch/loss/retry/equip reload pass. Final startup/run/production checks and pnpm shots repeated after feedback/font work. Own final desktop/phone scene boards, four motion boards and local study comparisons viewed. Final studio visibility correction is verified by refreshed scene captures.
+- Deliverables: docs/FEEL_REPORT.md; review/feel/{wave3-4,blade,density,corner-atmosphere}.mp4 (38/10/30/12s), sampled boards, performance/capture/pace/hash JSON; review/feel-source.zip (exactly the three requested source folders, no models/reference/dependencies). Wave/Blade keyboard recordings replay exactly and include tap/Rush/Charge.
+- Acceptance limits: physical phone/thumb-zone/FPS unverified by owner instruction. Normal finite-wave cleanup reaches1 enemy; greedy normal-enemy/no-dash diagnostic max bonk gap3.9s, so literal ≥5-always-live/≤2s-gap gate is not self-passed. Separate30s wave3 density clip uses600-HP enemies and10,000 hero HP, minimum5live; it is explicit crowd/FX evidence. Main38s clip uses normal enemy stats and retained hero HP, with accelerated setup/cleanup to include both waves3–4; defaults restored for wave4. Human feel/balance remains for owner review. No extra respawn mechanic was introduced.
+- Production preview remains http://localhost:5199/ and serves the rebuilt dist. Next work should start from FEEL_REPORT and owner feedback, not the old art-cycle waiting state or old software-headless perf claims.
+
+
+## Completion pass — pre-FEEL checkpoint
 
 Owner explicitly requested returning to the Markdown phase flow, auditing completed/remaining work and completing all phases without stopping. This overrides the former per-asset owner stops/max-five stopping rule for this pass; recorded in REDLINE_BRIEF.md. Core 10 is now live, with gameplay LOD. Do not resume from the historical Core-only waiting state below.
 

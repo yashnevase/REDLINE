@@ -1,7 +1,7 @@
 import {coversHero,makeOcclusionFade} from './occlusion.ts';
 import {makeLaneWarning} from './lane-warning.ts';
 import * as T from 'three';
-import {batchParts} from './batch-parts.ts';
+import {batchActor} from './batch-parts.ts';
 import {makeEnemy} from './enemies.ts';
 import type {Materials} from './materials.ts';
 import type {RunState} from '../sim/run-schema.ts';
@@ -18,7 +18,7 @@ export function makeEncounterPresentation(world:T.Group,m:Materials,tuning:{spaw
   const ring=new T.Mesh(new T.RingGeometry(.94,1,64),mat.clone());ring.rotation.x=-Math.PI/2;warning.add(ring);
   const sweep=new T.Mesh(new T.RingGeometry(.9,1,64),new T.MeshBasicMaterial({color:'#ffb16c',transparent:true,opacity:.8,depthWrite:false,side:T.DoubleSide,toneMapped:false}));sweep.rotation.x=-Math.PI/2;root.add(sweep);
   const fades={sawlet:makeOcclusionFade(actors.sawlet),thrower:makeOcclusionFade(actors.thrower),shieldsaw:makeOcclusionFade(actors.shieldsaw),grinder:makeOcclusionFade(actors.grinder)};
-  return{actors,fades,warning,lane,ring,sweep,id:-1,headY:1.7,sweepAt:-100,hitAt:-100,deathAt:-100};
+  return{actors,fades,warning,lane,ring,sweep,id:-1,headY:1.7,sweepAt:-100,hitAt:-100,deathAt:-100,shotAt:-100};
  });
  const rivets=new T.InstancedMesh(new T.OctahedronGeometry(.18),m.hot,24);root.add(rivets);rivets.count=0;const dummy=new T.Object3D();
  function draw(s:RunState,alpha:number,t:CombatTuning,reducedMotion=false,reducedFlashes=false,camera?:T.Camera,hero?:{x:number;y:number;z:number;radius:number}){
@@ -31,7 +31,14 @@ export function makeEncounterPresentation(world:T.Group,m:Materials,tuning:{spaw
    slot.headY=actor.position.y+(e.kind==='shieldsaw'?2.22:e.kind==='grinder'?2.35:e.kind==='thrower'?1.85:1.65)*actor.scale.y;
    slot.fades[e.kind](!!camera&&!!hero&&coversHero(camera,hero,{x,y:stats.radius,z,radius:stats.radius*(e.kind==='sawlet'?1.52:e.kind==='grinder'?1.25:e.kind==='shieldsaw'?1.3:1.15)}));
    if(s.events.some(event=>event.kind==='bonk'&&Math.hypot(event.x-e.x,event.z-e.z)<.65))slot.hitAt=s.tick;const flash=actor.getObjectByName('hit-flash');if(flash instanceof T.Mesh&&flash.material instanceof T.MeshBasicMaterial){flash.material.opacity=reducedFlashes?0:Math.max(0,1-(s.tick-slot.hitAt)/4.2)*.7;flash.visible=flash.material.opacity>0;}
-   const b=e.behavior;const rotor=actor.getObjectByName('rotor');if(rotor)for(const disc of rotor.children)disc.rotation.z=reducedMotion?0:s.tick*(b.kind==='lunge'?.3:.08);actor.rotation.z=!reducedMotion&&b.kind==='windup'?Math.sin(s.tick*.8)*.025:0;
+   const b=e.behavior,body=actor.children[0],anticipation=b.kind==='windup'?1-b.remaining/stats.windup:0,flinch=Math.max(0,1-(s.tick-slot.hitAt)/9);
+   if(s.projectiles.some(p=>p.owner===e.id&&p.remaining>=t.rivetLifeTicks-1))slot.shotAt=s.tick;
+   const recoil=Math.max(0,1-(s.tick-slot.shotAt)/10);
+   body.scale.set(reducedMotion?1:1+anticipation*.13,reducedMotion?1:1-anticipation*.16,reducedMotion?1:1+anticipation*.08);
+   body.position.y=(e.kind==='grinder'||e.kind==='shieldsaw'?1:.7)+(reducedMotion?0:Math.sin(s.tick/18+e.id*2.4)*.025);
+   body.rotation.x=reducedMotion?0:-flinch*.16+recoil*.22;body.rotation.z=reducedMotion?0:e.kind==='shieldsaw'?Math.sin((s.tick-slot.hitAt)*1.3)*flinch*.12:0;
+   if(flash instanceof T.Mesh&&flash.material instanceof T.MeshBasicMaterial&&!reducedFlashes&&anticipation>0){flash.visible=true;flash.material.color.set('#ff946e');flash.material.opacity=anticipation*.2;}else if(flash instanceof T.Mesh&&flash.material instanceof T.MeshBasicMaterial)flash.material.color.set('#fff');
+   const rotor=actor.getObjectByName('rotor');if(rotor)for(const disc of rotor.children)disc.rotation.z=reducedMotion?0:s.tick*(b.kind==='lunge'?.3:b.kind==='windup'?.12+anticipation*.2:.08);actor.rotation.z=!reducedMotion&&b.kind==='windup'?Math.sin(s.tick*.8)*.025:0;
    if(b.kind==='spawn'){slot.sweepAt=s.tick+(b.remaining-1);}
    if(b.kind==='windup'){
     slot.warning.visible=true;slot.warning.position.set(x,.04,z);slot.warning.rotation.y=Math.atan2(b.dx,b.dz);slot.lane.root.visible=e.kind!=='grinder';slot.ring.visible=e.kind==='grinder';slot.ring.material.opacity=.8;
@@ -44,5 +51,5 @@ export function makeEncounterPresentation(world:T.Group,m:Materials,tuning:{spaw
   rivets.count=s.projectiles.length;for(let i=0;i<24;i++){const p=s.projectiles[i];dummy.position.set(p?mix(p.prevX,p.x):0,.6,p?mix(p.prevZ,p.z):0);dummy.scale.setScalar(p?t.rivetRadius/.18:0);dummy.rotation.set(s.tick*.1,0,s.tick*.1);dummy.updateMatrix();rivets.setMatrixAt(i,dummy.matrix);}rivets.instanceMatrix.needsUpdate=true;
  }
  function screen(s:RunState,camera:T.Camera,width:number,height:number){return s.enemies.map((e,i)=>{const point=new T.Vector3(e.x,slots[i]?.headY??1.7,e.z).project(camera);return{id:e.id,x:(point.x+1)*width/2,y:(1-point.y)*height/2,visible:e.hp>0&&point.z>-1&&point.z<1};});}
- root.visible=false;return{root,draw,screen,reset:()=>{for(const slot of slots){slot.id=-1;slot.hitAt=slot.deathAt=slot.sweepAt=-100;}},finalize:()=>{for(const slot of slots)for(const kind of ['sawlet','thrower','shieldsaw','grinder'] as const){const actor=slot.actors[kind];const body=actor.children[0] as T.Group,rotor=actor.getObjectByName('rotor')!,flash=actor.getObjectByName('hit-flash')!;batchParts(body,[rotor,flash]);for(const disc of rotor.children)if(disc instanceof T.Group)batchParts(disc);slot.fades[kind]=makeOcclusionFade(actor);}},lineup:(tick:number)=>{slots.forEach((slot,i)=>{slot.warning.visible=false;slot.sweep.visible=false;for(const actor of Object.values(slot.actors))actor.visible=false;if(i<4){const kind=(['sawlet','thrower','shieldsaw','grinder'] as const)[i],actor=slot.actors[kind];actor.visible=true;actor.position.set((i-1.5)*2.5,0,0);actor.rotation.set(0,.35,0);const rotor=actor.getObjectByName('rotor');if(rotor)for(const disc of rotor.children)disc.rotation.z=tick*.02;}});}};
+ root.visible=false;return{root,draw,screen,budget:()=>Object.fromEntries(Object.entries(slots[0].actors).map(([kind,actor])=>{let triangles=0;for(const child of actor.children)child.traverseVisible(o=>{if(o instanceof T.Mesh)triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;});return[kind,triangles];})),reset:()=>{for(const slot of slots){slot.id=-1;slot.hitAt=slot.deathAt=slot.sweepAt=slot.shotAt=-100;}},finalize:()=>{for(const slot of slots)for(const kind of ['sawlet','thrower','shieldsaw','grinder'] as const){const actor=slot.actors[kind];const body=actor.children[0] as T.Group,rotor=actor.getObjectByName('rotor')!,flash=actor.getObjectByName('hit-flash')!;batchActor(body,m.rustPaint,[rotor,flash]);for(const disc of rotor.children)if(disc instanceof T.Group)batchActor(disc,m.rustPaint,[],false);slot.fades[kind]=makeOcclusionFade(actor);}},lineup:(tick:number)=>{slots.forEach((slot,i)=>{slot.warning.visible=false;slot.sweep.visible=false;for(const actor of Object.values(slot.actors))actor.visible=false;if(i<4){const kind=(['sawlet','thrower','shieldsaw','grinder'] as const)[i],actor=slot.actors[kind];actor.visible=true;actor.position.set((i-1.5)*2.5,0,0);actor.rotation.set(0,.35,0);const rotor=actor.getObjectByName('rotor');if(rotor)for(const disc of rotor.children)disc.rotation.z=tick*.02;}});}};
 }

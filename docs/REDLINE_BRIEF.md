@@ -86,3 +86,7 @@ Owner explicitly answered “Use these boss phases”: chomp + summons above 70%
 
 ### Owner approval — Look Lock sprint, 2026-10-31
 Owner supplied POLISH_SPRINT.md, then answered yes to carrying it out while retaining the silver-grey satin Core and current gameplay timing. Visual sprint supersedes the earlier polish deferral for this pass. Its blue-violet chrome, timing/knockback/hit-stop suggestions do not override the existing locked design. Human look-lock and physical-phone gates stay open.
+
+## Owner-directed FEEL_SPRINT (2026-10-31)
+
+The owner supplied `docs/FEEL_SPRINT.md` and explicitly requested completing it and pushing source to `yashnevase/REDLINE`. Its content tuning supersedes the previous START formations/speeds/Heat values: waves 8 / 9 / 11 / 12, five opening threats followed by staggered edge arrivals, faster approach, tiered hit-stop and 0.3 u ordinary bonk knockback. Live/attacker caps, full-clear upgrade gating, approved dash/ability/boss rules and Chapter 1 scope remain. Cosmetic streak numbers never multiply damage. See FEEL_REPORT for fixed-tick quantization and cleanup/density limitations. The owner answered that no phone is available and explicitly requested recording that device gate as unverified.

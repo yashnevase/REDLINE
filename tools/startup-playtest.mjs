@@ -21,7 +21,7 @@ try{
   await retry.click();await page.waitForFunction(()=>window.__REDLINE__?.ready);
   assert.equal(await page.locator('.loading').count(),0);
   await page.evaluate(()=>{window.__REDLINE__.setTick(40);window.__REDLINE__.advance([{x:0,z:0,dash:true,ability:'pulse'}]);window.__REDLINE__.setTick(0);window.__REDLINE__.setTick(0);window.__REDLINE__.advance(Array.from({length:20},()=>({x:0,z:0,dash:false})));});
-  assert.equal(await page.locator('.encounter-banner b').textContent(),'Wave 1');
+  assert.equal(await page.locator('.encounter-banner b').textContent(),'WAVE 1 · SAWLETS!');
   assert.equal(await page.locator('.encounter-banner').isVisible(),true);
   await page.screenshot({path:`shots/startup/restarted-${viewport.name}.png`});
   assert.deepEqual(errors,[]);await context.close();

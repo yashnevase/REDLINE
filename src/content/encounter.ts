@@ -2,12 +2,12 @@ import type {CombatTuning} from './combat.ts';
 export const enemyKinds=['sawlet','thrower','shieldsaw','grinder'] as const;
 export type EnemyKind=typeof enemyKinds[number];
 export const enemyNames:Record<EnemyKind,string>={sawlet:'Sawlet',thrower:'Rivet Thrower',shieldsaw:'Shieldsaw',grinder:'Grinder'};
-// START formations from the brief's explicitly referenced §24.3. Full-clear gate supersedes its old 70% rule.
+// Owner-approved FEEL_SPRINT formations. Full clear still gates the next wave.
 export const waves:readonly (readonly EnemyKind[])[]=[
- ['sawlet','sawlet','sawlet','sawlet','sawlet','sawlet','sawlet','sawlet'],
- ['sawlet','sawlet','sawlet','sawlet','sawlet','sawlet','thrower','thrower'],
- ['sawlet','sawlet','sawlet','sawlet','shieldsaw','shieldsaw','thrower'],
- ['sawlet','sawlet','sawlet','sawlet','sawlet','thrower','thrower','shieldsaw','shieldsaw','grinder']
+ [...Array<EnemyKind>(8).fill('sawlet')],
+ [...Array<EnemyKind>(6).fill('sawlet'),...Array<EnemyKind>(3).fill('thrower')],
+ [...Array<EnemyKind>(5).fill('sawlet'),...Array<EnemyKind>(3).fill('thrower'),...Array<EnemyKind>(3).fill('shieldsaw')],
+ [...Array<EnemyKind>(6).fill('sawlet'),...Array<EnemyKind>(3).fill('thrower'),...Array<EnemyKind>(2).fill('shieldsaw'),'grinder']
 ];
 export function enemyStats(kind:EnemyKind,t:CombatTuning){
  const table={

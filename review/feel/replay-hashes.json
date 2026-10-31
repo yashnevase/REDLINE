@@ -1,0 +1,16 @@
+[
+  {
+    "label": "wave3-4",
+    "commands": 2339,
+    "loadout": "core",
+    "canonicalFinalStateSha256": "99c67ed8ef7353bfaae0b0e685a4a88f7ec493c564f52129617d4be0b9690070",
+    "replayMatches": true
+  },
+  {
+    "label": "blade",
+    "commands": 737,
+    "loadout": "blade",
+    "canonicalFinalStateSha256": "1191e942b8cc96e839c75931ec396077f8bc6ee64e27c9d158b94b141c166fc2",
+    "replayMatches": true
+  }
+]

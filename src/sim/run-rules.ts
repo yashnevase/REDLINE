@@ -17,7 +17,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   if(command.upgrade&&s.phase.choices.includes(command.upgrade)){
    const pick=upgrades.find(u=>u.id===command.upgrade);if(!pick)return s;
    s.upgrades.push(pick.id);if(pick.stat==='heroHP')h.hp+=t.upgradeHP;if(pick.stat==='dashCharges')h.charges+=t.upgradeCharges;
-   const wave=s.phase.wave+1,next=waves[wave];s.enemies=next.slice(0,t.enemyCap).map((kind,i)=>spawnEnemy(kind,i,wave,t));s.phase={kind:'fight',wave,nextSpawn:Math.min(t.enemyCap,next.length)};
+   const wave=s.phase.wave+1,next=waves[wave];s.enemies=next.slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,wave,t));s.phase={kind:'fight',wave,nextSpawn:Math.min(t.enemyCap,t.openingThreats,next.length),nextSpawnIn:t.spawnMinTicks};
    h.vx=0;h.vz=0;h.dash={kind:'idle'};h.special={kind:'idle'};h.tapWindow=0;h.dashReleaseBuffer=false;h.dashReleaseSuppressed=command.choice===0;h.buffer=0;h.abilityBuffer=null;h.abilityBufferTicks=0;
   }
   return s;
@@ -29,13 +29,14 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  const heroTuning=s.loadout==='blade'?{...t,pulseCooldownTicks:t.bladeCooldownTicks}:t;
  const {ability,damageMultiplier,actualSpeed}=advanceHero(h,command,heroTuning,event);
  const boss=s.phase.kind==='boss'?s.phase.boss:null;
- const bossDamage=(amount:number)=>{if(!boss||boss.hp<=0)return;boss.hp=Math.max(0,boss.hp-Math.round(amount*10)/10);event('bonk',boss.x,boss.z,amount);s.hitstop=t.hitstopTicks;};
- const hurt=(amount:number)=>{if(h.hp>0&&(h.dash.kind!=='active'||!h.dash.protected)){h.hp=Math.max(0,h.hp-amount);s.hitstop=t.hitstopTicks;event('hurt',h.x,h.z,amount);}};
- const damage=(e:Enemy,amount:number,stun=false)=>{
+ const stop=(amount:number,heavy=false)=>{s.hitstop=Math.max(s.hitstop,heavy||amount>=14?t.heavyHitstopTicks:amount>=12?t.mediumHitstopTicks:t.hitstopTicks);};
+ const bossDamage=(amount:number,heavy=false)=>{if(!boss||boss.hp<=0)return;boss.hp=Math.max(0,boss.hp-Math.round(amount*10)/10);event('bonk',boss.x,boss.z,amount);stop(amount,heavy);};
+ const hurt=(amount:number)=>{if(h.hp>0&&(h.dash.kind!=='active'||!h.dash.protected)){h.hp=Math.max(0,h.hp-amount);stop(amount);event('hurt',h.x,h.z,amount);}};
+ const damage=(e:Enemy,amount:number,stun=false,heavy=false)=>{
   if(e.hp<=0)return;const stats=enemyStats(e.kind,t);
   if(e.kind==='shieldsaw'){const d=direction(h.x-e.x,h.z-e.z);if(d.x*e.faceX+d.z*e.faceZ>=t.shieldFrontDot)amount*=t.shieldDamageFactor;}
-  amount=Math.round(amount*10)/10;e.hp=Math.max(0,e.hp-amount);event('bonk',e.x,e.z,amount);s.hitstop=t.hitstopTicks;
-  if(e.hp===0){e.behavior={kind:'defeated'};h.heat=Math.min(t.heatThreshold,h.heat+stats.heat);event('defeat',e.x,e.z);}
+  amount=Math.round(amount*10)/10;e.hp=Math.max(0,e.hp-amount);event('bonk',e.x,e.z,amount);stop(amount,heavy);
+  if(e.hp===0){s.hitstop=Math.max(s.hitstop,t.killHitstopTicks);e.behavior={kind:'defeated'};h.heat=Math.min(t.heatThreshold,h.heat+stats.heat);event('defeat',e.x,e.z);}
   else if(stun)e.behavior={kind:'recover',remaining:t.stompStunTicks+1};
  };
  if(ability==='pulse'&&s.loadout==='blade'){h.special={kind:'spin',remaining:t.bladeSpinTicks,hits:[],hopRemaining:h.special.kind==='hop'?h.special.remaining:0};const fx=s.events.find(e=>e.kind==='pulse');if(fx){fx.kind='blade';fx.radius=t.bladeSpinRadius;}}
@@ -45,8 +46,8 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  const inCone=(x:number,z:number,r:number)=>{const d=direction(x-h.x,z-h.z);return hits(x,z,t.boostRadius+r)&&(d.x*h.faceX+d.z*h.faceZ>=t.boostConeDot||distance(h,{x,z})<.01);};
  if(spin||ability==='pulse'||ability==='stomp'||ability==='boost'&&s.loadout==='blade'){
   const radius=spin?t.bladeSpinRadius:ability==='pulse'?t.pulseRadius:t.stompRadius,amount=(spin?t.bladeDamage:ability==='boost'?t.boostDamage:ability==='pulse'?t.pulseDamage:t.stompDamage)*damageMultiplier;
-  for(const e of s.enemies){const r=enemyStats(e.kind,t).radius;if(e.hp>0&&(ability==='boost'?inCone(e.x,e.z,r):hits(e.x,e.z,radius+r))&&(!spin||!spin.hits.includes(e.id))){damage(e,amount,ability==='stomp');if(spin){spin.hits.push(e.id);const d=direction(h.x-e.x,h.z-e.z),p=collide(e.x+d.x*t.bladePull,e.z+d.z*t.bladePull,r,t);e.x=p.x;e.z=p.z;}}}
-  if(boss&&(ability==='boost'?inCone(boss.x,boss.z,t.bossRadius):hits(boss.x,boss.z,radius+t.bossRadius))&&(!spin||!spin.hits.includes(-1))){bossDamage(amount);spin?.hits.push(-1);}
+  for(const e of s.enemies){const r=enemyStats(e.kind,t).radius;if(e.hp>0&&(ability==='boost'?inCone(e.x,e.z,r):hits(e.x,e.z,radius+r))&&(!spin||!spin.hits.includes(e.id))){damage(e,amount,ability==='stomp',true);if(spin){spin.hits.push(e.id);const d=direction(h.x-e.x,h.z-e.z),p=collide(e.x+d.x*t.bladePull,e.z+d.z*t.bladePull,r,t);e.x=p.x;e.z=p.z;}}}
+  if(boss&&(ability==='boost'?inCone(boss.x,boss.z,t.bossRadius):hits(boss.x,boss.z,radius+t.bossRadius))&&(!spin||!spin.hits.includes(-1))){bossDamage(amount,true);spin?.hits.push(-1);}
  }
  // Swept path damage for Rush/Charge: one hit per target for this dash, including the boss.
  if(h.dash.kind==='active'&&h.dash.variant!=='tap'){
@@ -114,8 +115,11 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  if(s.phase.kind!=='fight')return s;
  // Spawn queue never exceeds the approved live cap. Dead entries are retired when replenishing.
  const alive=s.enemies.filter(e=>e.hp>0);const formation=waves[s.phase.wave];
- if(s.phase.nextSpawn<formation.length&&alive.length<t.enemyCap){
-  s.enemies=alive;while(s.phase.nextSpawn<formation.length&&s.enemies.length<t.enemyCap){const i=s.phase.nextSpawn++;s.enemies.push(spawnEnemy(formation[i],i,s.phase.wave,t));}
+ if(s.phase.nextSpawnIn>0)s.phase.nextSpawnIn--;
+ if(s.phase.nextSpawn<formation.length&&alive.length<t.enemyCap&&s.phase.nextSpawnIn===0){
+  const i=s.phase.nextSpawn++;s.enemies=alive;s.enemies.push(spawnEnemy(formation[i],i,s.phase.wave,t));
+  // Stable cadence, saved in snapshots. No host clock or unseeded RNG in the simulation.
+  s.phase.nextSpawnIn=t.spawnMinTicks+(i*17+s.phase.wave*11)%Math.max(1,t.spawnMaxTicks-t.spawnMinTicks+1);
  }
  if(s.enemies.every(e=>e.hp<=0)&&s.phase.nextSpawn===formation.length){
   s.projectiles=[];h.vx=0;h.vz=0;h.dash={kind:'idle'};

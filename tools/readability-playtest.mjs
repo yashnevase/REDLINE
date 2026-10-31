@@ -6,7 +6,7 @@ const fixture=bossFixture(),host=await session();await mkdir('shots/readability'
 try{
  for(const v of [{width:1280,height:720,name:'desktop'},{width:844,height:390,name:'phone'}]){
   const c=await host.browser.newContext({viewport:v,hasTouch:v.name==='phone',recordVideo:{dir:'shots/readability',size:{width:v.width,height:v.height}}});const p=await c.newPage();const errors=await load(p,host.url,'arena');
-  await p.evaluate(()=>window.__REDLINE__.setTick(40));assert.equal(await p.locator('.encounter-banner b').textContent(),'Wave 1');assert.equal(await p.locator('.encounter-banner').isVisible(),true);await p.screenshot({path:`shots/readability/wave-${v.name}.png`});
+  await p.evaluate(()=>window.__REDLINE__.setTick(40));assert.equal(await p.locator('.encounter-banner b').textContent(),'WAVE 1 · SAWLETS!');assert.equal(await p.locator('.encounter-banner').isVisible(),true);await p.screenshot({path:`shots/readability/wave-${v.name}.png`});
   await p.evaluate(commands=>{const a=window.__REDLINE__;a.advance([commands[0]]);a.setTick(0);a.advance(commands);},fixture.commands);
   for(const kind of ['chomp-warning','sweep-warning','volley-warning']){
    const state=await p.evaluate(kind=>{const a=window.__REDLINE__;for(let i=0;i<2000;i++){const s=a.state();if(s.phase.kind!=='boss')throw new Error('Stress setup left boss phase');if(s.phase.boss.behavior.kind===kind&&s.phase.boss.behavior.remaining<25)return s;a.advance([{x:0,z:0,dash:false}]);}throw new Error(`No ${kind} reached`);},kind);

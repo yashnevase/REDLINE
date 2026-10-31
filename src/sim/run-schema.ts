@@ -18,7 +18,7 @@ export const bossSchema=z.object({x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),seq
 export type Boss=z.infer<typeof bossSchema>;
 export function initialBoss(t:CombatTuning):Boss{return{x:6,z:0,prevX:6,prevZ:0,hp:t.bossHP,sequence:0,faceX:-1,faceZ:0,behavior:{kind:'recover',remaining:t.bossIntroTicks}};}
 const phase=z.discriminatedUnion('kind',[
- z.object({kind:z.literal('fight'),wave:ticks,nextSpawn:ticks}),
+ z.object({kind:z.literal('fight'),wave:ticks,nextSpawn:ticks,nextSpawnIn:ticks.default(0)}),
  z.object({kind:z.literal('upgrade'),wave:ticks,choices:z.array(z.string()).length(3)}),
  z.object({kind:z.literal('boss'),boss:bossSchema}),
  z.object({kind:z.literal('complete'),reward:z.literal('blade').optional()}),z.object({kind:z.literal('lost')})
@@ -36,5 +36,5 @@ export function spawnEnemy(kind:Enemy['kind'],index:number,wave:number,t:CombatT
  return{id:wave*100+index,kind,x:p.x,z:p.z,prevX:p.x,prevZ:p.z,hp:stats.hp,faceX:-side,faceZ:0,behavior:{kind:'spawn',remaining:t.spawnDropTicks}};
 }
 export function initialRun(t:CombatTuning,loadout:RunState['loadout']='core'):RunState {
- return{tick:0,hitstop:0,loadout,hero:initialState(t).hero,enemies:waves[0].slice(0,t.enemyCap).map((kind,i)=>spawnEnemy(kind,i,0,t)),projectiles:[],nextProjectile:0,phase:{kind:'fight',wave:0,nextSpawn:Math.min(t.enemyCap,waves[0].length)},upgrades:[],events:[]};
+ return{tick:0,hitstop:0,loadout,hero:initialState(t).hero,enemies:waves[0].slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,0,t)),projectiles:[],nextProjectile:0,phase:{kind:'fight',wave:0,nextSpawn:Math.min(t.enemyCap,t.openingThreats,waves[0].length),nextSpawnIn:t.spawnMinTicks},upgrades:[],events:[]};
 }

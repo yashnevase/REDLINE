@@ -16,7 +16,7 @@ test('all three attack slots are shared with flying rivets; the live spawn cap s
   const owners=new Set(s.projectiles.map(p=>p.owner));for(const e of s.enemies)if(e.behavior.kind==='windup'||e.behavior.kind==='lunge')owners.add(e.id);
   assert.ok(owners.size<=3);assert.ok(s.enemies.filter(e=>e.hp>0).length<=12);
  }
- let q=initialRun({...t,enemyCap:3});assert.equal(q.enemies.length,3);q.enemies[0].hp=0;q.enemies[0].behavior={kind:'defeated'};q=stepRun(q,idleCommand,{...t,enemyCap:3});assert.equal(q.enemies.filter(e=>e.hp>0).length,3);assert.equal(q.phase.nextSpawn,4);
+ let q=initialRun({...t,enemyCap:3});assert.equal(q.enemies.length,3);q.enemies[0].hp=0;q.enemies[0].behavior={kind:'defeated'};q.phase.nextSpawnIn=0;q=stepRun(q,idleCommand,{...t,enemyCap:3});assert.equal(q.enemies.filter(e=>e.hp>0).length,3);assert.equal(q.phase.nextSpawn,4);
 });
 test('Thrower aim locks for the full warning before emitting a bounded projectile',()=>{
  let s=scenario('thrower',6,0);s=stepRun(s,idleCommand,t);assert.equal(s.enemies[0].behavior.kind,'windup');
@@ -36,9 +36,9 @@ test('Grinder cannot hit before its complete warning and dash protects the sweep
 });
 test('all-clear gates upgrades, rejects forged choices, freezes combat and advances exactly once',()=>{
  let s=initialRun(t);for(const e of s.enemies.slice(0,-1)){e.hp=0;e.behavior={kind:'defeated'};}s=stepRun(s,idleCommand,t);assert.equal(s.phase.kind,'fight');
- for(const e of s.enemies){e.hp=0;e.behavior={kind:'defeated'};}s.projectiles=[];s=stepRun(s,idleCommand,t);assert.equal(s.phase.kind,'upgrade');
+ for(const e of s.enemies){e.hp=0;e.behavior={kind:'defeated'};}s.phase.nextSpawn=waves[0].length;s.projectiles=[];s=stepRun(s,idleCommand,t);assert.equal(s.phase.kind,'upgrade');
  const before=s.hero.x,cd=s.hero.pulseCooldown,choice=s.phase.choices[0];s=stepRun(s,{x:1,z:0,dash:true,upgrade:'forged'},t);assert.equal(s.phase.kind,'upgrade');assert.equal(s.hero.x,before);assert.equal(s.hero.pulseCooldown,cd);
- s=stepRun(s,{...idleCommand,upgrade:choice},t);assert.equal(s.phase.kind,'fight');assert.equal(s.phase.wave,1);assert.deepEqual(s.upgrades,[choice]);assert.equal(s.enemies.length,8);
+ s=stepRun(s,{...idleCommand,upgrade:choice},t);assert.equal(s.phase.kind,'fight');assert.equal(s.phase.wave,1);assert.deepEqual(s.upgrades,[choice]);assert.equal(s.enemies.length,5);
  s=stepRun(s,{...idleCommand,upgrade:choice},t);assert.equal(s.upgrades.length,1);
 });
 test('all twelve upgrades affect their stated stat and offers contain three unique unpicked choices',()=>{
@@ -54,7 +54,7 @@ test('Heat persists across upgrades and four cleared waves enter the boss',()=>{
  assert.equal(s.phase.kind,'boss');assert.equal(s.phase.boss.hp,t.bossHP);assert.ok(s.enemies.every(e=>e.hp===0));
 });
 test('run replay, JSON snapshots and detached projections agree through wave transitions',()=>{
- const config={...t,heroHP:10000,bonkDamage:1000,pulseDamage:1000,pulseRadius:60,pulseCooldownTicks:1};const a=createRunSimulation(config),b=createRunSimulation(config);let s=a.view();
+ const config={...t,heroHP:10000,bonkDamage:1000,pulseDamage:1000,openingThreats:12,pulseRadius:60,pulseCooldownTicks:1};const a=createRunSimulation(config),b=createRunSimulation(config);let s=a.view();
  const commands=[];for(let i=0;i<240;i++){const c=s.phase.kind==='upgrade'?{...idleCommand,upgrade:s.phase.choices[0]}:{...idleCommand,ability:'pulse',overdrive:true};commands.push(c);s=a.step(c);b.step(c);}
  assert.deepEqual(a.view(),b.view());assert.equal(s.phase.kind,'complete');assert.ok(s.upgrades.length===3);
  const saved=a.snapshot();assert.ok(saved.ok);const restored=createRunSimulation(config);assert.ok(restored.restore(JSON.parse(JSON.stringify(saved.value))).ok);assert.deepEqual(restored.view(),s);const v=restored.view();v.hero.hp=1;assert.notEqual(restored.view().hero.hp,1);

@@ -2,7 +2,7 @@ import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import type {Materials} from './materials.ts';
 // Original Blender-built hardware; shared by the live and studio matched Core.
-export async function loadCoreSockets(materials:Materials){
+export async function loadCoreSockets(materials:Materials,detailed=true){
  const asset=await new GLTFLoader().loadAsync(`${import.meta.env.BASE_URL}models/core-sockets.glb`);
  const tints:Record<string,string>={SocketPanel:'#faf7ff',SocketRim:'#ddd8ee',SocketDeck:'#bcb6d6',SocketRecess:'#8f86b1',SocketBolt:'#ece7fa'};
  const converted=new Map<string,T.MeshMatcapMaterial>();
@@ -18,5 +18,12 @@ export async function loadCoreSockets(materials:Materials){
   object.material=Array.isArray(object.material)?object.material.map(convert):convert(object.material);
   if(isPanel&&object.material instanceof T.MeshMatcapMaterial){object.material.vertexColors=true;object.material.transparent=true;object.material.depthWrite=false;}
  });
+ if(!detailed){
+  // At ~40 screen pixels the milled port silhouette needs two rings, not the studio mesh.
+  const ports=new T.Group();ports.name='core-sockets-game';
+  for(const side of [-1,1]){const port=new T.Group();port.position.set(side*.955,.03,-.1);port.rotation.z=-side*Math.PI/2;ports.add(port);
+   for(const [r,h,mat] of [[.29,.04,materials.chrome],[.20,.052,materials.dark],[.115,.065,materials.steel]] as const){const mesh=new T.Mesh(new T.CylinderGeometry(r,r,h,12),mat);port.add(mesh);}
+  }return ports;
+ }
  return asset.scene;
 }

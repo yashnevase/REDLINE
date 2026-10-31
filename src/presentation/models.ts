@@ -18,9 +18,9 @@ export function shellPatch(parent: T.Object3D, points: number[][], material: T.M
   shape.dispose(); if(g !== shape) g.dispose(); return part(parent,curved,material);
 }
 export function makeCore(materials: Materials, matched=false, bladeMaterials?:BladeMaterials, highDetail=true) {
-  const patch=(parent:T.Object3D,points:number[][],material:T.Material,lift=.008)=>shellPatch(parent,points,material,matched?Math.max(.02,lift):lift,matched?(highDetail?4:2):3);
+  const patch=(parent:T.Object3D,points:number[][],material:T.Material,lift=.008)=>shellPatch(parent,points,material,matched?Math.max(.02,lift):lift,matched?(highDetail?4:1):3);
   const root = new T.Group(), body = new T.Group(), eyes = new T.Group(); root.add(body); body.add(eyes);eyes.name='core-eyes';
-  part(body, new T.SphereGeometry(1,highDetail?64:32,highDetail?40:20), materials.chrome);
+  part(body, new T.SphereGeometry(1,highDetail?64:24,highDetail?40:16), materials.chrome);
   const expressions:T.Group[]=[];
   if(!matched){
   patch(eyes,[[-.61,.27],[-.17,.16],[-.18,-.15],[-.42,-.17],[-.55,-.04]],materials.white);
@@ -42,7 +42,7 @@ export function makeCore(materials: Materials, matched=false, bladeMaterials?:Bl
   if(matched){
     crownMaterial.color.set('#a64159');crownMaterial.toneMapped=false;crownGlowMaterial=materials.white.clone();crownGlowMaterial.transparent=true;crownGlowMaterial.opacity=0;crownGlowMaterial.depthWrite=false;
     const glint=crownMaterial.clone();glint.color.set('#dc8b9a');glint.transparent=true;glint.opacity=.36;glint.depthWrite=false;
-    const paint=(points:number[][],material:T.Material,lift:number)=>shellPatch(body,points,material,lift,highDetail?5:3,true);
+    const paint=(points:number[][],material:T.Material,lift:number)=>shellPatch(body,points,material,lift,highDetail?5:1,true);
     for(const x of [-.35,.25]){
       paint([[x-.008,.67],[x+.019,.936],[x+.086,.936],[x+.064,.67]],crownGlowMaterial,.003);
       paint([[x,.70],[x+.02,.915],[x+.045,.938],[x+.066,.932],[x+.08,.918],[x+.058,.702],[x+.04,.682],[x+.018,.683]],crownMaterial,.006);

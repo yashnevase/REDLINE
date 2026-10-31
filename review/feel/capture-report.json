@@ -1,0 +1,6862 @@
+[
+  {
+    "label": "density",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "seconds": 30,
+    "retainedEnemyHP": 600,
+    "heroHP": 10000,
+    "minimumLive": 5,
+    "phases": [
+      "wave-3"
+    ],
+    "acceleratedWave3Cleanup": false,
+    "events": 90,
+    "metadata": {
+      "actorTriangles": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1210,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "foundry-slab",
+          "triangles": 10890,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 6912,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4416,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1536,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 1372,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1096,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 816,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 480,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 416,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 304,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 304,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 252,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "hit-flash",
+          "triangles": 168,
+          "calls": 1
+        },
+        {
+          "name": "hit-flash",
+          "triangles": 168,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 144,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 88,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 34,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 34,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 22,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 1846.8820000000226,
+      "simTick": 1847,
+      "camera": {
+        "width": 28.566153846153842,
+        "height": 13.2,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "openCentre": 26
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.09393939393939395
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 72,
+      "triangles": 51662,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 9952,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "enemies": 11,
+        "alive": 11,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 0,
+        "overdrive": 0
+      }
+    },
+    "samples": [
+      {
+        "tick": 26,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 38
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 40,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 24
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 55,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 9
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 70,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 63
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 84,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 49
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 100,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 33
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 115,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 18
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 130,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 3
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 145,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 74
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 160,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 62
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 175,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 49
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 190,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 34
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 205,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 19
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 220,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 4
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 235,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 49
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 250,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 34
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 265,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 19
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 280,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 4
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 295,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 66
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 310,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 51
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 325,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 36
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 340,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 24
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 355,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 9
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 370,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 45
+        },
+        "live": 10,
+        "hp": 10000
+      },
+      {
+        "tick": 385,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 30
+        },
+        "live": 10,
+        "hp": 10000
+      },
+      {
+        "tick": 400,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 15
+        },
+        "live": 10,
+        "hp": 10000
+      },
+      {
+        "tick": 415,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 68
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 430,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 58
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 445,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 43
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 460,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 28
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 475,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 13
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 490,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 505,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 521,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 535,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 550,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 565,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 580,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 595,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 610,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 625,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 640,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 655,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 670,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 685,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 700,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 715,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 730,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 745,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 760,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 775,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 791,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 806,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 820,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 835,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 850,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 865,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 880,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 895,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 910,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 925,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 940,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 955,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 970,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 985,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1000,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1015,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1030,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1045,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1060,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1075,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1090,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1105,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1120,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1135,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1150,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1166,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1180,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1195,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1210,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1225,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1240,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1255,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 1270,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1285,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1300,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1315,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1330,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1345,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1360,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1375,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1390,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1405,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1420,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1435,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 1450,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9964
+      },
+      {
+        "tick": 1465,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1480,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1495,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1510,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1525,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1540,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1555,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1570,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1585,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1600,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1615,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1630,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1645,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1660,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1675,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1690,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1705,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1720,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1735,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1750,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1765,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1780,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1795,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1810,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1825,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9958
+      },
+      {
+        "tick": 1840,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9952
+      }
+    ]
+  },
+  {
+    "label": "corner-atmosphere",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "seconds": 12,
+    "retainedEnemyHP": 600,
+    "heroHP": 10000,
+    "minimumLive": 5,
+    "phases": [
+      "wave-3"
+    ],
+    "acceleratedWave3Cleanup": false,
+    "events": 25,
+    "metadata": {
+      "actorTriangles": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "foundry-slab",
+          "triangles": 10890,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 6912,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4416,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1536,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 1372,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 816,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 416,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 304,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 304,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 252,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "hit-flash",
+          "triangles": 168,
+          "calls": 1
+        },
+        {
+          "name": "hit-flash",
+          "triangles": 168,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 144,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 88,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 34,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 34,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 22,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 731.608,
+      "simTick": 732,
+      "camera": {
+        "width": 23.466666666666665,
+        "height": 13.2,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "openCentre": 26
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.09393939393939395
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 70,
+      "triangles": 45346,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 9892,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "enemies": 11,
+        "alive": 11,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 0,
+        "overdrive": 0
+      }
+    },
+    "samples": [
+      {
+        "tick": 25,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 39
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 40,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 24
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 55,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 9
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 70,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 63
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 85,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 48
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 100,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 33
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 115,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 18
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 130,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 3
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 145,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 74
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 160,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 59
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 175,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 44
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 190,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 29
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 205,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 14
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 220,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 59
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 235,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 44
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 250,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 29
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 265,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 14
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 280,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 76
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 295,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 61
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 310,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 46
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 325,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 31
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 340,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 16
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 355,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 5
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 370,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 45
+        },
+        "live": 10,
+        "hp": 9982
+      },
+      {
+        "tick": 385,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 32
+        },
+        "live": 10,
+        "hp": 9982
+      },
+      {
+        "tick": 400,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 22
+        },
+        "live": 10,
+        "hp": 9982
+      },
+      {
+        "tick": 415,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 9
+        },
+        "live": 10,
+        "hp": 9982
+      },
+      {
+        "tick": 430,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 67
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 445,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 54
+        },
+        "live": 11,
+        "hp": 9976
+      },
+      {
+        "tick": 460,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 41
+        },
+        "live": 11,
+        "hp": 9976
+      },
+      {
+        "tick": 475,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 28
+        },
+        "live": 11,
+        "hp": 9970
+      },
+      {
+        "tick": 490,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 15
+        },
+        "live": 11,
+        "hp": 9964
+      },
+      {
+        "tick": 505,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 2
+        },
+        "live": 11,
+        "hp": 9964
+      },
+      {
+        "tick": 520,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9952
+      },
+      {
+        "tick": 535,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9946
+      },
+      {
+        "tick": 550,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9946
+      },
+      {
+        "tick": 565,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9934
+      },
+      {
+        "tick": 581,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9934
+      },
+      {
+        "tick": 595,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9934
+      },
+      {
+        "tick": 611,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9928
+      },
+      {
+        "tick": 625,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9928
+      },
+      {
+        "tick": 641,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9922
+      },
+      {
+        "tick": 655,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9922
+      },
+      {
+        "tick": 670,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9922
+      },
+      {
+        "tick": 685,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9904
+      },
+      {
+        "tick": 700,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9898
+      },
+      {
+        "tick": 715,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9898
+      },
+      {
+        "tick": 730,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9892
+      }
+    ]
+  },
+  {
+    "label": "wave3-4",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "seconds": 38,
+    "retainedEnemyHP": null,
+    "heroHP": 10000,
+    "minimumLive": 4,
+    "phases": [
+      "wave-3",
+      "wave-4"
+    ],
+    "replayVerified": true,
+    "dashVariants": [
+      "tap",
+      "rush",
+      "charge"
+    ],
+    "eventCounts": {
+      "pulse": 12,
+      "bonk": 51,
+      "defeat": 33,
+      "overdrive": 2,
+      "dash": 28,
+      "stomp": 7,
+      "boost": 9,
+      "hurt": 2
+    },
+    "acceleratedWave3Cleanup": true,
+    "events": 133,
+    "metadata": {
+      "actorTriangles": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "foundry-slab",
+          "triangles": 10890,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 6912,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4416,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1536,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 1372,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1096,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 816,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 416,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 400,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 304,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 304,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 252,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "hit-flash",
+          "triangles": 168,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 144,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 144,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 88,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 54,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 34,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 34,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 2343.2759999999776,
+      "simTick": 2344,
+      "camera": {
+        "width": 23.466666666666665,
+        "height": 13.2,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "openCentre": 26
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.09393939393939395
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 66,
+      "triangles": 42468,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 9982,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 11,
+          "nextSpawnIn": 3
+        },
+        "enemies": 6,
+        "alive": 6,
+        "projectiles": 2,
+        "charges": 1,
+        "heat": 40,
+        "overdrive": 0
+      }
+    },
+    "samples": [
+      {
+        "tick": 26,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 38
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 41,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 23
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 56,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 8
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 71,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 62
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 85,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 48
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 101,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 32
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 116,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 17
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 131,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 2
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 146,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 73
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 161,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 60
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 176,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 46
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 192,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 35
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 206,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 21
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 221,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 6
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 236,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 51
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 251,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 36
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 266,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 21
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 280,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 7
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 296,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 68
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 311,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 53
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 326,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 38
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 341,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 23
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 356,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 8
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 372,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 47
+        },
+        "live": 8,
+        "hp": 9994
+      },
+      {
+        "tick": 386,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 38
+        },
+        "live": 8,
+        "hp": 9994
+      },
+      {
+        "tick": 401,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 23
+        },
+        "live": 8,
+        "hp": 9994
+      },
+      {
+        "tick": 416,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 8
+        },
+        "live": 8,
+        "hp": 9994
+      },
+      {
+        "tick": 431,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 61
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 446,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 46
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 461,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 31
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 475,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 17
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 491,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 1
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 506,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 521,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 536,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 551,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 566,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 581,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 596,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 611,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 626,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 641,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 655,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 671,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 686,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 701,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 9,
+        "hp": 9994
+      },
+      {
+        "tick": 717,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 7,
+        "hp": 9994
+      },
+      {
+        "tick": 731,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 7,
+        "hp": 9994
+      },
+      {
+        "tick": 746,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 761,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 776,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 791,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 806,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 821,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 836,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 850,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 866,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 881,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 896,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 911,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 926,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 941,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 956,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 971,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 986,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 1001,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 1016,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 1031,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 1046,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 1061,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 1076,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 1091,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 6,
+        "hp": 9994
+      },
+      {
+        "tick": 1106,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1121,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1136,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1151,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1166,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1181,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1196,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1212,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1226,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1241,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1256,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1271,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1286,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1301,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1316,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1331,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1346,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1361,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1376,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1391,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1406,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1420,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9994
+      },
+      {
+        "tick": 1436,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1451,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1466,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1481,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1496,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1511,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1526,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1541,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1556,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1571,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1586,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1601,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1615,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1631,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1646,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1661,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1676,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1691,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1706,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1721,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1736,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1751,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1765,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1781,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1831,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 5,
+          "nextSpawnIn": 48
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1846,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 5,
+          "nextSpawnIn": 33
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1861,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 5,
+          "nextSpawnIn": 18
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1876,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 5,
+          "nextSpawnIn": 3
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1891,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 6,
+          "nextSpawnIn": 68
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 1906,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 6,
+          "nextSpawnIn": 62
+        },
+        "live": 4,
+        "hp": 9982
+      },
+      {
+        "tick": 1921,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 6,
+          "nextSpawnIn": 48
+        },
+        "live": 4,
+        "hp": 9982
+      },
+      {
+        "tick": 1936,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 6,
+          "nextSpawnIn": 33
+        },
+        "live": 4,
+        "hp": 9982
+      },
+      {
+        "tick": 1951,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 6,
+          "nextSpawnIn": 18
+        },
+        "live": 4,
+        "hp": 9982
+      },
+      {
+        "tick": 1966,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 6,
+          "nextSpawnIn": 3
+        },
+        "live": 4,
+        "hp": 9982
+      },
+      {
+        "tick": 1981,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 7,
+          "nextSpawnIn": 42
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 1995,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 7,
+          "nextSpawnIn": 28
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 2011,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 7,
+          "nextSpawnIn": 12
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 2026,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 8,
+          "nextSpawnIn": 68
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2041,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 8,
+          "nextSpawnIn": 53
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2056,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 8,
+          "nextSpawnIn": 38
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2071,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 8,
+          "nextSpawnIn": 23
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2086,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 8,
+          "nextSpawnIn": 8
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2101,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 9,
+          "nextSpawnIn": 84
+        },
+        "live": 7,
+        "hp": 9982
+      },
+      {
+        "tick": 2116,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 9,
+          "nextSpawnIn": 74
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2131,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 9,
+          "nextSpawnIn": 59
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2146,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 9,
+          "nextSpawnIn": 49
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 2161,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 9,
+          "nextSpawnIn": 34
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 2176,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 9,
+          "nextSpawnIn": 25
+        },
+        "live": 4,
+        "hp": 9982
+      },
+      {
+        "tick": 2190,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 9,
+          "nextSpawnIn": 14
+        },
+        "live": 4,
+        "hp": 9982
+      },
+      {
+        "tick": 2206,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 10,
+          "nextSpawnIn": 60
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 2221,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 10,
+          "nextSpawnIn": 45
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 2236,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 10,
+          "nextSpawnIn": 30
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 2251,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 10,
+          "nextSpawnIn": 15
+        },
+        "live": 5,
+        "hp": 9982
+      },
+      {
+        "tick": 2266,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 11,
+          "nextSpawnIn": 79
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2281,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 11,
+          "nextSpawnIn": 64
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2296,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 11,
+          "nextSpawnIn": 49
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2311,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 11,
+          "nextSpawnIn": 34
+        },
+        "live": 6,
+        "hp": 9982
+      },
+      {
+        "tick": 2326,
+        "phase": {
+          "kind": "fight",
+          "wave": 3,
+          "nextSpawn": 11,
+          "nextSpawnIn": 21
+        },
+        "live": 6,
+        "hp": 9982
+      }
+    ]
+  },
+  {
+    "label": "blade",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "seconds": 12,
+    "retainedEnemyHP": 600,
+    "heroHP": 10000,
+    "minimumLive": 5,
+    "phases": [
+      "wave-3"
+    ],
+    "replayVerified": true,
+    "dashVariants": [
+      "tap",
+      "rush",
+      "charge"
+    ],
+    "eventCounts": {
+      "blade": 5,
+      "bonk": 30,
+      "defeat": 17,
+      "overdrive": 1,
+      "dash": 11,
+      "stomp": 3,
+      "boost": 3,
+      "hurt": 2
+    },
+    "acceleratedWave3Cleanup": false,
+    "events": 40,
+    "metadata": {
+      "actorTriangles": {
+        "core": 3570,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "foundry-slab",
+          "triangles": 10890,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 6912,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4416,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1546,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1536,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 1372,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1356,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 816,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 636,
+          "calls": 2
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 528,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 418,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 416,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 304,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 304,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 288,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 280,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 252,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 144,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 144,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 128,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 128,
+          "calls": 3
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 88,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 80,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 80,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 80,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 64,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 54,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 34,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 34,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 22,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 738.058,
+      "simTick": 739,
+      "camera": {
+        "width": 28.566153846153842,
+        "height": 13.2,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "openCentre": 26
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.09393939393939395
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 76,
+      "triangles": 45218,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 9982,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "enemies": 11,
+        "alive": 11,
+        "projectiles": 0,
+        "charges": 1,
+        "heat": 0,
+        "overdrive": 0
+      }
+    },
+    "samples": [
+      {
+        "tick": 27,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 37
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 41,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 23
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 56,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 5,
+          "nextSpawnIn": 8
+        },
+        "live": 5,
+        "hp": 10000
+      },
+      {
+        "tick": 71,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 62
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 85,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 48
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 101,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 32
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 116,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 17
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 131,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 6,
+          "nextSpawnIn": 2
+        },
+        "live": 6,
+        "hp": 10000
+      },
+      {
+        "tick": 146,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 73
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 161,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 61
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 176,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 48
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 191,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 33
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 206,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 23
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 221,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 7,
+          "nextSpawnIn": 13
+        },
+        "live": 7,
+        "hp": 10000
+      },
+      {
+        "tick": 236,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 58
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 251,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 43
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 266,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 28
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 281,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 8,
+          "nextSpawnIn": 13
+        },
+        "live": 8,
+        "hp": 10000
+      },
+      {
+        "tick": 296,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 75
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 311,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 60
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 326,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 45
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 341,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 33
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 356,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 18
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 371,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 9,
+          "nextSpawnIn": 3
+        },
+        "live": 9,
+        "hp": 10000
+      },
+      {
+        "tick": 386,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 39
+        },
+        "live": 10,
+        "hp": 10000
+      },
+      {
+        "tick": 401,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 24
+        },
+        "live": 10,
+        "hp": 10000
+      },
+      {
+        "tick": 416,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 14
+        },
+        "live": 10,
+        "hp": 10000
+      },
+      {
+        "tick": 431,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 10,
+          "nextSpawnIn": 1
+        },
+        "live": 10,
+        "hp": 10000
+      },
+      {
+        "tick": 446,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 54
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 461,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 39
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 476,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 24
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 491,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 9
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 506,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 521,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 536,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 551,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 566,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 581,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 596,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 611,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 10000
+      },
+      {
+        "tick": 626,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 641,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 656,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 671,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 686,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 701,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9994
+      },
+      {
+        "tick": 716,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      },
+      {
+        "tick": 731,
+        "phase": {
+          "kind": "fight",
+          "wave": 2,
+          "nextSpawn": 11,
+          "nextSpawnIn": 0
+        },
+        "live": 11,
+        "hp": 9982
+      }
+    ]
+  }
+]

@@ -1,3 +1,5 @@
+import {makeFeelHUD} from '../ui/feel-hud.ts';
+import {bossStage} from '../content/boss.ts';
 import {makeStartup} from '../ui/startup.ts';
 import {makeEncounterBanner} from '../ui/encounter-banner.ts';
 import {loadPreferences,savePreferences} from '../save/preferences.ts';
@@ -58,7 +60,7 @@ if(studio&&sceneName!=='core-studio'){
 const tuning: Tuning = { ...defaults };
 const view = makeScene(app.querySelector('canvas')!, sceneName, tuning);
 const resize = () => view.resize(innerWidth, innerHeight); addEventListener('resize', resize); resize();
-let preferences=loadPreferences();app.dataset.reducedMotion=String(preferences.reducedMotion);view.setPreferences(preferences);
+let preferences=loadPreferences();app.dataset.reducedMotion=String(preferences.reducedMotion);app.dataset.reducedFlashes=String(preferences.reducedFlashes);view.setPreferences(preferences);
 let ready=false;
 let measuring = false;
 let tick = playing ? 0 : 120; let frozen = params.has('capture') || (!playing && preferences.reducedMotion); let lastTime = performance.now();
@@ -69,7 +71,7 @@ let snapshot=sim?.view();let paused=false,accumulator=0,pendingTuning:CombatTuni
 let recordingTuning={...gameTuning};
 const recording:Command[]|undefined=import.meta.env.DEV?[]:undefined;
 let input:ReturnType<typeof makeInput>|undefined;let cancelChargeOnResume=false;function clearInput(){if(snapshot?.hero.dash.kind==='charging')cancelChargeOnResume=true;input?.clear();}
-let drawHUD=()=>{};
+let slowUntil=0;let drawHUD=()=>{};
 let resetHUD=()=>{};
 function refreshLoadout(){
  if(!studio)return;const core=app.querySelector<HTMLButtonElement>('[data-equip=core]')!,blade=app.querySelector<HTMLButtonElement>('[data-equip=blade]')!;
@@ -83,8 +85,8 @@ function effectiveTuning(){return snapshot&&'upgrades' in snapshot?upgradedTunin
 function applySnapshot(alpha:number){if(!snapshot)return;if('enemies' in snapshot)view.applyRun(snapshot,alpha,effectiveTuning());else view.applyFight(snapshot,alpha,gameTuning);}
 function restart(){if(!playing)return;sim=makeGame();snapshot=sim.view();cancelChargeOnResume=false;paused=false;accumulator=0;tick=0;lastTime=performance.now();view.reset();resetHUD();recordingTuning={...gameTuning};recording?.splice(0);clearInput();applySnapshot(1);drawHUD();}
 function togglePause(){if(!playing||options.isOpen())return;paused=!paused;clearInput();accumulator=0;drawHUD();}
-function step(command:Command){if(!sim)return;if(cancelChargeOnResume){command={...command,dashInput:'cancel'};cancelChargeOnResume=false;}const wasBoss=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss';const intent=pendingTuning?{...command,tuning:pendingTuning}:command;pendingTuning=undefined;if(intent.tuning){const parsed=tuningSchema.safeParse(intent.tuning);if(parsed.success)gameTuning=parsed.data;}snapshot=sim.step(intent);if(wasBoss&&'phase' in snapshot&&snapshot.phase.kind==='complete'&&snapshot.phase.reward==='blade'){profile=awardBlade(profile);saveAvailable=saveProfile(profile);}recording?.push(intent);if(recording&&recording.length>36000)recording.shift();applySnapshot(1);tick=snapshot.tick;}
-const options=makePreferences(app,preferences,()=>{if(playing){paused=true;clearInput();accumulator=0;drawHUD();}},next=>{preferences=next;app.dataset.reducedMotion=String(next.reducedMotion);if(!playing&&!params.has('capture'))frozen=next.reducedMotion;view.setPreferences(next);return savePreferences(next);});
+function step(command:Command){if(!sim)return;if(cancelChargeOnResume){command={...command,dashInput:'cancel'};cancelChargeOnResume=false;}const wasBoss=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss',oldBossStage=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss'?bossStage(snapshot.phase.boss.hp,gameTuning):0;const intent=pendingTuning?{...command,tuning:pendingTuning}:command;pendingTuning=undefined;if(intent.tuning){const parsed=tuningSchema.safeParse(intent.tuning);if(parsed.success)gameTuning=parsed.data;}snapshot=sim.step(intent);if(oldBossStage&&'phase' in snapshot&&snapshot.phase.kind==='boss'&&bossStage(snapshot.phase.boss.hp,gameTuning)>oldBossStage&&!preferences.reducedMotion)slowUntil=performance.now()+tuning.bossSlowSeconds*1000;if(wasBoss&&'phase' in snapshot&&snapshot.phase.kind==='complete'&&snapshot.phase.reward==='blade'){profile=awardBlade(profile);saveAvailable=saveProfile(profile);}recording?.push(intent);if(recording&&recording.length>36000)recording.shift();applySnapshot(1);tick=snapshot.tick;}
+const options=makePreferences(app,preferences,()=>{if(playing){paused=true;clearInput();accumulator=0;drawHUD();}},next=>{preferences=next;app.dataset.reducedMotion=String(next.reducedMotion);app.dataset.reducedFlashes=String(next.reducedFlashes);if(!playing&&!params.has('capture'))frozen=next.reducedMotion;view.setPreferences(next);return savePreferences(next);});
 if(playing){
  const banner=makeEncounterBanner(app);
  app.classList.add('live');
@@ -104,8 +106,8 @@ if(playing){
  addEventListener('keydown',event=>{if(event.target instanceof HTMLElement&&event.target.closest('input,textarea,select,[contenteditable=true]'))return;if(!paused&&snapshot&&'phase' in snapshot&&snapshot.phase.kind==='upgrade'&&['Digit1','Digit2','Digit3'].includes(event.code)){event.preventDefault();const id=snapshot.phase.choices[Number(event.code.slice(-1))-1];step({x:0,z:0,dash:false,upgrade:id});clearInput();drawHUD();}});
  const dash=abilities.querySelector<HTMLElement>('.dash')!;input=makeInput(app.querySelector<HTMLElement>('.study-stick')!,dash,togglePause,restart);
  addEventListener('blur',()=>{clearInput();paused=true;accumulator=0;drawHUD();});document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInput();paused=true;accumulator=0;drawHUD();}});
- let lastResult='';
- resetHUD=()=>{banner.reset();lastResult='';lastAnnouncement='';};
+ const feelHUD=makeFeelHUD(app);let lastResult='';
+ resetHUD=()=>{feelHUD.reset();slowUntil=0;banner.reset();lastResult='';lastAnnouncement='';};
  drawHUD=()=>{if(!snapshot)return;const h=snapshot.hero,config=effectiveTuning(),run='enemies' in snapshot?snapshot:null,e='enemy' in snapshot?snapshot.enemy:null;
   const isBoss=run?.phase.kind==='boss';bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=hp<=config.bossHP*.2?'SCRAP-REX · ENRAGED':'SCRAP-REX';bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
   app.querySelector('.roster span')!.textContent=run?.loadout==='blade'?'BLADE EQUIPPED':'BASE FORM';
@@ -130,7 +132,9 @@ if(playing){
   const signature=choices.join(',');if(choiceRoot.dataset.choices!==signature){choiceRoot.dataset.choices=signature;choiceRoot.replaceChildren();choices.forEach((id,i)=>{const data=upgrades.find(u=>u.id===id)!;const button=document.createElement('button');button.className='upgrade-card';button.innerHTML=`<small>0${i+1} · RUN UPGRADE</small><b>${data.name}</b><span>${upgradeDescription(id,config,run?.loadout==='blade')}</span>`;button.addEventListener('click',()=>{step({x:0,z:0,dash:false,upgrade:id});clearInput();drawHUD();});choiceRoot.append(button);});}
   overlay.querySelector<HTMLElement>('.equip-reward')!.hidden=paused||result!=='won'||!run||!saveAvailable;
   pause.setAttribute('aria-label',paused?'Resume fight':'Pause fight');pause.textContent=paused?'▶':'Ⅱ';
-  const phaseKey=run?.phase.kind==='fight'?`wave-${run.phase.wave}`:run?.phase.kind??'trial';banner.update({tick:snapshot.tick,phase:phaseKey,title:run?.phase.kind==='fight'?`Wave ${run.phase.wave+1}`:run?.phase.kind==='boss'?'Scrap-Rex':'First contact',subtitle:run?.phase.kind==='boss'?'Watch the charge lane and sweep gap':run?.phase.kind==='fight'?`${run.enemies.filter(e=>e.hp>0).length} enemies · The Foundry`:'Move close to auto-bonk',overdrive:h.overdrive>0,hidden:paused||result!=='fighting',reducedMotion:preferences.reducedMotion});
+  feelHUD.update(snapshot,preferences,config,paused||result!=='fighting');
+  const phaseKey=run?.phase.kind==='fight'?`wave-${run.phase.wave}`:run?.phase.kind==='boss'?`boss-${bossStage(run.phase.boss.hp,config)}`:run?.phase.kind??'trial';banner.update({slideSeconds:tuning.bannerSeconds,tick:snapshot.tick,phase:phaseKey,title:run?.phase.kind==='fight'?`WAVE ${run.phase.wave+1} · SAWLETS!`:run?.phase.kind==='boss'?`SCRAP-REX · ${bossStage(run.phase.boss.hp,config)===4?'ENRAGED':`PHASE ${bossStage(run.phase.boss.hp,config)}`}`:'First contact',subtitle:run?.phase.kind==='boss'?'Watch the charge lane and sweep gap':run?.phase.kind==='fight'?`${run.enemies.filter(e=>e.hp>0).length} enemies · The Foundry`:'Move close to auto-bonk',overdrive:h.overdrive>0,hidden:paused||result!=='fighting',reducedMotion:preferences.reducedMotion});
+  if(!app.querySelector<HTMLElement>('.encounter-banner')!.hidden)app.querySelector<HTMLElement>('.streak')!.hidden=true;
   const notice=paused?'Paused':result==='won'?(run?'Foundry cleared. Blade unlocked.':'Sawlet defeated.'):result==='lost'?'Core offline. Retry available.':result==='upgrade'?'Wave cleared. Choose one of three upgrades.':run?.phase.kind==='boss'?'Scrap-Rex. Boss encounter.':run?.phase.kind==='fight'?`Wave ${run.phase.wave+1} of 4.`:'First contact.';if(notice!==lastAnnouncement){announcement.textContent=notice;lastAnnouncement=notice;}
   if(result!==lastResult){if(!paused){if(result==='upgrade')choiceRoot.querySelector<HTMLButtonElement>('button')?.focus({preventScroll:true});else if(result==='won'||result==='lost')overlay.querySelector<HTMLButtonElement>('.retry')!.focus({preventScroll:true});}lastResult=result;app.setAttribute('aria-label',result==='won'?(run?'Foundry cleared. Blade unlocked.':'Sawlet defeated'):result==='lost'?'Core offline':'Foundry fight');}
  };
@@ -140,7 +144,7 @@ function animate(time:number){
  const delta=Math.min((time-lastTime)/1000,.1);lastTime=time;
  if(!measuring&&ready){
   if(playing&&sim){
-   if(!frozen&&!paused&&!options.isOpen()){accumulator=Math.min(.1,accumulator+delta);while(accumulator>=1/60){const command=input!.sample(tuning.azimuth,tuning.elevation);if(paused)break;if(snapshot&&'phase' in snapshot&&snapshot.phase.kind==='upgrade'&&command.choice!==undefined)command.upgrade=snapshot.phase.choices[command.choice];step(command);accumulator-=1/60;}}
+   if(!frozen&&!paused&&!options.isOpen()){accumulator=Math.min(.1,accumulator+delta*(time<slowUntil?tuning.bossSlowScale:1));while(accumulator>=1/60){const command=input!.sample(tuning.azimuth,tuning.elevation);if(paused)break;if(snapshot&&'phase' in snapshot&&snapshot.phase.kind==='upgrade'&&command.choice!==undefined)command.upgrade=snapshot.phase.choices[command.choice];step(command);accumulator-=1/60;}}
    else if(paused)input?.sample(tuning.azimuth,tuning.elevation);
    if(snapshot){tuning.coreRadius=gameTuning.heroRadius;const alpha=frozen||paused?1:accumulator*60;applySnapshot(alpha);view.renderAt(Math.max(0,snapshot.tick-1+alpha));drawHUD();}
   }else{if(!frozen)tick+=delta*60;view.renderAt(tick);}
@@ -176,21 +180,21 @@ if (import.meta.env.DEV) {
     control.addEventListener('change',()=>{const candidate={...gameTuning,[key]:Number(control.value)};const valid=tuningSchema.safeParse(candidate);if(!valid.success)return;gameTuning=valid.data;pendingTuning={...gameTuning};});label.append(control);panel.append(label);
   }
   app.append(panel); app.querySelector('.settings')!.addEventListener('click', () => panel.hidden = !panel.hidden); panel.querySelector('button')!.addEventListener('click', () => panel.hidden = true);
-  let benchmarkEvents:Record<string,number>={};
+  let benchmarkPeak={calls:0,triangles:0};let benchmarkEvents:Record<string,number>={};
   let benchmarkWork:{step:number[];render:number[];hud:number[]}={step:[],render:[],hud:[]};
   const api={
     ready:false,coreMask:(value:boolean)=>view.setCoreMask(value),setTick:(n:number)=>{frozen=true;if(playing){restart();for(let i=0;i<n;i++)step(idleCommand);applySnapshot(1);}tick=n;view.renderAt(n);drawHUD();},
     state:()=>sim?.view(), advance:(commands:Command[])=>{frozen=true;for(const command of commands)step(command);view.renderAt(tick);drawHUD();return sim?.view();},
     restart:()=>{restart();frozen=false;}, replay:()=>({version:3,mode:trial?'trial':'run',tuning:recordingTuning,loadout:snapshot&&'loadout' in snapshot?snapshot.loadout:'core',commands:recording,final:sim?.view()}),
-    play: () => { frozen = false; }, metadata: ()=>({...view.metadata(),benchmarkEvents,benchmarkWork,fight:snapshot?{hp:snapshot.hero.hp,...('enemy' in snapshot?{enemyHP:snapshot.enemy.hp,enemyPhase:snapshot.enemy.behavior.kind}:{phase:snapshot.phase,enemies:snapshot.enemies.length,alive:snapshot.enemies.filter(e=>e.hp>0).length,projectiles:snapshot.projectiles.length}),charges:snapshot.hero.charges,heat:snapshot.hero.heat,overdrive:snapshot.hero.overdrive}:undefined}),
+    play: () => { frozen = false; }, metadata: ()=>({...view.metadata(),benchmarkPeak,benchmarkEvents,benchmarkWork,fight:snapshot?{hp:snapshot.hero.hp,...('enemy' in snapshot?{enemyHP:snapshot.enemy.hp,enemyPhase:snapshot.enemy.behavior.kind}:{phase:snapshot.phase,enemies:snapshot.enemies.length,alive:snapshot.enemies.filter(e=>e.hp>0).length,projectiles:snapshot.projectiles.length}),charges:snapshot.hero.charges,heat:snapshot.hero.heat,overdrive:snapshot.hero.overdrive}:undefined}),
     measure: async (count: number, fixture?:Command[]) => {
       measuring = true; frozen = true; if(playing&&fixture){const parsed=tuningSchema.safeParse(fixture[0]?.tuning);if(parsed.success)gameTuning=parsed.data;restart();for(const command of fixture)step(command);}
       else if(playing){const base={...gameTuning};restart();if(!trial){
        step({x:0,z:0,dash:false,tuning:{...base,heroHP:10000,pulseDamage:1000,pulseRadius:60,pulseCooldownTicks:1}});
        for(let i=0;i<40;i++){if(snapshot&&'phase' in snapshot&&snapshot.phase.kind==='fight'&&snapshot.phase.wave===3)break;step(snapshot&&'phase' in snapshot&&snapshot.phase.kind==='upgrade'?{...idleCommand,upgrade:snapshot.phase.choices[0]}:{...idleCommand,ability:'pulse'});}
        step({...idleCommand,tuning:{...base,heroHP:10000}});
-      }} benchmarkEvents={}; benchmarkWork={step:[],render:[],hud:[]}; const times: number[] = []; let previous = await new Promise<number>(resolve => requestAnimationFrame(resolve));
-      try { for (let i = 0; i < count; i++) { const now = await new Promise<number>(resolve => requestAnimationFrame(resolve)); times.push(now - previous); previous = now; const start=performance.now(); if(playing){step(trial?(i<110?idleCommand:{x:1,z:0,dash:i===110||i===155}):{x:i%120<60?.4:-.4,z:.2,dash:i%70===0,ability:i%120===20?'pulse':i%140===40?'stomp':undefined,overdrive:i===80});for(const event of snapshot?.events??[])benchmarkEvents[event.kind]=(benchmarkEvents[event.kind]??0)+1;}else tick=i;const stepped=performance.now();view.renderAt(tick);const rendered=performance.now();drawHUD();const finished=performance.now();benchmarkWork.step.push(stepped-start);benchmarkWork.render.push(rendered-stepped);benchmarkWork.hud.push(finished-rendered); } }
+      }} benchmarkPeak={calls:0,triangles:0};benchmarkEvents={}; benchmarkWork={step:[],render:[],hud:[]}; const times: number[] = []; let previous = await new Promise<number>(resolve => requestAnimationFrame(resolve));
+      try { for (let i = 0; i < count; i++) { const now = await new Promise<number>(resolve => requestAnimationFrame(resolve)); times.push(now - previous); previous = now; const start=performance.now(); if(playing){step(trial?(i<110?idleCommand:{x:1,z:0,dash:i===110||i===155}):{x:i%120<60?.4:-.4,z:.2,dash:i%70===0,ability:i%120===20?'pulse':i%140===40?'stomp':undefined,overdrive:i===80});for(const event of snapshot?.events??[])benchmarkEvents[event.kind]=(benchmarkEvents[event.kind]??0)+1;}else tick=i;const stepped=performance.now();view.renderAt(tick);const frame=view.frameBudget();benchmarkPeak.calls=Math.max(benchmarkPeak.calls,frame.calls);benchmarkPeak.triangles=Math.max(benchmarkPeak.triangles,frame.triangles);const rendered=performance.now();drawHUD();const finished=performance.now();benchmarkWork.step.push(stepped-start);benchmarkWork.render.push(rendered-stepped);benchmarkWork.hud.push(finished-rendered); } }
       finally { measuring = false; }
       return times;
     }

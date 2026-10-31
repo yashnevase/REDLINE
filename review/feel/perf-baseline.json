@@ -1,0 +1,344 @@
+{
+  "headed": true,
+  "hardwareGPUVerified": true,
+  "physicalPhone": false,
+  "scenario": "enraged Rex + six adds; deterministic high-HP stress fixture",
+  "reports": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "dpr": 2,
+      "quality": "standard",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)"
+      },
+      "p50": 16.699999999999818,
+      "p95": 17.09999999999991,
+      "p99": 17.600000000000364,
+      "calls": 183,
+      "triangles": 133846,
+      "metadata": {
+        "scene": "perf-worst",
+        "seed": 4107,
+        "tick": 1718,
+        "simTick": 1718,
+        "camera": {
+          "width": 24.533333333333335,
+          "height": 13.8,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "openCentre": 26
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.08985507246376812
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 183,
+        "triangles": 133846,
+        "benchmarkEvents": {
+          "dash": 3,
+          "bonk": 7,
+          "pulse": 2,
+          "stomp": 1,
+          "overdrive": 1
+        },
+        "fight": {
+          "hp": 9729.5,
+          "phase": {
+            "kind": "boss",
+            "boss": {
+              "x": 8.028961129496803,
+              "z": 6.687944276228888,
+              "prevX": 8.05093213498222,
+              "prevZ": 6.652541083871829,
+              "hp": 100,
+              "sequence": 11,
+              "faceX": -0.5273041316499961,
+              "faceZ": 0.849676616569412,
+              "behavior": {
+                "kind": "recover",
+                "remaining": 36
+              }
+            }
+          },
+          "enemies": 6,
+          "alive": 6,
+          "projectiles": 0,
+          "charges": 2,
+          "heat": 0,
+          "overdrive": 207
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "dpr": 2,
+      "quality": "low",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)"
+      },
+      "p50": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "p99": 17.5,
+      "calls": 161,
+      "triangles": 131374,
+      "metadata": {
+        "scene": "perf-worst",
+        "seed": 4107,
+        "tick": 1718,
+        "simTick": 1718,
+        "camera": {
+          "width": 24.533333333333335,
+          "height": 13.8,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "openCentre": 26
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.08985507246376812
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 161,
+        "triangles": 131374,
+        "benchmarkEvents": {
+          "dash": 3,
+          "bonk": 7,
+          "pulse": 2,
+          "stomp": 1,
+          "overdrive": 1
+        },
+        "fight": {
+          "hp": 9729.5,
+          "phase": {
+            "kind": "boss",
+            "boss": {
+              "x": 8.028961129496803,
+              "z": 6.687944276228888,
+              "prevX": 8.05093213498222,
+              "prevZ": 6.652541083871829,
+              "hp": 100,
+              "sequence": 11,
+              "faceX": -0.5273041316499961,
+              "faceZ": 0.849676616569412,
+              "behavior": {
+                "kind": "recover",
+                "remaining": 36
+              }
+            }
+          },
+          "enemies": 6,
+          "alive": 6,
+          "projectiles": 0,
+          "charges": 2,
+          "heat": 0,
+          "overdrive": 207
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "dpr": 2,
+      "quality": "standard",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)"
+      },
+      "p50": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "p99": 17.59999999999991,
+      "calls": 183,
+      "triangles": 133846,
+      "metadata": {
+        "scene": "perf-worst",
+        "seed": 4107,
+        "tick": 1718,
+        "simTick": 1718,
+        "camera": {
+          "width": 29.864615384615384,
+          "height": 13.8,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "openCentre": 26
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.08985507246376812
+        },
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 183,
+        "triangles": 133846,
+        "benchmarkEvents": {
+          "dash": 3,
+          "bonk": 7,
+          "pulse": 2,
+          "stomp": 1,
+          "overdrive": 1
+        },
+        "fight": {
+          "hp": 9729.5,
+          "phase": {
+            "kind": "boss",
+            "boss": {
+              "x": 8.028961129496803,
+              "z": 6.687944276228888,
+              "prevX": 8.05093213498222,
+              "prevZ": 6.652541083871829,
+              "hp": 100,
+              "sequence": 11,
+              "faceX": -0.5273041316499961,
+              "faceZ": 0.849676616569412,
+              "behavior": {
+                "kind": "recover",
+                "remaining": 36
+              }
+            }
+          },
+          "enemies": 6,
+          "alive": 6,
+          "projectiles": 0,
+          "charges": 2,
+          "heat": 0,
+          "overdrive": 207
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "dpr": 2,
+      "quality": "low",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)"
+      },
+      "p50": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "p99": 17.40000000000009,
+      "calls": 161,
+      "triangles": 131374,
+      "metadata": {
+        "scene": "perf-worst",
+        "seed": 4107,
+        "tick": 1718,
+        "simTick": 1718,
+        "camera": {
+          "width": 29.864615384615384,
+          "height": 13.8,
+          "elevation": 30,
+          "azimuth": 45,
+          "squash": 0.49999999999999994
+        },
+        "arena": {
+          "width": 48,
+          "depth": 48,
+          "openCentre": 26
+        },
+        "core": {
+          "assetVersion": "reference-10",
+          "studioCandidate": false,
+          "socketsLoaded": true,
+          "industrialParts": 98,
+          "finish": "blue-violet painted chrome",
+          "sheen": 0.6,
+          "screenHeightRatio": 0.08985507246376812
+        },
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "renderer": "WebKit WebGL",
+        "calls": 161,
+        "triangles": 131374,
+        "benchmarkEvents": {
+          "dash": 3,
+          "bonk": 7,
+          "pulse": 2,
+          "stomp": 1,
+          "overdrive": 1
+        },
+        "fight": {
+          "hp": 9729.5,
+          "phase": {
+            "kind": "boss",
+            "boss": {
+              "x": 8.028961129496803,
+              "z": 6.687944276228888,
+              "prevX": 8.05093213498222,
+              "prevZ": 6.652541083871829,
+              "hp": 100,
+              "sequence": 11,
+              "faceX": -0.5273041316499961,
+              "faceZ": 0.849676616569412,
+              "behavior": {
+                "kind": "recover",
+                "remaining": 36
+              }
+            }
+          },
+          "enemies": 6,
+          "alive": 6,
+          "projectiles": 0,
+          "charges": 2,
+          "heat": 0,
+          "overdrive": 207
+        }
+      }
+    }
+  ]
+}

@@ -18,6 +18,7 @@ import {loadPreferences,savePreferences} from '../save/preferences.ts';
 import {makePreferences} from '../ui/preferences.ts';
 import {loadProfile,saveProfile} from '../save/profile.ts';
 import {awardBlade,equipProfile} from '../content/profile.ts';
+import {runSchema} from '../sim/run-schema.ts';
 import {createRunSimulation} from '../sim/run-runtime.ts';
 import {upgradedTuning} from '../content/upgrades.ts';
 import { makeScene, type SceneName, type Tuning } from '../presentation/scene.ts';
@@ -59,7 +60,7 @@ ${studio ? `
 <section class="chapter-card"><span class="eyebrow">CHAPTER 01</span><h1>The Foundry</h1><p>Steel, heat & momentum.</p><div class="chapter-pips"><span class="selected"></span><span></span><span></span><span></span></div><div class="chapter-meta"><span>BASE FORM</span><b>CORE</b></div></section>
 <div class="pilot"><div class="pilot-icon">${icon('core')}</div><div><b>Core</b><span>VIOLET CHROME · BASE FORM</span></div></div>
 <div class="lobby-actions"><a class="practice" href="?scene=combat-readability">${icon('pulse')}<span>Effects preview</span></a><a class="play" href="?scene=arena"><span>${icon('play')}</span>Enter Foundry</a></div>
-<section class="loadout-panel" aria-label="Equip form"><span class="eyebrow">LOADOUT</span><div><button data-equip="core">Core</button><button data-equip="blade">Blade · Locked</button></div><small class="save-status"></small></section><div class="preview-note">CHAPTER 01 · FOUR WAVES</div>` : `
+<section class="loadout-panel" aria-label="Equip form"><span class="eyebrow">LOADOUT</span><div><button data-equip="core">Core</button><button data-equip="blade">Blade · Locked</button></div><small class="save-status"></small></section><div class="preview-note">CHAPTER 01 · 3 LEVELS → SCRAP-REX</div>` : `
 <aside class="combat-label"><span>${sceneName === 'combat-readability' ? 'PULSE BASH' : sceneName === 'enemy-lineup' ? 'ENEMY LINEUP' : 'FOUNDRY / 01'}</span><small>${sceneName === 'combat-readability' ? 'LOOPING EFFECTS PREVIEW' : sceneName === 'enemy-lineup' ? 'ENEMY MODEL PREVIEW' : 'VISUAL PREVIEW'}</small></aside>
 <aside class="roster"><div class="portrait">${icon('core')}</div><div><b>CORE</b><span>BASE FORM</span><i></i></div></aside>
 <div class="health"><div class="health-label"><span>CORE INTEGRITY</span><b>100 / 100</b></div><div class="health-track"><i></i></div><div class="heat"><span>HEAT</span><div></div><span>0%</span></div></div>
@@ -90,7 +91,7 @@ function refreshLoadout(){
  if(!studio)return;const core=app.querySelector<HTMLButtonElement>('[data-equip=core]')!,blade=app.querySelector<HTMLButtonElement>('[data-equip=blade]')!;
  core.setAttribute('aria-pressed',String(profile.equipped==='core'));blade.disabled=!profile.bladeUnlocked;blade.textContent=profile.bladeUnlocked?'Blade':'Blade · Locked';blade.setAttribute('aria-pressed',String(profile.equipped==='blade'));
  app.querySelector('.save-status')!.textContent=saveAvailable?(profile.bladeUnlocked?'Blade unlocked · saved on this device':'Defeat Scrap-Rex to unlock Blade'):'Local saving unavailable · progress kept for this visit';
- view.setLoadout(profile.equipped);const q=app.querySelector('.loadout-q');if(q){q.textContent=profile.equipped==='blade'?'Blade Spin':'Pulse Bash';app.querySelector('.loadout-q-detail')!.textContent=profile.equipped==='blade'?'360° cleave · 2 s':'Radial burst · 2 s';}app.querySelector('.scene-title small')!.textContent=profile.equipped==='blade'?'BLADE EQUIPPED':'BASE FORM';app.querySelector('.pilot>div>span')!.textContent=profile.equipped==='blade'?'VIOLET CHROME · BLADE':'VIOLET CHROME · BASE FORM';app.querySelector('.chapter-meta b')!.textContent=profile.equipped.toUpperCase();
+ view.setLoadout(profile.equipped);const q=app.querySelector('.loadout-q');if(q){q.textContent='Blade Spin';app.querySelector('.loadout-q-detail')!.textContent='3-hit whirlwind · 2 s';}app.querySelector('.scene-title small')!.textContent=profile.equipped==='blade'?'BLADE EQUIPPED':'BASE FORM';app.querySelector('.pilot>div>span')!.textContent=profile.equipped==='blade'?'VIOLET CHROME · BLADE':'VIOLET CHROME · BASE FORM';app.querySelector('.chapter-meta b')!.textContent=profile.equipped.toUpperCase();
 }
 if(studio){for(const form of ['core','blade'] as const)app.querySelector(`[data-equip=${form}]`)!.addEventListener('click',()=>{profile=equipProfile(profile,form);saveAvailable=saveProfile(profile);refreshLoadout();});refreshLoadout();}
 
@@ -201,7 +202,7 @@ if (import.meta.env.DEV) {
   let benchmarkPeak={calls:0,triangles:0};let benchmarkEvents:Record<string,number>={};
   let benchmarkWork:{step:number[];render:number[];hud:number[]}={step:[],render:[],hud:[]};
   const api={
-    ready:false,coreMask:(value:boolean)=>view.setCoreMask(value),setTick:(n:number)=>{frozen=true;if(playing){restart();for(let i=0;i<n;i++)step(idleCommand);applySnapshot(1);}tick=n;view.renderAt(n);drawHUD();},
+    ready:false,restoreFixture:(state:unknown,config:unknown)=>{if(!playing||trial)throw new Error('Run fixture requires a run scene');const data=runSchema.parse(state);gameTuning=tuningSchema.parse(config);restart();const saved=sim!.snapshot();if(!saved.ok)throw new Error('Fixture snapshot failed');const restored=sim!.restore({...saved.value,resources:{...saved.value.resources,'Redline/Run':data}});if(!restored.ok)throw new Error('Fixture restore failed');snapshot=sim!.view();frozen=true;tick=snapshot.tick;applySnapshot(1);view.renderAt(tick);drawHUD();},coreMask:(value:boolean)=>view.setCoreMask(value),setTick:(n:number)=>{frozen=true;if(playing){restart();for(let i=0;i<n;i++)step(idleCommand);applySnapshot(1);}tick=n;view.renderAt(n);drawHUD();},
     queueCommands:(commands:Command[])=>{queuedCommands?.splice(0,queuedCommands.length,...commands);frozen=false;paused=false;},state:()=>sim?.view(), advance:(commands:Command[])=>{frozen=true;for(const command of commands)step(command);view.renderAt(tick);drawHUD();return sim?.view();},
     restart:()=>{restart();frozen=false;}, replay:()=>({version:3,mode:trial?'trial':'run',tuning:recordingTuning,loadout:snapshot&&'loadout' in snapshot?snapshot.loadout:'core',commands:recording,final:sim?.view()}),
     play: () => { frozen = false; }, metadata: ()=>({...view.metadata(),benchmarkPeak,benchmarkEvents,benchmarkWork,fight:snapshot?{hp:snapshot.hero.hp,...('enemy' in snapshot?{enemyHP:snapshot.enemy.hp,enemyPhase:snapshot.enemy.behavior.kind}:{phase:snapshot.phase,enemies:snapshot.enemies.length,alive:snapshot.enemies.filter(e=>e.hp>0).length,projectiles:snapshot.projectiles.length}),charges:snapshot.hero.charges,heat:snapshot.hero.heat,overdrive:snapshot.hero.overdrive}:undefined}),

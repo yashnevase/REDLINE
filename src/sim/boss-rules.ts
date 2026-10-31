@@ -1,3 +1,4 @@
+import {exposeBossPlates} from './f3-weak-spot.ts';
 import type {Boss,RunState} from './run-schema.ts';
 import {spawnEnemy} from './run-schema.ts';
 import type {CombatTuning} from '../content/combat.ts';
@@ -5,11 +6,11 @@ import {bossStage,bossPatterns} from '../content/boss.ts';
 import {collide,direction} from './geometry.ts';
 import type {Emit} from './hero.ts';
 export function stepBoss(b:Boss,s:RunState,t:CombatTuning,hurt:(amount:number)=>void,event:Emit){
- const h=s.hero,stage=bossStage(b.hp,t),enraged=stage===4,speed=enraged?t.bossEnrageSpeed:1,mult=enraged?t.bossEnrageDamage:1;
- const recover=()=>{b.behavior={kind:'recover',remaining:Math.max(1,Math.round(t.bossRecoveryTicks/speed))};};
+ if(b.exposed>0)b.exposed--;const h=s.hero,stage=bossStage(b.hp,t),enraged=stage===4,speed=enraged?t.bossEnrageSpeed:1,mult=enraged?t.bossEnrageDamage:1;
+ const recover=(heavy=true)=>{exposeBossPlates(b,t,heavy);b.behavior={kind:'recover',remaining:Math.max(1,Math.round(t.bossRecoveryTicks/speed))};};
  const state=b.behavior;
  if(state.kind==='recover'){
-  const d=direction(h.x-b.x,h.z-b.z);b.faceX=d.x;b.faceZ=d.z;
+  const d=direction(h.x-b.x,h.z-b.z);if(!b.exposed){b.faceX=d.x;b.faceZ=d.z;}
   if(state.remaining>1){state.remaining--;const dist=Math.sqrt((h.x-b.x)**2+(h.z-b.z)**2),step=Math.min(t.bossMoveSpeed/60,Math.max(0,dist-t.bossRadius-t.heroRadius-.35));const p=collide(b.x+d.x*step,b.z+d.z*step,t.bossRadius,t);b.x=p.x;b.z=p.z;return;}
   const engaged=new Set(s.enemies.filter(e=>e.hp>0&&(e.behavior.kind==='windup'||e.behavior.kind==='lunge')).map(e=>e.id));for(const p of s.projectiles)engaged.add(p.owner);if(engaged.size>=t.attackerCap)return;
   const pattern=bossPatterns[stage],move=pattern[b.sequence++%pattern.length];
@@ -39,6 +40,6 @@ export function stepBoss(b:Boss,s:RunState,t:CombatTuning,hurt:(amount:number)=>
   for(const point of state.targets){if(Math.sqrt((h.x-point.x)**2+(h.z-point.z)**2)<t.bossVolleyRadius+t.heroRadius)hurt(t.bossVolleyDamage*mult);event('stomp',point.x,point.z,0,t.bossVolleyRadius);}recover();
  }
  if(state.kind==='summon-warning'){
-  s.enemies=s.enemies.filter(e=>e.hp>0);for(const point of state.targets){if(s.enemies.length>=Math.min(6,t.enemyCap-1))break;const e=spawnEnemy('sawlet',b.sequence*10+s.enemies.length,4,t);Object.assign(e,{x:point.x,z:point.z,prevX:point.x,prevZ:point.z});s.enemies.push(e);}recover();
+  s.enemies=s.enemies.filter(e=>e.hp>0);for(const point of state.targets){if(s.enemies.length>=Math.min(6,t.enemyCap-1))break;const e=spawnEnemy('sawlet',b.sequence*10+s.enemies.length,4,t);Object.assign(e,{x:point.x,z:point.z,prevX:point.x,prevZ:point.z});s.enemies.push(e);}recover(false);
  }
 }

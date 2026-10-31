@@ -1,3 +1,4 @@
+import {makeExposedPlates} from './f3-exposed-plates.ts';
 import {coversHero,makeOcclusionFade} from './occlusion.ts';
 import {makeLaneWarning} from './lane-warning.ts';
 import {saw} from './industrial.ts';
@@ -44,7 +45,7 @@ export function makeBossPresentation(world:T.Group,m:Materials){
  for(const points of paths)for(let i=1;i<points.length;i++){const a=points[i-1],b=points[i],length=Math.hypot(b[0]-a[0],b[1]-a[1]),x=-(b[1]-a[1])/length*.012,y=(b[0]-a[0])/length*.012;shellPatch(crackSurface,[[a[0]+x,a[1]+y],[b[0]+x,b[1]+y],[b[0]-x,b[1]-y],[a[0]-x,a[1]-y]],m.red,.05,0);}
  for(const angle of [Math.PI/2,Math.PI,-Math.PI/2]){const side=crackSurface.clone(true);side.rotation.y=angle;cracks.add(side);}cracks.visible=false;
  const steam=new T.InstancedMesh(new T.IcosahedronGeometry(.2,0),new T.MeshBasicMaterial({color:'#cdc1db',transparent:true,opacity:.25,depthWrite:false}),12);root.add(steam);steam.visible=false;const steamDummy=new T.Object3D();
- const finalize=()=>{batchParts(cracks);batchActor(body,m.rustPaint,[cracks]);for(const arm of arms)batchActor(arm,m.rustPaint);batchParts(root,[body,...arms,steam]);fade=makeOcclusionFade(root);};
+ const exposedPlates=makeExposedPlates(body);const finalize=()=>{batchParts(cracks);batchActor(body,m.rustPaint,[cracks]);for(const arm of arms)batchActor(arm,m.rustPaint);batchParts(root,[body,...arms,steam]);fade=makeOcclusionFade(root);exposedPlates.install();};
  let fade=makeOcclusionFade(root);
  const warnings=new T.Group();world.add(warnings);
  const warnMat=new T.MeshBasicMaterial({color:'#ff4d63',transparent:true,opacity:.24,depthWrite:false,side:T.DoubleSide,toneMapped:false});
@@ -53,11 +54,11 @@ export function makeBossPresentation(world:T.Group,m:Materials){
  const sweepEdge=new T.Mesh(new T.RingGeometry(.98,1,80),new T.MeshBasicMaterial({color:'#ff9b9e',transparent:true,opacity:.85,depthWrite:false,side:T.DoubleSide,toneMapped:false}));sweepEdge.rotation.x=-Math.PI/2;warnings.add(sweepEdge);
  const crates=Array.from({length:5},()=>{const group=new T.Group();warnings.add(group);const ring=new T.Mesh(new T.RingGeometry(.9,1,40),new T.MeshBasicMaterial({color:'#ff9b9e',transparent:true,opacity:.85,depthWrite:false,side:T.DoubleSide,toneMapped:false}));ring.rotation.x=-Math.PI/2;group.add(ring);const crate=new T.Mesh(new T.BoxGeometry(.8,.8,.8),m.rustLight);group.add(crate);return{group,ring,crate};});
  let lastGap=-1;root.visible=false;warnings.visible=false;
- function draw(b:Boss,tick:number,alpha:number,t:CombatTuning,reducedMotion=false,camera?:T.Camera,hero?:{x:number;y:number;z:number;radius:number}){
+ function draw(b:Boss,tick:number,alpha:number,t:CombatTuning,reducedMotion=false,camera?:T.Camera,hero?:{x:number;y:number;z:number;radius:number},reducedFlashes=false){
   cracks.visible=bossStage(b.hp,t)===4;steam.visible=cracks.visible;if(steam.visible){for(let i=0;i<12;i++){const p=(tick/75+i*.13)%1;steamDummy.position.set(Math.sin(i*2.4)*1.5,2.85+p*1.8,Math.cos(i*2.4)*1.3);steamDummy.scale.setScalar(Math.sin(p*Math.PI)*(reducedMotion?.6:1));steamDummy.updateMatrix();steam.setMatrixAt(i,steamDummy.matrix);}steam.instanceMatrix.needsUpdate=true;steam.computeBoundingSphere();}root.visible=true;warnings.visible=true;root.position.set(b.prevX+(b.x-b.prevX)*alpha,0,b.prevZ+(b.z-b.prevZ)*alpha);root.scale.setScalar(t.bossRadius/1.6);root.rotation.y=Math.atan2(b.faceX,b.faceZ);body.rotation.y=0;body.position.y=2.5+(reducedMotion?0:Math.sin(tick/30)*.05);
   fade(!!camera&&!!hero&&coversHero(camera,hero,{x:b.x,y:2.5,z:b.z,radius:t.bossRadius}));
   charge.root.visible=false;sweep.visible=false;sweepEdge.visible=false;for(const c of crates)c.group.visible=false;
-  const state=b.behavior;arms.forEach((arm,i)=>arm.rotation.z=reducedMotion?0:state.kind==='charge'?(i===0?-.28:.28):Math.sin(tick/30+i)*.04);
+  exposedPlates.draw(b.exposed>0,reducedFlashes);const state=b.behavior;arms.forEach((arm,i)=>arm.rotation.z=reducedMotion?0:state.kind==='charge'?(i===0?-.28:.28):Math.sin(tick/30+i)*.04);
   if(state.kind==='chomp-warning'){
    const length=t.bossChompSpeed*t.bossChompTicks/60*(bossStage(b.hp,t)===4?t.bossEnrageSpeed:1);charge.root.visible=true;charge.draw(b.x-state.dx*t.bossRadius,b.z-state.dz*t.bossRadius,state.dx,state.dz,t.bossRadius*2,length+t.bossRadius*2,1-state.remaining/t.bossChompWindupTicks);
   }

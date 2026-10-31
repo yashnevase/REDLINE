@@ -1,3 +1,4 @@
+import {makeBossGuide,phaseBarMarkup} from '../ui/f3-boss-guide.ts';
 import {makeScoreDisplay} from '../ui/b6-score.ts';
 import {makeAbilityNames} from '../ui/b4-ability-names.ts';
 import {makeRosterHints} from '../ui/b2-roster-hints.ts';
@@ -106,7 +107,8 @@ if(playing){
  const announcement=document.createElement('div');announcement.className='sr-only';announcement.setAttribute('role','status');announcement.setAttribute('aria-live','polite');app.append(announcement);let lastAnnouncement='';
  const pause=document.createElement('button');pause.className='pause';pause.setAttribute('aria-label','Pause fight');pause.textContent='Ⅱ';app.append(pause);pause.addEventListener('click',togglePause);
  const bars=Array.from({length:12},()=>{const bar=document.createElement('div');bar.className='enemy-health';bar.hidden=true;bar.innerHTML='<i></i>';app.append(bar);return bar;});
- const bossBar=document.createElement('section');bossBar.className='boss-health';bossBar.hidden=true;bossBar.innerHTML='<span>SCRAP-REX</span><b></b><div><i></i></div>';app.append(bossBar);
+ const bossGuide=makeBossGuide(app,()=>{paused=true;clearInput();accumulator=0;},()=>{paused=false;clearInput();accumulator=0;});
+ const bossBar=document.createElement('section');bossBar.className='boss-health';bossBar.hidden=true;bossBar.innerHTML='<span>SCRAP-REX</span><b></b><div><i></i>'+phaseBarMarkup()+'</div>';app.append(bossBar);
  const hp=document.createElement('div');hp.className='enemy-health';hp.setAttribute('aria-hidden','true');hp.innerHTML='<i></i>';app.append(hp);
  const overlay=document.createElement('section');overlay.className='fight-overlay';overlay.hidden=true;overlay.innerHTML='<span class="eyebrow">THE FOUNDRY</span><h1></h1><p></p><div class="upgrade-choices"></div><small class="upgrade-hint"></small><button class="resume">Resume</button><button class="retry">Fight again</button><a class="equip-reward" href="?scene=lobby">Equip Blade</a><a href="?scene=lobby">Return to lobby</a>';app.append(overlay);
  overlay.querySelector('.resume')!.addEventListener('click',togglePause);overlay.querySelector('.retry')!.addEventListener('click',restart);
@@ -114,9 +116,9 @@ if(playing){
  const dash=abilities.querySelector<HTMLElement>('.dash')!;input=makeInput(app.querySelector<HTMLElement>('.study-stick')!,dash,togglePause,restart);
  addEventListener('blur',()=>{clearInput();paused=true;accumulator=0;drawHUD();});document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInput();paused=true;accumulator=0;drawHUD();}});
  const scoreDisplay=makeScoreDisplay(app),abilityNames=makeAbilityNames(app),qualityCallouts=makeQualityCallouts(app),repairPop=makeRepairPop(app),feelHUD=makeFeelHUD(app);let lastResult='';
- resetHUD=()=>{feelHUD.reset();repairPop.reset();qualityCallouts.reset();abilityNames.reset();scoreDisplay.reset();cooldownPeek.pulse=cooldownPeek.boost=cooldownPeek.stomp=-1;slowUntil=0;slowScale=1;banner.reset();lastResult='';lastAnnouncement='';};
+ resetHUD=()=>{feelHUD.reset();bossGuide.reset();repairPop.reset();qualityCallouts.reset();abilityNames.reset();scoreDisplay.reset();cooldownPeek.pulse=cooldownPeek.boost=cooldownPeek.stomp=-1;slowUntil=0;slowScale=1;banner.reset();lastResult='';lastAnnouncement='';};
  drawHUD=()=>{if(!snapshot)return;const h=snapshot.hero,config=effectiveTuning(),run='enemies' in snapshot?snapshot:null,e='enemy' in snapshot?snapshot.enemy:null;
-  const isBoss=run?.phase.kind==='boss';bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=hp<=config.bossHP*.2?'SCRAP-REX · ENRAGED':'SCRAP-REX';bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
+  const isBoss=run?.phase.kind==='boss';bossGuide.update(isBoss);bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=`SCRAP-REX · PHASE ${bossStage(hp,config)}${run.phase.boss.exposed>0?' · EXPOSED':''}`;bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
   app.querySelector('.roster span')!.textContent=run?.loadout==='blade'?'BLADE EQUIPPED':'BASE FORM';
   const qButton=abilities.querySelector<HTMLElement>('[data-ability=pulse]')!;const form=run?.loadout??'core';if(qButton.dataset.form!==form){qButton.querySelector('svg')!.outerHTML=icon(form==='blade'?'blade':'pulse');qButton.dataset.form=form;}
   abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label','Blade Spin');

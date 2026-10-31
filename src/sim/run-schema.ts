@@ -10,7 +10,7 @@ import {collide} from './geometry.ts';
 const n=z.number().finite(),ticks=z.number().int().nonnegative();
 export const enemySchema=z.object({id:ticks,attackSerial:ticks.default(0),kind:z.enum(enemyKinds),x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),faceX:n,faceZ:n,behavior});
 const target=z.object({x:n,z:n});
-export const bossSchema=z.object({x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),sequence:ticks,faceX:n,faceZ:n,behavior:z.discriminatedUnion('kind',[
+export const bossSchema=z.object({exposed:ticks.default(0),x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),sequence:ticks,faceX:n,faceZ:n,behavior:z.discriminatedUnion('kind',[
  z.object({kind:z.literal('recover'),remaining:ticks}),
  z.object({kind:z.literal('chomp-warning'),remaining:ticks,dx:n,dz:n}),
  z.object({kind:z.literal('charge'),remaining:ticks,dx:n,dz:n,hasHit:z.boolean()}),
@@ -19,7 +19,7 @@ export const bossSchema=z.object({x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),seq
  z.object({kind:z.literal('summon-warning'),remaining:ticks,targets:z.array(target).max(3)})
 ])});
 export type Boss=z.infer<typeof bossSchema>;
-export function initialBoss(t:CombatTuning):Boss{return{x:6,z:0,prevX:6,prevZ:0,hp:t.bossHP,sequence:0,faceX:-1,faceZ:0,behavior:{kind:'recover',remaining:t.bossIntroTicks}};}
+export function initialBoss(t:CombatTuning):Boss{return{exposed:0,x:6,z:0,prevX:6,prevZ:0,hp:t.bossHP,sequence:0,faceX:-1,faceZ:0,behavior:{kind:'recover',remaining:t.bossIntroTicks}};}
 const phase=z.discriminatedUnion('kind',[
  z.object({kind:z.literal('fight'),wave:ticks,nextSpawn:ticks,nextSpawnIn:ticks.default(0)}),
  z.object({kind:z.literal('upgrade'),wave:ticks,choices:z.array(z.string()).length(3)}),

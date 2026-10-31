@@ -19,7 +19,7 @@ import {makePreferences} from '../ui/preferences.ts';
 import {loadProfile,saveProfile} from '../save/profile.ts';
 import {awardBlade,equipProfile} from '../content/profile.ts';
 import {createRunSimulation} from '../sim/run-runtime.ts';
-import {upgrades,upgradedTuning,upgradeDescription} from '../content/upgrades.ts';
+import {upgrades,upgradedTuning} from '../content/upgrades.ts';
 import { makeScene, type SceneName, type Tuning } from '../presentation/scene.ts';
 import { defaults, scenes } from '../content/scene.mjs';
 import {createSimulation} from '../sim/runtime.ts';
@@ -145,7 +145,7 @@ if(playing){
   overlay.querySelector('p')!.textContent=paused?'Take a breath.':result==='upgrade'?'Choose one. Your next wave starts when you’re ready.':result==='won'?(run?`Blade unlocked. Chapter 2 · Coming soon.${saveAvailable?'':' Local saving unavailable; the unlock could not be stored.'}`:'First contact complete. Ready for another round?'):'Watch the warning, then dash through the attack.';
   overlay.querySelector<HTMLElement>('.resume')!.hidden=!paused;overlay.querySelector<HTMLElement>('.retry')!.hidden=paused||result==='upgrade';
   const choiceRoot=overlay.querySelector<HTMLElement>('.upgrade-choices')!;const choices=run?.phase.kind==='upgrade'?run.phase.choices:[];choiceRoot.hidden=paused||result!=='upgrade';overlay.querySelector('.upgrade-hint')!.textContent=result==='upgrade'?'1 / 2 / 3 · GAMEPAD A / B / Y':'';
-  const signature=choices.join(',');if(choiceRoot.dataset.choices!==signature){choiceRoot.dataset.choices=signature;choiceRoot.replaceChildren();choices.forEach((id,i)=>{const data=upgrades.find(u=>u.id===id)!;const button=document.createElement('button');button.className='upgrade-card';button.dataset.rarity=upgradeRarity(id);button.innerHTML=upgradeCard(id,i,config,run?.loadout==='blade');button.addEventListener('click',()=>{step({x:0,z:0,dash:false,upgrade:id});clearInput();drawHUD();});choiceRoot.append(button);});}
+  const signature=choices.join(',');if(choiceRoot.dataset.choices!==signature){choiceRoot.dataset.choices=signature;choiceRoot.replaceChildren();choices.forEach((id,i)=>{const button=document.createElement('button');button.className='upgrade-card';button.dataset.rarity=upgradeRarity(id);button.innerHTML=upgradeCard(id,i,config,run?.loadout==='blade');button.addEventListener('click',()=>{step({x:0,z:0,dash:false,upgrade:id});clearInput();drawHUD();});choiceRoot.append(button);});}
   overlay.querySelector<HTMLElement>('.equip-reward')!.hidden=paused||result!=='won'||!run||!saveAvailable;
   pause.setAttribute('aria-label',paused?'Resume fight':'Pause fight');pause.textContent=paused?'▶':'Ⅱ';
   if('score' in snapshot){scoreDisplay.update(snapshot,preferences.reducedMotion);buildStrip.update(snapshot,paused);runResults.update(snapshot,config,levelGoals.reduce((a,b)=>a+b,0),paused);}abilityNames.update(snapshot.tick,snapshot.events);qualityCallouts.update(snapshot.tick,snapshot.events,preferences.reducedMotion);repairPop.update(snapshot.tick,snapshot.events);feelHUD.update(snapshot,preferences,config,paused||result!=='fighting');

@@ -4,11 +4,13 @@ import type {Preferences} from '../content/preferences.ts';
 import type {CombatTuning} from '../content/combat.ts';
 // All counters and DOM animation are cosmetic; this never changes simulation damage/rewards.
 export function makeFeelHUD(app:HTMLElement){
- const root=document.createElement('div');root.className='feel-hud';root.innerHTML='<div class="speed-streaks"></div><div class="damage-vignette"></div><div class="heat-grade"></div><aside class="streak" hidden><b></b><span>SCRAP STREAK</span></aside>';root.setAttribute('aria-hidden','true');app.append(root);
- const streak=root.querySelector<HTMLElement>('.streak')!,seen=new Set<string>();let chain=0,total=0,lastKill=-1000,lastTick=-1,damageAt=-1000,oldHP=-1,resultAt=-1;
+ const root=document.createElement('div');root.className='feel-hud';root.innerHTML='<div class="speed-streaks"></div><div class="overdrive-flash"></div><div class="impact-edge"></div><div class="damage-vignette"></div><div class="heat-grade"></div><aside class="streak" hidden><b></b><span>SCRAP STREAK</span></aside>';root.setAttribute('aria-hidden','true');app.append(root);
+ const streak=root.querySelector<HTMLElement>('.streak')!,seen=new Set<string>();let chain=0,total=0,lastKill=-1000,lastTick=-1,damageAt=-1000,oldHP=-1,heavyAt=-1000,overdriveAt=-1000,resultAt=-1;
  const result=document.createElement('div');result.className='result-count';app.querySelector('.fight-overlay')?.append(result);
- return{reset:()=>{seen.clear();chain=total=0;lastKill=damageAt=-1000;lastTick=-1;resultAt=-1;oldHP=-1;streak.hidden=true;},update:(s:RunState|FightState,prefs:Preferences,t:CombatTuning,hidden:boolean)=>{
+ return{reset:()=>{seen.clear();chain=total=0;lastKill=damageAt=-1000;lastTick=-1;resultAt=-1;oldHP=-1;heavyAt=overdriveAt=-1000;streak.hidden=true;},update:(s:RunState|FightState,prefs:Preferences,t:CombatTuning,hidden:boolean)=>{
   if(s.tick<lastTick){seen.clear();chain=total=0;lastKill=damageAt=-1000;resultAt=-1;}lastTick=s.tick;
+  if(s.events.some(e=>e.kind==='overdrive'))overdriveAt=s.tick;app.style.setProperty('--od-flash',String(prefs.reducedFlashes?0:Math.max(0,1-(s.tick-overdriveAt)/12)));
+  if(s.events.some(e=>['pulse','blade','stomp'].includes(e.kind)||e.kind==='bonk'&&e.amount>=14))heavyAt=s.tick;app.style.setProperty('--heavy-flash',String(prefs.reducedFlashes?0:Math.max(0,1-(s.tick-heavyAt)/2)));
   if(oldHP>=0&&s.hero.hp<oldHP)damageAt=s.tick;oldHP=s.hero.hp;
   for(const event of s.events){if(seen.has(event.id))continue;seen.add(event.id);if(event.kind==='defeat'){if(s.tick-lastKill>180)chain=0;chain++;total++;lastKill=s.tick;streak.querySelector('b')!.textContent=`×${chain>=10?10:chain>=5?5:3}`;streak.dataset.tier=String(chain>=10?10:chain>=5?5:3);streak.style.animation='none';void streak.offsetWidth;streak.style.animation='';}}
   if(seen.size>512){seen.clear();for(const event of s.events)seen.add(event.id);}

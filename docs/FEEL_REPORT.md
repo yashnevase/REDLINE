@@ -1,115 +1,87 @@
-# FEEL_SPRINT report · 2026-10-31
+# FEEL_SPRINT_2 report · 2026-10-31
 
-Implementation checkpoint for owner review. All approved Chapter 1 phases remain implemented. The sprint improves pace, feedback, camera, motion, atmosphere, overlays and HUD, with measured Mac gameplay budgets met. **Owner feel acceptance remains open. Physical-phone performance/thumb-zone checks are explicitly unverified: the owner answered “No phone available now; record this gate as unverified.”**
+Sections 1–6 are implemented and verified for owner review. Owner explicitly replaced section 7: ignore the physical-phone gate, support responsive keyboard/touch/controller input and do not deploy. That gate is out of this sprint's scope. Measurements below are from the Mac; they do not certify every physical device. Final art, punch and fun acceptance remain with the owner.
 
-## What changed
+The previous report/source/evidence are preserved at Git tag `feel-sprint`; this report describes `feel-sprint-2`. `docs/FEEL_SPRINT_2.md` is the unchanged supplied request. The brief records the owner-directed amendment.
 
-- Five opening threats, saved deterministic stagger queue, formations 8 / 9 / 11 / 12, quicker approach/recovery and earlier Heat. Full clear plus upgrade selection, twelve live/three attack caps, dash family, boss phases, local Blade/profile rules remain. No cosmetic streak damage multiplier or new reward/mechanic.
-- Gameplay Core ports and industrial LOD, fewer curved-patch subdivisions, vertex-colour/emission palette batching, hidden under-hull/far-corner culling. Low uses flat tile tops, simple hull, fewer effects and skipped distant decoration; it changes geometry, not only DPR. Detailed Core study hardware stays in the diagnostic studio. Lobby/workshop use the game Core/kit.
-- Tiered fixed-step hit-stop, sparks/rings/cracks, rust kill shards/gear/smoke, font-ready damage textures, pixel-scaled numbers with rapid-hit merging, readable killing-blow numbers, orange heavy text and cosmetic ×3/×5/×10 streaks. Armor can reduce damage while preserving ability hit-stop. Low reserves a number beside ability FX.
-- Critically damped movement look-ahead, camera slab clamp, combined dash/impact zoom targets, micro-shake and skipped covering corner clusters. Acceleration squash, tilt/eye lean, three violet dash ghosts, turn/landing dust, charge particles, Spin ribbons, Stomp cracks and Overdrive aura/shimmer.
-- Enemy anticipation/tint, spinning saw anticipation, throw recoil, flinch/wobble, phase-offset bob, drop-in rings and death pop. Nebula UV drift, star parallax/twinkle, dust, satellite bob, conduit pulses, chasing Heat-reactive edge cells, fourth-kill edge pulse, floor sweep, damage vignette and Heat grade.
-- Edge-positioned, dismissible wave/Overdrive/boss/phase name plates and phase roar rings (visual only); upgrade springs, results count-up, cooldown/ready pops, button springs, HP flash and Heat glow. OFL Barlow Condensed Bold Italic is local, with its licence in public/fonts/OFL.txt and provenance in ASSETS.md.
+## Six completed checkpoints
 
-## Tunables
+1. Focus: ±17 u play zone with soft leash, 14–16.2 u deterministic circular arrivals, ±13 u camera clamp, four low obstacles at the ±12 u axes. Obstacles have 4.2 u outer lanes and a 22.4 u clear centre; the older 26 u groove remains scenery. Corner machinery is outside ±20 u and omitted during combat. Hero violet pool/rim and enemy red floor underglow separate teams.
+2. Punch: stronger discs, thicker inner ring, longer arcs/scorch; one-frame white impact star; two-tick 6% heavy edge flash; velocity-stretched gradient sparks, larger rust/metal chips, readable merging numbers and heavy CRUNCH pop. Enemy squash/death spin, 0.5 u knockback and heavy-kill host slow motion. Refreshed bounds prevent pooled moving FX from disappearing when the camera leaves the origin.
+3. Speed: single instanced radial line pass, six-sample ribbon, dash-only ghosts, velocity stretch, turn dust/floor streaks and top-speed zoom. Overdrive has entry slow motion/zoom/ring/flash, active orange-white aura/pool and faster edge motion. Host time effects never write simulation state; reduced motion/flashes bypass corresponding effects.
+4. Pace: last-two Rally +40% approach and natural recovery skip; Stomp stun and warnings preserved. Sparse arrivals shorten to 48–72 ticks below five live. Thrower and Shieldsaw approach 4.6/5.5 u/s. Normal-HP moving bot reaches Rex alive; wave 1–3 maximum active-clock bonk gaps are 1.13/1.23/1.38 s. Caps remain 12 live / 3 attacking, warning minima unchanged, full clear plus upgrade selection retained.
+5. HUD: 100-point HP presentation, thicker flash bar, real Heat arc, cooldown digits only in the final second or on press, compact ability buttons +8%, legible icons and safe placement. Small-landscape Overdrive pill narrowed after overlap testing. Real HP/save values remain unchanged.
+6. Atmosphere: 1.5× floor variance, 64 scuffs around play-zone edge, one soft Standard sweep every 8 s, larger/closer satellites and Heat-reactive nebula. Palette batching and visible-instance filtering keep the added effects within budget. Low omits the sweep and retains simpler geometry/effect counts.
 
-The development workbench exposes the primary content/presentation values below. Production strips the workbench/replay API. Time is 60 fixed simulation ticks per second; nearest whole-tick hit-stop is recorded rather than claiming exact milliseconds.
+Each checkpoint ran `pnpm shots` plus viewed desktop/compact 10-second movement captures. `review/focus/steps/` contains the six compact clips; checkpoint boards show the progression, including the pre-HUD diagnostic values. Those isolated FX fixtures retain hero HP to keep the scene alive. The fresh final clips below use normal HP and damage. Own screenshots/motion boards and a local study-only Spirit Call comparison were viewed; reference material is not shipped. Remaining art differences include simplified enemy materials/shapes and floor dressing; no claim of exact reference parity.
 
-| Item | Current value |
+## Current tuning
+
+All content/presentation defaults remain available through the development workbench. Production excludes it and replay helpers. Simulation runs at 60 fixed ticks/s; host slow motion changes pacing only.
+
+| Item | Value |
 |---|---|
-| Live / simultaneous attacking cap | 12 / 3, including shared projectile/boss engagement accounting |
-| Opening threats / queued cadence | 5; 48–90 active ticks (0.8–1.5 s). Pause/hit-stop extend wall time |
-| Spawn edge radius / drop | 22 u / 18 ticks (0.3 s) |
-| Wave 1 | 8 Sawlets |
-| Wave 2 | 6 Sawlets + 3 Throwers |
-| Wave 3 | 5 Sawlets + 3 Throwers + 3 Shieldsaws |
-| Wave 4 | 6 Sawlets + 3 Throwers + 2 Shieldsaws + 1 Grinder |
-| Approach speeds: Sawlet / Thrower / Shield / Grinder | 9.5 / 4 / 4.5 / 3.2 u/s |
-| Warning durations, same order | 24 / 30 / 36 / 48 ticks; boss ≥48 ticks. Schema enforces minima |
-| Recovery durations, same order | 30 / 96 / 42 / 48 ticks |
-| Kill Heat, same order / threshold | 8 / 9 / 12 / 18; threshold 90 |
-| Overdrive | 300 ticks; +30% movement, +25% damage; protection cap once per 30 ticks |
-| Light / medium / heavy ability hit-stop | 2 / 3 / 5 ticks = 33.3 / 50 / 83.3 ms (targets 30 / 55 / 90) |
-| Kill stop minimum / ordinary bonk knockback | 4 ticks = 66.7 ms (target 60); 0.3 u |
-| Shake: light / medium / heavy | 0.04 / 0.09 / 0.16 u |
-| Sparks: light / medium / heavy | 10 / 20 / 40; Low 40% of counts |
-| Effect pool limits | 8 stored events, 6 drawn Standard / 2 Low; 320 shards, 24 gear bits, 32 smoke; bounded text cache |
-| Damage text | 26 px nominal at each viewport, 0.6→1.15→1 pop, 0.8 u float, violet shadow; merge within 0.13 s / 0.7 u |
-| Gameplay camera | 13.2 u high; 45° azimuth / 30° elevation; nominal Core 9.39% screen height |
-| Follow / look-ahead / clamp | analytic critical damping 0.16 s; 1.2 u; centre within ±20 u (4 u inset) |
-| Zoom targets / easing | dash 4% out, light 2% in, heavy 4% in; 120 ms response |
-| Boss phase presentation slow motion | 0.25× host pacing for 80 ms; disabled in reduced motion; no sim-state edits |
-| Ghost / dust opacity | 0.18 / 0.2; three ghosts |
-| Atmosphere strength / edge chase / floor sweep | 0.6 / 12 / 0.025 |
-| Banner entrance | 0.6 s; dismiss button; no combat input blocking |
+| Play/scenery half-width; leash | 17 / 24 u; 1.5 u band, strength 5 |
+| Spawn ring / sparse cadence | 14, 15.1, 16.2 u; 48–72 ticks below five alive, otherwise 48–90 |
+| Approach Sawlet / Thrower / Shield / Grinder | 9.5 / 4.6 / 5.5 / 3.2 u/s |
+| Rally / ordinary bonk knockback | ≤2 enemies, +40% approach, natural recover skip; 0.5 u |
+| Attack warnings | 24 / 30 / 36 / 48 ticks; boss ≥48 |
+| Landscape camera | 11.2 u desktop / 11 u compact; nominal Core 11.07% / 11.27% screen height |
+| Follow | analytic critical damping 0.16 s, look-ahead 1.2 u, centre clamp ±13 u; portrait safe-margin catch-up |
+| Portrait compromise | 11 u visible width, Core about 44 px / 5.2% at 390×844; solid under-hull hidden, thin edge retained |
+| Hero pool | 4 u radius, alpha .25, slow pulse, orange during Overdrive |
+| Impact disc / heavy / inner / scorch alpha | .45 / .6 / .9 / .6; inner width doubled, arcs ×1.3 |
+| Star / heavy edge flash | 1 render frame, 1.6× target size; 2 ticks at .06 white |
+| Damage numbers | 38 px desktop / 34 px compact, heavy ×1.3, pop1.25, tilt±6°, merging stacks +.16 u |
+| FX budget | 8 events stored; 4 Standard / 2 Low drawn, ability plus number reserved; bounded pools/text cache |
+| Hit-stop | light2 / medium3 / heavy5 ticks, kill minimum4 |
+| Slow motion | heavy kill .35×100 ms; Overdrive entry .3×200 ms; boss phase .25×80 ms; reduced-motion bypass |
+| Speed lines / trail / stretch | >80% actual movement speed or Overdrive; 32 Standard /16 Low; 6 ribbon samples; max1.2× |
+| Zoom | top speed 2% out, dash4% out, Overdrive entry6% out; existing impact zoom retained |
+| Floor / sweep / satellites | variation .135; 64 edge scuffs; alpha .07 sweep8 s; satellite radius33 u, 7.2×1.6×6 u |
 
-## Hardware measurement
+Portrait's width constraint deliberately takes priority over nominal landscape Core height: it keeps the hero visible at all four corners and through dashes. A narrow portrait cannot show the same horizontal safety margin at 11–12% screen height. The board documents the result instead of claiming the landscape scale there.
 
-Headed Chromium, verified **ANGLE Metal Renderer: Apple M4**. No SwiftShader/software renderer accepted by the harness. Requested browser DPR is 2 at both viewports; renderer cap is Standard 1.5 / Low 1, so actual canvas resolutions are 1920×1080 / 1280×720 and 1266×585 / 844×390. Each case warms 30 frames and samples 180 requestAnimationFrame intervals. Calls/triangles are maxima sampled across those frames, not only the final frame. Fixtures retain hero/enemy HP or accelerate wave setup to keep the named stress scene alive; they do not establish human balance. High bloom and the close-up diagnostic studio are outside the gameplay tier targets.
+## Fresh normal-play evidence
 
-Initial headed Rex baseline before code changes: Standard 183 calls / 133,846 triangles; Low 161 / 131,374 (final-frame counts; the baseline predates peak instrumentation). Saved in review/feel/perf-baseline.json. p95 was about 16.8–17.1 ms on the Mac, despite excessive geometry. This sprint chiefly improves mobile geometry/call headroom; it does not claim that the previous software-headless 83 ms was the Mac GPU.
+`review/focus/waves2-3-desktop.mp4` and `waves2-3-compact.mp4` are 30-second captures through the real host, normal HP/damage, default stats and legal run upgrades. Wave 1 is set up by replaying the same normal inputs; no accelerated damage/clears or retained hero HP. A one-second upgrade-selection dwell is included. The deterministic moving bot steers, dodges, flanks shields and uses normal abilities/Overdrive. Recordings end on wave-3 upgrade selection. The post-clear choice screen is not an empty combat gap.
 
-Final sampled gameplay peaks: **Standard 106 calls / 50,570 triangles (limits 120 / 60,000); Low 66 / 23,764 (limits 70 / 25,000).** The harness asserts budgets and actor limits.
+| View | Maximum wall bonk gap | Maximum hull proxy | rAF p95 | Replay exact |
+|---|---:|---:|---:|---|
+| desktop | 1.382 s | 3.47% | 17.7 ms | yes |
+| compact | 1.383 s | 5.38% | 17.7 ms | yes |
 
-| Viewport | Tier | Stress scene | p50 ms | p95 ms | p99 ms | Peak calls | Peak triangles |
-|---|---|---|---:|---:|---:|---:|---:|
-| 1280×720 | standard | rex-six-adds | 16.7 | 17.6 | 17.7 | 83 | 35,609 |
-| 1280×720 | standard | wave4-twelve | 16.7 | 17.7 | 17.7 | 81 | 36,072 |
-| 1280×720 | standard | corner | 16.7 | 17.7 | 17.7 | 104 | 50,570 |
-| 1280×720 | low | rex-six-adds | 16.7 | 17.6 | 17.7 | 66 | 23,615 |
-| 1280×720 | low | wave4-twelve | 16.7 | 17.6 | 17.7 | 60 | 22,050 |
-| 1280×720 | low | corner | 16.7 | 17.7 | 17.7 | 61 | 23,288 |
-| 844×390 | standard | rex-six-adds | 16.7 | 17.6 | 17.7 | 83 | 35,609 |
-| 844×390 | standard | wave4-twelve | 16.7 | 17.7 | 17.7 | 82 | 37,802 |
-| 844×390 | standard | corner | 16.7 | 17.7 | 17.7 | 106 | 50,570 |
-| 844×390 | low | rex-six-adds | 16.7 | 17.6 | 17.7 | 66 | 23,615 |
-| 844×390 | low | wave4-twelve | 16.7 | 17.6 | 17.7 | 61 | 23,764 |
-| 844×390 | low | corner | 16.7 | 17.7 | 17.7 | 61 | 23,288 |
+Hull coverage is a 32×18 ray-box sample proxy, not hand-segmented imagery; screenshots were inspected too. Bonk gaps are measured between hits in each active wave, including entry-to-first-hit; the headless test separately enforces ≤2 s in waves1–3. These establish this bot path, not all human balance. The same bot reaches Rex at72 HP; wave4 maximum gap is2.32 s, outside the requested waves1–3 pace gate. Both normal recordings show Overdrive, trails, hit rings/numbers and finite-wave cleanup. Full hashes and samples are in `review/focus/capture-report.json`.
 
-About 60 Hz pacing on this Mac; tail values are reported rather than asserting a locked 60 fps. **Physical phone: device/browser/FPS unavailable, unverified.** Emulated dimensions and touch events are not phone hardware evidence.
+## Hardware budgets
 
-## Scene counts
+Headed Chromium, verified ANGLE Metal Apple M4. Requested DPR2; actual renderer caps Standard1.5 / Low1. Each case warms30 frames and samples180 rAF intervals. Stress fixtures retain HP to preserve Rex+six adds, twelve mixed enemies and corner coverage. Calls/triangles are sampled peaks; gameplay budgets assert Standard≤120 /60,000 and Low≤70 /25,000, plus actor limits Core8k/enemy2k. High and the dedicated close-up Core diagnostic studio are outside these gameplay budgets; lobby/workshop use the gameplay kit. No software-renderer or physical-phone performance inference.
 
-Headed Mac, 844×390, requested DPR2, fixed capture tick. Static scene counts complement the moving stress maxima above. Product scenes are asserted against both tier budgets. Diagnostic views are labelled; the detailed Core studio deliberately retains the full close-up asset and exceeds the gameplay budget.
+**Final peaks: Standard107 calls /47,792 triangles; Low70 /22,872. Highest p95:17.7 ms.** Low meets its call cap exactly, so new effects need another budget check.
 
-| Scene | Standard calls / triangles | Low calls / triangles | Purpose |
-|---|---:|---:|---|
-| lobby | 65 / 51,426 | 28 / 9,508 | product |
-| arena | 63 / 28,284 | 54 / 18,190 | product |
-| core-studio | 18 / 100,258 | 18 / 100,258 | diagnostic presentation view |
-| enemy-lineup | 7 / 5,404 | 7 / 5,404 | diagnostic presentation view |
-| combat-readability | 82 / 39,026 | 74 / 16,890 | diagnostic presentation view |
-| perf-worst | 63 / 28,284 | 54 / 18,190 | product |
-| boss | 41 / 37,829 | 33 / 15,693 | diagnostic presentation view |
-| arena-showcase | 99 / 55,834 | 19 / 9,094 | diagnostic presentation view |
-| sawlet-studio | 22 / 2,086 | 22 / 2,086 | diagnostic presentation view |
-| thrower-studio | 35 / 1,526 | 35 / 1,526 | diagnostic presentation view |
-| shieldsaw-studio | 36 / 3,726 | 36 / 3,726 | diagnostic presentation view |
-| grinder-studio | 29 / 3,378 | 29 / 3,378 | diagnostic presentation view |
-| boss-studio | 3 / 5,712 | 3 / 5,712 | diagnostic presentation view |
-| workshop | 65 / 51,426 | 28 / 9,508 | product |
+| Viewport | Tier | Scene | p50 ms | p95 ms | Peak calls | Peak triangles |
+|---|---|---|---:|---:|---:|---:|
+| 1280×720 | standard | rex-six-adds | 16.7 | 17.6 | 81 | 30,619 |
+| 1280×720 | standard | wave4-twelve | 16.7 | 17.7 | 86 | 30,804 |
+| 1280×720 | standard | corner | 16.7 | 17.7 | 105 | 47,648 |
+| 1280×720 | low | rex-six-adds | 16.7 | 16.8 | 68 | 19,739 |
+| 1280×720 | low | wave4-twelve | 16.7 | 16.8 | 70 | 20,338 |
+| 1280×720 | low | corner | 16.7 | 16.8 | 69 | 22,784 |
+| 844×390 | standard | rex-six-adds | 16.7 | 16.8 | 81 | 30,619 |
+| 844×390 | standard | wave4-twelve | 16.7 | 16.8 | 91 | 30,804 |
+| 844×390 | standard | corner | 16.7 | 16.7 | 107 | 47,792 |
+| 844×390 | low | rex-six-adds | 16.7 | 16.8 | 68 | 19,739 |
+| 844×390 | low | wave4-twelve | 16.7 | 16.8 | 70 | 20,338 |
+| 844×390 | low | corner | 16.7 | 17.7 | 69 | 22,872 |
 
-Gameplay actor counts across expressions/equipment in evidence: Core root 2,084 triangles in the run clip, Blade root 3,570 including attachment/contact/halo. Calm Core in lobby: 2,084. Sawlet ~1,042; Thrower ~1,356; Shieldsaw ~1,546; Grinder ~1,460 before temporary hurt flash (168 extra). Each gameplay enemy remains below 2k and Core below 8k. Counts describe submitted model geometry; renderer frustum culling may submit fewer in a frame.
+## Validation and reproducibility
 
-## Pace and acceptance limits
+- `pnpm check`: 71 tests, both Ritmo schedule audits, TypeScript/lint/content/source validation green. New coverage includes play zone/leash/spawns/lanes, Rally/stun/warnings/cadence, normal-HP bot gaps and moving FX bounds.
+- `pnpm build`: green, production debug/reference exclusion passes. Existing ~1 MB entry chunk warning remains.
+- `pnpm perf`, `pnpm shots`, `node tools/feel-scenes.mjs`: repeated after final FX culling fix; budgets and 14-scene Standard/Low captures pass.
+- `node tools/focus-inputs.mjs`: keyboard events, simultaneous joystick+touch ability/dash, emulated controller, exact replay, corner visibility and HUD separation at 1280×720,844×390,640×360,390×844. `review/focus/inputs.json` and layout board record the results. This verifies browser input paths, not a physical controller or touch-device FPS.
+- Existing completion controls, startup, asset retry, four-wave run, options/save and production touch/loss/retry/equip-reload harnesses passed. Browser harnesses share port5201; run them sequentially.
+- `node tools/focus-review.mjs`: normal replay-backed30s recordings and samples; `node tools/focus-bot.mjs`: headless pace summary.
+- `review/feel-source.zip`: refreshed exact32 files from src/presentation, src/content and src/ui only; extracted bytes verified against current source. Hash in review/focus/source-zip.sha256. No models, dependencies or reference art.
 
-Normal-enemy-tuning greedy diagnostic, with 10,000 hero HP and no dash: moving first bonk 1.43 s; idle first contact 2.78 s; Heat ready in wave 2 at 11.58 s. It reaches Rex after 64.17 s. This is a repeatable diagnostic, not a skilled-player or normal-HP completion claim.
-
-**The literal density/gap owner gate is not self-passed.** Finite waves still reach one enemy during full-clear cleanup, and this bot's maximum bonk gap is 3.90 s, above the requested 2 s. The separate 30 s wave-3 density clip holds ≥5 live enemies using explicit 600-HP enemies; it demonstrates crowd readability/performance, not normal balance or an infinite-spawn mechanic. Human feel/fairness and sustained normal-balance density remain for owner review. No extra respawn system or shortened warnings were introduced to disguise this limit.
-
-## Evidence and delivery
-
-- review/feel/wave3-4.mp4: 38 s, actual keyboard-driven wave 3 then wave 4; normal enemy HP/damage, 10,000 hero HP. Setup to wave 3 is accelerated. Remaining wave-3 cleanup is explicitly accelerated at ~29 s so both waves fit the recording; defaults are restored before wave 4. Replay matches the deterministic sim; canonical state hashes are in review/feel/replay-hashes.json. Observed dash variants: tap, rush, charge.
-- review/feel/blade.mp4: 10 s excerpt of a 12 s keyboard run, seeded local Blade unlock and retained HP. Q Spin, E hop/cone, X Stomp, tap/Rush/Charge. Replay matches; observed variants tap, rush, charge.
-- review/feel/density.mp4: 30 s, wave 3, 600 enemy HP / 10,000 hero HP; minimum live count 5. Camera, numbers/FX, motion and crowd evidence.
-- review/feel/corner-atmosphere.mp4: 12 s, retained-HP edge/corner run showing culling, sky, satellites/conduits and Heat reactions.
-- Four motion boards sample nine frames each; inspected along with full-size desktop/phone shots. Additional 14-scene × desktop/phone captures, four local study comparisons, options, warnings, abilities and production evidence live under shots/. Reference comparison pictures are study-only and excluded from Git/delivery.
-- review/feel-source.zip: 63.1 KiB; exactly src/presentation/, src/content/, src/ui/. No models/public/ref/dependencies. This requested review subset is not standalone; the runnable full source, sim and assets are in GitHub.
-
-Evidence was captured at the geometry checkpoint and integrated final passes, rather than after every individual subsection in the requested order. The four clips provide overlapping focused evidence for pace, juice/camera, motion, atmosphere, text and HUD. This process difference is recorded, not retroactively claimed as seven independent step captures.
-
-Validation: pnpm check (67 tests, both Ritmo determinism/source audits), pnpm build (production debug/reference exclusion), headed pnpm perf and scene budget assertions. Desktop/phone-sized browser keyboard/hold/double-tap, simultaneous touch, gamepad, saved preferences, upgrade choice/replay, Rex/Blade, warnings, load-failure retry and production touch/loss/retry/equip-reload checks pass. Final source changes rerun startup/replay/production checks and shots. Physical-device acceptance is open. Existing ~1 MB JS / ~274 kB gzip chunk warning remains; no dependencies were added.
-
-## Source history
-
-GitHub: https://github.com/yashnevase/REDLINE . Baseline commit a42b01e is tagged chapter1-before-feel and was pushed before implementation. The sprint is a separate commit/tag feel-sprint; main tracks it. README documents setup and an independent baseline worktree. All shipped models/textures are original; the bundled font is OFL. Reference repositories, caches, generated raw videos and dependencies are excluded.
+No deployment was performed. Physical-device testing was removed from this sprint by the owner's latest request; it is not a pending approval/blocker. Owner feel/art review remains the acceptance step.

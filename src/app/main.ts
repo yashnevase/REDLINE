@@ -70,8 +70,8 @@ let sim=playing?makeGame():null;
 let snapshot=sim?.view();let paused=false,accumulator=0,pendingTuning:CombatTuning|undefined;
 let recordingTuning={...gameTuning};
 const recording:Command[]|undefined=import.meta.env.DEV?[]:undefined;
-let input:ReturnType<typeof makeInput>|undefined;let cancelChargeOnResume=false;function clearInput(){if(snapshot?.hero.dash.kind==='charging')cancelChargeOnResume=true;input?.clear();}
-let slowUntil=0;let drawHUD=()=>{};
+const queuedCommands:Command[]|undefined=import.meta.env.DEV?[]:undefined;let input:ReturnType<typeof makeInput>|undefined;let cancelChargeOnResume=false;function clearInput(){if(snapshot?.hero.dash.kind==='charging')cancelChargeOnResume=true;input?.clear();}
+let slowUntil=0,slowScale=1;const requestSlow=(seconds:number,scale:number)=>{if(preferences.reducedMotion)return;slowUntil=Math.max(slowUntil,performance.now()+seconds*1000);slowScale=Math.min(slowScale,scale);};const cooldownPeek={pulse:-1,boost:-1,stomp:-1};let drawHUD=()=>{};
 let resetHUD=()=>{};
 function refreshLoadout(){
  if(!studio)return;const core=app.querySelector<HTMLButtonElement>('[data-equip=core]')!,blade=app.querySelector<HTMLButtonElement>('[data-equip=blade]')!;
@@ -83,13 +83,13 @@ if(studio){for(const form of ['core','blade'] as const)app.querySelector(`[data-
 
 function effectiveTuning(){return snapshot&&'upgrades' in snapshot?upgradedTuning(gameTuning,snapshot.upgrades):gameTuning;}
 function applySnapshot(alpha:number){if(!snapshot)return;if('enemies' in snapshot)view.applyRun(snapshot,alpha,effectiveTuning());else view.applyFight(snapshot,alpha,gameTuning);}
-function restart(){if(!playing)return;sim=makeGame();snapshot=sim.view();cancelChargeOnResume=false;paused=false;accumulator=0;tick=0;lastTime=performance.now();view.reset();resetHUD();recordingTuning={...gameTuning};recording?.splice(0);clearInput();applySnapshot(1);drawHUD();}
+function restart(){if(!playing)return;sim=makeGame();snapshot=sim.view();cancelChargeOnResume=false;paused=false;accumulator=0;tick=0;lastTime=performance.now();view.reset();resetHUD();queuedCommands?.splice(0);recordingTuning={...gameTuning};recording?.splice(0);clearInput();applySnapshot(1);drawHUD();}
 function togglePause(){if(!playing||options.isOpen())return;paused=!paused;clearInput();accumulator=0;drawHUD();}
-function step(command:Command){if(!sim)return;if(cancelChargeOnResume){command={...command,dashInput:'cancel'};cancelChargeOnResume=false;}const wasBoss=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss',oldBossStage=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss'?bossStage(snapshot.phase.boss.hp,gameTuning):0;const intent=pendingTuning?{...command,tuning:pendingTuning}:command;pendingTuning=undefined;if(intent.tuning){const parsed=tuningSchema.safeParse(intent.tuning);if(parsed.success)gameTuning=parsed.data;}snapshot=sim.step(intent);if(oldBossStage&&'phase' in snapshot&&snapshot.phase.kind==='boss'&&bossStage(snapshot.phase.boss.hp,gameTuning)>oldBossStage&&!preferences.reducedMotion)slowUntil=performance.now()+tuning.bossSlowSeconds*1000;if(wasBoss&&'phase' in snapshot&&snapshot.phase.kind==='complete'&&snapshot.phase.reward==='blade'){profile=awardBlade(profile);saveAvailable=saveProfile(profile);}recording?.push(intent);if(recording&&recording.length>36000)recording.shift();applySnapshot(1);tick=snapshot.tick;}
+function step(command:Command){if(!sim)return;if(cancelChargeOnResume){command={...command,dashInput:'cancel'};cancelChargeOnResume=false;}const wasBoss=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss',oldBossStage=snapshot&&'phase' in snapshot&&snapshot.phase.kind==='boss'?bossStage(snapshot.phase.boss.hp,gameTuning):0;const intent=pendingTuning?{...command,tuning:pendingTuning}:command;pendingTuning=undefined;if(intent.tuning){const parsed=tuningSchema.safeParse(intent.tuning);if(parsed.success)gameTuning=parsed.data;}snapshot=sim.step(intent);if(command.ability)cooldownPeek[command.ability]=snapshot.tick+30;if(oldBossStage&&'phase' in snapshot&&snapshot.phase.kind==='boss'&&bossStage(snapshot.phase.boss.hp,gameTuning)>oldBossStage&&!preferences.reducedMotion)requestSlow(tuning.bossSlowSeconds,tuning.bossSlowScale);if(snapshot.events.some(e=>e.kind==='overdrive'))requestSlow(tuning.overdriveEntrySeconds,tuning.overdriveEntryScale);if(snapshot.events.some(e=>e.kind==='defeat')&&snapshot.events.some(e=>e.kind==='bonk'&&e.amount>=14||['pulse','blade','stomp'].includes(e.kind)))requestSlow(tuning.killSlowSeconds,tuning.killSlowScale);if(wasBoss&&'phase' in snapshot&&snapshot.phase.kind==='complete'&&snapshot.phase.reward==='blade'){profile=awardBlade(profile);saveAvailable=saveProfile(profile);}recording?.push(intent);if(recording&&recording.length>36000)recording.shift();applySnapshot(1);tick=snapshot.tick;}
 const options=makePreferences(app,preferences,()=>{if(playing){paused=true;clearInput();accumulator=0;drawHUD();}},next=>{preferences=next;app.dataset.reducedMotion=String(next.reducedMotion);app.dataset.reducedFlashes=String(next.reducedFlashes);if(!playing&&!params.has('capture'))frozen=next.reducedMotion;view.setPreferences(next);return savePreferences(next);});
 if(playing){
  const banner=makeEncounterBanner(app);
- app.classList.add('live');
+ app.classList.add('live');app.querySelector('.health-label span')!.textContent='INTEGRITY';
  app.querySelector('.combat-label small')!.textContent='MOVE CLOSE TO AUTO-BONK';
  app.querySelector('.combat-label span')!.textContent='FIRST CONTACT';
  app.querySelector('.fight-note')!.textContent='WASD · SPACE DASH · Q / E / X · P PAUSE';
@@ -107,22 +107,22 @@ if(playing){
  const dash=abilities.querySelector<HTMLElement>('.dash')!;input=makeInput(app.querySelector<HTMLElement>('.study-stick')!,dash,togglePause,restart);
  addEventListener('blur',()=>{clearInput();paused=true;accumulator=0;drawHUD();});document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInput();paused=true;accumulator=0;drawHUD();}});
  const feelHUD=makeFeelHUD(app);let lastResult='';
- resetHUD=()=>{feelHUD.reset();slowUntil=0;banner.reset();lastResult='';lastAnnouncement='';};
+ resetHUD=()=>{feelHUD.reset();cooldownPeek.pulse=cooldownPeek.boost=cooldownPeek.stomp=-1;slowUntil=0;slowScale=1;banner.reset();lastResult='';lastAnnouncement='';};
  drawHUD=()=>{if(!snapshot)return;const h=snapshot.hero,config=effectiveTuning(),run='enemies' in snapshot?snapshot:null,e='enemy' in snapshot?snapshot.enemy:null;
   const isBoss=run?.phase.kind==='boss';bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=hp<=config.bossHP*.2?'SCRAP-REX · ENRAGED':'SCRAP-REX';bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
   app.querySelector('.roster span')!.textContent=run?.loadout==='blade'?'BLADE EQUIPPED':'BASE FORM';
   const qButton=abilities.querySelector<HTMLElement>('[data-ability=pulse]')!;const form=run?.loadout??'core';if(qButton.dataset.form!==form){qButton.querySelector('svg')!.outerHTML=icon(form==='blade'?'blade':'pulse');qButton.dataset.form=form;}
   abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label',run?.loadout==='blade'?'Blade Spin':'Pulse Bash');
   const result=h.hp<=0?'lost':run?(run.phase.kind==='complete'?'won':run.phase.kind==='upgrade'?'upgrade':'fighting'):e?.behavior.kind==='defeated'?'won':'fighting';app.dataset.result=result;
-  const label=app.querySelector<HTMLElement>('.health-label b')!;label.textContent=`${Math.round(h.hp)} / ${config.heroHP}`;
+  const label=app.querySelector<HTMLElement>('.health-label b')!;label.textContent=`${Math.round(h.hp/config.heroHP*100)} / 100`;label.setAttribute('aria-label',`${Math.round(h.hp/config.heroHP*100)} percent integrity`);
   app.querySelector<HTMLElement>('.health-track i')!.style.width=`${h.hp/config.heroHP*100}%`;
   abilities.querySelector('.charge-label')!.textContent=`${h.charges} / ${config.dashCharges}`;
   const chargeRoot=abilities.querySelector('.dash-charges')!;if(chargeRoot.children.length!==config.dashCharges)chargeRoot.innerHTML='<i></i>'.repeat(config.dashCharges);
   abilities.querySelectorAll<HTMLElement>('.dash-charges i').forEach((dot,i)=>dot.classList.toggle('ready',i<h.charges));
   dash.setAttribute('aria-disabled',String(h.charges===0&&h.overdrive===0||h.dashCooldown>0&&h.tapWindow===0));dash.classList.toggle('charging',h.dash.kind==='charging');dash.style.setProperty('--charge',`${h.dash.kind==='charging'?Math.min(1,h.dash.ticks/config.dashChargeTicks):0}`);dash.style.setProperty('--recharge',`${h.recharge/config.rechargeTicks*360}deg`);
-  for(const name of ['pulse','boost','stomp'] as const){const button=abilities.querySelector<HTMLElement>(`[data-ability="${name}"]`)!;const remaining=h[`${name}Cooldown`];button.setAttribute('aria-disabled',String(remaining>0));const total=name==='pulse'?(run?.loadout==='blade'?config.bladeCooldownTicks:config.pulseCooldownTicks):name==='boost'?config.boostCooldownTicks:config.stompCooldownTicks;button.style.setProperty('--cd',`${Math.min(1,remaining/total)*360}deg`);button.querySelector('b')!.textContent=remaining>0?String(Math.ceil(remaining/60)):'';}
+  for(const name of ['pulse','boost','stomp'] as const){const button=abilities.querySelector<HTMLElement>(`[data-ability="${name}"]`)!;const remaining=h[`${name}Cooldown`];button.setAttribute('aria-disabled',String(remaining>0));const total=name==='pulse'?(run?.loadout==='blade'?config.bladeCooldownTicks:config.pulseCooldownTicks):name==='boost'?config.boostCooldownTicks:config.stompCooldownTicks;button.style.setProperty('--cd',`${Math.min(1,remaining/total)*360}deg`);button.querySelector('b')!.textContent=remaining>0&&(remaining<=60||snapshot.tick<=cooldownPeek[name])?String(Math.ceil(remaining/60)):'';}
   const od=abilities.querySelector<HTMLElement>('[data-overdrive]')!;od.setAttribute('aria-disabled',String(h.heat<gameTuning.heatThreshold||h.overdrive>0));od.textContent=h.overdrive>0?`OVERDRIVE ${Math.ceil(h.overdrive/60)}s`:'R · OVERDRIVE';
-  const heat=app.querySelector<HTMLElement>('.heat')!;heat.children[0].textContent=h.overdrive>0?'OVERDRIVE':'HEAT';(heat.children[1] as HTMLElement).style.background=`linear-gradient(90deg,#f07c79 ${h.heat/gameTuning.heatThreshold*100}%,#5c465655 0)`;heat.children[2].textContent=`${Math.round(h.heat/gameTuning.heatThreshold*100)}%`;
+  const heat=app.querySelector<HTMLElement>('.heat')!;heat.children[0].textContent=h.overdrive>0?'OVERDRIVE':'HEAT';(heat.children[1] as HTMLElement).style.setProperty('--heat-angle',`${h.heat/gameTuning.heatThreshold*360}deg`);heat.children[2].textContent=`${Math.round(h.heat/gameTuning.heatThreshold*100)}%`;
   if(run){const phase=run.phase;app.querySelector('.combat-label span')!.textContent=phase.kind==='fight'||phase.kind==='upgrade'?`WAVE ${phase.wave+1} / 4`:phase.kind==='boss'?'SCRAP-REX':'FOUNDRY';app.querySelector('.combat-label small')!.textContent=`${run.enemies.filter(e=>e.hp>0).length} ENEMIES · ${run.upgrades.length} UPGRADES`;const points=view.runScreens();bars.forEach((bar,i)=>{const e=run.enemies[i],p=points[i];bar.hidden=!e||!p?.visible||result!=='fighting'||e.hp>=(e.kind==='sawlet'?config.sawletHP:e.kind==='thrower'?config.throwerHP:e.kind==='shieldsaw'?config.shieldsawHP:config.grinderHP);if(e&&p){bar.style.transform=`translate(${p.x}px,${p.y}px)`;bar.querySelector<HTMLElement>('i')!.style.width=`${e.hp/(e.kind==='sawlet'?config.sawletHP:e.kind==='thrower'?config.throwerHP:e.kind==='shieldsaw'?config.shieldsawHP:config.grinderHP)*100}%`;}});}
   hp.hidden=!!run||result!=='fighting';const point=view.enemyScreen();hp.style.transform=`translate(${point.x}px,${point.y}px)`;hp.querySelector<HTMLElement>('i')!.style.width=`${Math.max(0,e?.hp??0)/gameTuning.sawletHP*100}%`;
   overlay.hidden=!paused&&result==='fighting';overlay.setAttribute('role','region');overlay.setAttribute('aria-label',paused?'Paused':result==='upgrade'?'Choose an upgrade':result==='won'?'Victory':'Defeat');overlay.querySelector('h1')!.textContent=paused?'Paused':result==='upgrade'?'Choose an upgrade':result==='won'?(run?'Foundry cleared.':'Sawlet down.'):'Core offline.';
@@ -141,10 +141,11 @@ if(playing){
  applySnapshot(1);
 }
 function animate(time:number){
+ if(time>=slowUntil)slowScale=1;
  const delta=Math.min((time-lastTime)/1000,.1);lastTime=time;
  if(!measuring&&ready){
   if(playing&&sim){
-   if(!frozen&&!paused&&!options.isOpen()){accumulator=Math.min(.1,accumulator+delta*(time<slowUntil?tuning.bossSlowScale:1));while(accumulator>=1/60){const command=input!.sample(tuning.azimuth,tuning.elevation);if(paused)break;if(snapshot&&'phase' in snapshot&&snapshot.phase.kind==='upgrade'&&command.choice!==undefined)command.upgrade=snapshot.phase.choices[command.choice];step(command);accumulator-=1/60;}}
+   if(!frozen&&!paused&&!options.isOpen()){accumulator=Math.min(.1,accumulator+delta*(time<slowUntil?slowScale:1));while(accumulator>=1/60){const command=queuedCommands?.shift()??input!.sample(tuning.azimuth,tuning.elevation);if(paused)break;if(snapshot&&'phase' in snapshot&&snapshot.phase.kind==='upgrade'&&command.choice!==undefined)command.upgrade=snapshot.phase.choices[command.choice];step(command);accumulator-=1/60;}}
    else if(paused)input?.sample(tuning.azimuth,tuning.elevation);
    if(snapshot){tuning.coreRadius=gameTuning.heroRadius;const alpha=frozen||paused?1:accumulator*60;applySnapshot(alpha);view.renderAt(Math.max(0,snapshot.tick-1+alpha));drawHUD();}
   }else{if(!frozen)tick+=delta*60;view.renderAt(tick);}
@@ -184,7 +185,7 @@ if (import.meta.env.DEV) {
   let benchmarkWork:{step:number[];render:number[];hud:number[]}={step:[],render:[],hud:[]};
   const api={
     ready:false,coreMask:(value:boolean)=>view.setCoreMask(value),setTick:(n:number)=>{frozen=true;if(playing){restart();for(let i=0;i<n;i++)step(idleCommand);applySnapshot(1);}tick=n;view.renderAt(n);drawHUD();},
-    state:()=>sim?.view(), advance:(commands:Command[])=>{frozen=true;for(const command of commands)step(command);view.renderAt(tick);drawHUD();return sim?.view();},
+    queueCommands:(commands:Command[])=>{queuedCommands?.splice(0,queuedCommands.length,...commands);frozen=false;paused=false;},state:()=>sim?.view(), advance:(commands:Command[])=>{frozen=true;for(const command of commands)step(command);view.renderAt(tick);drawHUD();return sim?.view();},
     restart:()=>{restart();frozen=false;}, replay:()=>({version:3,mode:trial?'trial':'run',tuning:recordingTuning,loadout:snapshot&&'loadout' in snapshot?snapshot.loadout:'core',commands:recording,final:sim?.view()}),
     play: () => { frozen = false; }, metadata: ()=>({...view.metadata(),benchmarkPeak,benchmarkEvents,benchmarkWork,fight:snapshot?{hp:snapshot.hero.hp,...('enemy' in snapshot?{enemyHP:snapshot.enemy.hp,enemyPhase:snapshot.enemy.behavior.kind}:{phase:snapshot.phase,enemies:snapshot.enemies.length,alive:snapshot.enemies.filter(e=>e.hp>0).length,projectiles:snapshot.projectiles.length}),charges:snapshot.hero.charges,heat:snapshot.hero.heat,overdrive:snapshot.hero.overdrive}:undefined}),
     measure: async (count: number, fixture?:Command[]) => {

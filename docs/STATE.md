@@ -1,7 +1,21 @@
 # STATE.md — resume here
 
 Session date: 2026-10-31 (Asia/Kolkata).
-Phase: **FEEL_SPRINT implementation complete for owner review; Mac gameplay budgets pass. Physical-phone and owner feel/density acceptance remain open. No approval question is pending.**
+Phase: **FEEL_SPRINT_2 sections1–6 implemented and verified; ready for owner review. Physical-phone/deploy gate removed by latest owner instruction. No deployment or approval question pending.**
+
+## FEEL_SPRINT_2 — current continuation point
+
+- Owner requested following the new doc and explicitly said ignore phone gating: support all device sizes and keyboard/touch/controller. The doc stays intact; REDLINE_BRIEF records the override. Do not resurrect the old phone-deploy question. Device-size/emulated-input tests are not universal hardware FPS evidence.
+- Focused ±17u play, soft leash, 14–16.2u spawn ring, ±13u camera clamp, separated low obstacles/4.2u lanes, locator/team pools, stronger Core rim. Landscape Core11–12%; portrait widens to11u visible width (~44px Core at390×844) for safe dashes; solid under-hull skipped there. Thin rim/scenery retained.
+- Strong hit layers/stars/quads/chips/numbers/CRUNCH, enemy squash/spin, knockback.5u, heavy kill slow motion; radial speed lines, six-sample ribbon, dash ghosts, stretch/dust/floor streaks, top-speed zoom and Overdrive entry/active feedback. Accessibility preferences respected; no render writes to sim. Moving instanced pools refresh culling bounds to avoid missing effects near the camera clamp.
+- Rally last≤2 +40% approach and natural-recover skip (Stomp preserved), sparse48–72tick arrivals; Thrower4.6/Shield5.5u/s. Caps12/3, warnings and approved Chapter1 mechanics unchanged. Normal-HP bot reaches Rex alive, max bonk gaps waves1–3:1.13/1.23/1.38s.
+- Calmer100point HUD, final-second/on-press digits, +8% compact skills, Heat arc, HPflash and responsive safe placement. Floor variance/scuffs/sweep, larger closer satellites, Heat sky. New geometry/effects balanced by palette batching, visible-instance filtering and four Standard simultaneous FX.
+- Final headed M4 stress peaks Standard107calls/47,792tri; Low70/22,872; p95≤17.7ms. Gameplay budgets pass; Low call count is at its cap. Diagnostic Core studio/High are separate. Normal30s waves2–3 clips: wall bonk gap≤1.384s; hull proxy≤3.48% desktop/5.39% compact; exact replay both.
+- Checks:71tests plus Ritmo/source/content audits, build/debug-reference exclusion, pnpm shots, per-scene budgets and final headed perf pass. Four screen sizes pass keyboard/simultaneous-touch/emulated-gamepad, corner visibility, HUD separation and replay. Existing completion controls/startup/loading/run/options/production regressions passed. Fresh desktop/compact screenshots, checkpoint/final motion and local reference comparison viewed. Owner art/fun acceptance is not self-certified.
+- Deliverables: docs/FEEL_REPORT.md; review/focus/ normal30s MP4s, six10s checkpoint clips, screenshots/boards, captures/perf/inputs/scene reports. Updated review/feel-source.zip exactly32 source files; old sprint preserved at feel-sprint. Current checkpoint tag feel-sprint-2 on main in owner's REDLINE GitHub repo; reference art remains local only.
+- Production preview http://localhost:5199/ serves rebuilt dist. Next: owner review of the final clips/game; no remaining implementation phase or deployment is scheduled by this sprint. Do not resume from historical notes below.
+
+## Historical checkpoints below
 
 ## FEEL_SPRINT — current continuation point
 

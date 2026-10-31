@@ -8,7 +8,7 @@ import {waves} from '../src/content/encounter.ts';
 import {makeCameraFollow} from '../src/presentation/camera-follow.ts';
 test('staggered queue survives JSON restore, observes cadence, and never skips the full-clear gate',()=>{
  let s=initialRun(t);assert.equal(s.enemies.length,5);let previousCount=5,lastSpawn=0;const intervals=[];
- for(let i=0;i<400;i++){const before=s;s=stepRun(JSON.parse(JSON.stringify(s)),idleCommand,{...t,heroHP:10000,bonkDamage:.001});if(s.phase.kind==='fight'&&s.phase.nextSpawn>previousCount){intervals.push(s.tick-lastSpawn);lastSpawn=s.tick;previousCount=s.phase.nextSpawn;}assert.ok(s.enemies.length<=12);assert.equal(before.phase.kind,'fight');}
+ for(let i=0;i<400;i++){const before=s;s=stepRun(JSON.parse(JSON.stringify(s)),idleCommand,{...t,heroHP:10000,bonkDamage:.001,hitstopTicks:0,mediumHitstopTicks:0,heavyHitstopTicks:0,killHitstopTicks:0});if(s.phase.kind==='fight'&&s.phase.nextSpawn>previousCount){intervals.push(s.tick-lastSpawn);lastSpawn=s.tick;previousCount=s.phase.nextSpawn;}assert.ok(s.enemies.length<=12);assert.equal(before.phase.kind,'fight');}
  assert.equal(previousCount,8);assert.equal(intervals.length,3);assert.ok(intervals.every(n=>n>=48&&n<=90));assert.equal(s.phase.kind,'fight');
  const legacy=initialRun(t);delete legacy.phase.nextSpawnIn;assert.equal(runSchema.parse(legacy).phase.nextSpawnIn,0);
  assert.deepEqual(waves.map(w=>w.length),[8,9,11,12]);

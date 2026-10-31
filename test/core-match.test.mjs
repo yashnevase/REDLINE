@@ -3,12 +3,12 @@ import assert from 'node:assert/strict';
 import * as T from 'three';
 import {makeCore} from '../src/presentation/models.ts';
 import {defaults} from '../src/content/scene.mjs';
-test('Core factory preserves legacy geometry and six matched expressions; gameplay framing is 8–10 percent',()=>{
+test('Core factory preserves legacy geometry and six matched expressions; gameplay framing is 11–12 percent',()=>{
  const m=Object.fromEntries(['chrome','white','red','steel','dark','lightSteel','glow'].map(k=>[k,new T.MeshBasicMaterial()]));
  const live=makeCore(m),candidate=makeCore(m,true);assert.equal(live.expressions.length,0);assert.equal(candidate.expressions.length,6);assert.equal(candidate.expressions.filter(e=>e.visible).length,1);
  const signatures=candidate.expressions.map(group=>group.children.map(mesh=>Array.from(mesh.geometry.attributes.position.array).slice(0,24).join(',')).join('|'));assert.equal(new Set(signatures).size,6);
  for(const mesh of candidate.body.children){if(mesh instanceof T.Mesh){const attr=mesh.geometry.attributes.position;for(let i=0;i<attr.count;i++){assert.ok(Number.isFinite(attr.getX(i)));assert.ok(Number.isFinite(attr.getY(i)));assert.ok(Number.isFinite(attr.getZ(i)));}}}
- const ratio=defaults.coreRadius*2/defaults.viewHeight;assert.ok(ratio>=.08&&ratio<=.1);
+ const ratio=defaults.coreRadius*2/defaults.viewHeight;assert.ok(ratio>=.11&&ratio<=.12);
 });
 
 test('Blender Core sockets preserve origin, small shell bounds, outward normals and expected surfaces',async()=>{

@@ -9,7 +9,7 @@ export const dashSchema=z.discriminatedUnion('kind',[
 export const behavior=z.discriminatedUnion('kind',[
  z.object({kind:z.literal('spawn'),remaining:ticks}),z.object({kind:z.literal('chase')}),z.object({kind:z.literal('windup'),remaining:ticks,dx:n,dz:n}),
  z.object({kind:z.literal('lunge'),remaining:ticks,dx:n,dz:n,hasHit:z.boolean()}),
- z.object({kind:z.literal('recover'),remaining:ticks}),z.object({kind:z.literal('defeated')})
+ z.object({kind:z.literal('recover'),remaining:ticks,rallyEligible:z.literal(true).optional()}),z.object({kind:z.literal('defeated')})
 ]);
 export const eventSchema=z.object({id:z.string(),tick:ticks,kind:z.enum(['dash','bonk','hurt','defeat','pulse','boost','stomp','overdrive','blade']),x:n,z:n,amount:n,radius:n.nonnegative().optional(),dx:n.optional(),dz:n.optional()});
 export const heroSchema=z.object({...point,hp:n.nonnegative(),vx:n,vz:n,faceX:n,faceZ:n,charges:ticks,recharge:ticks,buffer:ticks,heat:n.nonnegative().default(0),overdrive:ticks.default(0),overdriveBuffer:z.boolean().default(false),iframeLock:ticks.default(0),bonkCooldown:ticks,pulseCooldown:ticks.default(0),boostCooldown:ticks.default(0),stompCooldown:ticks.default(0),abilityBuffer:z.enum(['pulse','boost','stomp']).nullable().default(null),abilityBufferTicks:ticks.default(0),dash:dashSchema,dashCooldown:ticks.default(0),tapWindow:ticks.default(0),dashReleaseBuffer:z.boolean().default(false),dashReleaseSuppressed:z.boolean().default(false),special:z.discriminatedUnion('kind',[z.object({kind:z.literal('idle')}),z.object({kind:z.literal('spin'),remaining:ticks,hits:z.array(n.int()),hopRemaining:ticks.default(0)}),z.object({kind:z.literal('hop'),remaining:ticks})]).default({kind:'idle'})});

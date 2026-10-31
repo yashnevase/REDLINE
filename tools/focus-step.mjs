@@ -1,0 +1,11 @@
+import {session,load} from './browser.mjs';
+import {feelFixture} from './feel-fixture.mjs';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {createRunSimulation} from '../src/sim/run-runtime.ts';
+import assert from 'node:assert/strict';
+const step=process.argv[2]??'focus',host=await session({headless:false,gpu:true}),records=[];await mkdir(`shots/focus/${step}`,{recursive:true});
+try{for(const v of [{width:1280,height:720,name:'desktop'},{width:844,height:390,name:'compact'}]){
+ const c=await host.browser.newContext({viewport:v,deviceScaleFactor:2,recordVideo:{dir:'shots/focus/raw',size:{width:v.width,height:v.height}},hasTouch:v.name==='compact'}),p=await c.newPage();await p.route('**/favicon.ico',r=>r.fulfill({status:204}));const errors=await load(p,host.url,'arena');const fixture=feelFixture(step.startsWith('3')?2:1,{retained:true});await p.evaluate(commands=>{const a=window.__REDLINE__;a.advance([commands[0]]);a.setTick(0);a.advance(commands);a.play();},fixture.commands);
+ const start=Date.now();let i=0;while(Date.now()-start<10000){const dir=['ArrowRight','ArrowUp','ArrowLeft','ArrowDown'][Math.floor(i/4)%4];await p.keyboard.down(dir);await p.waitForTimeout(230);await p.keyboard.up(dir);if(i%7===0)await p.keyboard.press('KeyQ');if(i%9===2)await p.keyboard.press('KeyX');if(i%9===5)await p.keyboard.press('KeyE');if(i===1)await p.keyboard.press('KeyR');if(i%10===4)await p.keyboard.press('Space');if(i===8||i===20)await p.screenshot({path:`shots/focus/${step}/${v.name}-${i}.png`});i++;}
+ const replay=await p.evaluate(()=>{window.__REDLINE__.advance([]);return window.__REDLINE__.replay();}),sim=createRunSimulation(replay.tuning,false,replay.loadout);for(const cmd of replay.commands)sim.step(cmd);assert.deepEqual(sim.view(),replay.final);assert.deepEqual(errors,[]);const metadata=await p.evaluate(()=>window.__REDLINE__.metadata());const video=p.video();await c.close();await video.saveAs(`shots/focus/${step}/${v.name}.webm`);records.push({viewport:v,errors,replayVerified:true,metadata});
+}await writeFile(`shots/focus/${step}/report.json`,JSON.stringify(records,null,2));console.log(`${step}: desktop/compact 10 s input-driven captures; replay and page errors verified.`);}finally{await host.close();}

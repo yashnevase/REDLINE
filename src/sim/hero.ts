@@ -35,6 +35,8 @@ export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit){
  if(h.dash.kind==='active'){h.vx=h.dash.dx*h.dash.distance*60/h.dash.duration;h.vz=h.dash.dz*h.dash.distance*60/h.dash.duration;}
  else{const boost=h.overdrive>0?1+t.overdriveMoveBonus:1,targetX=dir.x*t.moveSpeed*strength*boost,targetZ=dir.z*t.moveSpeed*strength*boost,amount=(length>.05?t.acceleration:t.braking)/60;h.vx+=Math.max(-amount,Math.min(amount,targetX-h.vx));h.vz+=Math.max(-amount,Math.min(amount,targetZ-h.vz));}
  const steps=Math.max(1,Math.ceil(Math.sqrt(h.vx*h.vx+h.vz*h.vz)/60/(t.heroRadius*.5)));for(let i=0;i<steps;i++){const p=collide(h.x+h.vx/60/steps,h.z+h.vz/60/steps,t.heroRadius,t);h.x=p.x;h.z=p.z;}
+ // Ease the hero inward in the outer band, with collision retaining the absolute play-zone bound.
+ for(const axis of ['x','z'] as const){const limit=(axis==='x'?t.arenaHalfWidth:t.laneHalfWidth)-t.heroRadius-t.leashBand,excess=Math.max(0,Math.abs(h[axis])-limit);h[axis]-=(h[axis]<0?-1:1)*excess*Math.min(1,t.leashStrength/60);}
  let ability:Command['ability'];
  if(h.abilityBuffer&&h.abilityBufferTicks>0){
   const candidate=h.abilityBuffer,key=candidate==='pulse'?'pulseCooldown':candidate==='boost'?'boostCooldown':'stompCooldown';

@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {Descriptor,Schema} from '@typeonce/ritmo';
+import {Descriptor,Schema,Ops} from '@typeonce/ritmo';
 import {heroSchema,behavior,eventSchema,initialState,Input,Tuning} from './schema.ts';
 import {enemyKinds,waves,enemyStats} from '../content/encounter.ts';
 import type {CombatTuning} from '../content/combat.ts';
@@ -30,8 +30,9 @@ export const Run=Descriptor.ConstructedResource(runSchema)('Redline/Run');
 export const RunGame=Schema.bind(Schema.fragment({resources:{Run,Tuning}}));
 export {Input};
 export function spawnEnemy(kind:Enemy['kind'],index:number,wave:number,t:CombatTuning):Enemy {
- // Stable interleaved positions on both sides of the central lane; no unseeded RNG.
- const side=index%2===0?1:-1,x=side*(t.spawnRadius+Math.floor(index/4)*t.spawnSeparation),z=((index*3)%7-3)*1.35;
+ // Stable circular drops inside the combat zone; the 48-u slab is scenery.
+ const angle=index*2.399963229728653+wave*.7,radius=t.spawnRadius+(index%3)*t.spawnSeparation*.5;
+ const x=Ops.cos(angle)*radius,z=Ops.sin(angle)*radius,side=x>=0?1:-1;
  const stats=enemyStats(kind,t),p=collide(x,z,stats.radius,t);
  return{id:wave*100+index,kind,x:p.x,z:p.z,prevX:p.x,prevZ:p.z,hp:stats.hp,faceX:-side,faceZ:0,behavior:{kind:'spawn',remaining:t.spawnDropTicks}};
 }

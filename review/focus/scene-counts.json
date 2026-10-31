@@ -1,0 +1,459 @@
+{
+  "viewport": {
+    "width": 844,
+    "height": 390
+  },
+  "deviceScaleFactor": 2,
+  "hardware": "headed Mac ANGLE Metal Apple M4",
+  "physicalPhone": false,
+  "reports": [
+    {
+      "scene": "lobby",
+      "quality": "standard",
+      "calls": 65,
+      "triangles": 51554,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "product"
+    },
+    {
+      "scene": "arena",
+      "quality": "standard",
+      "calls": 45,
+      "triangles": 22616,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "product"
+    },
+    {
+      "scene": "core-studio",
+      "quality": "standard",
+      "calls": 18,
+      "triangles": 100258,
+      "actors": {
+        "core": 100258,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "enemy-lineup",
+      "quality": "standard",
+      "calls": 7,
+      "triangles": 5404,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "combat-readability",
+      "quality": "standard",
+      "calls": 87,
+      "triangles": 40452,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "perf-worst",
+      "quality": "standard",
+      "calls": 45,
+      "triangles": 22616,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "product"
+    },
+    {
+      "scene": "boss",
+      "quality": "standard",
+      "calls": 46,
+      "triangles": 39255,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "arena-showcase",
+      "quality": "standard",
+      "calls": 63,
+      "triangles": 55962,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "sawlet-studio",
+      "quality": "standard",
+      "calls": 22,
+      "triangles": 2086,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "thrower-studio",
+      "quality": "standard",
+      "calls": 35,
+      "triangles": 1526,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "shieldsaw-studio",
+      "quality": "standard",
+      "calls": 36,
+      "triangles": 3726,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "grinder-studio",
+      "quality": "standard",
+      "calls": 29,
+      "triangles": 3378,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "boss-studio",
+      "quality": "standard",
+      "calls": 3,
+      "triangles": 5712,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "workshop",
+      "quality": "standard",
+      "calls": 65,
+      "triangles": 51554,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "product"
+    },
+    {
+      "scene": "lobby",
+      "quality": "low",
+      "calls": 28,
+      "triangles": 9508,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "product"
+    },
+    {
+      "scene": "arena",
+      "quality": "low",
+      "calls": 44,
+      "triangles": 13214,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "product"
+    },
+    {
+      "scene": "core-studio",
+      "quality": "low",
+      "calls": 18,
+      "triangles": 100258,
+      "actors": {
+        "core": 100258,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "enemy-lineup",
+      "quality": "low",
+      "calls": 7,
+      "triangles": 5404,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "combat-readability",
+      "quality": "low",
+      "calls": 74,
+      "triangles": 17018,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "perf-worst",
+      "quality": "low",
+      "calls": 44,
+      "triangles": 13214,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "product"
+    },
+    {
+      "scene": "boss",
+      "quality": "low",
+      "calls": 33,
+      "triangles": 15821,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "arena-showcase",
+      "quality": "low",
+      "calls": 19,
+      "triangles": 9222,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "sawlet-studio",
+      "quality": "low",
+      "calls": 22,
+      "triangles": 2086,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "thrower-studio",
+      "quality": "low",
+      "calls": 35,
+      "triangles": 1526,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "shieldsaw-studio",
+      "quality": "low",
+      "calls": 36,
+      "triangles": 3726,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "grinder-studio",
+      "quality": "low",
+      "calls": 29,
+      "triangles": 3378,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "boss-studio",
+      "quality": "low",
+      "calls": 3,
+      "triangles": 5712,
+      "actors": {
+        "core": 0,
+        "enemies": {
+          "sawlet": 1916,
+          "thrower": 1356,
+          "shieldsaw": 3556,
+          "grinder": 3208
+        }
+      },
+      "kind": "diagnostic presentation view"
+    },
+    {
+      "scene": "workshop",
+      "quality": "low",
+      "calls": 28,
+      "triangles": 9508,
+      "actors": {
+        "core": 2084,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460
+        }
+      },
+      "kind": "product"
+    }
+  ]
+}

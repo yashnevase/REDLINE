@@ -1,0 +1,5620 @@
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "name": "desktop"
+    },
+    "normalHP": true,
+    "normalDamage": true,
+    "acceleratedCombat": false,
+    "setup": "normal-input bot wave-1 prefix, then real host playback; 1 s upgrade choice dwell",
+    "phases": [
+      2,
+      3
+    ],
+    "maxHullFraction": 0.034722222222222224,
+    "maxWallBonkGapMs": 1382.4000000000015,
+    "p50": 16.699999999999818,
+    "p95": 17.699999999999818,
+    "p99": 17.700000000000728,
+    "replayVerified": true,
+    "finalStateSha256": "8da923b5715ce8d03fc3cbfcf3881962d322d9f78d1a2668b13adedba698729d",
+    "samples": [
+      {
+        "tick": 467,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 629.534098966143,
+          "y": 321.1419963304614,
+          "radius": 51.850904464290046
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 47,
+        "triangles": 18592
+      },
+      {
+        "tick": 475,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 558.397016942581,
+          "y": 393.8354663815492,
+          "radius": 49.72961046197785
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 77,
+        "triangles": 22474
+      },
+      {
+        "tick": 488,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 632.7725614727796,
+          "y": 328.0447812479984,
+          "radius": 49.01579171373816
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 83,
+        "triangles": 22876
+      },
+      {
+        "tick": 500,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 648.636558566145,
+          "y": 315.8992142642529,
+          "radius": 48.86100588254108
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 90,
+        "triangles": 23660
+      },
+      {
+        "tick": 513,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 652.1972546620666,
+          "y": 314.72884444296454,
+          "radius": 48.830971604563274
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 51,
+        "triangles": 19022
+      },
+      {
+        "tick": 525,
+        "wave": 2,
+        "hp": 100,
+        "live": 6,
+        "core": {
+          "x": 662.1136277436937,
+          "y": 312.89527459791367,
+          "radius": 48.93891479954248
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 58,
+        "triangles": 19398
+      },
+      {
+        "tick": 538,
+        "wave": 2,
+        "hp": 100,
+        "live": 6,
+        "core": {
+          "x": 718.1629291909177,
+          "y": 346.7966616487293,
+          "radius": 48.330713112626846
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 57,
+        "triangles": 19510
+      },
+      {
+        "tick": 551,
+        "wave": 2,
+        "hp": 100,
+        "live": 6,
+        "core": {
+          "x": 651.3763725887167,
+          "y": 325.81455884949656,
+          "radius": 49.46439376989383
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 53,
+        "triangles": 17930
+      },
+      {
+        "tick": 564,
+        "wave": 2,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 623.0004834801263,
+          "y": 332.7382511341354,
+          "radius": 50.281323047058144
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.26900330979531073
+        },
+        "calls": 50,
+        "triangles": 21348
+      },
+      {
+        "tick": 576,
+        "wave": 2,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 647.2788475421879,
+          "y": 333.505973299481,
+          "radius": 48.9722336675955
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 49,
+        "triangles": 21020
+      },
+      {
+        "tick": 589,
+        "wave": 2,
+        "hp": 94,
+        "live": 7,
+        "core": {
+          "x": 656.961241918626,
+          "y": 331.04032425254945,
+          "radius": 48.84921617746764
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555441
+        },
+        "calls": 49,
+        "triangles": 21950
+      },
+      {
+        "tick": 600,
+        "wave": 2,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 656.3458910074601,
+          "y": 330.3641437450908,
+          "radius": 50.780964541079896
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 79,
+        "triangles": 25500
+      },
+      {
+        "tick": 612,
+        "wave": 2,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 670.4783974717207,
+          "y": 333.8813868562029,
+          "radius": 49.235856739812576
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.78
+        },
+        "calls": 82,
+        "triangles": 26382
+      },
+      {
+        "tick": 620,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 664.151986508525,
+          "y": 344.6872838153712,
+          "radius": 49.689263444760606
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.4629560146867759
+        },
+        "calls": 93,
+        "triangles": 27580
+      },
+      {
+        "tick": 633,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 641.3092212777037,
+          "y": 345.180463054686,
+          "radius": 49.35300441481125
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.808888888888866
+        },
+        "calls": 89,
+        "triangles": 26368
+      },
+      {
+        "tick": 645,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 631.173982061467,
+          "y": 336.47519611382864,
+          "radius": 48.89554114289628
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8088888888888889
+        },
+        "calls": 94,
+        "triangles": 25616
+      },
+      {
+        "tick": 658,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 579.3663649178577,
+          "y": 320.2535270501471,
+          "radius": 48.277304644537985
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8088888888888889
+        },
+        "calls": 67,
+        "triangles": 22076
+      },
+      {
+        "tick": 670,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 575.0982790329277,
+          "y": 304.9982709911178,
+          "radius": 48.53532219846445
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8088888888888889
+        },
+        "calls": 46,
+        "triangles": 20306
+      },
+      {
+        "tick": 683,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 651.4209478401723,
+          "y": 325.206217074838,
+          "radius": 49.86846307653422
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.03383769063938562
+        },
+        "calls": 48,
+        "triangles": 20122
+      },
+      {
+        "tick": 695,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 659.4559481642073,
+          "y": 320.6172798869502,
+          "radius": 48.96294922586459
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8088888888888889
+        },
+        "calls": 45,
+        "triangles": 20030
+      },
+      {
+        "tick": 708,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 639.21390783536,
+          "y": 270.1187437931236,
+          "radius": 50.404042286403666
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 47,
+        "triangles": 20656
+      },
+      {
+        "tick": 715,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 726.1014457787741,
+          "y": 391.44928135505353,
+          "radius": 48.73071781952185
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 79,
+        "triangles": 24074
+      },
+      {
+        "tick": 720,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 684.3222666938618,
+          "y": 351.5339535208516,
+          "radius": 48.07489702423871
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 81,
+        "triangles": 24208
+      },
+      {
+        "tick": 733,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 664.4686794191908,
+          "y": 334.93922470977896,
+          "radius": 49.28343542785215
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.6646002632981839
+        },
+        "calls": 81,
+        "triangles": 24114
+      },
+      {
+        "tick": 746,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 620.5252308212708,
+          "y": 310.51682074636756,
+          "radius": 50.20077194488528
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 85,
+        "triangles": 24930
+      },
+      {
+        "tick": 758,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 708.2915484749499,
+          "y": 299.492220118055,
+          "radius": 48.27002912550106
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 65,
+        "triangles": 21590
+      },
+      {
+        "tick": 771,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 682.9900121370401,
+          "y": 310.02468026181316,
+          "radius": 48.710908811214836
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 62,
+        "triangles": 21014
+      },
+      {
+        "tick": 784,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 617.9460264961325,
+          "y": 320.6425778325512,
+          "radius": 49.52606844148794
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 41,
+        "triangles": 18396
+      },
+      {
+        "tick": 797,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 656.9442744939532,
+          "y": 309.0511868054652,
+          "radius": 49.737058229199924
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 60,
+        "triangles": 20070
+      },
+      {
+        "tick": 810,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 706.4270949149898,
+          "y": 337.046022837867,
+          "radius": 48.41669853158703
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 63,
+        "triangles": 23146
+      },
+      {
+        "tick": 823,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 706.2131020785091,
+          "y": 353.77951376190344,
+          "radius": 48.54494585906129
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 55,
+        "triangles": 22770
+      },
+      {
+        "tick": 836,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 634.5247808873039,
+          "y": 321.28463490036626,
+          "radius": 49.28596371821176
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 40,
+        "triangles": 21064
+      },
+      {
+        "tick": 849,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 626.1241799688248,
+          "y": 326.32058352609107,
+          "radius": 49.09878116803738
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 48,
+        "triangles": 21440
+      },
+      {
+        "tick": 861,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 639.0209297842914,
+          "y": 324.83229677917166,
+          "radius": 48.87628145216153
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 51,
+        "triangles": 21628
+      },
+      {
+        "tick": 871,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 672.3085561225032,
+          "y": 330.47891690560965,
+          "radius": 49.69867284023982
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 63,
+        "triangles": 22936
+      },
+      {
+        "tick": 884,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 654.5024164751823,
+          "y": 325.8140111319737,
+          "radius": 48.89617214114973
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 54,
+        "triangles": 21566
+      },
+      {
+        "tick": 896,
+        "wave": 2,
+        "hp": 94,
+        "live": 3,
+        "core": {
+          "x": 653.0660758933549,
+          "y": 333.3086141445938,
+          "radius": 51.174904826818654
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 79,
+        "triangles": 24322
+      },
+      {
+        "tick": 906,
+        "wave": 2,
+        "hp": 94,
+        "live": 3,
+        "core": {
+          "x": 652.036376915503,
+          "y": 340.3091518570331,
+          "radius": 49.14232309024309
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 89,
+        "triangles": 25646
+      },
+      {
+        "tick": 914,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 639.6080217846758,
+          "y": 339.6250024482467,
+          "radius": 50.354140617170806
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 84,
+        "triangles": 24714
+      },
+      {
+        "tick": 927,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 800.7976591419658,
+          "y": 322.602686897981,
+          "radius": 48.92840939705853
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 79,
+        "triangles": 23360
+      },
+      {
+        "tick": 940,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 652.7873604426907,
+          "y": 324.83021951877663,
+          "radius": 49.1820835859808
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 60,
+        "triangles": 20722
+      },
+      {
+        "tick": 953,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 611.2257928046722,
+          "y": 326.0443387557781,
+          "radius": 49.66494923051689
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 57,
+        "triangles": 20342
+      },
+      {
+        "tick": 965,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 628.8967375844275,
+          "y": 323.7002424052546,
+          "radius": 49.79189806059779
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 46,
+        "triangles": 19044
+      },
+      {
+        "tick": 978,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 640.2106275901605,
+          "y": 321.5443717500484,
+          "radius": 50.06446084242368
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 59,
+        "triangles": 20492
+      },
+      {
+        "tick": 991,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 686.5810187238569,
+          "y": 325.1402999399455,
+          "radius": 48.63172823666165
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 51,
+        "triangles": 18430
+      },
+      {
+        "tick": 1003,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 721.456401115384,
+          "y": 338.7158856809695,
+          "radius": 48.480554753592834
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 51,
+        "triangles": 18446
+      },
+      {
+        "tick": 1015,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 646.9731247412038,
+          "y": 328.76223381882676,
+          "radius": 48.76021320458848
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 34,
+        "triangles": 16640
+      },
+      {
+        "tick": 1028,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 639.7501594918213,
+          "y": 319.69294238221306,
+          "radius": 48.81435310314323
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 34,
+        "triangles": 16640
+      },
+      {
+        "tick": 1101,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 640.0014209778208,
+          "y": 323.255763964257,
+          "radius": 49.82127136000949
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 31,
+        "triangles": 16228
+      },
+      {
+        "tick": 1114,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 636.2202688626633,
+          "y": 318.8141293320089,
+          "radius": 49.465686800459935
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 33,
+        "triangles": 16284
+      },
+      {
+        "tick": 1127,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 631.762292003483,
+          "y": 318.6191694919529,
+          "radius": 48.930288836076286
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 37,
+        "triangles": 17404
+      },
+      {
+        "tick": 1140,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 626.6317394538859,
+          "y": 316.2708355100602,
+          "radius": 48.842317324097294
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 37,
+        "triangles": 17404
+      },
+      {
+        "tick": 1152,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 626.0157286572389,
+          "y": 315.9856067320627,
+          "radius": 48.82826809548047
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333028
+        },
+        "calls": 37,
+        "triangles": 17982
+      },
+      {
+        "tick": 1165,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 622.2325303896256,
+          "y": 315.0753445765642,
+          "radius": 49.88968171465897
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333028
+        },
+        "calls": 51,
+        "triangles": 20122
+      },
+      {
+        "tick": 1178,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 678.6620023865946,
+          "y": 291.7243389186137,
+          "radius": 48.257817486759066
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 59,
+        "triangles": 21120
+      },
+      {
+        "tick": 1191,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 614.1040063785003,
+          "y": 343.7564912374225,
+          "radius": 48.60988044625786
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 66,
+        "triangles": 22186
+      },
+      {
+        "tick": 1204,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 626.9250591774901,
+          "y": 332.45874449099756,
+          "radius": 48.83587021067856
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 67,
+        "triangles": 23168
+      },
+      {
+        "tick": 1217,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 648.5491294680085,
+          "y": 338.7499738696698,
+          "radius": 49.68556458587568
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 60,
+        "triangles": 22986
+      },
+      {
+        "tick": 1228,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 575.8678066250293,
+          "y": 347.56241243524045,
+          "radius": 49.99606097063615
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 81,
+        "triangles": 25126
+      },
+      {
+        "tick": 1237,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 600.401834120021,
+          "y": 335.3163671491705,
+          "radius": 50.07423364423056
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 84,
+        "triangles": 25490
+      },
+      {
+        "tick": 1248,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 610.1158812784711,
+          "y": 330.9031842373668,
+          "radius": 48.86692225368974
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666667
+        },
+        "calls": 85,
+        "triangles": 25310
+      },
+      {
+        "tick": 1260,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 634.4482057481237,
+          "y": 321.0634537866682,
+          "radius": 49.8737993910474
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.734676189811545
+        },
+        "calls": 91,
+        "triangles": 24580
+      },
+      {
+        "tick": 1273,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 662.4141281841246,
+          "y": 333.5116811165205,
+          "radius": 49.40059197983276
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.2166318432923414
+        },
+        "calls": 54,
+        "triangles": 19598
+      },
+      {
+        "tick": 1286,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 598.257789021162,
+          "y": 366.53377677553823,
+          "radius": 48.32837227085014
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666667
+        },
+        "calls": 46,
+        "triangles": 19510
+      },
+      {
+        "tick": 1299,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 628.8062672642421,
+          "y": 344.82453961951285,
+          "radius": 48.743317424126936
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666667
+        },
+        "calls": 37,
+        "triangles": 18720
+      },
+      {
+        "tick": 1312,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 635.0866202164484,
+          "y": 319.43181736890915,
+          "radius": 49.84837361826894
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666479
+        },
+        "calls": 40,
+        "triangles": 18914
+      },
+      {
+        "tick": 1325,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 623.0901430420004,
+          "y": 316.6434233557748,
+          "radius": 48.875532277255125
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666527
+        },
+        "calls": 43,
+        "triangles": 18940
+      },
+      {
+        "tick": 1338,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 616.0764803269583,
+          "y": 312.4678201336543,
+          "radius": 49.613437433989084
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 50,
+        "triangles": 19120
+      },
+      {
+        "tick": 1351,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 619.1542402390393,
+          "y": 317.5117275268479,
+          "radius": 49.76821106170925
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 46,
+        "triangles": 20184
+      },
+      {
+        "tick": 1364,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 633.1198663740398,
+          "y": 318.86039237095645,
+          "radius": 51.89998186895208
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 47,
+        "triangles": 20302
+      },
+      {
+        "tick": 1373,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 637.9554660965605,
+          "y": 324.68456981072495,
+          "radius": 49.818954032371956
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 69,
+        "triangles": 22876
+      },
+      {
+        "tick": 1386,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 633.862706714631,
+          "y": 331.19454745872275,
+          "radius": 49.00372760226378
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7854166666666628
+        },
+        "calls": 78,
+        "triangles": 22016
+      },
+      {
+        "tick": 1399,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 621.3222971484859,
+          "y": 338.09116430074374,
+          "radius": 49.1540629013885
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111111027
+        },
+        "calls": 80,
+        "triangles": 23188
+      },
+      {
+        "tick": 1412,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 541.556617723856,
+          "y": 333.1608894595492,
+          "radius": 48.19439191302796
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111111111
+        },
+        "calls": 54,
+        "triangles": 21064
+      },
+      {
+        "tick": 1424,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 683.553558727421,
+          "y": 318.76285345716406,
+          "radius": 48.954327240190466
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 63,
+        "triangles": 23446
+      },
+      {
+        "tick": 1437,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 645.780305138433,
+          "y": 317.96949946338157,
+          "radius": 49.06633688730797
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111111111
+        },
+        "calls": 51,
+        "triangles": 21912
+      },
+      {
+        "tick": 1449,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 629.060966612729,
+          "y": 317.33665492931044,
+          "radius": 48.870544680358456
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111110827
+        },
+        "calls": 51,
+        "triangles": 21964
+      },
+      {
+        "tick": 1462,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 622.3661774253535,
+          "y": 313.7056443542256,
+          "radius": 49.00713957324617
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111110809
+        },
+        "calls": 53,
+        "triangles": 21110
+      },
+      {
+        "tick": 1474,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 622.0091829288493,
+          "y": 313.45131354050545,
+          "radius": 49.18712938091275
+        },
+        "hull": {
+          "fraction": 0.020833333333333332,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 56,
+        "triangles": 21122
+      },
+      {
+        "tick": 1487,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 628.2491896576306,
+          "y": 317.3717560780834,
+          "radius": 50.32402443176333
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 63,
+        "triangles": 22494
+      },
+      {
+        "tick": 1493,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 634.5739316854066,
+          "y": 324.5747098310526,
+          "radius": 48.56969475033235
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 71,
+        "triangles": 23572
+      },
+      {
+        "tick": 1504,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 632.6280377234253,
+          "y": 331.05038653515726,
+          "radius": 48.853370447069906
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 70,
+        "triangles": 24086
+      },
+      {
+        "tick": 1517,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 621.3381842383704,
+          "y": 324.6445240320505,
+          "radius": 50.30736197165573
+        },
+        "hull": {
+          "fraction": 0.027777777777777776,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 95,
+        "triangles": 27092
+      },
+      {
+        "tick": 1529,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 743.7816277110585,
+          "y": 360.98793927426334,
+          "radius": 50.02941787739934
+        },
+        "hull": {
+          "fraction": 0.034722222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 97,
+        "triangles": 40440
+      },
+      {
+        "tick": 1542,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 794.7547054309053,
+          "y": 391.71732513129837,
+          "radius": 48.78138619483794
+        },
+        "hull": {
+          "fraction": 0.034722222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 96,
+        "triangles": 40288
+      },
+      {
+        "tick": 1555,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 784.3830769464529,
+          "y": 386.62558271912246,
+          "radius": 50.709074308528116
+        },
+        "hull": {
+          "fraction": 0.027777777777777776,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 75,
+        "triangles": 37454
+      },
+      {
+        "tick": 1568,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 711.2621658790146,
+          "y": 347.7402786689494,
+          "radius": 48.720703544225245
+        },
+        "hull": {
+          "fraction": 0.034722222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 71,
+        "triangles": 36212
+      },
+      {
+        "tick": 1580,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 593.3287273717646,
+          "y": 301.93249280446685,
+          "radius": 48.42229220417093
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 67,
+        "triangles": 23372
+      },
+      {
+        "tick": 1593,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 622.9148475624979,
+          "y": 321.0104610899112,
+          "radius": 48.626426738577116
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 48,
+        "triangles": 21642
+      },
+      {
+        "tick": 1606,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 592.7379933068635,
+          "y": 352.40987721487926,
+          "radius": 48.08914194516593
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 43,
+        "triangles": 21788
+      },
+      {
+        "tick": 1619,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 614.5191129838416,
+          "y": 338.6321695038128,
+          "radius": 48.70397014631324
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 48,
+        "triangles": 21480
+      },
+      {
+        "tick": 1631,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 641.0999066768865,
+          "y": 316.8466589829123,
+          "radius": 49.55433769357875
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 47,
+        "triangles": 21448
+      },
+      {
+        "tick": 1644,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 639.1752215933924,
+          "y": 323.08565180320835,
+          "radius": 49.414402702579906
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 48,
+        "triangles": 23182
+      },
+      {
+        "tick": 1657,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 699.182133861515,
+          "y": 295.05938509130993,
+          "radius": 48.42787631585678
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 48,
+        "triangles": 23478
+      },
+      {
+        "tick": 1670,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 641.1380478886934,
+          "y": 319.6615093033973,
+          "radius": 49.04574724909554
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 87,
+        "triangles": 28010
+      },
+      {
+        "tick": 1683,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 654.0090394218569,
+          "y": 335.5946600185232,
+          "radius": 49.9610615988802
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 94,
+        "triangles": 28468
+      },
+      {
+        "tick": 1696,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 647.0769628106534,
+          "y": 305.7813058947371,
+          "radius": 48.432601380416074
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 92,
+        "triangles": 27328
+      },
+      {
+        "tick": 1709,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 636.7996706967105,
+          "y": 288.1577451635183,
+          "radius": 48.547561471480456
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 57,
+        "triangles": 23252
+      },
+      {
+        "tick": 1722,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 653.5800301527939,
+          "y": 326.7005208793843,
+          "radius": 49.29079420404874
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 40,
+        "triangles": 21430
+      },
+      {
+        "tick": 1735,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 644.237735319794,
+          "y": 322.97225537165707,
+          "radius": 48.90180301631896
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 36,
+        "triangles": 21266
+      },
+      {
+        "tick": 1748,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 639.8458499011864,
+          "y": 321.28137986403976,
+          "radius": 48.837684878072174
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 36,
+        "triangles": 21274
+      },
+      {
+        "tick": 1760,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 639.4872275998442,
+          "y": 320.9998066784688,
+          "radius": 48.82737796222839
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 36,
+        "triangles": 21274
+      },
+      {
+        "tick": 1773,
+        "wave": 3,
+        "hp": 82,
+        "live": 4,
+        "core": {
+          "x": 641.8153391508018,
+          "y": 338.79687253589566,
+          "radius": 49.0453977796626
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 63,
+        "triangles": 24250
+      },
+      {
+        "tick": 1785,
+        "wave": 3,
+        "hp": 82,
+        "live": 4,
+        "core": {
+          "x": 639.894403514986,
+          "y": 323.29034261284465,
+          "radius": 48.86628230687047
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 67,
+        "triangles": 24486
+      },
+      {
+        "tick": 1798,
+        "wave": 3,
+        "hp": 82,
+        "live": 4,
+        "core": {
+          "x": 638.7192642130324,
+          "y": 311.89345428263033,
+          "radius": 49.05032292524694
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 93,
+        "triangles": 26858
+      },
+      {
+        "tick": 1807,
+        "wave": 3,
+        "hp": 82,
+        "live": 3,
+        "core": {
+          "x": 671.458579741738,
+          "y": 292.2575644411607,
+          "radius": 48.867570585641246
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 86,
+        "triangles": 25976
+      },
+      {
+        "tick": 1816,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 695.6063726069175,
+          "y": 296.3158897897101,
+          "radius": 49.671361673922405
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 86,
+        "triangles": 25750
+      },
+      {
+        "tick": 1829,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 645.2440541302485,
+          "y": 321.8060449171153,
+          "radius": 49.00977447306242
+        },
+        "hull": {
+          "fraction": 0.020833333333333332,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 93,
+        "triangles": 25848
+      },
+      {
+        "tick": 1841,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 609.6037357193286,
+          "y": 346.67931970676176,
+          "radius": 49.668764342311555
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 78,
+        "triangles": 21740
+      },
+      {
+        "tick": 1854,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 650.5193949194102,
+          "y": 326.99509668164956,
+          "radius": 49.07799955615151
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 42,
+        "triangles": 17660
+      },
+      {
+        "tick": 1867,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 656.7111289088668,
+          "y": 319.3902362169004,
+          "radius": 48.86692522751396
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 40,
+        "triangles": 17628
+      },
+      {
+        "tick": 1879,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 657.383560834139,
+          "y": 318.452248249389,
+          "radius": 48.83285293804002
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333205
+        },
+        "calls": 40,
+        "triangles": 17628
+      },
+      {
+        "tick": 1892,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 592.7221272002865,
+          "y": 339.93861680389506,
+          "radius": 48.109285755458004
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 49,
+        "triangles": 17870
+      },
+      {
+        "tick": 1905,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 605.1260641767503,
+          "y": 340.4113555576117,
+          "radius": 48.667965477358706
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 46,
+        "triangles": 17966
+      },
+      {
+        "tick": 1918,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 645.1240717368237,
+          "y": 316.07039657466487,
+          "radius": 49.562197966958394
+        },
+        "hull": {
+          "fraction": 0.017361111111111112,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 40,
+        "triangles": 17606
+      },
+      {
+        "tick": 1930,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 629.3667630444864,
+          "y": 327.45120955064306,
+          "radius": 48.97281584348546
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 39,
+        "triangles": 17614
+      },
+      {
+        "tick": 1943,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 624.5187904350053,
+          "y": 330.1873380026612,
+          "radius": 48.849271444394375
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 41,
+        "triangles": 17654
+      },
+      {
+        "tick": 1956,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 623.4461477007959,
+          "y": 330.21591005559594,
+          "radius": 48.82902543856376
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 41,
+        "triangles": 17606
+      },
+      {
+        "tick": 1969,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 724.9338387776309,
+          "y": 290.46697157945164,
+          "radius": 50.446677514384824
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 75,
+        "triangles": 21528
+      }
+    ],
+    "bonkGaps": [
+      {
+        "wave": 2,
+        "ms": 933.3
+      },
+      {
+        "wave": 2,
+        "ms": 483.29999999999995
+      },
+      {
+        "wave": 2,
+        "ms": 865.5999999999999
+      },
+      {
+        "wave": 2,
+        "ms": 284.4000000000001
+      },
+      {
+        "wave": 2,
+        "ms": 283.3000000000002
+      },
+      {
+        "wave": 2,
+        "ms": 883.4000000000001
+      },
+      {
+        "wave": 2,
+        "ms": 483.3000000000002
+      },
+      {
+        "wave": 2,
+        "ms": 766.6999999999998
+      },
+      {
+        "wave": 2,
+        "ms": 832.3000000000002
+      },
+      {
+        "wave": 2,
+        "ms": 1233.2999999999993
+      },
+      {
+        "wave": 2,
+        "ms": 434.3000000000011
+      },
+      {
+        "wave": 2,
+        "ms": 132.39999999999964
+      },
+      {
+        "wave": 2,
+        "ms": 283.2999999999993
+      },
+      {
+        "wave": 2,
+        "ms": 601
+      },
+      {
+        "wave": 2,
+        "ms": 500
+      },
+      {
+        "wave": 2,
+        "ms": 983.3000000000011
+      },
+      {
+        "wave": 3,
+        "ms": 1066.7000000000007
+      },
+      {
+        "wave": 3,
+        "ms": 816.6999999999989
+      },
+      {
+        "wave": 3,
+        "ms": 216.60000000000036
+      },
+      {
+        "wave": 3,
+        "ms": 216.70000000000073
+      },
+      {
+        "wave": 3,
+        "ms": 466.6999999999989
+      },
+      {
+        "wave": 3,
+        "ms": 866.6000000000004
+      },
+      {
+        "wave": 3,
+        "ms": 482.2999999999993
+      },
+      {
+        "wave": 3,
+        "ms": 383.40000000000146
+      },
+      {
+        "wave": 3,
+        "ms": 484.2999999999993
+      },
+      {
+        "wave": 3,
+        "ms": 1100
+      },
+      {
+        "wave": 3,
+        "ms": 483.2999999999993
+      },
+      {
+        "wave": 3,
+        "ms": 615.9000000000015
+      },
+      {
+        "wave": 3,
+        "ms": 133.20000000000073
+      },
+      {
+        "wave": 3,
+        "ms": 117.59999999999854
+      },
+      {
+        "wave": 3,
+        "ms": 450
+      },
+      {
+        "wave": 3,
+        "ms": 700
+      },
+      {
+        "wave": 3,
+        "ms": 715.7000000000007
+      },
+      {
+        "wave": 3,
+        "ms": 350.8999999999978
+      },
+      {
+        "wave": 3,
+        "ms": 300
+      },
+      {
+        "wave": 3,
+        "ms": 1382.4000000000015
+      },
+      {
+        "wave": 3,
+        "ms": 416.7000000000007
+      },
+      {
+        "wave": 3,
+        "ms": 199.89999999999782
+      },
+      {
+        "wave": 3,
+        "ms": 317.6000000000022
+      },
+      {
+        "wave": 3,
+        "ms": 1250.0999999999985
+      },
+      {
+        "wave": 3,
+        "ms": 1350
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390,
+      "name": "compact"
+    },
+    "normalHP": true,
+    "normalDamage": true,
+    "acceleratedCombat": false,
+    "setup": "normal-input bot wave-1 prefix, then real host playback; 1 s upgrade choice dwell",
+    "phases": [
+      2,
+      3
+    ],
+    "maxHullFraction": 0.05381944444444445,
+    "maxWallBonkGapMs": 1383.2999999999993,
+    "p50": 16.699999999999818,
+    "p95": 17.699999999999818,
+    "p99": 17.700000000000728,
+    "replayVerified": true,
+    "finalStateSha256": "90c4330c0c6d8aa08d56e18b3cdd209d78f01dc6e53ddfcc79da7353baea69c6",
+    "samples": [
+      {
+        "tick": 467,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 419.79155056081856,
+          "y": 173.63276125131497,
+          "radius": 28.565143749999994
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 75,
+        "triangles": 22264
+      },
+      {
+        "tick": 476,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 380.9590788425698,
+          "y": 209.53806356274796,
+          "radius": 27.430206047724916
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 77,
+        "triangles": 22474
+      },
+      {
+        "tick": 488,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 418.19824731235855,
+          "y": 177.20908572057255,
+          "radius": 27.03227149233449
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 85,
+        "triangles": 22924
+      },
+      {
+        "tick": 501,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 427.1469714514274,
+          "y": 170.37420026417826,
+          "radius": 26.944922126435458
+        },
+        "hull": {
+          "fraction": 0.005208333333333333,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555467
+        },
+        "calls": 90,
+        "triangles": 23732
+      },
+      {
+        "tick": 514,
+        "wave": 2,
+        "hp": 100,
+        "live": 5,
+        "core": {
+          "x": 429.0347065690732,
+          "y": 169.88648449929826,
+          "radius": 26.930553031166713
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 51,
+        "triangles": 19046
+      },
+      {
+        "tick": 527,
+        "wave": 2,
+        "hp": 100,
+        "live": 6,
+        "core": {
+          "x": 446.176635639867,
+          "y": 172.82110226758903,
+          "radius": 26.7918850341682
+        },
+        "hull": {
+          "fraction": 0.029513888888888888,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 58,
+        "triangles": 19478
+      },
+      {
+        "tick": 540,
+        "wave": 2,
+        "hp": 100,
+        "live": 6,
+        "core": {
+          "x": 462.16970202080387,
+          "y": 187.6394383840886,
+          "radius": 26.72316194440461
+        },
+        "hull": {
+          "fraction": 0.017361111111111112,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 58,
+        "triangles": 18814
+      },
+      {
+        "tick": 553,
+        "wave": 2,
+        "hp": 100,
+        "live": 6,
+        "core": {
+          "x": 423.522437465423,
+          "y": 174.49591080613712,
+          "radius": 27.20493195126354
+        },
+        "hull": {
+          "fraction": 0.008680555555555556,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.05015440840571748
+        },
+        "calls": 53,
+        "triangles": 20222
+      },
+      {
+        "tick": 566,
+        "wave": 2,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 416.2364369784698,
+          "y": 180.85717395254312,
+          "radius": 27.483547677310376
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 50,
+        "triangles": 21420
+      },
+      {
+        "tick": 579,
+        "wave": 2,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 428.2633606447216,
+          "y": 180.10538974723437,
+          "radius": 26.981617687782734
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555557
+        },
+        "calls": 50,
+        "triangles": 21494
+      },
+      {
+        "tick": 591,
+        "wave": 2,
+        "hp": 94,
+        "live": 7,
+        "core": {
+          "x": 431.9704105224334,
+          "y": 178.99115231268564,
+          "radius": 26.937897378737432
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7655555555555522
+        },
+        "calls": 49,
+        "triangles": 21998
+      },
+      {
+        "tick": 600,
+        "wave": 2,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 442.12006705170927,
+          "y": 179.17923199786068,
+          "radius": 27.95734832269304
+        },
+        "hull": {
+          "fraction": 0.008680555555555556,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 81,
+        "triangles": 25620
+      },
+      {
+        "tick": 612,
+        "wave": 2,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 438.46904192130967,
+          "y": 180.7394133358872,
+          "radius": 27.11937458807349
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.78
+        },
+        "calls": 82,
+        "triangles": 26426
+      },
+      {
+        "tick": 621,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 435.84760703133793,
+          "y": 185.79470474433418,
+          "radius": 27.20258410951555
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7944444444444445
+        },
+        "calls": 93,
+        "triangles": 27640
+      },
+      {
+        "tick": 634,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 422.5640812890418,
+          "y": 185.92010554886875,
+          "radius": 27.10730652266299
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.808888888888866
+        },
+        "calls": 89,
+        "triangles": 26448
+      },
+      {
+        "tick": 647,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 417.27097810740366,
+          "y": 181.22323399469767,
+          "radius": 26.957485826555857
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8088888888888889
+        },
+        "calls": 96,
+        "triangles": 25672
+      },
+      {
+        "tick": 659,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 382.63840173521453,
+          "y": 170.7643915198386,
+          "radius": 26.591563688228668
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8088888888888889
+        },
+        "calls": 69,
+        "triangles": 22292
+      },
+      {
+        "tick": 672,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 390.72665103992756,
+          "y": 164.28910314680766,
+          "radius": 26.806392654976474
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8088888888888889
+        },
+        "calls": 46,
+        "triangles": 20186
+      },
+      {
+        "tick": 685,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 430.4936518210953,
+          "y": 177.09400089233876,
+          "radius": 27.294578263569367
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7927750535844523
+        },
+        "calls": 48,
+        "triangles": 20266
+      },
+      {
+        "tick": 697,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 431.5737394824779,
+          "y": 170.6875244247234,
+          "radius": 26.914632256058024
+        },
+        "hull": {
+          "fraction": 0.012152777777777778,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8088888888888889
+        },
+        "calls": 46,
+        "triangles": 20338
+      },
+      {
+        "tick": 709,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 427.3211087138909,
+          "y": 148.58205550402496,
+          "radius": 27.702500854753833
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 66,
+        "triangles": 23204
+      },
+      {
+        "tick": 716,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 467.20056481770985,
+          "y": 208.47061491481062,
+          "radius": 26.69584730383302
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 78,
+        "triangles": 24112
+      },
+      {
+        "tick": 724,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 438.4505385688815,
+          "y": 186.33409158502928,
+          "radius": 26.6835835072584
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 80,
+        "triangles": 22856
+      },
+      {
+        "tick": 737,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 432.35550639239057,
+          "y": 176.80591785547512,
+          "radius": 27.06243377392716
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 81,
+        "triangles": 24210
+      },
+      {
+        "tick": 750,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 412.93618000109865,
+          "y": 165.93555513795306,
+          "radius": 27.123740740770852
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 75,
+        "triangles": 22618
+      },
+      {
+        "tick": 763,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 459.80431456918774,
+          "y": 163.62093905718345,
+          "radius": 26.73477172437946
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 65,
+        "triangles": 21646
+      },
+      {
+        "tick": 776,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 426.2370131477403,
+          "y": 173.54825363453378,
+          "radius": 27.06921481440194
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 64,
+        "triangles": 22350
+      },
+      {
+        "tick": 788,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 414.63083408127375,
+          "y": 171.9566451371197,
+          "radius": 27.147181150413964
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 45,
+        "triangles": 19944
+      },
+      {
+        "tick": 801,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 430.82335125006324,
+          "y": 168.74037148186594,
+          "radius": 27.101436890281605
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 63,
+        "triangles": 21482
+      },
+      {
+        "tick": 813,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 458.71402002127377,
+          "y": 183.94649574744216,
+          "radius": 26.591920765954324
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 59,
+        "triangles": 23150
+      },
+      {
+        "tick": 826,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 447.3141686638214,
+          "y": 187.3523530068046,
+          "radius": 26.825889555803396
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 55,
+        "triangles": 22602
+      },
+      {
+        "tick": 839,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 411.34439663300066,
+          "y": 173.64837291706178,
+          "radius": 27.28258526156128
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 40,
+        "triangles": 21048
+      },
+      {
+        "tick": 852,
+        "wave": 2,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 420.2121495954908,
+          "y": 176.90479360809883,
+          "radius": 27.026322482452724
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 47,
+        "triangles": 21440
+      },
+      {
+        "tick": 865,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 434.0645843831592,
+          "y": 175.07255451548835,
+          "radius": 28.17405537081342
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 48,
+        "triangles": 21622
+      },
+      {
+        "tick": 874,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 440.1079028194177,
+          "y": 178.94494763224313,
+          "radius": 27.07694073100575
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 63,
+        "triangles": 22944
+      },
+      {
+        "tick": 886,
+        "wave": 2,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 428.4150627480025,
+          "y": 176.99272292523122,
+          "radius": 26.955886578742497
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 57,
+        "triangles": 21578
+      },
+      {
+        "tick": 897,
+        "wave": 2,
+        "hp": 94,
+        "live": 3,
+        "core": {
+          "x": 432.83442184705,
+          "y": 183.12803352431234,
+          "radius": 28.169401844279584
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 87,
+        "triangles": 25230
+      },
+      {
+        "tick": 908,
+        "wave": 2,
+        "hp": 94,
+        "live": 3,
+        "core": {
+          "x": 427.78755408004247,
+          "y": 182.53346385527752,
+          "radius": 27.05725196286035
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 89,
+        "triangles": 25654
+      },
+      {
+        "tick": 917,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 419.54369723554663,
+          "y": 186.18046211585389,
+          "radius": 27.282163664618192
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 83,
+        "triangles": 24614
+      },
+      {
+        "tick": 930,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 487.09873360885575,
+          "y": 174.40615003913973,
+          "radius": 26.967132974087402
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 81,
+        "triangles": 23552
+      },
+      {
+        "tick": 942,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 419.1401075634204,
+          "y": 178.20184715137245,
+          "radius": 27.803073265246287
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 61,
+        "triangles": 20890
+      },
+      {
+        "tick": 955,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 404.822054338625,
+          "y": 175.92942891914996,
+          "radius": 27.410112997514407
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 57,
+        "triangles": 20342
+      },
+      {
+        "tick": 968,
+        "wave": 2,
+        "hp": 94,
+        "live": 2,
+        "core": {
+          "x": 418.0304275882188,
+          "y": 174.8860786407716,
+          "radius": 27.466226667216855
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 46,
+        "triangles": 19044
+      },
+      {
+        "tick": 980,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 421.39627807236417,
+          "y": 173.17096019404218,
+          "radius": 27.475188133905853
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 48,
+        "triangles": 19358
+      },
+      {
+        "tick": 993,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 457.1569176722602,
+          "y": 177.80146523181813,
+          "radius": 26.713202652593303
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 51,
+        "triangles": 18438
+      },
+      {
+        "tick": 1005,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 461.8474584805766,
+          "y": 183.4171797724094,
+          "radius": 26.782660047868315
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 51,
+        "triangles": 18446
+      },
+      {
+        "tick": 1018,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 421.78344120343866,
+          "y": 175.1192952747016,
+          "radius": 26.90388729467988
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 34,
+        "triangles": 16640
+      },
+      {
+        "tick": 1031,
+        "wave": 2,
+        "hp": 94,
+        "live": 1,
+        "core": {
+          "x": 421.9289437622037,
+          "y": 173.5761981652788,
+          "radius": 28.118137406428094
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 35,
+        "triangles": 16808
+      },
+      {
+        "tick": 1101,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 422.0007925408966,
+          "y": 174.73499603463057,
+          "radius": 27.477186339487307
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 33,
+        "triangles": 17270
+      },
+      {
+        "tick": 1113,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 419.75256292994203,
+          "y": 172.16867151361518,
+          "radius": 27.331035850705966
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 34,
+        "triangles": 16694
+      },
+      {
+        "tick": 1126,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 417.99980808313927,
+          "y": 172.43108985276075,
+          "radius": 26.994061231923222
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 37,
+        "triangles": 17404
+      },
+      {
+        "tick": 1139,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 414.724126291305,
+          "y": 170.93078637509876,
+          "radius": 26.93862842653762
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 42,
+        "triangles": 18150
+      },
+      {
+        "tick": 1152,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 414.2834331212744,
+          "y": 170.7231443471673,
+          "radius": 26.929518740564234
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333028
+        },
+        "calls": 38,
+        "triangles": 18472
+      },
+      {
+        "tick": 1165,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 412.2887334560089,
+          "y": 170.24206227210428,
+          "radius": 27.51298991662265
+        },
+        "hull": {
+          "fraction": 0.012152777777777778,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333028
+        },
+        "calls": 52,
+        "triangles": 20818
+      },
+      {
+        "tick": 1178,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 443.6128599444833,
+          "y": 157.20143322638026,
+          "radius": 26.615114548760484
+        },
+        "hull": {
+          "fraction": 0.022569444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 59,
+        "triangles": 21192
+      },
+      {
+        "tick": 1191,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 407.944153293675,
+          "y": 185.92681856245844,
+          "radius": 26.80822507125774
+        },
+        "hull": {
+          "fraction": 0.022569444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 67,
+        "triangles": 23614
+      },
+      {
+        "tick": 1203,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 414.06962029455445,
+          "y": 179.6205749749927,
+          "radius": 26.933983594689472
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 67,
+        "triangles": 23240
+      },
+      {
+        "tick": 1216,
+        "wave": 3,
+        "hp": 94,
+        "live": 6,
+        "core": {
+          "x": 427.64155382375156,
+          "y": 182.4700480286535,
+          "radius": 27.49458727265119
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 61,
+        "triangles": 23944
+      },
+      {
+        "tick": 1228,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 384.41078784078434,
+          "y": 186.63690041824788,
+          "radius": 27.632009163786968
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 83,
+        "triangles": 25206
+      },
+      {
+        "tick": 1237,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 401.9599287915924,
+          "y": 182.67022288141615,
+          "radius": 27.640246678693856
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 86,
+        "triangles": 25538
+      },
+      {
+        "tick": 1247,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 406.4673075635733,
+          "y": 179.03003416100452,
+          "radius": 26.96039130594015
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666667
+        },
+        "calls": 87,
+        "triangles": 25350
+      },
+      {
+        "tick": 1260,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 418.6343467488105,
+          "y": 173.4511363589843,
+          "radius": 27.500351639673962
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.734676189811545
+        },
+        "calls": 91,
+        "triangles": 24580
+      },
+      {
+        "tick": 1273,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 434.18168036789984,
+          "y": 180.49389650240843,
+          "radius": 27.244575525566294
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.2166318432923414
+        },
+        "calls": 54,
+        "triangles": 19598
+      },
+      {
+        "tick": 1286,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 398.42157416358816,
+          "y": 199.0309092404951,
+          "radius": 26.65384974438348
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666667
+        },
+        "calls": 46,
+        "triangles": 19510
+      },
+      {
+        "tick": 1298,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 413.9473210084378,
+          "y": 188.4344452565554,
+          "radius": 26.876041578820672
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666667
+        },
+        "calls": 39,
+        "triangles": 18744
+      },
+      {
+        "tick": 1311,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 420.2490752837992,
+          "y": 172.9689199657029,
+          "radius": 26.91992550279556
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666479
+        },
+        "calls": 39,
+        "triangles": 18842
+      },
+      {
+        "tick": 1324,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 412.88364654610007,
+          "y": 171.11681925185826,
+          "radius": 26.959479506251235
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7691666666666479
+        },
+        "calls": 44,
+        "triangles": 20392
+      },
+      {
+        "tick": 1337,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 407.60015298220736,
+          "y": 168.26845460115376,
+          "radius": 27.345388636576732
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 51,
+        "triangles": 20520
+      },
+      {
+        "tick": 1350,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 412.07853068704964,
+          "y": 172.39374545122,
+          "radius": 27.444150726820563
+        },
+        "hull": {
+          "fraction": 0.017361111111111112,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 48,
+        "triangles": 20464
+      },
+      {
+        "tick": 1363,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 415.0975631654634,
+          "y": 172.01519223025778,
+          "radius": 27.471825004247606
+        },
+        "hull": {
+          "fraction": 0.017361111111111112,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 46,
+        "triangles": 20208
+      },
+      {
+        "tick": 1373,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 420.4657084493099,
+          "y": 175.8508320337222,
+          "radius": 27.475858573854346
+        },
+        "hull": {
+          "fraction": 0.013888888888888888,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 69,
+        "triangles": 22948
+      },
+      {
+        "tick": 1386,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 418.0772224808492,
+          "y": 179.57749294771855,
+          "radius": 27.02547212212214
+        },
+        "hull": {
+          "fraction": 0.010416666666666666,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7854166666666628
+        },
+        "calls": 78,
+        "triangles": 22040
+      },
+      {
+        "tick": 1399,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 412.0161009947034,
+          "y": 183.42200274892022,
+          "radius": 27.108349011077898
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111111027
+        },
+        "calls": 80,
+        "triangles": 23236
+      },
+      {
+        "tick": 1412,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 371.0399008135731,
+          "y": 180.07597740127048,
+          "radius": 26.585861594742934
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111111111
+        },
+        "calls": 57,
+        "triangles": 22938
+      },
+      {
+        "tick": 1425,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 446.8899145351309,
+          "y": 172.13495177109118,
+          "radius": 27.058552658325624
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 65,
+        "triangles": 23518
+      },
+      {
+        "tick": 1438,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 422.7620188777595,
+          "y": 171.49975411195533,
+          "radius": 27.045039868970928
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111110859
+        },
+        "calls": 51,
+        "triangles": 21984
+      },
+      {
+        "tick": 1450,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 415.08062735275945,
+          "y": 171.01749686140616,
+          "radius": 26.949866303181903
+        },
+        "hull": {
+          "fraction": 0.006944444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111110827
+        },
+        "calls": 51,
+        "triangles": 22036
+      },
+      {
+        "tick": 1463,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 411.7933561483048,
+          "y": 169.2740870380423,
+          "radius": 26.989243278862627
+        },
+        "hull": {
+          "fraction": 0.019097222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7998611111110827
+        },
+        "calls": 53,
+        "triangles": 21174
+      },
+      {
+        "tick": 1476,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 408.5879749856265,
+          "y": 167.57024724341585,
+          "radius": 27.209979632253376
+        },
+        "hull": {
+          "fraction": 0.034722222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 56,
+        "triangles": 21218
+      },
+      {
+        "tick": 1489,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 415.85656635983366,
+          "y": 172.06680963332536,
+          "radius": 27.40311320740938
+        },
+        "hull": {
+          "fraction": 0.026041666666666668,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 60,
+        "triangles": 22338
+      },
+      {
+        "tick": 1494,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 419.34380451083246,
+          "y": 176.66202851189868,
+          "radius": 26.701399514923228
+        },
+        "hull": {
+          "fraction": 0.027777777777777776,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 71,
+        "triangles": 23620
+      },
+      {
+        "tick": 1507,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 416.6829367650541,
+          "y": 179.0704459104791,
+          "radius": 26.93140513067804
+        },
+        "hull": {
+          "fraction": 0.03125,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 70,
+        "triangles": 24158
+      },
+      {
+        "tick": 1519,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 407.4290391070741,
+          "y": 177.89407452886877,
+          "radius": 27.41545507447161
+        },
+        "hull": {
+          "fraction": 0.043402777777777776,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 95,
+        "triangles": 27232
+      },
+      {
+        "tick": 1532,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 472.8578284389509,
+          "y": 198.39841145839705,
+          "radius": 27.11865899680817
+        },
+        "hull": {
+          "fraction": 0.05381944444444445,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 101,
+        "triangles": 40908
+      },
+      {
+        "tick": 1545,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 505.68543193505127,
+          "y": 213.71734968652981,
+          "radius": 27.100772611574953
+        },
+        "hull": {
+          "fraction": 0.052083333333333336,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 99,
+        "triangles": 41358
+      },
+      {
+        "tick": 1558,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 504.7296759317731,
+          "y": 207.45626790672458,
+          "radius": 27.795889151743733
+        },
+        "hull": {
+          "fraction": 0.046875,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 84,
+        "triangles": 38444
+      },
+      {
+        "tick": 1571,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 438.24846215438,
+          "y": 179.79871578371936,
+          "radius": 26.700925634930147
+        },
+        "hull": {
+          "fraction": 0.05381944444444445,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 70,
+        "triangles": 24594
+      },
+      {
+        "tick": 1584,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 398.3283024696559,
+          "y": 163.5530412398122,
+          "radius": 26.798738963964958
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 61,
+        "triangles": 22944
+      },
+      {
+        "tick": 1596,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 406.7916512871957,
+          "y": 183.4397572982946,
+          "radius": 26.66923726512361
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 49,
+        "triangles": 23404
+      },
+      {
+        "tick": 1609,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 395.65885897553693,
+          "y": 191.28558510252384,
+          "radius": 26.65810505504564
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 43,
+        "triangles": 21884
+      },
+      {
+        "tick": 1621,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 413.874849171166,
+          "y": 179.82600849482495,
+          "radius": 26.937324346203017
+        },
+        "hull": {
+          "fraction": 0.019097222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 48,
+        "triangles": 21600
+      },
+      {
+        "tick": 1634,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 419.97240298651616,
+          "y": 173.0834416561589,
+          "radius": 27.192819251552656
+        },
+        "hull": {
+          "fraction": 0.019097222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 44,
+        "triangles": 21462
+      },
+      {
+        "tick": 1647,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 432.3308323105039,
+          "y": 169.76277135412266,
+          "radius": 26.845322297256715
+        },
+        "hull": {
+          "fraction": 0.005208333333333333,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 48,
+        "triangles": 23430
+      },
+      {
+        "tick": 1660,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 450.03715218115315,
+          "y": 160.46115098144233,
+          "radius": 26.783325479915597
+        },
+        "hull": {
+          "fraction": 0.001736111111111111,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 48,
+        "triangles": 23358
+      },
+      {
+        "tick": 1673,
+        "wave": 3,
+        "hp": 94,
+        "live": 5,
+        "core": {
+          "x": 420.490185063553,
+          "y": 172.65161751793568,
+          "radius": 27.00886549400539
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 93,
+        "triangles": 28230
+      },
+      {
+        "tick": 1686,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 432.5669220430793,
+          "y": 182.61034427055574,
+          "radius": 27.246967552465787
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 93,
+        "triangles": 28348
+      },
+      {
+        "tick": 1698,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 424.43650328086323,
+          "y": 162.28682135206577,
+          "radius": 26.630595882051434
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 60,
+        "triangles": 23616
+      },
+      {
+        "tick": 1711,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 420.398773486962,
+          "y": 159.62521154728776,
+          "radius": 26.813197621019945
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 57,
+        "triangles": 23084
+      },
+      {
+        "tick": 1724,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 429.61384867154027,
+          "y": 175.98087326152205,
+          "radius": 27.122676270887347
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 40,
+        "triangles": 21430
+      },
+      {
+        "tick": 1736,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 423.81931434813913,
+          "y": 173.75188852165306,
+          "radius": 26.964517710800937
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 36,
+        "triangles": 21274
+      },
+      {
+        "tick": 1749,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 421.77178541899707,
+          "y": 172.94136730604234,
+          "radius": 26.933828996456295
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 36,
+        "triangles": 21274
+      },
+      {
+        "tick": 1761,
+        "wave": 3,
+        "hp": 94,
+        "live": 4,
+        "core": {
+          "x": 421.6340096708517,
+          "y": 172.83362767904237,
+          "radius": 26.92887017549066
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 36,
+        "triangles": 21274
+      },
+      {
+        "tick": 1774,
+        "wave": 3,
+        "hp": 82,
+        "live": 4,
+        "core": {
+          "x": 422.7489014927255,
+          "y": 181.26049479339133,
+          "radius": 27.032610841171888
+        },
+        "hull": {
+          "fraction": 0,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 63,
+        "triangles": 24330
+      },
+      {
+        "tick": 1787,
+        "wave": 3,
+        "hp": 82,
+        "live": 4,
+        "core": {
+          "x": 429.9379206053203,
+          "y": 172.83727022920195,
+          "radius": 28.178631160348047
+        },
+        "hull": {
+          "fraction": 0.003472222222222222,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 68,
+        "triangles": 24662
+      },
+      {
+        "tick": 1799,
+        "wave": 3,
+        "hp": 82,
+        "live": 3,
+        "core": {
+          "x": 425.55383505608796,
+          "y": 167.32177381329794,
+          "radius": 28.214383019053777
+        },
+        "hull": {
+          "fraction": 0.012152777777777778,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 73,
+        "triangles": 24470
+      },
+      {
+        "tick": 1809,
+        "wave": 3,
+        "hp": 82,
+        "live": 3,
+        "core": {
+          "x": 446.1909287068562,
+          "y": 157.57971763934668,
+          "radius": 26.808523656369783
+        },
+        "hull": {
+          "fraction": 0.024305555555555556,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.8125
+        },
+        "calls": 86,
+        "triangles": 26200
+      },
+      {
+        "tick": 1817,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 445.02672390271084,
+          "y": 166.80651632624844,
+          "radius": 27.264190989760355
+        },
+        "hull": {
+          "fraction": 0.024305555555555556,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 87,
+        "triangles": 25778
+      },
+      {
+        "tick": 1830,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 420.39561768534065,
+          "y": 175.63292884240093,
+          "radius": 27.087361942740237
+        },
+        "hull": {
+          "fraction": 0.034722222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.56875
+        },
+        "calls": 93,
+        "triangles": 23042
+      },
+      {
+        "tick": 1842,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 408.5190701716139,
+          "y": 187.54429116937516,
+          "radius": 27.404239248061565
+        },
+        "hull": {
+          "fraction": 0.024305555555555556,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 78,
+        "triangles": 21812
+      },
+      {
+        "tick": 1855,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 429.0832414689846,
+          "y": 175.90247981890585,
+          "radius": 27.04917958533968
+        },
+        "hull": {
+          "fraction": 0.024305555555555556,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 43,
+        "triangles": 17756
+      },
+      {
+        "tick": 1868,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 432.01018610776686,
+          "y": 172.2694418395621,
+          "radius": 26.947703075844235
+        },
+        "hull": {
+          "fraction": 0.022569444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 40,
+        "triangles": 17676
+      },
+      {
+        "tick": 1880,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 432.3059154578872,
+          "y": 171.84413258793396,
+          "radius": 26.93149707177463
+        },
+        "hull": {
+          "fraction": 0.019097222222222224,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333205
+        },
+        "calls": 43,
+        "triangles": 17680
+      },
+      {
+        "tick": 1893,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 395.1703071363225,
+          "y": 184.1736121786051,
+          "radius": 26.469188043832343
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 49,
+        "triangles": 17958
+      },
+      {
+        "tick": 1906,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 406.16040309917616,
+          "y": 182.60267608825842,
+          "radius": 26.852309282235467
+        },
+        "hull": {
+          "fraction": 0.026041666666666668,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 50,
+        "triangles": 18138
+      },
+      {
+        "tick": 1918,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 424.00448994002846,
+          "y": 171.14436546134746,
+          "radius": 27.33497266636122
+        },
+        "hull": {
+          "fraction": 0.03819444444444445,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 41,
+        "triangles": 17694
+      },
+      {
+        "tick": 1931,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 415.03276556084853,
+          "y": 177.6006771523265,
+          "radius": 26.99958976326079
+        },
+        "hull": {
+          "fraction": 0.022569444444444444,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333241
+        },
+        "calls": 43,
+        "triangles": 17862
+      },
+      {
+        "tick": 1943,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 412.738114587464,
+          "y": 178.8273634798611,
+          "radius": 26.941198926704104
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 41,
+        "triangles": 17750
+      },
+      {
+        "tick": 1956,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 412.16020695614316,
+          "y": 178.82599524839793,
+          "radius": 26.92995969624042
+        },
+        "hull": {
+          "fraction": 0.015625,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 32,
+          "opacity": 0.7258333333333333
+        },
+        "calls": 41,
+        "triangles": 17726
+      },
+      {
+        "tick": 1968,
+        "wave": 3,
+        "hp": 82,
+        "live": 1,
+        "core": {
+          "x": 479.79945110290333,
+          "y": 158.48311054557735,
+          "radius": 27.95604024449652
+        },
+        "hull": {
+          "fraction": 0.012152777777777778,
+          "samples": 576,
+          "solidHullHidden": false
+        },
+        "speed": {
+          "count": 0,
+          "opacity": 0
+        },
+        "calls": 69,
+        "triangles": 21000
+      }
+    ],
+    "bonkGaps": [
+      {
+        "wave": 2,
+        "ms": 916.7
+      },
+      {
+        "wave": 2,
+        "ms": 482.39999999999986
+      },
+      {
+        "wave": 2,
+        "ms": 867.5999999999999
+      },
+      {
+        "wave": 2,
+        "ms": 300
+      },
+      {
+        "wave": 2,
+        "ms": 283.3000000000002
+      },
+      {
+        "wave": 2,
+        "ms": 883.3999999999996
+      },
+      {
+        "wave": 2,
+        "ms": 483.3000000000002
+      },
+      {
+        "wave": 2,
+        "ms": 750
+      },
+      {
+        "wave": 2,
+        "ms": 833.3000000000002
+      },
+      {
+        "wave": 2,
+        "ms": 1233.3000000000002
+      },
+      {
+        "wave": 2,
+        "ms": 449.9999999999991
+      },
+      {
+        "wave": 2,
+        "ms": 133.3000000000011
+      },
+      {
+        "wave": 2,
+        "ms": 300
+      },
+      {
+        "wave": 2,
+        "ms": 600
+      },
+      {
+        "wave": 2,
+        "ms": 500.10000000000036
+      },
+      {
+        "wave": 2,
+        "ms": 982.2999999999993
+      },
+      {
+        "wave": 3,
+        "ms": 1067.6000000000004
+      },
+      {
+        "wave": 3,
+        "ms": 816.6000000000004
+      },
+      {
+        "wave": 3,
+        "ms": 216.6999999999989
+      },
+      {
+        "wave": 3,
+        "ms": 216.70000000000073
+      },
+      {
+        "wave": 3,
+        "ms": 466.60000000000036
+      },
+      {
+        "wave": 3,
+        "ms": 865.6999999999989
+      },
+      {
+        "wave": 3,
+        "ms": 483.2999999999993
+      },
+      {
+        "wave": 3,
+        "ms": 383.3000000000029
+      },
+      {
+        "wave": 3,
+        "ms": 467.6999999999971
+      },
+      {
+        "wave": 3,
+        "ms": 1100
+      },
+      {
+        "wave": 3,
+        "ms": 483.3000000000029
+      },
+      {
+        "wave": 3,
+        "ms": 615.6999999999971
+      },
+      {
+        "wave": 3,
+        "ms": 134.3000000000029
+      },
+      {
+        "wave": 3,
+        "ms": 116.69999999999709
+      },
+      {
+        "wave": 3,
+        "ms": 449
+      },
+      {
+        "wave": 3,
+        "ms": 700
+      },
+      {
+        "wave": 3,
+        "ms": 717.6000000000022
+      },
+      {
+        "wave": 3,
+        "ms": 349.09999999999854
+      },
+      {
+        "wave": 3,
+        "ms": 300
+      },
+      {
+        "wave": 3,
+        "ms": 1383.2999999999993
+      },
+      {
+        "wave": 3,
+        "ms": 417.6000000000022
+      },
+      {
+        "wave": 3,
+        "ms": 199.09999999999854
+      },
+      {
+        "wave": 3,
+        "ms": 317.6000000000022
+      },
+      {
+        "wave": 3,
+        "ms": 1250
+      },
+      {
+        "wave": 3,
+        "ms": 1349
+      }
+    ],
+    "errors": []
+  }
+]

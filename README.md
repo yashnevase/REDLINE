@@ -30,6 +30,7 @@ For browser evidence tools, install the browser once with `PLAYWRIGHT_BROWSERS_P
 
 - `chapter1-before-feel` preserves the complete pre-sprint source and original authored Blender assets.
 - `feel-sprint` preserves the FEEL_SPRINT implementation checkpoint.
+- `feel-sprint-2` preserves focused combat, stronger impacts/speed feedback, Rally pacing and responsive input/HUD polish.
 - `docs/FEEL_REPORT.md` records measurements, tuning, captures and remaining acceptance gates.
 - `docs/STATE.md` is the continuation entry point; `docs/REDLINE_BRIEF.md` remains the design authority.
 
@@ -47,3 +48,5 @@ git worktree add ../REDLINE-before-feel chapter1-before-feel
 ```
 
 Source review ZIP intentionally contains only `src/presentation`, `src/content`, and `src/ui`; the full runnable project is in this repository. Reference material, generated caches and dependency folders are excluded from Git. Asset provenance and the bundled display font's OFL licence are documented in `docs/ASSETS.md`.
+
+Sprint 2 review: `review/focus/waves2-3-desktop.mp4` and `waves2-3-compact.mp4` show normal-HP waves 2–3; `review/focus/steps/` contains six 10-second checkpoints. Input checks: `node tools/focus-inputs.mjs`; paced replay capture: `node tools/focus-review.mjs`. Run browser harnesses one at a time (shared port 5201). The owner waived physical-phone/deployment gating for this sprint; device-size and emulated input checks are documented separately from hardware FPS.

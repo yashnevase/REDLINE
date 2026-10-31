@@ -36,7 +36,7 @@ export function makeMaterials(sheen = .18) {
 export type Materials = ReturnType<typeof makeMaterials>;
 
 // Painted reference-study matcap; shared by live scenes and the reference studio.
-export function makeMatchedMatcap(heat=0){
+export function makeMatchedMatcap(heat=0,rimStrength=1){
  const c=document.createElement('canvas');c.width=c.height=512;const ctx=c.getContext('2d')!,pixels=ctx.createImageData(512,512);
  for(let y=0;y<512;y++)for(let x=0;x<512;x++){
   const nx=(x-255.5)/256,ny=-(y-255.5)/256,nz=Math.sqrt(Math.max(0,1-nx*nx-ny*ny));
@@ -51,7 +51,7 @@ export function makeMatchedMatcap(heat=0){
   const bounce=Math.exp(-(((ny+.82)/.14)**2))*54;
   const magenta=Math.exp(-(((nx-.43)/.35)**2+((ny+.69)/.22)**2))*18;
   const edge=Math.max(0,(Math.abs(nx)-.65)/.35),right=Math.max(0,nx),blueReflect=Math.exp(-((ny/.25)**2))*12;
-  const rim=Math.exp(-(((nz-.25)/.04)**2))*38;
+  const rim=Math.exp(-(((nz-.25)/.04)**2))*38*rimStrength;
   const window=Math.exp(-(((Math.abs(nx)-.87)/.024)**2))*Math.exp(-((ny/.65)**4))*23;
   const values=[Math.max(58,(57+ramp*(90+ny*40)-right*55+sheen+lowLight*18)*(1-edge*.70))+warm*120+fleck*100+pin*100+bounce+rim+window+magenta,
    Math.max(55,(50+ramp*(104+ny*23)-right*25+sheen+lowLight*35)*(1-edge*.70))+warm*103+fleck*100+pin*100+bounce*.88+rim*.7+window*1.1,

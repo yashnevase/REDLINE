@@ -1,3 +1,4 @@
+import {scoreSchema} from './b6-score.ts';
 import {bladeProjectileSchema} from './b5-blade-projectiles.ts';
 import {qualitySchema} from './b1-hit-quality.ts';
 import {z} from 'zod';
@@ -25,7 +26,7 @@ const phase=z.discriminatedUnion('kind',[
  z.object({kind:z.literal('boss'),boss:bossSchema}),
  z.object({kind:z.literal('complete'),reward:z.literal('blade').optional()}),z.object({kind:z.literal('lost')})
 ]);
-export const runSchema=z.object({bladeProjectiles:z.array(bladeProjectileSchema).max(32).default([]),nextBladeProjectile:ticks.default(0),bladeFireIn:ticks.default(0),quality:qualitySchema,tick:ticks,hitstop:ticks,loadout:z.enum(['core','blade']).default('core'),hero:heroSchema,enemies:z.array(enemySchema).max(12),projectiles:z.array(z.object({id:ticks,owner:ticks,x:n,z:n,prevX:n,prevZ:n,dx:n,dz:n,remaining:ticks})).max(24),nextProjectile:ticks,phase,upgrades:z.array(z.string()),events:z.array(eventSchema)});
+export const runSchema=z.object({score:scoreSchema,bladeProjectiles:z.array(bladeProjectileSchema).max(32).default([]),nextBladeProjectile:ticks.default(0),bladeFireIn:ticks.default(0),quality:qualitySchema,tick:ticks,hitstop:ticks,loadout:z.enum(['core','blade']).default('core'),hero:heroSchema,enemies:z.array(enemySchema).max(12),projectiles:z.array(z.object({id:ticks,owner:ticks,x:n,z:n,prevX:n,prevZ:n,dx:n,dz:n,remaining:ticks})).max(24),nextProjectile:ticks,phase,upgrades:z.array(z.string()),events:z.array(eventSchema)});
 export type RunState=z.infer<typeof runSchema>;
 export type Enemy=z.infer<typeof enemySchema>;
 export const Run=Descriptor.ConstructedResource(runSchema)('Redline/Run');
@@ -39,5 +40,5 @@ export function spawnEnemy(kind:Enemy['kind'],index:number,wave:number,t:CombatT
  return{id:wave*100+index,attackSerial:0,kind,x:p.x,z:p.z,prevX:p.x,prevZ:p.z,hp:stats.hp,faceX:-side,faceZ:0,behavior:{kind:'spawn',remaining:t.spawnDropTicks}};
 }
 export function initialRun(t:CombatTuning,loadout:RunState['loadout']='core'):RunState {
- return{bladeProjectiles:[],nextBladeProjectile:0,bladeFireIn:0,quality:qualitySchema.parse({}),tick:0,hitstop:0,loadout,hero:initialState(t).hero,enemies:waves[0].slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,0,t)),projectiles:[],nextProjectile:0,phase:{kind:'fight',wave:0,nextSpawn:Math.min(t.enemyCap,t.openingThreats,waves[0].length),nextSpawnIn:t.spawnMinTicks},upgrades:[],events:[]};
+ return{score:scoreSchema.parse({}),bladeProjectiles:[],nextBladeProjectile:0,bladeFireIn:0,quality:qualitySchema.parse({}),tick:0,hitstop:0,loadout,hero:initialState(t).hero,enemies:waves[0].slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,0,t)),projectiles:[],nextProjectile:0,phase:{kind:'fight',wave:0,nextSpawn:Math.min(t.enemyCap,t.openingThreats,waves[0].length),nextSpawnIn:t.spawnMinTicks},upgrades:[],events:[]};
 }

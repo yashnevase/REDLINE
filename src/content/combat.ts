@@ -1,3 +1,4 @@
+import {scoreDefaults} from './items/b6-score.ts';
 import {bladeFormDefaults} from './items/b5-blade.ts';
 import {abilityDefaults} from './items/b4-abilities.ts';
 import {whirlerDefaults} from './items/b2-roster.ts';
@@ -5,7 +6,7 @@ import {hitQualityDefaults} from './items/b1-quality.ts';
 import {z} from 'zod';
 // Phase 1 START values: current brief and its explicitly referenced §24.3 defaults.
 export const combatDefaults = Object.freeze({
- ...bladeFormDefaults,...abilityDefaults,...whirlerDefaults,...hitQualityDefaults, bossHP:600, bossRadius:1.6, bossMoveSpeed:2.5, bossIntroTicks:90, bossRecoveryTicks:72, bossChompWindupTicks:48, bossChompSpeed:10, bossChompTicks:36, bossChompDamage:25, bossSweepWindupTicks:54, bossSweepRadius:4.5, bossSweepDamage:20, bossGapDot:0.82, bossVolleyWindupTicks:60, bossVolleyRadius:1.2, bossVolleyDamage:15, bossSummonWindupTicks:60, bossEnrageSpeed:1.2, bossEnrageDamage:1.25, bossEnrageGapFactor:0.8, bladeDamage:24, bladeCooldownTicks:120,
+ ...scoreDefaults,...bladeFormDefaults,...abilityDefaults,...whirlerDefaults,...hitQualityDefaults, bossHP:600, bossRadius:1.6, bossMoveSpeed:2.5, bossIntroTicks:90, bossRecoveryTicks:72, bossChompWindupTicks:48, bossChompSpeed:10, bossChompTicks:36, bossChompDamage:25, bossSweepWindupTicks:54, bossSweepRadius:4.5, bossSweepDamage:20, bossGapDot:0.82, bossVolleyWindupTicks:60, bossVolleyRadius:1.2, bossVolleyDamage:15, bossSummonWindupTicks:60, bossEnrageSpeed:1.2, bossEnrageDamage:1.25, bossEnrageGapFactor:0.8, bladeDamage:24, bladeCooldownTicks:120,
  upgradeBonkFactor:1.2, upgradeIntervalFactor:0.85, upgradeMoveFactor:1.1, upgradeDamageFactor:1.25, upgradeRadiusFactor:1.2, upgradeCooldownFactor:0.8, upgradeHP:20, upgradeCharges:1,
  waveRepairFraction:.25, enemyCap:12, attackerCap:3, openingThreats:5, rallyRemaining:2, rallySpeedBonus:.4, sparseSpawnMaxTicks:72, spawnMinTicks:48, spawnMaxTicks:90, mediumHitstopTicks:3, heavyHitstopTicks:5, killHitstopTicks:4, throwerHP:24, throwerSpeed:4.6, throwerRadius:0.62, throwerNear:6, throwerFar:8, throwerWindupTicks:30, rivetSpeed:8, rivetDamage:12, rivetRadius:0.18, rivetLifeTicks:150, throwerRecoveryTicks:96, shieldsawHP:40, shieldsawSpeed:5.5, shieldsawRadius:0.85, shieldFrontDot:0.5, shieldDamageFactor:0.1, shieldWindupTicks:36, shieldChargeSpeed:10, shieldChargeTicks:60, shieldRecoveryTicks:42, grinderHP:80, grinderSpeed:3.2, grinderRadius:1, grinderWindupTicks:48, grinderSweepRadius:3, grinderDamage:30, grinderRecoveryTicks:48, heatPerThrower:9, heatPerShieldsaw:12, heatPerGrinder:18, spawnDropTicks:18, spawnRadius:14, spawnSeparation:2.2, leashBand:1.5, leashStrength:5,
  heatPerSawlet:8, heatThreshold:90, overdriveTicks:300, overdriveMoveBonus:.3, overdriveDamageBonus:.25, overdriveIframeIntervalTicks:30,
@@ -19,6 +20,14 @@ export const combatDefaults = Object.freeze({
  knockback:.5, hitstopTicks:2, arenaHalfWidth:17, laneHalfWidth:17
 });
 export const tuningSchema=z.object({
+ comboWindowTicks:z.number().finite().int().positive().default(combatDefaults.comboWindowTicks),
+ comboCap:z.number().finite().int().positive().default(combatDefaults.comboCap),
+ scoreSawlet:z.number().finite().int().positive().default(combatDefaults.scoreSawlet),
+ scoreThrower:z.number().finite().int().positive().default(combatDefaults.scoreThrower),
+ scoreShield:z.number().finite().int().positive().default(combatDefaults.scoreShield),
+ scoreGrinder:z.number().finite().int().positive().default(combatDefaults.scoreGrinder),
+ scoreWhirler:z.number().finite().int().positive().default(combatDefaults.scoreWhirler),
+ scoreBoss:z.number().finite().int().positive().default(combatDefaults.scoreBoss),
  bladeShotTicks:z.number().finite().positive().int().default(combatDefaults.bladeShotTicks),
  bladeShotDamage:z.number().finite().positive().default(combatDefaults.bladeShotDamage),
  bladeShotSpeed:z.number().finite().positive().default(combatDefaults.bladeShotSpeed),

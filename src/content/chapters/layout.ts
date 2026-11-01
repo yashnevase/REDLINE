@@ -12,6 +12,6 @@ export function chapterLayout(level:number,runSeed=4107){
   vents.push({id:vents.length,x,z,boost:vents.length<Math.min(profile.boostVents,scrapyard.vents.boostCount),phase:Math.floor(next()*240)});
  }
  if(vents.length!==scrapyard.vents.count)throw Error('Chapter vent layout exhausted');
- const props=Array.from({length:scrapyard.props.density},(_,i)=>({id:i,x:(i%2?1:-1)*(7+next()*9),z:(i%4<2?1:-1)*(8+next()*7),kind:i%3,turn:next()*6.283185307}));
+ const props=Array.from({length:scrapyard.props.density},(_,i)=>({id:i,x:(i%2?1:-1)*(21+next()*1.5),z:(i%4<2?1:-1)*(3+next()*12),kind:i%3,turn:next()*6.283185307}));
  return{profile,vents,props};
 }

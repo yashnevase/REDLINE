@@ -1,6 +1,14 @@
 # STATE.md — resume here
 
-Phase: **CLOSE_CHAPTER_1 Step 1 implemented; owner clarity gate open. Chapter 1 NOT closed.**
+Phase: **CLOSE_CHAPTER_1 Step 2 implementation checkpoint; continue Step 3. Chapter 1 NOT closed.**
+
+## CLOSE Step 2 — continuation, 2026-11-01
+
+Owner said proceed after Step1. See `docs/CLOSE_STEP_2_REPORT.md`. World implementation now includes seeded shared vents/boost physics, chapter-owned rosters/layouts, smashable cosmetic props, capped debris, plate reactions, full scenery catalogue, richer hull/pit/fissures/giants, distinct chaos plumes, painted diffuse wear and cached Standard/High sun shadows (previously disabled). Original imagegen material and exact prompt: `docs/PAINTED_MATERIAL_PROMPT.md`; shipped file `public/textures/deck-wear-v1.png`. No private music ships.
+
+113 tests/check and build pass. Independent normal-stat level bots all clear/replay exactly. Measured36 Standard/Low and18 High M4 cases: Standard92calls/57,378tri; Low70/24,951; High179/113,034 separately. Details/limits in report; Low has little remaining headroom. Latest rendered artifacts under `shots/close-step2/`, local-only target comparisons under `art/match/close-step2/`. Fixed duplicate kicked scrap when the same simulation tick renders multiple times, and moved reaction ingestion to each plain run view.
+
+**Full reference-match judge still failed earlier iterations; latest polish is not self-approved.** Keep this art gate and motion visibility review open through final review. The owner explicitly requested completion without intermediate asset stops earlier in the conversation; continue approved implementation in order while retaining these findings, without claiming Chapter1 complete. Next: Step3 CL6–CL9 and all G/H/I items; then Steps4–6. Current audio/profile/mission/workshop systems remain unfinished; do not relabel old partial features as CL10–CL19 done.
 
 ## CLOSE Step 1 and larger fighting deck — 2026-11-01
 

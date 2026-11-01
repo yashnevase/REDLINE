@@ -1,0 +1,257 @@
+{
+  "reports": [
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 177,
+      "triangles": 111374,
+      "p95": 17.600000000000136,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 133,
+      "triangles": 101992,
+      "p95": 17.600000000000364,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 122,
+      "triangles": 106134,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 177,
+      "triangles": 111630,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 133,
+      "triangles": 101992,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 122,
+      "triangles": 105878,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 177,
+      "triangles": 113034,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 133,
+      "triangles": 103140,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 122,
+      "triangles": 107498,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 177,
+      "triangles": 113034,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 133,
+      "triangles": 103396,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 122,
+      "triangles": 107378,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 179,
+      "triangles": 111002,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 135,
+      "triangles": 101664,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "high",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 124,
+      "triangles": 105394,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "crowd",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 179,
+      "triangles": 111122,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "rex",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 135,
+      "triangles": 101484,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "high",
+      "kind": "corner",
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "calls": 124,
+      "triangles": 105138,
+      "p95": 17.5,
+      "errors": []
+    }
+  ],
+  "physicalDevice": false
+}

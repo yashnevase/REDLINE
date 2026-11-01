@@ -14,7 +14,13 @@ Read scene feedback/camera flow and `combat-light.ts`. Presentation interpolates
 
 Read `hud.ts` and reviewed `combat-lava-swarm.png` / `menu-hero.png`. Desktop and touch presentation deliberately differ; the touch pad has its own hit regions and device switching. HUD uses a compact top objective, thin health information, clear skill slots and menu/help. Apply desktop-only panel reduction and quiet heavy-combat plates; move detailed enemy tools into pause/help, retaining touch/controller access.
 
-## Audio mapping (for Step 4)
+## Step 2 world study and application
+
+Re-read local `src/presentation/scenery.ts`: a slightly lowered base supports batched tiles/inlays, quiet quarter-turn variation, and explicitly placed prop instances. Its floor holes replace selected tiles rather than covering them with a flat decal. Readability comes from geometry/contact layers and restrained floor values. REDLINE uses independently authored mixed steel plates, inset missing-plate machinery, a real recessed grate/pit, and an existing fractured-plate room. Chapter-owned deterministic placement is shared between visible grates and the speed-boost rule; cosmetic props remain outside simulation collision. The background catalogue is rebuilt as original compact geometry and vertex-animation batches, with a separate lower-detail batch. No scenery implementation, models, textures or names copied.
+
+The four owner arena references were inspected again: ref1 armoured frame/lamp/giant silhouette, ref2 recessed multi-level machinery, ref3 edge smoke/embers, ref4 fissures and wrecks. Their checker colours and dense dark contours do not override the later tonal-floor/clarity rules. Exact reference fidelity needs measured comparisons and independent/owner review; implementing a checklist is not match approval.
+
+## Audio mapping (for Step 4, continued)
 
 Read the architecture comments and cue routing in `sound.ts` / `audio.ts`. This snapshot primarily synthesizes layered click/thud/crunch/swish/metal sounds with WebAudio, unlocks on a gesture, pre-renders where practical, rate-limits repeats, caps/prioritizes voices, pans by screen position and ducks the mix. It is not permission to copy its sound-generation code. REDLINE will implement an independent cue/bus/map/pack system with fallback synthesis and optional private owner files. Owner-supplied music currently exists under `close1/public/audio/music/`; none is shipped or staged during Step 1.
 

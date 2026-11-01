@@ -1,0 +1,38 @@
+[
+  {
+    "reference": "arena-ref-1-hazard-frame.png",
+    "iteration": 7,
+    "mainSlabProxyIoU": 0.9099103870516705,
+    "threshold": 0.8,
+    "thresholdMet": true,
+    "method": "Manual main-slab outline excludes background figures/wrecks/connected outlying platforms; actual mask includes static arena kit. Uniform bbox fit, no rotation/stretch. Approximate shape proxy, not an overall match score. Pit/platform framing differs and limits this comparison.",
+    "ownerApproval": false
+  },
+  {
+    "reference": "arena-ref-2-sunken-pit.png",
+    "iteration": 7,
+    "mainSlabProxyIoU": 0.8322543193356685,
+    "threshold": 0.8,
+    "thresholdMet": true,
+    "method": "Manual main-slab outline excludes background figures/wrecks/connected outlying platforms; actual mask includes static arena kit. Uniform bbox fit, no rotation/stretch. Approximate shape proxy, not an overall match score. Pit/platform framing differs and limits this comparison.",
+    "ownerApproval": false
+  },
+  {
+    "reference": "arena-ref-3-smoke.png",
+    "iteration": 7,
+    "mainSlabProxyIoU": 0.9099103870516705,
+    "threshold": 0.8,
+    "thresholdMet": true,
+    "method": "Manual main-slab outline excludes background figures/wrecks/connected outlying platforms; actual mask includes static arena kit. Uniform bbox fit, no rotation/stretch. Approximate shape proxy, not an overall match score. Pit/platform framing differs and limits this comparison.",
+    "ownerApproval": false
+  },
+  {
+    "reference": "arena-ref-4-lava-cracks.png",
+    "iteration": 7,
+    "mainSlabProxyIoU": 0.8803250861581194,
+    "threshold": 0.8,
+    "thresholdMet": true,
+    "method": "Manual main-slab outline excludes background figures/wrecks/connected outlying platforms; actual mask includes static arena kit. Uniform bbox fit, no rotation/stretch. Approximate shape proxy, not an overall match score. Pit/platform framing differs and limits this comparison.",
+    "ownerApproval": false
+  }
+]

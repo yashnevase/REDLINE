@@ -2,7 +2,7 @@
 
 Original Three.js arena action prototype. Three score-gated levels, twelve run upgrades, Scrap-Rex, and a locally saved Blade loadout. Keyboard, touch and gamepad controls; no audio or online services.
 
-Current close-out review: the hazard frame is an interior marking, with a wider ±21u fighting deck and eight opening enemies (12 live, three attacking). Cleaner floor values, stronger character separation and compact HUD/help improve fight clarity. Goals remain 10,000 / 24,000 / 40,000 with minimum 3 / 4 / 5 waves. Evidence and remaining work: [CLOSE_STEP_1_REPORT](docs/CLOSE_STEP_1_REPORT.md). Chapter 1 is not yet closed; owner clarity review and Steps 2–6 remain.
+Current close-out review: a ±21u fighting deck extends beyond the hazard frame, with eight opening enemies (12 live, three attacking). Seeded boost vents, smashable props, reactive plates, deeper machinery, animated scrap and cached environment shadows now run in the three rooms. Goals remain10,000 /24,000 /40,000 with minimum3 /4 /5 waves. Evidence and open visual gates: [CLOSE_STEP_2_REPORT](docs/CLOSE_STEP_2_REPORT.md). Remaining combat/additions, audio, saves/workshop and final QA follow in the close plan; Chapter1 is not closed.
 
 Owner-supplied music under `close1/public/audio/` stays private and git-ignored. No audio is loaded in the current build. The approved future audio system must provide synth fallback and exclude all private `public/audio/` files from public deployments; git-ignore alone does not exclude Vite public assets. Do not publish private audio folders.
 

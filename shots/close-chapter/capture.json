@@ -1,0 +1,824 @@
+[
+  {
+    "name": "desktop",
+    "normalStats": true,
+    "scriptedBot": true,
+    "wallSeconds": 32,
+    "metadata": {
+      "chapterWorld": {
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 8,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "hullCoverage": {
+        "fraction": 0.08333333333333333,
+        "samples": 576,
+        "solidHullHidden": false
+      },
+      "coreScreen": {
+        "x": 641.6498949081005,
+        "y": 345.6681637195994,
+        "radius": 25.87621061638597
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "extreme",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 449.51249745793535,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "far",
+        "viewScale": 1.8999999999999997
+      },
+      "speed": {
+        "count": 32,
+        "opacity": 0.8125
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 8,
+        "dustInstances": 1,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1524,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 26722,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4512,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1456,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 1333.3333333333333,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 200,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 144,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 128,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 128,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 108,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 60,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 54,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 14,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 3
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 1880.3283000000001,
+      "simTick": 1881,
+      "camera": {
+        "width": 19.911111111111108,
+        "height": 11.2,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.11071428571428572
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 46,
+      "triangles": 47716,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 120,
+        "phase": {
+          "kind": "fight",
+          "wave": 1,
+          "nextSpawn": 9,
+          "nextSpawnIn": 42
+        },
+        "enemies": 8,
+        "alive": 7,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 50,
+        "overdrive": 152
+      }
+    },
+    "errors": []
+  },
+  {
+    "name": "compact",
+    "normalStats": true,
+    "scriptedBot": true,
+    "wallSeconds": 32,
+    "metadata": {
+      "chapterWorld": {
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 8,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "hullCoverage": {
+        "fraction": 0.08333333333333333,
+        "samples": 576,
+        "solidHullHidden": false
+      },
+      "coreScreen": {
+        "x": 421.1002717434723,
+        "y": 185.2099700948046,
+        "radius": 14.371931939726025
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "extreme",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 447.1629019057365,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "far",
+        "viewScale": 1.8999999999999992
+      },
+      "speed": {
+        "count": 32,
+        "opacity": 0.8125
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 6,
+        "dustInstances": 2,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1524,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 26722,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4512,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1456,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 1333.3333333333333,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 504,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 200,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 144,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 128,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 128,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 108,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 60,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 54,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 32,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 14,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 6,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 3
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 1874.8826000000445,
+      "simTick": 1875,
+      "camera": {
+        "width": 23.805128205128202,
+        "height": 11,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.11272727272727273
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 48,
+      "triangles": 48364,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 120,
+        "phase": {
+          "kind": "fight",
+          "wave": 1,
+          "nextSpawn": 9,
+          "nextSpawnIn": 48
+        },
+        "enemies": 8,
+        "alive": 7,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 50,
+        "overdrive": 158
+      }
+    },
+    "errors": []
+  }
+]

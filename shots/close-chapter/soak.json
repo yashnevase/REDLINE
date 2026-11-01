@@ -1,0 +1,1627 @@
+{
+  "realWallClock": true,
+  "elapsedSeconds": 600.0610664999999,
+  "samples": [
+    {
+      "elapsedSeconds": 30.100461458,
+      "heap": 29796332,
+      "world": {
+        "level": 0,
+        "seed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 10,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 3,
+        "dustInstances": 17,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 2,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 60.232216208,
+      "heap": 30807096,
+      "world": {
+        "level": 1,
+        "seed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 4,
+        "debris": 19,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 2,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 90.301553958,
+      "heap": 31521544,
+      "world": {
+        "level": 2,
+        "seed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 12,
+        "broken": 2,
+        "debris": 8,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 8,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 7,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 120.35082700000001,
+      "heap": 31726456,
+      "world": {
+        "level": 0,
+        "seed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 10,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 10,
+        "dustInstances": 17,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 150.3997515,
+      "heap": 31767676,
+      "world": {
+        "level": 1,
+        "seed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 4,
+        "debris": 19,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 1,
+        "dustInstances": 1,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 180.469396083,
+      "heap": 31749280,
+      "world": {
+        "level": 2,
+        "seed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 12,
+        "broken": 2,
+        "debris": 8,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 7,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 7,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 210.52130800000003,
+      "heap": 32024648,
+      "world": {
+        "level": 0,
+        "seed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 10,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 10,
+        "dustInstances": 17,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 240.57877029199997,
+      "heap": 31772900,
+      "world": {
+        "level": 1,
+        "seed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 4,
+        "debris": 19,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 1,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 270.633142542,
+      "heap": 31726008,
+      "world": {
+        "level": 2,
+        "seed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 12,
+        "broken": 2,
+        "debris": 8,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 8,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 7,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 300.682959083,
+      "heap": 31918768,
+      "world": {
+        "level": 0,
+        "seed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 10,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 10,
+        "dustInstances": 17,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 330.756721292,
+      "heap": 31908420,
+      "world": {
+        "level": 1,
+        "seed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 4,
+        "debris": 19,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 1,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 360.817489333,
+      "heap": 31904828,
+      "world": {
+        "level": 2,
+        "seed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 12,
+        "broken": 2,
+        "debris": 8,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 7,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 7,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 390.87076004200003,
+      "heap": 31965156,
+      "world": {
+        "level": 0,
+        "seed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 10,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 10,
+        "dustInstances": 17,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 420.93806508299997,
+      "heap": 31972356,
+      "world": {
+        "level": 1,
+        "seed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 4,
+        "debris": 19,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 1,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 450.994149708,
+      "heap": 31864016,
+      "world": {
+        "level": 2,
+        "seed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 12,
+        "broken": 2,
+        "debris": 8,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 8,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 7,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 481.052052792,
+      "heap": 32019788,
+      "world": {
+        "level": 0,
+        "seed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 10,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 4,
+        "dustInstances": 17,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 2,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 511.11381116700005,
+      "heap": 31989656,
+      "world": {
+        "level": 1,
+        "seed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 4,
+        "debris": 19,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 1,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 541.1700526669999,
+      "heap": 32016288,
+      "world": {
+        "level": 2,
+        "seed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 12,
+        "broken": 2,
+        "debris": 8,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 8,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 6,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 571.23118675,
+      "heap": 31987848,
+      "world": {
+        "level": 0,
+        "seed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 12,
+        "broken": 1,
+        "debris": 10,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 10,
+        "dustInstances": 17,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 2,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 600.061063375,
+      "heap": 31996536,
+      "world": {
+        "level": 1,
+        "seed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 12,
+        "broken": 4,
+        "debris": 18,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 3,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 2,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "muted": false
+      }
+    }
+  ],
+  "errors": []
+}

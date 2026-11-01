@@ -1,6 +1,10 @@
 # REDLINE_BRIEF.md — the ONE current brief (v5, 2026-10-30)
 > **Authority:** this file wins over everything else. Older docs (`SLICE_LOCKED_DECISIONS`, `DESIGN_BIBLE`, `PLAYBOOK`, `FUN_LAYER`, `STYLE`, `ART_BRIEFS`, `PHASES`, `LINKS`) are **historical**: Phase 0.0 moves them to `docs/_historical/`; read them only for ideas, never for rules. Anything marked **PENDING** needs the owner's yes before it is built. Unspecified routine implementation detail is the agent's call; unspecified *product/design* choices are OPEN → ask (AGENTS.md protocol).
 
+## Implementation checkpoint — 2026-11-01
+
+Approved CLOSE Steps 3–5 systems and Step 6 automated QA are implemented; detailed behavior/evidence is in CLOSE_STEP_3_REPORT through CLOSE_STEP_6_REPORT and STATE. This records execution, not a design change or final acceptance. Full reference-art match and human review remain open; no chapter1-complete tag is authorized by a systems checkpoint alone. Private audio is excluded from public builds and has original synth fallback.
+
 ## NEXT_WORK amendment — owner directed
 
 Owner close-out directive, 2026-11-01: `docs/CLOSE_CHAPTER_1.md` is the active ordered closure plan. Follow Step 1 clarity first, then remaining steps; keep all remaining NEXT_WORK items in scope. Owner explicitly permits a replaceable audio system, private Spirit Call audio files and owner-supplied music under ignored/non-public audio folders, with synth fallback; this supersedes historical no-audio statements only within that policy. The owner also requests travel beyond the yellow/black frame and more enemy pressure. The frame becomes an interior marking; the playable deck and camera follow expand safely, while outer slab/corner machinery remain protected. Do not tag `chapter1-complete` before all gates actually pass.

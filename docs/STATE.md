@@ -1,6 +1,19 @@
 # STATE.md — resume here
 
-Phase: **CLOSE_CHAPTER_1 Step 2 implementation checkpoint; continue Step 3. Chapter 1 NOT closed.**
+Phase: **Chapter 1 systems implemented through Steps 3–6; final art/human gates OPEN. No chapter1-complete tag.**
+
+## CLOSE Steps 3–6 — systems review, resumed 2026-11-02
+
+Owner directed continued completion without intermediate stops. CL6–CL16 and Session4 G/H/I systems are now implemented: distinct Spin/Boost/Stomp with timed synergies, style/ricochet/hazards/pickups/graze/twists/last stand/daily seeds, High graphics/optional AO and auto tiers, sound-ready cues plus original fallback audio/private owner music, versioned saves, four selectable missions and registry-driven garage/cosmetics. Reports: `docs/CLOSE_STEP_3_REPORT.md`, `CLOSE_STEP_4_REPORT.md`, `CLOSE_STEP_5_REPORT.md`, and final QA/remaining-gate ledger `CLOSE_STEP_6_REPORT.md`. `PLAYTEST_SCRIPT.md` and `CHAPTER_PIPELINE.md` are prepared.
+
+130 tests/check, build, deterministic flags-off replay, clean/migrated browser mission runs, normal-stat Core/Blade bots, saved equipment, JSON export/import, corrupt backup, IndexedDB fallback, absent-file synthesis, production touch/options/loss/retry/no-debug and four-size keyboard/multitouch/emulated controller audits pass. Real ten-minute Standard soak: 600.06 seconds, 20 samples, no errors, steady post-GC heap range 0.285 MiB, sampled maxima 19 debris/17 dust/7 voices (caps48/32/20). This is Mac/emulated evidence, not physical-device certification or a human playtest.
+
+54-case stress matrix: Standard max92 calls/58,698 triangles, Low70/24,292, High separately179/115,674; final crowd recheck remains separately recorded. Low is at its call cap. Latest foreground cutaway prevents corner machinery from hiding the Core; finish uniforms now target the actual cloned shell. Existing sixteen-input corner checks retain Core bounds/HUD checks. The old six-unit box proxy reaches27.8% at the new outer corner; no claim of the historical ≤15% hull framing is made for that expanded-edge stress view.
+
+Private tracks are copied only into ignored `public/audio/music/`; `vite.config.mjs` excludes private audio from public builds and build validation rejects audio extensions in dist. Normal builds have synth fallback; local dev loads the owner's theme/two battle tracks. ASSETS records provenance; no Spirit Call code/art/SFX copied, external download, package install or deployment.
+
+**Still open:** independent full art match remains FAIL (L2 composition/depth, irregular giants/wreck silhouettes and chipped/broken steel); normal-play six-mover proof is not conclusive; owner art/feel/listening and 3–5 first-time-player review are unavailable. Do not tag chapter1-complete or call the arena an exact reference match. Owner's physical-phone waiver persists. The sections below are earlier checkpoints, not instructions to restart completed systems.
+
 
 ## CLOSE Step 2 — continuation, 2026-11-01
 

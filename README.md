@@ -1,10 +1,10 @@
 # REDLINE · Chapter 1
 
-Original Three.js arena action prototype. Three score-gated levels, twelve run upgrades, Scrap-Rex, and a locally saved Blade loadout. Keyboard, touch and gamepad controls; no audio or online services.
+Original Three.js arena action game: three score-gated levels, twelve run upgrades, Scrap-Rex, selectable missions and a saved Blade loadout. Keyboard, touch and gamepad controls, replaceable local audio, and no online services.
 
-Current close-out review: a ±21u fighting deck extends beyond the hazard frame, with eight opening enemies (12 live, three attacking). Seeded boost vents, smashable props, reactive plates, deeper machinery, animated scrap and cached environment shadows now run in the three rooms. Goals remain10,000 /24,000 /40,000 with minimum3 /4 /5 waves. Evidence and open visual gates: [CLOSE_STEP_2_REPORT](docs/CLOSE_STEP_2_REPORT.md). Remaining combat/additions, audio, saves/workshop and final QA follow in the close plan; Chapter1 is not closed.
+Current review: a ±21u fighting deck extends beyond the hazard frame, with eight opening enemies (12 live, three attacking). Shared seeded vents, hazards, pickups, style/ricochet/graze bonuses, reactive scenery and three room layouts are active. Spin/Boost/Stomp have distinct roles and timed synergies. Goals remain10,000 /24,000 /40,000 with minimum3 /4 /5 waves. Missions and Rex are selectable from the start; only Rex unlocks Blade. The garage offers saved equipment and star cosmetics; profile JSON can be exported/imported. Reports: [combat](docs/CLOSE_STEP_3_REPORT.md), [audio](docs/CLOSE_STEP_4_REPORT.md), [saves/garage](docs/CLOSE_STEP_5_REPORT.md). Full reference-art match and human acceptance remain open; Chapter1 is not tagged complete.
 
-Owner-supplied music under `close1/public/audio/` stays private and git-ignored. No audio is loaded in the current build. The approved future audio system must provide synth fallback and exclude all private `public/audio/` files from public deployments; git-ignore alone does not exclude Vite public assets. Do not publish private audio folders.
+Owner music is copied locally from `close1/public/audio/music/` into ignored `public/audio/music/`. Run `pnpm audio:scan` after adding tracks; optional BPM/loop points live in the private manifest. M or the speaker button controls the saved mix. Public `pnpm build` excludes the entire private audio folder and uses original synth fallbacks; build validation rejects audio files in dist. Never publish private audio folders. No reference code/art or third-party audio is shipped.
 
 ## Run locally
 

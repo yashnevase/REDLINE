@@ -1,0 +1,72 @@
+[
+  {
+    "existing": false,
+    "mission": 0,
+    "loadout": "core",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": false,
+    "mission": 1,
+    "loadout": "core",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": false,
+    "mission": 2,
+    "loadout": "core",
+    "browserHeadlessReplay": true,
+    "stars": 3
+  },
+  {
+    "existing": false,
+    "mission": 3,
+    "loadout": "core",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": true,
+    "mission": 0,
+    "loadout": "blade",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": true,
+    "mission": 1,
+    "loadout": "blade",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": true,
+    "mission": 2,
+    "loadout": "blade",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": true,
+    "mission": 3,
+    "loadout": "blade",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "missingAudioSynth": true,
+    "audio": {
+      "unlocked": true,
+      "voices": 3,
+      "track": "Synth ambience",
+      "pack": "default",
+      "tracks": 0,
+      "muted": false
+    },
+    "corruptBackup": true,
+    "indexedDBFallback": true,
+    "exportImport": true
+  }
+]

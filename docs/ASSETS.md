@@ -69,3 +69,14 @@ Original rigid Core matcap shader extension: rotating panel seams/flush bolt pai
 
 ## NEXT_WORK Session 2 (2026-10-31)
 Original procedural steel/rust vertex paint and streak shader, fixed-topology intensity eyes, Whirler arms/warning sectors, instanced saw/spike projectiles, scars, Spin/Stomp/Boost shader layers, exposed-plate shading and UI icons were authored in this repository. Existing Core/enemy hardware remains the original project kit. Spirit Call remains study-only; no reference image, model, code or texture was incorporated. Low roster LOD uses Three.js's already bundled SimplifyModifier/meshoptimizer 1.1; its MIT attribution is included in public/THIRD_PARTY_NOTICES.txt. No new package install or downloaded asset.
+# Chapter 1 audio and additions — 2026-11-01
+
+Original implementation: named cue projection, independent WebAudio fallback synthesis, procedural UI/garage/cosmetic shaders and original effects. Spirit Call sound/host architecture studied only; no audio source code or SFX copied. Three.js built-in SSAOPass is MIT under the existing Three.js dependency; no package added.
+
+| Local-only file | Source | Status |
+|---|---|---|
+| `public/audio/music/theme.mp3` | Owner's `close1/public/audio/music/theme.mp3` | Private use, not redistributable |
+| `public/audio/music/battle-01.mp3` | Owner's `close1/public/audio/music/battle-01.mp3` | Private use, not redistributable |
+| `public/audio/music/battle-02.mp3` | Owner's `close1/public/audio/music/battle-02.mp3` | Private use, not redistributable |
+
+Files were copied only after public build exclusion was implemented. They and their generated manifest are git-ignored; production build excludes the complete private audio folder and creates an empty music manifest. Underlying music rights are not asserted. No commercial music was sourced externally. Original synth effects/ambience work when these files are absent. Earlier no-audio/no-runtime-copy notes below describe earlier checkpoints.

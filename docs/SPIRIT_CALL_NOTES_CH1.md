@@ -26,4 +26,10 @@ Read the architecture comments and cue routing in `sound.ts` / `audio.ts`. This 
 
 ## Verification and limits
 
+## Steps 3–5 application
+
+Revisited local host/scene feedback, combat-light, sound/audio and HUD principles while extending the close-out: retain a short anticipation/contact/aftermath, distinguish role reactions, use small capped sparks/lights, and keep cosmetic camera effects outside simulation. REDLINE's new Boost drift, shield break and timed synergy state are original deterministic rules; the renderer reads snapshots. High AO excludes transparent planes from normal/depth capture and stays optional. Normal/Low effects reuse existing batches to preserve measured budgets.
+
+The audio rebuild uses its own typed cue map, gain buses, capped prioritized voices, per-cue original synthesis and music file manifest. No Spirit Call synthesis code was copied. The garage applies the reference's left-card/central-character/right-stats hierarchy with REDLINE's rotatable Core, original part/cosmetic registry and local mission/save flow. That functional hierarchy does not establish visual parity; the outstanding world/art findings remain valid.
+
 Compare real REDLINE captures at 1280×720 and 1920×1080 to the local combat target at matched sizes, plus compact viewport regression. Review blurred grayscale frames and normal motion; do not infer success from colour alone. An independent judge and the owner must assess the Step 1 clarity gate. No assertion that REDLINE has already beaten Spirit Call's polish.

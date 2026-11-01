@@ -22,7 +22,7 @@ Normal play: `shots/final-polish/normal-desktop.webm` and `normal-compact.webm`,
 |---|---|
 | Core looks poor, sphere/finish/eyes/crown, quieter movement | P1, explicitly approved by owner; rigid body and cool Overdrive shell retained |
 | No base blades; unique Q/E/X and Blade unlock | P2 and prior CL6/B4/B5; Core Pulse vs equipped Spin, all Blade entities/rendering gated and tested |
-| Sliding squares, too much trash, vents/atmosphere | P3 recognisable cart/pickups, eight inside fixtures, clear spawn ring, settled/fading debris, proper seeded vent model; P5 clean steel and pit/giant/wreck iteration |
+| Sliding squares, too much trash, vents/atmosphere | P3 recognisable cart/pickups, clear spawn ring, settled/fading debris, proper seeded vent model; P5 clean steel and pit/giant/wreck iteration |
 | Flat/background-like map; all four arena targets | Original3D slab/pit/fractures and chaos states; P3.4/P5 bounded geometry/material refinement. Exact image replication is not asserted; remaining art wishes tracked |
 | Beyond black/yellow outline, more enemies/time | Existing±21 fighting belt, eight opening enemies,12 live/3 attackers, score goals10k/24k/40k and minimum3/4/5 waves retained; final input/mission audits verify them |
 | Generic UI/lobby, confusing rewards/upgrades/input hints | P4 shaped plates, larger orbitable Core/pedestal/rays/idle, selected mission brief/launch, saved workshop controls, input glyphs, numeric upgrade cards and score hierarchy |
@@ -34,6 +34,6 @@ The older brown-floor and deforming-Core directions are superseded by FINAL_POLI
 
 ## Not done / owner review
 
-Final pair approval and listening by ear remain owner-only verdicts (Core approval already received).3–5 first-time-player balance/feel review is unverified; PLAYTEST_SCRIPT is ready. Six-at-once normal-play mover visibility is not rigorously certified. These are explicitly tracked in POST_SLICE_BACKLOG alongside the fresh judge's optional art wishes. Phone/deployment gates were waived; emulation is not a physical-device claim. No AAA/exact-match or human approval is self-certified.
+Final pair approval and listening by ear remain owner-only verdicts (Core approval already received).3–5 first-time-player balance/feel review is unverified; PLAYTEST_SCRIPT is ready. Six-at-once normal-play mover visibility is not rigorously certified. Final inventory correction:4 barricades +3 barrels +5 vents =12 static objects inside the hazard frame; the prior8 figure omitted barricades. The strict8-all-fixture target remains ART-06 under the P9 timebox. These are explicitly tracked in POST_SLICE_BACKLOG alongside the fresh judge's optional art wishes. Phone/deployment gates were waived; emulation is not a physical-device claim. No AAA/exact-match or human approval is self-certified.
 
 P9: three logical polish sessions used; one concrete overlap/clipping cleanup, not an endless IoU loop. All automated checks pass. Close the engineering slice and tag `chapter1-complete` per the owner's bounded rule, with the remaining wishes preserved in the backlog. STATE/CHAPTER_PIPELINE record the bounded closure; the tag does not assert owner acceptance of every final visual/audio choice.

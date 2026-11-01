@@ -45,7 +45,8 @@ Owner audit: all new complaints map directly to P1(hero/movement), P2(base-Q bla
 | P0.2 owner final verdict | BLOCKED · owner-only review outstanding | Final pairs ready; no owner verdict invented. P9 permits bounded engineering closure with this recorded |
 | P1.1–1.3 | DONE · owner approved | FINAL_P1_REPORT and explicit chat approval |
 | P2.1–2.2 | DONE | FINAL_P2_REPORT; zero-Core-blade/render/replay tests |
-| P3.1–3.4 | DONE bounded implementation | FINAL_P3_REPORT + FINAL_P5_REPORT; further taste wishes tracked |
+| P3.1/3.3/3.4 | DONE bounded implementation | FINAL_P3_REPORT + FINAL_P5_REPORT |
+| P3.2 | DONE declutter; BLOCKED strict8-total all-fixture target | Complete inventory is12 (4 barricades,3 barrels,5 vents); earlier8 subset was incomplete. ART-06 preserves remaining layout work under P9 |
 | P4.1–4.2 | DONE | FINAL_P4_REPORT; four-size UI/native-dialog sound checks |
 | P5.1–5.4 | DONE bounded implementation | FINAL_P5_REPORT; final world/parity/grayscale captures |
 | P6.1–6.3 | DONE | All46 reference cue recipes studied; original layered synth, measured mix/music evidence |

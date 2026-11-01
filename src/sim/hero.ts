@@ -4,7 +4,7 @@ import {combatDefaults,type CombatTuning} from '../content/combat.ts';
 import {collide,direction} from './geometry.ts';
 export type Emit=(kind:FightEvent['kind'],x:number,z:number,amount?:number,radius?:number)=>void;
 // Shared movement/cooldown owner for both the regression trial and the encounter.
-export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit,driftBoost=false){
+export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit,driftBoost=false,onBank:()=>void=()=>{}){
  if(h.boost.kind==='active'&&--h.boost.remaining<=0)h.boost={kind:'idle'};
  for(const key of ['pulseCooldown','boostCooldown','stompCooldown'] as const)if(h[key]>0)h[key]--;
  if(h.dashCooldown>0)h.dashCooldown--;if(h.tapWindow>0)h.tapWindow--;if(h.special.kind==='spin'&&h.special.hopRemaining>0)h.special.hopRemaining--;if(h.special.kind!=='idle'&&--h.special.remaining<=0)h.special=h.special.kind==='spin'&&h.special.hopRemaining>0?{kind:'hop',remaining:h.special.hopRemaining}:{kind:'idle'};
@@ -49,7 +49,7 @@ export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit,dri
  const steps=Math.max(1,Math.ceil(Math.sqrt(h.vx*h.vx+h.vz*h.vz)/60/(t.heroRadius*.5)));
  for(let i=0;i<steps;i++){
   const x=h.x+h.vx/60/steps,z=h.z+h.vz/60/steps,p=collide(x,z,t.heroRadius,t),nx=p.x-x,nz=p.z-z;h.x=p.x;h.z=p.z;
-  if(nx*nx+nz*nz>1e-10&&h.dash.kind==='active'&&h.dash.variant!=='tap'){bounceDash(h,nx,nz);h.vx=h.dash.dx*h.dash.distance*60/h.dash.duration;h.vz=h.dash.dz*h.dash.distance*60/h.dash.duration;}
+  if(nx*nx+nz*nz>1e-10&&h.dash.kind==='active'&&h.dash.variant!=='tap'){const bx=h.dash.dx,bz=h.dash.dz;bounceDash(h,nx,nz);if(bx!==h.dash.dx||bz!==h.dash.dz)onBank();h.vx=h.dash.dx*h.dash.distance*60/h.dash.duration;h.vz=h.dash.dz*h.dash.distance*60/h.dash.duration;}
  }
  // Ease the hero inward in the outer band, with collision retaining the absolute play-zone bound.
  for(const axis of ['x','z'] as const){const limit=(axis==='x'?t.arenaHalfWidth:t.laneHalfWidth)-t.heroRadius-t.leashBand,excess=Math.max(0,Math.abs(h[axis])-limit);h[axis]-=(h[axis]<0?-1:1)*excess*Math.min(1,t.leashStrength/60);}

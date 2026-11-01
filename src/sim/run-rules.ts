@@ -1,3 +1,5 @@
+import {stepExtrasWorld,finishExtras,graze,bank} from './s4-extras.ts';
+import {I8_ENABLED} from '../content/items/s4-additions.ts';
 import {tickCombatStatuses,refundPerfect} from './cl6-status.ts';
 import {CL6_ENABLED} from '../content/items/cl-combat.ts';
 import {stepVents} from './c1-vents.ts';
@@ -44,23 +46,25 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  if(s.hitstop>0){bufferDash(h,command,t);s.hitstop--;return s;}
  tickQuality(s.quality);tickCombatStatuses(s);h.hp=Math.min(h.hp,t.heroHP);h.charges=Math.min(h.charges,t.dashCharges);
  const ventFactor=stepVents(s,t),heroTuning={...t,moveSpeed:t.moveSpeed*ventFactor,pulseCooldownTicks:s.loadout==='blade'?t.bladeCooldownTicks:t.pulseCooldownTicks};
- const {ability,damageMultiplier,actualSpeed}=advanceHero(h,command,heroTuning,event,true);
+ const {ability,damageMultiplier:driveMultiplier,actualSpeed}=advanceHero(h,command,heroTuning,event,true,()=>bank(s,t));
+ const damageMultiplier=driveMultiplier*(I8_ENABLED&&h.hp<t.heroHP*t.lastStandThreshold?1+t.lastStandDamageBonus:1);
  const boss=s.phase.kind==='boss'?s.phase.boss:null;
  const stop=(amount:number,heavy=false)=>{s.hitstop=Math.max(s.hitstop,heavy||amount>=14?t.heavyHitstopTicks:amount>=12?t.mediumHitstopTicks:t.hitstopTicks);};
- const bossDamage=(amount:number,heavy=false,source:'bonk'|'dash'|'ability'|'projectile'='bonk')=>{if(!boss||boss.hp<=0)return;const state=boss.behavior,warning=state.kind.endsWith('-warning'),quality=classifyHit({x:boss.x,z:boss.z,faceX:boss.faceX,faceZ:boss.faceZ,kind:weakSpotFactor(boss,t)>1?'thrower':'grinder',behavior:warning?{kind:'windup',remaining:state.remaining,dx:0,dz:0}:{kind:'chase'}},h,t,s.quality,source);const weak=weakSpotFactor(boss,t);amount=Math.round(amount*quality.factor*weak*10)/10;if(weak>1)qualityEvent(s,'WEAK SPOT',boss.x,boss.z);boss.hp=Math.max(0,boss.hp-amount);event('bonk',boss.x,boss.z,amount,t.bossRadius);s.events[s.events.length-1].scoreFactor=weak*(quality.rear?t.rearDamageFactor:1)*(quality.counter?t.punishDamageFactor:1)*(quality.perfect?t.perfectDamageFactor:1);if(quality.rear)qualityEvent(s,'REAR HIT',boss.x,boss.z);if(quality.counter){qualityEvent(s,'COUNTER',boss.x,boss.z);boss.behavior={kind:'recover',remaining:t.counterStaggerTicks};h.heat=Math.min(t.heatThreshold,h.heat+t.counterHeat);}stop(amount,heavy);};
+ const bossDamage=(amount:number,heavy=false,source:'bonk'|'dash'|'ability'|'projectile'|'hazard'='bonk')=>{if(!boss||boss.hp<=0)return;if(source==='hazard'){boss.hp=Math.max(0,boss.hp-amount);event('bonk',boss.x,boss.z,amount,t.bossRadius);return;}const state=boss.behavior,warning=state.kind.endsWith('-warning'),quality=classifyHit({x:boss.x,z:boss.z,faceX:boss.faceX,faceZ:boss.faceZ,kind:weakSpotFactor(boss,t)>1?'thrower':'grinder',behavior:warning?{kind:'windup',remaining:state.remaining,dx:0,dz:0}:{kind:'chase'}},h,t,s.quality,source);const weak=weakSpotFactor(boss,t);amount=Math.round(amount*quality.factor*weak*10)/10;if(weak>1)qualityEvent(s,'WEAK SPOT',boss.x,boss.z);boss.hp=Math.max(0,boss.hp-amount);event('bonk',boss.x,boss.z,amount,t.bossRadius);s.events[s.events.length-1].scoreFactor=weak*(quality.rear?t.rearDamageFactor:1)*(quality.counter?t.punishDamageFactor:1)*(quality.perfect?t.perfectDamageFactor:1);if(quality.rear)qualityEvent(s,'REAR HIT',boss.x,boss.z);if(quality.counter){qualityEvent(s,'COUNTER',boss.x,boss.z);boss.behavior={kind:'recover',remaining:t.counterStaggerTicks};h.heat=Math.min(t.heatThreshold,h.heat+t.counterHeat);}stop(amount,heavy);};
  let killedBy:DeathCause='unknown';const hurt=(amount:number,attack='contact',source:DeathCause='unknown')=>{if(h.hp<=0)return;if(h.dash.kind==='active'&&h.dash.protected&&(!CL6_ENABLED||h.special.kind!=='spin')){if(amount>0&&grantPerfect(s.quality,h,attack,t)){qualityEvent(s,'PERFECT',h.x,h.z);refundPerfect(h,t);}return;}h.hp=Math.max(0,h.hp-amount);stop(amount);event('hurt',h.x,h.z,amount);if(h.hp===0)killedBy=recordDeath(source);};
- const damage=(e:Enemy,amount:number,stun=false,heavy=false,source:'bonk'|'dash'|'ability'|'projectile'='bonk')=>{
-  if(e.hp<=0)return;const stats=enemyStats(e.kind,t),quality=classifyHit(e,h,t,s.quality,source);amount*=quality.factor;
+ const damage=(e:Enemy,amount:number,stun=false,heavy=false,source:'bonk'|'dash'|'ability'|'projectile'|'hazard'='bonk')=>{
+  if(e.hp<=0)return;const stats=enemyStats(e.kind,t),quality=classifyHit(e,h,t,s.quality,source);amount*=source==='hazard'?1:quality.factor;
   amount=Math.round(amount*10)/10;e.hp=Math.max(0,e.hp-amount);event('bonk',e.x,e.z,amount,stats.radius);s.events[s.events.length-1].scoreFactor=(quality.rear?t.rearDamageFactor:1)*(quality.punish||quality.counter?t.punishDamageFactor:1)*(quality.perfect?t.perfectDamageFactor:1);stop(amount,heavy);
   if(quality.rear)qualityEvent(s,'REAR HIT',e.x,e.z);if(quality.punish||quality.counter){qualityEvent(s,'COUNTER',e.x,e.z);h.heat=Math.min(t.heatThreshold,h.heat+t.counterHeat);}
   if(e.hp===0){s.hitstop=Math.max(s.hitstop,t.killHitstopTicks);e.behavior={kind:'defeated'};h.heat=Math.min(t.heatThreshold,h.heat+stats.heat);event('defeat',e.x,e.z);s.events[s.events.length-1].scoreValue=e.kind==='sawlet'?t.scoreSawlet:e.kind==='thrower'?t.scoreThrower:e.kind==='shieldsaw'?t.scoreShield:e.kind==='whirler'?t.scoreWhirler:t.scoreGrinder;}
   else if(stun||quality.counter)e.behavior={kind:'recover',remaining:stun?t.stompStunTicks+1:t.counterStaggerTicks};
  };
+ stepExtrasWorld(s,t,event,(amount,id)=>hurt(amount,id,'hazard'),(e,amount)=>damage(e,amount,false,true,'hazard'),amount=>bossDamage(amount,true,'hazard'));
  applyAbilities(s,t,ability,damageMultiplier,damage,bossDamage,event);stepBladeProjectiles(s,t,ability,event,damage,bossDamage);
  // Swept path damage for Rush/Charge: one hit per target for this dash, including the boss.
  if(h.dash.kind==='active'&&h.dash.variant!=='tap'){
   const dash=h.dash,near=(x:number,z:number,r:number)=>{const vx=h.x-h.prevX,vz=h.z-h.prevZ,den=vx*vx+vz*vz,u=den?Math.max(0,Math.min(1,((x-h.prevX)*vx+(z-h.prevZ)*vz)/den)):0;return Math.sqrt((x-h.prevX-u*vx)**2+(z-h.prevZ-u*vz)**2)<=r+t.heroRadius;};
-  const amount=t.bonkDamage*(1+t.bonkSpeedBonus)*(dash.variant==='rush'?t.rushDamageFactor:1)*damageMultiplier;
+  const amount=t.bonkDamage*(1+t.bonkSpeedBonus)*(dash.variant==='rush'?t.rushDamageFactor:1)*damageMultiplier*(s.extras.ricochet>0?t.ricochetDamageFactor:1);
   for(const e of s.enemies)if(e.hp>0&&!dash.hits.includes(e.id)&&near(e.x,e.z,enemyStats(e.kind,t).radius)){damage(e,amount,false,false,'dash');dash.hits.push(e.id);const away=direction(e.x-h.x,e.z-h.z),p=collide(e.x+away.x*t.dashBounceKnockback,e.z+away.z*t.dashBounceKnockback,enemyStats(e.kind,t).radius,t);bounceDash(h,-away.x,-away.z);e.x=p.x;e.z=p.z;}
   if(boss&&boss.hp>0&&!dash.hits.includes(-1)&&near(boss.x,boss.z,t.bossRadius)){bossDamage(amount,false,'dash');dash.hits.push(-1);bounceDash(h,h.x-boss.x,h.z-boss.z);}
  }
@@ -90,9 +94,9 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
     break;
    }
    case'lunge':{
-    const b=e.behavior;if(e.kind==='whirler'){if(!b.hasHit&&whirlerArmTouches(e,h,s.tick,t)){const hp=h.hp;hurt(t.whirlerDamage,`enemy:${e.id}:${e.attackSerial}`,e.kind);if(h.hp<hp)b.hasHit=true;}if(--b.remaining<=0){e.behavior={kind:'recover',remaining:t.whirlerRecoveryTicks,rallyEligible:true,punish:t.punishTicks};attackers--;}break;}const speed=e.kind==='shieldsaw'?t.shieldChargeSpeed:t.lungeSpeed,p=collide(e.x+b.dx*speed/60,e.z+b.dz*speed/60,stats.radius,t);e.x=p.x;e.z=p.z;
+    const b=e.behavior;if(e.kind==='whirler'){if(!b.hasHit&&whirlerArmTouches(e,h,s.tick,t)){const hp=h.hp;hurt(t.whirlerDamage,`enemy:${e.id}:${e.attackSerial}`,e.kind);if(h.hp<hp)b.hasHit=true;}if(b.remaining===1&&!b.hasHit&&!whirlerArmTouches(e,h,s.tick,t)&&whirlerArmTouches(e,h,s.tick,{...t,heroRadius:t.heroRadius+t.grazeMargin}))graze(s,`enemy:${e.id}:${e.attackSerial}`,h.x,h.z,t);if(--b.remaining<=0){e.behavior={kind:'recover',remaining:t.whirlerRecoveryTicks,rallyEligible:true,punish:t.punishTicks};attackers--;}break;}const speed=e.kind==='shieldsaw'?t.shieldChargeSpeed:t.lungeSpeed,p=collide(e.x+b.dx*speed/60,e.z+b.dz*speed/60,stats.radius,t);e.x=p.x;e.z=p.z;
     if(!b.hasHit&&distance(h,e)<t.heroRadius+stats.radius){const hp=h.hp;hurt(e.kind==='shieldsaw'?t.rivetDamage:t.contactDamage,`enemy:${e.id}:${e.attackSerial}`,e.kind);if(h.hp<hp)b.hasHit=true;}
-    if(--b.remaining<=0){e.behavior={kind:'recover',remaining:stats.recovery,rallyEligible:true,punish:e.kind==='shieldsaw'?t.punishTicks:0};attackers--;}break;
+    if(b.remaining===1&&!b.hasHit&&distance(h,e)<t.heroRadius+stats.radius+t.grazeMargin&&distance(h,e)>=t.heroRadius+stats.radius)graze(s,`enemy:${e.id}:${e.attackSerial}`,h.x,h.z,t);if(--b.remaining<=0){e.behavior={kind:'recover',remaining:stats.recovery,rallyEligible:true,punish:e.kind==='shieldsaw'?t.punishTicks:0};attackers--;}break;
    }
    case'recover':if((e.behavior.punish??0)>0)e.behavior.punish!--;if(rally&&e.behavior.rallyEligible&&!(e.behavior.punish??0)){e.behavior={kind:'chase'};break;}if(e.behavior.remaining>1)e.behavior.remaining--;else e.behavior={kind:'chase'};break;
   }
@@ -111,6 +115,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   const vx=p.x-p.prevX,vz=p.z-p.prevZ,den=vx*vx+vz*vz,u=den>0?Math.max(0,Math.min(1,((h.x-p.prevX)*vx+(h.z-p.prevZ)*vz)/den)):0;
   const near={x:p.prevX+u*vx,z:p.prevZ+u*vz};
   if(distance(h,near)<t.heroRadius+t.rivetRadius){if(B3_ENABLED)event('floor-scar',near.x,near.z,0,.4);hurt(t.rivetDamage,`projectile:${p.id}`,'thrower');continue;}
+  if((h.x-p.x)*p.dx+(h.z-p.z)*p.dz<0&&distance(h,near)<t.heroRadius+t.rivetRadius+t.grazeMargin)graze(s,`projectile:${p.id}`,near.x,near.z,t);
   if(p.remaining>0&&Math.abs(pos.x-x)<.001&&Math.abs(pos.z-z)<.001)projectiles.push(p);else if(B3_ENABLED)event('floor-scar',pos.x,pos.z,0,.4);
  }s.projectiles=projectiles;
  if(h.hp>0&&h.bonkCooldown===0&&!(h.dash.kind==='active'&&h.dash.variant!=='tap')){
@@ -118,7 +123,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   if(boss&&boss.hp>0&&distance(h,boss)<t.bonkRange+t.bossRadius&&(!target||distance(h,boss)-t.bossRadius<distance(h,target))){const factor=Math.min(1,actualSpeed/(t.dashDistance*60/t.dashTicks));bossDamage(t.bonkDamage*(1+t.bonkSpeedBonus*factor)*damageMultiplier);h.bonkCooldown=t.bonkCooldownTicks;}
   else if(target){const factor=Math.min(1,actualSpeed/(t.dashDistance*60/t.dashTicks));damage(target,t.bonkDamage*(1+t.bonkSpeedBonus*factor)*damageMultiplier);h.bonkCooldown=t.bonkCooldownTicks;const away=direction(target.x-h.x,target.z-h.z),p=collide(target.x+away.x*t.knockback,target.z+away.z*t.knockback,enemyStats(target.kind,t).radius,t);target.x=p.x;target.z=p.z;}
  }
- endDash(h);scoreEvents(s,t);
+ finishExtras(s,t,event);endDash(h);scoreEvents(s,t);
  if(h.hp<=0){h.boost={kind:'idle'};h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;s.phase={kind:'lost',cause:killedBy};return s;}
  if(boss&&boss.hp===0){h.boost={kind:'idle'};h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;event('defeat',boss.x,boss.z);s.events[s.events.length-1].scoreValue=t.scoreBoss*([...s.events].reverse().find(e=>e.kind==='bonk'&&(e.x-boss.x)**2+(e.z-boss.z)**2<.16)?.scoreFactor??1);const before=s.events;s.events=[s.events[s.events.length-1]];scoreEvents(s,t);s.events=before;s.phase={kind:'complete',reward:'blade'};s.enemies=[];s.projectiles=[];s.bladeProjectiles=[];return s;}
  if(s.phase.kind!=='fight')return s;

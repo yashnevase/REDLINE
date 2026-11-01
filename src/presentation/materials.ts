@@ -23,7 +23,7 @@ export function makeCoreMatcap(sheen: number) {
 }
 export function makeMaterials(sheen = .18) {
   const chrome = new T.MeshMatcapMaterial({ matcap: makeCoreMatcap(sheen) });
-  const rustPaint=makeRustPaint();const rust = new T.MeshLambertMaterial({ color: '#865747', map:rustPaint, flatShading: true });
+  const rustPaint=makeRustPaint();const rust = new T.MeshLambertMaterial({ color: '#926b57', map:rustPaint, flatShading: true });
   const steel = new T.MeshLambertMaterial({ color: palettes.steel, flatShading: true });
   const stone = new T.MeshLambertMaterial({ color: palettes.stone, flatShading: true });
   const glow = new T.MeshBasicMaterial({ color: palettes.glow, toneMapped: false });
@@ -87,11 +87,10 @@ export function makeBladeMaterials(){
 export type BladeMaterials=ReturnType<typeof makeBladeMaterials>;
 
 // Painted matte rust for actors: warm metal, muted scrapes, violet bounce, no PBR map.
-function makeRustMatcap(){const c=document.createElement('canvas');c.width=c.height=256;const ctx=c.getContext('2d')!,p=ctx.createImageData(256,256);let noise=4107;for(let y=0;y<256;y++)for(let x=0;x<256;x++){const nx=(x-127.5)/128,ny=-(y-127.5)/128,nz=Math.sqrt(Math.max(0,1-nx*nx-ny*ny)),l=Math.max(0,-nx*.35+ny*.65+nz*.35),spec=Math.exp(-(((nx+.4)/.20)**2+((ny-.58)/.14)**2))*65,rim=(1-nz)**3*Math.max(0,nx)*65;noise=(Math.imul(noise,1664525)+1013904223)>>>0;const grain=(noise/4294967296-.5)*9;const i=(y*256+x)*4;p.data[i]=69+l*116+spec+grain+rim*.8;p.data[i+1]=48+l*100+spec+grain+rim*.4;p.data[i+2]=43+l*88+spec*.7+grain+rim*1.8;p.data[i+3]=255;}ctx.putImageData(p,0,0);const texture=new T.CanvasTexture(c);texture.colorSpace=T.SRGBColorSpace;return texture;}
+function makeRustMatcap(){const c=document.createElement('canvas');c.width=c.height=256;const ctx=c.getContext('2d')!,p=ctx.createImageData(256,256);for(let y=0;y<256;y++)for(let x=0;x<256;x++){const nx=(x-127.5)/128,ny=-(y-127.5)/128,nz=Math.sqrt(Math.max(0,1-nx*nx-ny*ny)),l=Math.max(0,-nx*.35+ny*.65+nz*.35),spec=Math.exp(-(((nx+.4)/.20)**2+((ny-.58)/.14)**2))*65,rim=(1-nz)**3*Math.max(0,nx)*65;const grain=0;const i=(y*256+x)*4;p.data[i]=69+l*116+spec+grain+rim*.8;p.data[i+1]=48+l*100+spec+grain+rim*.4;p.data[i+2]=43+l*88+spec*.7+grain+rim*1.8;p.data[i+3]=255;}ctx.putImageData(p,0,0);const texture=new T.CanvasTexture(c);texture.colorSpace=T.SRGBColorSpace;return texture;}
 
 // Hand-painted style UV wear, authored with seeded brush marks; not a PBR/noise normal map.
 function makeRustPaint(){const c=document.createElement('canvas');c.width=512;c.height=256;const ctx=c.getContext('2d')!,rng=random(8164);ctx.fillStyle='#fff8ef';ctx.fillRect(0,0,512,256);
- for(let i=0;i<130;i++){const x=rng()*512,y=rng()*256,r=3+rng()*26,g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,i%4===0?'#74413075':'#71696345');g.addColorStop(.65,'#8c685522');g.addColorStop(1,'#8c685500');ctx.fillStyle=g;ctx.beginPath();ctx.ellipse(x,y,r,r*(.4+rng()*.6),rng()*Math.PI,0,Math.PI*2);ctx.fill();}
- for(let i=0;i<650;i++){const x=rng()*512,y=rng()*256,r=.3+rng()*1.5;ctx.fillStyle=i%3===0?'#58332977':'#c1957040';ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();}
- for(let i=0;i<45;i++){const x=rng()*512,y=rng()*256;ctx.strokeStyle=i%3===0?'#fff7dcb0':'#66595885';ctx.lineWidth=.4+rng();ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+2+rng()*13,y+1+rng()*3);ctx.stroke();}
+ for(let i=0;i<8;i++){const x=rng()*512,y=rng()*256,r=3+rng()*26,g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,i%4===0?'#74413075':'#71696345');g.addColorStop(.65,'#8c685522');g.addColorStop(1,'#8c685500');ctx.fillStyle=g;ctx.beginPath();ctx.ellipse(x,y,r,r*(.4+rng()*.6),rng()*Math.PI,0,Math.PI*2);ctx.fill();}
+ for(let i=0;i<12;i++){const x=rng()*512,y=rng()*256;ctx.strokeStyle=i%3===0?'#fff7dcb0':'#66595885';ctx.lineWidth=.4+rng();ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+2+rng()*13,y+1+rng()*3);ctx.stroke();}
  const texture=new T.CanvasTexture(c);texture.colorSpace=T.SRGBColorSpace;texture.wrapS=texture.wrapT=T.RepeatWrapping;return texture;}

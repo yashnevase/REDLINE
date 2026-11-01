@@ -17,7 +17,7 @@ export function animateArmouredArena(root:T.Group,time:number,quiet:boolean){roo
 // Showcase candidate: original geometry, reference pictures are never runtime textures.
 export function makeArmouredArena(parent:T.Group,level=0,low=false,sharedSurface?:T.Texture,armourPaint?:T.Texture,runSeed=4107){
  const root=new T.Group();root.name='AM1-armoured-arena';parent.add(root);
- const metal=new T.MeshLambertMaterial({color:'#968477'}),dark=new T.MeshLambertMaterial({color:CL1_ENABLED?new T.Color(scrapyard.palette.floor).lerp(new T.Color('#91877e'),.45):'#827269'}),rust=new T.MeshLambertMaterial({color:scrapyard.palette.oxide}),edge=new T.MeshBasicMaterial({color:'#b682ec',toneMapped:false}),amber=new T.MeshBasicMaterial({color:'#ffa22d',toneMapped:false}),bolt=new T.MeshLambertMaterial({color:'#82796e'});
+ const metal=new T.MeshLambertMaterial({color:'#8b939d'}),dark=new T.MeshLambertMaterial({color:CL1_ENABLED?new T.Color(scrapyard.palette.floor).lerp(new T.Color('#929ba7'),.32):'#827269'}),rust=new T.MeshLambertMaterial({color:scrapyard.palette.oxide}),edge=new T.MeshBasicMaterial({color:'#b682ec',toneMapped:false}),amber=new T.MeshBasicMaterial({color:'#ffa22d',toneMapped:false}),bolt=new T.MeshLambertMaterial({color:'#82796e'});
  const hazardPaint=new T.MeshLambertMaterial({color:'#9c824b'});const surface=sharedSurface??makeArenaSurface();metal.map=surface;dark.map=surface;
  const mesh=(g:T.BufferGeometry,m:T.Material,x=0,y=0,z=0,angle=0)=>{const o=new T.Mesh(g,m);o.position.set(x,y,z);o.rotation.y=angle;root.add(o);return o;};
  const box=(w:number,h:number,d:number,x:number,y:number,z:number,m:T.Material,angle=0)=>mesh(new T.BoxGeometry(w,h,d),m,x,y,z,angle);

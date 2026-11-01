@@ -1,0 +1,3 @@
+import type {Preferences} from '../content/preferences.ts';
+// Host frame pacing only. Three sustained seconds above budget, excluding warm-up and pauses.
+export function makeQualityMonitor(){let samples:number[]=[],elapsed=0,warm=2;return{reset:()=>{samples=[];elapsed=0;warm=2;},sample:(ms:number,active:boolean,mode:Preferences['qualityMode'],tier:Preferences['quality'])=>{if(!active||mode!=='auto'){samples=[];elapsed=0;return;}if(warm>0){warm-=ms/1000;return;}samples.push(ms);elapsed+=ms/1000;if(elapsed<3)return;const sorted=[...samples].sort((a,b)=>a-b),p95=sorted[Math.floor(sorted.length*.95)]??0;samples=[];elapsed=0;if(p95>22&&tier!=='low'){warm=2;return tier==='high'?'standard':'low';}}};}

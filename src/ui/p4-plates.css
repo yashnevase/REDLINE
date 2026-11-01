@@ -11,3 +11,13 @@
 .p4 .scene-switch{display:none}.p4 .audio-button svg{width:20px;height:20px;stroke:currentColor;stroke-width:2.6;fill:none;vertical-align:middle}
 
 .p4 .health-track i,.p4 .objective-track i{position:relative;overflow:hidden;transition:width .14s ease-out}.p4 .health-track i:after,.p4 .objective-track i:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 65%,#fff5 90%,transparent);pointer-events:none}.p4[data-reduced-motion=true] .health-track i,.p4[data-reduced-motion=true] .objective-track i{transition:none}
+
+.p4 .loadout-panel{padding:10px 14px}.p4 .loadout-panel .save-status{display:block;font-size:10px;line-height:1.4;white-space:normal;padding:0 2px 3px}.p4 .loadout-panel button{border-radius:0;clip-path:var(--plate-cut);background:#25303f}.p4 .loadout-panel button[aria-pressed=true]{background:#d9bb83;color:#1a2431}
+.p4.live .settings{position:fixed;left:245px;top:24px}
+@media(min-width:601px) and (min-height:501px){.p4 .chapter-card{bottom:150px}}
+@media(max-height:500px){.p4.live .settings{left:210px;top:16px}.p4.live .heat>div{width:40px;height:40px;transform:scale(.4);transform-origin:center;margin:-12px;flex-shrink:0}}
+@media(max-width:600px) and (min-height:501px){.p4.live .settings{left:70px;top:78px}}
+
+@media(max-height:500px){.p4 .chapter-card{display:none}.p4 .loadout-panel{top:78px;padding:8px 12px}.p4 .loadout-panel button{padding:6px 8px}.p4 .loadout-panel>div{gap:6px}.p4:not(:has(.parts-list)) .machine-stats{top:170px;padding:8px 12px;width:195px}.p4:not(:has(.parts-list)) .machine-stats dl{margin:4px 0 0}.p4:not(:has(.parts-list)) .machine-stats dl>div{font-size:11px;margin:3px 0;line-height:1.2}.p4:not(:has(.parts-list)) .mission-button{bottom:80px}}
+
+.p4 .dialog-audio-button{display:flex;align-items:center;gap:6px;margin-left:auto;margin-right:10px;padding:7px 10px;flex-shrink:0;font-size:12px;color:#efdfbf;background:#27303d;clip-path:var(--plate-cut);border:1px solid #9d875966}.p4 .dialog-audio-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.6}.p4 .audio-popover[data-modal=true]{position:absolute;right:16px;top:65px;width:260px;max-width:calc(100% - 32px);max-height:min(400px,calc(100dvh - 160px));overflow:auto;z-index:40}.p4 .mission-dialog header .dialog-audio-button{width:auto;height:auto;font-size:12px}

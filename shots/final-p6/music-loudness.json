@@ -1,0 +1,31 @@
+{
+  "targetPrefaderLUFS": -18,
+  "privateFilesUnchanged": true,
+  "afterUserBusNotClaimed": true,
+  "report": [
+    {
+      "track": "battle-01",
+      "inputLUFS": -7.45,
+      "inputTruePeak": 2.26,
+      "trimDb": -10.55,
+      "verifiedPrefaderLUFS": -18,
+      "verifiedTruePeak": -8.29
+    },
+    {
+      "track": "battle-02",
+      "inputLUFS": -6.26,
+      "inputTruePeak": 2.25,
+      "trimDb": -11.74,
+      "verifiedPrefaderLUFS": -18,
+      "verifiedTruePeak": -9.49
+    },
+    {
+      "track": "theme",
+      "inputLUFS": -10.56,
+      "inputTruePeak": 0.21,
+      "trimDb": -7.4399999999999995,
+      "verifiedPrefaderLUFS": -18,
+      "verifiedTruePeak": -7.23
+    }
+  ]
+}

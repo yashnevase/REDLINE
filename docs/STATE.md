@@ -1,8 +1,8 @@
 # STATE.md — resume here
 
-Phase: **FINAL_POLISH session 1: P0 baselines complete, P1 Core candidate awaiting the P1.2 owner review.**
+Phase: **FINAL_POLISH session2: Core approved; P2 and P3.1–3 complete, P4 interface finishing. P3.4/P5/P6 and final QA follow.**
 
-Latest owner directive2026-11-02: read `FINAL_POLISH.md`, `LOOK_BIBLE.md`, `FINAL_POLISH_PROGRESS.md`. The three-session P9 closing rule replaces the old IoU/art-judge closure gate described below. Do not restart completed systems. P0 pairs and fresh gap review are baseline-only; P2(base-Q blade bug), P3–P6 are still required. P1.2 requests concrete turntable owner approval before moving to P2. FINAL_P1_REPORT.md records the130-test/build pass, spherical movement checks, all turntable/Heat/expression/scar frames and normal-stat motion clips. P2 blade bug remains deliberately assigned next; do not claim it fixed.
+Latest owner directive2026-11-02: read `FINAL_POLISH.md`, `LOOK_BIBLE.md`, `FINAL_POLISH_PROGRESS.md`. The three-session P9 closing rule replaces the old IoU/art-judge closure gate described below. Do not restart completed systems. P0 pairs and fresh gap review are baseline-only; P2(base-Q blade bug), P3–P6 are still required. P1.2 requests concrete turntable owner approval before moving to P2. FINAL_P1_REPORT.md records the130-test/build pass, spherical movement checks, all turntable/Heat/expression/scar frames and normal-stat motion clips. Owner approved Core explicitly. P2 blade bug fixed with135 tests now passing after P3. See FINAL_P2_REPORT and FINAL_P3_REPORT. Historical awaiting-review statements below are superseded.
 
 
 

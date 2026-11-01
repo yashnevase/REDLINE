@@ -8,7 +8,7 @@ export const defaults = Object.freeze({
   keyLight: CL1_ENABLED?3.1:2.8, fillLight: 0.6, ambientLight: 1.35, shadowOpacity: 0.2,
   spawnDropHeight:3, coreRadius: 0.62, coreBob: 0.035, bobSpeed: 1.8,
   floorVariance: scrapyard.tiles.lightnessVariance, floorFalloff: 0.19, lavaSpill: 0.27, violetStrength: 2.5, orangeStrength: 2.8,
-  renderScale: 1.5, particles: 22, stageHeight: 3.3, stageElevation: 18,
+  renderScale: 1.5, particles: 22, stageHeight: 2.65, stageElevation: 18,
   cameraLookAhead:1.2, cameraDamping:.16, cameraInset:EXPANDED_DECK_ENABLED?7:11, cameraCloseFollow:8, cameraPortraitFollow:1, dashZoomOut:.04, lightZoom:.02, heavyZoom:.04, zoomEaseSeconds:.12,
   lightShake:.04, mediumShake:.09, heavyShake:.16, lightSparks:10, mediumSparks:20, heavySparks:40, numberPixels:38, phoneNumberPixels:34, heavyNumberScale:1.3, numberPopPeak:1.25, sparkSize:1.5, impactDiscOpacity:.45, heavyDiscOpacity:.6, impactRingOpacity:.9, scorchOpacity:.6, numberFloat:.8,
   locatorRadius:4, locatorOpacity:CL3_ENABLED?.33:.25, enemyGlowOpacity:CL4_ENABLED?.16:.12, coreRimStrength:CL3_ENABLED?1.5:1.2, effectSlots:4, speedThreshold:.8, speedZoomOut:.02, overdriveZoomOut:.06, overdriveEntrySeconds:.2, overdriveEntryScale:.3, velocityStretch:0, rigidAnticipation:.06, rigidResponse:.035, impactCompression:.08, heroImpactSeconds:.08, scarDent:.045, rollDetail:.6, rollDashSpin:1.25, zoomPreferenceSeconds:.16, ghostOpacity:.18, dustOpacity:.2, atmosphereStrength:.6, edgeChaseSpeed:12, ambientSweep:.07, sweepPeriod:8, sweepDuration:2, nebulaHeatBoost:.15, bannerSeconds:.6, bossSlowSeconds:.08, bossSlowScale:.25, killSlowSeconds:.1, killSlowScale:.35,

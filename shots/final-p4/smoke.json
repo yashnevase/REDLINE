@@ -1,0 +1,2574 @@
+[
+  {
+    "name": "desktop",
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0
+      },
+      "hullCoverage": {
+        "fraction": 0,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 639.9999999999994,
+        "y": 385.8400261031138,
+        "radius": 210.56603773584905
+      },
+      "lobbyOrbit": {
+        "enabled": true,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "default",
+        "viewScale": 1.0366932289733395
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 6912,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 5884,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1952,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 576,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 272,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 252,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 192,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 88,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "workshop",
+      "seed": 4107,
+      "tick": 120,
+      "camera": {
+        "width": 4.71111111111111,
+        "height": 2.65,
+        "elevation": 18,
+        "azimuth": 45,
+        "squash": 0.3090169943749474
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.4679245283018868
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 71,
+      "triangles": 39042,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      }
+    },
+    "audio": {
+      "unlocked": false,
+      "voices": 0,
+      "track": "Synth ambience",
+      "pack": "default",
+      "tracks": 0,
+      "muted": false
+    }
+  },
+  {
+    "name": "compact",
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0
+      },
+      "hullCoverage": {
+        "fraction": 0,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 421.9999999999997,
+        "y": 208.99668080585332,
+        "radius": 114.0566037735849
+      },
+      "lobbyOrbit": {
+        "enabled": true,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "default",
+        "viewScale": 1.0367430359182692
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 6912,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 5884,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1952,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 576,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 272,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 252,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 192,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 88,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "workshop",
+      "seed": 4107,
+      "tick": 120,
+      "camera": {
+        "width": 5.734871794871794,
+        "height": 2.65,
+        "elevation": 18,
+        "azimuth": 45,
+        "squash": 0.3090169943749474
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.4679245283018868
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 71,
+      "triangles": 39042,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      }
+    },
+    "audio": {
+      "unlocked": false,
+      "voices": 0,
+      "track": "Synth ambience",
+      "pack": "default",
+      "tracks": 0,
+      "muted": false
+    }
+  },
+  {
+    "name": "portrait",
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0
+      },
+      "hullCoverage": {
+        "fraction": 0,
+        "samples": 576,
+        "solidHullHidden": true,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 194.99999999999935,
+        "y": 452.2902528208723,
+        "radius": 246.83018867924528
+      },
+      "lobbyOrbit": {
+        "enabled": true,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "default",
+        "viewScale": 1
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 6912,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 5884,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1952,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 576,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 272,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 252,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 192,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 88,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "workshop",
+      "seed": 4107,
+      "tick": 120,
+      "camera": {
+        "width": 1.224526066350711,
+        "height": 2.65,
+        "elevation": 18,
+        "azimuth": 45,
+        "squash": 0.3090169943749474
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 18,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.4679245283018868
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 55,
+      "triangles": 30466,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      }
+    },
+    "audio": {
+      "unlocked": false,
+      "voices": 0,
+      "track": "Synth ambience",
+      "pack": "default",
+      "tracks": 0,
+      "muted": false
+    }
+  },
+  {
+    "name": "ultrawide",
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0
+      },
+      "hullCoverage": {
+        "fraction": 0,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 1279.999999999999,
+        "y": 578.7600391546707,
+        "radius": 315.8490566037736
+      },
+      "lobbyOrbit": {
+        "enabled": true,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "default",
+        "viewScale": 1.0367098520455151
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 6912,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 5884,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2132,
+          "calls": 1
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "foundry-slab",
+          "triangles": 2112,
+          "calls": 6
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1952,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1202,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 768,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 576,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 274,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 272,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 256,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 252,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 192,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 88,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 36,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 24,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 12,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 8,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "workshop",
+      "seed": 4107,
+      "tick": 120,
+      "camera": {
+        "width": 6.281481481481481,
+        "height": 2.65,
+        "elevation": 18,
+        "azimuth": 45,
+        "squash": 0.3090169943749474
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.4679245283018868
+      },
+      "viewport": {
+        "width": 2560,
+        "height": 1080
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 71,
+      "triangles": 39042,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      }
+    },
+    "audio": {
+      "unlocked": false,
+      "voices": 0,
+      "track": "Synth ambience",
+      "pack": "default",
+      "tracks": 0,
+      "muted": false
+    }
+  }
+]

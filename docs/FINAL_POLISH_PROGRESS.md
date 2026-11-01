@@ -4,11 +4,11 @@ Active owner directive: `FINAL_POLISH.md`, supplied2026-11-02. It supersedes the
 
 | Session | Scope | Status |
 |---|---|---|
-| 1 · 2026-11-02 | P0 look bible/baselines; P1 Core candidate and turntable | P0 complete; P1 candidate under review |
-| 2 | P2 equipment-specific abilities; P3 movers/declutter/vents; P4 interface/lobby | Not started |
+| 1 · 2026-11-02 | P0 look bible/baselines; P1 Core candidate and turntable | DONE · Core approved by owner |
+| 2 | P2 equipment-specific abilities; P3 movers/declutter/vents; P4 interface/lobby | Active |
 | 3 | P5 world/material/effects finish; P6 layered mix; P7 QA and P9 close | Not started |
 
-P1.2 explicitly asks owner approval of the Core turntable before moving on. Present the concrete candidate with concept/quality comparisons. Do not use an old failed art judge to create a new approval loop. Preserve the user's existing authorization for all remaining implementation.
+P1.2 owner approval received: “Approve Core; continue P2–P6”. P2 and P3.1–3 are implemented and checked; P4 is finishing, P3.4 carries into P5. Do not use an old failed art judge to create a new approval loop. Preserve the user's existing authorization for all remaining implementation.
 
 ## P0 baseline report
 

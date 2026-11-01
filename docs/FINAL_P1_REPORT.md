@@ -21,3 +21,5 @@ Tunables/switch: `presentation/p1-core-polish.ts` (P1_ENABLED, turn lean, fast-t
 Owner audit: hero no longer changes to a white/orange blob; non-uniform egg/stretch removed in presentation; white eyes/crown/socket identity retained; fast-turn dust rather than continuous noise. Movement/shades/effects/lobby/audio complaints remain tracked to P3–P6, not dismissed because this candidate exists.
 
 Review gate comes directly from FINAL_POLISH P1.2: “owner approves before moving on.” Review the turntable, concept/quality comparison and Overdrive frame. This requirement applies to the concrete Core candidate, not a new permission request for the already-approved full sprint. P9 still limits the whole polish to three sessions and one targeted revision per rejected pair.
+
+Owner review: approved via the explicit reply “Approve Core; continue P2–P6” on2026-11-02. P1.2 is satisfied.

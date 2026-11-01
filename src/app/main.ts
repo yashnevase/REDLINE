@@ -1,3 +1,4 @@
+import {installGameShell} from '../ui/p4-shell.ts';
 import {qName} from '../content/items/p2-equipment.ts';
 import {coreTurntablePose} from '../presentation/p1-core-polish.ts';
 import {makeMissionSelect} from '../ui/mission-select.ts';
@@ -44,6 +45,7 @@ import {makeInput} from '../input/devices.ts';
 import {combatDefaults,tuningSchema,type CombatTuning} from '../content/combat.ts';
 import {idleCommand,type Command} from '../sim/schema.ts';
 import '../ui/style.css';
+import '../ui/p4-plates.css';
 
 let profile=await loadProfileFallback();applySavedSettings(profile);
 let saveAvailable=true;
@@ -92,7 +94,7 @@ const tuning: Tuning = { ...defaults };
 if(requested==='core-turntable'){const pose=coreTurntablePose(params.get('pose'));Object.assign(tuning,{coreStudioAzimuth:pose.azimuth,coreStudioElevation:pose.elevation,coreExpression:Math.min(5,Math.max(0,Number(params.get('expression')??0))),coreHeat:Math.min(2,Math.max(0,Number(params.get('heat')??0))),coreBlade:params.get('blade')==='1'?1:0});const nav=document.createElement('nav');nav.className='turntable-poses';nav.setAttribute('aria-label','Core turntable views');for(const pose of ['front','quarter','side','top']){const a=document.createElement('a');a.href=`?scene=core-turntable&pose=${pose}`;a.textContent=pose;nav.append(a);}app.append(nav);}
 const view = makeScene(app.querySelector('canvas')!, sceneName, tuning);
 const resize = () => view.resize(innerWidth, innerHeight); addEventListener('resize', resize); resize();
-let preferences=loadPreferences();app.dataset.reducedMotion=String(preferences.reducedMotion);app.dataset.reducedFlashes=String(preferences.reducedFlashes);view.setPreferences(preferences);
+let preferences=loadPreferences();app.dataset.reducedMotion=String(preferences.reducedMotion);app.dataset.reducedFlashes=String(preferences.reducedFlashes);view.setPreferences(preferences);installGameShell(app,()=>preferences.reducedMotion);
 const qualityMonitor=makeQualityMonitor(),qualityToast=document.createElement('p');qualityToast.className='quality-toast';qualityToast.hidden=true;qualityToast.setAttribute('role','status');app.append(qualityToast);let toastUntil=0;
 let ready=false;
 let measuring = false;
@@ -147,8 +149,7 @@ if(playing){
  drawHUD=()=>{if(!snapshot)return;const h=snapshot.hero,config=effectiveTuning(),run='enemies' in snapshot?snapshot:null,e='enemy' in snapshot?snapshot.enemy:null;
   updateClarityHUD(app,snapshot);rosterHints?.setPaused(paused);const isBoss=run?.phase.kind==='boss';bossGuide.update(isBoss);bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=`SCRAP-REX · PHASE ${bossStage(hp,config)}${run.phase.boss.exposed>0?' · EXPOSED':''}`;bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
   app.querySelector('.roster span')!.textContent=run?.loadout==='blade'?'BLADE EQUIPPED':'BASE FORM';
-  const qButton=abilities.querySelector<HTMLElement>('[data-ability=pulse]')!;const form=run?.loadout??'core';if(qButton.dataset.form!==form){qButton.querySelector('svg')!.outerHTML=icon(form==='blade'?'blade':'pulse');qButton.dataset.form=form;}
-  abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label',qName(run?.loadout??'core'));
+  const qButton=abilities.querySelector<HTMLElement>('[data-ability=pulse]')!;const form=run?.loadout??'core';qButton.setAttribute('aria-label',qName(form));if(qButton.dataset.form!==form){qButton.querySelector('svg')!.outerHTML=icon(form==='blade'?'blade':'pulse');qButton.dataset.form=form;}
   const result=h.hp<=0?'lost':run?(run.phase.kind==='complete'?'won':run.phase.kind==='upgrade'?'upgrade':run.phase.kind==='level-complete'?'level-complete':'fighting'):e?.behavior.kind==='defeated'?'won':'fighting';app.dataset.result=result;
   const label=app.querySelector<HTMLElement>('.health-label b')!;label.textContent=integrityReadout(h.hp,config.heroHP);label.setAttribute('aria-label',`${Math.round(h.hp/config.heroHP*100)} percent integrity`);
   app.querySelector<HTMLElement>('.health-track i')!.style.width=`${h.hp/config.heroHP*100}%`;

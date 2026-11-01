@@ -1,0 +1,2 @@
+export const P4_ENABLED=true;
+export function installGameShell(app:HTMLElement,quiet:()=>boolean){if(!P4_ENABLED)return;app.classList.add('p4');document.documentElement.classList.add('p4-ready');app.addEventListener('click',event=>{if(event.defaultPrevented||!(event instanceof MouseEvent)||event.ctrlKey||event.metaKey||event.shiftKey||event.button!==0)return;const a=(event.target as Element)?.closest<HTMLAnchorElement>('a[href^="?scene="]');if(!a||quiet())return;event.preventDefault();app.classList.add('leaving');setTimeout(()=>location.assign(a.href),110);});}

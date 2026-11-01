@@ -1,0 +1,149 @@
+{
+  "ids": [
+    "hit_light",
+    "hit_heavy",
+    "kill",
+    "pulse_bash",
+    "spin_start",
+    "boost",
+    "stomp_charge",
+    "stomp_slam",
+    "dash_tap",
+    "dash_charge_release",
+    "overdrive_start",
+    "boss_intro",
+    "boss_phase",
+    "boss_defeat",
+    "last_enemy",
+    "ui_confirm"
+  ],
+  "layers": [
+    {
+      "id": "hit_light",
+      "layers": 3
+    },
+    {
+      "id": "hit_heavy",
+      "layers": 4
+    },
+    {
+      "id": "kill",
+      "layers": 3
+    },
+    {
+      "id": "pulse_bash",
+      "layers": 4
+    },
+    {
+      "id": "spin_start",
+      "layers": 4
+    },
+    {
+      "id": "boost",
+      "layers": 3
+    },
+    {
+      "id": "stomp_charge",
+      "layers": 2
+    },
+    {
+      "id": "stomp_slam",
+      "layers": 4
+    },
+    {
+      "id": "dash_tap",
+      "layers": 3
+    },
+    {
+      "id": "dash_charge_release",
+      "layers": 4
+    },
+    {
+      "id": "overdrive_start",
+      "layers": 4
+    },
+    {
+      "id": "boss_intro",
+      "layers": 4
+    },
+    {
+      "id": "boss_phase",
+      "layers": 4
+    },
+    {
+      "id": "boss_defeat",
+      "layers": 4
+    },
+    {
+      "id": "last_enemy",
+      "layers": 3
+    },
+    {
+      "id": "ui_confirm",
+      "layers": 1
+    }
+  ],
+  "active": {
+    "unlocked": true,
+    "voices": 20,
+    "track": "Synth ambience",
+    "pack": "default",
+    "tracks": 0,
+    "mix": {
+      "compressor": true,
+      "limiterCeiling": 0.94,
+      "peak": 0.553036093711853,
+      "started": 111,
+      "dropped": 1169,
+      "maxPerCue": 4,
+      "throttle": 0.04,
+      "screenPan": true,
+      "paused": false,
+      "lowpass": 20000
+    },
+    "muted": false
+  },
+  "paused": {
+    "unlocked": true,
+    "voices": 16,
+    "track": "Synth ambience",
+    "pack": "default",
+    "tracks": 0,
+    "mix": {
+      "compressor": true,
+      "limiterCeiling": 0.94,
+      "peak": 0.553036093711853,
+      "started": 111,
+      "dropped": 1169,
+      "maxPerCue": 4,
+      "throttle": 0.04,
+      "screenPan": true,
+      "paused": true,
+      "lowpass": 1326.0811767578125
+    },
+    "muted": false
+  },
+  "settled": {
+    "unlocked": true,
+    "voices": 0,
+    "track": "Synth ambience",
+    "pack": "default",
+    "tracks": 0,
+    "mix": {
+      "compressor": true,
+      "limiterCeiling": 0.94,
+      "peak": 0.553036093711853,
+      "started": 111,
+      "dropped": 1169,
+      "maxPerCue": 4,
+      "throttle": 0.04,
+      "screenPan": true,
+      "paused": true,
+      "lowpass": 1100
+    },
+    "muted": false
+  },
+  "offlinePeak": 0.2804999053478241,
+  "errors": [],
+  "referenceAudioCopied": false
+}

@@ -1,6 +1,10 @@
 # REDLINE_BRIEF.md — the ONE current brief (v5, 2026-10-30)
 > **Authority:** this file wins over everything else. Older docs (`SLICE_LOCKED_DECISIONS`, `DESIGN_BIBLE`, `PLAYBOOK`, `FUN_LAYER`, `STYLE`, `ART_BRIEFS`, `PHASES`, `LINKS`) are **historical**: Phase 0.0 moves them to `docs/_historical/`; read them only for ideas, never for rules. Anything marked **PENDING** needs the owner's yes before it is built. Unspecified routine implementation detail is the agent's call; unspecified *product/design* choices are OPEN → ask (AGENTS.md protocol).
 
+## FINAL_POLISH amendment — owner directed 2026-11-02
+
+`FINAL_POLISH.md` is now the active last pass: P0 first, then P1–P6, P7 QA and P9 closure within at most three sessions. Owner approval of final parity side-by-sides replaces the old IoU/reference-match judge gate. New polish rules supersede older conflicts: smooth blue-violet spherical Core including Overdrive; base Q is Pulse Bash with no Blade visuals; Blade Spin/projectiles only with Blade equipped; intentional clutter limit8; shaped industrial UI; clean deliberate materials and layered fight mix. Private audio permissions/public exclusion persist. P1.2 specifically requires owner review of the concrete turntable before moving on. Progress/session count: FINAL_POLISH_PROGRESS.md. At the P9 cap, record remaining wishes in POST_SLICE_BACKLOG and close per the owner's new rule, rather than perpetuating old art gates.
+
 ## Implementation checkpoint — 2026-11-01
 
 Approved CLOSE Steps 3–5 systems and Step 6 automated QA are implemented; detailed behavior/evidence is in CLOSE_STEP_3_REPORT through CLOSE_STEP_6_REPORT and STATE. This records execution, not a design change or final acceptance. Full reference-art match and human review remain open; no chapter1-complete tag is authorized by a systems checkpoint alone. Private audio is excluded from public builds and has original synth fallback.

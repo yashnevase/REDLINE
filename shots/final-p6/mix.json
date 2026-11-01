@@ -76,7 +76,7 @@
     },
     {
       "id": "last_enemy",
-      "layers": 3
+      "layers": 2
     },
     {
       "id": "ui_confirm",
@@ -92,9 +92,16 @@
     "mix": {
       "compressor": true,
       "limiterCeiling": 0.94,
-      "peak": 0.553036093711853,
+      "peak": 0.6198492050170898,
       "started": 111,
       "dropped": 1169,
+      "perCue": {
+        "stomp_slam": 4,
+        "overdrive_start": 4,
+        "boss_intro": 4,
+        "boss_phase": 4,
+        "boss_defeat": 4
+      },
       "maxPerCue": 4,
       "throttle": 0.04,
       "screenPan": true,
@@ -112,14 +119,20 @@
     "mix": {
       "compressor": true,
       "limiterCeiling": 0.94,
-      "peak": 0.553036093711853,
+      "peak": 0.6198492050170898,
       "started": 111,
       "dropped": 1169,
+      "perCue": {
+        "overdrive_start": 4,
+        "boss_intro": 4,
+        "boss_phase": 4,
+        "boss_defeat": 4
+      },
       "maxPerCue": 4,
       "throttle": 0.04,
       "screenPan": true,
       "paused": true,
-      "lowpass": 1326.0811767578125
+      "lowpass": 1343.09619140625
     },
     "muted": false
   },
@@ -132,9 +145,10 @@
     "mix": {
       "compressor": true,
       "limiterCeiling": 0.94,
-      "peak": 0.553036093711853,
+      "peak": 0.6198492050170898,
       "started": 111,
       "dropped": 1169,
+      "perCue": {},
       "maxPerCue": 4,
       "throttle": 0.04,
       "screenPan": true,

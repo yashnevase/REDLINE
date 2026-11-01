@@ -1,3 +1,5 @@
+import {tickCombatStatuses,refundPerfect} from './cl6-status.ts';
+import {CL6_ENABLED} from '../content/items/cl-combat.ts';
 import {stepVents} from './c1-vents.ts';
 import {activeFormation,levelCompletion,beginObjectiveWave} from './f1-objectives.ts';
 import {F1_ENABLED} from '../content/items/switches.ts';
@@ -33,20 +35,20 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
    s.upgrades.push(pick.id);if(pick.stat==='heroHP')h.hp+=t.upgradeHP;if(pick.stat==='dashCharges')h.charges+=t.upgradeCharges;
    const completion=s.phase.completion;if(F1_ENABLED){if(completion)s.phase={kind:'level-complete',...completion};else beginObjectiveWave(s,t);h.tapWindow=0;h.dashReleaseBuffer=false;h.dashReleaseSuppressed=command.choice===0;h.abilityBuffer=null;h.abilityBufferTicks=0;return s;}
    const wave=s.phase.wave+1,next=waves[wave];s.enemies=next.slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,wave,t));s.phase={kind:'fight',wave,nextSpawn:Math.min(t.enemyCap,t.openingThreats,next.length),nextSpawnIn:t.spawnMinTicks};
-   h.vx=0;h.vz=0;h.dash={kind:'idle'};h.special={kind:'idle'};h.tapWindow=0;h.dashReleaseBuffer=false;h.dashReleaseSuppressed=command.choice===0;h.buffer=0;h.abilityBuffer=null;h.abilityBufferTicks=0;
+   h.vx=0;h.vz=0;h.boost={kind:'idle'};h.dash={kind:'idle'};h.special={kind:'idle'};h.tapWindow=0;h.dashReleaseBuffer=false;h.dashReleaseSuppressed=command.choice===0;h.buffer=0;h.abilityBuffer=null;h.abilityBufferTicks=0;
   }
   return s;
  }
  if(command.overdrive)h.overdriveBuffer=true;
  if(command.ability){h.abilityBuffer=command.ability;h.abilityBufferTicks=t.inputBufferTicks;}
  if(s.hitstop>0){bufferDash(h,command,t);s.hitstop--;return s;}
- tickQuality(s.quality);h.hp=Math.min(h.hp,t.heroHP);h.charges=Math.min(h.charges,t.dashCharges);
+ tickQuality(s.quality);tickCombatStatuses(s);h.hp=Math.min(h.hp,t.heroHP);h.charges=Math.min(h.charges,t.dashCharges);
  const ventFactor=stepVents(s,t),heroTuning={...t,moveSpeed:t.moveSpeed*ventFactor,pulseCooldownTicks:s.loadout==='blade'?t.bladeCooldownTicks:t.pulseCooldownTicks};
- const {ability,damageMultiplier,actualSpeed}=advanceHero(h,command,heroTuning,event);
+ const {ability,damageMultiplier,actualSpeed}=advanceHero(h,command,heroTuning,event,true);
  const boss=s.phase.kind==='boss'?s.phase.boss:null;
  const stop=(amount:number,heavy=false)=>{s.hitstop=Math.max(s.hitstop,heavy||amount>=14?t.heavyHitstopTicks:amount>=12?t.mediumHitstopTicks:t.hitstopTicks);};
  const bossDamage=(amount:number,heavy=false,source:'bonk'|'dash'|'ability'|'projectile'='bonk')=>{if(!boss||boss.hp<=0)return;const state=boss.behavior,warning=state.kind.endsWith('-warning'),quality=classifyHit({x:boss.x,z:boss.z,faceX:boss.faceX,faceZ:boss.faceZ,kind:weakSpotFactor(boss,t)>1?'thrower':'grinder',behavior:warning?{kind:'windup',remaining:state.remaining,dx:0,dz:0}:{kind:'chase'}},h,t,s.quality,source);const weak=weakSpotFactor(boss,t);amount=Math.round(amount*quality.factor*weak*10)/10;if(weak>1)qualityEvent(s,'WEAK SPOT',boss.x,boss.z);boss.hp=Math.max(0,boss.hp-amount);event('bonk',boss.x,boss.z,amount,t.bossRadius);s.events[s.events.length-1].scoreFactor=weak*(quality.rear?t.rearDamageFactor:1)*(quality.counter?t.punishDamageFactor:1)*(quality.perfect?t.perfectDamageFactor:1);if(quality.rear)qualityEvent(s,'REAR HIT',boss.x,boss.z);if(quality.counter){qualityEvent(s,'COUNTER',boss.x,boss.z);boss.behavior={kind:'recover',remaining:t.counterStaggerTicks};h.heat=Math.min(t.heatThreshold,h.heat+t.counterHeat);}stop(amount,heavy);};
- let killedBy:DeathCause='unknown';const hurt=(amount:number,attack='contact',source:DeathCause='unknown')=>{if(h.hp<=0)return;if(h.dash.kind==='active'&&h.dash.protected){if(amount>0&&grantPerfect(s.quality,h,attack,t))qualityEvent(s,'PERFECT',h.x,h.z);return;}h.hp=Math.max(0,h.hp-amount);stop(amount);event('hurt',h.x,h.z,amount);if(h.hp===0)killedBy=recordDeath(source);};
+ let killedBy:DeathCause='unknown';const hurt=(amount:number,attack='contact',source:DeathCause='unknown')=>{if(h.hp<=0)return;if(h.dash.kind==='active'&&h.dash.protected&&(!CL6_ENABLED||h.special.kind!=='spin')){if(amount>0&&grantPerfect(s.quality,h,attack,t)){qualityEvent(s,'PERFECT',h.x,h.z);refundPerfect(h,t);}return;}h.hp=Math.max(0,h.hp-amount);stop(amount);event('hurt',h.x,h.z,amount);if(h.hp===0)killedBy=recordDeath(source);};
  const damage=(e:Enemy,amount:number,stun=false,heavy=false,source:'bonk'|'dash'|'ability'|'projectile'='bonk')=>{
   if(e.hp<=0)return;const stats=enemyStats(e.kind,t),quality=classifyHit(e,h,t,s.quality,source);amount*=quality.factor;
   amount=Math.round(amount*10)/10;e.hp=Math.max(0,e.hp-amount);event('bonk',e.x,e.z,amount,stats.radius);s.events[s.events.length-1].scoreFactor=(quality.rear?t.rearDamageFactor:1)*(quality.punish||quality.counter?t.punishDamageFactor:1)*(quality.perfect?t.perfectDamageFactor:1);stop(amount,heavy);
@@ -117,8 +119,8 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
   else if(target){const factor=Math.min(1,actualSpeed/(t.dashDistance*60/t.dashTicks));damage(target,t.bonkDamage*(1+t.bonkSpeedBonus*factor)*damageMultiplier);h.bonkCooldown=t.bonkCooldownTicks;const away=direction(target.x-h.x,target.z-h.z),p=collide(target.x+away.x*t.knockback,target.z+away.z*t.knockback,enemyStats(target.kind,t).radius,t);target.x=p.x;target.z=p.z;}
  }
  endDash(h);scoreEvents(s,t);
- if(h.hp<=0){h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;s.phase={kind:'lost',cause:killedBy};return s;}
- if(boss&&boss.hp===0){h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;event('defeat',boss.x,boss.z);s.events[s.events.length-1].scoreValue=t.scoreBoss*([...s.events].reverse().find(e=>e.kind==='bonk'&&(e.x-boss.x)**2+(e.z-boss.z)**2<.16)?.scoreFactor??1);const before=s.events;s.events=[s.events[s.events.length-1]];scoreEvents(s,t);s.events=before;s.phase={kind:'complete',reward:'blade'};s.enemies=[];s.projectiles=[];s.bladeProjectiles=[];return s;}
+ if(h.hp<=0){h.boost={kind:'idle'};h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;s.phase={kind:'lost',cause:killedBy};return s;}
+ if(boss&&boss.hp===0){h.boost={kind:'idle'};h.dash={kind:'idle'};h.special={kind:'idle'};h.slam={kind:'idle'};h.vx=h.vz=0;event('defeat',boss.x,boss.z);s.events[s.events.length-1].scoreValue=t.scoreBoss*([...s.events].reverse().find(e=>e.kind==='bonk'&&(e.x-boss.x)**2+(e.z-boss.z)**2<.16)?.scoreFactor??1);const before=s.events;s.events=[s.events[s.events.length-1]];scoreEvents(s,t);s.events=before;s.phase={kind:'complete',reward:'blade'};s.enemies=[];s.projectiles=[];s.bladeProjectiles=[];return s;}
  if(s.phase.kind!=='fight')return s;
  // Spawn queue never exceeds the approved live cap. Dead entries are retired when replenishing.
  const alive=s.enemies.filter(e=>e.hp>0);const formation=activeFormation(s);s.phase.nextSpawn=Math.min(s.phase.nextSpawn,formation.length);

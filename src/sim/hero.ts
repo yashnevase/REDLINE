@@ -1,9 +1,11 @@
+import {CL6_ENABLED} from '../content/items/cl-combat.ts';
 import type {Hero,Command,FightEvent} from './schema.ts';
 import {combatDefaults,type CombatTuning} from '../content/combat.ts';
 import {collide,direction} from './geometry.ts';
 export type Emit=(kind:FightEvent['kind'],x:number,z:number,amount?:number,radius?:number)=>void;
 // Shared movement/cooldown owner for both the regression trial and the encounter.
-export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit){
+export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit,driftBoost=false){
+ if(h.boost.kind==='active'&&--h.boost.remaining<=0)h.boost={kind:'idle'};
  for(const key of ['pulseCooldown','boostCooldown','stompCooldown'] as const)if(h[key]>0)h[key]--;
  if(h.dashCooldown>0)h.dashCooldown--;if(h.tapWindow>0)h.tapWindow--;if(h.special.kind==='spin'&&h.special.hopRemaining>0)h.special.hopRemaining--;if(h.special.kind!=='idle'&&--h.special.remaining<=0)h.special=h.special.kind==='spin'&&h.special.hopRemaining>0?{kind:'hop',remaining:h.special.hopRemaining}:{kind:'idle'};
  if(h.overdrive>0)h.overdrive--;if(h.iframeLock>0)h.iframeLock--;
@@ -33,6 +35,7 @@ export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit){
  }
  if(h.buffer>0)h.buffer--;
  if(h.dash.kind==='active'){h.vx=h.dash.dx*h.dash.distance*60/h.dash.duration;h.vz=h.dash.dz*h.dash.distance*60/h.dash.duration;}
+ else if(CL6_ENABLED&&h.boost.kind==='active'){const b=h.boost;if(length>.05){const d=direction(b.dx*.9+dir.x*.1,b.dz*.9+dir.z*.1);b.dx=d.x;b.dz=d.z;}h.faceX=b.dx;h.faceZ=b.dz;h.vx=b.dx*t.boostDistance*60/t.boostDriftTicks;h.vz=b.dz*t.boostDistance*60/t.boostDriftTicks;h.momentum={kind:'idle'};}
  else if(length<=.05){h.vx=h.vz=0;h.momentum={kind:'idle'};}
  else{
   const previous=h.momentum,straight=previous.kind==='rolling'&&previous.dx*dir.x+previous.dz*dir.z>=t.straightDot;
@@ -55,7 +58,7 @@ export function advanceHero(h:Hero,command:Command,t:CombatTuning,event:Emit){
   const candidate=h.abilityBuffer,key=candidate==='pulse'?'pulseCooldown':candidate==='boost'?'boostCooldown':'stompCooldown';
   if(h[key]===0){
    ability=candidate;h[key]=ability==='pulse'?t.pulseCooldownTicks:ability==='boost'?t.boostCooldownTicks:t.stompCooldownTicks;
-   if(ability==='boost'){
+   if(ability==='boost'&&!(CL6_ENABLED&&driftBoost)){
     const d=direction(h.faceX,h.faceZ),steps=Math.ceil(t.boostDistance/(t.heroRadius*.5));
     for(let i=0;i<steps;i++){const pos=collide(h.x+d.x*t.boostDistance/steps,h.z+d.z*t.boostDistance/steps,t.heroRadius,t);h.x=pos.x;h.z=pos.z;}
    }

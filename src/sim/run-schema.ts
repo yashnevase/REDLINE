@@ -1,3 +1,4 @@
+import {combatStatusSchema} from './cl6-status.ts';
 import {ventStateSchema} from './c1-vents.ts';
 import {objectiveSchema,levelCompletionSchema} from './f1-objectives.ts';
 import {F1_ENABLED} from '../content/items/switches.ts';
@@ -13,9 +14,9 @@ import {enemyKinds,waves,enemyStats} from '../content/encounter.ts';
 import type {CombatTuning} from '../content/combat.ts';
 import {collide} from './geometry.ts';
 const n=z.number().finite(),ticks=z.number().int().nonnegative();
-export const enemySchema=z.object({id:ticks,attackSerial:ticks.default(0),kind:z.enum(enemyKinds),x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),faceX:n,faceZ:n,behavior});
+export const enemySchema=z.object({status:combatStatusSchema,id:ticks,attackSerial:ticks.default(0),kind:z.enum(enemyKinds),x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),faceX:n,faceZ:n,behavior});
 const target=z.object({x:n,z:n});
-export const bossSchema=z.object({exposed:ticks.default(0),x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),sequence:ticks,faceX:n,faceZ:n,behavior:z.discriminatedUnion('kind',[
+export const bossSchema=z.object({status:combatStatusSchema,exposed:ticks.default(0),x:n,z:n,prevX:n,prevZ:n,hp:n.nonnegative(),sequence:ticks,faceX:n,faceZ:n,behavior:z.discriminatedUnion('kind',[
  z.object({kind:z.literal('recover'),remaining:ticks}),
  z.object({kind:z.literal('chomp-warning'),remaining:ticks,dx:n,dz:n}),
  z.object({kind:z.literal('charge'),remaining:ticks,dx:n,dz:n,hasHit:z.boolean()}),
@@ -24,7 +25,7 @@ export const bossSchema=z.object({exposed:ticks.default(0),x:n,z:n,prevX:n,prevZ
  z.object({kind:z.literal('summon-warning'),remaining:ticks,targets:z.array(target).max(3)})
 ])});
 export type Boss=z.infer<typeof bossSchema>;
-export function initialBoss(t:CombatTuning):Boss{return{exposed:0,x:6,z:0,prevX:6,prevZ:0,hp:t.bossHP,sequence:0,faceX:-1,faceZ:0,behavior:{kind:'recover',remaining:t.bossIntroTicks}};}
+export function initialBoss(t:CombatTuning):Boss{return{status:combatStatusSchema.parse({}),exposed:0,x:6,z:0,prevX:6,prevZ:0,hp:t.bossHP,sequence:0,faceX:-1,faceZ:0,behavior:{kind:'recover',remaining:t.bossIntroTicks}};}
 const phase=z.discriminatedUnion('kind',[
  z.object({kind:z.literal('fight'),wave:ticks,nextSpawn:ticks,nextSpawnIn:ticks.default(0)}),
  z.object({kind:z.literal('upgrade'),wave:ticks,choices:z.array(z.string()).length(3),completion:levelCompletionSchema.optional()}),
@@ -43,7 +44,7 @@ export function spawnEnemy(kind:Enemy['kind'],index:number,wave:number,t:CombatT
  const angle=index*2.399963229728653+wave*.7,radius=t.spawnRadius+(index%3)*t.spawnSeparation*.5;
  const x=Ops.cos(angle)*radius,z=Ops.sin(angle)*radius,side=x>=0?1:-1;
  const stats=enemyStats(kind,t),p=collide(x,z,stats.radius,t);
- return{id:wave*100+index,attackSerial:0,kind,x:p.x,z:p.z,prevX:p.x,prevZ:p.z,hp:stats.hp,faceX:-side,faceZ:0,behavior:{kind:'spawn',remaining:t.spawnDropTicks}};
+ return{status:combatStatusSchema.parse({}),id:wave*100+index,attackSerial:0,kind,x:p.x,z:p.z,prevX:p.x,prevZ:p.z,hp:stats.hp,faceX:-side,faceZ:0,behavior:{kind:'spawn',remaining:t.spawnDropTicks}};
 }
 export function initialRun(t:CombatTuning,loadout:RunState['loadout']='core'):RunState {
  return{vents:ventStateSchema.parse({}),objective:objectiveSchema.parse({}),score:scoreSchema.parse({}),bladeProjectiles:[],nextBladeProjectile:0,bladeFireIn:0,quality:qualitySchema.parse({}),tick:0,hitstop:0,loadout,hero:initialState(t).hero,enemies:(F1_ENABLED?objectiveFormation(0,0):waves[0]).slice(0,Math.min(t.enemyCap,t.openingThreats)).map((kind,i)=>spawnEnemy(kind,i,0,t)),projectiles:[],nextProjectile:0,phase:{kind:'fight',wave:0,nextSpawn:Math.min(t.enemyCap,t.openingThreats,waves[0].length),nextSpawnIn:t.spawnMinTicks},upgrades:[],events:[]};

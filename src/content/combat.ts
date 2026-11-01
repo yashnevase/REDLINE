@@ -1,3 +1,5 @@
+import {combatPolishDefaults} from './items/cl-combat.ts';
+import {additionsDefaults} from './items/s4-additions.ts';
 import {worldDefaults} from './items/c-world.ts';
 import {deckHalfWidth,EXTRA_PRESSURE_ENABLED} from './items/cl-clarity.ts';
 import {paceDefaults,D_PACE_ENABLED} from './items/d-run-pace.ts';
@@ -10,7 +12,7 @@ import {hitQualityDefaults} from './items/b1-quality.ts';
 import {z} from 'zod';
 // Phase 1 START values: current brief and its explicitly referenced §24.3 defaults.
 export const combatDefaults = Object.freeze({
- ...worldDefaults,
+ ...worldDefaults,...combatPolishDefaults,...additionsDefaults,
  ...paceDefaults,...bossGuideDefaults,...scoreDefaults,...bladeFormDefaults,...abilityDefaults,...whirlerDefaults,...hitQualityDefaults, bossHP:600, bossRadius:1.6, bossMoveSpeed:2.5, bossIntroTicks:90, bossRecoveryTicks:72, bossChompWindupTicks:48, bossChompSpeed:10, bossChompTicks:36, bossChompDamage:25, bossSweepWindupTicks:54, bossSweepRadius:4.5, bossSweepDamage:20, bossGapDot:0.82, bossVolleyWindupTicks:60, bossVolleyRadius:1.2, bossVolleyDamage:15, bossSummonWindupTicks:60, bossEnrageSpeed:1.2, bossEnrageDamage:1.25, bossEnrageGapFactor:0.8, bladeDamage:24, bladeCooldownTicks:120,
  upgradeBonkFactor:1.2, upgradeIntervalFactor:0.85, upgradeMoveFactor:1.1, upgradeDamageFactor:1.25, upgradeRadiusFactor:1.2, upgradeCooldownFactor:0.8, upgradeHP:20, upgradeCharges:1,
  waveRepairFraction:.25, enemyCap:12, attackerCap:3, openingThreats:EXTRA_PRESSURE_ENABLED?8:D_PACE_ENABLED?6:5, rallyRemaining:2, rallySpeedBonus:.4, sparseSpawnMaxTicks:72, spawnMinTicks:48, spawnMaxTicks:90, mediumHitstopTicks:3, heavyHitstopTicks:5, killHitstopTicks:4, throwerHP:24, throwerSpeed:4.6, throwerRadius:0.62, throwerNear:6, throwerFar:8, throwerWindupTicks:30, rivetSpeed:8, rivetDamage:12, rivetRadius:0.18, rivetLifeTicks:150, throwerRecoveryTicks:96, shieldsawHP:40, shieldsawSpeed:5.5, shieldsawRadius:0.85, shieldFrontDot:0.5, shieldDamageFactor:0.1, shieldWindupTicks:36, shieldChargeSpeed:10, shieldChargeTicks:60, shieldRecoveryTicks:42, grinderHP:80, grinderSpeed:3.2, grinderRadius:1, grinderWindupTicks:48, grinderSweepRadius:3, grinderDamage:30, grinderRecoveryTicks:48, heatPerThrower:9, heatPerShieldsaw:12, heatPerGrinder:18, spawnDropTicks:18, spawnRadius:14, spawnSeparation:2.2, leashBand:1.5, leashStrength:5,
@@ -25,6 +27,7 @@ export const combatDefaults = Object.freeze({
  knockback:.5, hitstopTicks:2, arenaHalfWidth:deckHalfWidth, laneHalfWidth:deckHalfWidth
 });
 export const tuningSchema=z.object({
+ boostDriftTicks:z.number().int().positive().default(combatPolishDefaults.boostDriftTicks),boostRefundTicks:z.number().int().nonnegative().default(combatPolishDefaults.boostRefundTicks),boostKnockback:z.number().nonnegative().default(combatPolishDefaults.boostKnockback),shieldBreakTicks:z.number().int().positive().default(combatPolishDefaults.shieldBreakTicks),shatterFactor:z.number().min(1).default(combatPolishDefaults.shatterFactor),markedFactor:z.number().min(1).default(combatPolishDefaults.markedFactor),markedTicks:z.number().int().positive().default(combatPolishDefaults.markedTicks),perfectRefundTicks:z.number().int().nonnegative().default(combatPolishDefaults.perfectRefundTicks),
  ventSpeedFactor:z.number().min(1).max(2).default(worldDefaults.ventSpeedFactor),ventBoostTicks:z.number().int().positive().default(worldDefaults.ventBoostTicks),ventTriggerRadius:z.number().positive().default(worldDefaults.ventTriggerRadius),ventSteamPeriod:z.number().int().positive().default(worldDefaults.ventSteamPeriod),ventSteamTicks:z.number().int().positive().default(worldDefaults.ventSteamTicks),propDebrisCap:z.number().int().min(0).max(48).default(worldDefaults.propDebrisCap),floorSettleSeconds:z.number().positive().default(worldDefaults.floorSettleSeconds),floorDepression:z.number().min(0).max(.06).default(worldDefaults.floorDepression),
  level1Goal:z.number().int().positive().default(paceDefaults.level1Goal),level2Goal:z.number().int().positive().default(paceDefaults.level2Goal),level3Goal:z.number().int().positive().default(paceDefaults.level3Goal),level1MinWaves:z.number().int().min(1).max(20).default(paceDefaults.level1MinWaves),level2MinWaves:z.number().int().min(1).max(20).default(paceDefaults.level2MinWaves),level3MinWaves:z.number().int().min(1).max(20).default(paceDefaults.level3MinWaves),
  bossExposedTicks:z.number().int().positive().default(combatDefaults.bossExposedTicks),

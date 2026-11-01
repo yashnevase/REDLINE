@@ -1,12 +1,13 @@
+import {scrapyard} from './chapters/scrapyard.ts';
 import {CL1_ENABLED,CL3_ENABLED,CL4_ENABLED,EXPANDED_DECK_ENABLED} from './items/cl-clarity.ts';
 // Original REDLINE content. Seeded layout only; no gameplay engine selected yet.
 export const scenes = ['lobby', 'arena', 'core-studio', 'enemy-lineup', 'combat-readability', 'perf-worst', 'boss', 'arena-showcase', 'sawlet-studio', 'thrower-studio', 'shieldsaw-studio', 'grinder-studio', 'boss-studio', 'workshop'];
 export const seed = 4107;
 export const defaults = Object.freeze({
-  viewHeight: 11.2, phoneViewHeight:11, portraitViewWidth:11, elevation: 30, azimuth: 45, exposure: 1.05,
+  viewHeight: 11.2, phoneViewHeight:11, portraitViewWidth:11, elevation: 30, overviewElevation:30, azimuth: 45, exposure: 1.05,
   keyLight: CL1_ENABLED?3.1:2.8, fillLight: 0.6, ambientLight: 1.35, shadowOpacity: 0.2,
   spawnDropHeight:3, coreRadius: 0.62, coreBob: 0.035, bobSpeed: 1.8,
-  floorVariance: 0.135, floorFalloff: 0.19, lavaSpill: 0.27, violetStrength: 2.5, orangeStrength: 2.8,
+  floorVariance: scrapyard.tiles.lightnessVariance, floorFalloff: 0.19, lavaSpill: 0.27, violetStrength: 2.5, orangeStrength: 2.8,
   renderScale: 1.5, particles: 22, stageHeight: 3.3, stageElevation: 18,
   cameraLookAhead:1.2, cameraDamping:.16, cameraInset:EXPANDED_DECK_ENABLED?7:11, cameraCloseFollow:8, cameraPortraitFollow:1, dashZoomOut:.04, lightZoom:.02, heavyZoom:.04, zoomEaseSeconds:.12,
   lightShake:.04, mediumShake:.09, heavyShake:.16, lightSparks:10, mediumSparks:20, heavySparks:40, numberPixels:38, phoneNumberPixels:34, heavyNumberScale:1.3, numberPopPeak:1.25, sparkSize:1.5, impactDiscOpacity:.45, heavyDiscOpacity:.6, impactRingOpacity:.9, scorchOpacity:.6, numberFloat:.8,

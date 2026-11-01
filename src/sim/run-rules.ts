@@ -1,3 +1,4 @@
+import {stepVents} from './c1-vents.ts';
 import {activeFormation,levelCompletion,beginObjectiveWave} from './f1-objectives.ts';
 import {F1_ENABLED} from '../content/items/switches.ts';
 import {recordDeath} from './f5-results.ts';
@@ -40,7 +41,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  if(command.ability){h.abilityBuffer=command.ability;h.abilityBufferTicks=t.inputBufferTicks;}
  if(s.hitstop>0){bufferDash(h,command,t);s.hitstop--;return s;}
  tickQuality(s.quality);h.hp=Math.min(h.hp,t.heroHP);h.charges=Math.min(h.charges,t.dashCharges);
- const heroTuning=s.loadout==='blade'?{...t,pulseCooldownTicks:t.bladeCooldownTicks}:t;
+ const ventFactor=stepVents(s,t),heroTuning={...t,moveSpeed:t.moveSpeed*ventFactor,pulseCooldownTicks:s.loadout==='blade'?t.bladeCooldownTicks:t.pulseCooldownTicks};
  const {ability,damageMultiplier,actualSpeed}=advanceHero(h,command,heroTuning,event);
  const boss=s.phase.kind==='boss'?s.phase.boss:null;
  const stop=(amount:number,heavy=false)=>{s.hitstop=Math.max(s.hitstop,heavy||amount>=14?t.heavyHitstopTicks:amount>=12?t.mediumHitstopTicks:t.hitstopTicks);};

@@ -1,0 +1,2 @@
+export const C1_GAMEPLAY_ENABLED=true,C2_DAMAGE_ENABLED=true,C3_KIT_ENABLED=true,C4_POOLS_ENABLED=true,C4_SHADOWS_ENABLED=true,C5_BARRICADES_ENABLED=true,C6_DENSITY_ENABLED=true,C7_PROPS_ENABLED=true,C8_FLOOR_ENABLED=true;
+export const worldDefaults={ventSpeedFactor:1.5,ventBoostTicks:60,ventTriggerRadius:1.1,ventSteamPeriod:240,ventSteamTicks:48,propDebrisCap:48,floorSettleSeconds:.3,floorDepression:.05} as const;

@@ -14,3 +14,5 @@ Not done: owner final parity/audio acceptance; universal hardware certification.
 Final P7 cleanup: compact Heat ticks fit their slot, settings/pause separate, lobby plates/hints fit, and loadout controls use the steel shape. Native mission/options dialogs now offer Sound in their headers with the same mute/master/music/effects/UI panel; root-only observation avoids per-frame HUD churn. M mute works during dialogs. Four-size DOM and real keyboard/slider audits pass.
 
 Shared final evidence: FINAL_P7_REPORT.md;137 tests/build,54-case graphics matrix, four-size inputs/saves/production,30+second normal-stat desktop/compact clips, all3 room captures, local final parity pairs and real ten-minute soak. Per-step measurements above remain their historical checkpoints. Owner final pairs/listening remain for review.
+
+Short-height mission cards use two rows and tighter briefing spacing so the primary launch is visible immediately at640×360 and844×390, while preserving44px targets; final modal audit checks this without auto-scrolling.

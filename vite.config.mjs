@@ -1,0 +1,3 @@
+import {defineConfig} from 'vite';import {cp,mkdir,readdir,writeFile} from 'node:fs/promises';
+// Vite's normal publicDir copy would ship ignored music. Public builds copy an allowlisted tree.
+export default defineConfig(({command})=>({publicDir:command==='build'?false:'public',plugins:command==='build'?[{name:'public-assets-without-private-audio',async closeBundle(){await mkdir('dist',{recursive:true});for(const entry of await readdir('public',{withFileTypes:true})){if(entry.name==='audio')continue;await cp(`public/${entry.name}`,`dist/${entry.name}`,{recursive:true});}await mkdir('dist/audio',{recursive:true});await writeFile('dist/audio/music.manifest.json',JSON.stringify({tracks:[]}));}}]:[]}));

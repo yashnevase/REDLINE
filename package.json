@@ -6,6 +6,7 @@
   "packageManager": "pnpm@11.25.0",
   "scripts": {
     "dev": "vite",
+    "audio:scan": "node tools/audio-scan.mjs",
     "build": "tsc --noEmit && vite build && node tools/validate-build.mjs",
     "check": "tsc --noEmit && oxlint src tools test && ritmo-devtools lint tools/lint.ts && ritmo-devtools lint tools/lint-run.ts && node --test test/*.test.mjs && node tools/validate.mjs",
     "shots": "node tools/shots.mjs",

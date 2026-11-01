@@ -22,6 +22,6 @@ test('camera follow stays inside the slab, converges without overshoot, and rese
 });
 test('armour reduces ability damage while preserving heavy hit-stop; debug tuning cannot shorten warnings',async()=>{
  const {tuningSchema}=await import('../src/content/combat.ts');let s=initialRun(t);s.hero.x=0;s.hero.z=0;s.enemies=[{id:0,kind:'shieldsaw',x:-2,z:0,prevX:-2,prevZ:0,hp:40,faceX:1,faceZ:0,behavior:{kind:'chase'}}];s.phase.nextSpawn=8;
- s=stepRun(s,{...idleCommand,ability:'pulse'},t);assert.equal(s.enemies[0].hp,39.2);assert.equal(s.hitstop,t.heavyHitstopTicks);
+ s=stepRun(s,{...idleCommand,ability:'pulse'},t);assert.equal(s.enemies[0].hp,38.8);assert.equal(s.hitstop,t.heavyHitstopTicks);
  for(const [key,value] of [['windupTicks',23],['throwerWindupTicks',23],['shieldWindupTicks',23],['grinderWindupTicks',47]])assert.equal(tuningSchema.safeParse({...t,[key]:value}).success,false);
 });

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "desktop",
+    "form": "blade",
+    "errors": [],
+    "bladeInstances": 9,
+    "projectiles": 5
+  },
+  {
+    "name": "desktop",
+    "form": "core",
+    "errors": [],
+    "bladeInstances": 0,
+    "projectiles": 0
+  },
+  {
+    "name": "compact",
+    "form": "blade",
+    "errors": [],
+    "bladeInstances": 9,
+    "projectiles": 5
+  },
+  {
+    "name": "compact",
+    "form": "core",
+    "errors": [],
+    "bladeInstances": 0,
+    "projectiles": 0
+  }
+]

@@ -26,7 +26,7 @@ test('Thrower aim locks for the full warning before emitting a bounded projectil
 });
 test('Shieldsaw armour reduces only frontal damage and Stomp interrupts the charge',()=>{
  let front=scenario('shieldsaw',-2,0),back=scenario('shieldsaw',2,0);front=stepRun(front,{...idleCommand,ability:'pulse'},t);back=stepRun(back,{...idleCommand,ability:'pulse'},t);
- assert.equal(front.enemies[0].hp,39.2);assert.equal(back.enemies[0].hp,28);
+ assert.equal(front.enemies[0].hp,38.8);assert.equal(back.enemies[0].hp,22);
  let s=scenario('shieldsaw',1,0);s.enemies[0].behavior={kind:'windup',remaining:60,dx:-1,dz:0};s=stepRun(s,{...idleCommand,ability:'stomp'},t);assert.equal(s.hero.slam.kind,'charging');assert.equal(s.enemies[0].behavior.kind,'windup');for(let i=0;i<t.stompChargeTicks;i++)s=stepRun(s,idleCommand,t);assert.equal(s.enemies[0].behavior.kind,'recover');assert.equal(s.hero.hp,100);
 });
 test('Grinder cannot hit before its complete warning and dash protects the sweep',()=>{

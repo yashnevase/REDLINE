@@ -1,3 +1,4 @@
+import {qName} from '../content/items/p2-equipment.ts';
 import {coreTurntablePose} from '../presentation/p1-core-polish.ts';
 import {makeMissionSelect} from '../ui/mission-select.ts';
 import {makeWorkshop} from '../ui/workshop.ts';
@@ -109,7 +110,7 @@ function refreshLoadout(){
  if(!studio)return;const core=app.querySelector<HTMLButtonElement>('[data-equip=core]')!,blade=app.querySelector<HTMLButtonElement>('[data-equip=blade]')!;
  core.setAttribute('aria-pressed',String(profile.equipped==='core'));blade.disabled=!profile.bladeUnlocked;blade.textContent=profile.bladeUnlocked?'Blade':'Blade · Locked';blade.setAttribute('aria-pressed',String(profile.equipped==='blade'));
  app.querySelector('.save-status')!.textContent=saveAvailable?(profile.bladeUnlocked?'Blade unlocked · saved on this device':'Defeat Scrap-Rex to unlock Blade'):'Local saving unavailable · progress kept for this visit';
- view.setLoadout(profile.equipped);const q=app.querySelector('.loadout-q');if(q){q.textContent='Blade Spin';app.querySelector('.loadout-q-detail')!.textContent='3-hit whirlwind · 2 s';}app.querySelector('.scene-title small')!.textContent=profile.equipped==='blade'?'BLADE EQUIPPED':'BASE FORM';app.querySelector('.pilot>div>span')!.textContent=profile.equipped==='blade'?'VIOLET CHROME · BLADE':'VIOLET CHROME · BASE FORM';app.querySelector('.chapter-meta b')!.textContent=profile.equipped.toUpperCase();
+ view.setLoadout(profile.equipped);const q=app.querySelector('.loadout-q');if(q){q.textContent=qName(profile.equipped);app.querySelector('.loadout-q-detail')!.textContent=profile.equipped==='blade'?'3-hit whirlwind · 2 s':'Radial shock burst · 2 s';}app.querySelector('.scene-title small')!.textContent=profile.equipped==='blade'?'BLADE EQUIPPED':'BASE FORM';app.querySelector('.pilot>div>span')!.textContent=profile.equipped==='blade'?'VIOLET CHROME · BLADE':'VIOLET CHROME · BASE FORM';app.querySelector('.chapter-meta b')!.textContent=profile.equipped.toUpperCase();
 }
 if(studio){for(const form of ['core','blade'] as const)app.querySelector(`[data-equip=${form}]`)!.addEventListener('click',()=>{profile=equipProfile(profile,form);saveAvailable=saveProfile(profile);refreshLoadout();});refreshLoadout();if(sceneName==='workshop')makeWorkshop(app,()=>profile,form=>{profile=equipProfile(profile,form);saveAvailable=saveProfile(profile);refreshLoadout();view.snapLoadout();},patch=>{const parsed=profileSchema.safeParse({...profile,cosmetics:{...profile.cosmetics,...patch}});if(parsed.success){profile=parsed.data;saveProfile(profile);view.setCosmetics(profile.cosmetics);}});}
 view.setCosmetics(profile.cosmetics);
@@ -147,7 +148,7 @@ if(playing){
   updateClarityHUD(app,snapshot);rosterHints?.setPaused(paused);const isBoss=run?.phase.kind==='boss';bossGuide.update(isBoss);bossBar.hidden=!isBoss;if(isBoss&&run?.phase.kind==='boss'){const hp=run.phase.boss.hp;bossBar.querySelector('span')!.textContent=`SCRAP-REX · PHASE ${bossStage(hp,config)}${run.phase.boss.exposed>0?' · EXPOSED':''}`;bossBar.querySelector('b')!.textContent=`${Math.ceil(hp)} / ${config.bossHP}`;bossBar.querySelector<HTMLElement>('i')!.style.width=`${hp/config.bossHP*100}%`;}
   app.querySelector('.roster span')!.textContent=run?.loadout==='blade'?'BLADE EQUIPPED':'BASE FORM';
   const qButton=abilities.querySelector<HTMLElement>('[data-ability=pulse]')!;const form=run?.loadout??'core';if(qButton.dataset.form!==form){qButton.querySelector('svg')!.outerHTML=icon(form==='blade'?'blade':'pulse');qButton.dataset.form=form;}
-  abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label','Blade Spin');
+  abilities.querySelector('[data-ability=pulse]')!.setAttribute('aria-label',qName(run?.loadout??'core'));
   const result=h.hp<=0?'lost':run?(run.phase.kind==='complete'?'won':run.phase.kind==='upgrade'?'upgrade':run.phase.kind==='level-complete'?'level-complete':'fighting'):e?.behavior.kind==='defeated'?'won':'fighting';app.dataset.result=result;
   const label=app.querySelector<HTMLElement>('.health-label b')!;label.textContent=integrityReadout(h.hp,config.heroHP);label.setAttribute('aria-label',`${Math.round(h.hp/config.heroHP*100)} percent integrity`);
   app.querySelector<HTMLElement>('.health-track i')!.style.width=`${h.hp/config.heroHP*100}%`;

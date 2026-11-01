@@ -1,9 +1,11 @@
-import {z} from 'zod';
-export const profileSchema=z.object({version:z.literal(1),bladeUnlocked:z.boolean(),equipped:z.enum(['core','blade']),clears:z.number().int().nonnegative()}).refine(p=>p.equipped!=='blade'||p.bladeUnlocked,'Blade must be unlocked before equipping');
+import {z} from 'zod';import {preferencesSchema}from'./preferences.ts';import {cosmetics}from'./parts.ts';
+const count=z.number().int().nonnegative(),mission=z.object({score:count.default(0),stars:count.max(3).default(0)});
+const legacy=z.object({version:z.literal(1),bladeUnlocked:z.boolean(),equipped:z.enum(['core','blade']),clears:count}).refine(p=>p.equipped!=='blade'||p.bladeUnlocked);
+export const profileSchema=z.object({version:z.literal(2),bladeUnlocked:z.boolean(),equipped:z.enum(['core','blade']),clears:count,missions:z.array(mission).length(4).default(()=>Array.from({length:4},()=>({score:0,stars:0}))),cosmetics:z.object({paint:z.enum(['violet','silver','oxide']).default('violet'),trail:z.enum(['violet-trail','amber-trail']).default('violet-trail'),eyes:z.enum(['round','focused']).default('round'),trophy:z.enum(['none','rex']).default('none')}).default({paint:'violet',trail:'violet-trail',eyes:'round',trophy:'none'}),lastMission:count.max(3).default(0),daily:z.record(z.string(),count).default({}),tutorial:z.array(z.string().max(64)).max(64).default([]),settings:z.object({preferences:preferencesSchema.optional(),audio:z.record(z.string(),z.union([z.string(),z.number(),z.boolean()])).optional()}).default({})}).refine(p=>p.equipped!=='blade'||p.bladeUnlocked,'Blade must be unlocked').refine(p=>p.cosmetics.trophy!=='rex'||p.bladeUnlocked,'Rex trophy requires victory').refine(p=>Object.values(p.cosmetics).every(id=>(cosmetics.find(c=>c.id===id)?.stars??Infinity)<=p.missions.reduce((n,m)=>n+m.stars,0)),'Cosmetic requires stars');
 export type Profile=z.infer<typeof profileSchema>;
-export const freshProfile=():Profile=>({version:1,bladeUnlocked:false,equipped:'core',clears:0});
-export function decodeProfile(text:string|null):Profile {
- if(!text)return freshProfile();try{const parsed=profileSchema.safeParse(JSON.parse(text));return parsed.success?parsed.data:freshProfile();}catch{return freshProfile();}
-}
+export const freshProfile=():Profile=>profileSchema.parse({version:2,bladeUnlocked:false,equipped:'core',clears:0});
+export function parseProfile(value:unknown){const old=legacy.safeParse(value);return profileSchema.safeParse(old.success?{...old.data,version:2}:value);}
+export function decodeProfile(text:string|null):Profile{if(!text)return freshProfile();try{const result=parseProfile(JSON.parse(text));return result.success?result.data:freshProfile();}catch{return freshProfile();}}
 export function awardBlade(profile:Profile):Profile{return{...profile,bladeUnlocked:true,clears:profile.clears+1};}
 export function equipProfile(profile:Profile,form:Profile['equipped']):Profile{return form==='blade'&&!profile.bladeUnlocked?profile:{...profile,equipped:form};}
+export function recordMission(p:Profile,id:number,score:number,stars:number):Profile{if(!Number.isInteger(id)||id<0||id>3)return p;return{...p,lastMission:id,missions:p.missions.map((m,i)=>i===id?{score:Math.max(m.score,Math.round(score)),stars:Math.max(m.stars,Math.min(3,Math.max(0,Math.round(stars))))}:m)};}

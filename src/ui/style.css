@@ -131,3 +131,5 @@
 
 .impact-frame{position:absolute;inset:0;background:white;mix-blend-mode:difference;opacity:var(--impact-frame,0);pointer-events:none}[data-reduced-flashes=true] .impact-frame{display:none}
 .lobby:has(.parts-list) .pilot{display:none}.lobby:has(.parts-list) .mission-button{right:330px}.audio-button{top:77px}.audio-popover{top:118px}@media(max-height:500px){.lobby:has(.parts-list) .mission-button{right:250px}.audio-button{top:54px}.audio-popover{top:90px}}@media(max-width:600px) and (min-height:501px){.lobby:has(.parts-list) .mission-button{right:18px}.audio-button{top:145px;right:105px}.audio-popover{top:185px}}
+
+.turntable-poses{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:15px;z-index:20}.turntable-poses a{color:#e2d6f0;background:#211a2b;padding:8px 14px;text-decoration:none}

@@ -36,8 +36,8 @@ export function makeCore(materials: Materials, matched=false, bladeMaterials?:Bl
       [[[-.55,.01],[-.16,.01],[-.21,-.15],[-.49,-.15]],[[.16,.01],[.55,.01],[.49,-.15],[.21,-.15]]],
       [circle(-.35,.04,.245),circle(.35,.04,.245)]
     ];
-    const surround=materials.chrome.clone();surround.color.set('#7776a2');
-    for(const pair of shapes){const expression=new T.Group();eyes.add(expression);for(const points of pair){const x=points.reduce((s,p)=>s+p[0],0)/points.length,y=points.reduce((s,p)=>s+p[1],0)/points.length;patch(expression,points.map(p=>[x+(p[0]-x)*1.08,y+(p[1]-y)*1.08]),surround,.032);patch(expression,points,materials.white,.044);}expression.visible=expressions.length===0;expressions.push(expression);}
+    const surround=materials.chrome.clone();surround.color.set('#b7b9e8');
+    for(const pair of shapes){const expression=new T.Group();eyes.add(expression);for(const points of pair){const x=points.reduce((s,p)=>s+p[0],0)/points.length,y=points.reduce((s,p)=>s+p[1],0)/points.length;patch(expression,points.map(p=>[x+(p[0]-x)*1.03,y+(p[1]-y)*1.03]),surround,.032);patch(expression,points,materials.white,.044);}expression.visible=expressions.length===0;expressions.push(expression);}
   }
   const crownMaterial=materials.red.clone();let crownGlowMaterial:T.MeshBasicMaterial|undefined;
   if(matched){
@@ -46,7 +46,7 @@ export function makeCore(materials: Materials, matched=false, bladeMaterials?:Bl
     const paint=(points:number[][],material:T.Material,lift:number)=>shellPatch(marks,points,material,lift,highDetail?5:1,true);
     for(const x of [-.35,.25]){
       paint([[x-.008,.67],[x+.019,.936],[x+.086,.936],[x+.064,.67]],crownGlowMaterial,.003);
-      paint([[x,.70],[x+.02,.915],[x+.045,.938],[x+.066,.932],[x+.08,.918],[x+.058,.702],[x+.04,.682],[x+.018,.683]],crownMaterial,.006);
+      paint([[x,.675],[x+.022,.91],[x+.078,.945],[x+.061,.705],[x+.032,.68]],crownMaterial,.006);
       paint([[x+.018,.715],[x+.034,.912],[x+.047,.927],[x+.046,.714]],glint,.009);
     }
   }

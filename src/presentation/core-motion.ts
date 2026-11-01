@@ -1,3 +1,4 @@
+import {P1_ENABLED,corePolish} from './p1-core-polish.ts';
 import * as T from 'three';
 import {random,seed} from '../content/scene.mjs';
 import type {Preferences} from '../content/preferences.ts';
@@ -12,8 +13,9 @@ export function makeCoreMotion(world:T.Group){
  function reset(){rng=random(seed+77);history.length=path.length=puffs.length=particles.length=0;particleAt=smokeAt=-1;last=pathAt=-1;oldVX=oldVZ=0;oldHop=false;ghosts.count=dust.count=ribbon.count=0;}
  return{setTrailColor:(color:string)=>{ribbon.material.color.set(color);ghostMaterial.color.set(color);},reset,draw:(time:number,h:{x:number;z:number;vx:number;vz:number;dashing:boolean;hop:boolean;overdrive:boolean;speedLimit?:number;wear?:number;dashVariant?:'tap'|'rush'|'charge'},prefs:Preferences,opacity:number,dustOpacity:number,cameraRotation=new T.Quaternion())=>{
   if(time<last)reset();const fresh=time>last;last=time;const speed=Math.hypot(h.vx,h.vz),fast=speed>(h.speedLimit??6)*.8;
-  if(fresh){if(h.dashing)history.push({x:h.x,z:h.z,at:time});if(history.length>12)history.shift();if(fast&&time-pathAt>.035){pathAt=time;path.push({x:h.x,z:h.z,at:time});}while(path.length>6)path.shift();const turn=Math.hypot(h.vx-oldVX,h.vz-oldVZ);if(!prefs.reducedMotion&&(turn>2||oldHop&&!h.hop))puffs.push({x:h.x,z:h.z,at:time});oldVX=h.vx;oldVZ=h.vz;oldHop=h.hop;}
-  if(fresh&&!prefs.reducedMotion){if((h.dashing||(h.wear??0)>=2)&&time-particleAt>.045){particleAt=time;for(let i=0;i<(h.dashing?3:1);i++)particles.push({x:h.x,z:h.z,at:time,kind:'spark',dx:(rng()-.5)*2-h.vx*.2,dz:(rng()-.5)*2-h.vz*.2});}if((h.wear??0)>=3&&time-smokeAt>.2){smokeAt=time;particles.push({x:h.x+(rng()-.5)*.3,z:h.z+(rng()-.5)*.3,at:time,kind:'smoke',dx:(rng()-.5)*.3,dz:(rng()-.5)*.3});}}
+  if(fresh){if(h.dashing)history.push({x:h.x,z:h.z,at:time});if(history.length>12)history.shift();if(fast&&time-pathAt>.035){pathAt=time;path.push({x:h.x,z:h.z,at:time});}while(path.length>6)path.shift();const turn=Math.hypot(h.vx-oldVX,h.vz-oldVZ),fastTurn=fast&&turn>corePolish.fastTurnThreshold;if(!prefs.reducedMotion&&((P1_ENABLED?fastTurn:turn>2)||oldHop&&!h.hop))puffs.push({x:h.x,z:h.z,at:time});oldHop=h.hop;}
+  if(fresh&&!prefs.reducedMotion){if((P1_ENABLED?fast&&Math.hypot(h.vx-oldVX,h.vz-oldVZ)>corePolish.fastTurnThreshold:h.dashing||(h.wear??0)>=2)&&time-particleAt>.045){particleAt=time;for(let i=0;i<(h.dashing?3:1);i++)particles.push({x:h.x,z:h.z,at:time,kind:'spark',dx:(rng()-.5)*2-h.vx*.2,dz:(rng()-.5)*2-h.vz*.2});}if(!P1_ENABLED&&(h.wear??0)>=3&&time-smokeAt>.2){smokeAt=time;particles.push({x:h.x+(rng()-.5)*.3,z:h.z+(rng()-.5)*.3,at:time,kind:'smoke',dx:(rng()-.5)*.3,dz:(rng()-.5)*.3});}}
+  if(fresh){oldVX=h.vx;oldVZ=h.vz;}
   while(particles.length&&time-particles[0].at>1)particles.shift();while(particles.length>24)particles.shift();while(puffs.length>8)puffs.shift();ghosts.count=0;ghostMaterial.opacity=prefs.reducedFlashes?0:opacity;
   if(!prefs.reducedMotion&&!prefs.reducedFlashes)for(let i=0;i<3;i++){const point=history[history.length-1-i*3];if(!point||time-point.at>.18)continue;dummy.rotation.set(0,0,0);dummy.position.set(point.x,.68,point.z);dummy.scale.setScalar(1-(time-point.at)*2);dummy.updateMatrix();ghosts.setMatrixAt(ghosts.count++,dummy.matrix);}ghosts.instanceMatrix.needsUpdate=true;
   ribbon.count=0;ribbon.material.opacity=prefs.reducedFlashes?.12:.65;

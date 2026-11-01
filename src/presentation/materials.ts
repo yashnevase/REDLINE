@@ -1,3 +1,4 @@
+import {P1_ENABLED} from './p1-core-polish.ts';
 import * as T from 'three';
 import {CL4_ENABLED} from '../content/items/cl-clarity.ts';
 import { palettes, random } from '../content/scene.mjs';
@@ -42,11 +43,11 @@ export function makeMatchedMatcap(heat=0,rimStrength=1){
  for(let y=0;y<512;y++)for(let x=0;x<512;x++){
   const nx=(x-255.5)/256,ny=-(y-255.5)/256,nz=Math.sqrt(Math.max(0,1-nx*nx-ny*ny));
   const horizon=ny+.21-.13*nx*nx;
-  const rawRamp=Math.max(0,Math.min(1,horizon/.24)),ramp=rawRamp*rawRamp*(3-2*rawRamp);
+  const rawRamp=Math.max(0,Math.min(1,horizon/(P1_ENABLED?.42:.24))),ramp=rawRamp*rawRamp*(3-2*rawRamp);
   const sheen=Math.exp(-(((nx-.12)/.67)**2+((ny-.12)/.40)**2))*30;
   const lowLight=Math.exp(-(((ny+.32)/.2)**2))*(1-Math.abs(nx)*.45);
   const u=-(nx+.43)*.515+(ny-.58)*.857,v=(nx+.43)*.857+(ny-.58)*.515;
-  const warm=Math.exp(-(((u/.115)**2+(v/.24)**2)**4));
+  const warm=Math.exp(-(((u/(P1_ENABLED?.075:.115))**2+(v/(P1_ENABLED?.17:.24))**2)**4));
   const fleck=Math.exp(-(((nx+.09)/.052)**2+((ny-.73)/.024)**2));
   const pin=Math.exp(-(((nx+.72)/.024)**2+((ny-.34)/.029)**2));
   const bounce=Math.exp(-(((ny+.82)/.14)**2))*54;
@@ -54,14 +55,15 @@ export function makeMatchedMatcap(heat=0,rimStrength=1){
   const edge=Math.max(0,(Math.abs(nx)-.65)/.35),right=Math.max(0,nx),blueReflect=Math.exp(-((ny/.25)**2))*12;
   const rim=Math.exp(-(((nz-.25)/.04)**2))*38*rimStrength;
   const window=Math.exp(-(((Math.abs(nx)-.87)/.024)**2))*Math.exp(-((ny/.65)**4))*23;
-  const values=[Math.max(58,(57+ramp*(90+ny*40)-right*55+sheen+lowLight*18)*(1-edge*.70))+warm*120+fleck*100+pin*100+bounce+rim+window+magenta,
+  const values=[Math.max(58,(57+ramp*(90+ny*40)-right*(P1_ENABLED?35:55)+sheen+lowLight*18)*(1-edge*.70))+warm*(P1_ENABLED?105:120)+fleck*100+pin*100+bounce+rim+window+magenta,
    Math.max(55,(50+ramp*(104+ny*23)-right*25+sheen+lowLight*35)*(1-edge*.70))+warm*103+fleck*100+pin*100+bounce*.88+rim*.7+window*1.1,
    Math.max(115,(117+ramp*(98+ny*16)+sheen+lowLight*30+blueReflect)*(1-edge*.65))+warm*15+fleck*90+pin*75+bounce*.95+rim+window*1.6+magenta*1.2];
   // Broad, asymmetric painted reflections give the shell a metal/glass read.
   const coolWindow=Math.exp(-(((nx-.13)/.53)**4+((ny-.25)/.36)**4));
   const darkWindow=Math.exp(-(((nx+.16)/.74)**2+((ny+.35)/.18)**2));
   values[0]+=coolWindow*8-darkWindow*6;values[1]+=coolWindow*12-darkWindow*8;values[2]+=coolWindow*19-darkWindow*10;
-  if(heat){const brightness=(values[0]+values[1]+values[2])/3;if(heat===1){values[0]=150+brightness*.55;values[1]=60+brightness*.7;values[2]=35+brightness*.45;}else{values[0]=205+brightness*.25;values[1]=195+brightness*.28;values[2]=205+brightness*.25;}}
+  if(P1_ENABLED&&heat){const orangeRim=Math.max(0,1-nz/.32)*(heat===2?.65:.22);values[0]+=orangeRim*90;values[1]+=orangeRim*25;values[2]-=orangeRim*12;}
+  else if(heat){const brightness=(values[0]+values[1]+values[2])/3;if(heat===1){values[0]=150+brightness*.55;values[1]=60+brightness*.7;values[2]=35+brightness*.45;}else{values[0]=205+brightness*.25;values[1]=195+brightness*.28;values[2]=205+brightness*.25;}}
   const i=(y*512+x)*4;for(let k=0;k<3;k++)pixels.data[i+k]=Math.min(255,values[k]);pixels.data[i+3]=255;
  }ctx.putImageData(pixels,0,0);const texture=new T.CanvasTexture(c);texture.colorSpace=T.SRGBColorSpace;return texture;
 }

@@ -1,3 +1,4 @@
+import {coreTurntablePose} from '../presentation/p1-core-polish.ts';
 import {makeMissionSelect} from '../ui/mission-select.ts';
 import {makeWorkshop} from '../ui/workshop.ts';
 import {makeProfileControls} from '../ui/profile-controls.ts';
@@ -47,7 +48,7 @@ let profile=await loadProfileFallback();applySavedSettings(profile);
 let saveAvailable=true;
 const params = new URLSearchParams(location.search);
 const requested = params.get('scene') ?? 'lobby';
-const sceneName = (scenes.includes(requested) ? requested : 'lobby') as SceneName;
+const sceneName = (requested==='core-turntable'?'core-studio':scenes.includes(requested) ? requested : 'lobby') as SceneName;
 const trial=params.has('trial');const selectedMission=params.has('mission')?Math.max(0,Math.min(3,Number(params.get('mission'))||0)):undefined,runOptions={mission:selectedMission,seed:Number(params.get('seed')??4107)>>>0};
 const playing = sceneName === 'arena' || sceneName === 'perf-worst';
 const studio = sceneName === 'lobby' || sceneName === 'core-studio' || sceneName === 'workshop';
@@ -87,6 +88,7 @@ if(studio&&sceneName!=='core-studio'){
 const cues=makeCueBus(import.meta.env.DEV&&params.has('cues')),audio=new AudioManager(),audioControls=makeAudioControls(app,audio);cues.subscribe(cue=>audio.cue(cue));audio.onBeat(()=>{if(!preferences.reducedFlashes&&!preferences.reducedMotion){app.animate([{filter:'brightness(1.025)'},{filter:'brightness(1)'}],{duration:140});}});addEventListener('redline-audio-settings',()=>{profile={...profile,settings:{...profile.settings,audio:{...audio.settings}}};saveProfile(profile);});app.addEventListener('click',e=>{if(e.target instanceof Element&&e.target.closest('button,a'))cues.send(e.target.closest('[data-equip]')?'ui_confirm':'ui_move',Math.floor(performance.now()/16.666));});
 if(studio){makeMissionSelect(app,()=>profile,id=>{profile={...profile,lastMission:id};saveProfile(profile);});makeProfileControls(app,()=>profile);}
 const tuning: Tuning = { ...defaults };
+if(requested==='core-turntable'){const pose=coreTurntablePose(params.get('pose'));Object.assign(tuning,{coreStudioAzimuth:pose.azimuth,coreStudioElevation:pose.elevation,coreExpression:Math.min(5,Math.max(0,Number(params.get('expression')??0))),coreHeat:Math.min(2,Math.max(0,Number(params.get('heat')??0))),coreBlade:params.get('blade')==='1'?1:0});const nav=document.createElement('nav');nav.className='turntable-poses';nav.setAttribute('aria-label','Core turntable views');for(const pose of ['front','quarter','side','top']){const a=document.createElement('a');a.href=`?scene=core-turntable&pose=${pose}`;a.textContent=pose;nav.append(a);}app.append(nav);}
 const view = makeScene(app.querySelector('canvas')!, sceneName, tuning);
 const resize = () => view.resize(innerWidth, innerHeight); addEventListener('resize', resize); resize();
 let preferences=loadPreferences();app.dataset.reducedMotion=String(preferences.reducedMotion);app.dataset.reducedFlashes=String(preferences.reducedFlashes);view.setPreferences(preferences);

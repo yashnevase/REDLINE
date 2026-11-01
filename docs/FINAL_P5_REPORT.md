@@ -13,3 +13,5 @@
 Tunables: layer rim/band strength in p5-finish.ts (P5_ENABLED), sparse atlas marks in am3-surface; L2 extra structures Standard/High only; Low keeps existing pit LOD. No new combat material submission from the shading finish; merged geometry adds triangles. Final P7 measured budgets take precedence over baseline claims. Normal-stat clip is captured in P7.
 
 Not done: exact reference reproduction or owner final art approval; no such approval is self-certified. Private refs never ship. Remaining art wishes after the third session belong in POST_SLICE_BACKLOG per P9, rather than restarting an IoU loop.
+
+Shared final evidence: FINAL_P7_REPORT.md;137 tests/build,54-case graphics matrix, four-size inputs/saves/production,30+second normal-stat desktop/compact clips, all3 room captures, local final parity pairs and real ten-minute soak. Per-step measurements above remain their historical checkpoints. Owner final pairs/listening remain for review.

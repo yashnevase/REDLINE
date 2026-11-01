@@ -1,0 +1,84 @@
+[
+  {
+    "existing": false,
+    "mission": 0,
+    "loadout": "core",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": false,
+    "mission": 1,
+    "loadout": "core",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": false,
+    "mission": 2,
+    "loadout": "core",
+    "browserHeadlessReplay": true,
+    "stars": 3
+  },
+  {
+    "existing": false,
+    "mission": 3,
+    "loadout": "core",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": true,
+    "mission": 0,
+    "loadout": "blade",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": true,
+    "mission": 1,
+    "loadout": "blade",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "existing": true,
+    "mission": 2,
+    "loadout": "blade",
+    "browserHeadlessReplay": true,
+    "stars": 3
+  },
+  {
+    "existing": true,
+    "mission": 3,
+    "loadout": "blade",
+    "browserHeadlessReplay": true,
+    "stars": 2
+  },
+  {
+    "missingAudioSynth": true,
+    "audio": {
+      "unlocked": true,
+      "voices": 2,
+      "track": "Synth ambience",
+      "pack": "default",
+      "tracks": 0,
+      "mix": {
+        "compressor": true,
+        "limiterCeiling": 0.94,
+        "peak": 0.0026038780342787504,
+        "started": 2,
+        "dropped": 0,
+        "maxPerCue": 4,
+        "throttle": 0.04,
+        "screenPan": true,
+        "paused": false,
+        "lowpass": 20000
+      },
+      "muted": false
+    },
+    "corruptBackup": true,
+    "indexedDBFallback": true,
+    "exportImport": true
+  }
+]

@@ -14,3 +14,5 @@ Owner approved the P1 Core candidate and explicitly directed continuation throug
 No new render mesh/pass/capacity: Pulse facets reuse the64-slot ability plane pool; base blade batch is explicitly reset/empty even for stale visual snapshots. Full stress budgets remain for final P7; do not call controlled screenshots a stress measurement. World/UI/audio styling in these images still awaits P3–P6.
 
 **Not done:** no P2 requirement intentionally deferred; remaining FINAL_POLISH steps remain active. Current clips are short controlled feature captures; P1 provides the32-second normal-stat clip and P7 will refresh the final complete-game clip. Parity comparisons are local-only under `shots/parity/`; owner notes about weak sound, clutter/vents and generic UI remain assigned to their respective steps.
+
+Shared final evidence: FINAL_P7_REPORT.md;137 tests/build,54-case graphics matrix, four-size inputs/saves/production,30+second normal-stat desktop/compact clips, all3 room captures, local final parity pairs and real ten-minute soak. Per-step measurements above remain their historical checkpoints. Owner final pairs/listening remain for review.

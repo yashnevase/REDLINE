@@ -5,10 +5,10 @@ Active owner directive: `FINAL_POLISH.md`, supplied2026-11-02. It supersedes the
 | Session | Scope | Status |
 |---|---|---|
 | 1 · 2026-11-02 | P0 look bible/baselines; P1 Core candidate and turntable | DONE · Core approved by owner |
-| 2 | P2 equipment-specific abilities; P3 movers/declutter/vents; P4 interface/lobby | Active |
-| 3 | P5 world/material/effects finish; P6 layered mix; P7 QA and P9 close | Not started |
+| 2 | P2 equipment-specific abilities; P3 movers/declutter/vents; P4 interface/lobby | DONE · reports P2/P3/P4 |
+| 3 | P5 world/material/effects finish; P6 layered mix; P7 QA and P9 close | DONE · P5/P6/P7; bounded P9 engineering close |
 
-P1.2 owner approval received: “Approve Core; continue P2–P6”. P2 and P3.1–3 are implemented and checked; P4 is finishing, P3.4 carries into P5. Do not use an old failed art judge to create a new approval loop. Preserve the user's existing authorization for all remaining implementation.
+P1.2 owner approval received: “Approve Core; continue P2–P6”. P2–P6 implementation is complete, including the bounded P3.4 depth/silhouette iteration. P7 passes final graphics, saves/replay, production, input, dialog-sound and real600.082s soak checks. FINAL_P7_REPORT and FINAL_VISUAL_REVIEW record closure; final parity/listening remains owner-reviewed. Do not use an old failed art judge to create a new approval loop. Preserve the user's existing authorization for all remaining implementation.
 
 ## P0 baseline report
 
@@ -32,6 +32,25 @@ Fresh judge gaps, highest priority per pair:
 
 No IoU score or match approval was requested. Static frames do not prove motion or audio. Base-Q blades are a known P2 bug in these baselines.
 
-**Not done:** final pairs/owner review, P2–P7. **Tunables:** no runtime changes in P0. **Budgets:** P0 only captures the unchanged130-test systems checkpoint; prior Standard92/58,698 and Low70/24,292 are baselines, not a fresh post-polish stress pass. P1 check/build and motion evidence are in its report. Existing normal-stat clips remain under `shots/close-chapter/`; the new Core clip is under `shots/final-p1/`.
+**Baseline checkpoint omissions (now superseded):** P2–P7 implementation/checks are complete; final pairs exist. Owner final pair/listening verdict remains pending. **Tunables:** no runtime changes in P0. **Budgets:** P0 only captures the unchanged130-test systems checkpoint; prior Standard92/58,698 and Low70/24,292 are baselines, not a fresh post-polish stress pass. P1 check/build and motion evidence are in its report. Existing normal-stat clips remain under `shots/close-chapter/`; the new Core clip is under `shots/final-p1/`.
 
 Owner audit: all new complaints map directly to P1(hero/movement), P2(base-Q blades), P3(sliding boxes/clutter/vents), P4(generic UI/lobby), P5(colour/material/effects/enemies) and P6(weak audio). No issue is considered resolved by writing the bible or capturing a baseline.
+
+## Final ID ledger
+
+| ID | Final status | Evidence / boundary |
+|---|---|---|
+| P0.1 | DONE | LOOK_BIBLE |
+| P0.2 capture/judge | DONE | Seven refreshed local pairs; FINAL_VISUAL_REVIEW |
+| P0.2 owner final verdict | BLOCKED · owner-only review outstanding | Final pairs ready; no owner verdict invented. P9 permits bounded engineering closure with this recorded |
+| P1.1–1.3 | DONE · owner approved | FINAL_P1_REPORT and explicit chat approval |
+| P2.1–2.2 | DONE | FINAL_P2_REPORT; zero-Core-blade/render/replay tests |
+| P3.1–3.4 | DONE bounded implementation | FINAL_P3_REPORT + FINAL_P5_REPORT; further taste wishes tracked |
+| P4.1–4.2 | DONE | FINAL_P4_REPORT; four-size UI/native-dialog sound checks |
+| P5.1–5.4 | DONE bounded implementation | FINAL_P5_REPORT; final world/parity/grayscale captures |
+| P6.1–6.3 | DONE | All46 reference cue recipes studied; original layered synth, measured mix/music evidence |
+| P6.4 checklist | DONE | FINAL_P6_REPORT, original sampler and normal clips |
+| P6.4 owner ear verdict | BLOCKED · owner-only listening outstanding | Cannot certify taste from automated signal checks; review remains in backlog |
+| P7 | DONE | FINAL_P7_REPORT,137 tests/build,54 graphics cases, inputs/saves/missions/production/dialog controls and real600.082s soak |
+| P8 | DONE | Per-step reports, shared normal clips/budgets/tunables/omissions and owner-note audit |
+| P9 | DONE · bounded engineering close | chapter1-complete tag; CHAPTER_PIPELINE and explicit POST_SLICE_BACKLOG. Not an exact/AAA or human-acceptance claim |

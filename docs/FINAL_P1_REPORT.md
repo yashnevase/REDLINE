@@ -1,12 +1,12 @@
-# P1 — Core candidate for owner review
+# P1 — approved Core polish
 
-2026-11-02, session1 of the maximum3-session FINAL_POLISH pass. P0 baseline report and fresh judge gaps: `FINAL_POLISH_PROGRESS.md`. This is a review candidate, not owner approval or a claim of AAA parity.
+2026-11-02, session1 of the maximum3-session FINAL_POLISH pass. P0 baseline report and fresh judge gaps: `FINAL_POLISH_PROGRESS.md`. The owner approved this Core explicitly on2026-11-02; this is not a claim of AAA parity.
 
 | ID | Status | Change/evidence |
 |---|---|---|
-| P1.1 | Candidate ready; P2 dependency remains | Core retains blue-violet midtones at all three Heat stages; power adds orange rim/floor aura rather than repainting the body white/orange. Narrower key reflection, gentler broad reflection transition, softer pale eye edge and sharper crown contour. Rigid spherical scale replaces impact/charge/leap distortion; scars stay surface-only. Existing bevel/socket detail retained. |
-| P1.2 | Awaiting owner review | `?scene=core-turntable` exposes front/quarter/side/top. Query parameters: `heat=0..2`, `expression=0..5`, `wear=0..3`, `blade=1`. Twelve angle/heat frames, six expression/wear frames, contact sheet, local concept/Spirit Call quality comparison. Scar selector was verified against renderer metadata after fixing its initial disconnected value. |
-| P1.3 | Candidate ready | Rigid turn lean, rolling surface maintained; tiny dust/sparks restricted to fast turning rather than damage-tier smoke or continuous ordinary dashing. Eye tracking retained. Simulation movement/acceleration/input timings unchanged. Real-time normal-stat32s desktop clip and compact motion capture. |
+| P1.1 | DONE · approved; P2 completed separately | Core retains blue-violet midtones at all three Heat stages; power adds orange rim/floor aura rather than repainting the body white/orange. Narrower key reflection, gentler broad reflection transition, softer pale eye edge and sharper crown contour. Rigid spherical scale replaces impact/charge/leap distortion; scars stay surface-only. Existing bevel/socket detail retained. |
+| P1.2 | DONE · owner approved | `?scene=core-turntable` exposes front/quarter/side/top. Query parameters: `heat=0..2`, `expression=0..5`, `wear=0..3`, `blade=1`. Twelve angle/heat frames, six expression/wear frames, contact sheet, local concept/Spirit Call quality comparison. Scar selector was verified against renderer metadata after fixing its initial disconnected value. |
+| P1.3 | DONE · approved | Rigid turn lean, rolling surface maintained; tiny dust/sparks restricted to fast turning rather than damage-tier smoke or continuous ordinary dashing. Eye tracking retained. Simulation movement/acceleration/input timings unchanged. Real-time normal-stat32s desktop clip and compact motion capture. |
 
 Evidence under `shots/final-p1/`: `turntable-board.png`, angle/Heat frames, `expression-N-wearN.png`, Overdrive desktop/compact, motion desktop/compact WebMs and report JSON. Local-only `shots/parity/p1-core-concept-quality.png` compares identity crop with our front view and Spirit Call's finish benchmark. The concept's heavy drawn contour is not copied into the mesh. No reference art/code is shipped.
 
@@ -23,3 +23,5 @@ Owner audit: hero no longer changes to a white/orange blob; non-uniform egg/stre
 Review gate comes directly from FINAL_POLISH P1.2: “owner approves before moving on.” Review the turntable, concept/quality comparison and Overdrive frame. This requirement applies to the concrete Core candidate, not a new permission request for the already-approved full sprint. P9 still limits the whole polish to three sessions and one targeted revision per rejected pair.
 
 Owner review: approved via the explicit reply “Approve Core; continue P2–P6” on2026-11-02. P1.2 is satisfied.
+
+Shared final evidence: FINAL_P7_REPORT.md;137 tests/build,54-case graphics matrix, four-size inputs/saves/production,30+second normal-stat desktop/compact clips, all3 room captures, local final parity pairs and real ten-minute soak. Per-step measurements above remain their historical checkpoints. Owner final pairs/listening remain for review.

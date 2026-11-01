@@ -1,0 +1,2737 @@
+{
+  "realWallClock": true,
+  "elapsedSeconds": 600.0820462080001,
+  "samples": [
+    {
+      "elapsedSeconds": 30.079306792,
+      "heap": 30352656,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 4,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 3,
+        "ribbonInstances": 10,
+        "dustInstances": 21,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 8,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 392,
+          "dropped": 0,
+          "perCue": {
+            "crit": 3,
+            "counter": 1,
+            "hit_light": 2,
+            "rear_hit": 1,
+            "spark": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 60.228535625,
+      "heap": 31124628,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 2,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 0,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 648,
+          "dropped": 0,
+          "perCue": {},
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 90.331397875,
+      "heap": 31946384,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 2,
+        "seed": 12421,
+        "chapterSeed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 5,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 2,
+        "dustInstances": 4,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 2,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 1062,
+          "dropped": 0,
+          "perCue": {
+            "hit_light": 1,
+            "spark": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 120.411950375,
+      "heap": 32278032,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 4,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 3,
+        "ribbonInstances": 11,
+        "dustInstances": 21,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 8,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 1454,
+          "dropped": 0,
+          "perCue": {
+            "crit": 3,
+            "counter": 1,
+            "hit_light": 2,
+            "rear_hit": 1,
+            "spark": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 150.478200083,
+      "heap": 32087224,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 3,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 1708,
+          "dropped": 2,
+          "perCue": {
+            "pickup": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 180.552018583,
+      "heap": 32213352,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 2,
+        "seed": 12421,
+        "chapterSeed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 5,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 3,
+        "dustInstances": 4,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 2122,
+          "dropped": 2,
+          "perCue": {
+            "hit_light": 2,
+            "spark": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 210.63588175,
+      "heap": 32658196,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 4,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 3,
+        "ribbonInstances": 10,
+        "dustInstances": 21,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 7,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 2512,
+          "dropped": 2,
+          "perCue": {
+            "crit": 3,
+            "counter": 1,
+            "saw_whine": 1,
+            "hit_light": 1,
+            "rear_hit": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 240.699207375,
+      "heap": 32131600,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 3,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 2768,
+          "dropped": 2,
+          "perCue": {
+            "pickup": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 270.770666375,
+      "heap": 32171960,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 2,
+        "seed": 12421,
+        "chapterSeed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 5,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 3,
+        "dustInstances": 5,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 3182,
+          "dropped": 2,
+          "perCue": {
+            "hit_light": 2,
+            "spark": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 300.831638375,
+      "heap": 32544716,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 4,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 3,
+        "ribbonInstances": 10,
+        "dustInstances": 21,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 10,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 3572,
+          "dropped": 2,
+          "perCue": {
+            "crit": 4,
+            "counter": 1,
+            "hit_light": 2,
+            "rear_hit": 2,
+            "saw_whine": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 330.89549654200005,
+      "heap": 32292620,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 3,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 3828,
+          "dropped": 2,
+          "perCue": {
+            "pickup": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 360.98468958300003,
+      "heap": 32284104,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 2,
+        "seed": 12421,
+        "chapterSeed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 5,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 3,
+        "dustInstances": 5,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 4242,
+          "dropped": 2,
+          "perCue": {
+            "hit_light": 2,
+            "spark": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 391.043273375,
+      "heap": 32567752,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 4,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 3,
+        "ribbonInstances": 10,
+        "dustInstances": 24,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 10,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 4632,
+          "dropped": 2,
+          "perCue": {
+            "crit": 4,
+            "counter": 1,
+            "hit_light": 2,
+            "rear_hit": 2,
+            "saw_whine": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 421.102008625,
+      "heap": 32329692,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 3,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 4888,
+          "dropped": 2,
+          "perCue": {
+            "pickup": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 451.18585525000003,
+      "heap": 32314460,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 2,
+        "seed": 12421,
+        "chapterSeed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 5,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 3,
+        "dustInstances": 5,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 5302,
+          "dropped": 2,
+          "perCue": {
+            "hit_light": 2,
+            "spark": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 481.23995125000005,
+      "heap": 32604240,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 4,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 3,
+        "ribbonInstances": 10,
+        "dustInstances": 24,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 10,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 5688,
+          "dropped": 6,
+          "perCue": {
+            "crit": 4,
+            "counter": 1,
+            "hit_light": 2,
+            "rear_hit": 2,
+            "saw_whine": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 511.316153833,
+      "heap": 32380204,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 3,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 1,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 5944,
+          "dropped": 6,
+          "perCue": {
+            "pickup": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 541.408231125,
+      "heap": 32323504,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 2,
+        "seed": 12421,
+        "chapterSeed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 5,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 3,
+        "dustInstances": 5,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 3,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 6358,
+          "dropped": 6,
+          "perCue": {
+            "hit_light": 2,
+            "spark": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 571.479497292,
+      "heap": 32623512,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 4,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 3,
+        "ribbonInstances": 11,
+        "dustInstances": 21,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 7,
+        "track": "battle-02",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 6748,
+          "dropped": 6,
+          "perCue": {
+            "crit": 3,
+            "counter": 1,
+            "saw_whine": 1,
+            "hit_light": 1,
+            "rear_hit": 1
+          },
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    },
+    {
+      "elapsedSeconds": 600.082030417,
+      "heap": 32345760,
+      "world": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 2,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "audio": {
+        "unlocked": true,
+        "voices": 0,
+        "track": "battle-01",
+        "pack": "default",
+        "tracks": 3,
+        "mix": {
+          "compressor": true,
+          "limiterCeiling": 0.94,
+          "peak": 0.028747152537107468,
+          "started": 6990,
+          "dropped": 6,
+          "perCue": {},
+          "maxPerCue": 4,
+          "throttle": 0.04,
+          "screenPan": true,
+          "paused": false,
+          "lowpass": 20000
+        },
+        "muted": false
+      }
+    }
+  ],
+  "errors": []
+}

@@ -5,6 +5,10 @@
 
 `FINAL_POLISH.md` is now the active last pass: P0 first, then P1–P6, P7 QA and P9 closure within at most three sessions. Owner approval of final parity side-by-sides replaces the old IoU/reference-match judge gate. New polish rules supersede older conflicts: smooth blue-violet spherical Core including Overdrive; base Q is Pulse Bash with no Blade visuals; Blade Spin/projectiles only with Blade equipped; intentional clutter limit8; shaped industrial UI; clean deliberate materials and layered fight mix. Private audio permissions/public exclusion persist. P1.2 specifically requires owner review of the concrete turntable before moving on. Progress/session count: FINAL_POLISH_PROGRESS.md. At the P9 cap, record remaining wishes in POST_SLICE_BACKLOG and close per the owner's new rule, rather than perpetuating old art gates.
 
+## Bounded FINAL_POLISH checkpoint —2026-11-02
+
+P1 Core approved by owner; P2–P6 implemented and P7 automated QA passed. FINAL_P7_REPORT records137 tests/build, graphics/input/save/mission/replay/production/audio checks and real ten-minute stability evidence. `chapter1-complete` closes the engineering slice under the three-session P9 rule. Final owner art/ear/first-time-player verdicts and further wishes remain explicitly tracked in POST_SLICE_BACKLOG. No exact reference/AAA or universal-device acceptance is inferred; no Chapter2 work authorized.
+
 ## Implementation checkpoint — 2026-11-01
 
 Approved CLOSE Steps 3–5 systems and Step 6 automated QA are implemented; detailed behavior/evidence is in CLOSE_STEP_3_REPORT through CLOSE_STEP_6_REPORT and STATE. This records execution, not a design change or final acceptance. Full reference-art match and human review remain open; no chapter1-complete tag is authorized by a systems checkpoint alone. Private audio is excluded from public builds and has original synth fallback.

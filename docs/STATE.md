@@ -1,10 +1,16 @@
 # STATE.md — resume here
 
-Phase: **FINAL_POLISH session2: Core approved; P2 and P3.1–3 complete, P4 interface finishing. P3.4/P5/P6 and final QA follow.**
+Phase: **Chapter1 bounded FINAL_POLISH engineering pass complete ·2026-11-02.** Closure tag: `chapter1-complete` after final QA. Latest report: `FINAL_P7_REPORT.md`; remaining owner art/ear/first-time-player review and optional wishes: `POST_SLICE_BACKLOG.md`. No Chapter2 work is authorized.
 
-Latest owner directive2026-11-02: read `FINAL_POLISH.md`, `LOOK_BIBLE.md`, `FINAL_POLISH_PROGRESS.md`. The three-session P9 closing rule replaces the old IoU/art-judge closure gate described below. Do not restart completed systems. P0 pairs and fresh gap review are baseline-only; P2(base-Q blade bug), P3–P6 are still required. P1.2 requests concrete turntable owner approval before moving to P2. FINAL_P1_REPORT.md records the130-test/build pass, spherical movement checks, all turntable/Heat/expression/scar frames and normal-stat motion clips. Owner approved Core explicitly. P2 blade bug fixed with135 tests now passing after P3. See FINAL_P2_REPORT and FINAL_P3_REPORT. Historical awaiting-review statements below are superseded.
+Owner explicitly approved P1 Core (“Approve Core; continue P2–P6”). P2–P6 are implemented: base Pulse/no Core blades, equipped Blade attacks, recognizable movers, eight inside fixtures and proper vents, shaped UI/lobby, clean steel/pit/giant/wreck depth, layered stereo audio and measured private-music trims. Fresh parity judge's concrete clipping/overlap defects were fixed and verified; final pairs remain local owner review candidates, not self-approved exact/AAA matches.
 
+Final QA:137 tests/check, build/private-audio+reference exclusion,54 stress cases (Low70 calls/24,484 triangles; Standard92/59,110; High separately179/116,526), all four clean/migrated browser missions/exact replays, both-loadout full campaigns, saves/fallback/import/export, four-size keyboard/multitouch/emulated controller, production loss/retry/options/Blade, four-size dialog sound/slider/M access and UI clipping checks. Native1280/1920 grayscale readability captures and32s normal-stat desktop/compact clips are in shots/final-polish. Full campaign bot needed obstacle routing around a barricade; only the bot changed, not game stats/rules.
 
+Real600.082s soak/20 samples: steady post-GC heap32,087,224–32,658,196 bytes (0.545MiB variation), sampled max5 debris/24 dust/10 voices, no errors. Final dialog-access/whine-trigger follow-up has separate targeted checks; mixer topology, simulation and actor pools unchanged. Original audio burst test reaches20 groups/four per cue and settles0, measured peak0.620 below0.94 ceiling. Private tracks verify−18.00LUFS prefader; original files remain ignored/non-public, synthesis is complete without them.
+
+FINAL_POLISH P9 replaces the historical endless IoU/art gate: three logical sessions used, one bounded concrete cleanup, remaining wishes tracked for owner review. This tag closes the engineering slice, not the owner's subjective final art/audio verdict. Physical-phone/deployment gates remain waived; no universal device or human-balance certification. Preserve user-owned untracked close1/ and docs/NEXT_WORK (1).md.
+
+The sections below are historical checkpoints; their old next-step/no-audio/untagged statements do not reopen finished work.
 
 ## CLOSE Steps 3–6 — systems review, resumed 2026-11-02
 

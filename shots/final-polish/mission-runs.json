@@ -1,0 +1,102 @@
+[
+  {
+    "loadout": "core",
+    "mission": 0,
+    "phase": "complete",
+    "seconds": 22.25,
+    "hp": 120,
+    "score": 34967,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "core",
+    "mission": 1,
+    "phase": "complete",
+    "seconds": 39.78333333333333,
+    "hp": 120,
+    "score": 94355,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "core",
+    "mission": 2,
+    "phase": "complete",
+    "seconds": 61.06666666666667,
+    "hp": 120,
+    "score": 216859,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "core",
+    "mission": 3,
+    "phase": "complete",
+    "seconds": 16.283333333333335,
+    "hp": 100,
+    "score": 58000,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "core",
+    "mission": "campaign",
+    "phase": "complete",
+    "seconds": 117.5,
+    "hp": 120,
+    "score": 324307,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "blade",
+    "mission": 0,
+    "phase": "complete",
+    "seconds": 17.216666666666665,
+    "hp": 120,
+    "score": 40970,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "blade",
+    "mission": 1,
+    "phase": "complete",
+    "seconds": 33.86666666666667,
+    "hp": 120,
+    "score": 96014,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "blade",
+    "mission": 2,
+    "phase": "complete",
+    "seconds": 51.61666666666667,
+    "hp": 120,
+    "score": 208092,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "blade",
+    "mission": 3,
+    "phase": "complete",
+    "seconds": 8.466666666666667,
+    "hp": 100,
+    "score": 43500,
+    "normalStats": true,
+    "exactReplay": true
+  },
+  {
+    "loadout": "blade",
+    "mission": "campaign",
+    "phase": "complete",
+    "seconds": 103.55,
+    "hp": 120,
+    "score": 408813,
+    "normalStats": true,
+    "exactReplay": true
+  }
+]

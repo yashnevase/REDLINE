@@ -1,0 +1,38 @@
+[
+  {
+    "name": "desktop",
+    "missionAudio": true,
+    "optionsAudio": true,
+    "allFourBuses": true,
+    "returnsToCorner": true,
+    "headerTargets": true,
+    "errors": []
+  },
+  {
+    "name": "compact",
+    "missionAudio": true,
+    "optionsAudio": true,
+    "allFourBuses": true,
+    "returnsToCorner": true,
+    "headerTargets": true,
+    "errors": []
+  },
+  {
+    "name": "small",
+    "missionAudio": true,
+    "optionsAudio": true,
+    "allFourBuses": true,
+    "returnsToCorner": true,
+    "headerTargets": true,
+    "errors": []
+  },
+  {
+    "name": "portrait",
+    "missionAudio": true,
+    "optionsAudio": true,
+    "allFourBuses": true,
+    "returnsToCorner": true,
+    "headerTargets": true,
+    "errors": []
+  }
+]

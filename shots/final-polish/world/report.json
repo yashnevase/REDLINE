@@ -1,0 +1,2538 @@
+[
+  {
+    "level": 0,
+    "compact": false,
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "hullCoverage": {
+        "fraction": 0.003472222222222222,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 640.0000000000001,
+        "y": 338.2955858775229,
+        "radius": 29.428979501717652
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "far",
+        "viewScale": 1.6929376898210382
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 26212,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4584,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1652,
+          "calls": 1
+        },
+        {
+          "name": "named-props-chips-pickups-saw-cart",
+          "triangles": 1333.3333333333333,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 98,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 24,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 10,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 240,
+      "simTick": 240,
+      "camera": {
+        "width": 19.911111111111108,
+        "height": 11.2,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.11071428571428572
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 29,
+      "triangles": 42610,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 100,
+        "phase": {
+          "kind": "fight",
+          "wave": 0,
+          "nextSpawn": 8,
+          "nextSpawnIn": 60
+        },
+        "enemies": 5,
+        "alive": 5,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 0,
+        "overdrive": 0
+      }
+    }
+  },
+  {
+    "level": 1,
+    "compact": false,
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "hullCoverage": {
+        "fraction": 0.006944444444444444,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 640.0000000000001,
+        "y": 339.4033906439013,
+        "radius": 27.92690883638267
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "far",
+        "viewScale": 1.7839936694505238
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 27134,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4584,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1652,
+          "calls": 1
+        },
+        {
+          "name": "named-props-chips-pickups-saw-cart",
+          "triangles": 1333.3333333333333,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 98,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 24,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 10,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 240,
+      "simTick": 240,
+      "camera": {
+        "width": 19.911111111111108,
+        "height": 11.2,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.11071428571428572
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 29,
+      "triangles": 43788,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 100,
+        "phase": {
+          "kind": "fight",
+          "wave": 0,
+          "nextSpawn": 10,
+          "nextSpawnIn": 60
+        },
+        "enemies": 5,
+        "alive": 5,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 0,
+        "overdrive": 0
+      }
+    }
+  },
+  {
+    "level": 2,
+    "compact": false,
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 2,
+        "seed": 12421,
+        "chapterSeed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "hullCoverage": {
+        "fraction": 0.006944444444444444,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 640.0000000000001,
+        "y": 339.2302441303956,
+        "radius": 28.161677909991372
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "far",
+        "viewScale": 1.769121454007988
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 26072,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4584,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1652,
+          "calls": 1
+        },
+        {
+          "name": "named-props-chips-pickups-saw-cart",
+          "triangles": 1333.3333333333333,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 68,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 24,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 10,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 240,
+      "simTick": 240,
+      "camera": {
+        "width": 19.911111111111108,
+        "height": 11.2,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.11071428571428572
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 30,
+      "triangles": 42422,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 100,
+        "phase": {
+          "kind": "fight",
+          "wave": 0,
+          "nextSpawn": 11,
+          "nextSpawnIn": 60
+        },
+        "enemies": 5,
+        "alive": 5,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 0,
+        "overdrive": 0
+      }
+    }
+  },
+  {
+    "level": 0,
+    "compact": true,
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 0,
+        "seed": 4107,
+        "chapterSeed": 4107,
+        "vents": [
+          {
+            "id": 0,
+            "x": 14,
+            "z": 6.5,
+            "boost": false,
+            "phase": 134
+          },
+          {
+            "id": 1,
+            "x": -7.5,
+            "z": 10,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 2,
+            "x": 3,
+            "z": -17,
+            "boost": false,
+            "phase": 178
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "z": 11,
+            "boost": false,
+            "phase": 19
+          },
+          {
+            "id": 4,
+            "x": -17,
+            "z": -5,
+            "boost": false,
+            "phase": 134
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "hullCoverage": {
+        "fraction": 0.006944444444444444,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 422.0000000000001,
+        "y": 182.67988741599194,
+        "radius": 16.704820441025003
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "far",
+        "viewScale": 1.6448708816882516
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 26212,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4584,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1652,
+          "calls": 1
+        },
+        {
+          "name": "named-props-chips-pickups-saw-cart",
+          "triangles": 1333.3333333333333,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 98,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 24,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 10,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 240,
+      "simTick": 240,
+      "camera": {
+        "width": 23.805128205128202,
+        "height": 11,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.11272727272727273
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 29,
+      "triangles": 42994,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 100,
+        "phase": {
+          "kind": "fight",
+          "wave": 0,
+          "nextSpawn": 8,
+          "nextSpawnIn": 60
+        },
+        "enemies": 5,
+        "alive": 5,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 0,
+        "overdrive": 0
+      }
+    }
+  },
+  {
+    "level": 1,
+    "compact": true,
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 1,
+        "seed": 8129,
+        "chapterSeed": 8129,
+        "vents": [
+          {
+            "id": 0,
+            "x": 10.5,
+            "z": 2.5,
+            "boost": true,
+            "phase": 21
+          },
+          {
+            "id": 1,
+            "x": 9,
+            "z": -8.5,
+            "boost": true,
+            "phase": 11
+          },
+          {
+            "id": 2,
+            "x": -12.5,
+            "z": 2.5,
+            "boost": false,
+            "phase": 124
+          },
+          {
+            "id": 3,
+            "x": -10,
+            "z": -14.5,
+            "boost": false,
+            "phase": 96
+          },
+          {
+            "id": 4,
+            "x": 6.5,
+            "z": 13,
+            "boost": false,
+            "phase": 138
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "hullCoverage": {
+        "fraction": 0.013888888888888888,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 422.0000000000001,
+        "y": 183.13954279786597,
+        "radius": 16.081574462824815
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "far",
+        "viewScale": 1.7086183191074313
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 27134,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4584,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1652,
+          "calls": 1
+        },
+        {
+          "name": "named-props-chips-pickups-saw-cart",
+          "triangles": 1333.3333333333333,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 98,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 24,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 10,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 240,
+      "simTick": 240,
+      "camera": {
+        "width": 23.805128205128202,
+        "height": 11,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.11272727272727273
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 29,
+      "triangles": 44164,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 100,
+        "phase": {
+          "kind": "fight",
+          "wave": 0,
+          "nextSpawn": 10,
+          "nextSpawnIn": 60
+        },
+        "enemies": 5,
+        "alive": 5,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 0,
+        "overdrive": 0
+      }
+    }
+  },
+  {
+    "level": 2,
+    "compact": true,
+    "errors": [],
+    "meta": {
+      "bladeVisuals": {
+        "bladeInstances": 0
+      },
+      "chapterWorld": {
+        "movingMeshes": [
+          {
+            "name": "saw-cart",
+            "type": "wheeled steel saw carriage",
+            "motion": "20u / active hazard duration; rail only",
+            "source": "sim/s4-extras + world batch"
+          },
+          {
+            "name": "scrap-pickup",
+            "type": "small faceted octahedron",
+            "motion": "up to pickupSpeed (7u/s), magnet only",
+            "source": "saved extras.pickups; cap12"
+          },
+          {
+            "name": "kicked-metal-chips",
+            "type": "tiny metal fragments",
+            "motion": "0.6s ballistic settle/fade",
+            "source": "presentation only; cap6"
+          },
+          {
+            "name": "smashed-prop-fragments",
+            "type": "small broken crate/barrel pieces",
+            "motion": "0.4s settle; fades at2–3s",
+            "source": "presentation only; cap48"
+          },
+          {
+            "name": "outer-wrecks",
+            "type": "named car/container/conveyor/gear/crane/neon/hauler/meteor kit",
+            "motion": "separate float/rotation/swing/hauler shader modes; outside frame",
+            "source": "am-world-depth / c3-scrap-catalogue"
+          },
+          {
+            "name": "vent-smoke-embers",
+            "type": "soft plume + tiny sparks",
+            "motion": "local plume rises3–4u; outer chaos plumes separate",
+            "source": "am-world-depth pooled instances"
+          }
+        ],
+        "level": 2,
+        "seed": 12421,
+        "chapterSeed": 12421,
+        "vents": [
+          {
+            "id": 0,
+            "x": -15.5,
+            "z": 14,
+            "boost": true,
+            "phase": 139
+          },
+          {
+            "id": 1,
+            "x": 15,
+            "z": -8.5,
+            "boost": true,
+            "phase": 42
+          },
+          {
+            "id": 2,
+            "x": -8,
+            "z": -12,
+            "boost": false,
+            "phase": 125
+          },
+          {
+            "id": 3,
+            "x": -17,
+            "z": -9.5,
+            "boost": false,
+            "phase": 108
+          },
+          {
+            "id": 4,
+            "x": 4.5,
+            "z": 9,
+            "boost": false,
+            "phase": 232
+          }
+        ],
+        "props": 8,
+        "broken": 0,
+        "debris": 0,
+        "background": {
+          "catalogue": [
+            "crushed-car",
+            "ribbed-container",
+            "roller-conveyor",
+            "pendulum-saw",
+            "gear-train",
+            "crane-cables",
+            "abstract-neon-board",
+            "passing-hauler",
+            "meteor-scrap"
+          ],
+          "layers": 3,
+          "standardWrecks": 9,
+          "lowWrecks": 4,
+          "nearKineticModules": 6,
+          "lowNearModules": 2,
+          "animatedParts": 23
+        }
+      },
+      "hullCoverage": {
+        "fraction": 0.017361111111111112,
+        "samples": 576,
+        "solidHullHidden": false,
+        "method": "48u box / 6u depth proxy; not a pixel mask"
+      },
+      "coreScreen": {
+        "x": 422.0000000000001,
+        "y": 183.20320022657143,
+        "radius": 15.995261459675602
+      },
+      "heroAppearance": {
+        "eyes": {
+          "shape": "idle",
+          "morphSeconds": 0.08
+        },
+        "rollRadians": 0,
+        "wear": 0,
+        "bodyScale": [
+          1,
+          1,
+          1
+        ],
+        "faceVisible": true,
+        "crownVisible": true,
+        "zoom": "far",
+        "viewScale": 1.7178382983325107
+      },
+      "speed": {
+        "count": 0,
+        "opacity": 0
+      },
+      "motion": {
+        "ghosts": 0,
+        "ribbonInstances": 0,
+        "dustInstances": 0,
+        "scarSmoke": 0
+      },
+      "actorTriangles": {
+        "core": 1500,
+        "enemies": {
+          "sawlet": 1042,
+          "thrower": 1356,
+          "shieldsaw": 1546,
+          "grinder": 1460,
+          "whirler": 768
+        }
+      },
+      "meshCounts": [
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 180000,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 26072,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 4584,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 1652,
+          "calls": 1
+        },
+        {
+          "name": "named-props-chips-pickups-saw-cart",
+          "triangles": 1333.3333333333333,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 720,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 640,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 624,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 384,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 176,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 96,
+          "calls": 1
+        },
+        {
+          "name": "C1-C6-C7-C8-world",
+          "triangles": 68,
+          "calls": 1
+        },
+        {
+          "name": "core-eyes",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 48,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 24,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "core-marks",
+          "triangles": 16,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 10,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "AM1-armoured-arena",
+          "triangles": 2,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 3
+        },
+        {
+          "name": "Mesh",
+          "triangles": 0,
+          "calls": 1
+        }
+      ],
+      "scene": "arena",
+      "seed": 4107,
+      "tick": 240,
+      "simTick": 240,
+      "camera": {
+        "width": 23.805128205128202,
+        "height": 11,
+        "elevation": 30,
+        "azimuth": 45,
+        "squash": 0.49999999999999994
+      },
+      "arena": {
+        "width": 48,
+        "depth": 48,
+        "playHalfWidth": 21,
+        "cameraClamp": 17,
+        "openCentre": 22.4
+      },
+      "core": {
+        "assetVersion": "reference-10",
+        "studioCandidate": false,
+        "socketsLoaded": true,
+        "industrialParts": 98,
+        "finish": "blue-violet painted chrome",
+        "sheen": 0.6,
+        "screenHeightRatio": 0.11272727272727273
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "renderer": "WebKit WebGL",
+      "calls": 30,
+      "triangles": 43062,
+      "benchmarkPeak": {
+        "calls": 0,
+        "triangles": 0
+      },
+      "benchmarkEvents": {},
+      "benchmarkWork": {
+        "step": [],
+        "render": [],
+        "hud": []
+      },
+      "fight": {
+        "hp": 100,
+        "phase": {
+          "kind": "fight",
+          "wave": 0,
+          "nextSpawn": 11,
+          "nextSpawnIn": 60
+        },
+        "enemies": 5,
+        "alive": 5,
+        "projectiles": 0,
+        "charges": 2,
+        "heat": 0,
+        "overdrive": 0
+      }
+    }
+  }
+]

@@ -80,3 +80,6 @@ Original implementation: named cue projection, independent WebAudio fallback syn
 | `public/audio/music/battle-02.mp3` | Owner's `close1/public/audio/music/battle-02.mp3` | Private use, not redistributable |
 
 Files were copied only after public build exclusion was implemented. They and their generated manifest are git-ignored; production build excludes the complete private audio folder and creates an empty music manifest. Underlying music rights are not asserted. No commercial music was sourced externally. Original synth effects/ambience work when these files are absent. Earlier no-audio/no-runtime-copy notes below describe earlier checkpoints.
+
+## FINAL_POLISH ·2026-11-02
+Original sparse steel atlas/shader bands, pit terraces, asymmetric giant/wreck geometry, industrial CSS/SVG plates, lobby shafts and mechanical layered synth recipes authored locally. Reference sound.ts/audio.ts studied for layering/mix principles; snapshot uses offline synth and supplies no cue audio files. No reference code, image texture, audio recording or model copied. Original cue-listening.wav is REDLINE output. Existing owner music remains ignored and excluded from builds. No dependency or external asset added.

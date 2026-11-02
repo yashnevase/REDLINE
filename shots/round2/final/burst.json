@@ -1,0 +1,24 @@
+[
+  {
+    "quality": "standard",
+    "calls": 66,
+    "triangles": 57886,
+    "particles": 64,
+    "scrap": 32,
+    "rings": 8,
+    "errors": [],
+    "presentationFixture": true,
+    "simFrozen": true
+  },
+  {
+    "quality": "low",
+    "calls": 43,
+    "triangles": 22663,
+    "particles": 64,
+    "scrap": 32,
+    "rings": 8,
+    "errors": [],
+    "presentationFixture": true,
+    "simFrozen": true
+  }
+]

@@ -1,0 +1,1534 @@
+{
+  "emulatedDeviceInputs": true,
+  "physicalHardwareClaim": false,
+  "reports": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "name": "desktop"
+      },
+      "keyboard": true,
+      "simultaneousTouch": true,
+      "gamepad": true,
+      "replay": true,
+      "corners": [
+        {
+          "core": {
+            "x": 509.9397032675706,
+            "y": 405.5595361746317,
+            "radius": 49.82142857142858
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 190,
+                "y": 596.5,
+                "width": 250,
+                "height": 99.5
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 47,
+                "y": 522,
+                "width": 122,
+                "height": 122
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 1072,
+                "y": 535,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 1008,
+                "y": 597,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 1072,
+                "y": 613,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 1142,
+                "y": 530,
+                "width": 88,
+                "height": 88
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 1091,
+                "y": 497,
+                "width": 145,
+                "height": 25
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.2777777777777778,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 19.911111111111108,
+            "height": 11.2,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 806.5380143383653,
+            "y": 256.2429559172319,
+            "radius": 50.67946428571429
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 190,
+                "y": 596.5,
+                "width": 250,
+                "height": 99.5
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 47,
+                "y": 522,
+                "width": 122,
+                "height": 122
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 1072,
+                "y": 535,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 1008,
+                "y": 597,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 1072,
+                "y": 613,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 1142,
+                "y": 530,
+                "width": 88,
+                "height": 88
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 1091,
+                "y": 497,
+                "width": 145,
+                "height": 25
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.140625,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 19.911111111111108,
+            "height": 11.2,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 509.9397032841708,
+            "y": 240.952022426817,
+            "radius": 49.82142857142858
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 190,
+                "y": 596.5,
+                "width": 250,
+                "height": 99.5
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 47,
+                "y": 522,
+                "width": 122,
+                "height": 122
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 1072,
+                "y": 535,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 1008,
+                "y": 597,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 1072,
+                "y": 613,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 1142,
+                "y": 530,
+                "width": 88,
+                "height": 88
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 1091,
+                "y": 497,
+                "width": 145,
+                "height": 25
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 19.911111111111108,
+            "height": 11.2,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 475.39248623634523,
+            "y": 258.22563092658953,
+            "radius": 49.82142857142858
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 190,
+                "y": 596.5,
+                "width": 250,
+                "height": 99.5
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 47,
+                "y": 522,
+                "width": 122,
+                "height": 122
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 1072,
+                "y": 535,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 1008,
+                "y": 597,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 1072,
+                "y": 613,
+                "width": 54,
+                "height": 54
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 1142,
+                "y": 530,
+                "width": 88,
+                "height": 88
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 1091,
+                "y": 497,
+                "width": 145,
+                "height": 25
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.140625,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 19.911111111111108,
+            "height": 11.2,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390,
+        "name": "compact"
+      },
+      "keyboard": true,
+      "simultaneousTouch": true,
+      "gamepad": true,
+      "replay": true,
+      "corners": [
+        {
+          "core": {
+            "x": 350.2697757422534,
+            "y": 220.12677449593966,
+            "radius": 27.477272727272727
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 334,
+                "y": 311.5,
+                "width": 176,
+                "height": 66.5
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 30,
+                "y": 248,
+                "width": 87,
+                "height": 87
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 677.3203125,
+                "y": 234,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 622.3203125,
+                "y": 289,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 677.3203125,
+                "y": 316,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 739.2421875,
+                "y": 234,
+                "width": 77.7578125,
+                "height": 77.7578125
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 654,
+                "y": 197,
+                "width": 165,
+                "height": 29
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.2986111111111111,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 23.805128205128202,
+            "height": 11,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 514.7451615435501,
+            "y": 138.57843566212435,
+            "radius": 28.026818181818182
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 334,
+                "y": 311.5,
+                "width": 176,
+                "height": 66.5
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 30,
+                "y": 248,
+                "width": 87,
+                "height": 87
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 677.3203125,
+                "y": 234,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 622.3203125,
+                "y": 289,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 677.3203125,
+                "y": 316,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 739.2421875,
+                "y": 234,
+                "width": 77.7578125,
+                "height": 77.7578125
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 654,
+                "y": 197,
+                "width": 165,
+                "height": 29
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.11805555555555555,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 23.805128205128202,
+            "height": 11,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 350.26977575002905,
+            "y": 129.34323661083621,
+            "radius": 27.477272727272727
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 334,
+                "y": 311.5,
+                "width": 176,
+                "height": 66.5
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 30,
+                "y": 248,
+                "width": 87,
+                "height": 87
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 677.3203125,
+                "y": 234,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 622.3203125,
+                "y": 289,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 677.3203125,
+                "y": 316,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 739.2421875,
+                "y": 234,
+                "width": 77.7578125,
+                "height": 77.7578125
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 654,
+                "y": 197,
+                "width": 165,
+                "height": 29
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 23.805128205128202,
+            "height": 11,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 331.2164621062467,
+            "y": 138.8698934201897,
+            "radius": 27.477272727272727
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 334,
+                "y": 311.5,
+                "width": 176,
+                "height": 66.5
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 30,
+                "y": 248,
+                "width": 87,
+                "height": 87
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 677.3203125,
+                "y": 234,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 622.3203125,
+                "y": 289,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 677.3203125,
+                "y": 316,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 739.2421875,
+                "y": 234,
+                "width": 77.7578125,
+                "height": 77.7578125
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 654,
+                "y": 197,
+                "width": 165,
+                "height": 29
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.10590277777777778,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 23.805128205128202,
+            "height": 11,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 640,
+        "height": 360,
+        "name": "small"
+      },
+      "keyboard": true,
+      "simultaneousTouch": true,
+      "gamepad": true,
+      "replay": true,
+      "corners": [
+        {
+          "core": {
+            "x": 253.7874852994912,
+            "y": 203.1939456890849,
+            "radius": 25.363636363636363
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 232,
+                "y": 284,
+                "width": 176,
+                "height": 64
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 30,
+                "y": 218,
+                "width": 87,
+                "height": 87
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 486.3203125,
+                "y": 204,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 431.3203125,
+                "y": 259,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 486.3203125,
+                "y": 286,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 548.2421875,
+                "y": 204,
+                "width": 77.7578125,
+                "height": 77.7578125
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 513,
+                "y": 167,
+                "width": 115,
+                "height": 29
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.2777777777777778,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 19.555555555555554,
+            "height": 11,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 405.61091834722896,
+            "y": 127.91855599613885,
+            "radius": 25.87090909090909
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 232,
+                "y": 284,
+                "width": 176,
+                "height": 64
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 30,
+                "y": 218,
+                "width": 87,
+                "height": 87
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 486.3203125,
+                "y": 204,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 431.3203125,
+                "y": 259,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 486.3203125,
+                "y": 286,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 548.2421875,
+                "y": 204,
+                "width": 77.7578125,
+                "height": 77.7578125
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 513,
+                "y": 167,
+                "width": 115,
+                "height": 29
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.125,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 19.555555555555554,
+            "height": 11,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 253.78748530739657,
+            "y": 119.39375687137985,
+            "radius": 25.363636363636363
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 232,
+                "y": 284,
+                "width": 176,
+                "height": 64
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 30,
+                "y": 218,
+                "width": 87,
+                "height": 87
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 486.3203125,
+                "y": 204,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 431.3203125,
+                "y": 259,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 486.3203125,
+                "y": 286,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 548.2421875,
+                "y": 204,
+                "width": 77.7578125,
+                "height": 77.7578125
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 513,
+                "y": 167,
+                "width": 115,
+                "height": 29
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 19.555555555555554,
+            "height": 11,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 236.19981117467597,
+            "y": 128.18759392616846,
+            "radius": 25.363636363636363
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 232,
+                "y": 284,
+                "width": 176,
+                "height": 64
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 30,
+                "y": 218,
+                "width": 87,
+                "height": 87
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 486.3203125,
+                "y": 204,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 431.3203125,
+                "y": 259,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 486.3203125,
+                "y": 286,
+                "width": 49.6796875,
+                "height": 49.6796875
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 548.2421875,
+                "y": 204,
+                "width": 77.7578125,
+                "height": 77.7578125
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 513,
+                "y": 167,
+                "width": 115,
+                "height": 29
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.140625,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 19.555555555555554,
+            "height": 11,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "name": "portrait"
+      },
+      "keyboard": true,
+      "simultaneousTouch": true,
+      "gamepad": true,
+      "replay": true,
+      "corners": [
+        {
+          "core": {
+            "x": 123.2697757412794,
+            "y": 422.05662498163093,
+            "radius": 27.477272727272723
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 20,
+                "y": 72,
+                "width": 176,
+                "height": 95
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 24,
+                "y": 699,
+                "width": 90,
+                "height": 90
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 236,
+                "y": 681,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 176,
+                "y": 743,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 236,
+                "y": 761,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 292,
+                "y": 681,
+                "width": 82,
+                "height": 82
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 229,
+                "y": 648,
+                "width": 145,
+                "height": 25
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.2152777777777778,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 11,
+            "height": 23.805128205128206,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 236.60205653336664,
+            "y": 365.5784356621243,
+            "radius": 28.02681818181818
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 20,
+                "y": 72,
+                "width": 176,
+                "height": 95
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 24,
+                "y": 699,
+                "width": 90,
+                "height": 90
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 236,
+                "y": 681,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 176,
+                "y": 743,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 236,
+                "y": 761,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 292,
+                "y": 681,
+                "width": 82,
+                "height": 82
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 229,
+                "y": 648,
+                "width": 145,
+                "height": 25
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.21875,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 11,
+            "height": 23.805128205128206,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 123.26977574998394,
+            "y": 381.41338612560946,
+            "radius": 27.477272727272723
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 20,
+                "y": 72,
+                "width": 176,
+                "height": 95
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 24,
+                "y": 699,
+                "width": 90,
+                "height": 90
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 236,
+                "y": 681,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 176,
+                "y": 743,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 236,
+                "y": 761,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 292,
+                "y": 681,
+                "width": 82,
+                "height": 82
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 229,
+                "y": 648,
+                "width": 145,
+                "height": 25
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 11,
+            "height": 23.805128205128206,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        },
+        {
+          "core": {
+            "x": 154.35676113600044,
+            "y": 365.8698934202709,
+            "radius": 27.477272727272723
+          },
+          "hits": [
+            {
+              "className": "health",
+              "overlap": false,
+              "bounds": {
+                "x": 20,
+                "y": 72,
+                "width": 176,
+                "height": 95
+              }
+            },
+            {
+              "className": "study-stick",
+              "overlap": false,
+              "bounds": {
+                "x": 24,
+                "y": 699,
+                "width": 90,
+                "height": 90
+              }
+            },
+            {
+              "className": "ability skill pulse",
+              "overlap": false,
+              "bounds": {
+                "x": 236,
+                "y": 681,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability skill boost",
+              "overlap": false,
+              "bounds": {
+                "x": 176,
+                "y": 743,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability skill stomp",
+              "overlap": false,
+              "bounds": {
+                "x": 236,
+                "y": 761,
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "className": "ability dash live-dash",
+              "overlap": false,
+              "bounds": {
+                "x": 292,
+                "y": 681,
+                "width": 82,
+                "height": 82
+              }
+            },
+            {
+              "className": "overdrive-button",
+              "overlap": false,
+              "bounds": {
+                "x": 229,
+                "y": 648,
+                "width": 145,
+                "height": 25
+              }
+            }
+          ],
+          "hull": {
+            "fraction": 0.2152777777777778,
+            "samples": 576,
+            "solidHullHidden": false,
+            "method": "48u box / 6u depth proxy; not a pixel mask"
+          },
+          "camera": {
+            "width": 11,
+            "height": 23.805128205128206,
+            "elevation": 30,
+            "azimuth": 45,
+            "squash": 0.49999999999999994
+          }
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

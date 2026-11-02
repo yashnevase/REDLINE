@@ -1,0 +1,3458 @@
+[
+  {
+    "mission": 0,
+    "difficulty": "chill",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 120,
+    "seconds": 19.833333333333332,
+    "score": 40423,
+    "peakAlive": 10,
+    "peakAttackers": 3,
+    "multi": 4,
+    "damagedFrames": 676,
+    "bestChain": 33,
+    "exactReplay": true,
+    "finalStateSha256": "6d6205fa965dcde4d24da5cfaadf4213343c33839ff6846b4fdfd4483dfb95b6",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 31
+      },
+      {
+        "second": 2,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 37
+      },
+      {
+        "second": 3,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 43
+      },
+      {
+        "second": 4,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 49
+      },
+      {
+        "second": 5,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 55
+      },
+      {
+        "second": 6,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 58
+      },
+      {
+        "second": 7,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 61
+      },
+      {
+        "second": 8,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 67
+      },
+      {
+        "second": 9,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 73
+      },
+      {
+        "second": 10,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "second": 11,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 82
+      },
+      {
+        "second": 12,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 88
+      },
+      {
+        "second": 13,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 91
+      },
+      {
+        "second": 14,
+        "alive": 1,
+        "hp": 95,
+        "pressure": 97
+      },
+      {
+        "second": 15,
+        "alive": 1,
+        "hp": 96,
+        "pressure": 100
+      },
+      {
+        "second": 16,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 17,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 18,
+        "alive": 6,
+        "hp": 95,
+        "pressure": 96
+      },
+      {
+        "second": 19,
+        "alive": 1,
+        "hp": 97,
+        "pressure": 92
+      }
+    ]
+  },
+  {
+    "mission": 1,
+    "difficulty": "chill",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 120,
+    "seconds": 42.85,
+    "score": 157818,
+    "peakAlive": 10,
+    "peakAttackers": 3,
+    "multi": 4,
+    "damagedFrames": 1726,
+    "bestChain": 112,
+    "exactReplay": true,
+    "finalStateSha256": "d14d288b80587a8bcb057fd44c4c72501d97aeea8e487811f39175a74718f42e",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 31
+      },
+      {
+        "second": 2,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 37
+      },
+      {
+        "second": 3,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 43
+      },
+      {
+        "second": 4,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 49
+      },
+      {
+        "second": 5,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 55
+      },
+      {
+        "second": 6,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 61
+      },
+      {
+        "second": 7,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 67
+      },
+      {
+        "second": 8,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 73
+      },
+      {
+        "second": 9,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "second": 10,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 85
+      },
+      {
+        "second": 11,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 88
+      },
+      {
+        "second": 12,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 94
+      },
+      {
+        "second": 13,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 97
+      },
+      {
+        "second": 14,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 15,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 16,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 17,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 18,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 19,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 20,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 21,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 22,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 23,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 24,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 25,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 26,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 27,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 28,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 29,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 30,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 31,
+        "alive": 10,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 32,
+        "alive": 10,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 33,
+        "alive": 8,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 34,
+        "alive": 8,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 35,
+        "alive": 7,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 36,
+        "alive": 8,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 37,
+        "alive": 9,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 38,
+        "alive": 7,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 39,
+        "alive": 4,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 40,
+        "alive": 4,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 41,
+        "alive": 2,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 42,
+        "alive": 1,
+        "hp": 120,
+        "pressure": 100
+      }
+    ]
+  },
+  {
+    "mission": 2,
+    "difficulty": "chill",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 120,
+    "seconds": 83.36666666666666,
+    "score": 247217,
+    "peakAlive": 10,
+    "peakAttackers": 3,
+    "multi": 3,
+    "damagedFrames": 3945,
+    "bestChain": 88,
+    "exactReplay": true,
+    "finalStateSha256": "b618e6d663d2ea74a51bdca2b383c3013c2e8ae7a748410a0bfc6027677d27f0",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 28
+      },
+      {
+        "second": 2,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 34
+      },
+      {
+        "second": 3,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 40
+      },
+      {
+        "second": 4,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 46
+      },
+      {
+        "second": 5,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 52
+      },
+      {
+        "second": 6,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 58
+      },
+      {
+        "second": 7,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 58
+      },
+      {
+        "second": 8,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 61
+      },
+      {
+        "second": 9,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 67
+      },
+      {
+        "second": 10,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 73
+      },
+      {
+        "second": 11,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "second": 12,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 85
+      },
+      {
+        "second": 13,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 91
+      },
+      {
+        "second": 14,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 97
+      },
+      {
+        "second": 15,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 16,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 17,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 18,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 19,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 20,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 21,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 22,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 23,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 24,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 25,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 26,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 27,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 28,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 29,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 30,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 31,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 32,
+        "alive": 1,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "second": 33,
+        "alive": 1,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "second": 34,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 35,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 36,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 37,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 38,
+        "alive": 8,
+        "hp": 82,
+        "pressure": 96
+      },
+      {
+        "second": 39,
+        "alive": 5,
+        "hp": 40,
+        "pressure": 88
+      },
+      {
+        "second": 40,
+        "alive": 5,
+        "hp": 40,
+        "pressure": 80
+      },
+      {
+        "second": 41,
+        "alive": 5,
+        "hp": 40,
+        "pressure": 72
+      },
+      {
+        "second": 42,
+        "alive": 5,
+        "hp": 42,
+        "pressure": 68
+      },
+      {
+        "second": 43,
+        "alive": 5,
+        "hp": 42,
+        "pressure": 60
+      },
+      {
+        "second": 44,
+        "alive": 5,
+        "hp": 44,
+        "pressure": 52
+      },
+      {
+        "second": 45,
+        "alive": 6,
+        "hp": 45,
+        "pressure": 44
+      },
+      {
+        "second": 46,
+        "alive": 5,
+        "hp": 45,
+        "pressure": 36
+      },
+      {
+        "second": 47,
+        "alive": 4,
+        "hp": 47,
+        "pressure": 35
+      },
+      {
+        "second": 48,
+        "alive": 2,
+        "hp": 50,
+        "pressure": 35
+      },
+      {
+        "second": 49,
+        "alive": 1,
+        "hp": 51,
+        "pressure": 35
+      },
+      {
+        "second": 50,
+        "alive": 10,
+        "hp": 97,
+        "pressure": 38
+      },
+      {
+        "second": 51,
+        "alive": 10,
+        "hp": 97,
+        "pressure": 44
+      },
+      {
+        "second": 52,
+        "alive": 10,
+        "hp": 97,
+        "pressure": 47
+      },
+      {
+        "second": 53,
+        "alive": 9,
+        "hp": 98,
+        "pressure": 53
+      },
+      {
+        "second": 54,
+        "alive": 8,
+        "hp": 87,
+        "pressure": 53
+      },
+      {
+        "second": 55,
+        "alive": 8,
+        "hp": 88,
+        "pressure": 55
+      },
+      {
+        "second": 56,
+        "alive": 8,
+        "hp": 89,
+        "pressure": 55
+      },
+      {
+        "second": 57,
+        "alive": 8,
+        "hp": 90,
+        "pressure": 55
+      },
+      {
+        "second": 58,
+        "alive": 7,
+        "hp": 91,
+        "pressure": 55
+      },
+      {
+        "second": 59,
+        "alive": 8,
+        "hp": 92,
+        "pressure": 55
+      },
+      {
+        "second": 60,
+        "alive": 7,
+        "hp": 93,
+        "pressure": 55
+      },
+      {
+        "second": 61,
+        "alive": 5,
+        "hp": 82,
+        "pressure": 55
+      },
+      {
+        "second": 62,
+        "alive": 5,
+        "hp": 84,
+        "pressure": 55
+      },
+      {
+        "second": 63,
+        "alive": 4,
+        "hp": 80,
+        "pressure": 55
+      },
+      {
+        "second": 64,
+        "alive": 2,
+        "hp": 82,
+        "pressure": 55
+      },
+      {
+        "second": 65,
+        "alive": 2,
+        "hp": 82,
+        "pressure": 55
+      },
+      {
+        "second": 66,
+        "alive": 1,
+        "hp": 83,
+        "pressure": 55
+      },
+      {
+        "second": 67,
+        "alive": 10,
+        "hp": 114,
+        "pressure": 58
+      },
+      {
+        "second": 68,
+        "alive": 10,
+        "hp": 114,
+        "pressure": 64
+      },
+      {
+        "second": 69,
+        "alive": 8,
+        "hp": 116,
+        "pressure": 70
+      },
+      {
+        "second": 70,
+        "alive": 8,
+        "hp": 116,
+        "pressure": 76
+      },
+      {
+        "second": 71,
+        "alive": 7,
+        "hp": 119,
+        "pressure": 79
+      },
+      {
+        "second": 72,
+        "alive": 7,
+        "hp": 120,
+        "pressure": 85
+      },
+      {
+        "second": 73,
+        "alive": 7,
+        "hp": 120,
+        "pressure": 91
+      },
+      {
+        "second": 74,
+        "alive": 7,
+        "hp": 120,
+        "pressure": 97
+      },
+      {
+        "second": 75,
+        "alive": 8,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 76,
+        "alive": 8,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 77,
+        "alive": 5,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 78,
+        "alive": 6,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 79,
+        "alive": 5,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 80,
+        "alive": 4,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 81,
+        "alive": 3,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 82,
+        "alive": 2,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "second": 83,
+        "alive": 1,
+        "hp": 120,
+        "pressure": 100
+      }
+    ]
+  },
+  {
+    "mission": 3,
+    "difficulty": "chill",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 75,
+    "seconds": 19.25,
+    "score": 69786,
+    "peakAlive": 6,
+    "peakAttackers": 3,
+    "multi": 3,
+    "damagedFrames": 449,
+    "bestChain": 30,
+    "exactReplay": true,
+    "finalStateSha256": "c22ccf46f8c4dab06e86a415f58c852f73b507e872e28615be4f8e9e12981e47",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 25
+      },
+      {
+        "second": 2,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 31
+      },
+      {
+        "second": 3,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 37
+      },
+      {
+        "second": 4,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 43
+      },
+      {
+        "second": 5,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 49
+      },
+      {
+        "second": 6,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 55
+      },
+      {
+        "second": 7,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 58
+      },
+      {
+        "second": 8,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 64
+      },
+      {
+        "second": 9,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 70
+      },
+      {
+        "second": 10,
+        "alive": 4,
+        "hp": 70,
+        "pressure": 69
+      },
+      {
+        "second": 11,
+        "alive": 5,
+        "hp": 73,
+        "pressure": 65
+      },
+      {
+        "second": 12,
+        "alive": 5,
+        "hp": 73,
+        "pressure": 57
+      },
+      {
+        "second": 13,
+        "alive": 5,
+        "hp": 73,
+        "pressure": 55
+      },
+      {
+        "second": 14,
+        "alive": 4,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 15,
+        "alive": 4,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 16,
+        "alive": 6,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 17,
+        "alive": 6,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 18,
+        "alive": 6,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 19,
+        "alive": 6,
+        "hp": 74,
+        "pressure": 55
+      }
+    ]
+  },
+  {
+    "mission": 0,
+    "difficulty": "normal",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 120,
+    "seconds": 30.983333333333334,
+    "score": 68078,
+    "peakAlive": 14,
+    "peakAttackers": 4,
+    "multi": 5,
+    "damagedFrames": 1465,
+    "bestChain": 46,
+    "exactReplay": true,
+    "finalStateSha256": "764551058bf43ea683520eb807511c4b13faa59e37888bba4a93a8afa2a0827d",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 56
+      },
+      {
+        "second": 2,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 59
+      },
+      {
+        "second": 3,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 62
+      },
+      {
+        "second": 4,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 65
+      },
+      {
+        "second": 5,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 68
+      },
+      {
+        "second": 6,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 74
+      },
+      {
+        "second": 7,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "second": 8,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 86
+      },
+      {
+        "second": 9,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 92
+      },
+      {
+        "second": 10,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 95
+      },
+      {
+        "second": 11,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 98
+      },
+      {
+        "second": 12,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 13,
+        "alive": 12,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "second": 14,
+        "alive": 13,
+        "hp": 97,
+        "pressure": 100
+      },
+      {
+        "second": 15,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 16,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 17,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 18,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 19,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 20,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 21,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 22,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 23,
+        "alive": 13,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 24,
+        "alive": 14,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 25,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 26,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 27,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 28,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 29,
+        "alive": 3,
+        "hp": 89,
+        "pressure": 96
+      },
+      {
+        "second": 30,
+        "alive": 2,
+        "hp": 89,
+        "pressure": 92
+      }
+    ]
+  },
+  {
+    "mission": 1,
+    "difficulty": "normal",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 120,
+    "seconds": 65.95,
+    "score": 176187,
+    "peakAlive": 14,
+    "peakAttackers": 4,
+    "multi": 4,
+    "damagedFrames": 3051,
+    "bestChain": 57,
+    "exactReplay": true,
+    "finalStateSha256": "76a7e41bbe6fb5fab06697974c318fe8603e7c262a8224cbf4e2f1612e989717",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 56
+      },
+      {
+        "second": 2,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 62
+      },
+      {
+        "second": 3,
+        "alive": 12,
+        "hp": 94,
+        "pressure": 68
+      },
+      {
+        "second": 4,
+        "alive": 11,
+        "hp": 95,
+        "pressure": 74
+      },
+      {
+        "second": 5,
+        "alive": 12,
+        "hp": 96,
+        "pressure": 80
+      },
+      {
+        "second": 6,
+        "alive": 8,
+        "hp": 99,
+        "pressure": 80
+      },
+      {
+        "second": 7,
+        "alive": 8,
+        "hp": 89,
+        "pressure": 80
+      },
+      {
+        "second": 8,
+        "alive": 7,
+        "hp": 91,
+        "pressure": 80
+      },
+      {
+        "second": 9,
+        "alive": 7,
+        "hp": 92,
+        "pressure": 80
+      },
+      {
+        "second": 10,
+        "alive": 7,
+        "hp": 93,
+        "pressure": 80
+      },
+      {
+        "second": 11,
+        "alive": 7,
+        "hp": 93,
+        "pressure": 80
+      },
+      {
+        "second": 12,
+        "alive": 6,
+        "hp": 94,
+        "pressure": 86
+      },
+      {
+        "second": 13,
+        "alive": 6,
+        "hp": 94,
+        "pressure": 92
+      },
+      {
+        "second": 14,
+        "alive": 5,
+        "hp": 82,
+        "pressure": 88
+      },
+      {
+        "second": 15,
+        "alive": 5,
+        "hp": 83,
+        "pressure": 80
+      },
+      {
+        "second": 16,
+        "alive": 4,
+        "hp": 83,
+        "pressure": 72
+      },
+      {
+        "second": 17,
+        "alive": 2,
+        "hp": 85,
+        "pressure": 64
+      },
+      {
+        "second": 18,
+        "alive": 2,
+        "hp": 86,
+        "pressure": 63
+      },
+      {
+        "second": 19,
+        "alive": 13,
+        "hp": 100,
+        "pressure": 69
+      },
+      {
+        "second": 20,
+        "alive": 13,
+        "hp": 100,
+        "pressure": 75
+      },
+      {
+        "second": 21,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 81
+      },
+      {
+        "second": 22,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 84
+      },
+      {
+        "second": 23,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 90
+      },
+      {
+        "second": 24,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 93
+      },
+      {
+        "second": 25,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 96
+      },
+      {
+        "second": 26,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 27,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 28,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 29,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 30,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 31,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 32,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 33,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 34,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 35,
+        "alive": 13,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 36,
+        "alive": 11,
+        "hp": 88,
+        "pressure": 100
+      },
+      {
+        "second": 37,
+        "alive": 11,
+        "hp": 90,
+        "pressure": 92
+      },
+      {
+        "second": 38,
+        "alive": 10,
+        "hp": 80,
+        "pressure": 84
+      },
+      {
+        "second": 39,
+        "alive": 10,
+        "hp": 81,
+        "pressure": 80
+      },
+      {
+        "second": 40,
+        "alive": 10,
+        "hp": 82,
+        "pressure": 72
+      },
+      {
+        "second": 41,
+        "alive": 9,
+        "hp": 83,
+        "pressure": 68
+      },
+      {
+        "second": 42,
+        "alive": 9,
+        "hp": 73,
+        "pressure": 60
+      },
+      {
+        "second": 43,
+        "alive": 9,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 44,
+        "alive": 9,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 45,
+        "alive": 8,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 46,
+        "alive": 4,
+        "hp": 77,
+        "pressure": 55
+      },
+      {
+        "second": 47,
+        "alive": 3,
+        "hp": 78,
+        "pressure": 55
+      },
+      {
+        "second": 48,
+        "alive": 3,
+        "hp": 78,
+        "pressure": 55
+      },
+      {
+        "second": 49,
+        "alive": 2,
+        "hp": 80,
+        "pressure": 55
+      },
+      {
+        "second": 50,
+        "alive": 12,
+        "hp": 120,
+        "pressure": 58
+      },
+      {
+        "second": 51,
+        "alive": 11,
+        "hp": 120,
+        "pressure": 61
+      },
+      {
+        "second": 52,
+        "alive": 10,
+        "hp": 120,
+        "pressure": 67
+      },
+      {
+        "second": 53,
+        "alive": 9,
+        "hp": 120,
+        "pressure": 73
+      },
+      {
+        "second": 54,
+        "alive": 9,
+        "hp": 109,
+        "pressure": 79
+      },
+      {
+        "second": 55,
+        "alive": 7,
+        "hp": 112,
+        "pressure": 85
+      },
+      {
+        "second": 56,
+        "alive": 6,
+        "hp": 113,
+        "pressure": 88
+      },
+      {
+        "second": 57,
+        "alive": 6,
+        "hp": 115,
+        "pressure": 94
+      },
+      {
+        "second": 58,
+        "alive": 7,
+        "hp": 115,
+        "pressure": 100
+      },
+      {
+        "second": 59,
+        "alive": 6,
+        "hp": 116,
+        "pressure": 100
+      },
+      {
+        "second": 60,
+        "alive": 6,
+        "hp": 117,
+        "pressure": 100
+      },
+      {
+        "second": 61,
+        "alive": 6,
+        "hp": 113,
+        "pressure": 100
+      },
+      {
+        "second": 62,
+        "alive": 6,
+        "hp": 101,
+        "pressure": 96
+      },
+      {
+        "second": 63,
+        "alive": 4,
+        "hp": 103,
+        "pressure": 88
+      },
+      {
+        "second": 64,
+        "alive": 4,
+        "hp": 103,
+        "pressure": 80
+      },
+      {
+        "second": 65,
+        "alive": 3,
+        "hp": 104,
+        "pressure": 80
+      }
+    ]
+  },
+  {
+    "mission": 2,
+    "difficulty": "normal",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 63,
+    "seconds": 110.55,
+    "score": 291613,
+    "peakAlive": 14,
+    "peakAttackers": 4,
+    "multi": 3,
+    "damagedFrames": 6052,
+    "bestChain": 51,
+    "exactReplay": true,
+    "finalStateSha256": "e3beaac0e502f7af98dc84d2da1a8cf70a17f948009eafb07416ad2ad4adb736",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 56
+      },
+      {
+        "second": 2,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 62
+      },
+      {
+        "second": 3,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 68
+      },
+      {
+        "second": 4,
+        "alive": 11,
+        "hp": 82,
+        "pressure": 71
+      },
+      {
+        "second": 5,
+        "alive": 11,
+        "hp": 83,
+        "pressure": 63
+      },
+      {
+        "second": 6,
+        "alive": 11,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "second": 7,
+        "alive": 12,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "second": 8,
+        "alive": 11,
+        "hp": 87,
+        "pressure": 61
+      },
+      {
+        "second": 9,
+        "alive": 9,
+        "hp": 90,
+        "pressure": 67
+      },
+      {
+        "second": 10,
+        "alive": 9,
+        "hp": 90,
+        "pressure": 70
+      },
+      {
+        "second": 11,
+        "alive": 7,
+        "hp": 91,
+        "pressure": 76
+      },
+      {
+        "second": 12,
+        "alive": 8,
+        "hp": 93,
+        "pressure": 82
+      },
+      {
+        "second": 13,
+        "alive": 9,
+        "hp": 94,
+        "pressure": 88
+      },
+      {
+        "second": 14,
+        "alive": 8,
+        "hp": 94,
+        "pressure": 94
+      },
+      {
+        "second": 15,
+        "alive": 6,
+        "hp": 97,
+        "pressure": 100
+      },
+      {
+        "second": 16,
+        "alive": 5,
+        "hp": 98,
+        "pressure": 100
+      },
+      {
+        "second": 17,
+        "alive": 5,
+        "hp": 98,
+        "pressure": 100
+      },
+      {
+        "second": 18,
+        "alive": 4,
+        "hp": 99,
+        "pressure": 100
+      },
+      {
+        "second": 19,
+        "alive": 4,
+        "hp": 77.4,
+        "pressure": 96
+      },
+      {
+        "second": 20,
+        "alive": 2,
+        "hp": 78.4,
+        "pressure": 88
+      },
+      {
+        "second": 21,
+        "alive": 1,
+        "hp": 80.4,
+        "pressure": 80
+      },
+      {
+        "second": 22,
+        "alive": 13,
+        "hp": 100,
+        "pressure": 86
+      },
+      {
+        "second": 23,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 92
+      },
+      {
+        "second": 24,
+        "alive": 14,
+        "hp": 100,
+        "pressure": 98
+      },
+      {
+        "second": 25,
+        "alive": 14,
+        "hp": 94,
+        "pressure": 100
+      },
+      {
+        "second": 26,
+        "alive": 13,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "second": 27,
+        "alive": 12,
+        "hp": 97,
+        "pressure": 100
+      },
+      {
+        "second": 28,
+        "alive": 10,
+        "hp": 99,
+        "pressure": 100
+      },
+      {
+        "second": 29,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 30,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 31,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 32,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 33,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 34,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 35,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 36,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 37,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 38,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 39,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 40,
+        "alive": 6,
+        "hp": 71,
+        "pressure": 96
+      },
+      {
+        "second": 41,
+        "alive": 4,
+        "hp": 60,
+        "pressure": 96
+      },
+      {
+        "second": 42,
+        "alive": 3,
+        "hp": 62,
+        "pressure": 88
+      },
+      {
+        "second": 43,
+        "alive": 1,
+        "hp": 63,
+        "pressure": 84
+      },
+      {
+        "second": 44,
+        "alive": 12,
+        "hp": 90,
+        "pressure": 80
+      },
+      {
+        "second": 45,
+        "alive": 13,
+        "hp": 91,
+        "pressure": 86
+      },
+      {
+        "second": 46,
+        "alive": 14,
+        "hp": 91,
+        "pressure": 92
+      },
+      {
+        "second": 47,
+        "alive": 11,
+        "hp": 92,
+        "pressure": 98
+      },
+      {
+        "second": 48,
+        "alive": 12,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "second": 49,
+        "alive": 8,
+        "hp": 92,
+        "pressure": 100
+      },
+      {
+        "second": 50,
+        "alive": 6,
+        "hp": 82,
+        "pressure": 100
+      },
+      {
+        "second": 51,
+        "alive": 7,
+        "hp": 84,
+        "pressure": 100
+      },
+      {
+        "second": 52,
+        "alive": 8,
+        "hp": 84,
+        "pressure": 92
+      },
+      {
+        "second": 53,
+        "alive": 8,
+        "hp": 55,
+        "pressure": 88
+      },
+      {
+        "second": 54,
+        "alive": 7,
+        "hp": 57,
+        "pressure": 80
+      },
+      {
+        "second": 55,
+        "alive": 8,
+        "hp": 57,
+        "pressure": 72
+      },
+      {
+        "second": 56,
+        "alive": 7,
+        "hp": 57,
+        "pressure": 68
+      },
+      {
+        "second": 57,
+        "alive": 7,
+        "hp": 57,
+        "pressure": 60
+      },
+      {
+        "second": 58,
+        "alive": 7,
+        "hp": 58,
+        "pressure": 55
+      },
+      {
+        "second": 59,
+        "alive": 7,
+        "hp": 58,
+        "pressure": 55
+      },
+      {
+        "second": 60,
+        "alive": 5,
+        "hp": 48,
+        "pressure": 51
+      },
+      {
+        "second": 61,
+        "alive": 5,
+        "hp": 18,
+        "pressure": 43
+      },
+      {
+        "second": 62,
+        "alive": 4,
+        "hp": 13,
+        "pressure": 35
+      },
+      {
+        "second": 63,
+        "alive": 3,
+        "hp": 14,
+        "pressure": 27
+      },
+      {
+        "second": 64,
+        "alive": 1,
+        "hp": 14,
+        "pressure": 19
+      },
+      {
+        "second": 65,
+        "alive": 12,
+        "hp": 60,
+        "pressure": 22
+      },
+      {
+        "second": 66,
+        "alive": 11,
+        "hp": 62,
+        "pressure": 25
+      },
+      {
+        "second": 67,
+        "alive": 12,
+        "hp": 50,
+        "pressure": 28
+      },
+      {
+        "second": 68,
+        "alive": 11,
+        "hp": 52,
+        "pressure": 31
+      },
+      {
+        "second": 69,
+        "alive": 8,
+        "hp": 56,
+        "pressure": 35
+      },
+      {
+        "second": 70,
+        "alive": 10,
+        "hp": 56,
+        "pressure": 35
+      },
+      {
+        "second": 71,
+        "alive": 10,
+        "hp": 58,
+        "pressure": 35
+      },
+      {
+        "second": 72,
+        "alive": 10,
+        "hp": 58,
+        "pressure": 35
+      },
+      {
+        "second": 73,
+        "alive": 10,
+        "hp": 58,
+        "pressure": 35
+      },
+      {
+        "second": 74,
+        "alive": 11,
+        "hp": 47,
+        "pressure": 35
+      },
+      {
+        "second": 75,
+        "alive": 9,
+        "hp": 49,
+        "pressure": 35
+      },
+      {
+        "second": 76,
+        "alive": 10,
+        "hp": 49,
+        "pressure": 35
+      },
+      {
+        "second": 77,
+        "alive": 10,
+        "hp": 51,
+        "pressure": 35
+      },
+      {
+        "second": 78,
+        "alive": 8,
+        "hp": 52,
+        "pressure": 35
+      },
+      {
+        "second": 79,
+        "alive": 8,
+        "hp": 53,
+        "pressure": 35
+      },
+      {
+        "second": 80,
+        "alive": 7,
+        "hp": 56,
+        "pressure": 35
+      },
+      {
+        "second": 81,
+        "alive": 7,
+        "hp": 56,
+        "pressure": 35
+      },
+      {
+        "second": 82,
+        "alive": 5,
+        "hp": 26,
+        "pressure": 27
+      },
+      {
+        "second": 83,
+        "alive": 5,
+        "hp": 26,
+        "pressure": 19
+      },
+      {
+        "second": 84,
+        "alive": 3,
+        "hp": 29,
+        "pressure": 11
+      },
+      {
+        "second": 85,
+        "alive": 3,
+        "hp": 30,
+        "pressure": 10
+      },
+      {
+        "second": 86,
+        "alive": 3,
+        "hp": 31,
+        "pressure": 10
+      },
+      {
+        "second": 87,
+        "alive": 2,
+        "hp": 32,
+        "pressure": 10
+      },
+      {
+        "second": 88,
+        "alive": 1,
+        "hp": 33,
+        "pressure": 10
+      },
+      {
+        "second": 89,
+        "alive": 12,
+        "hp": 64,
+        "pressure": 13
+      },
+      {
+        "second": 90,
+        "alive": 12,
+        "hp": 64,
+        "pressure": 16
+      },
+      {
+        "second": 91,
+        "alive": 12,
+        "hp": 66,
+        "pressure": 22
+      },
+      {
+        "second": 92,
+        "alive": 12,
+        "hp": 67,
+        "pressure": 28
+      },
+      {
+        "second": 93,
+        "alive": 12,
+        "hp": 67,
+        "pressure": 34
+      },
+      {
+        "second": 94,
+        "alive": 11,
+        "hp": 68,
+        "pressure": 40
+      },
+      {
+        "second": 95,
+        "alive": 10,
+        "hp": 70,
+        "pressure": 46
+      },
+      {
+        "second": 96,
+        "alive": 8,
+        "hp": 73,
+        "pressure": 52
+      },
+      {
+        "second": 97,
+        "alive": 8,
+        "hp": 61,
+        "pressure": 44
+      },
+      {
+        "second": 98,
+        "alive": 7,
+        "hp": 62,
+        "pressure": 40
+      },
+      {
+        "second": 99,
+        "alive": 6,
+        "hp": 51,
+        "pressure": 35
+      },
+      {
+        "second": 100,
+        "alive": 5,
+        "hp": 51,
+        "pressure": 35
+      },
+      {
+        "second": 101,
+        "alive": 6,
+        "hp": 54,
+        "pressure": 35
+      },
+      {
+        "second": 102,
+        "alive": 5,
+        "hp": 42,
+        "pressure": 35
+      },
+      {
+        "second": 103,
+        "alive": 4,
+        "hp": 44,
+        "pressure": 35
+      },
+      {
+        "second": 104,
+        "alive": 5,
+        "hp": 47,
+        "pressure": 35
+      },
+      {
+        "second": 105,
+        "alive": 3,
+        "hp": 49,
+        "pressure": 35
+      },
+      {
+        "second": 106,
+        "alive": 3,
+        "hp": 49,
+        "pressure": 35
+      },
+      {
+        "second": 107,
+        "alive": 3,
+        "hp": 49,
+        "pressure": 35
+      },
+      {
+        "second": 108,
+        "alive": 1,
+        "hp": 50,
+        "pressure": 35
+      },
+      {
+        "second": 109,
+        "alive": 1,
+        "hp": 51,
+        "pressure": 35
+      },
+      {
+        "second": 110,
+        "alive": 1,
+        "hp": 33,
+        "pressure": 31
+      }
+    ]
+  },
+  {
+    "mission": 3,
+    "difficulty": "normal",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 23.39999999999999,
+    "seconds": 17.366666666666667,
+    "score": 10020,
+    "peakAlive": 6,
+    "peakAttackers": 4,
+    "multi": 3,
+    "damagedFrames": 330,
+    "bestChain": 20,
+    "exactReplay": true,
+    "finalStateSha256": "ef028d4897f7adaa32afff53ded7e5ec82b7827cf47216d6e794b35355c4d2b5",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 50
+      },
+      {
+        "second": 2,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 56
+      },
+      {
+        "second": 3,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 62
+      },
+      {
+        "second": 4,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 68
+      },
+      {
+        "second": 5,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 74
+      },
+      {
+        "second": 6,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 77
+      },
+      {
+        "second": 7,
+        "alive": 6,
+        "hp": 92.8,
+        "pressure": 80
+      },
+      {
+        "second": 8,
+        "alive": 6,
+        "hp": 80.8,
+        "pressure": 72
+      },
+      {
+        "second": 9,
+        "alive": 5,
+        "hp": 50.599999999999994,
+        "pressure": 64
+      },
+      {
+        "second": 10,
+        "alive": 5,
+        "hp": 44.599999999999994,
+        "pressure": 56
+      },
+      {
+        "second": 11,
+        "alive": 5,
+        "hp": 38.39999999999999,
+        "pressure": 52
+      },
+      {
+        "second": 12,
+        "alive": 5,
+        "hp": 40.39999999999999,
+        "pressure": 44
+      },
+      {
+        "second": 13,
+        "alive": 5,
+        "hp": 40.39999999999999,
+        "pressure": 36
+      },
+      {
+        "second": 14,
+        "alive": 5,
+        "hp": 40.39999999999999,
+        "pressure": 35
+      },
+      {
+        "second": 15,
+        "alive": 5,
+        "hp": 34.39999999999999,
+        "pressure": 35
+      },
+      {
+        "second": 16,
+        "alive": 6,
+        "hp": 34.39999999999999,
+        "pressure": 35
+      },
+      {
+        "second": 17,
+        "alive": 6,
+        "hp": 35.39999999999999,
+        "pressure": 35
+      }
+    ]
+  },
+  {
+    "mission": 0,
+    "difficulty": "redline",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 120,
+    "seconds": 36.88333333333333,
+    "score": 76890,
+    "peakAlive": 20,
+    "peakAttackers": 5,
+    "multi": 5,
+    "damagedFrames": 2055,
+    "bestChain": 34,
+    "exactReplay": true,
+    "finalStateSha256": "5cc024566e8c1719f2fe253dbbf659979875e5d0e37534421338a3d83e3e51cc",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 71
+      },
+      {
+        "second": 2,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 77
+      },
+      {
+        "second": 3,
+        "alive": 16,
+        "hp": 92.8,
+        "pressure": 80
+      },
+      {
+        "second": 4,
+        "alive": 15,
+        "hp": 79.6,
+        "pressure": 76
+      },
+      {
+        "second": 5,
+        "alive": 12,
+        "hp": 81.6,
+        "pressure": 68
+      },
+      {
+        "second": 6,
+        "alive": 9,
+        "hp": 78.6,
+        "pressure": 60
+      },
+      {
+        "second": 7,
+        "alive": 6,
+        "hp": 82.6,
+        "pressure": 55
+      },
+      {
+        "second": 8,
+        "alive": 5,
+        "hp": 83.6,
+        "pressure": 55
+      },
+      {
+        "second": 9,
+        "alive": 4,
+        "hp": 85.6,
+        "pressure": 58
+      },
+      {
+        "second": 10,
+        "alive": 3,
+        "hp": 73.6,
+        "pressure": 55
+      },
+      {
+        "second": 11,
+        "alive": 2,
+        "hp": 74.6,
+        "pressure": 55
+      },
+      {
+        "second": 12,
+        "alive": 2,
+        "hp": 75.6,
+        "pressure": 55
+      },
+      {
+        "second": 13,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 55
+      },
+      {
+        "second": 14,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 58
+      },
+      {
+        "second": 15,
+        "alive": 15,
+        "hp": 100,
+        "pressure": 64
+      },
+      {
+        "second": 16,
+        "alive": 15,
+        "hp": 80,
+        "pressure": 63
+      },
+      {
+        "second": 17,
+        "alive": 14,
+        "hp": 83,
+        "pressure": 55
+      },
+      {
+        "second": 18,
+        "alive": 14,
+        "hp": 84,
+        "pressure": 55
+      },
+      {
+        "second": 19,
+        "alive": 14,
+        "hp": 84,
+        "pressure": 55
+      },
+      {
+        "second": 20,
+        "alive": 8,
+        "hp": 87,
+        "pressure": 58
+      },
+      {
+        "second": 21,
+        "alive": 7,
+        "hp": 90,
+        "pressure": 64
+      },
+      {
+        "second": 22,
+        "alive": 6,
+        "hp": 92,
+        "pressure": 70
+      },
+      {
+        "second": 23,
+        "alive": 4,
+        "hp": 92,
+        "pressure": 73
+      },
+      {
+        "second": 24,
+        "alive": 4,
+        "hp": 94,
+        "pressure": 79
+      },
+      {
+        "second": 25,
+        "alive": 1,
+        "hp": 96,
+        "pressure": 82
+      },
+      {
+        "second": 26,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 88
+      },
+      {
+        "second": 27,
+        "alive": 20,
+        "hp": 100,
+        "pressure": 94
+      },
+      {
+        "second": 28,
+        "alive": 17,
+        "hp": 91,
+        "pressure": 93
+      },
+      {
+        "second": 29,
+        "alive": 16,
+        "hp": 92,
+        "pressure": 99
+      },
+      {
+        "second": 30,
+        "alive": 14,
+        "hp": 93,
+        "pressure": 100
+      },
+      {
+        "second": 31,
+        "alive": 11,
+        "hp": 88.8,
+        "pressure": 92
+      },
+      {
+        "second": 32,
+        "alive": 10,
+        "hp": 90.8,
+        "pressure": 84
+      },
+      {
+        "second": 33,
+        "alive": 6,
+        "hp": 80.8,
+        "pressure": 80
+      },
+      {
+        "second": 34,
+        "alive": 5,
+        "hp": 81.8,
+        "pressure": 72
+      },
+      {
+        "second": 35,
+        "alive": 3,
+        "hp": 85.8,
+        "pressure": 75
+      },
+      {
+        "second": 36,
+        "alive": 2,
+        "hp": 86.8,
+        "pressure": 75
+      }
+    ]
+  },
+  {
+    "mission": 1,
+    "difficulty": "redline",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 91,
+    "seconds": 79.16666666666667,
+    "score": 183949,
+    "peakAlive": 20,
+    "peakAttackers": 5,
+    "multi": 5,
+    "damagedFrames": 4423,
+    "bestChain": 65,
+    "exactReplay": true,
+    "finalStateSha256": "db7a1729de0c63fd3942c709ca00d345e00bf7c31265e8a0d91e8d84d063065a",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 71
+      },
+      {
+        "second": 2,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 77
+      },
+      {
+        "second": 3,
+        "alive": 18,
+        "hp": 83,
+        "pressure": 69
+      },
+      {
+        "second": 4,
+        "alive": 17,
+        "hp": 85,
+        "pressure": 61
+      },
+      {
+        "second": 5,
+        "alive": 18,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "second": 6,
+        "alive": 11,
+        "hp": 78,
+        "pressure": 55
+      },
+      {
+        "second": 7,
+        "alive": 12,
+        "hp": 56,
+        "pressure": 55
+      },
+      {
+        "second": 8,
+        "alive": 12,
+        "hp": 57,
+        "pressure": 55
+      },
+      {
+        "second": 9,
+        "alive": 12,
+        "hp": 57,
+        "pressure": 55
+      },
+      {
+        "second": 10,
+        "alive": 11,
+        "hp": 59,
+        "pressure": 55
+      },
+      {
+        "second": 11,
+        "alive": 9,
+        "hp": 61,
+        "pressure": 55
+      },
+      {
+        "second": 12,
+        "alive": 9,
+        "hp": 62,
+        "pressure": 55
+      },
+      {
+        "second": 13,
+        "alive": 6,
+        "hp": 65,
+        "pressure": 55
+      },
+      {
+        "second": 14,
+        "alive": 5,
+        "hp": 66,
+        "pressure": 55
+      },
+      {
+        "second": 15,
+        "alive": 4,
+        "hp": 54,
+        "pressure": 51
+      },
+      {
+        "second": 16,
+        "alive": 2,
+        "hp": 56,
+        "pressure": 55
+      },
+      {
+        "second": 17,
+        "alive": 2,
+        "hp": 44,
+        "pressure": 55
+      },
+      {
+        "second": 18,
+        "alive": 1,
+        "hp": 46,
+        "pressure": 47
+      },
+      {
+        "second": 19,
+        "alive": 18,
+        "hp": 72,
+        "pressure": 46
+      },
+      {
+        "second": 20,
+        "alive": 17,
+        "hp": 72,
+        "pressure": 49
+      },
+      {
+        "second": 21,
+        "alive": 18,
+        "hp": 73,
+        "pressure": 55
+      },
+      {
+        "second": 22,
+        "alive": 18,
+        "hp": 75,
+        "pressure": 55
+      },
+      {
+        "second": 23,
+        "alive": 17,
+        "hp": 77,
+        "pressure": 55
+      },
+      {
+        "second": 24,
+        "alive": 13,
+        "hp": 77,
+        "pressure": 55
+      },
+      {
+        "second": 25,
+        "alive": 9,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "second": 26,
+        "alive": 10,
+        "hp": 86,
+        "pressure": 61
+      },
+      {
+        "second": 27,
+        "alive": 10,
+        "hp": 87,
+        "pressure": 64
+      },
+      {
+        "second": 28,
+        "alive": 10,
+        "hp": 88,
+        "pressure": 67
+      },
+      {
+        "second": 29,
+        "alive": 12,
+        "hp": 89,
+        "pressure": 73
+      },
+      {
+        "second": 30,
+        "alive": 10,
+        "hp": 89,
+        "pressure": 76
+      },
+      {
+        "second": 31,
+        "alive": 11,
+        "hp": 90,
+        "pressure": 79
+      },
+      {
+        "second": 32,
+        "alive": 10,
+        "hp": 90,
+        "pressure": 80
+      },
+      {
+        "second": 33,
+        "alive": 9,
+        "hp": 93,
+        "pressure": 83
+      },
+      {
+        "second": 34,
+        "alive": 8,
+        "hp": 93,
+        "pressure": 89
+      },
+      {
+        "second": 35,
+        "alive": 6,
+        "hp": 95,
+        "pressure": 95
+      },
+      {
+        "second": 36,
+        "alive": 5,
+        "hp": 97,
+        "pressure": 100
+      },
+      {
+        "second": 37,
+        "alive": 4,
+        "hp": 86,
+        "pressure": 96
+      },
+      {
+        "second": 38,
+        "alive": 3,
+        "hp": 87,
+        "pressure": 88
+      },
+      {
+        "second": 39,
+        "alive": 2,
+        "hp": 88,
+        "pressure": 80
+      },
+      {
+        "second": 40,
+        "alive": 2,
+        "hp": 88,
+        "pressure": 80
+      },
+      {
+        "second": 41,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "second": 42,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 86
+      },
+      {
+        "second": 43,
+        "alive": 20,
+        "hp": 83,
+        "pressure": 78
+      },
+      {
+        "second": 44,
+        "alive": 16,
+        "hp": 87,
+        "pressure": 77
+      },
+      {
+        "second": 45,
+        "alive": 17,
+        "hp": 87,
+        "pressure": 80
+      },
+      {
+        "second": 46,
+        "alive": 17,
+        "hp": 88,
+        "pressure": 80
+      },
+      {
+        "second": 47,
+        "alive": 16,
+        "hp": 91,
+        "pressure": 83
+      },
+      {
+        "second": 48,
+        "alive": 12,
+        "hp": 94,
+        "pressure": 89
+      },
+      {
+        "second": 49,
+        "alive": 10,
+        "hp": 98,
+        "pressure": 95
+      },
+      {
+        "second": 50,
+        "alive": 9,
+        "hp": 99,
+        "pressure": 100
+      },
+      {
+        "second": 51,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "second": 52,
+        "alive": 5,
+        "hp": 88,
+        "pressure": 100
+      },
+      {
+        "second": 53,
+        "alive": 3,
+        "hp": 78,
+        "pressure": 92
+      },
+      {
+        "second": 54,
+        "alive": 3,
+        "hp": 66,
+        "pressure": 88
+      },
+      {
+        "second": 55,
+        "alive": 2,
+        "hp": 67,
+        "pressure": 80
+      },
+      {
+        "second": 56,
+        "alive": 1,
+        "hp": 69,
+        "pressure": 72
+      },
+      {
+        "second": 57,
+        "alive": 19,
+        "hp": 115,
+        "pressure": 78
+      },
+      {
+        "second": 58,
+        "alive": 18,
+        "hp": 115,
+        "pressure": 80
+      },
+      {
+        "second": 59,
+        "alive": 18,
+        "hp": 105,
+        "pressure": 80
+      },
+      {
+        "second": 60,
+        "alive": 15,
+        "hp": 106,
+        "pressure": 80
+      },
+      {
+        "second": 61,
+        "alive": 11,
+        "hp": 113,
+        "pressure": 80
+      },
+      {
+        "second": 62,
+        "alive": 11,
+        "hp": 116,
+        "pressure": 80
+      },
+      {
+        "second": 63,
+        "alive": 10,
+        "hp": 106,
+        "pressure": 80
+      },
+      {
+        "second": 64,
+        "alive": 11,
+        "hp": 94,
+        "pressure": 76
+      },
+      {
+        "second": 65,
+        "alive": 11,
+        "hp": 95,
+        "pressure": 68
+      },
+      {
+        "second": 66,
+        "alive": 12,
+        "hp": 95,
+        "pressure": 68
+      },
+      {
+        "second": 67,
+        "alive": 13,
+        "hp": 84,
+        "pressure": 60
+      },
+      {
+        "second": 68,
+        "alive": 13,
+        "hp": 84,
+        "pressure": 56
+      },
+      {
+        "second": 69,
+        "alive": 12,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "second": 70,
+        "alive": 7,
+        "hp": 86,
+        "pressure": 55
+      },
+      {
+        "second": 71,
+        "alive": 6,
+        "hp": 87,
+        "pressure": 55
+      },
+      {
+        "second": 72,
+        "alive": 5,
+        "hp": 67,
+        "pressure": 55
+      },
+      {
+        "second": 73,
+        "alive": 5,
+        "hp": 68,
+        "pressure": 55
+      },
+      {
+        "second": 74,
+        "alive": 5,
+        "hp": 68,
+        "pressure": 55
+      },
+      {
+        "second": 75,
+        "alive": 4,
+        "hp": 69,
+        "pressure": 55
+      },
+      {
+        "second": 76,
+        "alive": 4,
+        "hp": 57,
+        "pressure": 51
+      },
+      {
+        "second": 77,
+        "alive": 2,
+        "hp": 58,
+        "pressure": 47
+      },
+      {
+        "second": 78,
+        "alive": 2,
+        "hp": 59,
+        "pressure": 39
+      },
+      {
+        "second": 79,
+        "alive": 1,
+        "hp": 60,
+        "pressure": 35
+      }
+    ]
+  },
+  {
+    "mission": 2,
+    "difficulty": "redline",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "lost",
+    "hp": 0,
+    "seconds": 21.916666666666668,
+    "score": 36275,
+    "peakAlive": 20,
+    "peakAttackers": 5,
+    "multi": 4,
+    "damagedFrames": 1271,
+    "bestChain": 37,
+    "exactReplay": true,
+    "finalStateSha256": "ba7e4174b114017a366b547bf25a7cce18406eee116a83f3ef1f38897a5b2455",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 71
+      },
+      {
+        "second": 2,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 77
+      },
+      {
+        "second": 3,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "second": 4,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "second": 5,
+        "alive": 20,
+        "hp": 100,
+        "pressure": 86
+      },
+      {
+        "second": 6,
+        "alive": 17,
+        "hp": 94,
+        "pressure": 80
+      },
+      {
+        "second": 7,
+        "alive": 18,
+        "hp": 97,
+        "pressure": 80
+      },
+      {
+        "second": 8,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "second": 9,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "second": 10,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 83
+      },
+      {
+        "second": 11,
+        "alive": 15,
+        "hp": 100,
+        "pressure": 89
+      },
+      {
+        "second": 12,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 95
+      },
+      {
+        "second": 13,
+        "alive": 15,
+        "hp": 80,
+        "pressure": 95
+      },
+      {
+        "second": 14,
+        "alive": 14,
+        "hp": 51,
+        "pressure": 87
+      },
+      {
+        "second": 15,
+        "alive": 14,
+        "hp": 51,
+        "pressure": 83
+      },
+      {
+        "second": 16,
+        "alive": 14,
+        "hp": 39,
+        "pressure": 75
+      },
+      {
+        "second": 17,
+        "alive": 11,
+        "hp": 40,
+        "pressure": 71
+      },
+      {
+        "second": 18,
+        "alive": 11,
+        "hp": 22,
+        "pressure": 63
+      },
+      {
+        "second": 19,
+        "alive": 11,
+        "hp": 22,
+        "pressure": 59
+      },
+      {
+        "second": 20,
+        "alive": 10,
+        "hp": 11,
+        "pressure": 51
+      },
+      {
+        "second": 21,
+        "alive": 10,
+        "hp": 11,
+        "pressure": 43
+      }
+    ]
+  },
+  {
+    "mission": 3,
+    "difficulty": "redline",
+    "loadout": "core",
+    "lowSpec": false,
+    "phase": "complete",
+    "hp": 66.39999999999999,
+    "seconds": 17,
+    "score": 19900,
+    "peakAlive": 8,
+    "peakAttackers": 4,
+    "multi": 1,
+    "damagedFrames": 462,
+    "bestChain": 17,
+    "exactReplay": true,
+    "finalStateSha256": "198d89edc4e0492967869cc4225cd6c2611c5b24e9e9850256d3ef92b78b8923",
+    "alive": [
+      {
+        "second": 1,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 65
+      },
+      {
+        "second": 2,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 71
+      },
+      {
+        "second": 3,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 77
+      },
+      {
+        "second": 4,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "second": 5,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 83
+      },
+      {
+        "second": 6,
+        "alive": 5,
+        "hp": 93.8,
+        "pressure": 80
+      },
+      {
+        "second": 7,
+        "alive": 4,
+        "hp": 94.8,
+        "pressure": 83
+      },
+      {
+        "second": 8,
+        "alive": 4,
+        "hp": 87.6,
+        "pressure": 80
+      },
+      {
+        "second": 9,
+        "alive": 3,
+        "hp": 75.39999999999999,
+        "pressure": 72
+      },
+      {
+        "second": 10,
+        "alive": 3,
+        "hp": 75.39999999999999,
+        "pressure": 64
+      },
+      {
+        "second": 11,
+        "alive": 2,
+        "hp": 76.39999999999999,
+        "pressure": 56
+      },
+      {
+        "second": 12,
+        "alive": 7,
+        "hp": 76.39999999999999,
+        "pressure": 55
+      },
+      {
+        "second": 13,
+        "alive": 7,
+        "hp": 76.39999999999999,
+        "pressure": 55
+      },
+      {
+        "second": 14,
+        "alive": 7,
+        "hp": 76.39999999999999,
+        "pressure": 55
+      },
+      {
+        "second": 15,
+        "alive": 6,
+        "hp": 76.39999999999999,
+        "pressure": 55
+      },
+      {
+        "second": 16,
+        "alive": 5,
+        "hp": 77.39999999999999,
+        "pressure": 55
+      },
+      {
+        "second": 17,
+        "alive": 0,
+        "hp": 66.39999999999999,
+        "pressure": 55
+      }
+    ]
+  }
+]

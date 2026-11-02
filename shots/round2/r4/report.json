@@ -1,0 +1,56 @@
+[
+  {
+    "name": "desktop",
+    "multi": {
+      "intro": false,
+      "introProgress": 1,
+      "point": null,
+      "defeatAge": -1,
+      "phasePulse": 0,
+      "notice": {
+        "id": "181:13",
+        "text": "SCRAP SPREE",
+        "amount": 1960,
+        "multi": 5,
+        "chain": 5,
+        "finisher": true,
+        "at": 1.294399999999441
+      },
+      "sweep": 0,
+      "particles": 50,
+      "scrap": 20,
+      "rings": 5
+    },
+    "errors": [],
+    "bossIntro": true,
+    "stagedDefeat": true,
+    "trophy": true
+  },
+  {
+    "name": "compact",
+    "multi": {
+      "intro": false,
+      "introProgress": 1,
+      "point": null,
+      "defeatAge": -1,
+      "phasePulse": 0,
+      "notice": {
+        "id": "181:13",
+        "text": "SCRAP SPREE",
+        "amount": 1960,
+        "multi": 5,
+        "chain": 5,
+        "finisher": true,
+        "at": 1.2272000000001864
+      },
+      "sweep": 0,
+      "particles": 50,
+      "scrap": 20,
+      "rings": 5
+    },
+    "errors": [],
+    "bossIntro": true,
+    "stagedDefeat": true,
+    "trophy": true
+  }
+]

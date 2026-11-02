@@ -1,0 +1,510 @@
+{
+  "reports": [
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "crowd",
+      "initialEnemies": 20,
+      "calls": 68,
+      "triangles": 52026,
+      "p95": 17.5,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "rex",
+      "initialEnemies": 19,
+      "calls": 73,
+      "triangles": 56852,
+      "p95": 17.5,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "corner",
+      "initialEnemies": 20,
+      "calls": 47,
+      "triangles": 45363,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "crowd",
+      "initialEnemies": 10,
+      "calls": 42,
+      "triangles": 17246,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "rex",
+      "initialEnemies": 9,
+      "calls": 48,
+      "triangles": 19791,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "corner",
+      "initialEnemies": 10,
+      "calls": 38,
+      "triangles": 14073,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "crowd",
+      "initialEnemies": 20,
+      "calls": 68,
+      "triangles": 52026,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "rex",
+      "initialEnemies": 19,
+      "calls": 73,
+      "triangles": 56852,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "corner",
+      "initialEnemies": 20,
+      "calls": 47,
+      "triangles": 45619,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "crowd",
+      "initialEnemies": 10,
+      "calls": 42,
+      "triangles": 17374,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "rex",
+      "initialEnemies": 9,
+      "calls": 48,
+      "triangles": 19825,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 1,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "corner",
+      "initialEnemies": 10,
+      "calls": 38,
+      "triangles": 14268,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "crowd",
+      "initialEnemies": 20,
+      "calls": 68,
+      "triangles": 52948,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "rex",
+      "initialEnemies": 19,
+      "calls": 73,
+      "triangles": 57774,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "corner",
+      "initialEnemies": 20,
+      "calls": 47,
+      "triangles": 46413,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "crowd",
+      "initialEnemies": 10,
+      "calls": 42,
+      "triangles": 17776,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "rex",
+      "initialEnemies": 9,
+      "calls": 48,
+      "triangles": 20321,
+      "p95": 17.600000000000136,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "corner",
+      "initialEnemies": 10,
+      "calls": 38,
+      "triangles": 14731,
+      "p95": 16.90000000000009,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "crowd",
+      "initialEnemies": 20,
+      "calls": 68,
+      "triangles": 52948,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "rex",
+      "initialEnemies": 19,
+      "calls": 73,
+      "triangles": 57774,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "corner",
+      "initialEnemies": 20,
+      "calls": 47,
+      "triangles": 46669,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "crowd",
+      "initialEnemies": 10,
+      "calls": 42,
+      "triangles": 17904,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "rex",
+      "initialEnemies": 9,
+      "calls": 48,
+      "triangles": 20355,
+      "p95": 17.5,
+      "errors": []
+    },
+    {
+      "level": 2,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "corner",
+      "initialEnemies": 10,
+      "calls": 38,
+      "triangles": 14926,
+      "p95": 17.5,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "crowd",
+      "initialEnemies": 20,
+      "calls": 69,
+      "triangles": 52056,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "rex",
+      "initialEnemies": 19,
+      "calls": 74,
+      "triangles": 56882,
+      "p95": 17.5,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "standard",
+      "kind": "corner",
+      "initialEnemies": 20,
+      "calls": 48,
+      "triangles": 45389,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "crowd",
+      "initialEnemies": 10,
+      "calls": 43,
+      "triangles": 16926,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "rex",
+      "initialEnemies": 9,
+      "calls": 49,
+      "triangles": 19537,
+      "p95": 17.5,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "quality": "low",
+      "kind": "corner",
+      "initialEnemies": 10,
+      "calls": 39,
+      "triangles": 13863,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "crowd",
+      "initialEnemies": 20,
+      "calls": 69,
+      "triangles": 52056,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "rex",
+      "initialEnemies": 19,
+      "calls": 74,
+      "triangles": 56882,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "standard",
+      "kind": "corner",
+      "initialEnemies": 20,
+      "calls": 48,
+      "triangles": 45645,
+      "p95": 17.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "crowd",
+      "initialEnemies": 10,
+      "calls": 43,
+      "triangles": 16970,
+      "p95": 18.59999999999991,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "rex",
+      "initialEnemies": 9,
+      "calls": 49,
+      "triangles": 19537,
+      "p95": 18.5,
+      "errors": []
+    },
+    {
+      "level": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "quality": "low",
+      "kind": "corner",
+      "initialEnemies": 10,
+      "calls": 39,
+      "triangles": 14056,
+      "p95": 18.5,
+      "errors": []
+    }
+  ],
+  "physicalDevice": false,
+  "stressStats": true
+}

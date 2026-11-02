@@ -1,0 +1,522 @@
+[
+  {
+    "name": "desktop",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "audit": [
+      {
+        "selector": "SPAN",
+        "text": "CHAPTER 01",
+        "font": 14,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 54,
+          "y": 55.5,
+          "width": 121.359375,
+          "height": 17.5
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "CHAPTER 01",
+        "font": 14,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 586.8203125,
+          "y": 44.5,
+          "width": 106.359375,
+          "height": 17.5
+        }
+      },
+      {
+        "selector": "health-label",
+        "text": "INTEGRITY100 / 100",
+        "font": 14,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 201,
+          "y": 609.5,
+          "width": 203,
+          "height": 17.5
+        }
+      },
+      {
+        "selector": "heat",
+        "text": "HEAT0%",
+        "font": 14,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 201,
+          "y": 648,
+          "width": 203,
+          "height": 40
+        }
+      },
+      {
+        "selector": "overdrive-button",
+        "text": "R · OVERDRIVE",
+        "font": 14.45,
+        "colour": "rgb(234, 229, 242)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 1087.25,
+          "y": 518.1500244140625,
+          "width": 148.75,
+          "height": 23.79998779296875
+        }
+      },
+      {
+        "selector": "charge-label",
+        "text": "2 / 2",
+        "font": 14.45,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 1151,
+          "y": 643.9500122070312,
+          "width": 85,
+          "height": 18.0625
+        }
+      },
+      {
+        "selector": "SPAN",
+        "text": "VIEW",
+        "font": 14,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 1169.21875,
+          "y": 122.25,
+          "width": 43.78125,
+          "height": 17.5
+        }
+      },
+      {
+        "selector": "style-rank",
+        "text": "SCRAPVENT SURGE",
+        "font": 14,
+        "colour": "rgb(255, 240, 216)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 1070,
+          "y": 158,
+          "width": 190,
+          "height": 77.8984375
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "VENT SURGE",
+        "font": 14,
+        "colour": "rgb(244, 230, 207)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 1083,
+          "y": 207,
+          "width": 164,
+          "height": 18.8984375
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "WAVE 1 · MIN 3 · 14 ENEMIES LEFT",
+        "font": 14,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 542.8359375,
+          "y": 94.5,
+          "width": 234.1640625,
+          "height": 17.5
+        }
+      }
+    ],
+    "autoHide": true,
+    "errors": []
+  },
+  {
+    "name": "compact",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "audit": [
+      {
+        "selector": "health-label",
+        "text": "INTEGRITY100 / 100",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 345,
+          "y": 318.0078125,
+          "width": 154,
+          "height": 19.1953125
+        }
+      },
+      {
+        "selector": "heat",
+        "text": "HEAT0%",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 345,
+          "y": 353.203125,
+          "width": 154,
+          "height": 16.796875
+        }
+      },
+      {
+        "selector": "overdrive-button",
+        "text": "R · OVERDRIVE",
+        "font": 14,
+        "colour": "rgb(234, 229, 242)",
+        "opacity": "0.7",
+        "overflow": false,
+        "bounds": {
+          "x": 654,
+          "y": 197,
+          "width": 165,
+          "height": 29
+        }
+      },
+      {
+        "selector": "charge-label",
+        "text": "2 / 2",
+        "font": 16,
+        "colour": "rgb(237, 226, 198)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 732,
+          "y": 342,
+          "width": 87,
+          "height": 18.5
+        }
+      },
+      {
+        "selector": "SPAN",
+        "text": "VIEW",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 748.328125,
+          "y": 99.796875,
+          "width": 38.671875,
+          "height": 14.3984375
+        }
+      },
+      {
+        "selector": "style-rank",
+        "text": "SCRAPVENT SURGE",
+        "font": 14,
+        "colour": "rgb(255, 240, 216)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 697,
+          "y": 132,
+          "width": 135,
+          "height": 59.5
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "VENT SURGE",
+        "font": 12,
+        "colour": "rgb(244, 230, 207)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 706,
+          "y": 170.5,
+          "width": 117,
+          "height": 15
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "WAVE 1 · MIN 3 · 14 ENEMIES LEFT",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 295,
+          "y": 84.5,
+          "width": 254,
+          "height": 14.3984375
+        }
+      }
+    ],
+    "autoHide": true,
+    "errors": []
+  },
+  {
+    "name": "small",
+    "viewport": {
+      "width": 640,
+      "height": 360
+    },
+    "audit": [
+      {
+        "selector": "health-label",
+        "text": "INTEGRITY100 / 100",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 243,
+          "y": 290.40625,
+          "width": 154,
+          "height": 16.796875
+        }
+      },
+      {
+        "selector": "heat",
+        "text": "HEAT0%",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 243,
+          "y": 323.203125,
+          "width": 154,
+          "height": 16.796875
+        }
+      },
+      {
+        "selector": "overdrive-button",
+        "text": "R · OVERDRIVE",
+        "font": 14,
+        "colour": "rgb(234, 229, 242)",
+        "opacity": "0.7",
+        "overflow": false,
+        "bounds": {
+          "x": 513,
+          "y": 167,
+          "width": 115,
+          "height": 29
+        }
+      },
+      {
+        "selector": "charge-label",
+        "text": "2 / 2",
+        "font": 16,
+        "colour": "rgb(237, 226, 198)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 541,
+          "y": 312,
+          "width": 87,
+          "height": 18.5
+        }
+      },
+      {
+        "selector": "SPAN",
+        "text": "VIEW",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 544.328125,
+          "y": 99.796875,
+          "width": 38.671875,
+          "height": 14.3984375
+        }
+      },
+      {
+        "selector": "style-rank",
+        "text": "SCRAPVENT SURGE",
+        "font": 14,
+        "colour": "rgb(255, 240, 216)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 493,
+          "y": 132,
+          "width": 135,
+          "height": 59.5
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "VENT SURGE",
+        "font": 12,
+        "colour": "rgb(244, 230, 207)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 502,
+          "y": 170.5,
+          "width": 117,
+          "height": 15
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "WAVE 1 · MIN 3 · 14 ENEMIES LEFT",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 193,
+          "y": 84.5,
+          "width": 254,
+          "height": 14.3984375
+        }
+      }
+    ],
+    "autoHide": true,
+    "errors": []
+  },
+  {
+    "name": "portrait",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "audit": [
+      {
+        "selector": "health-label",
+        "text": "INTEGRITY100 / 100",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 31,
+          "y": 81,
+          "width": 154,
+          "height": 16.796875
+        }
+      },
+      {
+        "selector": "heat",
+        "text": "HEAT0%",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 31,
+          "y": 118.796875,
+          "width": 154,
+          "height": 40
+        }
+      },
+      {
+        "selector": "overdrive-button",
+        "text": "R · OVERDRIVE",
+        "font": 14,
+        "colour": "rgb(234, 229, 242)",
+        "opacity": "0.7",
+        "overflow": false,
+        "bounds": {
+          "x": 229,
+          "y": 648,
+          "width": 145,
+          "height": 25
+        }
+      },
+      {
+        "selector": "charge-label",
+        "text": "2 / 2",
+        "font": 14,
+        "colour": "rgb(237, 226, 198)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 292,
+          "y": 787,
+          "width": 82,
+          "height": 16
+        }
+      },
+      {
+        "selector": "SPAN",
+        "text": "VIEW",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 296.328125,
+          "y": 192.796875,
+          "width": 38.671875,
+          "height": 14.3984375
+        }
+      },
+      {
+        "selector": "style-rank",
+        "text": "SCRAPVENT SURGE",
+        "font": 14,
+        "colour": "rgb(255, 240, 216)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 243,
+          "y": 228,
+          "width": 135,
+          "height": 59.5
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "VENT SURGE",
+        "font": 12,
+        "colour": "rgb(244, 230, 207)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 252,
+          "y": 266.5,
+          "width": 117,
+          "height": 15
+        }
+      },
+      {
+        "selector": "SMALL",
+        "text": "WAVE 1 · MIN 3 · 14 ENEMIES LEFT",
+        "font": 12,
+        "colour": "rgb(244, 233, 213)",
+        "opacity": "1",
+        "overflow": false,
+        "bounds": {
+          "x": 227,
+          "y": 115.5,
+          "width": 134,
+          "height": 28.796875
+        }
+      }
+    ],
+    "autoHide": true,
+    "errors": []
+  }
+]

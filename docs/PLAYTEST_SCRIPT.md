@@ -1,5 +1,7 @@
 # Chapter 1 first-time-player check
 
+POLISH_ROUND3 handoff: first the owner plays15minutes using Default view and records notes against F1 palette, F2 flat world life/scars, F3 scale, F4 visible density and F5 text. Then run the3–5-person check below and share their answers. The owner gives the final accepted verdict after review; Codex does not supply human playtest answers.
+
 Owner runs this with 3–5 people who have not played REDLINE. No coaching for the first minute. Give them the lobby, let them choose a mission, and note their device/input. Audio is optional. This script is prepared; automated tests do not count as human responses.
 
 Ask these five questions after a mission or a few attempts:

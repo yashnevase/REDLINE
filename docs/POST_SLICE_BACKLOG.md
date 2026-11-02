@@ -17,3 +17,9 @@ The three-session polish is bounded. P1–P6 implementation and one concrete cli
 FINAL_VISUAL_REVIEW.md records the fresh judge's bounded cleanup verification. No prior hard clipping bug is deferred here. Physical-phone/deployment gates remain waived by the owner; browser emulation does not certify all physical devices. Remaining wishes can be prioritized after owner review. This list replaces the superseded open-ended IoU/reference-match closing gate.
 
 POLISH_ROUND2 supersedes the older UI/density review. R1/R2 are owner-approved; ART-06 is resolved. Remaining optional art wishes do not restart a new iteration loop. Current closing status: ROUND2_FINAL_REPORT.md.
+
+## Round3 owner handoff ·2026-11-02
+F1–F5 implementation and automated evidence are in ROUND3_REPORT.md. Owner15-minute notes and3–5-person PLAYTEST_SCRIPT responses are next; chapter1-complete remains held until this pass is accepted.
+
+| R3-BAL-01 | Normal Mission3 Core balance review | Baseline bot loses20.37s; Blade browser run clears. Chill missions clear. Review warnings/space/crowd pressure with human players before retuning; no human fairness verdict inferred. |
+| R3-DENSITY-01 | Cleanup/drop density expectations | Camera includes≥10 in100% of sampled pressure moments with≥10 landed actors; mandatory drop and final-wave cleanup remain below10. Full trace and all-fight percentages are in ROUND3_REPORT. |

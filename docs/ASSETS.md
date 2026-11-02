@@ -86,3 +86,6 @@ Original sparse steel atlas/shader bands, pit terraces, asymmetric giant/wreck g
 
 ## POLISH_ROUND2 ·2026-11-02
 Original rounded CSS plates, faceted role palettes/wound shader, pooled damage/reward fragments, attack poses and six layered procedural reward cues. Spirit Call was studied for principles only (SPIRIT_CALL_NOTES_R2.md); no code, model, image or sound recording copied. Owner-supplied theme.mp3, battle-01.mp3 and battle-02.mp3 plus the manifest are now tracked **only in the verified-private repository**, per R6. This supersedes the historical ignored-only Git policy above; public build/distribution exclusion remains unchanged. All three files are below50MB; no LFS threshold crossed. Owner music remains non-redistributable; no rights assertion or public deployment.
+
+## POLISH_ROUND3 ·2026-11-02
+Original seeded warm/cool/oxide plate colour allocation and canvas-painted broken rings/arrows/lanes, oil/scorch/weld marks, flush metal offcuts, grates and soft warm pools. Paint is world-mapped onto existing 3D plates; no reference image or backdrop added. Existing bounded scar shader now accumulates impacts for up to24s. No new collision object, downloaded asset, dependency or third-party implementation. Before/after and normal-play media are our own engine captures.

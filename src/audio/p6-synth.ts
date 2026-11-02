@@ -7,6 +7,7 @@ const metal=(hz:number,seconds:number,gain:number,delay=0):SoundLayer=>({...tone
 // Original mechanical recipes. Source study informs timing and hierarchy, never copied audio/code.
 export function cueLayers(id:CueId,hz:number,seconds:number):SoundLayer[]{
  if(id==='spark')return[metal(2400,.025,.3)];
+ if(id==='trophy')return[tone(660,880,.45,.5),metal(1320,.65,.3,.08),tone(990,1320,.5,.3,.15)];
  if(id==='last_enemy')return[tone(660,880,.18,.5),metal(1320,.18,.15,.04)];
  if(id.startsWith('ui_'))return[tone(hz,hz*1.08,seconds,.45)];
  if(id==='vent'||id==='wind')return[air(id==='vent'?2800:650,320,seconds,.45)];
@@ -21,7 +22,7 @@ export function cueLayers(id:CueId,hz:number,seconds:number):SoundLayer[]{
  if(id==='dash_charge_start'||id==='stomp_charge')return[air(350,3200,seconds,.45),tone(80,260,seconds,.4,0,seconds*.6)];
  if(id==='dash_tap'||id==='dash_rush'||id==='boost')return[air(2200,450,seconds,.7),tone(180,55,seconds*.7,.5,.025),metal(700,.12,.12,.045)];
  if(id==='pulse_bash'||id==='spin_start'||id==='dash_charge_release'||id==='stomp_slam')return[air(1700,300,seconds,.5),tone(id==='stomp_slam'?82:140,32,seconds,.9,.015),metal(id==='spin_start'?820:530,seconds*.9,.3,.03),air(800,200,seconds*.8,.2,.08)];
- if(id==='overdrive_start'||id==='boss_intro'||id==='boss_phase'||id==='boss_defeat')return[tone(90,29,.65,.85,0,.025),air(2800,180,.48,.5,.02),metal(id==='boss_phase'?310:620,.65,.3,.07),tone(44,31,.7,.5,.04,.1)];
+ if(id==='boss_explosion'||id==='overdrive_start'||id==='boss_intro'||id==='boss_phase'||id==='boss_defeat')return[tone(90,29,.65,.85,0,.025),air(2800,180,.48,.5,.02),metal(id==='boss_phase'?310:620,.65,.3,.07),tone(44,31,.7,.5,.04,.1)];
  return[tone(hz,hz*1.25,seconds,.55),metal(hz*1.52,seconds*.8,.22,.065),air(1600,800,.12,.12,.1)];
 }
 export function makeNoise(c:BaseAudioContext){const b=c.createBuffer(1,c.sampleRate,c.sampleRate),a=b.getChannelData(0);let seed=83627;for(let i=0;i<a.length;i++){seed=(Math.imul(seed,1664525)+1013904223)>>>0;a[i]=seed/2147483648-1;}return b;}

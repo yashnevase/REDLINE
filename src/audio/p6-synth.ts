@@ -6,6 +6,10 @@ const air=(hz:number,end:number,seconds:number,gain:number,delay=0):SoundLayer=>
 const metal=(hz:number,seconds:number,gain:number,delay=0):SoundLayer=>({...tone(hz,hz*.91,seconds,gain,delay),kind:'metal'});
 // Original mechanical recipes. Source study informs timing and hierarchy, never copied audio/code.
 export function cueLayers(id:CueId,hz:number,seconds:number):SoundLayer[]{
+ if(id==='grinder_whine')return[metal(hz,seconds,.55),air(2800,1700,seconds,.24)];
+ if(id==='contact_scrape')return[air(2600,700,seconds,.55),metal(380,seconds,.3)];
+ if(id==='spark_crackle')return[air(4400,1600,.04,.45),metal(2700,.025,.24)];
+ if(id==='steel_clang')return[metal(480,.28,.6),metal(731,.19,.35,.008),tone(115,52,.13,.3)];
  if(id==='spark')return[metal(2400,.025,.3)];
  if(id==='trophy')return[tone(660,880,.45,.5),metal(1320,.65,.3,.08),tone(990,1320,.5,.3,.15)];
  if(id==='last_enemy')return[tone(660,880,.18,.5),metal(1320,.18,.15,.04)];

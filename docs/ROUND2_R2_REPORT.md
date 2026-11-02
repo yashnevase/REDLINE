@@ -12,3 +12,5 @@ Pre-R3 check/build pass (137 baseline tests). Additional geometry/stage-boundary
 Tunables: R2_ENABLED; palette and stage thresholds in r2-enemy-finish;20 smoke/64 wound sparks/24 fragment capacity; Low omits smoke and caps fragments12. Damage stages use BatchedMesh instance alpha as internal metadata and restore shader alpha to1; no extra per-enemy draw submission. Body shells80 triangles each replace smooth12×8 spheres. No simulation state/rules altered by R2.
 
 Owner approved the enemy candidate explicitly in chat. Final raised-cap budgets remain to verify. Later R3 adds elite names/max-HP to these bars. No concept/reference pixels, models or implementation copied; source study first in SPIRIT_CALL_NOTES_R2.
+
+Final density follow-up: placement measures the entire elite name as well as the bar, and excludes HUD/header bounds. Final 20-elite fixture checks verify non-overlap at both sizes; labels with no clear position are suppressed rather than stacking over one another. Faded enemies receive the same LOD as their batched equivalents. Final shared budgets and normal-play damage-stage evidence are in ROUND2_FINAL_REPORT.md.

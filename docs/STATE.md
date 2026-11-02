@@ -2,6 +2,8 @@
 
 Phase: **ROUND4 A1–A6 and B1–B4 implemented and verified; C1–C6 pre-production/design +5local concept candidates prepared. Owner art/audio/Rex/playtest acceptance is next. Chapter2 runtime and tag movement remain gated. Read ROUND4_A_REPORT.md, ROUND4_B_REPORT.md and CHAPTER2_DESIGN.md first.**
 
+Continuation 2026-11-03: owner said “proceed”; clarification requested because the current brief explicitly gates Chapter2 runtime on Chapter1 acceptance/reference selection. Prepared CHAPTER2_REVIEW.md with all five candidate previews and aligned CHAPTER_PIPELINE.md with that gate. No acceptance/playtest result inferred; no runtime or tag change.
+
 Round4:153 checks/build pass;480 seeded normal-stat bot runs, Normal missions87.5%/Rex57.5% aggregate (individual rows in report); exact browser replays;32s desktop/compact Normal clips + full4phase/7attack Rex victory;36 native stress cases within Low70/25k and Standard120/60k (observed52/20,803 and79/59,112 including normal clips). Four-size inputs/corners, saves/migrations/import/export/fallback/audio/production pass. Dedicated boss retry248ms. Source/evidence handoff commits preserve all IDs; no owner acceptance inferred. Private remote reverified; push authorized. Preserve user close1/ and docs/NEXT_WORK (1).md. New capture formatv5; historical command recordings use their pinned revision. Chapter2 references remain local-only. Completion tag still bbed3124f88f2fec6ece5697276cb544041da3d4.
 
 

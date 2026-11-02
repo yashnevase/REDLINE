@@ -1,0 +1,3878 @@
+[
+  {
+    "difficulty": "chill",
+    "mission": 0,
+    "phase": "complete",
+    "seconds": 23.633333333333333,
+    "hp": 120,
+    "maxAlive": 10,
+    "caps": 10,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 25
+      },
+      {
+        "tick": 61,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 31
+      },
+      {
+        "tick": 121,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 37
+      },
+      {
+        "tick": 181,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 43
+      },
+      {
+        "tick": 241,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 49
+      },
+      {
+        "tick": 301,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 55
+      },
+      {
+        "tick": 361,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 58
+      },
+      {
+        "tick": 421,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 61
+      },
+      {
+        "tick": 481,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 64
+      },
+      {
+        "tick": 541,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 70
+      },
+      {
+        "tick": 601,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 73
+      },
+      {
+        "tick": 661,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "tick": 721,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "tick": 781,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "tick": 841,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 85
+      },
+      {
+        "tick": 901,
+        "alive": 3,
+        "hp": 89,
+        "pressure": 84
+      },
+      {
+        "tick": 961,
+        "alive": 1,
+        "hp": 91,
+        "pressure": 80
+      },
+      {
+        "tick": 1021,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 83
+      },
+      {
+        "tick": 1081,
+        "alive": 8,
+        "hp": 88,
+        "pressure": 82
+      },
+      {
+        "tick": 1141,
+        "alive": 7,
+        "hp": 90,
+        "pressure": 80
+      },
+      {
+        "tick": 1201,
+        "alive": 6,
+        "hp": 91,
+        "pressure": 86
+      },
+      {
+        "tick": 1261,
+        "alive": 5,
+        "hp": 92,
+        "pressure": 92
+      },
+      {
+        "tick": 1321,
+        "alive": 2,
+        "hp": 81,
+        "pressure": 91
+      },
+      {
+        "tick": 1381,
+        "alive": 1,
+        "hp": 81,
+        "pressure": 87
+      }
+    ]
+  },
+  {
+    "difficulty": "chill",
+    "mission": 1,
+    "phase": "complete",
+    "seconds": 48.71666666666667,
+    "hp": 120,
+    "maxAlive": 10,
+    "caps": 10,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 25
+      },
+      {
+        "tick": 61,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 31
+      },
+      {
+        "tick": 121,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 37
+      },
+      {
+        "tick": 181,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 43
+      },
+      {
+        "tick": 241,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 49
+      },
+      {
+        "tick": 301,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 55
+      },
+      {
+        "tick": 361,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 61
+      },
+      {
+        "tick": 421,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 67
+      },
+      {
+        "tick": 481,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 73
+      },
+      {
+        "tick": 541,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "tick": 601,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 85
+      },
+      {
+        "tick": 661,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 91
+      },
+      {
+        "tick": 721,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 94
+      },
+      {
+        "tick": 781,
+        "alive": 10,
+        "hp": 94,
+        "pressure": 100
+      },
+      {
+        "tick": 841,
+        "alive": 9,
+        "hp": 96,
+        "pressure": 100
+      },
+      {
+        "tick": 901,
+        "alive": 8,
+        "hp": 97,
+        "pressure": 100
+      },
+      {
+        "tick": 961,
+        "alive": 8,
+        "hp": 98,
+        "pressure": 100
+      },
+      {
+        "tick": 1021,
+        "alive": 5,
+        "hp": 99,
+        "pressure": 100
+      },
+      {
+        "tick": 1081,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1141,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1201,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1261,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1321,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1381,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1441,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1501,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1561,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1621,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1681,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1741,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1801,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1861,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1921,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1981,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2041,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2101,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2161,
+        "alive": 1,
+        "hp": 88,
+        "pressure": 96
+      },
+      {
+        "tick": 2221,
+        "alive": 9,
+        "hp": 120,
+        "pressure": 99
+      },
+      {
+        "tick": 2281,
+        "alive": 9,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 2341,
+        "alive": 7,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 2401,
+        "alive": 7,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 2461,
+        "alive": 4,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 2521,
+        "alive": 5,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 2581,
+        "alive": 6,
+        "hp": 108,
+        "pressure": 92
+      },
+      {
+        "tick": 2641,
+        "alive": 5,
+        "hp": 110,
+        "pressure": 95
+      },
+      {
+        "tick": 2701,
+        "alive": 3,
+        "hp": 111,
+        "pressure": 100
+      },
+      {
+        "tick": 2761,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 92
+      },
+      {
+        "tick": 2821,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 84
+      },
+      {
+        "tick": 2881,
+        "alive": 2,
+        "hp": 101,
+        "pressure": 80
+      }
+    ]
+  },
+  {
+    "difficulty": "chill",
+    "mission": 2,
+    "phase": "complete",
+    "seconds": 85.35,
+    "hp": 120,
+    "maxAlive": 10,
+    "caps": 10,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 25
+      },
+      {
+        "tick": 61,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 28
+      },
+      {
+        "tick": 121,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 34
+      },
+      {
+        "tick": 181,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 37
+      },
+      {
+        "tick": 241,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 43
+      },
+      {
+        "tick": 301,
+        "alive": 8,
+        "hp": 80,
+        "pressure": 49
+      },
+      {
+        "tick": 361,
+        "alive": 8,
+        "hp": 74,
+        "pressure": 55
+      },
+      {
+        "tick": 421,
+        "alive": 8,
+        "hp": 76,
+        "pressure": 55
+      },
+      {
+        "tick": 481,
+        "alive": 8,
+        "hp": 71,
+        "pressure": 55
+      },
+      {
+        "tick": 541,
+        "alive": 7,
+        "hp": 72,
+        "pressure": 55
+      },
+      {
+        "tick": 601,
+        "alive": 7,
+        "hp": 72,
+        "pressure": 55
+      },
+      {
+        "tick": 661,
+        "alive": 5,
+        "hp": 75,
+        "pressure": 55
+      },
+      {
+        "tick": 721,
+        "alive": 4,
+        "hp": 76,
+        "pressure": 55
+      },
+      {
+        "tick": 781,
+        "alive": 5,
+        "hp": 77,
+        "pressure": 55
+      },
+      {
+        "tick": 841,
+        "alive": 4,
+        "hp": 78,
+        "pressure": 55
+      },
+      {
+        "tick": 901,
+        "alive": 2,
+        "hp": 68,
+        "pressure": 55
+      },
+      {
+        "tick": 961,
+        "alive": 2,
+        "hp": 56,
+        "pressure": 55
+      },
+      {
+        "tick": 1021,
+        "alive": 1,
+        "hp": 56,
+        "pressure": 55
+      },
+      {
+        "tick": 1081,
+        "alive": 1,
+        "hp": 56,
+        "pressure": 55
+      },
+      {
+        "tick": 1141,
+        "alive": 9,
+        "hp": 81,
+        "pressure": 55
+      },
+      {
+        "tick": 1201,
+        "alive": 9,
+        "hp": 83,
+        "pressure": 55
+      },
+      {
+        "tick": 1261,
+        "alive": 9,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "tick": 1321,
+        "alive": 9,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "tick": 1381,
+        "alive": 9,
+        "hp": 86,
+        "pressure": 55
+      },
+      {
+        "tick": 1441,
+        "alive": 9,
+        "hp": 87,
+        "pressure": 61
+      },
+      {
+        "tick": 1501,
+        "alive": 7,
+        "hp": 88,
+        "pressure": 67
+      },
+      {
+        "tick": 1561,
+        "alive": 7,
+        "hp": 90,
+        "pressure": 73
+      },
+      {
+        "tick": 1621,
+        "alive": 7,
+        "hp": 90,
+        "pressure": 79
+      },
+      {
+        "tick": 1681,
+        "alive": 5,
+        "hp": 78,
+        "pressure": 80
+      },
+      {
+        "tick": 1741,
+        "alive": 3,
+        "hp": 80,
+        "pressure": 76
+      },
+      {
+        "tick": 1801,
+        "alive": 3,
+        "hp": 81,
+        "pressure": 68
+      },
+      {
+        "tick": 1861,
+        "alive": 3,
+        "hp": 81,
+        "pressure": 60
+      },
+      {
+        "tick": 1921,
+        "alive": 3,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "tick": 1981,
+        "alive": 1,
+        "hp": 88,
+        "pressure": 61
+      },
+      {
+        "tick": 2041,
+        "alive": 1,
+        "hp": 89,
+        "pressure": 64
+      },
+      {
+        "tick": 2101,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 67
+      },
+      {
+        "tick": 2161,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 70
+      },
+      {
+        "tick": 2221,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 76
+      },
+      {
+        "tick": 2281,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "tick": 2341,
+        "alive": 10,
+        "hp": 94,
+        "pressure": 85
+      },
+      {
+        "tick": 2401,
+        "alive": 9,
+        "hp": 97,
+        "pressure": 88
+      },
+      {
+        "tick": 2461,
+        "alive": 8,
+        "hp": 99,
+        "pressure": 94
+      },
+      {
+        "tick": 2521,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 97
+      },
+      {
+        "tick": 2581,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2641,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2701,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2761,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2821,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2881,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2941,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 3001,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 3061,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 3121,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 3181,
+        "alive": 10,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 3241,
+        "alive": 10,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 3301,
+        "alive": 10,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 3361,
+        "alive": 10,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 3421,
+        "alive": 9,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 3481,
+        "alive": 7,
+        "hp": 109,
+        "pressure": 100
+      },
+      {
+        "tick": 3541,
+        "alive": 8,
+        "hp": 97,
+        "pressure": 92
+      },
+      {
+        "tick": 3601,
+        "alive": 7,
+        "hp": 98,
+        "pressure": 88
+      },
+      {
+        "tick": 3661,
+        "alive": 5,
+        "hp": 94,
+        "pressure": 80
+      },
+      {
+        "tick": 3721,
+        "alive": 5,
+        "hp": 96,
+        "pressure": 76
+      },
+      {
+        "tick": 3781,
+        "alive": 4,
+        "hp": 98,
+        "pressure": 68
+      },
+      {
+        "tick": 3841,
+        "alive": 4,
+        "hp": 98,
+        "pressure": 60
+      },
+      {
+        "tick": 3901,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 55
+      },
+      {
+        "tick": 3961,
+        "alive": 3,
+        "hp": 101,
+        "pressure": 55
+      },
+      {
+        "tick": 4021,
+        "alive": 3,
+        "hp": 101,
+        "pressure": 55
+      },
+      {
+        "tick": 4081,
+        "alive": 1,
+        "hp": 102,
+        "pressure": 55
+      },
+      {
+        "tick": 4141,
+        "alive": 1,
+        "hp": 103,
+        "pressure": 58
+      },
+      {
+        "tick": 4201,
+        "alive": 10,
+        "hp": 120,
+        "pressure": 61
+      },
+      {
+        "tick": 4261,
+        "alive": 9,
+        "hp": 120,
+        "pressure": 67
+      },
+      {
+        "tick": 4321,
+        "alive": 9,
+        "hp": 120,
+        "pressure": 70
+      },
+      {
+        "tick": 4381,
+        "alive": 9,
+        "hp": 120,
+        "pressure": 76
+      },
+      {
+        "tick": 4441,
+        "alive": 8,
+        "hp": 120,
+        "pressure": 82
+      },
+      {
+        "tick": 4501,
+        "alive": 6,
+        "hp": 120,
+        "pressure": 88
+      },
+      {
+        "tick": 4561,
+        "alive": 4,
+        "hp": 120,
+        "pressure": 94
+      },
+      {
+        "tick": 4621,
+        "alive": 4,
+        "hp": 120,
+        "pressure": 97
+      },
+      {
+        "tick": 4681,
+        "alive": 4,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 4741,
+        "alive": 5,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 4801,
+        "alive": 5,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 4861,
+        "alive": 6,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 4921,
+        "alive": 4,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 4981,
+        "alive": 3,
+        "hp": 120,
+        "pressure": 100
+      },
+      {
+        "tick": 5041,
+        "alive": 2,
+        "hp": 108,
+        "pressure": 96
+      },
+      {
+        "tick": 5101,
+        "alive": 1,
+        "hp": 109,
+        "pressure": 100
+      }
+    ]
+  },
+  {
+    "difficulty": "chill",
+    "mission": 3,
+    "phase": "complete",
+    "seconds": 17.3,
+    "hp": 97,
+    "maxAlive": 6,
+    "caps": 10,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 25
+      },
+      {
+        "tick": 61,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 25
+      },
+      {
+        "tick": 121,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 31
+      },
+      {
+        "tick": 181,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 37
+      },
+      {
+        "tick": 241,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 43
+      },
+      {
+        "tick": 301,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 49
+      },
+      {
+        "tick": 361,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 55
+      },
+      {
+        "tick": 421,
+        "alive": 2,
+        "hp": 100,
+        "pressure": 58
+      },
+      {
+        "tick": 481,
+        "alive": 2,
+        "hp": 94,
+        "pressure": 64
+      },
+      {
+        "tick": 541,
+        "alive": 1,
+        "hp": 94,
+        "pressure": 67
+      },
+      {
+        "tick": 601,
+        "alive": 1,
+        "hp": 95,
+        "pressure": 73
+      },
+      {
+        "tick": 661,
+        "alive": 1,
+        "hp": 95,
+        "pressure": 76
+      },
+      {
+        "tick": 721,
+        "alive": 5,
+        "hp": 95,
+        "pressure": 82
+      },
+      {
+        "tick": 781,
+        "alive": 5,
+        "hp": 95,
+        "pressure": 88
+      },
+      {
+        "tick": 841,
+        "alive": 5,
+        "hp": 95,
+        "pressure": 94
+      },
+      {
+        "tick": 901,
+        "alive": 5,
+        "hp": 95,
+        "pressure": 97
+      },
+      {
+        "tick": 961,
+        "alive": 5,
+        "hp": 96,
+        "pressure": 100
+      },
+      {
+        "tick": 1021,
+        "alive": 4,
+        "hp": 97,
+        "pressure": 100
+      }
+    ]
+  },
+  {
+    "difficulty": "normal",
+    "mission": 0,
+    "phase": "complete",
+    "seconds": 28.2,
+    "hp": 120,
+    "maxAlive": 13,
+    "caps": 14,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 50
+      },
+      {
+        "tick": 61,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 56
+      },
+      {
+        "tick": 121,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 62
+      },
+      {
+        "tick": 181,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 68
+      },
+      {
+        "tick": 241,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 71
+      },
+      {
+        "tick": 301,
+        "alive": 7,
+        "hp": 94,
+        "pressure": 77
+      },
+      {
+        "tick": 361,
+        "alive": 4,
+        "hp": 95,
+        "pressure": 80
+      },
+      {
+        "tick": 421,
+        "alive": 3,
+        "hp": 95,
+        "pressure": 80
+      },
+      {
+        "tick": 481,
+        "alive": 3,
+        "hp": 98,
+        "pressure": 86
+      },
+      {
+        "tick": 541,
+        "alive": 1,
+        "hp": 100,
+        "pressure": 92
+      },
+      {
+        "tick": 601,
+        "alive": 13,
+        "hp": 100,
+        "pressure": 98
+      },
+      {
+        "tick": 661,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 721,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 781,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 841,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 901,
+        "alive": 6,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "tick": 961,
+        "alive": 4,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "tick": 1021,
+        "alive": 2,
+        "hp": 98,
+        "pressure": 100
+      },
+      {
+        "tick": 1081,
+        "alive": 1,
+        "hp": 99,
+        "pressure": 100
+      },
+      {
+        "tick": 1141,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1201,
+        "alive": 13,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1261,
+        "alive": 12,
+        "hp": 89,
+        "pressure": 96
+      },
+      {
+        "tick": 1321,
+        "alive": 11,
+        "hp": 92,
+        "pressure": 95
+      },
+      {
+        "tick": 1381,
+        "alive": 8,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "tick": 1441,
+        "alive": 7,
+        "hp": 96,
+        "pressure": 100
+      },
+      {
+        "tick": 1501,
+        "alive": 6,
+        "hp": 84,
+        "pressure": 92
+      },
+      {
+        "tick": 1561,
+        "alive": 4,
+        "hp": 84,
+        "pressure": 88
+      },
+      {
+        "tick": 1621,
+        "alive": 1,
+        "hp": 90,
+        "pressure": 84
+      },
+      {
+        "tick": 1681,
+        "alive": 1,
+        "hp": 90,
+        "pressure": 80
+      }
+    ]
+  },
+  {
+    "difficulty": "normal",
+    "mission": 1,
+    "phase": "complete",
+    "seconds": 68.21666666666667,
+    "hp": 120,
+    "maxAlive": 14,
+    "caps": 14,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 50
+      },
+      {
+        "tick": 61,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 56
+      },
+      {
+        "tick": 121,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 62
+      },
+      {
+        "tick": 181,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 68
+      },
+      {
+        "tick": 241,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 74
+      },
+      {
+        "tick": 301,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 77
+      },
+      {
+        "tick": 361,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 83
+      },
+      {
+        "tick": 421,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 89
+      },
+      {
+        "tick": 481,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 95
+      },
+      {
+        "tick": 541,
+        "alive": 10,
+        "hp": 88,
+        "pressure": 87
+      },
+      {
+        "tick": 601,
+        "alive": 8,
+        "hp": 89,
+        "pressure": 83
+      },
+      {
+        "tick": 661,
+        "alive": 7,
+        "hp": 91,
+        "pressure": 83
+      },
+      {
+        "tick": 721,
+        "alive": 6,
+        "hp": 79,
+        "pressure": 82
+      },
+      {
+        "tick": 781,
+        "alive": 5,
+        "hp": 80,
+        "pressure": 74
+      },
+      {
+        "tick": 841,
+        "alive": 5,
+        "hp": 81,
+        "pressure": 66
+      },
+      {
+        "tick": 901,
+        "alive": 3,
+        "hp": 83,
+        "pressure": 58
+      },
+      {
+        "tick": 961,
+        "alive": 3,
+        "hp": 83,
+        "pressure": 55
+      },
+      {
+        "tick": 1021,
+        "alive": 2,
+        "hp": 72,
+        "pressure": 55
+      },
+      {
+        "tick": 1081,
+        "alive": 1,
+        "hp": 72,
+        "pressure": 55
+      },
+      {
+        "tick": 1141,
+        "alive": 1,
+        "hp": 73,
+        "pressure": 55
+      },
+      {
+        "tick": 1201,
+        "alive": 12,
+        "hp": 54,
+        "pressure": 54
+      },
+      {
+        "tick": 1261,
+        "alive": 12,
+        "hp": 43,
+        "pressure": 51
+      },
+      {
+        "tick": 1321,
+        "alive": 12,
+        "hp": 44,
+        "pressure": 43
+      },
+      {
+        "tick": 1381,
+        "alive": 12,
+        "hp": 46,
+        "pressure": 35
+      },
+      {
+        "tick": 1441,
+        "alive": 13,
+        "hp": 46,
+        "pressure": 35
+      },
+      {
+        "tick": 1501,
+        "alive": 12,
+        "hp": 47,
+        "pressure": 35
+      },
+      {
+        "tick": 1561,
+        "alive": 9,
+        "hp": 47,
+        "pressure": 35
+      },
+      {
+        "tick": 1621,
+        "alive": 7,
+        "hp": 53,
+        "pressure": 35
+      },
+      {
+        "tick": 1681,
+        "alive": 8,
+        "hp": 54,
+        "pressure": 35
+      },
+      {
+        "tick": 1741,
+        "alive": 9,
+        "hp": 54,
+        "pressure": 35
+      },
+      {
+        "tick": 1801,
+        "alive": 8,
+        "hp": 56,
+        "pressure": 41
+      },
+      {
+        "tick": 1861,
+        "alive": 6,
+        "hp": 57,
+        "pressure": 47
+      },
+      {
+        "tick": 1921,
+        "alive": 5,
+        "hp": 57,
+        "pressure": 53
+      },
+      {
+        "tick": 1981,
+        "alive": 4,
+        "hp": 58,
+        "pressure": 55
+      },
+      {
+        "tick": 2041,
+        "alive": 2,
+        "hp": 60,
+        "pressure": 55
+      },
+      {
+        "tick": 2101,
+        "alive": 12,
+        "hp": 88,
+        "pressure": 61
+      },
+      {
+        "tick": 2161,
+        "alive": 14,
+        "hp": 88,
+        "pressure": 64
+      },
+      {
+        "tick": 2221,
+        "alive": 13,
+        "hp": 88,
+        "pressure": 67
+      },
+      {
+        "tick": 2281,
+        "alive": 14,
+        "hp": 89,
+        "pressure": 70
+      },
+      {
+        "tick": 2341,
+        "alive": 13,
+        "hp": 90,
+        "pressure": 76
+      },
+      {
+        "tick": 2401,
+        "alive": 12,
+        "hp": 92,
+        "pressure": 82
+      },
+      {
+        "tick": 2461,
+        "alive": 11,
+        "hp": 94,
+        "pressure": 88
+      },
+      {
+        "tick": 2521,
+        "alive": 11,
+        "hp": 96,
+        "pressure": 94
+      },
+      {
+        "tick": 2581,
+        "alive": 9,
+        "hp": 99,
+        "pressure": 97
+      },
+      {
+        "tick": 2641,
+        "alive": 8,
+        "hp": 94,
+        "pressure": 100
+      },
+      {
+        "tick": 2701,
+        "alive": 4,
+        "hp": 96,
+        "pressure": 100
+      },
+      {
+        "tick": 2761,
+        "alive": 4,
+        "hp": 98,
+        "pressure": 100
+      },
+      {
+        "tick": 2821,
+        "alive": 3,
+        "hp": 99,
+        "pressure": 100
+      },
+      {
+        "tick": 2881,
+        "alive": 3,
+        "hp": 87,
+        "pressure": 92
+      },
+      {
+        "tick": 2941,
+        "alive": 1,
+        "hp": 75,
+        "pressure": 84
+      },
+      {
+        "tick": 3001,
+        "alive": 12,
+        "hp": 120,
+        "pressure": 80
+      },
+      {
+        "tick": 3061,
+        "alive": 14,
+        "hp": 120,
+        "pressure": 80
+      },
+      {
+        "tick": 3121,
+        "alive": 11,
+        "hp": 120,
+        "pressure": 86
+      },
+      {
+        "tick": 3181,
+        "alive": 9,
+        "hp": 108,
+        "pressure": 82
+      },
+      {
+        "tick": 3241,
+        "alive": 8,
+        "hp": 113,
+        "pressure": 80
+      },
+      {
+        "tick": 3301,
+        "alive": 9,
+        "hp": 113,
+        "pressure": 80
+      },
+      {
+        "tick": 3361,
+        "alive": 8,
+        "hp": 114,
+        "pressure": 83
+      },
+      {
+        "tick": 3421,
+        "alive": 8,
+        "hp": 115,
+        "pressure": 89
+      },
+      {
+        "tick": 3481,
+        "alive": 7,
+        "hp": 110,
+        "pressure": 85
+      },
+      {
+        "tick": 3541,
+        "alive": 8,
+        "hp": 110,
+        "pressure": 80
+      },
+      {
+        "tick": 3601,
+        "alive": 9,
+        "hp": 112,
+        "pressure": 86
+      },
+      {
+        "tick": 3661,
+        "alive": 8,
+        "hp": 113,
+        "pressure": 92
+      },
+      {
+        "tick": 3721,
+        "alive": 8,
+        "hp": 113,
+        "pressure": 98
+      },
+      {
+        "tick": 3781,
+        "alive": 7,
+        "hp": 113,
+        "pressure": 100
+      },
+      {
+        "tick": 3841,
+        "alive": 6,
+        "hp": 114,
+        "pressure": 100
+      },
+      {
+        "tick": 3901,
+        "alive": 4,
+        "hp": 116,
+        "pressure": 100
+      },
+      {
+        "tick": 3961,
+        "alive": 3,
+        "hp": 117,
+        "pressure": 100
+      },
+      {
+        "tick": 4021,
+        "alive": 2,
+        "hp": 118,
+        "pressure": 100
+      },
+      {
+        "tick": 4081,
+        "alive": 1,
+        "hp": 120,
+        "pressure": 100
+      }
+    ]
+  },
+  {
+    "difficulty": "normal",
+    "mission": 2,
+    "phase": "lost",
+    "seconds": 60.166666666666664,
+    "hp": 0,
+    "maxAlive": 14,
+    "caps": 14,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 50
+      },
+      {
+        "tick": 61,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 56
+      },
+      {
+        "tick": 121,
+        "alive": 10,
+        "hp": 100,
+        "pressure": 62
+      },
+      {
+        "tick": 181,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 68
+      },
+      {
+        "tick": 241,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 74
+      },
+      {
+        "tick": 301,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "tick": 361,
+        "alive": 9,
+        "hp": 88.8,
+        "pressure": 80
+      },
+      {
+        "tick": 421,
+        "alive": 10,
+        "hp": 90.8,
+        "pressure": 80
+      },
+      {
+        "tick": 481,
+        "alive": 9,
+        "hp": 91.8,
+        "pressure": 80
+      },
+      {
+        "tick": 541,
+        "alive": 8,
+        "hp": 91.8,
+        "pressure": 86
+      },
+      {
+        "tick": 601,
+        "alive": 9,
+        "hp": 81.8,
+        "pressure": 78
+      },
+      {
+        "tick": 661,
+        "alive": 8,
+        "hp": 83.8,
+        "pressure": 78
+      },
+      {
+        "tick": 721,
+        "alive": 9,
+        "hp": 83.8,
+        "pressure": 70
+      },
+      {
+        "tick": 781,
+        "alive": 9,
+        "hp": 83.8,
+        "pressure": 62
+      },
+      {
+        "tick": 841,
+        "alive": 9,
+        "hp": 84.8,
+        "pressure": 62
+      },
+      {
+        "tick": 901,
+        "alive": 8,
+        "hp": 73.8,
+        "pressure": 55
+      },
+      {
+        "tick": 961,
+        "alive": 7,
+        "hp": 61.8,
+        "pressure": 55
+      },
+      {
+        "tick": 1021,
+        "alive": 6,
+        "hp": 32.8,
+        "pressure": 51
+      },
+      {
+        "tick": 1081,
+        "alive": 6,
+        "hp": 33.8,
+        "pressure": 43
+      },
+      {
+        "tick": 1141,
+        "alive": 5,
+        "hp": 33.8,
+        "pressure": 35
+      },
+      {
+        "tick": 1201,
+        "alive": 4,
+        "hp": 35.8,
+        "pressure": 35
+      },
+      {
+        "tick": 1261,
+        "alive": 3,
+        "hp": 36.8,
+        "pressure": 35
+      },
+      {
+        "tick": 1321,
+        "alive": 1,
+        "hp": 37.8,
+        "pressure": 35
+      },
+      {
+        "tick": 1381,
+        "alive": 1,
+        "hp": 38.8,
+        "pressure": 35
+      },
+      {
+        "tick": 1441,
+        "alive": 12,
+        "hp": 63.8,
+        "pressure": 38
+      },
+      {
+        "tick": 1501,
+        "alive": 11,
+        "hp": 65.8,
+        "pressure": 38
+      },
+      {
+        "tick": 1561,
+        "alive": 11,
+        "hp": 54.8,
+        "pressure": 35
+      },
+      {
+        "tick": 1621,
+        "alive": 11,
+        "hp": 54.8,
+        "pressure": 35
+      },
+      {
+        "tick": 1681,
+        "alive": 9,
+        "hp": 57.8,
+        "pressure": 38
+      },
+      {
+        "tick": 1741,
+        "alive": 9,
+        "hp": 57.8,
+        "pressure": 38
+      },
+      {
+        "tick": 1801,
+        "alive": 9,
+        "hp": 58.8,
+        "pressure": 41
+      },
+      {
+        "tick": 1861,
+        "alive": 8,
+        "hp": 61.8,
+        "pressure": 47
+      },
+      {
+        "tick": 1921,
+        "alive": 7,
+        "hp": 62.8,
+        "pressure": 50
+      },
+      {
+        "tick": 1981,
+        "alive": 7,
+        "hp": 64.8,
+        "pressure": 53
+      },
+      {
+        "tick": 2041,
+        "alive": 4,
+        "hp": 67.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2101,
+        "alive": 3,
+        "hp": 69.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2161,
+        "alive": 4,
+        "hp": 69.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2221,
+        "alive": 4,
+        "hp": 70.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2281,
+        "alive": 4,
+        "hp": 71.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2341,
+        "alive": 3,
+        "hp": 72.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2401,
+        "alive": 4,
+        "hp": 72.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2461,
+        "alive": 3,
+        "hp": 73.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2521,
+        "alive": 3,
+        "hp": 73.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2581,
+        "alive": 1,
+        "hp": 73.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2641,
+        "alive": 1,
+        "hp": 73.8,
+        "pressure": 55
+      },
+      {
+        "tick": 2701,
+        "alive": 12,
+        "hp": 78.2,
+        "pressure": 54
+      },
+      {
+        "tick": 2761,
+        "alive": 13,
+        "hp": 72.2,
+        "pressure": 55
+      },
+      {
+        "tick": 2821,
+        "alive": 12,
+        "hp": 74.2,
+        "pressure": 55
+      },
+      {
+        "tick": 2881,
+        "alive": 12,
+        "hp": 75.2,
+        "pressure": 55
+      },
+      {
+        "tick": 2941,
+        "alive": 9,
+        "hp": 78.2,
+        "pressure": 55
+      },
+      {
+        "tick": 3001,
+        "alive": 10,
+        "hp": 80.2,
+        "pressure": 55
+      },
+      {
+        "tick": 3061,
+        "alive": 8,
+        "hp": 69.2,
+        "pressure": 55
+      },
+      {
+        "tick": 3121,
+        "alive": 7,
+        "hp": 71.2,
+        "pressure": 55
+      },
+      {
+        "tick": 3181,
+        "alive": 8,
+        "hp": 42.2,
+        "pressure": 47
+      },
+      {
+        "tick": 3241,
+        "alive": 9,
+        "hp": 12.200000000000003,
+        "pressure": 39
+      },
+      {
+        "tick": 3301,
+        "alive": 8,
+        "hp": 14.200000000000003,
+        "pressure": 31
+      },
+      {
+        "tick": 3361,
+        "alive": 9,
+        "hp": 14.200000000000003,
+        "pressure": 23
+      },
+      {
+        "tick": 3421,
+        "alive": 6,
+        "hp": 17.200000000000003,
+        "pressure": 19
+      },
+      {
+        "tick": 3481,
+        "alive": 8,
+        "hp": 17.200000000000003,
+        "pressure": 15
+      },
+      {
+        "tick": 3541,
+        "alive": 7,
+        "hp": 17.200000000000003,
+        "pressure": 11
+      },
+      {
+        "tick": 3601,
+        "alive": 5,
+        "hp": 8.200000000000003,
+        "pressure": 10
+      }
+    ]
+  },
+  {
+    "difficulty": "normal",
+    "mission": 3,
+    "phase": "complete",
+    "seconds": 19.383333333333333,
+    "hp": 69.6,
+    "maxAlive": 6,
+    "caps": 14,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 50
+      },
+      {
+        "tick": 61,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 50
+      },
+      {
+        "tick": 121,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 56
+      },
+      {
+        "tick": 181,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 62
+      },
+      {
+        "tick": 241,
+        "alive": 3,
+        "hp": 100,
+        "pressure": 68
+      },
+      {
+        "tick": 301,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 74
+      },
+      {
+        "tick": 361,
+        "alive": 4,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "tick": 421,
+        "alive": 2,
+        "hp": 96,
+        "pressure": 80
+      },
+      {
+        "tick": 481,
+        "alive": 2,
+        "hp": 88.8,
+        "pressure": 80
+      },
+      {
+        "tick": 541,
+        "alive": 5,
+        "hp": 88.8,
+        "pressure": 80
+      },
+      {
+        "tick": 601,
+        "alive": 4,
+        "hp": 64.6,
+        "pressure": 76
+      },
+      {
+        "tick": 661,
+        "alive": 1,
+        "hp": 66.6,
+        "pressure": 72
+      },
+      {
+        "tick": 721,
+        "alive": 1,
+        "hp": 67.6,
+        "pressure": 64
+      },
+      {
+        "tick": 781,
+        "alive": 5,
+        "hp": 67.6,
+        "pressure": 56
+      },
+      {
+        "tick": 841,
+        "alive": 5,
+        "hp": 67.6,
+        "pressure": 55
+      },
+      {
+        "tick": 901,
+        "alive": 4,
+        "hp": 67.6,
+        "pressure": 55
+      },
+      {
+        "tick": 961,
+        "alive": 4,
+        "hp": 67.6,
+        "pressure": 55
+      },
+      {
+        "tick": 1021,
+        "alive": 6,
+        "hp": 68.6,
+        "pressure": 55
+      },
+      {
+        "tick": 1081,
+        "alive": 5,
+        "hp": 69.6,
+        "pressure": 55
+      },
+      {
+        "tick": 1141,
+        "alive": 5,
+        "hp": 69.6,
+        "pressure": 55
+      }
+    ]
+  },
+  {
+    "difficulty": "redline",
+    "mission": 0,
+    "phase": "complete",
+    "seconds": 38.21666666666667,
+    "hp": 120,
+    "maxAlive": 20,
+    "caps": 20,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 65
+      },
+      {
+        "tick": 61,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 71
+      },
+      {
+        "tick": 121,
+        "alive": 16,
+        "hp": 100,
+        "pressure": 77
+      },
+      {
+        "tick": 181,
+        "alive": 16,
+        "hp": 94,
+        "pressure": 80
+      },
+      {
+        "tick": 241,
+        "alive": 15,
+        "hp": 83,
+        "pressure": 76
+      },
+      {
+        "tick": 301,
+        "alive": 14,
+        "hp": 84,
+        "pressure": 68
+      },
+      {
+        "tick": 361,
+        "alive": 11,
+        "hp": 78,
+        "pressure": 60
+      },
+      {
+        "tick": 421,
+        "alive": 11,
+        "hp": 78,
+        "pressure": 55
+      },
+      {
+        "tick": 481,
+        "alive": 9,
+        "hp": 82,
+        "pressure": 55
+      },
+      {
+        "tick": 541,
+        "alive": 8,
+        "hp": 84,
+        "pressure": 55
+      },
+      {
+        "tick": 601,
+        "alive": 8,
+        "hp": 84,
+        "pressure": 55
+      },
+      {
+        "tick": 661,
+        "alive": 6,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "tick": 721,
+        "alive": 4,
+        "hp": 86,
+        "pressure": 55
+      },
+      {
+        "tick": 781,
+        "alive": 1,
+        "hp": 89,
+        "pressure": 58
+      },
+      {
+        "tick": 841,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 64
+      },
+      {
+        "tick": 901,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 70
+      },
+      {
+        "tick": 961,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 76
+      },
+      {
+        "tick": 1021,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 76
+      },
+      {
+        "tick": 1081,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 82
+      },
+      {
+        "tick": 1141,
+        "alive": 16,
+        "hp": 100,
+        "pressure": 88
+      },
+      {
+        "tick": 1201,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 94
+      },
+      {
+        "tick": 1261,
+        "alive": 6,
+        "hp": 81,
+        "pressure": 97
+      },
+      {
+        "tick": 1321,
+        "alive": 5,
+        "hp": 81,
+        "pressure": 89
+      },
+      {
+        "tick": 1381,
+        "alive": 3,
+        "hp": 86,
+        "pressure": 81
+      },
+      {
+        "tick": 1441,
+        "alive": 2,
+        "hp": 87,
+        "pressure": 80
+      },
+      {
+        "tick": 1501,
+        "alive": 2,
+        "hp": 88,
+        "pressure": 80
+      },
+      {
+        "tick": 1561,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 83
+      },
+      {
+        "tick": 1621,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 86
+      },
+      {
+        "tick": 1681,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 92
+      },
+      {
+        "tick": 1741,
+        "alive": 16,
+        "hp": 100,
+        "pressure": 95
+      },
+      {
+        "tick": 1801,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1861,
+        "alive": 9,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 1921,
+        "alive": 8,
+        "hp": 93.8,
+        "pressure": 100
+      },
+      {
+        "tick": 1981,
+        "alive": 7,
+        "hp": 88.8,
+        "pressure": 92
+      },
+      {
+        "tick": 2041,
+        "alive": 5,
+        "hp": 90.8,
+        "pressure": 84
+      },
+      {
+        "tick": 2101,
+        "alive": 3,
+        "hp": 91.8,
+        "pressure": 80
+      },
+      {
+        "tick": 2161,
+        "alive": 3,
+        "hp": 91.8,
+        "pressure": 80
+      },
+      {
+        "tick": 2221,
+        "alive": 2,
+        "hp": 93.8,
+        "pressure": 83
+      },
+      {
+        "tick": 2281,
+        "alive": 1,
+        "hp": 94.8,
+        "pressure": 89
+      }
+    ]
+  },
+  {
+    "difficulty": "redline",
+    "mission": 1,
+    "phase": "complete",
+    "seconds": 77.53333333333333,
+    "hp": 120,
+    "maxAlive": 20,
+    "caps": 20,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 65
+      },
+      {
+        "tick": 61,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 71
+      },
+      {
+        "tick": 121,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 74
+      },
+      {
+        "tick": 181,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "tick": 241,
+        "alive": 17,
+        "hp": 94,
+        "pressure": 83
+      },
+      {
+        "tick": 301,
+        "alive": 14,
+        "hp": 91,
+        "pressure": 80
+      },
+      {
+        "tick": 361,
+        "alive": 11,
+        "hp": 94,
+        "pressure": 80
+      },
+      {
+        "tick": 421,
+        "alive": 12,
+        "hp": 84,
+        "pressure": 80
+      },
+      {
+        "tick": 481,
+        "alive": 10,
+        "hp": 86,
+        "pressure": 80
+      },
+      {
+        "tick": 541,
+        "alive": 11,
+        "hp": 87,
+        "pressure": 80
+      },
+      {
+        "tick": 601,
+        "alive": 8,
+        "hp": 87,
+        "pressure": 80
+      },
+      {
+        "tick": 661,
+        "alive": 7,
+        "hp": 90,
+        "pressure": 80
+      },
+      {
+        "tick": 721,
+        "alive": 6,
+        "hp": 91,
+        "pressure": 83
+      },
+      {
+        "tick": 781,
+        "alive": 4,
+        "hp": 37,
+        "pressure": 79
+      },
+      {
+        "tick": 841,
+        "alive": 4,
+        "hp": 37,
+        "pressure": 71
+      },
+      {
+        "tick": 901,
+        "alive": 3,
+        "hp": 37,
+        "pressure": 63
+      },
+      {
+        "tick": 961,
+        "alive": 2,
+        "hp": 38,
+        "pressure": 55
+      },
+      {
+        "tick": 1021,
+        "alive": 1,
+        "hp": 39,
+        "pressure": 47
+      },
+      {
+        "tick": 1081,
+        "alive": 18,
+        "hp": 66,
+        "pressure": 46
+      },
+      {
+        "tick": 1141,
+        "alive": 19,
+        "hp": 66,
+        "pressure": 52
+      },
+      {
+        "tick": 1201,
+        "alive": 13,
+        "hp": 56,
+        "pressure": 55
+      },
+      {
+        "tick": 1261,
+        "alive": 14,
+        "hp": 57,
+        "pressure": 55
+      },
+      {
+        "tick": 1321,
+        "alive": 11,
+        "hp": 53,
+        "pressure": 51
+      },
+      {
+        "tick": 1381,
+        "alive": 12,
+        "hp": 53,
+        "pressure": 43
+      },
+      {
+        "tick": 1441,
+        "alive": 8,
+        "hp": 56,
+        "pressure": 46
+      },
+      {
+        "tick": 1501,
+        "alive": 8,
+        "hp": 59,
+        "pressure": 52
+      },
+      {
+        "tick": 1561,
+        "alive": 9,
+        "hp": 59,
+        "pressure": 55
+      },
+      {
+        "tick": 1621,
+        "alive": 9,
+        "hp": 60,
+        "pressure": 55
+      },
+      {
+        "tick": 1681,
+        "alive": 9,
+        "hp": 60,
+        "pressure": 55
+      },
+      {
+        "tick": 1741,
+        "alive": 6,
+        "hp": 65,
+        "pressure": 55
+      },
+      {
+        "tick": 1801,
+        "alive": 7,
+        "hp": 65,
+        "pressure": 55
+      },
+      {
+        "tick": 1861,
+        "alive": 5,
+        "hp": 65,
+        "pressure": 55
+      },
+      {
+        "tick": 1921,
+        "alive": 4,
+        "hp": 68,
+        "pressure": 55
+      },
+      {
+        "tick": 1981,
+        "alive": 3,
+        "hp": 69,
+        "pressure": 55
+      },
+      {
+        "tick": 2041,
+        "alive": 3,
+        "hp": 69,
+        "pressure": 55
+      },
+      {
+        "tick": 2101,
+        "alive": 2,
+        "hp": 70,
+        "pressure": 55
+      },
+      {
+        "tick": 2161,
+        "alive": 1,
+        "hp": 71,
+        "pressure": 55
+      },
+      {
+        "tick": 2221,
+        "alive": 18,
+        "hp": 96,
+        "pressure": 58
+      },
+      {
+        "tick": 2281,
+        "alive": 18,
+        "hp": 97,
+        "pressure": 64
+      },
+      {
+        "tick": 2341,
+        "alive": 20,
+        "hp": 98,
+        "pressure": 70
+      },
+      {
+        "tick": 2401,
+        "alive": 19,
+        "hp": 99,
+        "pressure": 70
+      },
+      {
+        "tick": 2461,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 73
+      },
+      {
+        "tick": 2521,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 76
+      },
+      {
+        "tick": 2581,
+        "alive": 16,
+        "hp": 100,
+        "pressure": 79
+      },
+      {
+        "tick": 2641,
+        "alive": 15,
+        "hp": 100,
+        "pressure": 85
+      },
+      {
+        "tick": 2701,
+        "alive": 16,
+        "hp": 100,
+        "pressure": 91
+      },
+      {
+        "tick": 2761,
+        "alive": 12,
+        "hp": 100,
+        "pressure": 97
+      },
+      {
+        "tick": 2821,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2881,
+        "alive": 8,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 2941,
+        "alive": 7,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 3001,
+        "alive": 7,
+        "hp": 77,
+        "pressure": 92
+      },
+      {
+        "tick": 3061,
+        "alive": 5,
+        "hp": 64.6,
+        "pressure": 84
+      },
+      {
+        "tick": 3121,
+        "alive": 3,
+        "hp": 52.599999999999994,
+        "pressure": 80
+      },
+      {
+        "tick": 3181,
+        "alive": 2,
+        "hp": 42.599999999999994,
+        "pressure": 72
+      },
+      {
+        "tick": 3241,
+        "alive": 2,
+        "hp": 42.599999999999994,
+        "pressure": 64
+      },
+      {
+        "tick": 3301,
+        "alive": 2,
+        "hp": 43.599999999999994,
+        "pressure": 56
+      },
+      {
+        "tick": 3361,
+        "alive": 19,
+        "hp": 88.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3421,
+        "alive": 17,
+        "hp": 89.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3481,
+        "alive": 17,
+        "hp": 92.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3541,
+        "alive": 17,
+        "hp": 93.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3601,
+        "alive": 17,
+        "hp": 94.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3661,
+        "alive": 16,
+        "hp": 98.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3721,
+        "alive": 13,
+        "hp": 87.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3781,
+        "alive": 12,
+        "hp": 91.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3841,
+        "alive": 13,
+        "hp": 92.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3901,
+        "alive": 12,
+        "hp": 93.6,
+        "pressure": 55
+      },
+      {
+        "tick": 3961,
+        "alive": 12,
+        "hp": 95.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4021,
+        "alive": 12,
+        "hp": 96.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4081,
+        "alive": 11,
+        "hp": 97.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4141,
+        "alive": 11,
+        "hp": 97.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4201,
+        "alive": 8,
+        "hp": 91.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4261,
+        "alive": 8,
+        "hp": 92.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4321,
+        "alive": 7,
+        "hp": 95.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4381,
+        "alive": 6,
+        "hp": 96.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4441,
+        "alive": 5,
+        "hp": 96.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4501,
+        "alive": 2,
+        "hp": 98.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4561,
+        "alive": 2,
+        "hp": 100.6,
+        "pressure": 55
+      },
+      {
+        "tick": 4621,
+        "alive": 1,
+        "hp": 101.6,
+        "pressure": 55
+      }
+    ]
+  },
+  {
+    "difficulty": "redline",
+    "mission": 2,
+    "phase": "lost",
+    "seconds": 132.38333333333333,
+    "hp": 0,
+    "maxAlive": 20,
+    "caps": 20,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 18,
+        "hp": 100,
+        "pressure": 65
+      },
+      {
+        "tick": 61,
+        "alive": 19,
+        "hp": 100,
+        "pressure": 68
+      },
+      {
+        "tick": 121,
+        "alive": 17,
+        "hp": 100,
+        "pressure": 74
+      },
+      {
+        "tick": 181,
+        "alive": 17,
+        "hp": 89,
+        "pressure": 80
+      },
+      {
+        "tick": 241,
+        "alive": 17,
+        "hp": 83,
+        "pressure": 72
+      },
+      {
+        "tick": 301,
+        "alive": 13,
+        "hp": 87,
+        "pressure": 71
+      },
+      {
+        "tick": 361,
+        "alive": 13,
+        "hp": 42,
+        "pressure": 67
+      },
+      {
+        "tick": 421,
+        "alive": 15,
+        "hp": 42,
+        "pressure": 59
+      },
+      {
+        "tick": 481,
+        "alive": 14,
+        "hp": 44,
+        "pressure": 55
+      },
+      {
+        "tick": 541,
+        "alive": 14,
+        "hp": 45,
+        "pressure": 55
+      },
+      {
+        "tick": 601,
+        "alive": 14,
+        "hp": 46,
+        "pressure": 47
+      },
+      {
+        "tick": 661,
+        "alive": 12,
+        "hp": 46,
+        "pressure": 39
+      },
+      {
+        "tick": 721,
+        "alive": 13,
+        "hp": 32,
+        "pressure": 35
+      },
+      {
+        "tick": 781,
+        "alive": 12,
+        "hp": 33,
+        "pressure": 35
+      },
+      {
+        "tick": 841,
+        "alive": 11,
+        "hp": 21,
+        "pressure": 35
+      },
+      {
+        "tick": 901,
+        "alive": 11,
+        "hp": 22,
+        "pressure": 27
+      },
+      {
+        "tick": 961,
+        "alive": 10,
+        "hp": 23,
+        "pressure": 19
+      },
+      {
+        "tick": 1021,
+        "alive": 10,
+        "hp": 23,
+        "pressure": 11
+      },
+      {
+        "tick": 1081,
+        "alive": 10,
+        "hp": 23,
+        "pressure": 10
+      },
+      {
+        "tick": 1141,
+        "alive": 9,
+        "hp": 23,
+        "pressure": 10
+      },
+      {
+        "tick": 1201,
+        "alive": 8,
+        "hp": 13,
+        "pressure": 10
+      },
+      {
+        "tick": 1261,
+        "alive": 8,
+        "hp": 13,
+        "pressure": 10
+      },
+      {
+        "tick": 1321,
+        "alive": 7,
+        "hp": 14,
+        "pressure": 10
+      },
+      {
+        "tick": 1381,
+        "alive": 3,
+        "hp": 16,
+        "pressure": 10
+      },
+      {
+        "tick": 1441,
+        "alive": 3,
+        "hp": 18,
+        "pressure": 10
+      },
+      {
+        "tick": 1501,
+        "alive": 2,
+        "hp": 18,
+        "pressure": 10
+      },
+      {
+        "tick": 1561,
+        "alive": 1,
+        "hp": 20,
+        "pressure": 10
+      },
+      {
+        "tick": 1621,
+        "alive": 19,
+        "hp": 46,
+        "pressure": 16
+      },
+      {
+        "tick": 1681,
+        "alive": 19,
+        "hp": 47,
+        "pressure": 22
+      },
+      {
+        "tick": 1741,
+        "alive": 19,
+        "hp": 47,
+        "pressure": 28
+      },
+      {
+        "tick": 1801,
+        "alive": 19,
+        "hp": 49,
+        "pressure": 34
+      },
+      {
+        "tick": 1861,
+        "alive": 20,
+        "hp": 49,
+        "pressure": 35
+      },
+      {
+        "tick": 1921,
+        "alive": 20,
+        "hp": 49,
+        "pressure": 35
+      },
+      {
+        "tick": 1981,
+        "alive": 20,
+        "hp": 51,
+        "pressure": 35
+      },
+      {
+        "tick": 2041,
+        "alive": 20,
+        "hp": 52,
+        "pressure": 35
+      },
+      {
+        "tick": 2101,
+        "alive": 20,
+        "hp": 52,
+        "pressure": 35
+      },
+      {
+        "tick": 2161,
+        "alive": 19,
+        "hp": 55,
+        "pressure": 38
+      },
+      {
+        "tick": 2221,
+        "alive": 15,
+        "hp": 59,
+        "pressure": 41
+      },
+      {
+        "tick": 2281,
+        "alive": 16,
+        "hp": 60,
+        "pressure": 47
+      },
+      {
+        "tick": 2341,
+        "alive": 17,
+        "hp": 60,
+        "pressure": 53
+      },
+      {
+        "tick": 2401,
+        "alive": 18,
+        "hp": 60,
+        "pressure": 55
+      },
+      {
+        "tick": 2461,
+        "alive": 19,
+        "hp": 60,
+        "pressure": 55
+      },
+      {
+        "tick": 2521,
+        "alive": 12,
+        "hp": 65,
+        "pressure": 55
+      },
+      {
+        "tick": 2581,
+        "alive": 12,
+        "hp": 65,
+        "pressure": 55
+      },
+      {
+        "tick": 2641,
+        "alive": 11,
+        "hp": 68,
+        "pressure": 55
+      },
+      {
+        "tick": 2701,
+        "alive": 11,
+        "hp": 68,
+        "pressure": 55
+      },
+      {
+        "tick": 2761,
+        "alive": 11,
+        "hp": 57,
+        "pressure": 55
+      },
+      {
+        "tick": 2821,
+        "alive": 11,
+        "hp": 57,
+        "pressure": 55
+      },
+      {
+        "tick": 2881,
+        "alive": 11,
+        "hp": 57,
+        "pressure": 55
+      },
+      {
+        "tick": 2941,
+        "alive": 10,
+        "hp": 58,
+        "pressure": 55
+      },
+      {
+        "tick": 3001,
+        "alive": 9,
+        "hp": 58,
+        "pressure": 55
+      },
+      {
+        "tick": 3061,
+        "alive": 9,
+        "hp": 58,
+        "pressure": 55
+      },
+      {
+        "tick": 3121,
+        "alive": 9,
+        "hp": 59,
+        "pressure": 55
+      },
+      {
+        "tick": 3181,
+        "alive": 7,
+        "hp": 61,
+        "pressure": 55
+      },
+      {
+        "tick": 3241,
+        "alive": 7,
+        "hp": 49,
+        "pressure": 51
+      },
+      {
+        "tick": 3301,
+        "alive": 6,
+        "hp": 50,
+        "pressure": 43
+      },
+      {
+        "tick": 3361,
+        "alive": 6,
+        "hp": 50,
+        "pressure": 35
+      },
+      {
+        "tick": 3421,
+        "alive": 5,
+        "hp": 50,
+        "pressure": 35
+      },
+      {
+        "tick": 3481,
+        "alive": 5,
+        "hp": 51,
+        "pressure": 35
+      },
+      {
+        "tick": 3541,
+        "alive": 3,
+        "hp": 52,
+        "pressure": 35
+      },
+      {
+        "tick": 3601,
+        "alive": 1,
+        "hp": 55,
+        "pressure": 35
+      },
+      {
+        "tick": 3661,
+        "alive": 1,
+        "hp": 55,
+        "pressure": 41
+      },
+      {
+        "tick": 3721,
+        "alive": 18,
+        "hp": 81,
+        "pressure": 47
+      },
+      {
+        "tick": 3781,
+        "alive": 19,
+        "hp": 81,
+        "pressure": 53
+      },
+      {
+        "tick": 3841,
+        "alive": 19,
+        "hp": 82,
+        "pressure": 55
+      },
+      {
+        "tick": 3901,
+        "alive": 20,
+        "hp": 82,
+        "pressure": 55
+      },
+      {
+        "tick": 3961,
+        "alive": 19,
+        "hp": 83,
+        "pressure": 55
+      },
+      {
+        "tick": 4021,
+        "alive": 19,
+        "hp": 84,
+        "pressure": 55
+      },
+      {
+        "tick": 4081,
+        "alive": 20,
+        "hp": 85,
+        "pressure": 55
+      },
+      {
+        "tick": 4141,
+        "alive": 18,
+        "hp": 89,
+        "pressure": 61
+      },
+      {
+        "tick": 4201,
+        "alive": 18,
+        "hp": 90,
+        "pressure": 67
+      },
+      {
+        "tick": 4261,
+        "alive": 16,
+        "hp": 92,
+        "pressure": 73
+      },
+      {
+        "tick": 4321,
+        "alive": 17,
+        "hp": 92,
+        "pressure": 79
+      },
+      {
+        "tick": 4381,
+        "alive": 19,
+        "hp": 93,
+        "pressure": 85
+      },
+      {
+        "tick": 4441,
+        "alive": 19,
+        "hp": 94,
+        "pressure": 91
+      },
+      {
+        "tick": 4501,
+        "alive": 19,
+        "hp": 94,
+        "pressure": 97
+      },
+      {
+        "tick": 4561,
+        "alive": 18,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "tick": 4621,
+        "alive": 16,
+        "hp": 95,
+        "pressure": 100
+      },
+      {
+        "tick": 4681,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 4741,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 4801,
+        "alive": 11,
+        "hp": 100,
+        "pressure": 100
+      },
+      {
+        "tick": 4861,
+        "alive": 11,
+        "hp": 88,
+        "pressure": 100
+      },
+      {
+        "tick": 4921,
+        "alive": 10,
+        "hp": 89,
+        "pressure": 92
+      },
+      {
+        "tick": 4981,
+        "alive": 8,
+        "hp": 89,
+        "pressure": 84
+      },
+      {
+        "tick": 5041,
+        "alive": 8,
+        "hp": 39.6,
+        "pressure": 80
+      },
+      {
+        "tick": 5101,
+        "alive": 7,
+        "hp": 41.6,
+        "pressure": 72
+      },
+      {
+        "tick": 5161,
+        "alive": 6,
+        "hp": 42.6,
+        "pressure": 64
+      },
+      {
+        "tick": 5221,
+        "alive": 6,
+        "hp": 42.6,
+        "pressure": 56
+      },
+      {
+        "tick": 5281,
+        "alive": 5,
+        "hp": 31.6,
+        "pressure": 52
+      },
+      {
+        "tick": 5341,
+        "alive": 5,
+        "hp": 31.6,
+        "pressure": 44
+      },
+      {
+        "tick": 5401,
+        "alive": 4,
+        "hp": 32.6,
+        "pressure": 36
+      },
+      {
+        "tick": 5461,
+        "alive": 2,
+        "hp": 33.6,
+        "pressure": 35
+      },
+      {
+        "tick": 5521,
+        "alive": 2,
+        "hp": 34.6,
+        "pressure": 35
+      },
+      {
+        "tick": 5581,
+        "alive": 19,
+        "hp": 81.6,
+        "pressure": 41
+      },
+      {
+        "tick": 5641,
+        "alive": 20,
+        "hp": 81.6,
+        "pressure": 47
+      },
+      {
+        "tick": 5701,
+        "alive": 19,
+        "hp": 81.6,
+        "pressure": 50
+      },
+      {
+        "tick": 5761,
+        "alive": 20,
+        "hp": 83.6,
+        "pressure": 53
+      },
+      {
+        "tick": 5821,
+        "alive": 20,
+        "hp": 83.6,
+        "pressure": 55
+      },
+      {
+        "tick": 5881,
+        "alive": 18,
+        "hp": 85.6,
+        "pressure": 55
+      },
+      {
+        "tick": 5941,
+        "alive": 19,
+        "hp": 86.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6001,
+        "alive": 11,
+        "hp": 90.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6061,
+        "alive": 10,
+        "hp": 97.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6121,
+        "alive": 11,
+        "hp": 97.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6181,
+        "alive": 11,
+        "hp": 98.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6241,
+        "alive": 11,
+        "hp": 99.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6301,
+        "alive": 11,
+        "hp": 100.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6361,
+        "alive": 11,
+        "hp": 101.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6421,
+        "alive": 12,
+        "hp": 71.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6481,
+        "alive": 12,
+        "hp": 72.6,
+        "pressure": 55
+      },
+      {
+        "tick": 6541,
+        "alive": 12,
+        "hp": 61.599999999999994,
+        "pressure": 47
+      },
+      {
+        "tick": 6601,
+        "alive": 10,
+        "hp": 62.599999999999994,
+        "pressure": 43
+      },
+      {
+        "tick": 6661,
+        "alive": 8,
+        "hp": 33.599999999999994,
+        "pressure": 35
+      },
+      {
+        "tick": 6721,
+        "alive": 6,
+        "hp": 36.599999999999994,
+        "pressure": 34
+      },
+      {
+        "tick": 6781,
+        "alive": 6,
+        "hp": 24.599999999999994,
+        "pressure": 26
+      },
+      {
+        "tick": 6841,
+        "alive": 4,
+        "hp": 26.599999999999994,
+        "pressure": 18
+      },
+      {
+        "tick": 6901,
+        "alive": 1,
+        "hp": 18.599999999999994,
+        "pressure": 18
+      },
+      {
+        "tick": 6961,
+        "alive": 18,
+        "hp": 49.599999999999994,
+        "pressure": 21
+      },
+      {
+        "tick": 7021,
+        "alive": 18,
+        "hp": 50.599999999999994,
+        "pressure": 21
+      },
+      {
+        "tick": 7081,
+        "alive": 18,
+        "hp": 52.599999999999994,
+        "pressure": 24
+      },
+      {
+        "tick": 7141,
+        "alive": 18,
+        "hp": 47.599999999999994,
+        "pressure": 27
+      },
+      {
+        "tick": 7201,
+        "alive": 17,
+        "hp": 32.599999999999994,
+        "pressure": 26
+      },
+      {
+        "tick": 7261,
+        "alive": 17,
+        "hp": 34.599999999999994,
+        "pressure": 18
+      },
+      {
+        "tick": 7321,
+        "alive": 17,
+        "hp": 35.599999999999994,
+        "pressure": 14
+      },
+      {
+        "tick": 7381,
+        "alive": 14,
+        "hp": 37.599999999999994,
+        "pressure": 14
+      },
+      {
+        "tick": 7441,
+        "alive": 14,
+        "hp": 40.599999999999994,
+        "pressure": 14
+      },
+      {
+        "tick": 7501,
+        "alive": 15,
+        "hp": 40.599999999999994,
+        "pressure": 20
+      },
+      {
+        "tick": 7561,
+        "alive": 16,
+        "hp": 40.599999999999994,
+        "pressure": 26
+      },
+      {
+        "tick": 7621,
+        "alive": 16,
+        "hp": 41.599999999999994,
+        "pressure": 32
+      },
+      {
+        "tick": 7681,
+        "alive": 17,
+        "hp": 29.599999999999994,
+        "pressure": 28
+      },
+      {
+        "tick": 7741,
+        "alive": 18,
+        "hp": 29.599999999999994,
+        "pressure": 28
+      },
+      {
+        "tick": 7801,
+        "alive": 16,
+        "hp": 30.599999999999994,
+        "pressure": 24
+      },
+      {
+        "tick": 7861,
+        "alive": 16,
+        "hp": 31.599999999999994,
+        "pressure": 16
+      },
+      {
+        "tick": 7921,
+        "alive": 15,
+        "hp": 32.599999999999994,
+        "pressure": 10
+      }
+    ]
+  },
+  {
+    "difficulty": "redline",
+    "mission": 3,
+    "phase": "complete",
+    "seconds": 17.416666666666668,
+    "hp": 14,
+    "maxAlive": 8,
+    "caps": 20,
+    "samples": [
+      {
+        "tick": 1,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 65
+      },
+      {
+        "tick": 61,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 65
+      },
+      {
+        "tick": 121,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 71
+      },
+      {
+        "tick": 181,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 77
+      },
+      {
+        "tick": 241,
+        "alive": 5,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "tick": 301,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 80
+      },
+      {
+        "tick": 361,
+        "alive": 6,
+        "hp": 100,
+        "pressure": 86
+      },
+      {
+        "tick": 421,
+        "alive": 2,
+        "hp": 95,
+        "pressure": 82
+      },
+      {
+        "tick": 481,
+        "alive": 2,
+        "hp": 95,
+        "pressure": 80
+      },
+      {
+        "tick": 541,
+        "alive": 2,
+        "hp": 83,
+        "pressure": 76
+      },
+      {
+        "tick": 601,
+        "alive": 2,
+        "hp": 71,
+        "pressure": 68
+      },
+      {
+        "tick": 661,
+        "alive": 1,
+        "hp": 72,
+        "pressure": 60
+      },
+      {
+        "tick": 721,
+        "alive": 1,
+        "hp": 72,
+        "pressure": 55
+      },
+      {
+        "tick": 781,
+        "alive": 7,
+        "hp": 72,
+        "pressure": 55
+      },
+      {
+        "tick": 841,
+        "alive": 7,
+        "hp": 72,
+        "pressure": 55
+      },
+      {
+        "tick": 901,
+        "alive": 7,
+        "hp": 42,
+        "pressure": 47
+      },
+      {
+        "tick": 961,
+        "alive": 7,
+        "hp": 36,
+        "pressure": 39
+      },
+      {
+        "tick": 1021,
+        "alive": 7,
+        "hp": 13,
+        "pressure": 31
+      }
+    ]
+  }
+]

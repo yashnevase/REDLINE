@@ -1,6 +1,8 @@
 # STATE.md — resume here
 
-Phase: **Chapter1 bounded FINAL_POLISH engineering pass complete ·2026-11-02.** Closure tag: `chapter1-complete` after final QA. Latest report: `FINAL_P7_REPORT.md`; remaining owner art/ear/first-time-player review and optional wishes: `POST_SLICE_BACKLOG.md`. No Chapter2 work is authorized.
+Phase: **POLISH_ROUND2 session1 implementation done: R1/R2 approved; R3 difficulty/director passes140 checks and six cap/tier stress cases. Session2 R4→R5→R6 and final QA are next.**
+
+Read POLISH_ROUND2.md, SPIRIT_CALL_NOTES_R2.md and ROUND2_PROGRESS.md. The new brief supersedes old UI/caps/density and closing rules. No new completion tag without owner final acceptance. GitHub API authenticated private=true; gh CLI absent; reverify before audio push. Current R3 code is uncommitted until this checkpoint commit. Preserve user close1/ and docs/NEXT_WORK (1).md. Prior checkpoint below is historical. Closure tag: `chapter1-complete` after final QA. Latest report: `FINAL_P7_REPORT.md`; remaining owner art/ear/first-time-player review and optional wishes: `POST_SLICE_BACKLOG.md`. No Chapter2 work is authorized.
 
 Owner explicitly approved P1 Core (“Approve Core; continue P2–P6”). P2–P6 are implemented: base Pulse/no Core blades, equipped Blade attacks, recognizable movers, decluttered props and proper vents (strict total-fixture8 cap remains ART-06), shaped UI/lobby, clean steel/pit/giant/wreck depth, layered stereo audio and measured private-music trims. Fresh parity judge's concrete clipping/overlap defects were fixed and verified; final pairs remain local owner review candidates, not self-approved exact/AAA matches.
 

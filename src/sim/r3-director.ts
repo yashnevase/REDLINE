@@ -1,0 +1,11 @@
+import {Ops} from '@typeonce/ritmo';
+import type {RunState} from './run-schema.ts';import {spawnRunEnemy} from './run-schema.ts';import type {CombatTuning} from '../content/combat.ts';import {chapterLayout} from '../content/chapters/layout.ts';import {bossStage} from '../content/boss.ts';import type {Emit} from './hero.ts';
+export function updatePressure(s:RunState,t:CombatTuning){if(s.rules.difficulty==='legacy'||!s.rules.director)return;if(s.tick%t.directorResponseTicks===0){const hp=s.hero.hp/t.heroHP,target=hp<.3?10:hp<.55?35:hp>.9&&s.extras.style>50?100:hp>.85?80:55;s.director.pressure+=Math.max(-4,Math.min(3,target-s.director.pressure));}}
+export function directorHazards(s:RunState,t:CombatTuning,hurt:(amount:number,id:string)=>void,event:Emit){if(s.rules.difficulty==='legacy')return;const d=s.director;
+ if(s.phase.kind==='boss'){const stage=bossStage(s.phase.boss.hp,t);if(stage>d.lastBossStage){d.lastBossStage=stage;const max=Math.min(t.enemyCap-1,stage+2+(s.rules.difficulty==='redline'?2:0));s.enemies=s.enemies.filter(e=>e.hp>0);for(let i=s.enemies.length;i<max;i++){const kind=i%3===2?'thrower':stage>=3&&i%3===1?'whirler':'sawlet';s.enemies.push(spawnRunEnemy(kind,i,1000+stage,t,s.rules,s.extras.seed,s.objective.level));}}}
+ if(s.phase.kind!=='boss'&&!(s.phase.kind==='fight'&&s.objective.level===2)){d.surge={kind:'idle'};return;}
+ if(d.surge.kind==='idle'){if(++d.surgeClock<t.surgePeriodTicks)return;d.surgeClock=0;const vents=chapterLayout(s.objective.level,s.extras.seed).vents,count=s.rules.difficulty==='redline'?3:s.rules.difficulty==='chill'?1:2,offset=(Math.floor(s.tick/t.surgePeriodTicks)+s.objective.waveSerial)%vents.length;d.surge={kind:'warning',remaining:t.surgeWarningTicks,points:Array.from({length:count},(_,i)=>({x:vents[(offset+i*2)%vents.length].x,z:vents[(offset+i*2)%vents.length].z}))};return;}
+ if(d.surge.kind==='warning'){if(--d.surge.remaining<=0){d.surge={kind:'active',remaining:t.surgeActiveTicks,points:d.surge.points,hit:false};for(const p of d.surge.points)event('explosion',p.x,p.z,0,t.surgeRadius);}return;}
+ if(!d.surge.hit&&d.surge.points.some(p=>Ops.hypot(p.x-s.hero.x,p.z-s.hero.z)<t.surgeRadius+t.heroRadius)){const before=s.hero.hp;hurt(t.surgeDamage,'vent-surge:'+Math.floor(s.tick/t.surgePeriodTicks));d.surge.hit=s.hero.hp<before;}
+ if(--d.surge.remaining<=0)d.surge={kind:'idle'};
+}

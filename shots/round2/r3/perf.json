@@ -1,0 +1,98 @@
+[
+  {
+    "difficulty": "chill",
+    "lowSpec": false,
+    "cap": 10,
+    "attackers": 3,
+    "calls": 70,
+    "triangles": 52706,
+    "p95": 17.5,
+    "errors": [],
+    "replayOptions": {
+      "seed": 4107,
+      "difficulty": "chill",
+      "lowSpec": false,
+      "director": true
+    }
+  },
+  {
+    "difficulty": "chill",
+    "lowSpec": true,
+    "cap": 10,
+    "attackers": 3,
+    "calls": 47,
+    "triangles": 18607,
+    "p95": 17.59999999999991,
+    "errors": [],
+    "replayOptions": {
+      "seed": 4107,
+      "difficulty": "chill",
+      "lowSpec": true,
+      "director": true
+    }
+  },
+  {
+    "difficulty": "normal",
+    "lowSpec": false,
+    "cap": 14,
+    "attackers": 4,
+    "calls": 72,
+    "triangles": 55376,
+    "p95": 17.5,
+    "errors": [],
+    "replayOptions": {
+      "seed": 4107,
+      "difficulty": "normal",
+      "lowSpec": false,
+      "director": true
+    }
+  },
+  {
+    "difficulty": "normal",
+    "lowSpec": true,
+    "cap": 10,
+    "attackers": 3,
+    "calls": 47,
+    "triangles": 18607,
+    "p95": 17.59999999999991,
+    "errors": [],
+    "replayOptions": {
+      "seed": 4107,
+      "difficulty": "normal",
+      "lowSpec": true,
+      "director": true
+    }
+  },
+  {
+    "difficulty": "redline",
+    "lowSpec": false,
+    "cap": 20,
+    "attackers": 5,
+    "calls": 72,
+    "triangles": 57366,
+    "p95": 17.59999999999991,
+    "errors": [],
+    "replayOptions": {
+      "seed": 4107,
+      "difficulty": "redline",
+      "lowSpec": false,
+      "director": true
+    }
+  },
+  {
+    "difficulty": "redline",
+    "lowSpec": true,
+    "cap": 10,
+    "attackers": 3,
+    "calls": 47,
+    "triangles": 18594,
+    "p95": 17.5,
+    "errors": [],
+    "replayOptions": {
+      "seed": 4107,
+      "difficulty": "redline",
+      "lowSpec": true,
+      "director": true
+    }
+  }
+]

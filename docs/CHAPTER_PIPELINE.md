@@ -1,6 +1,6 @@
 # Adding a chapter after Chapter 1
 
-Current gate (2026-11-03): Round4 A/B engineering is implemented; owner Chapter1 acceptance and Chapter2 reference selection remain pending. Bog Moon design and five local candidates are prepared (CHAPTER2_DESIGN.md / CHAPTER2_REVIEW.md). Chapter2 runtime starts after that acceptance, per ROUND4_AND_CHAPTER2.md. The existing completion tag is historical and unchanged. Earlier FINAL_POLISH P9 closure language does not override the latest owner gate.
+Current status (2026-11-03): owner explicitly accepted Chapter1 and the five Bog Moon targets; Chapter2 runtime is authorized under ROUND4_AND_CHAPTER2.md. Preserve the accepted Chapter1 tag before changing runtime. Bog Moon design/reference inventory: CHAPTER2_DESIGN.md / CHAPTER2_REVIEW.md. Human playtest results remain separate from owner acceptance.
 
 1. Agree the chapter identity, goals and owner-approved targets. Keep reference files in ignored `art/`; never use them as runtime textures. Record source licences in ASSETS. Create a per-level palette and prop kit before adding geometry.
 2. Add a chapter configuration beside `src/content/chapters/scrapyard.ts`: levels, worlds, roster, seeds, vents and mechanics. Extend the shared integer-seeded layout. Simulation and renderer must consume identical layout data, including daily seeds. Keep an open central route and safe readable outer lanes.

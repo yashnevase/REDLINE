@@ -1,6 +1,6 @@
 # STATE.md — resume here
 
-Phase: **ROUND4 A1–A6 and B1–B4 implemented and verified; C1–C6 pre-production/design +5local concept candidates prepared. Owner art/audio/Rex/playtest acceptance is next. Chapter2 runtime and tag movement remain gated. Read ROUND4_A_REPORT.md, ROUND4_B_REPORT.md and CHAPTER2_DESIGN.md first.**
+Phase: **Owner explicitly accepted Chapter1 and all five Bog Moon candidates on2026-11-03; Chapter2 C1–C6 runtime implementation is now in progress. Read CHAPTER2_DESIGN.md and CHAPTER2_PROGRESS.md. Human playtest results are not fabricated.**
 
 Continuation 2026-11-03: owner said “proceed”; clarification requested because the current brief explicitly gates Chapter2 runtime on Chapter1 acceptance/reference selection. Prepared CHAPTER2_REVIEW.md with all five candidate previews and aligned CHAPTER_PIPELINE.md with that gate. No acceptance/playtest result inferred; no runtime or tag change.
 

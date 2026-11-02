@@ -1,6 +1,10 @@
 # REDLINE_BRIEF.md — the ONE current brief (v5, 2026-10-30)
 > **Authority:** this file wins over everything else. Older docs (`SLICE_LOCKED_DECISIONS`, `DESIGN_BIBLE`, `PLAYBOOK`, `FUN_LAYER`, `STYLE`, `ART_BRIEFS`, `PHASES`, `LINKS`) are **historical**: Phase 0.0 moves them to `docs/_historical/`; read them only for ideas, never for rules. Anything marked **PENDING** needs the owner's yes before it is built. Unspecified routine implementation detail is the agent's call; unspecified *product/design* choices are OPEN → ask (AGENTS.md protocol).
 
+## POLISH_ROUND3 amendment — owner directed2026-11-02
+
+POLISH_ROUND3.md is the active one-session F1–F5 pass: warm60/25/15 scrapyard floor, flat central life/fading scars, Default1.0 with Core≥10.5% desktop height, camera-visible Normal pressure, and≥14px high-contrast main-HUD secondary text. Existing UI/enemies/Core are approved. Five fixtures/no central obstacles and caps/telegraph minima remain. Owner15-minute review and3–5-person playtest follow; do not advance chapter1-complete before acceptance of Round3. Round2 acceptance was received, but this new instruction supersedes its pending tag advancement.
+
 ## POLISH_ROUND2 amendment — owner directed2026-11-02
 
 POLISH_ROUND2.md is the active two-session review. R1 rounded plates/pills replace cut corners/rivets. R2 restores faceted role-readable enemies with bars/damage states. R3 adds saved difficulty/director/elites and replaces older caps. R4 adds choreography/kill/boss spectacle. R5 clears central12u and limits static objects inside the frame to6. R6 permits owner audio in the verified-private repo while retaining build exclusion. UI/enemy parity and final look/feel acceptance belong to the owner; no new/replaced completion tag before acceptance. Existing tag is historical. ROUND2_PROGRESS.md records work and remaining gates.

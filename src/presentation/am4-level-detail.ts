@@ -19,7 +19,7 @@ export function addLevelDetail(root:T.Group,level:number,low=false){
   let seed=8531;const random=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
   const seeds=Array.from({length:64},(_,i)=>new T.Vector2(-16.5+(i%8+.5)*4.125+(random()-.5)*2.5,-16.5+(Math.floor(i/8)+.5)*4.125+(random()-.5)*2.5));
   function clip(poly:T.Vector2[],normal:T.Vector2,limit:number){const out:T.Vector2[]=[];for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length],da=a.dot(normal)-limit,db=b.dot(normal)-limit;if(da<=0)out.push(a);if((da<=0)!==(db<=0))out.push(a.clone().lerp(b,da/(da-db)));}return out;}
-  const plate=new T.MeshLambertMaterial({color:'#525c69'});
+  const plate=new T.MeshLambertMaterial({color:'#726351'});
   for(const seed of seeds){
    let corners=[new T.Vector2(-16.5,-16.5),new T.Vector2(16.5,-16.5),new T.Vector2(16.5,16.5),new T.Vector2(-16.5,16.5)];
    for(const other of seeds)if(other!==seed)corners=clip(corners,other.clone().sub(seed),(other.lengthSq()-seed.lengthSq())*.5);

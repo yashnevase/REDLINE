@@ -81,6 +81,12 @@ Original implementation: named cue projection, independent WebAudio fallback syn
 
 Files were copied only after public build exclusion was implemented. They and their generated manifest are git-ignored; production build excludes the complete private audio folder and creates an empty music manifest. Underlying music rights are not asserted. No commercial music was sourced externally. Original synth effects/ambience work when these files are absent. Earlier no-audio/no-runtime-copy notes below describe earlier checkpoints.
 
+## Bog Moon runtime — 2026-11-03
+
+Original procedural stone tiles, moss paint, recessed pool shader, lily pads, drum totems, frog monuments, logs, roots, water spills and scenery; original Hopper/Gulp/Frog Legs geometry and bounded warnings/spores. All are TypeScript/Three.js/canvas work in this repository, using existing licensed dependencies. No image reference is a runtime texture. Five imagegen targets remain ignored/local under `art/ch2-ref/`; their look-target approval was explicitly received on 2026-11-03. Runtime art acceptance is separate.
+
+Nine original named WebAudio recipes form the Bog pack: hop, drum ring, spore, tongue snap, wet hit, splash, croak, background drums and water. The procedural biome bed is original synthesis, not a downloaded/recorded music asset. Foundry's private owner tracks are not selected in Bog Moon and public build exclusion remains mandatory. No Spirit Call implementation, model, bitmap or sound was copied; no external assets/dependencies/service were installed. Own runtime captures may be committed; target/reference comparison bitmaps stay local.
+
 ## FINAL_POLISH ·2026-11-02
 Original sparse steel atlas/shader bands, pit terraces, asymmetric giant/wreck geometry, industrial CSS/SVG plates, lobby shafts and mechanical layered synth recipes authored locally. Reference sound.ts/audio.ts studied for layering/mix principles; snapshot uses offline synth and supplies no cue audio files. No reference code, image texture, audio recording or model copied. Original cue-listening.wav is REDLINE output. Existing owner music remains ignored and excluded from builds. No dependency or external asset added.
 

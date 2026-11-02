@@ -1,5 +1,18 @@
 # Spirit Call study · POLISH_ROUND2 ·2026-11-02
 
+## Chapter 2 re-study — 2026-11-03
+
+Revisited the local, unlicensed study snapshot for each C item. Nothing copied or imported.
+
+| ID | Studied | Original REDLINE application |
+|---|---|---|
+| C1 | `presentation/hazards.ts`, `assets/arena-props.ts`, moss-crossfire target | Recess actual pools into stone geometry; quiet stone/moss ground, teal secondary mass, amber rim lights, deep rock/roots and frog monuments. Paint and water shader authored here. Geometry remains deliberately simpler than the illustrated concept; owner parity review is pending. |
+| C2 | `enemy-pose.ts`, `actors.ts`, ring/gap fight targets | Role silhouettes, visible windup/flight/landing/recovery, separate gold elite trim, head-projected health lanes. Original five Hopper rigs and deterministic attacks. |
+| C3 | warning/recovery poses, hazard boundaries and boss-scale readability | Six original Gulp attack families with four HP phases, bounded adds, explicit belly punish and named death. Heavy attacks retain a full warning on every repeat. |
+| C4 | animation state separation and projected movement feedback | Original spring-leg rig follows its own vertical jump while the approved Core keeps its sphere and crown. Shared deterministic aim target, landing ring, finite airborne protection and one extra hop. |
+| C5 | collection/challenge menu hierarchy | Separate chapter mission records; clear part reward and mastery descriptions; original Bog mission copy and unlocks. |
+| C6 | `sound.ts`, `effects.ts`, hazard/actor presentation boundary | Original percussion/croak/water/wet-hit synth pack through the existing capped mixer; pooled cosmetic FX read sim state and never mutate it. Input, save, replay and native budgets are measured independently of human fun/visual acceptance. |
+
 Reference is the local study-only snapshot under ref/spirit-call/spirit-call-main. No reference implementation or art is copied. These observations guide original REDLINE work.
 
 | Area | Observed source behavior | REDLINE adaptation |

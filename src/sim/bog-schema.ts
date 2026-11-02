@@ -1,0 +1,9 @@
+import{z}from'zod';import{bogLayout}from'../content/chapters/bog-moon.ts';
+const n=z.number().finite(),ticks=z.number().int().nonnegative(),point=z.object({x:n,z:n});
+export const hopperSchema=z.object({origin:point,target:point,retreat:point,elapsed:ticks,duration:ticks,action:z.enum(['hop','retreat','ring','tongue','pool']),gapX:n,gapZ:n,hit:z.boolean(),extraHop:z.boolean().default(false)});
+export const bogSchema=z.object({nextPool:ticks,pools:z.array(z.object({id:ticks,x:n,z:n,r:n.positive(),warning:ticks,remaining:ticks,source:z.enum(['bog','bulb','flood'])})).max(6),spores:z.array(z.object({id:ticks,x:n,z:n,warning:ticks,remaining:ticks,hit:z.boolean()})).max(6),flood:ticks.max(3).default(0),tongueCuts:z.array(z.string()).max(32).default([])});
+export const leapSchema=z.discriminatedUnion('kind',[z.object({kind:z.literal('idle')}),z.object({kind:z.literal('air'),origin:point,target:point,remaining:ticks,duration:ticks,distance:n.nonnegative(),mini:z.boolean(),dashHeld:z.boolean()})]);
+export const gulpAttacks=['leap','tongue','gulp','drum','flood','double-leap'] as const;
+export const gulpSchema=z.object({pending:z.boolean().default(false),attack:z.enum(gulpAttacks),mode:z.enum(['warning','active','recovery']),remaining:ticks,elapsed:ticks,phase:ticks.min(1).max(4),lastPhase:ticks.max(4),chain:ticks.max(1),origin:point,target:point,targets:z.array(point).max(5),dx:n,dz:n,hitIds:z.array(z.string()).max(20),ring:n.nonnegative(),leapCount:ticks.max(1)});
+export function initialBog(level:number,seed:number){return bogSchema.parse({nextPool:4,pools:bogLayout(level,seed).pools.map((p,id)=>({id,x:p.x,z:p.z,r:p.r,warning:0,remaining:2147483647,source:'bog'})),spores:[]});}
+export const gulpNames={leap:'Leap Slam',tongue:'Tongue Lash',gulp:'Gulp Barrage',drum:'Drum Call',flood:'Bog Flood','double-leap':'Double Leap'} as const;

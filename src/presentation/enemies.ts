@@ -1,3 +1,5 @@
+import {makeHopper} from './hopper-models.ts';
+import {isHopper} from '../content/chapters/bog-moon.ts';
 import {R2_ENABLED,enemyShell,enemyPalette} from './r2-enemy-finish.ts';
 import {makeWhirlerArms} from './b2-whirler.ts';
 import * as T from 'three';
@@ -6,7 +8,7 @@ import type {EnemyKind} from '../content/encounter.ts';
 import {part,saw} from './industrial.ts';
 import {shellPatch} from './models.ts';
 // Shared body kit: rust panels, narrow grooves, violet rim, red-white eyes.
-export function makeEnemy(kind:EnemyKind,m:Materials){
+export function makeEnemy(kind:EnemyKind,m:Materials){if(isHopper(kind))return makeHopper(kind,m);
  const root=new T.Group(),body=new T.Group();root.add(body);body.position.y=kind==='grinder'||kind==='shieldsaw'?1:.7;const radius=kind==='grinder'?.94:kind==='whirler'?.8:.67;
  const shell=R2_ENABLED?enemyShell(radius,kind):new T.SphereGeometry(radius,12,8),colours:number[]=[],positions=shell.attributes.position;for(let i=0;i<positions.count;i++){const y=positions.getY(i)/radius,noise=Math.sin(Math.round(positions.getX(i)*30)*17+Math.round(positions.getZ(i)*30)*13)*.025;const shade=.88+Math.max(0,y)*.28+noise;colours.push(shade,shade,shade);}shell.setAttribute('color',new T.Float32BufferAttribute(colours,3));const rust=m.rust.clone();rust.color.set(enemyPalette[kind].body);rust.vertexColors=true;part(body,shell,rust);
  const seam=part(body,new T.TorusGeometry(radius*.975,.017,3,20),m.dark,0,-radius*.2,0);seam.rotation.x=Math.PI/2;

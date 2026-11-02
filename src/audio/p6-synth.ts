@@ -6,6 +6,13 @@ const air=(hz:number,end:number,seconds:number,gain:number,delay=0):SoundLayer=>
 const metal=(hz:number,seconds:number,gain:number,delay=0):SoundLayer=>({...tone(hz,hz*.91,seconds,gain,delay),kind:'metal'});
 // Original mechanical recipes. Source study informs timing and hierarchy, never copied audio/code.
 export function cueLayers(id:CueId,hz:number,seconds:number):SoundLayer[]{
+ if(id==='frog_hop')return[tone(230,80,.13,.5),air(1300,350,.12,.25)];
+ if(id==='drum_ring'||id==='bog_drums')return[tone(hz*1.5,hz*.6,seconds,.65),tone(hz*2.03,hz*.85,seconds*.7,.18),air(700,200,.04,.15)];
+ if(id==='gulp_croak')return[tone(145,55,.4,.55),tone(290,110,.32,.22,.03),air(380,140,.3,.2)];
+ if(id==='tongue_snap')return[air(2300,450,.08,.5),tone(400,120,.13,.5)];
+ if(id==='wet_hit')return[tone(145,45,.15,.65),air(1800,280,.14,.45),tone(520,190,.1,.15,.02)];
+ if(id==='water_splash'||id==='bog_water')return[air(id==='bog_water'?650:2600,250,seconds,.55),tone(170,65,seconds*.5,.2)];
+ if(id==='bog_spore')return[air(2200,900,.16,.3),tone(900,1400,.11,.14)];
  if(id==='grinder_whine')return[metal(hz,seconds,.55),air(2800,1700,seconds,.24)];
  if(id==='contact_scrape')return[air(2600,700,seconds,.55),metal(380,seconds,.3)];
  if(id==='spark_crackle')return[air(4400,1600,.04,.45),metal(2700,.025,.24)];

@@ -1,6 +1,6 @@
 import * as T from 'three';import type {EnemyKind} from '../content/encounter.ts';
 export const R2_ENABLED=true;
-export const enemyPalette:Record<EnemyKind,{body:string;accent:string}>={sawlet:{body:'#a89173',accent:'#ffab53'},thrower:{body:'#71754a',accent:'#ffd083'},shieldsaw:{body:'#3d3934',accent:'#ebcc67'},grinder:{body:'#612c27',accent:'#eb7954'},whirler:{body:'#65514a',accent:'#ff883f'}};
+export const enemyPalette:Record<EnemyKind,{body:string;accent:string}>={skipper:{body:'#688575',accent:'#d7e988'},croaker:{body:'#78834f',accent:'#ffc975'},bogbulb:{body:'#4d8a75',accent:'#c6ee60'},lasher:{body:'#536d65',accent:'#edb887'},toad:{body:'#405b50',accent:'#f7d58b'},sawlet:{body:'#a89173',accent:'#ffab53'},thrower:{body:'#71754a',accent:'#ffd083'},shieldsaw:{body:'#3d3934',accent:'#ebcc67'},grinder:{body:'#612c27',accent:'#eb7954'},whirler:{body:'#65514a',accent:'#ff883f'}};
 export function enemyDamageStage(hp:number,max:number){return hp/max<.33?2:hp/max<.66?1:0;}
 export function enemyShell(radius:number,kind:EnemyKind){const g=new T.IcosahedronGeometry(radius,1);g.scale(kind==='shieldsaw'?1.22:kind==='grinder'?1.04:1,kind==='sawlet'?.72:kind==='thrower'?1.28:kind==='whirler'?1.3:1,kind==='shieldsaw'?.74:1);g.computeVertexNormals();return g;}
 export function installEnemyDamage(material:T.MeshLambertMaterial,blade:boolean){

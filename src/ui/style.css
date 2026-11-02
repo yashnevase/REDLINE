@@ -137,3 +137,5 @@
 .rex-attack-label{display:block;color:#fff0c6;font:700 14px Arial;letter-spacing:.6px;margin-top:5px;text-align:center}.rex-attack-label:empty{display:none}
 
 .objective-goal[hidden]{display:none!important}
+
+.chapter-select{display:flex;gap:8px;padding:8px 18px}.chapter-select button{padding:9px 14px;border-radius:18px;border:1px solid #b7c6ab77;background:#283c36;color:#f4f5dc;font:700 14px Arial}.chapter-select button:disabled{opacity:.5}.mission-rewards{white-space:pre-line}[data-chapter="2"] .boss-health i{background:#a3cf74}

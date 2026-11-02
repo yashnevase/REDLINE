@@ -1,8 +1,8 @@
-# Chapter 2 pre-production — Bog Moon / Hoppers
-2026-11-02. C1–C6 design deliverable. **No Chapter 2 runtime build.** Owner Chapter 1 acceptance and reference selection are required before implementation. The five generated concepts are candidates, not approvals. Prompt set: CHAPTER2_REFERENCE_PROMPTS.md; local art: art/ch2-ref/.
+# Chapter 2 design and runtime — Bog Moon / Hoppers
+Design dated2026-11-02; runtime authorized2026-11-03 by the explicit owner answer “Accept Chapter 1 and the candidates; start Chapter 2.” C1–C6 are now implemented and in final QA. The five concepts are approved look targets; the runtime art/feel candidate still needs owner review. Prompt set: CHAPTER2_REFERENCE_PROMPTS.md; local art: art/ch2-ref/.
 
 ## Progression and identity
-Foundry / Blade → Bog Moon / Frog Legs → Cloud Docks / Wing → Magma Forge / Fist → Crystal Quarry / Spike → Storm Reactor / Coil → Throne Engine finale. Existing Chapter 1 saves and unlocks remain valid; reordering is future content, not a migration shipped in this pass.
+Foundry / Blade → Bog Moon / Frog Legs → Cloud Docks / Wing → Magma Forge / Fist → Crystal Quarry / Spike → Storm Reactor / Coil → Throne Engine finale. Existing Chapter 1 saves and unlocks remain valid; the registry records future chapter order without implementing Chapters3–6 or the finale.
 Each chapter changes decisions: hop-and-dodge + slow bog; wind and narrow decks + kites; crushers and heat; reflection and shattering; conduction/chain lightning/overload; finale combines learned rules. Never recolour Foundry and reuse its encounters unchanged.
 
 ## C1 Look Bible / colour script
@@ -11,7 +11,7 @@ Playfield: central stone route with shallow slowing pools and low lily-pad islan
 Candidate review notes: arena concepts communicate depth/palette, not exact collision layout. Boss sheet has floating detached legs and belly loop. Frog-leg concept has extra crown strokes: preserve the runtime Core's TWO marks, do not copy that drift. Enemy sheets are identity directions; owner chooses scale/silhouettes before model work.
 
 ## C2 Hoppers: original state-machine plan
-All START values below are proposals for the build/tuning stage; only owner-specified timing/mechanics are locked. New deterministic chapter config owns values, not presentation code.
+The owner-authorized START values below were used for implementation and tuning; owner-specified timing/mechanics remain locked. New deterministic chapter config owns values, not presentation code.
 | Role | Read and attack | Warning / punish | Counter / START proposal |
 |---|---|---|---|
 | Skipper | Low green orb, spring legs; lock landing point, hop in, strike, hop away | **48 ticks landing warning,36 ticks recovery,×2 punish** | Blade catches retreat; Pulse at landing. Proposed24HP, radius.65, hop4u. |
@@ -57,4 +57,7 @@ Blade recommended; a Core-only skill clear remains a required bot/manual scenari
 8. Owner normal-play and hard-but-fair Gulp review, then3–5person PLAYTEST_SCRIPT. No completion tag or next chapter runtime until acceptance.
 
 ## Not done / gate
-No Chapter2 sim, models, biome, playable missions, new part, save reorder, audio files or runtime chapters were built. Candidate references exist locally and have been viewed; acceptance and exact model scale are open. All future numbers marked proposed require tuning/review, not automatic acceptance. Human Chapter1 playtest and final tag remain owner actions.
+C1–C6 runtime, original models/biome/audio synthesis, missions, Frog Legs and v3 profile migration are implemented. See CHAPTER2_REPORT.md for measured QA and per-loadout bot outcomes. Runtime parity/feel acceptance and human3–5person playtest remain open. The artwork is simpler than the illustrated target, not an exact-match claim. No downloaded/recorded Bog music pack, physical-device certification or Chapter3 runtime is claimed. Chapter1 acceptance tag05cff46 is preserved.
+
+
+Implementation choice,2026-11-03: Leap Slam aim-line uses the nearest living enemy/locked landing target in the forward cone within8u; with no target it uses full8u facing. This gives the same assisted short/long landing control on keyboard, touch and controller; walls clamp the landing. All aim calculations are deterministic and shared with the presentation.

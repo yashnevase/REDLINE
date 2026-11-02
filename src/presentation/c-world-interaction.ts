@@ -15,7 +15,7 @@ import type {CombatTuning} from '../content/combat.ts';
 // C7 is deliberately cosmetic: no collision body, simulation mutation or simulation RNG.
 function propGeometry(kind:number){
  const parts:T.BufferGeometry[]=[];const put=(g:T.BufferGeometry,color:string,x=0,y=0,z=0)=>{g.translate(x,y,z);const p=g.attributes.position,c=new T.Color(color);g.setAttribute('color',new T.Float32BufferAttribute(Array.from({length:p.count},()=>[c.r,c.g,c.b]).flat(),3));parts.push(g.index?g.toNonIndexed():g);};
- if(kind===1){put(new T.CylinderGeometry(.29,.32,.72,8),scrapyard.palette.oxide,0,.36);for(const y of [.08,.36,.65])put(new T.CylinderGeometry(.33,.33,.07,8),scrapyard.palette.steel,0,y);}
+ if(kind===1){put(new T.CylinderGeometry(.29,.32,.72,8),'#665c53',0,.36);for(const y of [.08,.36,.65])put(new T.CylinderGeometry(.33,.33,.07,8),scrapyard.palette.steel,0,y);}
  else if(kind===2){put(new T.CylinderGeometry(.16,.18,.35,6),'#8b7c67',0,.175);put(new T.CylinderGeometry(.19,.19,.03,6),'#3b3637',0,.36);}
  else{put(new T.BoxGeometry(.7,.65,.65),'#78523d',0,.325);for(const x of [-.27,.27])put(new T.BoxGeometry(.075,.7,.71),'#978773',x,.35);for(const y of [.04,.62])put(new T.BoxGeometry(.74,.07,.7),'#5e5b58',0,y);}
  const g=mergeGeometries(parts);parts.forEach(p=>p.dispose());return g;
@@ -52,7 +52,7 @@ export function makeWorldInteraction(parent:T.Group){
   for(const id of extraInstances)solids.setVisibleAt(id,false);
   if(s){const solid=(i:number,x:number,y:number,z:number,sx:number,sy:number,sz:number)=>{const id=extraInstances[i];solids.setVisibleAt(id,true);dummy.position.set(x,y,z);dummy.rotation.set(0,!quietMotion&&i>=7&&i<19?anim*.7:0,0);dummy.scale.set(sx,sy,sz);dummy.updateMatrix();solids.setMatrixAt(id,dummy.matrix);};
    bumpers.forEach((b,i)=>{solid(i,b.x,.05,b.z,2.2,.75,2.2);put(3,quietFlash?.3:.75,b.x,.07,b.z,2.3,2.3,'#b498ff',0);});
-   barrels.forEach((b,i)=>{if(!s.extras.barrels.includes(i)){solid(i+4,b.x,0,b.z,1.5,1.3,1.5);put(3,.55,b.x,.04,b.z,1.5,1.5,'#ff9c46',0);}});
+   barrels.forEach((b,i)=>{if(!s.extras.barrels.includes(i)){solid(i+4,b.x,0,b.z,1.5,1.3,1.5);put(3,.55,b.x,.04,b.z,1.5,1.5,'#bd9b65',0);}});
    s.extras.pickups.forEach((p,i)=>{solid(i+7,p.x,.3+(quietMotion?0:Math.sin(anim*4+i)*.08),p.z,1,1,1);put(0,.6,p.x,.035,p.z,1.3,1.3,'#c2acff',0);});
    if(t){const hazard=hazardState(s,t);put(5,hazard.warning?.65:.18,0,.045,hazard.cart.z,22,1.6,'#ff8d3b',0);put(3,hazard.warning?.75:hazard.active?.9:.12,hazard.crusher.x,.05,hazard.crusher.z,3.4,3.4,'#ff8d3b',0);solid(19,hazard.cart.x,0,hazard.cart.z,1,1,1);if(hazard.active)put(2,.5,hazard.crusher.x,1.2,hazard.crusher.z,2.5,2.4,'#ffb15a',0,camera.quaternion);}
   }

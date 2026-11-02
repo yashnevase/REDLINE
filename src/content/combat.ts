@@ -216,6 +216,6 @@ chillEnemyCap:z.number().finite().int().min(1).max(20).default(difficultyDefault
 });
 export type CombatTuning=z.infer<typeof tuningSchema>;
 export const obstacles = [
- {x:-12,z:0,hx:.8,hz:.5},{x:12,z:0,hx:.8,hz:.5},
- {x:0,z:-12,hx:.8,hz:.5},{x:0,z:12,hx:.8,hz:.5}
+ {x:-19,z:0,hx:.8,hz:.5},{x:19,z:0,hx:.8,hz:.5},
+ {x:0,z:-19,hx:.8,hz:.5},{x:0,z:19,hx:.8,hz:.5}
 ] as const;

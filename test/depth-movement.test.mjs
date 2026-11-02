@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {combatDefaults as t} from '../src/content/combat.ts';
+import {combatDefaults as t,obstacles} from '../src/content/combat.ts';
 import {initialState,idleCommand} from '../src/sim/schema.ts';
 import {advanceHero} from '../src/sim/hero.ts';
 import {createSimulation} from '../src/sim/runtime.ts';
@@ -17,7 +17,7 @@ test('rolling reaches base pace in 80ms, builds straight momentum in one second,
  const analog=initialState(t).hero;analog.x=-6;analog.z=3;for(let i=0;i<65;i++)step(analog,{x:.3,z:.4,dash:false});assert.ok(Math.abs(Math.sqrt(analog.vx**2+analog.vz**2)-5.25)<1e-9);
 });
 test('Rush/Charge reflect from barricades and enemies without refreshing protection or hitting a target twice',()=>{
- const h=initialState(t).hero;h.x=10.5;h.z=0;h.dash={kind:'active',remaining:18,dx:1,dz:0,protected:true,protectionTicks:8,variant:'charge',distance:9,duration:18,hits:[]};step(h,idleCommand);assert.ok(h.dash.dx<0);assert.equal(h.dash.protectionTicks,8);assert.equal(h.dash.remaining,18);
+ const h=initialState(t).hero;h.x=obstacles[1].x-1.5;h.z=obstacles[1].z;h.dash={kind:'active',remaining:18,dx:1,dz:0,protected:true,protectionTicks:8,variant:'charge',distance:9,duration:18,hits:[]};step(h,idleCommand);assert.ok(h.dash.dx<0);assert.equal(h.dash.protectionTicks,8);assert.equal(h.dash.remaining,18);
  let s=initialRun(t);s.phase.nextSpawn=8;s.hero.x=s.hero.z=0;s.hero.bonkCooldown=999;s.hero.dash={kind:'active',remaining:18,dx:1,dz:0,protected:true,protectionTicks:8,variant:'rush',distance:6.5,duration:18,hits:[]};s.enemies=[{id:1,kind:'grinder',x:1.4,z:0,prevX:1.4,prevZ:0,hp:80,faceX:1,faceZ:0,behavior:{kind:'recover',remaining:50}}];s=stepRun(s,idleCommand,t);assert.ok(s.enemies[0].x>1.4);assert.ok(s.hero.dash.dx<0);assert.equal(s.hero.dash.protectionTicks,7);assert.deepEqual(s.hero.dash.hits,[1]);const hp=s.enemies[0].hp;for(let i=0;i<20;i++)s=stepRun(s,idleCommand,t);assert.equal(s.enemies[0].hp,hp);
 });
 test('momentum snapshots round-trip, old snapshots default to rest, and independent scripted runs agree',()=>{

@@ -1,0 +1,10 @@
+.r1.live .style-rank{width:190px;padding:9px 12px;border-radius:12px;background:#282b32ed;border:1px solid #f4e6cf44;color:#fff0d8;box-shadow:0 4px 14px #120f1433;box-sizing:border-box}
+.r1.live .style-rank small{display:block;font-size:14px;line-height:1.35;opacity:1;color:#f4e6cf}
+.r1.live .style-rank[hidden],.r1.live .style-rank small[hidden]{display:none!important}
+.r1.live .r4-kill-notice span{font-size:14px;color:#f4e9d0}
+@media(min-width:1000px) and (min-height:600px){
+ .r1.live :is(.objective-goal small,.health-label,.heat,.wordmark span,.scene-title small,.score-display small,.combo-strip small,.combo-strip span,.fight-note,.ability small,.overdrive-button,.overdrive-button small,.quality-toast,.zoom-controls span,.zoom-controls small,.streak span,.charge-label){font-size:14px!important;line-height:1.25;color:#f4e9d5;opacity:1}
+ .r1.live .combat-announcements{top:270px}
+ .r1.live .style-rank b{font-size:21px}
+}
+@media(max-height:500px),(max-width:600px){.r1.live .style-rank{width:135px;padding:5px 8px}.r1.live .style-rank small{font-size:12px;line-height:1.25}.r1.live .style-rank b{font-size:15px}.r1.live .r4-kill-notice span{font-size:12px}}

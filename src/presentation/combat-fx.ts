@@ -42,5 +42,5 @@ export function makeCombatFX(world:T.Group,m:Materials,tuning:Partial<Record<key
   if(textures.size>64)for(const [key,texture] of textures){if(textures.size<=64)break;if(numbers.some(number=>number.material.map===texture))continue;texture.dispose();textures.delete(key);}
   return{heroFlash:Math.max(0,1-(t-lastHeroHit)/.12),enemyFlash:Math.max(0,1-(t-lastEnemyHit)/.07),death:Math.max(0,Math.min(1,(t-deathAt)/.35)),edgeFlash:impactStrength>=3?Math.max(0,Math.min(1,1-(t-lastImpact)/(2/60))):0,tier:impactStrength,kick:Math.max(0,1-(t-lastImpact)/value('zoomEaseSeconds'))};
  }
- return{root,ingest,draw,reset,ready:async()=>{await document.fonts.load('italic 700 64px "Redline Display"');for(const texture of textures.values())texture.dispose();textures.clear();}};
+ return{root,ingest,draw,reset,numberBounds:(camera:T.OrthographicCamera,width:number,height:number)=>numbers.filter(n=>n.visible).map(n=>{const p=n.position.clone().project(camera),w=n.scale.x/(camera.right-camera.left)*width*camera.zoom,h=n.scale.y/(camera.top-camera.bottom)*height*camera.zoom;return{x:(p.x+1)*width/2-w/2-3,y:(1-p.y)*height/2-h/2-3,width:w+6,height:h+6};}),ready:async()=>{await document.fonts.load('italic 700 64px "Redline Display"');for(const texture of textures.values())texture.dispose();textures.clear();}};
 }

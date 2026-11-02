@@ -75,15 +75,15 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  const engaged=new Set(s.enemies.filter(e=>e.hp>0&&(e.behavior.kind==='windup'||e.behavior.kind==='lunge')).map(e=>e.id));for(const p of s.projectiles)engaged.add(p.owner);let attackers=engaged.size+(boss&&boss.hp>0&&boss.behavior.kind!=='recover'?1:0);
  const rally=s.phase.kind==='fight'&&s.enemies.filter(e=>e.hp>0).length<=t.rallyRemaining;
  for(const e of s.enemies){
-  if(e.hp<=0)continue;const stats=enemyStats(e.kind,t);if(e.variant==='fast'){stats.speed*=1.3;stats.recovery=Math.max(12,Math.round(stats.recovery*.85));}const d=direction(h.x-e.x,h.z-e.z),dist=distance(h,e);
+  if(e.hp<=0)continue;const stats=enemyStats(e.kind,t);if(s.rules.difficulty!=='legacy'&&e.kind==='thrower')stats.range=Math.min(stats.range,t.engagementRangedDistance);if(e.variant==='fast'){stats.speed*=1.3;stats.recovery=Math.max(12,Math.round(stats.recovery*.85));}const d=direction(h.x-e.x,h.z-e.z),dist=distance(h,e);
   switch(e.behavior.kind){
    case'spawn':if(--e.behavior.remaining<=0)e.behavior={kind:'chase'};break;
    case'chase':{
     e.faceX=d.x;e.faceZ=d.z;
     if(dist<=stats.range&&!engaged.has(e.id)&&attackers<t.attackerCap&&s.projectiles.length<24){e.attackSerial++;e.behavior={kind:'windup',remaining:stats.windup,dx:d.x,dz:d.z};attackers++;engaged.add(e.id);}
     else{
-     const sign=rally?(dist>t.bonkRange*.8?1:0):e.kind==='thrower'&&dist<t.throwerNear?-1:dist>stats.range?1:0;
-     const p=collide(e.x+d.x*stats.speed*(rally?1+t.rallySpeedBonus:1)/60*sign,e.z+d.z*stats.speed*(rally?1+t.rallySpeedBonus:1)/60*sign,stats.radius,t);e.x=p.x;e.z=p.z;
+     const sign=rally?(dist>t.bonkRange*.8?1:0):e.kind==='thrower'&&dist<(s.rules.difficulty==='legacy'?t.throwerNear:Math.min(t.throwerNear,stats.range-1.4))?-1:dist>stats.range?1:0;
+     const pursuit=s.rules.difficulty!=='legacy'&&dist>t.engagementCatchupDistance?Math.max(stats.speed,t.engagementCatchupSpeed):stats.speed;const p=collide(e.x+d.x*pursuit*(rally?1+t.rallySpeedBonus:1)/60*sign,e.z+d.z*pursuit*(rally?1+t.rallySpeedBonus:1)/60*sign,stats.radius,t);e.x=p.x;e.z=p.z;
     }break;
    }
    case'windup':{
@@ -134,7 +134,7 @@ export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunS
  const spawnMax=alive.length<5?Math.min(t.spawnMaxTicks,t.sparseSpawnMaxTicks):t.spawnMaxTicks;s.phase.nextSpawnIn=Math.min(s.phase.nextSpawnIn,spawnMax);
  if(s.phase.nextSpawnIn>0)s.phase.nextSpawnIn--;
  if(s.phase.nextSpawn<formation.length&&alive.length<t.enemyCap&&s.phase.nextSpawnIn===0){
-  const i=s.phase.nextSpawn++;s.enemies=alive;s.enemies.push(spawnRunEnemy(formation[i],i,F1_ENABLED?s.objective.waveSerial:s.phase.wave,t,s.rules,s.extras.seed,s.objective.level));
+  const i=s.phase.nextSpawn++;s.enemies=alive;s.enemies.push(spawnRunEnemy(formation[i],i,F1_ENABLED?s.objective.waveSerial:s.phase.wave,t,s.rules,s.extras.seed,s.objective.level,s.hero));
   // Stable cadence, saved in snapshots. No host clock or unseeded RNG in the simulation.
   s.phase.nextSpawnIn=t.spawnMinTicks+(i*17+s.phase.wave*11)%Math.max(1,spawnMax-t.spawnMinTicks+1);
  }

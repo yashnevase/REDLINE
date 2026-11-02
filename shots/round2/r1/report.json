@@ -1,0 +1,50 @@
+[
+  {
+    "name": "desktop",
+    "combat": {
+      "separated": true,
+      "heatInside": true
+    },
+    "lobby": {
+      "platesSeparated": true,
+      "hintInside": true
+    },
+    "errors": []
+  },
+  {
+    "name": "compact",
+    "combat": {
+      "separated": true,
+      "heatInside": true
+    },
+    "lobby": {
+      "platesSeparated": true,
+      "hintInside": true
+    },
+    "errors": []
+  },
+  {
+    "name": "small",
+    "combat": {
+      "separated": true,
+      "heatInside": true
+    },
+    "lobby": {
+      "platesSeparated": true,
+      "hintInside": true
+    },
+    "errors": []
+  },
+  {
+    "name": "portrait",
+    "combat": {
+      "separated": true,
+      "heatInside": true
+    },
+    "lobby": {
+      "platesSeparated": true,
+      "hintInside": true
+    },
+    "errors": []
+  }
+]

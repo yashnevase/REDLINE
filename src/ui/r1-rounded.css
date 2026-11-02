@@ -1,0 +1,19 @@
+.r1{--plate-cut:none;--plate-text:#f3eee4;--plate-muted:#bac0ce}
+.r1 :is(button,a,input,select,.tooltip,[role=tooltip]){clip-path:none!important}
+.r1 :is(.chapter-card,.hangar-card,.machine-stats,.loadout-panel,.objective-strip,.health,.boss-health,.fight-overlay,.upgrade-card,.level-results,.mission-dialog,.options-dialog,.audio-popover,.parts-list button,.import-save,.save-controls button,.mission-button,.goal-banner,.quality-toast,.encounter-banner,.boss-guide,.pause-build,.binding-editor,.result-count,.tooltip,[role=tooltip]){clip-path:none!important;border-radius:14px!important;border:1px solid #f4f0e622!important;box-shadow:0 8px 24px #060a1440!important;background:linear-gradient(155deg,#303749ee,#1c2233ee)!important;color:#f3eee4}
+.r1 :is(button,.hangar-tabs a,.lobby-actions a,.mission-enter,.mission-card,.parts-list button,.game-options,.dialog-audio-button){border-radius:999px!important;box-shadow:0 3px 10px #060a1428!important;border:1px solid #fff2!important;background:#30364a;color:#f3eee4}
+.r1 :is(.mission-card,.parts-list button,.upgrade-card){border-radius:13px!important}
+.r1 :is(.mission-card,.parts-list button)[aria-pressed=true],.r1 .loadout-panel button[aria-pressed=true],.r1 .hangar-tabs a[aria-current=page]{background:#d8c9f5!important;color:#282238!important;border-color:#eee5ff77!important}
+.r1 :is(.mission-enter,.lobby-actions .play){background:linear-gradient(155deg,#f4eddf,#d5c8b3)!important;color:#272b3d!important;border-color:#fff7!important}
+.r1 .lobby-actions .play span{background:#3f4355;border-radius:50%!important;color:#eee7da}
+.r1 .parts-list button:before{display:none!important}
+.r1 :is(.eyebrow,.mission-card small){color:#c0c5d5}.r1 .mission-rewards{color:#ead6aa}
+.r1 input:not([type=range],[type=checkbox],[type=file]),.r1 select{border-radius:12px!important;background:#20283b!important;border:1px solid #fff3!important;box-shadow:none!important}
+.r1 :is(.ability,.ability.dash){border-radius:50%!important;background:radial-gradient(circle at 40% 20%,#434c63,#252c41)!important;border:1px solid #c9c9dc88!important;box-shadow:0 3px 10px #080c1840!important}
+.r1 .ability[aria-disabled=false]{border-color:#e0d6ff!important}.r1 .ability.ready-pop{box-shadow:0 0 16px #c1a1ff66!important}
+.r1 :is(.overdrive-button,.zoom-controls,.audio-button){border-radius:999px!important;background:#30364be8!important;color:#eae5f2!important}
+.r1 .health-track,.r1 .objective-track,.r1 .boss-health>div{border-radius:999px;overflow:hidden;background:#161c2a}
+.r1 .health-track i{background:linear-gradient(#d3ead0,#94bc9b)}.r1 .objective-track i{background:linear-gradient(90deg,#b3a1df,#e2d5f7)}
+.r1 .health-track i:after,.r1 .objective-track i:after{display:none}
+.r1 .binding-editor button,.r1 .dialog-audio-button{background:#343b50!important}.r1 .mission-dialog header button{background:#3b4257!important;color:#f3eee4!important}
+.r1 .fight-note kbd{border-radius:6px;background:#2d3448;border-color:#fff2}

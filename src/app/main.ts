@@ -46,6 +46,7 @@ import {combatDefaults,tuningSchema,type CombatTuning} from '../content/combat.t
 import {idleCommand,type Command} from '../sim/schema.ts';
 import '../ui/style.css';
 import '../ui/p4-plates.css';
+import '../ui/r1-rounded.css';
 
 let profile=await loadProfileFallback();applySavedSettings(profile);
 let saveAvailable=true;

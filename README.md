@@ -2,9 +2,9 @@
 
 Original Three.js arena action game: three score-gated levels, twelve run upgrades, Scrap-Rex, selectable missions and a saved Blade loadout. Keyboard, touch and gamepad controls, replaceable local audio, and no online services.
 
-Current review: a ±21u fighting deck extends beyond the hazard frame, with eight opening enemies (12 live, three attacking). Shared seeded vents, hazards, pickups, style/ricochet/graze bonuses, reactive scenery and three room layouts are active. Spin/Boost/Stomp have distinct roles and timed synergies. Goals remain10,000 /24,000 /40,000 with minimum3 /4 /5 waves. Missions and Rex are selectable from the start; only Rex unlocks Blade. The garage offers saved equipment and star cosmetics; profile JSON can be exported/imported. Reports: [combat](docs/CLOSE_STEP_3_REPORT.md), [audio](docs/CLOSE_STEP_4_REPORT.md), [saves/garage](docs/CLOSE_STEP_5_REPORT.md). Full reference-art match and human acceptance remain open; Chapter1 is not tagged complete.
+Current review: POLISH_ROUND2 implements rounded UI, faceted role-colored enemies with health/damage stages, saved Chill / Normal / Redline difficulty (10/3, 14/4, 20/5 live/attacking caps), deterministic pressure and elites, kill chains, staged Rex rewards and a clear central arena. Low starts runs at10/3. The hazard frame is an interior marking; the fighting deck extends to±21u. Only five vent fixtures remain inside the frame. Difficulty scales formations and score targets. Base Q is Pulse Bash; equipped Blade uses Spin. R1 UI and R2 enemies are owner-approved; final overall look/feel acceptance is pending. See docs/ROUND2_PROGRESS.md and the per-step reports. The existing chapter1-complete tag is a historical checkpoint and will not be advanced without owner acceptance.
 
-Owner music is copied locally from `close1/public/audio/music/` into ignored `public/audio/music/`. Run `pnpm audio:scan` after adding tracks; optional BPM/loop points live in the private manifest. M or the speaker button controls the saved mix. Public `pnpm build` excludes the entire private audio folder and uses original synth fallbacks; build validation rejects audio files in dist. Never publish private audio folders. No reference code/art or third-party audio is shipped.
+Owner-supplied theme and two battle songs are included in this **private repository** under public/audio/music/, following authenticated private-visibility verification. They are for the owner's private project use; no redistribution rights are asserted. Keep this repository private while those files remain in its history. Original REDLINE sound effects are procedural source, not copied Spirit Call recordings. Run `pnpm audio:scan` after adding tracks. M or the speaker button controls the saved mix. **Public builds exclude the entire audio folder** and create an empty manifest with original synth fallback; the distribution validator rejects audio files in dist. Do not copy the private audio folder into a deployed bundle.
 
 ## Run locally
 
@@ -17,7 +17,7 @@ pnpm dev --host
 
 Open the Vite address. For a phone on the same Wi-Fi, use the Mac's LAN address printed by Vite. Progress lives in that browser's local storage; different origins have separate saves.
 
-Move with WASD/arrows (8.5 u/s, rising to10.5 after straight rolling), tap Space to dash, double-tap for Rush, hold/release for Charge. Q Spin / E Boost / X Stomp use abilities; R activates ready Overdrive; P pauses. C/V, mouse wheel, pinch or the +/− camera buttons select saved Close/Default/Wide/Far views. Keyboard bindings are saved in Options. Options offers Low/Standard/High and reduced motion/flashes. The development settings button exposes tuning. Production omits the workbench and replay API.
+Move with WASD/arrows (8.5 u/s, rising to10.5 after straight rolling), tap Space to dash, double-tap for Rush, hold/release for Charge. Q Pulse Bash (Blade: Spin) / E Boost / X Stomp use abilities; R activates ready Overdrive; P pauses. C/V, mouse wheel, pinch or the +/− camera buttons select saved Close/Default/Wide/Far views. Keyboard bindings are saved in Options. Options offers Low/Standard/High and reduced motion/flashes. The development settings button exposes tuning. Production omits the workbench and replay API.
 
 ```sh
 pnpm check
@@ -33,7 +33,7 @@ For browser evidence tools, install the browser once with `PLAYWRIGHT_BROWSERS_P
 ## History and review
 
 - `next-work-s2` preserves all sixteen Session 2 items; `docs/S2_REPORT.md` has the item ledger, clips, budgets and owner-note audit.
-- `docs/CLOSE_CHAPTER_1.md` is the active ordered closure plan. It retains unfinished Sessions 3/4 from `docs/NEXT_WORK.md`; Step 1 clarity is ready for owner review.
+- `docs/POLISH_ROUND2.md` is the current review plan; earlier sprint/closure documents and tags preserve historical checkpoints.
 
 - `chapter1-before-feel` preserves the complete pre-sprint source and original authored Blender assets.
 - `feel-sprint` preserves the FEEL_SPRINT implementation checkpoint.

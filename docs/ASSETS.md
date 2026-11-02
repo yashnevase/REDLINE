@@ -83,3 +83,6 @@ Files were copied only after public build exclusion was implemented. They and th
 
 ## FINAL_POLISH ·2026-11-02
 Original sparse steel atlas/shader bands, pit terraces, asymmetric giant/wreck geometry, industrial CSS/SVG plates, lobby shafts and mechanical layered synth recipes authored locally. Reference sound.ts/audio.ts studied for layering/mix principles; snapshot uses offline synth and supplies no cue audio files. No reference code, image texture, audio recording or model copied. Original cue-listening.wav is REDLINE output. Existing owner music remains ignored and excluded from builds. No dependency or external asset added.
+
+## POLISH_ROUND2 ·2026-11-02
+Original rounded CSS plates, faceted role palettes/wound shader, pooled damage/reward fragments, attack poses and six layered procedural reward cues. Spirit Call was studied for principles only (SPIRIT_CALL_NOTES_R2.md); no code, model, image or sound recording copied. Owner-supplied theme.mp3, battle-01.mp3 and battle-02.mp3 plus the manifest are now tracked **only in the verified-private repository**, per R6. This supersedes the historical ignored-only Git policy above; public build/distribution exclusion remains unchanged. All three files are below50MB; no LFS threshold crossed. Owner music remains non-redistributable; no rights assertion or public deployment.

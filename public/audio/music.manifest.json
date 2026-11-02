@@ -1,0 +1,25 @@
+{
+  "tracks": [
+    {
+      "url": "/audio/music/battle-01.mp3",
+      "name": "battle-01",
+      "role": "battle",
+      "lufs": -7.45,
+      "truePeak": 2.26
+    },
+    {
+      "url": "/audio/music/battle-02.mp3",
+      "name": "battle-02",
+      "role": "battle",
+      "lufs": -6.26,
+      "truePeak": 2.25
+    },
+    {
+      "url": "/audio/music/theme.mp3",
+      "name": "theme",
+      "role": "theme",
+      "lufs": -10.56,
+      "truePeak": 0.21
+    }
+  ]
+}

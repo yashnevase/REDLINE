@@ -15,6 +15,6 @@ review/
 !.env.example
 # Private/cache tooling stays local
 .codex/
-# Owner/private audio must never enter the public repository.
+# Private owner audio: selected files are force-tracked only after private-repo verification. Builds always exclude audio.
 public/audio/
 close1/public/audio/

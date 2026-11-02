@@ -6,7 +6,11 @@ export function floorPaintBand(x:number,z:number){const index=((x%24)+24)%24+(((
 export function paintWarmPlates(c:CanvasRenderingContext2D,size:number){
  if(!ROUND3_FLOOR_ENABLED)return;
  const unit=size/48;
- for(let z=0;z<24;z++)for(let x=0;x<24;x++){const colours=floorPaintColours[floorPaintBand(x,z)];c.fillStyle=colours[(x*3+z*7)%colours.length];c.fillRect(x*2*unit,z*2*unit,2*unit+.5,2*unit+.5);}
+ c.fillStyle='#aaa397';c.fillRect(0,0,size,size);
+ for(const[x,z,r,tint]of[[8,13,23,'#807a7038'],[37,30,22,'#bbc0ba33'],[29,3,20,'#8b817633']] as const){const g=c.createRadialGradient(x*unit,z*unit,0,x*unit,z*unit,r*unit);g.addColorStop(0,tint);g.addColorStop(1,'#aaa39700');c.fillStyle=g;c.fillRect(0,0,size,size);}
+ for(let z=0;z<24;z++)for(let x=0;x<24;x++){c.fillStyle=(x*3+z*7)%3===0?'#ffffff05':'#17120b05';c.fillRect(x*2*unit,z*2*unit,2*unit+.5,2*unit+.5);}
+ // Oxide at seams/outer edges, never alternating base plates.
+ c.strokeStyle='#84563830';c.lineWidth=.06*unit;c.strokeRect(2*unit,2*unit,size-4*unit,size-4*unit);
 }
 
 export const flatFloorLife={height:0,collidable:false,addedFixtures:0,scarCap:32,scarLifeTicks:1440} as const;
@@ -15,12 +19,12 @@ export function paintFloorLife(c:CanvasRenderingContext2D,size:number){
  const u=size/48,xy=(v:number)=>(v+24)*u;
  c.save();c.lineCap='round';
  // Broken paint arcs and broad lane/stencil shapes; deliberately no text.
- c.strokeStyle='#dbbe8580';c.lineWidth=.085*u;c.setLineDash([1.1*u,.45*u]);
+ c.strokeStyle='#dbbe8548';c.lineWidth=.085*u;c.setLineDash([1.1*u,.45*u]);
  for(const r of[6.2,11.3]){c.beginPath();c.arc(xy(0),xy(0),r*u,.13,Math.PI*1.91);c.stroke();}
- c.setLineDash([]);c.strokeStyle='#d2b78366';c.lineWidth=.12*u;
+ c.setLineDash([]);c.strokeStyle='#d2b7833a';c.lineWidth=.12*u;
  for(const side of[-1,1]){c.beginPath();c.moveTo(xy(side*3),xy(-13));c.lineTo(xy(side*3),xy(-8.3));c.moveTo(xy(-13),xy(side*3));c.lineTo(xy(-8.3),xy(side*3));c.stroke();}
  for(const[x,z,a]of[[-8,1,0],[8,-1,Math.PI],[1,-8,Math.PI/2],[-1,8,-Math.PI/2]]){
-  c.save();c.translate(xy(x),xy(z));c.rotate(a);c.fillStyle='#d4b98288';c.beginPath();c.moveTo(-u,-.35*u);c.lineTo(.15*u,-.35*u);c.lineTo(.15*u,-.7*u);c.lineTo(1.1*u,0);c.lineTo(.15*u,.7*u);c.lineTo(.15*u,.35*u);c.lineTo(-u,.35*u);c.closePath();c.fill();c.restore();
+  c.save();c.translate(xy(x),xy(z));c.rotate(a);c.fillStyle='#d4b98255';c.beginPath();c.moveTo(-u,-.35*u);c.lineTo(.15*u,-.35*u);c.lineTo(.15*u,-.7*u);c.lineTo(1.1*u,0);c.lineTo(.15*u,.7*u);c.lineTo(.15*u,.35*u);c.lineTo(-u,.35*u);c.closePath();c.fill();c.restore();
  }
  let seed=3919;const rand=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
  // Sparse oil/scorch islands with warm weld highlights, not a full-screen grime layer.

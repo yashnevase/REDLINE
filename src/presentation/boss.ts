@@ -1,3 +1,4 @@
+import {tagSmoke} from './r4-smoke-discipline.ts';
 import {SimplifyModifier} from 'three/addons/modifiers/SimplifyModifier.js';
 import {mergeVertices} from 'three/addons/utils/BufferGeometryUtils.js';
 import {makeExposedPlates} from './f3-exposed-plates.ts';
@@ -46,7 +47,7 @@ export function makeBossPresentation(world:T.Group,m:Materials){
  const paths=[[[-.72,.58],[-.52,.45],[-.57,.18],[-.4,.04],[-.49,-.25],[-.29,-.51],[-.35,-.77]],[[.35,.86],[.25,.62],[.4,.39],[.32,.15],[.48,-.04],[.36,-.35],[.49,-.64]],[[-.86,-.12],[-.65,-.05],[-.49,-.25],[-.15,-.31],[.03,-.17],[.29,-.22],[.47,-.4],[.76,-.37]],[[-.57,.18],[-.25,.19],[-.05,.37],[.25,.35],[.4,.39],[.72,.27]],[[.03,-.17],[-.04,-.46],[.12,-.7],[.05,-.9]]];
  for(const points of paths)for(let i=1;i<points.length;i++){const a=points[i-1],b=points[i],length=Math.hypot(b[0]-a[0],b[1]-a[1]),x=-(b[1]-a[1])/length*.012,y=(b[0]-a[0])/length*.012;shellPatch(crackSurface,[[a[0]+x,a[1]+y],[b[0]+x,b[1]+y],[b[0]-x,b[1]-y],[a[0]-x,a[1]-y]],m.red,.05,0);}
  for(const angle of [Math.PI/2,Math.PI,-Math.PI/2]){const side=crackSurface.clone(true);side.rotation.y=angle;cracks.add(side);}cracks.visible=false;
- const steam=new T.InstancedMesh(new T.IcosahedronGeometry(.2,0),new T.MeshBasicMaterial({color:'#cdc1db',transparent:true,opacity:.25,depthWrite:false}),12);root.add(steam);steam.visible=false;const steamDummy=new T.Object3D();
+ const steam=new T.InstancedMesh(new T.IcosahedronGeometry(.2,0),new T.MeshBasicMaterial({color:'#cdc1db',transparent:true,opacity:.25,depthWrite:false}),12);root.add(steam);tagSmoke(steam,'rex-steam');steam.visible=false;const steamDummy=new T.Object3D();
  const lods:{mesh:T.Mesh;high:T.BufferGeometry;low:T.BufferGeometry}[]=[],modifier=new SimplifyModifier();const selectLOD=(low:boolean)=>{for(const e of lods)e.mesh.geometry=low?e.low:e.high;};const exposedPlates=makeExposedPlates(body);const finalize=async()=>{batchParts(cracks);batchActor(body,m.rustPaint,[cracks]);for(const arm of arms)batchActor(arm,m.rustPaint);batchParts(root,[body,...arms,steam]);fade=makeOcclusionFade(root);exposedPlates.install();const meshes:T.Mesh[]=[];root.traverse(o=>{if(o instanceof T.Mesh&&!Array.isArray(o.material)&&o.material.userData.actorHit)meshes.push(o);});for(const mesh of meshes){const merged=mergeVertices(mesh.geometry),low=await modifier.modify(merged,Math.floor(merged.attributes.position.count*.5));merged.dispose();lods.push({mesh,high:mesh.geometry,low});}};
  let fade=makeOcclusionFade(root);
  const warnings=new T.Group();world.add(warnings);

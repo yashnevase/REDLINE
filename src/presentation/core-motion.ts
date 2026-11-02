@@ -1,3 +1,4 @@
+import {tagSmoke} from './r4-smoke-discipline.ts';
 import {P1_ENABLED,corePolish} from './p1-core-polish.ts';
 import * as T from 'three';
 import {random,seed} from '../content/scene.mjs';
@@ -6,7 +7,7 @@ export function makeCoreMotion(world:T.Group){
  const root=new T.Group();world.add(root);const ghostMaterial=new T.MeshBasicMaterial({color:'#a883ff',transparent:true,opacity:.18,blending:T.AdditiveBlending,depthWrite:false,toneMapped:false});
  const ghosts=new T.InstancedMesh(new T.SphereGeometry(.61,12,8),ghostMaterial,3);root.add(ghosts);ghosts.count=0;
  const c=document.createElement('canvas');c.width=c.height=32;const ctx=c.getContext('2d')!,gradient=ctx.createRadialGradient(16,16,0,16,16,16);gradient.addColorStop(0,'#ffffff');gradient.addColorStop(.3,'#ffffffbb');gradient.addColorStop(1,'#ffffff00');ctx.fillStyle=gradient;ctx.fillRect(0,0,32,32);
- const dust=new T.InstancedMesh(new T.PlaneGeometry(.18,.18),new T.MeshBasicMaterial({map:new T.CanvasTexture(c),transparent:true,opacity:.4,depthWrite:false,toneMapped:false}),32);dust.setColorAt(0,new T.Color('#bca3df'));root.add(dust);dust.count=0;
+ const dust=new T.InstancedMesh(new T.PlaneGeometry(.18,.18),new T.MeshBasicMaterial({map:new T.CanvasTexture(c),transparent:true,opacity:.4,depthWrite:false,toneMapped:false}),32);dust.setColorAt(0,new T.Color('#bca3df'));root.add(dust);tagSmoke(dust,'core-dust');dust.count=0;
  const ribbonGeometry=new T.PlaneGeometry(1,.35,2,1),colours:number[]=[];for(let i=0;i<ribbonGeometry.attributes.position.count;i++){const p=ribbonGeometry.attributes.position;colours.push(1,1,1,(1-Math.abs(p.getY(i))/.2)*(.5+p.getX(i)));}ribbonGeometry.setAttribute('color',new T.Float32BufferAttribute(colours,4));
  const ribbon=new T.InstancedMesh(ribbonGeometry,new T.MeshBasicMaterial({color:'#ad81ff',vertexColors:true,transparent:true,opacity:.65,depthWrite:false,side:T.DoubleSide,blending:T.AdditiveBlending,toneMapped:false}),12);ribbon.count=0;ribbon.setColorAt(0,new T.Color('#fff'));root.add(ribbon);const colour=new T.Color();
  let rng=random(seed+77);const dustColour=new T.Color(),particles:{x:number;z:number;at:number;kind:'spark'|'smoke';dx:number;dz:number}[]=[];let particleAt=-1,smokeAt=-1;const dummy=new T.Object3D(),history:{x:number;z:number;at:number}[]=[],path:{x:number;z:number;at:number}[]=[],puffs:{x:number;z:number;at:number}[]=[];let last=-1,pathAt=-1,oldVX=0,oldVZ=0,oldHop=false;

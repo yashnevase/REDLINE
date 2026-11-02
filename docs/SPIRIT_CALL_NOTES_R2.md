@@ -13,3 +13,19 @@ Reference is the local study-only snapshot under ref/spirit-call/spirit-call-mai
 R3 pressure is deterministic simulation state. Difficulty and initial device cap choice belong in saved/replayed run options; adaptive render quality must not alter an existing replay's enemy cap. Warning minima remain intact. All enemy/effect pools must be measured at the new caps, with Low instancing/LOD retained.
 
 R6 visibility: gh CLI is unavailable. The authenticated GitHub repository API, using the already configured Git credential without exposing it, returned full_name=yashnevase/REDLINE, visibility=private, private=true on2026-11-02. Reverify immediately before any audio push. Keep deployment/build audio exclusion regardless of repository visibility. Existing chapter1-complete is historical; do not replace or create a new acceptance tag without the owner's new look/feel approval.
+
+
+## Round4 re-study — 2026-11-02
+Study-only snapshot, no LICENSE: no code, art or sound copied.
+| ID | Revisited source/target | Application in original REDLINE code |
+|---|---|---|
+| A1 | effects.ts dust/stone layers; combat-lava-swarm | Keep low-opacity scenery behind actors; apply world-distance and projected actor protection to every smoke pool. |
+| A2 | enemy-pose.ts and combat crowd | Role silhouette/value blocks must survive a small grayscale view; identity before incidental damage details. |
+| A3 | combat-stone-lightning / moss-crossfire | Broad quiet ground zones support actor/telegraph contrast instead of alternating high-contrast tiles. |
+| A4 | effects.ts directional heavy-hit sparks / gravity chunks | Original bounded velocity streaks, hot cooling colour, bounce and chips; independent of damage simulation. |
+| A5 | effects.ts environmental particles and layered fight target | Seeded edge activity, sparse independent rhythms, actor-safe cosmetic layers. |
+| A6 | sound.ts layered metal/noise and priority limits | Original synth layers and existing voice limiter/pan; no reusable licensed SC sound assets available. |
+| B1 | enemy-pose.ts windup/active/recovery | Explicit warning/active/punish states; later patterns increase composition, never reduce minimum warning. |
+| B2 | combat-lava-aoe/wind readable rings/gaps | Distinct original seven-attack telegraphs and persistent returning hazards. |
+| B3 | challenge/menu goals and attack readability | Separate skill mastery goals from mere completion; report measured seeded bot outcomes, human targets unverified. |
+| B4 | effects.ts layered defeat events | Retain ladder; ordered slow/pull-out/explosion/trophy presentation. |

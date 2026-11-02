@@ -123,3 +123,8 @@ Owner supplied POLISH_SPRINT.md, then answered yes to carrying it out while reta
 ## Owner-directed FEEL_SPRINT (2026-10-31)
 
 The owner supplied `docs/FEEL_SPRINT.md` and explicitly requested completing it and pushing source to `yashnevase/REDLINE`. Its content tuning supersedes the previous START formations/speeds/Heat values: waves 8 / 9 / 11 / 12, five opening threats followed by staggered edge arrivals, faster approach, tiered hit-stop and 0.3 u ordinary bonk knockback. Live/attacker caps, full-clear upgrade gating, approved dash/ability/boss rules and Chapter 1 scope remain. Cosmetic streak numbers never multiply damage. See FEEL_REPORT for fixed-tick quantization and cleanup/density limitations. The owner answered that no phone is available and explicitly requested recording that device gate as unverified.
+
+
+## Owner-directed Round 4 and Chapter 2 pre-production — 2026-11-02
+
+The owner supplied ROUND4_AND_CHAPTER2.md and requested continuation. A1–A6 and B1–B4 are authorized in that order; their smoke, role, calm-floor, spark/audio and seven-attack Rex/difficulty requirements supersede earlier START designs. Chapter 2 design and reference candidates are authorized now; Chapter 2 runtime waits for owner Chapter 1 acceptance and image-reference review. Keep approved Core/UI/kill feedback. Keep deterministic simulation, capped presentation, ≥48-tick boss warnings and existing live/attacker caps. Owner acceptance, human boss/playtest outcomes and completion-tag movement remain gates. This is an explicit amendment recording the supplied request, not a silent design change.

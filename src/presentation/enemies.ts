@@ -30,6 +30,6 @@ export function makeEnemy(kind:EnemyKind,m:Materials){
   const disc=saw(body,m,.54,.45,0,-.25);disc.rotation.y=.3;
  }
  if(kind==='grinder')for(const side of [-1,1]){const disc=saw(rotor,m,1.15,side*.94,0,0);disc.rotation.y=Math.PI/2;}
- const eliteBlade=new T.Group();eliteBlade.name='r3-extra-blade';eliteBlade.visible=false;body.add(eliteBlade);const eliteDisc=part(eliteBlade,new T.CircleGeometry(.34,16),m.lightSteel,-.7,.15,.2);eliteDisc.rotation.y=Math.PI/2;part(eliteBlade,new T.CircleGeometry(.12,8),m.dark,-.71,.15,.2).rotation.y=Math.PI/2;
+ const eliteBlade=new T.Group();eliteBlade.name='r3-extra-blade';eliteBlade.visible=false;body.add(eliteBlade);const trim=part(eliteBlade,new T.TorusGeometry(radius*1.03,.045,3,16),new T.MeshLambertMaterial({color:'#e1bd61'}));trim.rotation.x=Math.PI/2;const eliteDisc=part(eliteBlade,new T.CircleGeometry(.34,16),m.lightSteel,-.7,.15,.2);eliteDisc.rotation.y=Math.PI/2;part(eliteBlade,new T.CircleGeometry(.12,8),m.dark,-.71,.15,.2).rotation.y=Math.PI/2;
  const flash=part(body,new T.SphereGeometry(radius*1.02,12,8),new T.MeshBasicMaterial({color:'#fff',transparent:true,opacity:0,depthWrite:false}));flash.name='hit-flash';flash.visible=false;root.traverse(o=>{if(o instanceof T.Group)o.userData.r2Enemy=true;});return{root,body,blade:rotor};
 }

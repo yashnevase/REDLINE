@@ -23,3 +23,9 @@ F1–F5 implementation and automated evidence are in ROUND3_REPORT.md. Owner15-m
 
 | R3-BAL-01 | Normal Mission3 Core balance review | Baseline bot loses20.37s; Blade browser run clears. Chill missions clear. Review warnings/space/crowd pressure with human players before retuning; no human fairness verdict inferred. |
 | R3-DENSITY-01 | Cleanup/drop density expectations | Camera includes≥10 in100% of sampled pressure moments with≥10 landed actors; mandatory drop and final-wave cleanup remain below10. Full trace and all-fight percentages are in ROUND3_REPORT. |
+
+
+## Round4 measured calibration for owner review
+- B3:Normal aggregate mission87.5%/Rex57.5% meets the mixed-loadout bot ranges, but M1/M2are100%,M3Core45%,RexBlade75%. Confirm difficulty with humans before further tuning; do not hide individual rows. Core wins sometimes exceed3minutes. No first-attempt human-rate evidence yet.
+- A gate:owner visibility/role/spark/audio judgement and3–5person playtest remain open. No exact/AAA Spirit Call parity claimed.
+- C references:five local Bog Moon candidates require owner selection; Frog Legs concept has extra crown strokes, runtime Core keeps exactlytwo. Chapter2 runtime remains gated.

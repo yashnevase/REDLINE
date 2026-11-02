@@ -1,0 +1,14 @@
+[
+  {
+    "bossRetryMs": 248,
+    "namedDeath": true,
+    "bossGoalHidden": true,
+    "floor": {
+      "method": "HSL lightness of base atlas tile interior, excluding markings/grime overlays",
+      "maxAdjacent": 0.024196623093683645,
+      "minimum": 0.5892429193899792,
+      "maximum": 0.6556236383442272
+    },
+    "errors": []
+  }
+]

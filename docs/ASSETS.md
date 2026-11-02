@@ -89,3 +89,7 @@ Original rounded CSS plates, faceted role palettes/wound shader, pooled damage/r
 
 ## POLISH_ROUND3 ·2026-11-02
 Original seeded warm/cool/oxide plate colour allocation and canvas-painted broken rings/arrows/lanes, oil/scorch/weld marks, flush metal offcuts, grates and soft warm pools. Paint is world-mapped onto existing 3D plates; no reference image or backdrop added. Existing bounded scar shader now accumulates impacts for up to24s. No new collision object, downloaded asset, dependency or third-party implementation. Before/after and normal-play media are our own engine captures.
+
+
+## ROUND4 / Chapter2 pre-production ·2026-11-02
+Original actor-safe smoke shaders, broad warm floor gradients, role/elite geometry adjustments, bounded ballistic/contact/ambient sparks and four original synth recipes. Seven original deterministic Rex attacks/telegraphs and mastery tracking; no SC implementation or assets copied. Study log: SPIRIT_CALL_NOTES_R2.md. Five built-in imagegen concept candidates are local-only under art/ch2-ref/; exact prompts/provenance: CHAPTER2_REFERENCE_PROMPTS.md. They are not owner approvals, shipped textures or evidence of runtime Chapter2 art. No Chapter2 runtime code, dependency install, downloaded sound or deployment. Private owner music policy is unchanged.

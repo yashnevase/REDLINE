@@ -1,4 +1,4 @@
-import {paintWarmPlates} from './round3-floor.ts';
+import {paintWarmPlates,paintFloorLife} from './round3-floor.ts';
 import * as T from 'three';
 import {CL1_ENABLED} from '../content/items/cl-clarity.ts';
 export const AM3_ENABLED=true;
@@ -11,5 +11,5 @@ export function makeArenaSurface(fractured=false){const canvas=document.createEl
  // Shadow and oxide around mechanical clusters is broad, never checker coloured.
  for(const [x,z]of [[-20,-8],[19,7],[-18,16],[17,-19],[-7,20],[7,-20]]){const px=(x+24)*size,py=(z+24)*size;c.fillStyle='#42362d55';c.beginPath();for(let j=0;j<13;j++){const a=j*Math.PI*2/13,r=(.9+rand()*1.6)*size,xx=px+Math.cos(a)*r,yy=py+Math.sin(a)*r*.55;j?c.lineTo(xx,yy):c.moveTo(xx,yy);}c.closePath();c.fill();c.strokeStyle='#8c77654d';c.lineWidth=1.5;for(let j=0;j<12;j++){const a=rand()*Math.PI*2,r=rand()*2*size;c.beginPath();c.moveTo(px+Math.cos(a)*r,py+Math.sin(a)*r*.6);c.lineTo(px+Math.cos(a)*r+18,py+Math.sin(a)*r*.6+3);c.stroke();}}
  for(const sx of [-1,1])for(const sz of [-1,1]){const x=(24+sx*20)*size,y=(24+sz*20)*size,g=c.createRadialGradient(x,y,8,x,y,140);g.addColorStop(0,'#16121bcc');g.addColorStop(1,'#16121b00');c.fillStyle=g;c.fillRect(x-140,y-140,280,280);}
- const map=new T.CanvasTexture(canvas);map.colorSpace=T.SRGBColorSpace;map.anisotropy=8;return map;}
+ paintFloorLife(c,2048);const map=new T.CanvasTexture(canvas);map.colorSpace=T.SRGBColorSpace;map.anisotropy=8;return map;}
 export function worldPlateUV(g:T.BufferGeometry,x:number,z:number){g.userData.worldPlate=true;const p=g.attributes.position,uv=g.attributes.uv;for(let i=0;i<p.count;i++)uv.setXY(i,(p.getX(i)+x+24)/48,1-(p.getZ(i)+z+24)/48);}

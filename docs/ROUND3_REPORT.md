@@ -5,7 +5,7 @@ Owner requested F1–F5 on2026-11-02. Round2 UI/enemies/health/kill feedback/Cor
 | ID | State | Evidence |
 |---|---|---|
 | F1 | IMPLEMENTED; shared visual QA follows | Deterministic60/25/15 warm/cool/oxide atlas palette, warm key/fill, warm steel structure and fractured plates. Existing orange physical lamps and purple space retained. Baseline three-room desktop/compact Default captures: shots/round3/before. |
-| F2 | NEXT | Flat life and accumulating scars |
+| F2 | IMPLEMENTED; shared visual QA follows | Painted broken rings, arrows/lanes, oil/scorch/welds, flush scrap and warm grates/pools baked into existing world-space plate atlas. No added fixture, height0. Existing slow light sweep is warm.32 pooled combat scars accumulate from hits/Stomp/kills and fade over24s. |
 | F3 | NEXT | Default scale and corner/HUD bounds |
 | F4 | NEXT | Visible density, fairness and replay |
 | F5 | NEXT | Readable secondary HUD |

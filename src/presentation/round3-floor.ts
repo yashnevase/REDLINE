@@ -1,7 +1,8 @@
 // Authored surface colours. No reference bitmap and no additional scene object.
 export const ROUND3_FLOOR_ENABLED=true;
-export const floorPaintColours={warm:['#b9ac94','#b3a18b','#b4a28f','#c1ae95'],cool:['#a3adb5','#a8afb0'],oxide:['#af8063','#b48a69']} as const;
-export function floorPaintBand(x:number,z:number){const bucket=(((x*7+z*11)%20)+20)%20;return bucket<12?'warm':bucket<17?'cool':'oxide';}
+export const floorPaintColours={warm:['#b5b0a5','#aba69e','#b6ada0','#b8b1a7'],cool:['#9eaab9','#a4b1b9'],oxide:['#a7836d','#a08770']} as const;
+const bandOrder=Array.from({length:576},(_,i)=>i);let paletteSeed=78431;for(let i=575;i>0;i--){paletteSeed=(Math.imul(paletteSeed,1664525)+1013904223)>>>0;const j=paletteSeed%(i+1);[bandOrder[i],bandOrder[j]]=[bandOrder[j],bandOrder[i]];}
+export function floorPaintBand(x:number,z:number){const index=((x%24)+24)%24+(((z%24)+24)%24)*24,bucket=bandOrder[index]/576;return bucket<.6?'warm':bucket<.85?'cool':'oxide';}
 export function paintWarmPlates(c:CanvasRenderingContext2D,size:number){
  if(!ROUND3_FLOOR_ENABLED)return;
  const unit=size/48;

@@ -49,4 +49,4 @@ Own engine captures only; study comparisons remain local and unshipped.
 
 Owner final overall look/feel/listening acceptance and first-time-player review remain open. R1 UI, R2 enemies and the earlier Core approval are already recorded and are not reopened. Exact reference-image parity, human balance and all-device performance are not self-certified. Physical-phone/deployment gates remain owner-waived; no Chapter2 work or public deployment was added.
 
-The existing chapter1-complete tag is historical and remains unchanged until explicit owner acceptance. This is the only remaining requested closing action that needs that acceptance. Preserve unrelated user-owned close1/ and docs/NEXT_WORK (1).md.
+Private main delivery of source/evidence commit d241887 was verified against GitHub refs/heads/main on2026-11-02, after rechecking private=true/visibility=private. A docs-only delivery confirmation follows that checkpoint. The existing chapter1-complete tag is historical and remains unchanged until explicit owner acceptance. This is the only remaining requested closing action that needs that acceptance. Preserve unrelated user-owned close1/ and docs/NEXT_WORK (1).md.

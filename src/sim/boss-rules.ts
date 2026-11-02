@@ -1,3 +1,4 @@
+import {stepRexV2} from './rex-v2.ts';
 import {exposeBossPlates} from './f3-weak-spot.ts';
 import type {Boss,RunState} from './run-schema.ts';
 import {spawnEnemy} from './run-schema.ts';
@@ -5,8 +6,9 @@ import type {CombatTuning} from '../content/combat.ts';
 import {bossStage,bossPatterns} from '../content/boss.ts';
 import {collide,direction} from './geometry.ts';
 import type {Emit} from './hero.ts';
-export function stepBoss(b:Boss,s:RunState,t:CombatTuning,hurt:(amount:number)=>void,event:Emit){
- if(b.exposed>0)b.exposed--;const h=s.hero,stage=bossStage(b.hp,t),enraged=stage===4,speed=enraged?t.bossEnrageSpeed:1,mult=enraged?t.bossEnrageDamage:1;
+export function stepBoss(b:Boss,s:RunState,t:CombatTuning,hurt:(amount:number,attack?:string)=>void,event:Emit){
+ if(b.rex){stepRexV2(b,s,t,hurt,event);return;}
+ if(b.exposed>0)b.exposed--;const h=s.hero,stage=bossStage(b.hp,t,b.maxHP),enraged=stage===4,speed=enraged?t.bossEnrageSpeed:1,mult=enraged?t.bossEnrageDamage:1;
  const recover=(heavy=true)=>{exposeBossPlates(b,t,heavy);b.behavior={kind:'recover',remaining:Math.max(1,Math.round(t.bossRecoveryTicks/speed))};};
  const state=b.behavior;
  if(state.kind==='recover'){

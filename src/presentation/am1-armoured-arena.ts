@@ -13,7 +13,7 @@ import {addLevelDetail,AM4_ENABLED} from './am4-level-detail.ts';
 import {steelBladeShape} from './bl-steel.ts';
 import {batchActor} from './batch-parts.ts';
 export const AM1_ENABLED=true,AM2_ENABLED=true;
-export function animateArmouredArena(root:T.Group,time:number,quiet:boolean){root.traverse(o=>{if(o instanceof T.Mesh&&o.material instanceof T.ShaderMaterial&&o.material.uniforms.time)o.material.uniforms.time.value=quiet?0:time;if(o instanceof T.PointLight&&o.position.y>1.5)o.intensity=quiet?70:65+Math.sin(time*2+o.position.x)*5;});}
+export function animateArmouredArena(root:T.Group,time:number,quiet:boolean){root.traverse(o=>{if(o instanceof T.Mesh&&o.material instanceof T.ShaderMaterial&&o.material.uniforms.time)o.material.uniforms.time.value=quiet?0:time;if(o instanceof T.PointLight&&o.position.y>1.5)o.intensity=quiet?70:67+Math.sin(time*2+o.position.x)*3-(Math.sin(Math.floor(time*13)+o.position.x*7)> .96?9:0);});}
 // Showcase candidate: original geometry, reference pictures are never runtime textures.
 export function makeArmouredArena(parent:T.Group,level=0,low=false,sharedSurface?:T.Texture,armourPaint?:T.Texture,runSeed=4107){
  const root=new T.Group();root.name='AM1-armoured-arena';parent.add(root);

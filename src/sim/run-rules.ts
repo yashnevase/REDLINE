@@ -34,7 +34,7 @@ import {collide,direction} from './geometry.ts';
 const distance=(a:{x:number;z:number},b:{x:number;z:number})=>Math.sqrt((a.x-b.x)**2+(a.z-b.z)**2);
 export function stepRun(previous:unknown,command:Command,base:CombatTuning):RunState {
  const s=runSchema.parse(previous),h=s.hero;s.tick++;s.events=[];
- let t=upgradedTuning(difficultyTuning(base,s.rules,s.director.pressure),s.upgrades);if(s.chapter===2)t={...t,bossRadius:t.gulpRadius};
+ let t=upgradedTuning(difficultyTuning(base,s.rules,s.director.pressure),s.upgrades);t={...t,collisionChapter:s.chapter===2?2:1};if(s.chapter===2)t={...t,bossRadius:t.gulpRadius};
  const event=(kind:RunState['events'][number]['kind'],x:number,z:number,amount=0,radius=0)=>s.events.push({id:`${s.tick}:${s.events.length}`,tick:s.tick,kind,x,z,amount,radius});
  h.prevX=h.x;h.prevZ=h.z;if(s.phase.kind==='boss'){s.phase.boss.prevX=s.phase.boss.x;s.phase.boss.prevZ=s.phase.boss.z;}for(const e of s.enemies){e.prevX=e.x;e.prevZ=e.z;}for(const p of s.projectiles){p.prevX=p.x;p.prevZ=p.z;}
  if(s.phase.kind==='lost'||s.phase.kind==='complete')return s;
